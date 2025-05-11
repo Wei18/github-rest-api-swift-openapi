@@ -1,0 +1,506 @@
+{
+  "abstract" : [
+    {
+      "text" : "Internal Error",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling",
+        "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Operations",
+        "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Operations\/billing_sol_get_hyphen_github_hyphen_billing_hyphen_usage_hyphen_report_hyphen_org",
+        "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Operations\/billing_sol_get_hyphen_github_hyphen_billing_hyphen_usage_hyphen_report_hyphen_org\/Output"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Operations\/billing_sol_get_hyphen_github_hyphen_billing_hyphen_usage_hyphen_report_hyphen_org\/Output\/internalServerError(_:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:20GitHubRestAPIBilling10OperationsO030billing_sol_get_hyphen_github_i1_f1_i7_usage_i8_report_I4_orgO6OutputO19internalServerErroryAgA10ComponentsO9ResponsesO0O6_errorVcAGmF",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "case"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "internalServerError"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:20GitHubRestAPIBilling10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:20GitHubRestAPIBilling10ComponentsO9ResponsesO",
+        "text" : "Responses"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:20GitHubRestAPIBilling10ComponentsO9ResponsesO14internal_errorV",
+        "text" : "internal_error"
+      },
+      {
+        "kind" : "text",
+        "text" : ")"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIBilling"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/billing\/Types.swift#L1258"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Case",
+    "symbolKind" : "case",
+    "title" : "Operations.billing_sol_get_hyphen_github_hyphen_billing_hyphen_usage_hyphen_report_hyphen_org.Output.internalServerError(_:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "case"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "internalServerError"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:20GitHubRestAPIBilling10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components\/Responses",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:20GitHubRestAPIBilling10ComponentsO9ResponsesO",
+              "text" : "Responses"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components\/Responses\/internal_error",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:20GitHubRestAPIBilling10ComponentsO9ResponsesO14internal_errorV",
+              "text" : "internal_error"
+            },
+            {
+              "kind" : "text",
+              "text" : ")"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/paths\/\/organizations\/{org}\/settings\/billing\/usage\/get(billing\/get-github-billing-usage-report-org)\/responses\/500",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "HTTP response code: ",
+              "type" : "text"
+            },
+            {
+              "code" : "500 internalServerError",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ".",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapibilling\/operations\/billing_sol_get_hyphen_github_hyphen_billing_hyphen_usage_hyphen_report_hyphen_org\/output\/internalservererror(_:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIBilling/documentation/GitHubRestAPIBilling": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIBilling",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapibilling"
+},
+"doc://GitHubRestAPIBilling/documentation/GitHubRestAPIBilling/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapibilling\/components"
+},
+"doc://GitHubRestAPIBilling/documentation/GitHubRestAPIBilling/Components/Responses": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/responses",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Responses"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components\/Responses",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Responses"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Responses",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapibilling\/components\/responses"
+},
+"doc://GitHubRestAPIBilling/documentation/GitHubRestAPIBilling/Components/Responses/internal_error": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "internal_error"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components\/Responses\/internal_error",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "internal_error"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Responses.internal_error",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapibilling\/components\/responses\/internal_error"
+},
+"doc://GitHubRestAPIBilling/documentation/GitHubRestAPIBilling/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapibilling\/operations"
+},
+"doc://GitHubRestAPIBilling/documentation/GitHubRestAPIBilling/Operations/billing_sol_get_hyphen_github_hyphen_billing_hyphen_usage_hyphen_report_hyphen_org": {
+  "abstract" : [
+    {
+      "text" : "Get billing usage report for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "billing_sol_get_hyphen_github_hyphen_billing_hyphen_usage_hyphen_report_hyphen_org"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Operations\/billing_sol_get_hyphen_github_hyphen_billing_hyphen_usage_hyphen_report_hyphen_org",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "billing_sol_get_hyphen_github_hyphen_billing_hyphen_usage_hyphen_report_hyphen_org"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.billing_sol_get_hyphen_github_hyphen_billing_hyphen_usage_hyphen_report_hyphen_org",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapibilling\/operations\/billing_sol_get_hyphen_github_hyphen_billing_hyphen_usage_hyphen_report_hyphen_org"
+},
+"doc://GitHubRestAPIBilling/documentation/GitHubRestAPIBilling/Operations/billing_sol_get_hyphen_github_hyphen_billing_hyphen_usage_hyphen_report_hyphen_org/Output": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Operations\/billing_sol_get_hyphen_github_hyphen_billing_hyphen_usage_hyphen_report_hyphen_org\/Output",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.billing_sol_get_hyphen_github_hyphen_billing_hyphen_usage_hyphen_report_hyphen_org.Output",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapibilling\/operations\/billing_sol_get_hyphen_github_hyphen_billing_hyphen_usage_hyphen_report_hyphen_org\/output"
+},
+"doc://GitHubRestAPIBilling/documentation/GitHubRestAPIBilling/Operations/billing_sol_get_hyphen_github_hyphen_billing_hyphen_usage_hyphen_report_hyphen_org/Output/internalServerError(_:)": {
+  "abstract" : [
+    {
+      "text" : "Internal Error",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "internalServerError"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIBilling10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIBilling10ComponentsO9ResponsesO",
+      "text" : "Responses"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIBilling10ComponentsO9ResponsesO14internal_errorV",
+      "text" : "internal_error"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Operations\/billing_sol_get_hyphen_github_hyphen_billing_hyphen_usage_hyphen_report_hyphen_org\/Output\/internalServerError(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Operations.billing_sol_get_hyphen_github_hyphen_billing_hyphen_usage_hyphen_report_hyphen_org.Output.internalServerError(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapibilling\/operations\/billing_sol_get_hyphen_github_hyphen_billing_hyphen_usage_hyphen_report_hyphen_org\/output\/internalservererror(_:)"
+}
+}
+}

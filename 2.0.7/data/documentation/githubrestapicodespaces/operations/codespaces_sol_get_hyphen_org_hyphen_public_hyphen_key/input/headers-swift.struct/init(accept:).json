@@ -1,0 +1,472 @@
+{
+  "abstract" : [
+    {
+      "text" : "Creates a new ",
+      "type" : "text"
+    },
+    {
+      "code" : "Headers",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/codespaces_sol_get_hyphen_org_hyphen_public_hyphen_key",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/codespaces_sol_get_hyphen_org_hyphen_public_hyphen_key\/Input",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/codespaces_sol_get_hyphen_org_hyphen_public_hyphen_key\/Input\/Headers-swift.struct"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/codespaces_sol_get_hyphen_org_hyphen_public_hyphen_key\/Input\/Headers-swift.struct\/init(accept:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:23GitHubRestAPICodespaces10OperationsO030codespaces_sol_get_hyphen_org_i8_public_I4_keyO5InputV7HeadersV6acceptAISay14OpenAPIRuntime23AcceptHeaderContentTypeVyAE010AcceptabletU0OGG_tcfc",
+    "fragments" : [
+      {
+        "kind" : "identifier",
+        "text" : "init"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "accept"
+      },
+      {
+        "kind" : "text",
+        "text" : ": ["
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:14OpenAPIRuntime23AcceptHeaderContentTypeV",
+        "text" : "AcceptHeaderContentType"
+      },
+      {
+        "kind" : "text",
+        "text" : "<"
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+        "text" : "Operations"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO030codespaces_sol_get_hyphen_org_i8_public_I4_keyO",
+        "text" : "codespaces_sol_get_hyphen_org_hyphen_public_hyphen_key"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO030codespaces_sol_get_hyphen_org_i8_public_I4_keyO21AcceptableContentTypeO",
+        "text" : "AcceptableContentType"
+      },
+      {
+        "kind" : "text",
+        "text" : ">])"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPICodespaces"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/codespaces\/Types.swift#L8069"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Initializer",
+    "symbolKind" : "init",
+    "title" : "init(accept:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "init"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "accept"
+            },
+            {
+              "kind" : "text",
+              "text" : ": ["
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:14OpenAPIRuntime23AcceptHeaderContentTypeV",
+              "text" : "AcceptHeaderContentType"
+            },
+            {
+              "kind" : "text",
+              "text" : "<"
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+              "text" : "Operations"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/codespaces_sol_get_hyphen_org_hyphen_public_hyphen_key",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO030codespaces_sol_get_hyphen_org_i8_public_I4_keyO",
+              "text" : "codespaces_sol_get_hyphen_org_hyphen_public_hyphen_key"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/codespaces_sol_get_hyphen_org_hyphen_public_hyphen_key\/AcceptableContentType",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO030codespaces_sol_get_hyphen_org_i8_public_I4_keyO21AcceptableContentTypeO",
+              "text" : "AcceptableContentType"
+            },
+            {
+              "kind" : "text",
+              "text" : ">] = .defaultValues())"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "kind" : "parameters",
+      "parameters" : [
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "accept"
+        }
+      ]
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapicodespaces\/operations\/codespaces_sol_get_hyphen_org_hyphen_public_hyphen_key\/input\/headers-swift.struct\/init(accept:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPICodespaces",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/operations"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Operations/codespaces_sol_get_hyphen_org_hyphen_public_hyphen_key": {
+  "abstract" : [
+    {
+      "text" : "Get an organization public key",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "codespaces_sol_get_hyphen_org_hyphen_public_hyphen_key"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/codespaces_sol_get_hyphen_org_hyphen_public_hyphen_key",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "codespaces_sol_get_hyphen_org_hyphen_public_hyphen_key"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.codespaces_sol_get_hyphen_org_hyphen_public_hyphen_key",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/operations\/codespaces_sol_get_hyphen_org_hyphen_public_hyphen_key"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Operations/codespaces_sol_get_hyphen_org_hyphen_public_hyphen_key/AcceptableContentType": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AcceptableContentType"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/codespaces_sol_get_hyphen_org_hyphen_public_hyphen_key\/AcceptableContentType",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AcceptableContentType"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.codespaces_sol_get_hyphen_org_hyphen_public_hyphen_key.AcceptableContentType",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/operations\/codespaces_sol_get_hyphen_org_hyphen_public_hyphen_key\/acceptablecontenttype"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Operations/codespaces_sol_get_hyphen_org_hyphen_public_hyphen_key/Input": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/codespaces_sol_get_hyphen_org_hyphen_public_hyphen_key\/Input",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.codespaces_sol_get_hyphen_org_hyphen_public_hyphen_key.Input",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/operations\/codespaces_sol_get_hyphen_org_hyphen_public_hyphen_key\/input"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Operations/codespaces_sol_get_hyphen_org_hyphen_public_hyphen_key/Input/Headers-swift.struct": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Headers"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/codespaces_sol_get_hyphen_org_hyphen_public_hyphen_key\/Input\/Headers-swift.struct",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Headers"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.codespaces_sol_get_hyphen_org_hyphen_public_hyphen_key.Input.Headers",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/operations\/codespaces_sol_get_hyphen_org_hyphen_public_hyphen_key\/input\/headers-swift.struct"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Operations/codespaces_sol_get_hyphen_org_hyphen_public_hyphen_key/Input/Headers-swift.struct/init(accept:)": {
+  "abstract" : [
+    {
+      "text" : "Creates a new ",
+      "type" : "text"
+    },
+    {
+      "code" : "Headers",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "accept"
+    },
+    {
+      "kind" : "text",
+      "text" : ": ["
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:14OpenAPIRuntime23AcceptHeaderContentTypeV",
+      "text" : "AcceptHeaderContentType"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO030codespaces_sol_get_hyphen_org_i8_public_I4_keyO",
+      "text" : "codespaces_sol_get_hyphen_org_hyphen_public_hyphen_key"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO030codespaces_sol_get_hyphen_org_i8_public_I4_keyO21AcceptableContentTypeO",
+      "text" : "AcceptableContentType"
+    },
+    {
+      "kind" : "text",
+      "text" : ">])"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/codespaces_sol_get_hyphen_org_hyphen_public_hyphen_key\/Input\/Headers-swift.struct\/init(accept:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(accept:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/operations\/codespaces_sol_get_hyphen_org_hyphen_public_hyphen_key\/input\/headers-swift.struct\/init(accept:)"
+}
+}
+}

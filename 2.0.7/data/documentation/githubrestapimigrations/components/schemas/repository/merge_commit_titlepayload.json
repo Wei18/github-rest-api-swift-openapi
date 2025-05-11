@@ -1,0 +1,524 @@
+{
+  "abstract" : [
+    {
+      "text" : "The default value for a merge commit title.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations",
+        "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components",
+        "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas",
+        "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas\/repository"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas\/repository\/merge_commit_titlePayload"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:23GitHubRestAPIMigrations10ComponentsO7SchemasO10repositoryV25merge_commit_titlePayloadO",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "enum"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "merge_commit_titlePayload"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIMigrations"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "merge_commit_titlePayload"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/migrations\/Types.swift#L1576"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Enumeration",
+    "symbolKind" : "enum",
+    "title" : "Components.Schemas.repository.merge_commit_titlePayload"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "enum"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "merge_commit_titlePayload"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "items" : [
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "code" : "PR_TITLE",
+                      "type" : "codeVoice"
+                    },
+                    {
+                      "text" : " - default to the pull request’s title.",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            },
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "code" : "MERGE_MESSAGE",
+                      "type" : "codeVoice"
+                    },
+                    {
+                      "text" : " - default to the classic title for a merge message (e.g., Merge pull request #123 from branch-name).",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            }
+          ],
+          "type" : "unorderedList"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/components\/schemas\/repository\/merge_commit_title",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIMigrations\/s12CaseIterableP",
+        "doc:\/\/GitHubRestAPIMigrations\/Se",
+        "doc:\/\/GitHubRestAPIMigrations\/SE",
+        "doc:\/\/GitHubRestAPIMigrations\/SQ",
+        "doc:\/\/GitHubRestAPIMigrations\/SH",
+        "doc:\/\/GitHubRestAPIMigrations\/SY",
+        "doc:\/\/GitHubRestAPIMigrations\/s8SendableP"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas\/repository\/merge_commit_titlePayload\/MERGE_MESSAGE",
+        "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas\/repository\/merge_commit_titlePayload\/PR_TITLE"
+      ],
+      "title" : "Enumeration Cases"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas\/repository\/merge_commit_titlePayload\/init(rawValue:)"
+      ],
+      "title" : "Initializers"
+    },
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas\/repository\/merge_commit_titlePayload\/Equatable-Implementations",
+        "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas\/repository\/merge_commit_titlePayload\/RawRepresentable-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapimigrations\/components\/schemas\/repository\/merge_commit_titlepayload"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIMigrations/SE": {
+  "identifier" : "doc:\/\/GitHubRestAPIMigrations\/SE",
+  "title" : "Swift.Encodable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIMigrations/SH": {
+  "identifier" : "doc:\/\/GitHubRestAPIMigrations\/SH",
+  "title" : "Swift.Hashable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIMigrations/SQ": {
+  "identifier" : "doc:\/\/GitHubRestAPIMigrations\/SQ",
+  "title" : "Swift.Equatable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIMigrations/SY": {
+  "identifier" : "doc:\/\/GitHubRestAPIMigrations\/SY",
+  "title" : "Swift.RawRepresentable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIMigrations/Se": {
+  "identifier" : "doc:\/\/GitHubRestAPIMigrations\/Se",
+  "title" : "Swift.Decodable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIMigrations/documentation/GitHubRestAPIMigrations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIMigrations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimigrations"
+},
+"doc://GitHubRestAPIMigrations/documentation/GitHubRestAPIMigrations/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimigrations\/components"
+},
+"doc://GitHubRestAPIMigrations/documentation/GitHubRestAPIMigrations/Components/Schemas": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/schemas",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimigrations\/components\/schemas"
+},
+"doc://GitHubRestAPIMigrations/documentation/GitHubRestAPIMigrations/Components/Schemas/repository": {
+  "abstract" : [
+    {
+      "text" : "A repository on GitHub.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "repository"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas\/repository",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "repository"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.repository",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimigrations\/components\/schemas\/repository"
+},
+"doc://GitHubRestAPIMigrations/documentation/GitHubRestAPIMigrations/Components/Schemas/repository/merge_commit_titlePayload": {
+  "abstract" : [
+    {
+      "text" : "The default value for a merge commit title.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "merge_commit_titlePayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas\/repository\/merge_commit_titlePayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "merge_commit_titlePayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.repository.merge_commit_titlePayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimigrations\/components\/schemas\/repository\/merge_commit_titlepayload"
+},
+"doc://GitHubRestAPIMigrations/documentation/GitHubRestAPIMigrations/Components/Schemas/repository/merge_commit_titlePayload/Equatable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas\/repository\/merge_commit_titlePayload\/Equatable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Equatable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimigrations\/components\/schemas\/repository\/merge_commit_titlepayload\/equatable-implementations"
+},
+"doc://GitHubRestAPIMigrations/documentation/GitHubRestAPIMigrations/Components/Schemas/repository/merge_commit_titlePayload/MERGE_MESSAGE": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "MERGE_MESSAGE"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas\/repository\/merge_commit_titlePayload\/MERGE_MESSAGE",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.repository.merge_commit_titlePayload.MERGE_MESSAGE",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimigrations\/components\/schemas\/repository\/merge_commit_titlepayload\/merge_message"
+},
+"doc://GitHubRestAPIMigrations/documentation/GitHubRestAPIMigrations/Components/Schemas/repository/merge_commit_titlePayload/PR_TITLE": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "PR_TITLE"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas\/repository\/merge_commit_titlePayload\/PR_TITLE",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.repository.merge_commit_titlePayload.PR_TITLE",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimigrations\/components\/schemas\/repository\/merge_commit_titlepayload\/pr_title"
+},
+"doc://GitHubRestAPIMigrations/documentation/GitHubRestAPIMigrations/Components/Schemas/repository/merge_commit_titlePayload/RawRepresentable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas\/repository\/merge_commit_titlePayload\/RawRepresentable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "RawRepresentable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimigrations\/components\/schemas\/repository\/merge_commit_titlepayload\/rawrepresentable-implementations"
+},
+"doc://GitHubRestAPIMigrations/documentation/GitHubRestAPIMigrations/Components/Schemas/repository/merge_commit_titlePayload/init(rawValue:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "?("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "rawValue"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas\/repository\/merge_commit_titlePayload\/init(rawValue:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(rawValue:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimigrations\/components\/schemas\/repository\/merge_commit_titlepayload\/init(rawvalue:)"
+},
+"doc://GitHubRestAPIMigrations/s12CaseIterableP": {
+  "identifier" : "doc:\/\/GitHubRestAPIMigrations\/s12CaseIterableP",
+  "title" : "Swift.CaseIterable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIMigrations/s8SendableP": {
+  "identifier" : "doc:\/\/GitHubRestAPIMigrations\/s8SendableP",
+  "title" : "Swift.Sendable",
+  "type" : "unresolvable"
+}
+}
+}

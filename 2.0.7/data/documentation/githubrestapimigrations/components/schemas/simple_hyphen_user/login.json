@@ -1,0 +1,307 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations",
+        "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components",
+        "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas",
+        "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas\/simple_hyphen_user"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas\/simple_hyphen_user\/login"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:23GitHubRestAPIMigrations10ComponentsO7SchemasO18simple_hyphen_userV5loginSSvp",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "var"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "login"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SS",
+        "text" : "String"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIMigrations"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/migrations\/Types.swift#L788"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Instance Property",
+    "symbolKind" : "property",
+    "title" : "login"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "var"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "login"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:SS",
+              "text" : "String"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/components\/schemas\/simple-user\/login",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapimigrations\/components\/schemas\/simple_hyphen_user\/login"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIMigrations/documentation/GitHubRestAPIMigrations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIMigrations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimigrations"
+},
+"doc://GitHubRestAPIMigrations/documentation/GitHubRestAPIMigrations/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimigrations\/components"
+},
+"doc://GitHubRestAPIMigrations/documentation/GitHubRestAPIMigrations/Components/Schemas": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/schemas",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimigrations\/components\/schemas"
+},
+"doc://GitHubRestAPIMigrations/documentation/GitHubRestAPIMigrations/Components/Schemas/simple_hyphen_user": {
+  "abstract" : [
+    {
+      "text" : "A GitHub user.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "simple_hyphen_user"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas\/simple_hyphen_user",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "simple_hyphen_user"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.simple_hyphen_user",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimigrations\/components\/schemas\/simple_hyphen_user"
+},
+"doc://GitHubRestAPIMigrations/documentation/GitHubRestAPIMigrations/Components/Schemas/simple_hyphen_user/login": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "login"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas\/simple_hyphen_user\/login",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "login",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimigrations\/components\/schemas\/simple_hyphen_user\/login"
+}
+}
+}

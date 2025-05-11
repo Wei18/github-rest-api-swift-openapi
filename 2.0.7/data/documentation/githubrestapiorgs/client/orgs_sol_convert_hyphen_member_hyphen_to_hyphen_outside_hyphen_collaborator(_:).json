@@ -1,0 +1,656 @@
+{
+  "abstract" : [
+    {
+      "text" : "Convert an organization member to outside collaborator",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Client"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Client\/orgs_sol_convert_hyphen_member_hyphen_to_hyphen_outside_hyphen_collaborator(_:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:17GitHubRestAPIOrgs6ClientV031orgs_sol_convert_hyphen_member_i4_to_i9_outside_I13_collaboratoryAA10OperationsOADO6OutputOAG5InputVYaKF",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "func"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "orgs_sol_convert_hyphen_member_hyphen_to_hyphen_outside_hyphen_collaborator"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:17GitHubRestAPIOrgs10OperationsO",
+        "text" : "Operations"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:17GitHubRestAPIOrgs10OperationsO031orgs_sol_convert_hyphen_member_i4_to_i9_outside_I13_collaboratorO",
+        "text" : "orgs_sol_convert_hyphen_member_hyphen_to_hyphen_outside_hyphen_collaborator"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:17GitHubRestAPIOrgs10OperationsO031orgs_sol_convert_hyphen_member_i4_to_i9_outside_I13_collaboratorO5InputV",
+        "text" : "Input"
+      },
+      {
+        "kind" : "text",
+        "text" : ") "
+      },
+      {
+        "kind" : "keyword",
+        "text" : "async"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "keyword",
+        "text" : "throws"
+      },
+      {
+        "kind" : "text",
+        "text" : " -> "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:17GitHubRestAPIOrgs10OperationsO",
+        "text" : "Operations"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:17GitHubRestAPIOrgs10OperationsO031orgs_sol_convert_hyphen_member_i4_to_i9_outside_I13_collaboratorO",
+        "text" : "orgs_sol_convert_hyphen_member_hyphen_to_hyphen_outside_hyphen_collaborator"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:17GitHubRestAPIOrgs10OperationsO031orgs_sol_convert_hyphen_member_i4_to_i9_outside_I13_collaboratorO6OutputO",
+        "text" : "Output"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIOrgs"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Client.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/orgs\/Client.swift#L5240"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Instance Method",
+    "symbolKind" : "method",
+    "title" : "orgs_sol_convert_hyphen_member_hyphen_to_hyphen_outside_hyphen_collaborator(_:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "func"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "orgs_sol_convert_hyphen_member_hyphen_to_hyphen_outside_hyphen_collaborator"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "_"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "internalParam",
+              "text" : "input"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:17GitHubRestAPIOrgs10OperationsO",
+              "text" : "Operations"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/orgs_sol_convert_hyphen_member_hyphen_to_hyphen_outside_hyphen_collaborator",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:17GitHubRestAPIOrgs10OperationsO031orgs_sol_convert_hyphen_member_i4_to_i9_outside_I13_collaboratorO",
+              "text" : "orgs_sol_convert_hyphen_member_hyphen_to_hyphen_outside_hyphen_collaborator"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/orgs_sol_convert_hyphen_member_hyphen_to_hyphen_outside_hyphen_collaborator\/Input",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:17GitHubRestAPIOrgs10OperationsO031orgs_sol_convert_hyphen_member_i4_to_i9_outside_I13_collaboratorO5InputV",
+              "text" : "Input"
+            },
+            {
+              "kind" : "text",
+              "text" : ") "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "async"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "throws"
+            },
+            {
+              "kind" : "text",
+              "text" : " -> "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:17GitHubRestAPIOrgs10OperationsO",
+              "text" : "Operations"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/orgs_sol_convert_hyphen_member_hyphen_to_hyphen_outside_hyphen_collaborator",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:17GitHubRestAPIOrgs10OperationsO031orgs_sol_convert_hyphen_member_i4_to_i9_outside_I13_collaboratorO",
+              "text" : "orgs_sol_convert_hyphen_member_hyphen_to_hyphen_outside_hyphen_collaborator"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/orgs_sol_convert_hyphen_member_hyphen_to_hyphen_outside_hyphen_collaborator\/Output",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:17GitHubRestAPIOrgs10OperationsO031orgs_sol_convert_hyphen_member_i4_to_i9_outside_I13_collaboratorO6OutputO",
+              "text" : "Output"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "When an organization member is converted to an outside collaborator, they’ll only have access to the repositories that their current team membership allows. The user will no longer be a member of the organization. For more information, see “",
+              "type" : "text"
+            },
+            {
+              "identifier" : "https:\/\/docs.github.com\/articles\/converting-an-organization-member-to-an-outside-collaborator\/",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : "”. Converting an organization member to an outside collaborator may be restricted by enterprise administrators. For more information, see “",
+              "type" : "text"
+            },
+            {
+              "identifier" : "https:\/\/docs.github.com\/admin\/policies\/enforcing-policies-for-your-enterprise\/enforcing-repository-management-policies-in-your-enterprise#enforcing-a-policy-for-inviting-outside-collaborators-to-repositories",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : ".”",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "HTTP ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "PUT \/orgs\/{org}\/outside_collaborators\/{username}",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/paths\/\/orgs\/{org}\/outside_collaborators\/{username}\/put(orgs\/convert-member-to-outside-collaborator)",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapiorgs\/client\/orgs_sol_convert_hyphen_member_hyphen_to_hyphen_outside_hyphen_collaborator(_:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIOrgs",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Client": {
+  "abstract" : [
+    {
+      "text" : "GitHub’s v3 REST API.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Client"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Client",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Client"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Client",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/client"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Client/orgs_sol_convert_hyphen_member_hyphen_to_hyphen_outside_hyphen_collaborator(_:)": {
+  "abstract" : [
+    {
+      "text" : "Convert an organization member to outside collaborator",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "orgs_sol_convert_hyphen_member_hyphen_to_hyphen_outside_hyphen_collaborator"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10OperationsO031orgs_sol_convert_hyphen_member_i4_to_i9_outside_I13_collaboratorO",
+      "text" : "orgs_sol_convert_hyphen_member_hyphen_to_hyphen_outside_hyphen_collaborator"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10OperationsO031orgs_sol_convert_hyphen_member_i4_to_i9_outside_I13_collaboratorO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10OperationsO031orgs_sol_convert_hyphen_member_i4_to_i9_outside_I13_collaboratorO",
+      "text" : "orgs_sol_convert_hyphen_member_hyphen_to_hyphen_outside_hyphen_collaborator"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10OperationsO031orgs_sol_convert_hyphen_member_i4_to_i9_outside_I13_collaboratorO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Client\/orgs_sol_convert_hyphen_member_hyphen_to_hyphen_outside_hyphen_collaborator(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "orgs_sol_convert_hyphen_member_hyphen_to_hyphen_outside_hyphen_collaborator(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/client\/orgs_sol_convert_hyphen_member_hyphen_to_hyphen_outside_hyphen_collaborator(_:)"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/operations"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Operations/orgs_sol_convert_hyphen_member_hyphen_to_hyphen_outside_hyphen_collaborator": {
+  "abstract" : [
+    {
+      "text" : "Convert an organization member to outside collaborator",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "orgs_sol_convert_hyphen_member_hyphen_to_hyphen_outside_hyphen_collaborator"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/orgs_sol_convert_hyphen_member_hyphen_to_hyphen_outside_hyphen_collaborator",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "orgs_sol_convert_hyphen_member_hyphen_to_hyphen_outside_hyphen_collaborator"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.orgs_sol_convert_hyphen_member_hyphen_to_hyphen_outside_hyphen_collaborator",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/operations\/orgs_sol_convert_hyphen_member_hyphen_to_hyphen_outside_hyphen_collaborator"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Operations/orgs_sol_convert_hyphen_member_hyphen_to_hyphen_outside_hyphen_collaborator/Input": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/orgs_sol_convert_hyphen_member_hyphen_to_hyphen_outside_hyphen_collaborator\/Input",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.orgs_sol_convert_hyphen_member_hyphen_to_hyphen_outside_hyphen_collaborator.Input",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/operations\/orgs_sol_convert_hyphen_member_hyphen_to_hyphen_outside_hyphen_collaborator\/input"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Operations/orgs_sol_convert_hyphen_member_hyphen_to_hyphen_outside_hyphen_collaborator/Output": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/orgs_sol_convert_hyphen_member_hyphen_to_hyphen_outside_hyphen_collaborator\/Output",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.orgs_sol_convert_hyphen_member_hyphen_to_hyphen_outside_hyphen_collaborator.Output",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/operations\/orgs_sol_convert_hyphen_member_hyphen_to_hyphen_outside_hyphen_collaborator\/output"
+},
+"https://docs.github.com/admin/policies/enforcing-policies-for-your-enterprise/enforcing-repository-management-policies-in-your-enterprise#enforcing-a-policy-for-inviting-outside-collaborators-to-repositories": {
+  "identifier" : "https:\/\/docs.github.com\/admin\/policies\/enforcing-policies-for-your-enterprise\/enforcing-repository-management-policies-in-your-enterprise#enforcing-a-policy-for-inviting-outside-collaborators-to-repositories",
+  "title" : "Enforcing repository management policies in your enterprise",
+  "titleInlineContent" : [
+    {
+      "text" : "Enforcing repository management policies in your enterprise",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/docs.github.com\/admin\/policies\/enforcing-policies-for-your-enterprise\/enforcing-repository-management-policies-in-your-enterprise#enforcing-a-policy-for-inviting-outside-collaborators-to-repositories"
+},
+"https://docs.github.com/articles/converting-an-organization-member-to-an-outside-collaborator/": {
+  "identifier" : "https:\/\/docs.github.com\/articles\/converting-an-organization-member-to-an-outside-collaborator\/",
+  "title" : "Converting an organization member to an outside collaborator",
+  "titleInlineContent" : [
+    {
+      "text" : "Converting an organization member to an outside collaborator",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/docs.github.com\/articles\/converting-an-organization-member-to-an-outside-collaborator\/"
+}
+}
+}

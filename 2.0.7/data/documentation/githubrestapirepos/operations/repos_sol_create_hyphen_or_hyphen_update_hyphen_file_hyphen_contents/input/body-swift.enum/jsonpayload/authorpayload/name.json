@@ -1,0 +1,460 @@
+{
+  "abstract" : [
+    {
+      "text" : "The name of the author or committer of the commit. You’ll receive a ",
+      "type" : "text"
+    },
+    {
+      "code" : "422",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " status code if ",
+      "type" : "text"
+    },
+    {
+      "code" : "name",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " is omitted.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos",
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Operations",
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Operations\/repos_sol_create_hyphen_or_hyphen_update_hyphen_file_hyphen_contents",
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Operations\/repos_sol_create_hyphen_or_hyphen_update_hyphen_file_hyphen_contents\/Input",
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Operations\/repos_sol_create_hyphen_or_hyphen_update_hyphen_file_hyphen_contents\/Input\/Body-swift.enum",
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Operations\/repos_sol_create_hyphen_or_hyphen_update_hyphen_file_hyphen_contents\/Input\/Body-swift.enum\/jsonPayload",
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Operations\/repos_sol_create_hyphen_or_hyphen_update_hyphen_file_hyphen_contents\/Input\/Body-swift.enum\/jsonPayload\/authorPayload"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Operations\/repos_sol_create_hyphen_or_hyphen_update_hyphen_file_hyphen_contents\/Input\/Body-swift.enum\/jsonPayload\/authorPayload\/name"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:18GitHubRestAPIRepos10OperationsO027repos_sol_create_hyphen_or_i8_update_i6_file_I9_contentsO5InputV4BodyO11jsonPayloadV06authorQ0V4nameSSvp",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "var"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "name"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SS",
+        "text" : "String"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIRepos"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/repos\/Types.swift#L40915"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Instance Property",
+    "symbolKind" : "property",
+    "title" : "name"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "var"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "name"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:SS",
+              "text" : "String"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/paths\/repos\/{owner}\/{repo}\/contents\/{path}\/PUT\/requestBody\/json\/author\/name",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapirepos\/operations\/repos_sol_create_hyphen_or_hyphen_update_hyphen_file_hyphen_contents\/input\/body-swift.enum\/jsonpayload\/authorpayload\/name"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIRepos",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/operations"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Operations/repos_sol_create_hyphen_or_hyphen_update_hyphen_file_hyphen_contents": {
+  "abstract" : [
+    {
+      "text" : "Create or update file contents",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "repos_sol_create_hyphen_or_hyphen_update_hyphen_file_hyphen_contents"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Operations\/repos_sol_create_hyphen_or_hyphen_update_hyphen_file_hyphen_contents",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "repos_sol_create_hyphen_or_hyphen_update_hyphen_file_hyphen_contents"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.repos_sol_create_hyphen_or_hyphen_update_hyphen_file_hyphen_contents",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/operations\/repos_sol_create_hyphen_or_hyphen_update_hyphen_file_hyphen_contents"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Operations/repos_sol_create_hyphen_or_hyphen_update_hyphen_file_hyphen_contents/Input": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Operations\/repos_sol_create_hyphen_or_hyphen_update_hyphen_file_hyphen_contents\/Input",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.repos_sol_create_hyphen_or_hyphen_update_hyphen_file_hyphen_contents.Input",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/operations\/repos_sol_create_hyphen_or_hyphen_update_hyphen_file_hyphen_contents\/input"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Operations/repos_sol_create_hyphen_or_hyphen_update_hyphen_file_hyphen_contents/Input/Body-swift.enum": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Body"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Operations\/repos_sol_create_hyphen_or_hyphen_update_hyphen_file_hyphen_contents\/Input\/Body-swift.enum",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Body"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.repos_sol_create_hyphen_or_hyphen_update_hyphen_file_hyphen_contents.Input.Body",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/operations\/repos_sol_create_hyphen_or_hyphen_update_hyphen_file_hyphen_contents\/input\/body-swift.enum"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Operations/repos_sol_create_hyphen_or_hyphen_update_hyphen_file_hyphen_contents/Input/Body-swift.enum/jsonPayload": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "jsonPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Operations\/repos_sol_create_hyphen_or_hyphen_update_hyphen_file_hyphen_contents\/Input\/Body-swift.enum\/jsonPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "jsonPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.repos_sol_create_hyphen_or_hyphen_update_hyphen_file_hyphen_contents.Input.Body.jsonPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/operations\/repos_sol_create_hyphen_or_hyphen_update_hyphen_file_hyphen_contents\/input\/body-swift.enum\/jsonpayload"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Operations/repos_sol_create_hyphen_or_hyphen_update_hyphen_file_hyphen_contents/Input/Body-swift.enum/jsonPayload/authorPayload": {
+  "abstract" : [
+    {
+      "text" : "The author of the file. Default: The ",
+      "type" : "text"
+    },
+    {
+      "code" : "committer",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " or the authenticated user if you omit ",
+      "type" : "text"
+    },
+    {
+      "code" : "committer",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "authorPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Operations\/repos_sol_create_hyphen_or_hyphen_update_hyphen_file_hyphen_contents\/Input\/Body-swift.enum\/jsonPayload\/authorPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "authorPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.repos_sol_create_hyphen_or_hyphen_update_hyphen_file_hyphen_contents.Input.Body.jsonPayload.authorPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/operations\/repos_sol_create_hyphen_or_hyphen_update_hyphen_file_hyphen_contents\/input\/body-swift.enum\/jsonpayload\/authorpayload"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Operations/repos_sol_create_hyphen_or_hyphen_update_hyphen_file_hyphen_contents/Input/Body-swift.enum/jsonPayload/authorPayload/name": {
+  "abstract" : [
+    {
+      "text" : "The name of the author or committer of the commit. You’ll receive a ",
+      "type" : "text"
+    },
+    {
+      "code" : "422",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " status code if ",
+      "type" : "text"
+    },
+    {
+      "code" : "name",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " is omitted.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "name"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Operations\/repos_sol_create_hyphen_or_hyphen_update_hyphen_file_hyphen_contents\/Input\/Body-swift.enum\/jsonPayload\/authorPayload\/name",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "name",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/operations\/repos_sol_create_hyphen_or_hyphen_update_hyphen_file_hyphen_contents\/input\/body-swift.enum\/jsonpayload\/authorpayload\/name"
+}
+}
+}

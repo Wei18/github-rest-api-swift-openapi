@@ -1,0 +1,456 @@
+{
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Operations"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:20GitHubRestAPIBilling10OperationsO",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "enum"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "Operations"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIBilling"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "Operations"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/billing\/Types.swift#L1090"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Enumeration",
+    "symbolKind" : "enum",
+    "title" : "Operations"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "enum"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "Operations"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Operations\/billing_sol_get_hyphen_github_hyphen_actions_hyphen_billing_hyphen_org",
+        "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Operations\/billing_sol_get_hyphen_github_hyphen_actions_hyphen_billing_hyphen_user",
+        "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Operations\/billing_sol_get_hyphen_github_hyphen_billing_hyphen_usage_hyphen_report_hyphen_org",
+        "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Operations\/billing_sol_get_hyphen_github_hyphen_billing_hyphen_usage_hyphen_report_hyphen_user",
+        "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Operations\/billing_sol_get_hyphen_github_hyphen_packages_hyphen_billing_hyphen_org",
+        "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Operations\/billing_sol_get_hyphen_github_hyphen_packages_hyphen_billing_hyphen_user",
+        "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Operations\/billing_sol_get_hyphen_shared_hyphen_storage_hyphen_billing_hyphen_org",
+        "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Operations\/billing_sol_get_hyphen_shared_hyphen_storage_hyphen_billing_hyphen_user"
+      ],
+      "title" : "Enumerations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapibilling\/operations"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIBilling/documentation/GitHubRestAPIBilling": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIBilling",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapibilling"
+},
+"doc://GitHubRestAPIBilling/documentation/GitHubRestAPIBilling/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapibilling\/operations"
+},
+"doc://GitHubRestAPIBilling/documentation/GitHubRestAPIBilling/Operations/billing_sol_get_hyphen_github_hyphen_actions_hyphen_billing_hyphen_org": {
+  "abstract" : [
+    {
+      "text" : "Get GitHub Actions billing for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "billing_sol_get_hyphen_github_hyphen_actions_hyphen_billing_hyphen_org"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Operations\/billing_sol_get_hyphen_github_hyphen_actions_hyphen_billing_hyphen_org",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "billing_sol_get_hyphen_github_hyphen_actions_hyphen_billing_hyphen_org"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.billing_sol_get_hyphen_github_hyphen_actions_hyphen_billing_hyphen_org",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapibilling\/operations\/billing_sol_get_hyphen_github_hyphen_actions_hyphen_billing_hyphen_org"
+},
+"doc://GitHubRestAPIBilling/documentation/GitHubRestAPIBilling/Operations/billing_sol_get_hyphen_github_hyphen_actions_hyphen_billing_hyphen_user": {
+  "abstract" : [
+    {
+      "text" : "Get GitHub Actions billing for a user",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "billing_sol_get_hyphen_github_hyphen_actions_hyphen_billing_hyphen_user"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Operations\/billing_sol_get_hyphen_github_hyphen_actions_hyphen_billing_hyphen_user",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "billing_sol_get_hyphen_github_hyphen_actions_hyphen_billing_hyphen_user"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.billing_sol_get_hyphen_github_hyphen_actions_hyphen_billing_hyphen_user",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapibilling\/operations\/billing_sol_get_hyphen_github_hyphen_actions_hyphen_billing_hyphen_user"
+},
+"doc://GitHubRestAPIBilling/documentation/GitHubRestAPIBilling/Operations/billing_sol_get_hyphen_github_hyphen_billing_hyphen_usage_hyphen_report_hyphen_org": {
+  "abstract" : [
+    {
+      "text" : "Get billing usage report for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "billing_sol_get_hyphen_github_hyphen_billing_hyphen_usage_hyphen_report_hyphen_org"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Operations\/billing_sol_get_hyphen_github_hyphen_billing_hyphen_usage_hyphen_report_hyphen_org",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "billing_sol_get_hyphen_github_hyphen_billing_hyphen_usage_hyphen_report_hyphen_org"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.billing_sol_get_hyphen_github_hyphen_billing_hyphen_usage_hyphen_report_hyphen_org",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapibilling\/operations\/billing_sol_get_hyphen_github_hyphen_billing_hyphen_usage_hyphen_report_hyphen_org"
+},
+"doc://GitHubRestAPIBilling/documentation/GitHubRestAPIBilling/Operations/billing_sol_get_hyphen_github_hyphen_billing_hyphen_usage_hyphen_report_hyphen_user": {
+  "abstract" : [
+    {
+      "text" : "Get billing usage report for a user",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "billing_sol_get_hyphen_github_hyphen_billing_hyphen_usage_hyphen_report_hyphen_user"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Operations\/billing_sol_get_hyphen_github_hyphen_billing_hyphen_usage_hyphen_report_hyphen_user",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "billing_sol_get_hyphen_github_hyphen_billing_hyphen_usage_hyphen_report_hyphen_user"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.billing_sol_get_hyphen_github_hyphen_billing_hyphen_usage_hyphen_report_hyphen_user",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapibilling\/operations\/billing_sol_get_hyphen_github_hyphen_billing_hyphen_usage_hyphen_report_hyphen_user"
+},
+"doc://GitHubRestAPIBilling/documentation/GitHubRestAPIBilling/Operations/billing_sol_get_hyphen_github_hyphen_packages_hyphen_billing_hyphen_org": {
+  "abstract" : [
+    {
+      "text" : "Get GitHub Packages billing for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "billing_sol_get_hyphen_github_hyphen_packages_hyphen_billing_hyphen_org"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Operations\/billing_sol_get_hyphen_github_hyphen_packages_hyphen_billing_hyphen_org",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "billing_sol_get_hyphen_github_hyphen_packages_hyphen_billing_hyphen_org"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.billing_sol_get_hyphen_github_hyphen_packages_hyphen_billing_hyphen_org",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapibilling\/operations\/billing_sol_get_hyphen_github_hyphen_packages_hyphen_billing_hyphen_org"
+},
+"doc://GitHubRestAPIBilling/documentation/GitHubRestAPIBilling/Operations/billing_sol_get_hyphen_github_hyphen_packages_hyphen_billing_hyphen_user": {
+  "abstract" : [
+    {
+      "text" : "Get GitHub Packages billing for a user",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "billing_sol_get_hyphen_github_hyphen_packages_hyphen_billing_hyphen_user"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Operations\/billing_sol_get_hyphen_github_hyphen_packages_hyphen_billing_hyphen_user",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "billing_sol_get_hyphen_github_hyphen_packages_hyphen_billing_hyphen_user"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.billing_sol_get_hyphen_github_hyphen_packages_hyphen_billing_hyphen_user",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapibilling\/operations\/billing_sol_get_hyphen_github_hyphen_packages_hyphen_billing_hyphen_user"
+},
+"doc://GitHubRestAPIBilling/documentation/GitHubRestAPIBilling/Operations/billing_sol_get_hyphen_shared_hyphen_storage_hyphen_billing_hyphen_org": {
+  "abstract" : [
+    {
+      "text" : "Get shared storage billing for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "billing_sol_get_hyphen_shared_hyphen_storage_hyphen_billing_hyphen_org"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Operations\/billing_sol_get_hyphen_shared_hyphen_storage_hyphen_billing_hyphen_org",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "billing_sol_get_hyphen_shared_hyphen_storage_hyphen_billing_hyphen_org"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.billing_sol_get_hyphen_shared_hyphen_storage_hyphen_billing_hyphen_org",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapibilling\/operations\/billing_sol_get_hyphen_shared_hyphen_storage_hyphen_billing_hyphen_org"
+},
+"doc://GitHubRestAPIBilling/documentation/GitHubRestAPIBilling/Operations/billing_sol_get_hyphen_shared_hyphen_storage_hyphen_billing_hyphen_user": {
+  "abstract" : [
+    {
+      "text" : "Get shared storage billing for a user",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "billing_sol_get_hyphen_shared_hyphen_storage_hyphen_billing_hyphen_user"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Operations\/billing_sol_get_hyphen_shared_hyphen_storage_hyphen_billing_hyphen_user",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "billing_sol_get_hyphen_shared_hyphen_storage_hyphen_billing_hyphen_user"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.billing_sol_get_hyphen_shared_hyphen_storage_hyphen_billing_hyphen_user",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapibilling\/operations\/billing_sol_get_hyphen_shared_hyphen_storage_hyphen_billing_hyphen_user"
+}
+}
+}

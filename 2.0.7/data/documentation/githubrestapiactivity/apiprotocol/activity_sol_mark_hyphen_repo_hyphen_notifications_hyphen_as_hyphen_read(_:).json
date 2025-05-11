@@ -1,0 +1,653 @@
+{
+  "abstract" : [
+    {
+      "text" : "Mark repository notifications as read",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIActivity\/documentation\/GitHubRestAPIActivity",
+        "doc:\/\/GitHubRestAPIActivity\/documentation\/GitHubRestAPIActivity\/APIProtocol"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIActivity\/documentation\/GitHubRestAPIActivity\/APIProtocol\/activity_sol_mark_hyphen_repo_hyphen_notifications_hyphen_as_hyphen_read(_:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:21GitHubRestAPIActivity11APIProtocolP030activity_sol_mark_hyphen_repo_i15_notifications_i4_as_I5_readyAA10OperationsOADO6OutputOAG5InputVYaKF",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "func"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "activity_sol_mark_hyphen_repo_hyphen_notifications_hyphen_as_hyphen_read"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:21GitHubRestAPIActivity10OperationsO",
+        "text" : "Operations"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:21GitHubRestAPIActivity10OperationsO030activity_sol_mark_hyphen_repo_i15_notifications_i4_as_I5_readO",
+        "text" : "activity_sol_mark_hyphen_repo_hyphen_notifications_hyphen_as_hyphen_read"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:21GitHubRestAPIActivity10OperationsO030activity_sol_mark_hyphen_repo_i15_notifications_i4_as_I5_readO5InputV",
+        "text" : "Input"
+      },
+      {
+        "kind" : "text",
+        "text" : ") "
+      },
+      {
+        "kind" : "keyword",
+        "text" : "async"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "keyword",
+        "text" : "throws"
+      },
+      {
+        "kind" : "text",
+        "text" : " -> "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:21GitHubRestAPIActivity10OperationsO",
+        "text" : "Operations"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:21GitHubRestAPIActivity10OperationsO030activity_sol_mark_hyphen_repo_i15_notifications_i4_as_I5_readO",
+        "text" : "activity_sol_mark_hyphen_repo_hyphen_notifications_hyphen_as_hyphen_read"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:21GitHubRestAPIActivity10OperationsO030activity_sol_mark_hyphen_repo_i15_notifications_i4_as_I5_readO6OutputO",
+        "text" : "Output"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIActivity"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/activity\/Types.swift#L141"
+    },
+    "required" : true,
+    "role" : "symbol",
+    "roleHeading" : "Instance Method",
+    "symbolKind" : "method",
+    "title" : "activity_sol_mark_hyphen_repo_hyphen_notifications_hyphen_as_hyphen_read(_:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "func"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "activity_sol_mark_hyphen_repo_hyphen_notifications_hyphen_as_hyphen_read"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "_"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "internalParam",
+              "text" : "input"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIActivity\/documentation\/GitHubRestAPIActivity\/Operations",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:21GitHubRestAPIActivity10OperationsO",
+              "text" : "Operations"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIActivity\/documentation\/GitHubRestAPIActivity\/Operations\/activity_sol_mark_hyphen_repo_hyphen_notifications_hyphen_as_hyphen_read",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:21GitHubRestAPIActivity10OperationsO030activity_sol_mark_hyphen_repo_i15_notifications_i4_as_I5_readO",
+              "text" : "activity_sol_mark_hyphen_repo_hyphen_notifications_hyphen_as_hyphen_read"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIActivity\/documentation\/GitHubRestAPIActivity\/Operations\/activity_sol_mark_hyphen_repo_hyphen_notifications_hyphen_as_hyphen_read\/Input",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:21GitHubRestAPIActivity10OperationsO030activity_sol_mark_hyphen_repo_i15_notifications_i4_as_I5_readO5InputV",
+              "text" : "Input"
+            },
+            {
+              "kind" : "text",
+              "text" : ") "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "async"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "throws"
+            },
+            {
+              "kind" : "text",
+              "text" : " -> "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIActivity\/documentation\/GitHubRestAPIActivity\/Operations",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:21GitHubRestAPIActivity10OperationsO",
+              "text" : "Operations"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIActivity\/documentation\/GitHubRestAPIActivity\/Operations\/activity_sol_mark_hyphen_repo_hyphen_notifications_hyphen_as_hyphen_read",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:21GitHubRestAPIActivity10OperationsO030activity_sol_mark_hyphen_repo_i15_notifications_i4_as_I5_readO",
+              "text" : "activity_sol_mark_hyphen_repo_hyphen_notifications_hyphen_as_hyphen_read"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIActivity\/documentation\/GitHubRestAPIActivity\/Operations\/activity_sol_mark_hyphen_repo_hyphen_notifications_hyphen_as_hyphen_read\/Output",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:21GitHubRestAPIActivity10OperationsO030activity_sol_mark_hyphen_repo_i15_notifications_i4_as_I5_readO6OutputO",
+              "text" : "Output"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Marks all notifications in a repository as “read” for the current user. If the number of notifications is too large to complete in one request, you will receive a ",
+              "type" : "text"
+            },
+            {
+              "code" : "202 Accepted",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " status and GitHub will run an asynchronous process to mark notifications as “read.” To check whether any “unread” notifications remain, you can use the ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "https:\/\/docs.github.com\/rest\/activity\/notifications#list-repository-notifications-for-the-authenticated-user",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : " endpoint and pass the query parameter ",
+              "type" : "text"
+            },
+            {
+              "code" : "all=false",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ".",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "HTTP ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "PUT \/repos\/{owner}\/{repo}\/notifications",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/paths\/\/repos\/{owner}\/{repo}\/notifications\/put(activity\/mark-repo-notifications-as-read)",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapiactivity\/apiprotocol\/activity_sol_mark_hyphen_repo_hyphen_notifications_hyphen_as_hyphen_read(_:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIActivity/documentation/GitHubRestAPIActivity": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActivity\/documentation\/GitHubRestAPIActivity",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIActivity",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactivity"
+},
+"doc://GitHubRestAPIActivity/documentation/GitHubRestAPIActivity/APIProtocol": {
+  "abstract" : [
+    {
+      "text" : "A type that performs HTTP operations defined by the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "protocol"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "APIProtocol"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActivity\/documentation\/GitHubRestAPIActivity\/APIProtocol",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "APIProtocol"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "APIProtocol",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactivity\/apiprotocol"
+},
+"doc://GitHubRestAPIActivity/documentation/GitHubRestAPIActivity/APIProtocol/activity_sol_mark_hyphen_repo_hyphen_notifications_hyphen_as_hyphen_read(_:)": {
+  "abstract" : [
+    {
+      "text" : "Mark repository notifications as read",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "activity_sol_mark_hyphen_repo_hyphen_notifications_hyphen_as_hyphen_read"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIActivity10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIActivity10OperationsO030activity_sol_mark_hyphen_repo_i15_notifications_i4_as_I5_readO",
+      "text" : "activity_sol_mark_hyphen_repo_hyphen_notifications_hyphen_as_hyphen_read"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIActivity10OperationsO030activity_sol_mark_hyphen_repo_i15_notifications_i4_as_I5_readO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIActivity10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIActivity10OperationsO030activity_sol_mark_hyphen_repo_i15_notifications_i4_as_I5_readO",
+      "text" : "activity_sol_mark_hyphen_repo_hyphen_notifications_hyphen_as_hyphen_read"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIActivity10OperationsO030activity_sol_mark_hyphen_repo_i15_notifications_i4_as_I5_readO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActivity\/documentation\/GitHubRestAPIActivity\/APIProtocol\/activity_sol_mark_hyphen_repo_hyphen_notifications_hyphen_as_hyphen_read(_:)",
+  "kind" : "symbol",
+  "required" : true,
+  "role" : "symbol",
+  "title" : "activity_sol_mark_hyphen_repo_hyphen_notifications_hyphen_as_hyphen_read(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactivity\/apiprotocol\/activity_sol_mark_hyphen_repo_hyphen_notifications_hyphen_as_hyphen_read(_:)"
+},
+"doc://GitHubRestAPIActivity/documentation/GitHubRestAPIActivity/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActivity\/documentation\/GitHubRestAPIActivity\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactivity\/operations"
+},
+"doc://GitHubRestAPIActivity/documentation/GitHubRestAPIActivity/Operations/activity_sol_mark_hyphen_repo_hyphen_notifications_hyphen_as_hyphen_read": {
+  "abstract" : [
+    {
+      "text" : "Mark repository notifications as read",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "activity_sol_mark_hyphen_repo_hyphen_notifications_hyphen_as_hyphen_read"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActivity\/documentation\/GitHubRestAPIActivity\/Operations\/activity_sol_mark_hyphen_repo_hyphen_notifications_hyphen_as_hyphen_read",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "activity_sol_mark_hyphen_repo_hyphen_notifications_hyphen_as_hyphen_read"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.activity_sol_mark_hyphen_repo_hyphen_notifications_hyphen_as_hyphen_read",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactivity\/operations\/activity_sol_mark_hyphen_repo_hyphen_notifications_hyphen_as_hyphen_read"
+},
+"doc://GitHubRestAPIActivity/documentation/GitHubRestAPIActivity/Operations/activity_sol_mark_hyphen_repo_hyphen_notifications_hyphen_as_hyphen_read/Input": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActivity\/documentation\/GitHubRestAPIActivity\/Operations\/activity_sol_mark_hyphen_repo_hyphen_notifications_hyphen_as_hyphen_read\/Input",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.activity_sol_mark_hyphen_repo_hyphen_notifications_hyphen_as_hyphen_read.Input",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactivity\/operations\/activity_sol_mark_hyphen_repo_hyphen_notifications_hyphen_as_hyphen_read\/input"
+},
+"doc://GitHubRestAPIActivity/documentation/GitHubRestAPIActivity/Operations/activity_sol_mark_hyphen_repo_hyphen_notifications_hyphen_as_hyphen_read/Output": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActivity\/documentation\/GitHubRestAPIActivity\/Operations\/activity_sol_mark_hyphen_repo_hyphen_notifications_hyphen_as_hyphen_read\/Output",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.activity_sol_mark_hyphen_repo_hyphen_notifications_hyphen_as_hyphen_read.Output",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactivity\/operations\/activity_sol_mark_hyphen_repo_hyphen_notifications_hyphen_as_hyphen_read\/output"
+},
+"https://docs.github.com/rest/activity/notifications#list-repository-notifications-for-the-authenticated-user": {
+  "identifier" : "https:\/\/docs.github.com\/rest\/activity\/notifications#list-repository-notifications-for-the-authenticated-user",
+  "title" : "List repository notifications for the authenticated user",
+  "titleInlineContent" : [
+    {
+      "text" : "List repository notifications for the authenticated user",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/docs.github.com\/rest\/activity\/notifications#list-repository-notifications-for-the-authenticated-user"
+}
+}
+}

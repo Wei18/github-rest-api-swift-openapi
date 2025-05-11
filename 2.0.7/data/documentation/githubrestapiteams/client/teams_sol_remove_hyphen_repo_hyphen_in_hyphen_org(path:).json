@@ -1,0 +1,742 @@
+{
+  "abstract" : [
+    {
+      "text" : "Remove a repository from a team",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/APIProtocol-Implementations"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teams_sol_remove_hyphen_repo_hyphen_in_hyphen_org(path:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "extendedModule" : "GitHubRestAPITeams",
+    "externalID" : "s:18GitHubRestAPITeams11APIProtocolPAAE029teams_sol_remove_hyphen_repo_i4_in_I4_org4pathAA10OperationsOADO6OutputOAH5InputV4PathV_tYaKF::SYNTHESIZED::s:18GitHubRestAPITeams6ClientV",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "func"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "teams_sol_remove_hyphen_repo_hyphen_in_hyphen_org"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "path"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+        "text" : "Operations"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO029teams_sol_remove_hyphen_repo_i4_in_I4_orgO",
+        "text" : "teams_sol_remove_hyphen_repo_hyphen_in_hyphen_org"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO029teams_sol_remove_hyphen_repo_i4_in_I4_orgO5InputV",
+        "text" : "Input"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO029teams_sol_remove_hyphen_repo_i4_in_I4_orgO5InputV4PathV",
+        "text" : "Path"
+      },
+      {
+        "kind" : "text",
+        "text" : ") "
+      },
+      {
+        "kind" : "keyword",
+        "text" : "async"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "keyword",
+        "text" : "throws"
+      },
+      {
+        "kind" : "text",
+        "text" : " -> "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+        "text" : "Operations"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO029teams_sol_remove_hyphen_repo_i4_in_I4_orgO",
+        "text" : "teams_sol_remove_hyphen_repo_hyphen_in_hyphen_org"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO029teams_sol_remove_hyphen_repo_i4_in_I4_orgO6OutputO",
+        "text" : "Output"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPITeams"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/teams\/Types.swift#L1305"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Instance Method",
+    "symbolKind" : "method",
+    "title" : "teams_sol_remove_hyphen_repo_hyphen_in_hyphen_org(path:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "func"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "teams_sol_remove_hyphen_repo_hyphen_in_hyphen_org"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "path"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Operations",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+              "text" : "Operations"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Operations\/teams_sol_remove_hyphen_repo_hyphen_in_hyphen_org",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO029teams_sol_remove_hyphen_repo_i4_in_I4_orgO",
+              "text" : "teams_sol_remove_hyphen_repo_hyphen_in_hyphen_org"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Operations\/teams_sol_remove_hyphen_repo_hyphen_in_hyphen_org\/Input",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO029teams_sol_remove_hyphen_repo_i4_in_I4_orgO5InputV",
+              "text" : "Input"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Operations\/teams_sol_remove_hyphen_repo_hyphen_in_hyphen_org\/Input\/Path-swift.struct",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO029teams_sol_remove_hyphen_repo_i4_in_I4_orgO5InputV4PathV",
+              "text" : "Path"
+            },
+            {
+              "kind" : "text",
+              "text" : ") "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "async"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "throws"
+            },
+            {
+              "kind" : "text",
+              "text" : " -> "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Operations",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+              "text" : "Operations"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Operations\/teams_sol_remove_hyphen_repo_hyphen_in_hyphen_org",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO029teams_sol_remove_hyphen_repo_i4_in_I4_orgO",
+              "text" : "teams_sol_remove_hyphen_repo_hyphen_in_hyphen_org"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Operations\/teams_sol_remove_hyphen_repo_hyphen_in_hyphen_org\/Output",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO029teams_sol_remove_hyphen_repo_i4_in_I4_orgO6OutputO",
+              "text" : "Output"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "If the authenticated user is an organization owner or a team maintainer, they can remove any repositories from the team. To remove a repository from a team as an organization member, the authenticated user must have admin access to the repository and must be able to see the team. This does not delete the repository, it just removes it from the team.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "[!NOTE]",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "You can also specify a team by ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "org_id",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : " and ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "team_id",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : " using the route ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "DELETE \/organizations\/{org_id}\/team\/{team_id}\/repos\/{owner}\/{repo}",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Note",
+          "style" : "note",
+          "type" : "aside"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "HTTP ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "DELETE \/orgs\/{org}\/teams\/{team_slug}\/repos\/{owner}\/{repo}",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/paths\/\/orgs\/{org}\/teams\/{team_slug}\/repos\/{owner}\/{repo}\/delete(teams\/remove-repo-in-org)",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapiteams\/client\/teams_sol_remove_hyphen_repo_hyphen_in_hyphen_org(path:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPITeams",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Client": {
+  "abstract" : [
+    {
+      "text" : "GitHub’s v3 REST API.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Client"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Client"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Client",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/client"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Client/APIProtocol-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/APIProtocol-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "APIProtocol Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/client\/apiprotocol-implementations"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Client/teams_sol_remove_hyphen_repo_hyphen_in_hyphen_org(path:)": {
+  "abstract" : [
+    {
+      "text" : "Remove a repository from a team",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "teams_sol_remove_hyphen_repo_hyphen_in_hyphen_org"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "path"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO029teams_sol_remove_hyphen_repo_i4_in_I4_orgO",
+      "text" : "teams_sol_remove_hyphen_repo_hyphen_in_hyphen_org"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO029teams_sol_remove_hyphen_repo_i4_in_I4_orgO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO029teams_sol_remove_hyphen_repo_i4_in_I4_orgO5InputV4PathV",
+      "text" : "Path"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO029teams_sol_remove_hyphen_repo_i4_in_I4_orgO",
+      "text" : "teams_sol_remove_hyphen_repo_hyphen_in_hyphen_org"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO029teams_sol_remove_hyphen_repo_i4_in_I4_orgO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teams_sol_remove_hyphen_repo_hyphen_in_hyphen_org(path:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "teams_sol_remove_hyphen_repo_hyphen_in_hyphen_org(path:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/client\/teams_sol_remove_hyphen_repo_hyphen_in_hyphen_org(path:)"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/operations"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Operations/teams_sol_remove_hyphen_repo_hyphen_in_hyphen_org": {
+  "abstract" : [
+    {
+      "text" : "Remove a repository from a team",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "teams_sol_remove_hyphen_repo_hyphen_in_hyphen_org"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Operations\/teams_sol_remove_hyphen_repo_hyphen_in_hyphen_org",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "teams_sol_remove_hyphen_repo_hyphen_in_hyphen_org"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.teams_sol_remove_hyphen_repo_hyphen_in_hyphen_org",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/operations\/teams_sol_remove_hyphen_repo_hyphen_in_hyphen_org"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Operations/teams_sol_remove_hyphen_repo_hyphen_in_hyphen_org/Input": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Operations\/teams_sol_remove_hyphen_repo_hyphen_in_hyphen_org\/Input",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.teams_sol_remove_hyphen_repo_hyphen_in_hyphen_org.Input",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/operations\/teams_sol_remove_hyphen_repo_hyphen_in_hyphen_org\/input"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Operations/teams_sol_remove_hyphen_repo_hyphen_in_hyphen_org/Input/Path-swift.struct": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Path"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Operations\/teams_sol_remove_hyphen_repo_hyphen_in_hyphen_org\/Input\/Path-swift.struct",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Path"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.teams_sol_remove_hyphen_repo_hyphen_in_hyphen_org.Input.Path",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/operations\/teams_sol_remove_hyphen_repo_hyphen_in_hyphen_org\/input\/path-swift.struct"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Operations/teams_sol_remove_hyphen_repo_hyphen_in_hyphen_org/Output": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Operations\/teams_sol_remove_hyphen_repo_hyphen_in_hyphen_org\/Output",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.teams_sol_remove_hyphen_repo_hyphen_in_hyphen_org.Output",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/operations\/teams_sol_remove_hyphen_repo_hyphen_in_hyphen_org\/output"
+}
+}
+}

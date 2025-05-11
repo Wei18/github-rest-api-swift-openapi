@@ -1,0 +1,1323 @@
+{
+  "abstract" : [
+    {
+      "text" : "Groups of organization members that gives permissions on specified repositories.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories",
+        "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Components",
+        "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Components\/Schemas"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Components\/Schemas\/team"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:32GitHubRestAPISecurity_Advisories10ComponentsO7SchemasO4teamV",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "struct"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "team"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPISecurity_Advisories"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "team"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/security-advisories\/Types.swift#L3006"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Structure",
+    "symbolKind" : "struct",
+    "title" : "Components.Schemas.team"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "struct"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "team"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/components\/schemas\/team",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPISecurity_Advisories\/Se",
+        "doc:\/\/GitHubRestAPISecurity_Advisories\/SE",
+        "doc:\/\/GitHubRestAPISecurity_Advisories\/SQ",
+        "doc:\/\/GitHubRestAPISecurity_Advisories\/SH",
+        "doc:\/\/GitHubRestAPISecurity_Advisories\/s8SendableP"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Components\/Schemas\/team\/permissionsPayload"
+      ],
+      "title" : "Structures"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Components\/Schemas\/team\/init(from:)",
+        "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Components\/Schemas\/team\/init(id:node_id:name:slug:description:privacy:notification_setting:permission:permissions:url:html_url:members_url:repositories_url:parent:)"
+      ],
+      "title" : "Initializers"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Components\/Schemas\/team\/description",
+        "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Components\/Schemas\/team\/html_url",
+        "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Components\/Schemas\/team\/id",
+        "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Components\/Schemas\/team\/members_url",
+        "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Components\/Schemas\/team\/name",
+        "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Components\/Schemas\/team\/node_id",
+        "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Components\/Schemas\/team\/notification_setting",
+        "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Components\/Schemas\/team\/parent",
+        "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Components\/Schemas\/team\/permission",
+        "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Components\/Schemas\/team\/permissions",
+        "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Components\/Schemas\/team\/privacy",
+        "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Components\/Schemas\/team\/repositories_url",
+        "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Components\/Schemas\/team\/slug",
+        "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Components\/Schemas\/team\/url"
+      ],
+      "title" : "Instance Properties"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Components\/Schemas\/team\/CodingKeys"
+      ],
+      "title" : "Enumerations"
+    },
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Components\/Schemas\/team\/Equatable-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapisecurity_advisories\/components\/schemas\/team"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPISecurity_Advisories/SE": {
+  "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/SE",
+  "title" : "Swift.Encodable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPISecurity_Advisories/SH": {
+  "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/SH",
+  "title" : "Swift.Hashable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPISecurity_Advisories/SQ": {
+  "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/SQ",
+  "title" : "Swift.Equatable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPISecurity_Advisories/Se": {
+  "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/Se",
+  "title" : "Swift.Decodable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPISecurity_Advisories/documentation/GitHubRestAPISecurity_Advisories": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPISecurity_Advisories",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecurity_advisories"
+},
+"doc://GitHubRestAPISecurity_Advisories/documentation/GitHubRestAPISecurity_Advisories/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecurity_advisories\/components"
+},
+"doc://GitHubRestAPISecurity_Advisories/documentation/GitHubRestAPISecurity_Advisories/Components/Schemas": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/schemas",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Components\/Schemas",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecurity_advisories\/components\/schemas"
+},
+"doc://GitHubRestAPISecurity_Advisories/documentation/GitHubRestAPISecurity_Advisories/Components/Schemas/team": {
+  "abstract" : [
+    {
+      "text" : "Groups of organization members that gives permissions on specified repositories.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "team"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Components\/Schemas\/team",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "team"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.team",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecurity_advisories\/components\/schemas\/team"
+},
+"doc://GitHubRestAPISecurity_Advisories/documentation/GitHubRestAPISecurity_Advisories/Components/Schemas/team/CodingKeys": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Components\/Schemas\/team\/CodingKeys",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.team.CodingKeys",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecurity_advisories\/components\/schemas\/team\/codingkeys"
+},
+"doc://GitHubRestAPISecurity_Advisories/documentation/GitHubRestAPISecurity_Advisories/Components/Schemas/team/Equatable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Components\/Schemas\/team\/Equatable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Equatable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecurity_advisories\/components\/schemas\/team\/equatable-implementations"
+},
+"doc://GitHubRestAPISecurity_Advisories/documentation/GitHubRestAPISecurity_Advisories/Components/Schemas/team/description": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "description"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Components\/Schemas\/team\/description",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "description",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecurity_advisories\/components\/schemas\/team\/description"
+},
+"doc://GitHubRestAPISecurity_Advisories/documentation/GitHubRestAPISecurity_Advisories/Components/Schemas/team/html_url": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "html_url"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Components\/Schemas\/team\/html_url",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "html_url",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecurity_advisories\/components\/schemas\/team\/html_url"
+},
+"doc://GitHubRestAPISecurity_Advisories/documentation/GitHubRestAPISecurity_Advisories/Components/Schemas/team/id": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "id"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Components\/Schemas\/team\/id",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "id",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecurity_advisories\/components\/schemas\/team\/id"
+},
+"doc://GitHubRestAPISecurity_Advisories/documentation/GitHubRestAPISecurity_Advisories/Components/Schemas/team/init(from:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "from"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:s7DecoderP",
+      "text" : "Decoder"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Components\/Schemas\/team\/init(from:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(from:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecurity_advisories\/components\/schemas\/team\/init(from:)"
+},
+"doc://GitHubRestAPISecurity_Advisories/documentation/GitHubRestAPISecurity_Advisories/Components/Schemas/team/init(id:node_id:name:slug:description:privacy:notification_setting:permission:permissions:url:html_url:members_url:repositories_url:parent:)": {
+  "abstract" : [
+    {
+      "text" : "Creates a new ",
+      "type" : "text"
+    },
+    {
+      "code" : "team",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "id"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "node_id"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "name"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "slug"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "description"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "privacy"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "notification_setting"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "permission"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "permissions"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:32GitHubRestAPISecurity_Advisories10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:32GitHubRestAPISecurity_Advisories10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:32GitHubRestAPISecurity_Advisories10ComponentsO7SchemasO4teamV",
+      "text" : "team"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:32GitHubRestAPISecurity_Advisories10ComponentsO7SchemasO4teamV18permissionsPayloadV",
+      "text" : "permissionsPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "url"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "html_url"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "members_url"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "repositories_url"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "parent"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:32GitHubRestAPISecurity_Advisories10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:32GitHubRestAPISecurity_Advisories10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:32GitHubRestAPISecurity_Advisories10ComponentsO7SchemasO021nullable_hyphen_team_I7_simpleV",
+      "text" : "nullable_hyphen_team_hyphen_simple"
+    },
+    {
+      "kind" : "text",
+      "text" : "?)"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Components\/Schemas\/team\/init(id:node_id:name:slug:description:privacy:notification_setting:permission:permissions:url:html_url:members_url:repositories_url:parent:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(id:node_id:name:slug:description:privacy:notification_setting:permission:permissions:url:html_url:members_url:repositories_url:parent:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecurity_advisories\/components\/schemas\/team\/init(id:node_id:name:slug:description:privacy:notification_setting:permission:permissions:url:html_url:members_url:repositories_url:parent:)"
+},
+"doc://GitHubRestAPISecurity_Advisories/documentation/GitHubRestAPISecurity_Advisories/Components/Schemas/team/members_url": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "members_url"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Components\/Schemas\/team\/members_url",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "members_url",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecurity_advisories\/components\/schemas\/team\/members_url"
+},
+"doc://GitHubRestAPISecurity_Advisories/documentation/GitHubRestAPISecurity_Advisories/Components/Schemas/team/name": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "name"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Components\/Schemas\/team\/name",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "name",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecurity_advisories\/components\/schemas\/team\/name"
+},
+"doc://GitHubRestAPISecurity_Advisories/documentation/GitHubRestAPISecurity_Advisories/Components/Schemas/team/node_id": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "node_id"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Components\/Schemas\/team\/node_id",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "node_id",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecurity_advisories\/components\/schemas\/team\/node_id"
+},
+"doc://GitHubRestAPISecurity_Advisories/documentation/GitHubRestAPISecurity_Advisories/Components/Schemas/team/notification_setting": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "notification_setting"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Components\/Schemas\/team\/notification_setting",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "notification_setting",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecurity_advisories\/components\/schemas\/team\/notification_setting"
+},
+"doc://GitHubRestAPISecurity_Advisories/documentation/GitHubRestAPISecurity_Advisories/Components/Schemas/team/parent": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "parent"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:32GitHubRestAPISecurity_Advisories10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:32GitHubRestAPISecurity_Advisories10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:32GitHubRestAPISecurity_Advisories10ComponentsO7SchemasO021nullable_hyphen_team_I7_simpleV",
+      "text" : "nullable_hyphen_team_hyphen_simple"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Components\/Schemas\/team\/parent",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "parent",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecurity_advisories\/components\/schemas\/team\/parent"
+},
+"doc://GitHubRestAPISecurity_Advisories/documentation/GitHubRestAPISecurity_Advisories/Components/Schemas/team/permission": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "permission"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Components\/Schemas\/team\/permission",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "permission",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecurity_advisories\/components\/schemas\/team\/permission"
+},
+"doc://GitHubRestAPISecurity_Advisories/documentation/GitHubRestAPISecurity_Advisories/Components/Schemas/team/permissions": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "permissions"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:32GitHubRestAPISecurity_Advisories10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:32GitHubRestAPISecurity_Advisories10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:32GitHubRestAPISecurity_Advisories10ComponentsO7SchemasO4teamV",
+      "text" : "team"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:32GitHubRestAPISecurity_Advisories10ComponentsO7SchemasO4teamV18permissionsPayloadV",
+      "text" : "permissionsPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Components\/Schemas\/team\/permissions",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "permissions",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecurity_advisories\/components\/schemas\/team\/permissions"
+},
+"doc://GitHubRestAPISecurity_Advisories/documentation/GitHubRestAPISecurity_Advisories/Components/Schemas/team/permissionsPayload": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "permissionsPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Components\/Schemas\/team\/permissionsPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "permissionsPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.team.permissionsPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecurity_advisories\/components\/schemas\/team\/permissionspayload"
+},
+"doc://GitHubRestAPISecurity_Advisories/documentation/GitHubRestAPISecurity_Advisories/Components/Schemas/team/privacy": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "privacy"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Components\/Schemas\/team\/privacy",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "privacy",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecurity_advisories\/components\/schemas\/team\/privacy"
+},
+"doc://GitHubRestAPISecurity_Advisories/documentation/GitHubRestAPISecurity_Advisories/Components/Schemas/team/repositories_url": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "repositories_url"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Components\/Schemas\/team\/repositories_url",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "repositories_url",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecurity_advisories\/components\/schemas\/team\/repositories_url"
+},
+"doc://GitHubRestAPISecurity_Advisories/documentation/GitHubRestAPISecurity_Advisories/Components/Schemas/team/slug": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "slug"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Components\/Schemas\/team\/slug",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "slug",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecurity_advisories\/components\/schemas\/team\/slug"
+},
+"doc://GitHubRestAPISecurity_Advisories/documentation/GitHubRestAPISecurity_Advisories/Components/Schemas/team/url": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "url"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Components\/Schemas\/team\/url",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "url",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecurity_advisories\/components\/schemas\/team\/url"
+},
+"doc://GitHubRestAPISecurity_Advisories/s8SendableP": {
+  "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/s8SendableP",
+  "title" : "Swift.Sendable",
+  "type" : "unresolvable"
+}
+}
+}

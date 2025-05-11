@@ -1,0 +1,504 @@
+{
+  "abstract" : [
+    {
+      "text" : "Delete a package for a user",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages",
+        "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations\/packages_sol_delete_hyphen_package_hyphen_for_hyphen_user"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:21GitHubRestAPIPackages10OperationsO035packages_sol_delete_hyphen_package_i5_for_I5_userO",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "enum"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "packages_sol_delete_hyphen_package_hyphen_for_hyphen_user"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIPackages"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "packages_sol_delete_hyphen_package_hyphen_for_hyphen_user"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/packages\/Types.swift#L6736"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Enumeration",
+    "symbolKind" : "enum",
+    "title" : "Operations.packages_sol_delete_hyphen_package_hyphen_for_hyphen_user"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "enum"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "packages_sol_delete_hyphen_package_hyphen_for_hyphen_user"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Deletes an entire package for a user. You cannot delete a public package if any version of the package has more than 5,000 downloads. In this scenario, contact GitHub support for further assistance.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "If the ",
+              "type" : "text"
+            },
+            {
+              "code" : "package_type",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " belongs to a GitHub Packages registry that supports granular permissions, the authenticated user must have admin permissions to the package. For the list of these registries, see “",
+              "type" : "text"
+            },
+            {
+              "identifier" : "https:\/\/docs.github.com\/packages\/learn-github-packages\/about-permissions-for-github-packages#granular-permissions-for-userorganization-scoped-packages",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : ".”",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "OAuth app tokens and personal access tokens (classic) need the ",
+              "type" : "text"
+            },
+            {
+              "code" : "read:packages",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " and ",
+              "type" : "text"
+            },
+            {
+              "code" : "delete:packages",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " scopes to use this endpoint. For more information, see “",
+              "type" : "text"
+            },
+            {
+              "identifier" : "https:\/\/docs.github.com\/packages\/learn-github-packages\/about-permissions-for-github-packages#permissions-for-repository-scoped-packages",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : ".”",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "HTTP ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "DELETE \/users\/{username}\/packages\/{package_type}\/{package_name}",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/paths\/\/users\/{username}\/packages\/{package_type}\/{package_name}\/delete(packages\/delete-package-for-user)",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations\/packages_sol_delete_hyphen_package_hyphen_for_hyphen_user\/Input"
+      ],
+      "title" : "Structures"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations\/packages_sol_delete_hyphen_package_hyphen_for_hyphen_user\/id"
+      ],
+      "title" : "Type Properties"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations\/packages_sol_delete_hyphen_package_hyphen_for_hyphen_user\/AcceptableContentType",
+        "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations\/packages_sol_delete_hyphen_package_hyphen_for_hyphen_user\/Output"
+      ],
+      "title" : "Enumerations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapipackages\/operations\/packages_sol_delete_hyphen_package_hyphen_for_hyphen_user"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIPackages",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages\/operations"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages/Operations/packages_sol_delete_hyphen_package_hyphen_for_hyphen_user": {
+  "abstract" : [
+    {
+      "text" : "Delete a package for a user",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "packages_sol_delete_hyphen_package_hyphen_for_hyphen_user"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations\/packages_sol_delete_hyphen_package_hyphen_for_hyphen_user",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "packages_sol_delete_hyphen_package_hyphen_for_hyphen_user"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.packages_sol_delete_hyphen_package_hyphen_for_hyphen_user",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages\/operations\/packages_sol_delete_hyphen_package_hyphen_for_hyphen_user"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages/Operations/packages_sol_delete_hyphen_package_hyphen_for_hyphen_user/AcceptableContentType": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AcceptableContentType"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations\/packages_sol_delete_hyphen_package_hyphen_for_hyphen_user\/AcceptableContentType",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AcceptableContentType"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.packages_sol_delete_hyphen_package_hyphen_for_hyphen_user.AcceptableContentType",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages\/operations\/packages_sol_delete_hyphen_package_hyphen_for_hyphen_user\/acceptablecontenttype"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages/Operations/packages_sol_delete_hyphen_package_hyphen_for_hyphen_user/Input": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations\/packages_sol_delete_hyphen_package_hyphen_for_hyphen_user\/Input",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.packages_sol_delete_hyphen_package_hyphen_for_hyphen_user.Input",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages\/operations\/packages_sol_delete_hyphen_package_hyphen_for_hyphen_user\/input"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages/Operations/packages_sol_delete_hyphen_package_hyphen_for_hyphen_user/Output": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations\/packages_sol_delete_hyphen_package_hyphen_for_hyphen_user\/Output",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.packages_sol_delete_hyphen_package_hyphen_for_hyphen_user.Output",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages\/operations\/packages_sol_delete_hyphen_package_hyphen_for_hyphen_user\/output"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages/Operations/packages_sol_delete_hyphen_package_hyphen_for_hyphen_user/id": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "id"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations\/packages_sol_delete_hyphen_package_hyphen_for_hyphen_user\/id",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "id",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages\/operations\/packages_sol_delete_hyphen_package_hyphen_for_hyphen_user\/id"
+},
+"https://docs.github.com/packages/learn-github-packages/about-permissions-for-github-packages#granular-permissions-for-userorganization-scoped-packages": {
+  "identifier" : "https:\/\/docs.github.com\/packages\/learn-github-packages\/about-permissions-for-github-packages#granular-permissions-for-userorganization-scoped-packages",
+  "title" : "About permissions for GitHub Packages",
+  "titleInlineContent" : [
+    {
+      "text" : "About permissions for GitHub Packages",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/docs.github.com\/packages\/learn-github-packages\/about-permissions-for-github-packages#granular-permissions-for-userorganization-scoped-packages"
+},
+"https://docs.github.com/packages/learn-github-packages/about-permissions-for-github-packages#permissions-for-repository-scoped-packages": {
+  "identifier" : "https:\/\/docs.github.com\/packages\/learn-github-packages\/about-permissions-for-github-packages#permissions-for-repository-scoped-packages",
+  "title" : "About permissions for GitHub Packages",
+  "titleInlineContent" : [
+    {
+      "text" : "About permissions for GitHub Packages",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/docs.github.com\/packages\/learn-github-packages\/about-permissions-for-github-packages#permissions-for-repository-scoped-packages"
+}
+}
+}

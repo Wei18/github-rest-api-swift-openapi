@@ -1,0 +1,1020 @@
+{
+  "abstract" : [
+    {
+      "text" : "GitHub’s v3 REST API.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Client"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:19GitHubRestAPISearch6ClientV",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "struct"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "Client"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPISearch"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "Client"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Client.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/search\/Client.swift#L14"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Structure",
+    "symbolKind" : "struct",
+    "title" : "Client"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "struct"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "Client"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/APIProtocol",
+        "doc:\/\/GitHubRestAPISearch\/s8SendableP"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Client\/init(serverURL:configuration:transport:middlewares:)"
+      ],
+      "title" : "Initializers"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Client\/search_sol_code(_:)",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Client\/search_sol_commits(_:)",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Client\/search_sol_issues_hyphen_and_hyphen_pull_hyphen_requests(_:)",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Client\/search_sol_labels(_:)",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Client\/search_sol_repos(_:)",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Client\/search_sol_topics(_:)",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Client\/search_sol_users(_:)"
+      ],
+      "title" : "Instance Methods"
+    },
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Client\/APIProtocol-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapisearch\/client"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPISearch",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/APIProtocol": {
+  "abstract" : [
+    {
+      "text" : "A type that performs HTTP operations defined by the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "protocol"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "APIProtocol"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/APIProtocol",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "APIProtocol"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "APIProtocol",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/apiprotocol"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Client": {
+  "abstract" : [
+    {
+      "text" : "GitHub’s v3 REST API.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Client"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Client",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Client"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Client",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/client"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Client/APIProtocol-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Client\/APIProtocol-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "APIProtocol Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/client\/apiprotocol-implementations"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Client/init(serverURL:configuration:transport:middlewares:)": {
+  "abstract" : [
+    {
+      "text" : "Creates a new client.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "serverURL"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:10Foundation3URLV",
+      "text" : "URL"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:14OpenAPIRuntime13ConfigurationV",
+      "text" : "Configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "transport"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:14OpenAPIRuntime15ClientTransportP",
+      "text" : "ClientTransport"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "middlewares"
+    },
+    {
+      "kind" : "text",
+      "text" : ": ["
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:14OpenAPIRuntime16ClientMiddlewareP",
+      "text" : "ClientMiddleware"
+    },
+    {
+      "kind" : "text",
+      "text" : "])"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Client\/init(serverURL:configuration:transport:middlewares:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(serverURL:configuration:transport:middlewares:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/client\/init(serverurl:configuration:transport:middlewares:)"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Client/search_sol_code(_:)": {
+  "abstract" : [
+    {
+      "text" : "Search code",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "search_sol_code"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO15search_sol_codeO",
+      "text" : "search_sol_code"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO15search_sol_codeO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO15search_sol_codeO",
+      "text" : "search_sol_code"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO15search_sol_codeO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Client\/search_sol_code(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "search_sol_code(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/client\/search_sol_code(_:)"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Client/search_sol_commits(_:)": {
+  "abstract" : [
+    {
+      "text" : "Search commits",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "search_sol_commits"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO18search_sol_commitsO",
+      "text" : "search_sol_commits"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO18search_sol_commitsO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO18search_sol_commitsO",
+      "text" : "search_sol_commits"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO18search_sol_commitsO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Client\/search_sol_commits(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "search_sol_commits(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/client\/search_sol_commits(_:)"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Client/search_sol_issues_hyphen_and_hyphen_pull_hyphen_requests(_:)": {
+  "abstract" : [
+    {
+      "text" : "Search issues and pull requests",
+      "type" : "text"
+    }
+  ],
+  "deprecated" : true,
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "search_sol_issues_hyphen_and_hyphen_pull_hyphen_requests"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO029search_sol_issues_hyphen_and_i6_pull_I9_requestsO",
+      "text" : "search_sol_issues_hyphen_and_hyphen_pull_hyphen_requests"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO029search_sol_issues_hyphen_and_i6_pull_I9_requestsO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO029search_sol_issues_hyphen_and_i6_pull_I9_requestsO",
+      "text" : "search_sol_issues_hyphen_and_hyphen_pull_hyphen_requests"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO029search_sol_issues_hyphen_and_i6_pull_I9_requestsO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Client\/search_sol_issues_hyphen_and_hyphen_pull_hyphen_requests(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "search_sol_issues_hyphen_and_hyphen_pull_hyphen_requests(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/client\/search_sol_issues_hyphen_and_hyphen_pull_hyphen_requests(_:)"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Client/search_sol_labels(_:)": {
+  "abstract" : [
+    {
+      "text" : "Search labels",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "search_sol_labels"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO17search_sol_labelsO",
+      "text" : "search_sol_labels"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO17search_sol_labelsO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO17search_sol_labelsO",
+      "text" : "search_sol_labels"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO17search_sol_labelsO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Client\/search_sol_labels(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "search_sol_labels(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/client\/search_sol_labels(_:)"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Client/search_sol_repos(_:)": {
+  "abstract" : [
+    {
+      "text" : "Search repositories",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "search_sol_repos"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO16search_sol_reposO",
+      "text" : "search_sol_repos"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO16search_sol_reposO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO16search_sol_reposO",
+      "text" : "search_sol_repos"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO16search_sol_reposO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Client\/search_sol_repos(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "search_sol_repos(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/client\/search_sol_repos(_:)"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Client/search_sol_topics(_:)": {
+  "abstract" : [
+    {
+      "text" : "Search topics",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "search_sol_topics"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO17search_sol_topicsO",
+      "text" : "search_sol_topics"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO17search_sol_topicsO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO17search_sol_topicsO",
+      "text" : "search_sol_topics"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO17search_sol_topicsO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Client\/search_sol_topics(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "search_sol_topics(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/client\/search_sol_topics(_:)"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Client/search_sol_users(_:)": {
+  "abstract" : [
+    {
+      "text" : "Search users",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "search_sol_users"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO16search_sol_usersO",
+      "text" : "search_sol_users"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO16search_sol_usersO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO16search_sol_usersO",
+      "text" : "search_sol_users"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO16search_sol_usersO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Client\/search_sol_users(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "search_sol_users(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/client\/search_sol_users(_:)"
+},
+"doc://GitHubRestAPISearch/s8SendableP": {
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/s8SendableP",
+  "title" : "Swift.Sendable",
+  "type" : "unresolvable"
+}
+}
+}

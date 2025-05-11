@@ -1,0 +1,707 @@
+{
+  "abstract" : [
+    {
+      "text" : "Creates a new ",
+      "type" : "text"
+    },
+    {
+      "code" : "organization_hyphen_dependabot_hyphen_secret",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot",
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Components",
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Components\/Schemas",
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Components\/Schemas\/organization_hyphen_dependabot_hyphen_secret"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Components\/Schemas\/organization_hyphen_dependabot_hyphen_secret\/init(name:created_at:updated_at:visibility:selected_repositories_url:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:23GitHubRestAPIDependabot10ComponentsO7SchemasO031organization_hyphen_dependabot_H7_secretV4name10created_at08updated_M010visibility25selected_repositories_urlAGSS_10Foundation4DateVAoG0O7PayloadOSSSgtcfc",
+    "fragments" : [
+      {
+        "kind" : "identifier",
+        "text" : "init"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "name"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SS",
+        "text" : "String"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "created_at"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:10Foundation4DateV",
+        "text" : "Date"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "updated_at"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:10Foundation4DateV",
+        "text" : "Date"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "visibility"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:23GitHubRestAPIDependabot10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:23GitHubRestAPIDependabot10ComponentsO7SchemasO",
+        "text" : "Schemas"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:23GitHubRestAPIDependabot10ComponentsO7SchemasO031organization_hyphen_dependabot_H7_secretV",
+        "text" : "organization_hyphen_dependabot_hyphen_secret"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:23GitHubRestAPIDependabot10ComponentsO7SchemasO031organization_hyphen_dependabot_H7_secretV17visibilityPayloadO",
+        "text" : "visibilityPayload"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "selected_repositories_url"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SS",
+        "text" : "String"
+      },
+      {
+        "kind" : "text",
+        "text" : "?)"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIDependabot"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/dependabot\/Types.swift#L3225"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Initializer",
+    "symbolKind" : "init",
+    "title" : "init(name:created_at:updated_at:visibility:selected_repositories_url:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "init"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "name"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:SS",
+              "text" : "String"
+            },
+            {
+              "kind" : "text",
+              "text" : ", "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "created_at"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:10Foundation4DateV",
+              "text" : "Date"
+            },
+            {
+              "kind" : "text",
+              "text" : ", "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "updated_at"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:10Foundation4DateV",
+              "text" : "Date"
+            },
+            {
+              "kind" : "text",
+              "text" : ", "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "visibility"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:23GitHubRestAPIDependabot10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Components\/Schemas",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:23GitHubRestAPIDependabot10ComponentsO7SchemasO",
+              "text" : "Schemas"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Components\/Schemas\/organization_hyphen_dependabot_hyphen_secret",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:23GitHubRestAPIDependabot10ComponentsO7SchemasO031organization_hyphen_dependabot_H7_secretV",
+              "text" : "organization_hyphen_dependabot_hyphen_secret"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Components\/Schemas\/organization_hyphen_dependabot_hyphen_secret\/visibilityPayload",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:23GitHubRestAPIDependabot10ComponentsO7SchemasO031organization_hyphen_dependabot_H7_secretV17visibilityPayloadO",
+              "text" : "visibilityPayload"
+            },
+            {
+              "kind" : "text",
+              "text" : ", "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "selected_repositories_url"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:SS",
+              "text" : "String"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil)"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "kind" : "parameters",
+      "parameters" : [
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The name of the secret.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "name"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "created_at"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "updated_at"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Visibility of a secret",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "visibility"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "selected_repositories_url"
+        }
+      ]
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapidependabot\/components\/schemas\/organization_hyphen_dependabot_hyphen_secret\/init(name:created_at:updated_at:visibility:selected_repositories_url:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIDependabot",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/components"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Components/Schemas": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/schemas",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Components\/Schemas",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/components\/schemas"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Components/Schemas/organization_hyphen_dependabot_hyphen_secret": {
+  "abstract" : [
+    {
+      "text" : "Secrets for GitHub Dependabot for an organization.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "organization_hyphen_dependabot_hyphen_secret"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Components\/Schemas\/organization_hyphen_dependabot_hyphen_secret",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "organization_hyphen_dependabot_hyphen_secret"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.organization_hyphen_dependabot_hyphen_secret",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/components\/schemas\/organization_hyphen_dependabot_hyphen_secret"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Components/Schemas/organization_hyphen_dependabot_hyphen_secret/init(name:created_at:updated_at:visibility:selected_repositories_url:)": {
+  "abstract" : [
+    {
+      "text" : "Creates a new ",
+      "type" : "text"
+    },
+    {
+      "code" : "organization_hyphen_dependabot_hyphen_secret",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "name"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "created_at"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:10Foundation4DateV",
+      "text" : "Date"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "updated_at"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:10Foundation4DateV",
+      "text" : "Date"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "visibility"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10ComponentsO7SchemasO031organization_hyphen_dependabot_H7_secretV",
+      "text" : "organization_hyphen_dependabot_hyphen_secret"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10ComponentsO7SchemasO031organization_hyphen_dependabot_H7_secretV17visibilityPayloadO",
+      "text" : "visibilityPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "selected_repositories_url"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?)"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Components\/Schemas\/organization_hyphen_dependabot_hyphen_secret\/init(name:created_at:updated_at:visibility:selected_repositories_url:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(name:created_at:updated_at:visibility:selected_repositories_url:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/components\/schemas\/organization_hyphen_dependabot_hyphen_secret\/init(name:created_at:updated_at:visibility:selected_repositories_url:)"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Components/Schemas/organization_hyphen_dependabot_hyphen_secret/visibilityPayload": {
+  "abstract" : [
+    {
+      "text" : "Visibility of a secret",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "visibilityPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Components\/Schemas\/organization_hyphen_dependabot_hyphen_secret\/visibilityPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "visibilityPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.organization_hyphen_dependabot_hyphen_secret.visibilityPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/components\/schemas\/organization_hyphen_dependabot_hyphen_secret\/visibilitypayload"
+}
+}
+}

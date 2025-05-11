@@ -1,0 +1,593 @@
+{
+  "abstract" : [
+    {
+      "text" : "Information about the Git author",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks",
+        "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks\/Components",
+        "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks\/Components\/Schemas",
+        "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks\/Components\/Schemas\/simple_hyphen_commit"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks\/Components\/Schemas\/simple_hyphen_commit\/authorPayload"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:19GitHubRestAPIChecks10ComponentsO7SchemasO20simple_hyphen_commitV13authorPayloadV",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "struct"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "authorPayload"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIChecks"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "authorPayload"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/checks\/Types.swift#L2385"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Structure",
+    "symbolKind" : "struct",
+    "title" : "Components.Schemas.simple_hyphen_commit.authorPayload"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "struct"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "authorPayload"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/components\/schemas\/simple-commit\/author",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIChecks\/Se",
+        "doc:\/\/GitHubRestAPIChecks\/SE",
+        "doc:\/\/GitHubRestAPIChecks\/SQ",
+        "doc:\/\/GitHubRestAPIChecks\/SH",
+        "doc:\/\/GitHubRestAPIChecks\/s8SendableP"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks\/Components\/Schemas\/simple_hyphen_commit\/authorPayload\/init(from:)",
+        "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks\/Components\/Schemas\/simple_hyphen_commit\/authorPayload\/init(name:email:)"
+      ],
+      "title" : "Initializers"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks\/Components\/Schemas\/simple_hyphen_commit\/authorPayload\/email",
+        "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks\/Components\/Schemas\/simple_hyphen_commit\/authorPayload\/name"
+      ],
+      "title" : "Instance Properties"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks\/Components\/Schemas\/simple_hyphen_commit\/authorPayload\/CodingKeys"
+      ],
+      "title" : "Enumerations"
+    },
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks\/Components\/Schemas\/simple_hyphen_commit\/authorPayload\/Equatable-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapichecks\/components\/schemas\/simple_hyphen_commit\/authorpayload"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIChecks/SE": {
+  "identifier" : "doc:\/\/GitHubRestAPIChecks\/SE",
+  "title" : "Swift.Encodable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIChecks/SH": {
+  "identifier" : "doc:\/\/GitHubRestAPIChecks\/SH",
+  "title" : "Swift.Hashable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIChecks/SQ": {
+  "identifier" : "doc:\/\/GitHubRestAPIChecks\/SQ",
+  "title" : "Swift.Equatable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIChecks/Se": {
+  "identifier" : "doc:\/\/GitHubRestAPIChecks\/Se",
+  "title" : "Swift.Decodable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIChecks/documentation/GitHubRestAPIChecks": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIChecks",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapichecks"
+},
+"doc://GitHubRestAPIChecks/documentation/GitHubRestAPIChecks/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapichecks\/components"
+},
+"doc://GitHubRestAPIChecks/documentation/GitHubRestAPIChecks/Components/Schemas": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/schemas",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks\/Components\/Schemas",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapichecks\/components\/schemas"
+},
+"doc://GitHubRestAPIChecks/documentation/GitHubRestAPIChecks/Components/Schemas/simple_hyphen_commit": {
+  "abstract" : [
+    {
+      "text" : "A commit.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "simple_hyphen_commit"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks\/Components\/Schemas\/simple_hyphen_commit",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "simple_hyphen_commit"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.simple_hyphen_commit",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapichecks\/components\/schemas\/simple_hyphen_commit"
+},
+"doc://GitHubRestAPIChecks/documentation/GitHubRestAPIChecks/Components/Schemas/simple_hyphen_commit/authorPayload": {
+  "abstract" : [
+    {
+      "text" : "Information about the Git author",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "authorPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks\/Components\/Schemas\/simple_hyphen_commit\/authorPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "authorPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.simple_hyphen_commit.authorPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapichecks\/components\/schemas\/simple_hyphen_commit\/authorpayload"
+},
+"doc://GitHubRestAPIChecks/documentation/GitHubRestAPIChecks/Components/Schemas/simple_hyphen_commit/authorPayload/CodingKeys": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks\/Components\/Schemas\/simple_hyphen_commit\/authorPayload\/CodingKeys",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.simple_hyphen_commit.authorPayload.CodingKeys",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapichecks\/components\/schemas\/simple_hyphen_commit\/authorpayload\/codingkeys"
+},
+"doc://GitHubRestAPIChecks/documentation/GitHubRestAPIChecks/Components/Schemas/simple_hyphen_commit/authorPayload/Equatable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks\/Components\/Schemas\/simple_hyphen_commit\/authorPayload\/Equatable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Equatable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapichecks\/components\/schemas\/simple_hyphen_commit\/authorpayload\/equatable-implementations"
+},
+"doc://GitHubRestAPIChecks/documentation/GitHubRestAPIChecks/Components/Schemas/simple_hyphen_commit/authorPayload/email": {
+  "abstract" : [
+    {
+      "text" : "Git email address of the commit’s author",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "email"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks\/Components\/Schemas\/simple_hyphen_commit\/authorPayload\/email",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "email",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapichecks\/components\/schemas\/simple_hyphen_commit\/authorpayload\/email"
+},
+"doc://GitHubRestAPIChecks/documentation/GitHubRestAPIChecks/Components/Schemas/simple_hyphen_commit/authorPayload/init(from:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "from"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:s7DecoderP",
+      "text" : "Decoder"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks\/Components\/Schemas\/simple_hyphen_commit\/authorPayload\/init(from:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(from:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapichecks\/components\/schemas\/simple_hyphen_commit\/authorpayload\/init(from:)"
+},
+"doc://GitHubRestAPIChecks/documentation/GitHubRestAPIChecks/Components/Schemas/simple_hyphen_commit/authorPayload/init(name:email:)": {
+  "abstract" : [
+    {
+      "text" : "Creates a new ",
+      "type" : "text"
+    },
+    {
+      "code" : "authorPayload",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "name"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "email"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks\/Components\/Schemas\/simple_hyphen_commit\/authorPayload\/init(name:email:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(name:email:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapichecks\/components\/schemas\/simple_hyphen_commit\/authorpayload\/init(name:email:)"
+},
+"doc://GitHubRestAPIChecks/documentation/GitHubRestAPIChecks/Components/Schemas/simple_hyphen_commit/authorPayload/name": {
+  "abstract" : [
+    {
+      "text" : "Name of the commit’s author",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "name"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks\/Components\/Schemas\/simple_hyphen_commit\/authorPayload\/name",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "name",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapichecks\/components\/schemas\/simple_hyphen_commit\/authorpayload\/name"
+},
+"doc://GitHubRestAPIChecks/s8SendableP": {
+  "identifier" : "doc:\/\/GitHubRestAPIChecks\/s8SendableP",
+  "title" : "Swift.Sendable",
+  "type" : "unresolvable"
+}
+}
+}

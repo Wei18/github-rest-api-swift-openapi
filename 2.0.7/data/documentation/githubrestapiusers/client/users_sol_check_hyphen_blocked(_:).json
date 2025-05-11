@@ -1,0 +1,614 @@
+{
+  "abstract" : [
+    {
+      "text" : "Check if a user is blocked by the authenticated user",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers",
+        "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Client"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Client\/users_sol_check_hyphen_blocked(_:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:18GitHubRestAPIUsers6ClientV30users_sol_check_hyphen_blockedyAA10OperationsOADO6OutputOAG5InputVYaKF",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "func"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "users_sol_check_hyphen_blocked"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:18GitHubRestAPIUsers10OperationsO",
+        "text" : "Operations"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:18GitHubRestAPIUsers10OperationsO30users_sol_check_hyphen_blockedO",
+        "text" : "users_sol_check_hyphen_blocked"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:18GitHubRestAPIUsers10OperationsO30users_sol_check_hyphen_blockedO5InputV",
+        "text" : "Input"
+      },
+      {
+        "kind" : "text",
+        "text" : ") "
+      },
+      {
+        "kind" : "keyword",
+        "text" : "async"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "keyword",
+        "text" : "throws"
+      },
+      {
+        "kind" : "text",
+        "text" : " -> "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:18GitHubRestAPIUsers10OperationsO",
+        "text" : "Operations"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:18GitHubRestAPIUsers10OperationsO30users_sol_check_hyphen_blockedO",
+        "text" : "users_sol_check_hyphen_blocked"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:18GitHubRestAPIUsers10OperationsO30users_sol_check_hyphen_blockedO6OutputO",
+        "text" : "Output"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIUsers"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Client.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/users\/Client.swift#L462"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Instance Method",
+    "symbolKind" : "method",
+    "title" : "users_sol_check_hyphen_blocked(_:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "func"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "users_sol_check_hyphen_blocked"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "_"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "internalParam",
+              "text" : "input"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Operations",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:18GitHubRestAPIUsers10OperationsO",
+              "text" : "Operations"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Operations\/users_sol_check_hyphen_blocked",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:18GitHubRestAPIUsers10OperationsO30users_sol_check_hyphen_blockedO",
+              "text" : "users_sol_check_hyphen_blocked"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Operations\/users_sol_check_hyphen_blocked\/Input",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:18GitHubRestAPIUsers10OperationsO30users_sol_check_hyphen_blockedO5InputV",
+              "text" : "Input"
+            },
+            {
+              "kind" : "text",
+              "text" : ") "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "async"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "throws"
+            },
+            {
+              "kind" : "text",
+              "text" : " -> "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Operations",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:18GitHubRestAPIUsers10OperationsO",
+              "text" : "Operations"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Operations\/users_sol_check_hyphen_blocked",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:18GitHubRestAPIUsers10OperationsO30users_sol_check_hyphen_blockedO",
+              "text" : "users_sol_check_hyphen_blocked"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Operations\/users_sol_check_hyphen_blocked\/Output",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:18GitHubRestAPIUsers10OperationsO30users_sol_check_hyphen_blockedO6OutputO",
+              "text" : "Output"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Returns a 204 if the given user is blocked by the authenticated user. Returns a 404 if the given user is not blocked by the authenticated user, or if the given user account has been identified as spam by GitHub.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "HTTP ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "GET \/user\/blocks\/{username}",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/paths\/\/user\/blocks\/{username}\/get(users\/check-blocked)",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapiusers\/client\/users_sol_check_hyphen_blocked(_:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIUsers/documentation/GitHubRestAPIUsers": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIUsers",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiusers"
+},
+"doc://GitHubRestAPIUsers/documentation/GitHubRestAPIUsers/Client": {
+  "abstract" : [
+    {
+      "text" : "GitHub’s v3 REST API.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Client"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Client",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Client"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Client",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiusers\/client"
+},
+"doc://GitHubRestAPIUsers/documentation/GitHubRestAPIUsers/Client/users_sol_check_hyphen_blocked(_:)": {
+  "abstract" : [
+    {
+      "text" : "Check if a user is blocked by the authenticated user",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "users_sol_check_hyphen_blocked"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIUsers10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIUsers10OperationsO30users_sol_check_hyphen_blockedO",
+      "text" : "users_sol_check_hyphen_blocked"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIUsers10OperationsO30users_sol_check_hyphen_blockedO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIUsers10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIUsers10OperationsO30users_sol_check_hyphen_blockedO",
+      "text" : "users_sol_check_hyphen_blocked"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIUsers10OperationsO30users_sol_check_hyphen_blockedO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Client\/users_sol_check_hyphen_blocked(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "users_sol_check_hyphen_blocked(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiusers\/client\/users_sol_check_hyphen_blocked(_:)"
+},
+"doc://GitHubRestAPIUsers/documentation/GitHubRestAPIUsers/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiusers\/operations"
+},
+"doc://GitHubRestAPIUsers/documentation/GitHubRestAPIUsers/Operations/users_sol_check_hyphen_blocked": {
+  "abstract" : [
+    {
+      "text" : "Check if a user is blocked by the authenticated user",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "users_sol_check_hyphen_blocked"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Operations\/users_sol_check_hyphen_blocked",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "users_sol_check_hyphen_blocked"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.users_sol_check_hyphen_blocked",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiusers\/operations\/users_sol_check_hyphen_blocked"
+},
+"doc://GitHubRestAPIUsers/documentation/GitHubRestAPIUsers/Operations/users_sol_check_hyphen_blocked/Input": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Operations\/users_sol_check_hyphen_blocked\/Input",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.users_sol_check_hyphen_blocked.Input",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiusers\/operations\/users_sol_check_hyphen_blocked\/input"
+},
+"doc://GitHubRestAPIUsers/documentation/GitHubRestAPIUsers/Operations/users_sol_check_hyphen_blocked/Output": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Operations\/users_sol_check_hyphen_blocked\/Output",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.users_sol_check_hyphen_blocked.Output",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiusers\/operations\/users_sol_check_hyphen_blocked\/output"
+}
+}
+}

@@ -1,0 +1,802 @@
+{
+  "abstract" : [
+    {
+      "text" : "Creates a new ",
+      "type" : "text"
+    },
+    {
+      "code" : "basePayload",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIPulls\/documentation\/GitHubRestAPIPulls",
+        "doc:\/\/GitHubRestAPIPulls\/documentation\/GitHubRestAPIPulls\/Components",
+        "doc:\/\/GitHubRestAPIPulls\/documentation\/GitHubRestAPIPulls\/Components\/Schemas",
+        "doc:\/\/GitHubRestAPIPulls\/documentation\/GitHubRestAPIPulls\/Components\/Schemas\/pull_hyphen_request_hyphen_simple",
+        "doc:\/\/GitHubRestAPIPulls\/documentation\/GitHubRestAPIPulls\/Components\/Schemas\/pull_hyphen_request_hyphen_simple\/basePayload"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIPulls\/documentation\/GitHubRestAPIPulls\/Components\/Schemas\/pull_hyphen_request_hyphen_simple\/basePayload\/init(label:ref:repo:sha:user:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:18GitHubRestAPIPulls10ComponentsO7SchemasO020pull_hyphen_request_H7_simpleV11basePayloadV5label3ref4repo3sha4userAISS_SSAE10repositoryVSSAE09nullable_h1_j1_h1_Q0VSgtcfc",
+    "fragments" : [
+      {
+        "kind" : "identifier",
+        "text" : "init"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "label"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SS",
+        "text" : "String"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "ref"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SS",
+        "text" : "String"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "repo"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:18GitHubRestAPIPulls10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:18GitHubRestAPIPulls10ComponentsO7SchemasO",
+        "text" : "Schemas"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:18GitHubRestAPIPulls10ComponentsO7SchemasO10repositoryV",
+        "text" : "repository"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "sha"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SS",
+        "text" : "String"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "user"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:18GitHubRestAPIPulls10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:18GitHubRestAPIPulls10ComponentsO7SchemasO",
+        "text" : "Schemas"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:18GitHubRestAPIPulls10ComponentsO7SchemasO023nullable_hyphen_simple_H5_userV",
+        "text" : "nullable_hyphen_simple_hyphen_user"
+      },
+      {
+        "kind" : "text",
+        "text" : "?)"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIPulls"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/pulls\/Types.swift#L3605"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Initializer",
+    "symbolKind" : "init",
+    "title" : "init(label:ref:repo:sha:user:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "init"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "label"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:SS",
+              "text" : "String"
+            },
+            {
+              "kind" : "text",
+              "text" : ", "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "ref"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:SS",
+              "text" : "String"
+            },
+            {
+              "kind" : "text",
+              "text" : ", "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "repo"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIPulls\/documentation\/GitHubRestAPIPulls\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:18GitHubRestAPIPulls10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIPulls\/documentation\/GitHubRestAPIPulls\/Components\/Schemas",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:18GitHubRestAPIPulls10ComponentsO7SchemasO",
+              "text" : "Schemas"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIPulls\/documentation\/GitHubRestAPIPulls\/Components\/Schemas\/repository",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:18GitHubRestAPIPulls10ComponentsO7SchemasO10repositoryV",
+              "text" : "repository"
+            },
+            {
+              "kind" : "text",
+              "text" : ", "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "sha"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:SS",
+              "text" : "String"
+            },
+            {
+              "kind" : "text",
+              "text" : ", "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "user"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIPulls\/documentation\/GitHubRestAPIPulls\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:18GitHubRestAPIPulls10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIPulls\/documentation\/GitHubRestAPIPulls\/Components\/Schemas",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:18GitHubRestAPIPulls10ComponentsO7SchemasO",
+              "text" : "Schemas"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIPulls\/documentation\/GitHubRestAPIPulls\/Components\/Schemas\/nullable_hyphen_simple_hyphen_user",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:18GitHubRestAPIPulls10ComponentsO7SchemasO023nullable_hyphen_simple_H5_userV",
+              "text" : "nullable_hyphen_simple_hyphen_user"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil)"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "kind" : "parameters",
+      "parameters" : [
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "label"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "ref"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "repo"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "sha"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "user"
+        }
+      ]
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapipulls\/components\/schemas\/pull_hyphen_request_hyphen_simple\/basepayload\/init(label:ref:repo:sha:user:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIPulls/documentation/GitHubRestAPIPulls": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPulls\/documentation\/GitHubRestAPIPulls",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIPulls",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipulls"
+},
+"doc://GitHubRestAPIPulls/documentation/GitHubRestAPIPulls/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPulls\/documentation\/GitHubRestAPIPulls\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipulls\/components"
+},
+"doc://GitHubRestAPIPulls/documentation/GitHubRestAPIPulls/Components/Schemas": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/schemas",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPulls\/documentation\/GitHubRestAPIPulls\/Components\/Schemas",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipulls\/components\/schemas"
+},
+"doc://GitHubRestAPIPulls/documentation/GitHubRestAPIPulls/Components/Schemas/nullable_hyphen_simple_hyphen_user": {
+  "abstract" : [
+    {
+      "text" : "A GitHub user.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "nullable_hyphen_simple_hyphen_user"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPulls\/documentation\/GitHubRestAPIPulls\/Components\/Schemas\/nullable_hyphen_simple_hyphen_user",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "nullable_hyphen_simple_hyphen_user"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.nullable_hyphen_simple_hyphen_user",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipulls\/components\/schemas\/nullable_hyphen_simple_hyphen_user"
+},
+"doc://GitHubRestAPIPulls/documentation/GitHubRestAPIPulls/Components/Schemas/pull_hyphen_request_hyphen_simple": {
+  "abstract" : [
+    {
+      "text" : "Pull Request Simple",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "pull_hyphen_request_hyphen_simple"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPulls\/documentation\/GitHubRestAPIPulls\/Components\/Schemas\/pull_hyphen_request_hyphen_simple",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "pull_hyphen_request_hyphen_simple"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.pull_hyphen_request_hyphen_simple",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipulls\/components\/schemas\/pull_hyphen_request_hyphen_simple"
+},
+"doc://GitHubRestAPIPulls/documentation/GitHubRestAPIPulls/Components/Schemas/pull_hyphen_request_hyphen_simple/basePayload": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "basePayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPulls\/documentation\/GitHubRestAPIPulls\/Components\/Schemas\/pull_hyphen_request_hyphen_simple\/basePayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "basePayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.pull_hyphen_request_hyphen_simple.basePayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipulls\/components\/schemas\/pull_hyphen_request_hyphen_simple\/basepayload"
+},
+"doc://GitHubRestAPIPulls/documentation/GitHubRestAPIPulls/Components/Schemas/pull_hyphen_request_hyphen_simple/basePayload/init(label:ref:repo:sha:user:)": {
+  "abstract" : [
+    {
+      "text" : "Creates a new ",
+      "type" : "text"
+    },
+    {
+      "code" : "basePayload",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "label"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "ref"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "repo"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIPulls10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIPulls10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIPulls10ComponentsO7SchemasO10repositoryV",
+      "text" : "repository"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "sha"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "user"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIPulls10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIPulls10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIPulls10ComponentsO7SchemasO023nullable_hyphen_simple_H5_userV",
+      "text" : "nullable_hyphen_simple_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "?)"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPulls\/documentation\/GitHubRestAPIPulls\/Components\/Schemas\/pull_hyphen_request_hyphen_simple\/basePayload\/init(label:ref:repo:sha:user:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(label:ref:repo:sha:user:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipulls\/components\/schemas\/pull_hyphen_request_hyphen_simple\/basepayload\/init(label:ref:repo:sha:user:)"
+},
+"doc://GitHubRestAPIPulls/documentation/GitHubRestAPIPulls/Components/Schemas/repository": {
+  "abstract" : [
+    {
+      "text" : "A repository on GitHub.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "repository"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPulls\/documentation\/GitHubRestAPIPulls\/Components\/Schemas\/repository",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "repository"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.repository",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipulls\/components\/schemas\/repository"
+}
+}
+}

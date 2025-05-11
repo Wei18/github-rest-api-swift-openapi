@@ -1,0 +1,902 @@
+{
+  "abstract" : [
+    {
+      "text" : "Create a GitHub App from a manifest",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/APIProtocol"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/APIProtocol\/apps_sol_create_hyphen_from_hyphen_manifest(path:headers:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "extendedModule" : "GitHubRestAPIApps",
+    "externalID" : "s:17GitHubRestAPIApps11APIProtocolPAAE028apps_sol_create_hyphen_from_I9_manifest4path7headersAA10OperationsOADO6OutputOAI5InputV4PathV_AM7HeadersVtYaKF",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "func"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "apps_sol_create_hyphen_from_hyphen_manifest"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "path"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+        "text" : "Operations"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO028apps_sol_create_hyphen_from_I9_manifestO",
+        "text" : "apps_sol_create_hyphen_from_hyphen_manifest"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO028apps_sol_create_hyphen_from_I9_manifestO5InputV",
+        "text" : "Input"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO028apps_sol_create_hyphen_from_I9_manifestO5InputV4PathV",
+        "text" : "Path"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "headers"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+        "text" : "Operations"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO028apps_sol_create_hyphen_from_I9_manifestO",
+        "text" : "apps_sol_create_hyphen_from_hyphen_manifest"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO028apps_sol_create_hyphen_from_I9_manifestO5InputV",
+        "text" : "Input"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO028apps_sol_create_hyphen_from_I9_manifestO5InputV7HeadersV",
+        "text" : "Headers"
+      },
+      {
+        "kind" : "text",
+        "text" : ") "
+      },
+      {
+        "kind" : "keyword",
+        "text" : "async"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "keyword",
+        "text" : "throws"
+      },
+      {
+        "kind" : "text",
+        "text" : " -> "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+        "text" : "Operations"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO028apps_sol_create_hyphen_from_I9_manifestO",
+        "text" : "apps_sol_create_hyphen_from_hyphen_manifest"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO028apps_sol_create_hyphen_from_I9_manifestO6OutputO",
+        "text" : "Output"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIApps"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/apps\/Types.swift#L360"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Instance Method",
+    "symbolKind" : "method",
+    "title" : "apps_sol_create_hyphen_from_hyphen_manifest(path:headers:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "func"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "apps_sol_create_hyphen_from_hyphen_manifest"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "path"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+              "text" : "Operations"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/apps_sol_create_hyphen_from_hyphen_manifest",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO028apps_sol_create_hyphen_from_I9_manifestO",
+              "text" : "apps_sol_create_hyphen_from_hyphen_manifest"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/apps_sol_create_hyphen_from_hyphen_manifest\/Input",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO028apps_sol_create_hyphen_from_I9_manifestO5InputV",
+              "text" : "Input"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/apps_sol_create_hyphen_from_hyphen_manifest\/Input\/Path-swift.struct",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO028apps_sol_create_hyphen_from_I9_manifestO5InputV4PathV",
+              "text" : "Path"
+            },
+            {
+              "kind" : "text",
+              "text" : ", "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "headers"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+              "text" : "Operations"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/apps_sol_create_hyphen_from_hyphen_manifest",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO028apps_sol_create_hyphen_from_I9_manifestO",
+              "text" : "apps_sol_create_hyphen_from_hyphen_manifest"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/apps_sol_create_hyphen_from_hyphen_manifest\/Input",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO028apps_sol_create_hyphen_from_I9_manifestO5InputV",
+              "text" : "Input"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/apps_sol_create_hyphen_from_hyphen_manifest\/Input\/Headers-swift.struct",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO028apps_sol_create_hyphen_from_I9_manifestO5InputV7HeadersV",
+              "text" : "Headers"
+            },
+            {
+              "kind" : "text",
+              "text" : " = .init()) "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "async"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "throws"
+            },
+            {
+              "kind" : "text",
+              "text" : " -> "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+              "text" : "Operations"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/apps_sol_create_hyphen_from_hyphen_manifest",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO028apps_sol_create_hyphen_from_I9_manifestO",
+              "text" : "apps_sol_create_hyphen_from_hyphen_manifest"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/apps_sol_create_hyphen_from_hyphen_manifest\/Output",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO028apps_sol_create_hyphen_from_I9_manifestO6OutputO",
+              "text" : "Output"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Use this endpoint to complete the handshake necessary when implementing the ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "https:\/\/docs.github.com\/apps\/building-github-apps\/creating-github-apps-from-a-manifest\/",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : ". When you create a GitHub App with the manifest flow, you receive a temporary ",
+              "type" : "text"
+            },
+            {
+              "code" : "code",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " used to retrieve the GitHub App’s ",
+              "type" : "text"
+            },
+            {
+              "code" : "id",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ", ",
+              "type" : "text"
+            },
+            {
+              "code" : "pem",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " (private key), and ",
+              "type" : "text"
+            },
+            {
+              "code" : "webhook_secret",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ".",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "HTTP ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "POST \/app-manifests\/{code}\/conversions",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/paths\/\/app-manifests\/{code}\/conversions\/post(apps\/create-from-manifest)",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapiapps\/apiprotocol\/apps_sol_create_hyphen_from_hyphen_manifest(path:headers:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIApps",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/APIProtocol": {
+  "abstract" : [
+    {
+      "text" : "A type that performs HTTP operations defined by the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "protocol"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "APIProtocol"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/APIProtocol",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "APIProtocol"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "APIProtocol",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/apiprotocol"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/APIProtocol/apps_sol_create_hyphen_from_hyphen_manifest(path:headers:)": {
+  "abstract" : [
+    {
+      "text" : "Create a GitHub App from a manifest",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "apps_sol_create_hyphen_from_hyphen_manifest"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "path"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO028apps_sol_create_hyphen_from_I9_manifestO",
+      "text" : "apps_sol_create_hyphen_from_hyphen_manifest"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO028apps_sol_create_hyphen_from_I9_manifestO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO028apps_sol_create_hyphen_from_I9_manifestO5InputV4PathV",
+      "text" : "Path"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO028apps_sol_create_hyphen_from_I9_manifestO",
+      "text" : "apps_sol_create_hyphen_from_hyphen_manifest"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO028apps_sol_create_hyphen_from_I9_manifestO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO028apps_sol_create_hyphen_from_I9_manifestO5InputV7HeadersV",
+      "text" : "Headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO028apps_sol_create_hyphen_from_I9_manifestO",
+      "text" : "apps_sol_create_hyphen_from_hyphen_manifest"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO028apps_sol_create_hyphen_from_I9_manifestO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/APIProtocol\/apps_sol_create_hyphen_from_hyphen_manifest(path:headers:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "apps_sol_create_hyphen_from_hyphen_manifest(path:headers:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/apiprotocol\/apps_sol_create_hyphen_from_hyphen_manifest(path:headers:)"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/operations"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Operations/apps_sol_create_hyphen_from_hyphen_manifest": {
+  "abstract" : [
+    {
+      "text" : "Create a GitHub App from a manifest",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "apps_sol_create_hyphen_from_hyphen_manifest"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/apps_sol_create_hyphen_from_hyphen_manifest",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "apps_sol_create_hyphen_from_hyphen_manifest"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.apps_sol_create_hyphen_from_hyphen_manifest",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/operations\/apps_sol_create_hyphen_from_hyphen_manifest"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Operations/apps_sol_create_hyphen_from_hyphen_manifest/Input": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/apps_sol_create_hyphen_from_hyphen_manifest\/Input",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.apps_sol_create_hyphen_from_hyphen_manifest.Input",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/operations\/apps_sol_create_hyphen_from_hyphen_manifest\/input"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Operations/apps_sol_create_hyphen_from_hyphen_manifest/Input/Headers-swift.struct": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Headers"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/apps_sol_create_hyphen_from_hyphen_manifest\/Input\/Headers-swift.struct",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Headers"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.apps_sol_create_hyphen_from_hyphen_manifest.Input.Headers",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/operations\/apps_sol_create_hyphen_from_hyphen_manifest\/input\/headers-swift.struct"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Operations/apps_sol_create_hyphen_from_hyphen_manifest/Input/Path-swift.struct": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Path"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/apps_sol_create_hyphen_from_hyphen_manifest\/Input\/Path-swift.struct",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Path"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.apps_sol_create_hyphen_from_hyphen_manifest.Input.Path",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/operations\/apps_sol_create_hyphen_from_hyphen_manifest\/input\/path-swift.struct"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Operations/apps_sol_create_hyphen_from_hyphen_manifest/Output": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/apps_sol_create_hyphen_from_hyphen_manifest\/Output",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.apps_sol_create_hyphen_from_hyphen_manifest.Output",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/operations\/apps_sol_create_hyphen_from_hyphen_manifest\/output"
+},
+"https://docs.github.com/apps/building-github-apps/creating-github-apps-from-a-manifest/": {
+  "identifier" : "https:\/\/docs.github.com\/apps\/building-github-apps\/creating-github-apps-from-a-manifest\/",
+  "title" : "GitHub App Manifest flow",
+  "titleInlineContent" : [
+    {
+      "text" : "GitHub App Manifest flow",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/docs.github.com\/apps\/building-github-apps\/creating-github-apps-from-a-manifest\/"
+}
+}
+}

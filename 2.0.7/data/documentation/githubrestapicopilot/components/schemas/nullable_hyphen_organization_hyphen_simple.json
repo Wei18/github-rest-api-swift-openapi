@@ -1,0 +1,1076 @@
+{
+  "abstract" : [
+    {
+      "text" : "A GitHub organization.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot",
+        "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components",
+        "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components\/Schemas"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components\/Schemas\/nullable_hyphen_organization_hyphen_simple"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:20GitHubRestAPICopilot10ComponentsO7SchemasO029nullable_hyphen_organization_H7_simpleV",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "struct"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "nullable_hyphen_organization_hyphen_simple"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPICopilot"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "nullable_hyphen_organization_hyphen_simple"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/copilot\/Types.swift#L1134"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Structure",
+    "symbolKind" : "struct",
+    "title" : "Components.Schemas.nullable_hyphen_organization_hyphen_simple"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "struct"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "nullable_hyphen_organization_hyphen_simple"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/components\/schemas\/nullable-organization-simple",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPICopilot\/Se",
+        "doc:\/\/GitHubRestAPICopilot\/SE",
+        "doc:\/\/GitHubRestAPICopilot\/SQ",
+        "doc:\/\/GitHubRestAPICopilot\/SH",
+        "doc:\/\/GitHubRestAPICopilot\/s8SendableP"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components\/Schemas\/nullable_hyphen_organization_hyphen_simple\/init(from:)",
+        "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components\/Schemas\/nullable_hyphen_organization_hyphen_simple\/init(login:id:node_id:url:repos_url:events_url:hooks_url:issues_url:members_url:public_members_url:avatar_url:description:)"
+      ],
+      "title" : "Initializers"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components\/Schemas\/nullable_hyphen_organization_hyphen_simple\/avatar_url",
+        "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components\/Schemas\/nullable_hyphen_organization_hyphen_simple\/description",
+        "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components\/Schemas\/nullable_hyphen_organization_hyphen_simple\/events_url",
+        "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components\/Schemas\/nullable_hyphen_organization_hyphen_simple\/hooks_url",
+        "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components\/Schemas\/nullable_hyphen_organization_hyphen_simple\/id",
+        "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components\/Schemas\/nullable_hyphen_organization_hyphen_simple\/issues_url",
+        "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components\/Schemas\/nullable_hyphen_organization_hyphen_simple\/login",
+        "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components\/Schemas\/nullable_hyphen_organization_hyphen_simple\/members_url",
+        "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components\/Schemas\/nullable_hyphen_organization_hyphen_simple\/node_id",
+        "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components\/Schemas\/nullable_hyphen_organization_hyphen_simple\/public_members_url",
+        "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components\/Schemas\/nullable_hyphen_organization_hyphen_simple\/repos_url",
+        "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components\/Schemas\/nullable_hyphen_organization_hyphen_simple\/url"
+      ],
+      "title" : "Instance Properties"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components\/Schemas\/nullable_hyphen_organization_hyphen_simple\/CodingKeys"
+      ],
+      "title" : "Enumerations"
+    },
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components\/Schemas\/nullable_hyphen_organization_hyphen_simple\/Equatable-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapicopilot\/components\/schemas\/nullable_hyphen_organization_hyphen_simple"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPICopilot/SE": {
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/SE",
+  "title" : "Swift.Encodable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPICopilot/SH": {
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/SH",
+  "title" : "Swift.Hashable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPICopilot/SQ": {
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/SQ",
+  "title" : "Swift.Equatable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPICopilot/Se": {
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/Se",
+  "title" : "Swift.Decodable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPICopilot/documentation/GitHubRestAPICopilot": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPICopilot",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicopilot"
+},
+"doc://GitHubRestAPICopilot/documentation/GitHubRestAPICopilot/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicopilot\/components"
+},
+"doc://GitHubRestAPICopilot/documentation/GitHubRestAPICopilot/Components/Schemas": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/schemas",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components\/Schemas",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicopilot\/components\/schemas"
+},
+"doc://GitHubRestAPICopilot/documentation/GitHubRestAPICopilot/Components/Schemas/nullable_hyphen_organization_hyphen_simple": {
+  "abstract" : [
+    {
+      "text" : "A GitHub organization.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "nullable_hyphen_organization_hyphen_simple"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components\/Schemas\/nullable_hyphen_organization_hyphen_simple",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "nullable_hyphen_organization_hyphen_simple"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.nullable_hyphen_organization_hyphen_simple",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicopilot\/components\/schemas\/nullable_hyphen_organization_hyphen_simple"
+},
+"doc://GitHubRestAPICopilot/documentation/GitHubRestAPICopilot/Components/Schemas/nullable_hyphen_organization_hyphen_simple/CodingKeys": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components\/Schemas\/nullable_hyphen_organization_hyphen_simple\/CodingKeys",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.nullable_hyphen_organization_hyphen_simple.CodingKeys",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicopilot\/components\/schemas\/nullable_hyphen_organization_hyphen_simple\/codingkeys"
+},
+"doc://GitHubRestAPICopilot/documentation/GitHubRestAPICopilot/Components/Schemas/nullable_hyphen_organization_hyphen_simple/Equatable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components\/Schemas\/nullable_hyphen_organization_hyphen_simple\/Equatable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Equatable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicopilot\/components\/schemas\/nullable_hyphen_organization_hyphen_simple\/equatable-implementations"
+},
+"doc://GitHubRestAPICopilot/documentation/GitHubRestAPICopilot/Components/Schemas/nullable_hyphen_organization_hyphen_simple/avatar_url": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "avatar_url"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components\/Schemas\/nullable_hyphen_organization_hyphen_simple\/avatar_url",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "avatar_url",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicopilot\/components\/schemas\/nullable_hyphen_organization_hyphen_simple\/avatar_url"
+},
+"doc://GitHubRestAPICopilot/documentation/GitHubRestAPICopilot/Components/Schemas/nullable_hyphen_organization_hyphen_simple/description": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "description"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components\/Schemas\/nullable_hyphen_organization_hyphen_simple\/description",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "description",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicopilot\/components\/schemas\/nullable_hyphen_organization_hyphen_simple\/description"
+},
+"doc://GitHubRestAPICopilot/documentation/GitHubRestAPICopilot/Components/Schemas/nullable_hyphen_organization_hyphen_simple/events_url": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "events_url"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components\/Schemas\/nullable_hyphen_organization_hyphen_simple\/events_url",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "events_url",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicopilot\/components\/schemas\/nullable_hyphen_organization_hyphen_simple\/events_url"
+},
+"doc://GitHubRestAPICopilot/documentation/GitHubRestAPICopilot/Components/Schemas/nullable_hyphen_organization_hyphen_simple/hooks_url": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "hooks_url"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components\/Schemas\/nullable_hyphen_organization_hyphen_simple\/hooks_url",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "hooks_url",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicopilot\/components\/schemas\/nullable_hyphen_organization_hyphen_simple\/hooks_url"
+},
+"doc://GitHubRestAPICopilot/documentation/GitHubRestAPICopilot/Components/Schemas/nullable_hyphen_organization_hyphen_simple/id": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "id"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components\/Schemas\/nullable_hyphen_organization_hyphen_simple\/id",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "id",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicopilot\/components\/schemas\/nullable_hyphen_organization_hyphen_simple\/id"
+},
+"doc://GitHubRestAPICopilot/documentation/GitHubRestAPICopilot/Components/Schemas/nullable_hyphen_organization_hyphen_simple/init(from:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "from"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:s7DecoderP",
+      "text" : "Decoder"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components\/Schemas\/nullable_hyphen_organization_hyphen_simple\/init(from:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(from:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicopilot\/components\/schemas\/nullable_hyphen_organization_hyphen_simple\/init(from:)"
+},
+"doc://GitHubRestAPICopilot/documentation/GitHubRestAPICopilot/Components/Schemas/nullable_hyphen_organization_hyphen_simple/init(login:id:node_id:url:repos_url:events_url:hooks_url:issues_url:members_url:public_members_url:avatar_url:description:)": {
+  "abstract" : [
+    {
+      "text" : "Creates a new ",
+      "type" : "text"
+    },
+    {
+      "code" : "nullable_hyphen_organization_hyphen_simple",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "login"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "id"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "node_id"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "url"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "repos_url"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "events_url"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "hooks_url"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "issues_url"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "members_url"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "public_members_url"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "avatar_url"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "description"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?)"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components\/Schemas\/nullable_hyphen_organization_hyphen_simple\/init(login:id:node_id:url:repos_url:events_url:hooks_url:issues_url:members_url:public_members_url:avatar_url:description:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(login:id:node_id:url:repos_url:events_url:hooks_url:issues_url:members_url:public_members_url:avatar_url:description:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicopilot\/components\/schemas\/nullable_hyphen_organization_hyphen_simple\/init(login:id:node_id:url:repos_url:events_url:hooks_url:issues_url:members_url:public_members_url:avatar_url:description:)"
+},
+"doc://GitHubRestAPICopilot/documentation/GitHubRestAPICopilot/Components/Schemas/nullable_hyphen_organization_hyphen_simple/issues_url": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "issues_url"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components\/Schemas\/nullable_hyphen_organization_hyphen_simple\/issues_url",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "issues_url",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicopilot\/components\/schemas\/nullable_hyphen_organization_hyphen_simple\/issues_url"
+},
+"doc://GitHubRestAPICopilot/documentation/GitHubRestAPICopilot/Components/Schemas/nullable_hyphen_organization_hyphen_simple/login": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "login"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components\/Schemas\/nullable_hyphen_organization_hyphen_simple\/login",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "login",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicopilot\/components\/schemas\/nullable_hyphen_organization_hyphen_simple\/login"
+},
+"doc://GitHubRestAPICopilot/documentation/GitHubRestAPICopilot/Components/Schemas/nullable_hyphen_organization_hyphen_simple/members_url": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "members_url"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components\/Schemas\/nullable_hyphen_organization_hyphen_simple\/members_url",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "members_url",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicopilot\/components\/schemas\/nullable_hyphen_organization_hyphen_simple\/members_url"
+},
+"doc://GitHubRestAPICopilot/documentation/GitHubRestAPICopilot/Components/Schemas/nullable_hyphen_organization_hyphen_simple/node_id": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "node_id"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components\/Schemas\/nullable_hyphen_organization_hyphen_simple\/node_id",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "node_id",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicopilot\/components\/schemas\/nullable_hyphen_organization_hyphen_simple\/node_id"
+},
+"doc://GitHubRestAPICopilot/documentation/GitHubRestAPICopilot/Components/Schemas/nullable_hyphen_organization_hyphen_simple/public_members_url": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "public_members_url"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components\/Schemas\/nullable_hyphen_organization_hyphen_simple\/public_members_url",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "public_members_url",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicopilot\/components\/schemas\/nullable_hyphen_organization_hyphen_simple\/public_members_url"
+},
+"doc://GitHubRestAPICopilot/documentation/GitHubRestAPICopilot/Components/Schemas/nullable_hyphen_organization_hyphen_simple/repos_url": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "repos_url"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components\/Schemas\/nullable_hyphen_organization_hyphen_simple\/repos_url",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "repos_url",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicopilot\/components\/schemas\/nullable_hyphen_organization_hyphen_simple\/repos_url"
+},
+"doc://GitHubRestAPICopilot/documentation/GitHubRestAPICopilot/Components/Schemas/nullable_hyphen_organization_hyphen_simple/url": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "url"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components\/Schemas\/nullable_hyphen_organization_hyphen_simple\/url",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "url",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicopilot\/components\/schemas\/nullable_hyphen_organization_hyphen_simple\/url"
+},
+"doc://GitHubRestAPICopilot/s8SendableP": {
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/s8SendableP",
+  "title" : "Swift.Sendable",
+  "type" : "unresolvable"
+}
+}
+}

@@ -1,0 +1,454 @@
+{
+  "abstract" : [
+    {
+      "text" : "List app installations for an organization",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/orgs_sol_list_hyphen_app_hyphen_installations"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:17GitHubRestAPIOrgs10OperationsO025orgs_sol_list_hyphen_app_I14_installationsO",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "enum"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "orgs_sol_list_hyphen_app_hyphen_installations"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIOrgs"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "orgs_sol_list_hyphen_app_hyphen_installations"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/orgs\/Types.swift#L14802"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Enumeration",
+    "symbolKind" : "enum",
+    "title" : "Operations.orgs_sol_list_hyphen_app_hyphen_installations"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "enum"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "orgs_sol_list_hyphen_app_hyphen_installations"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Lists all GitHub Apps in an organization. The installation count includes",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "all GitHub Apps installed on repositories in the organization.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "The authenticated user must be an organization owner to use this endpoint.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "OAuth app tokens and personal access tokens (classic) need the ",
+              "type" : "text"
+            },
+            {
+              "code" : "admin:read",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " scope to use this endpoint.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "HTTP ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "GET \/orgs\/{org}\/installations",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/paths\/\/orgs\/{org}\/installations\/get(orgs\/list-app-installations)",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/orgs_sol_list_hyphen_app_hyphen_installations\/Input"
+      ],
+      "title" : "Structures"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/orgs_sol_list_hyphen_app_hyphen_installations\/id"
+      ],
+      "title" : "Type Properties"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/orgs_sol_list_hyphen_app_hyphen_installations\/AcceptableContentType",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/orgs_sol_list_hyphen_app_hyphen_installations\/Output"
+      ],
+      "title" : "Enumerations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapiorgs\/operations\/orgs_sol_list_hyphen_app_hyphen_installations"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIOrgs",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/operations"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Operations/orgs_sol_list_hyphen_app_hyphen_installations": {
+  "abstract" : [
+    {
+      "text" : "List app installations for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "orgs_sol_list_hyphen_app_hyphen_installations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/orgs_sol_list_hyphen_app_hyphen_installations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "orgs_sol_list_hyphen_app_hyphen_installations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.orgs_sol_list_hyphen_app_hyphen_installations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/operations\/orgs_sol_list_hyphen_app_hyphen_installations"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Operations/orgs_sol_list_hyphen_app_hyphen_installations/AcceptableContentType": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AcceptableContentType"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/orgs_sol_list_hyphen_app_hyphen_installations\/AcceptableContentType",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AcceptableContentType"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.orgs_sol_list_hyphen_app_hyphen_installations.AcceptableContentType",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/operations\/orgs_sol_list_hyphen_app_hyphen_installations\/acceptablecontenttype"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Operations/orgs_sol_list_hyphen_app_hyphen_installations/Input": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/orgs_sol_list_hyphen_app_hyphen_installations\/Input",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.orgs_sol_list_hyphen_app_hyphen_installations.Input",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/operations\/orgs_sol_list_hyphen_app_hyphen_installations\/input"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Operations/orgs_sol_list_hyphen_app_hyphen_installations/Output": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/orgs_sol_list_hyphen_app_hyphen_installations\/Output",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.orgs_sol_list_hyphen_app_hyphen_installations.Output",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/operations\/orgs_sol_list_hyphen_app_hyphen_installations\/output"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Operations/orgs_sol_list_hyphen_app_hyphen_installations/id": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "id"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/orgs_sol_list_hyphen_app_hyphen_installations\/id",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "id",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/operations\/orgs_sol_list_hyphen_app_hyphen_installations\/id"
+}
+}
+}

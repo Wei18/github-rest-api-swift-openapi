@@ -1,0 +1,988 @@
+{
+  "abstract" : [
+    {
+      "text" : "Usage metrics for Copilot editor code completions in the IDE.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot",
+        "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components",
+        "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components\/Schemas"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components\/Schemas\/copilot_hyphen_ide_hyphen_code_hyphen_completions"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:20GitHubRestAPICopilot10ComponentsO7SchemasO019copilot_hyphen_ide_h6_code_H12_completionsV",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "struct"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "copilot_hyphen_ide_hyphen_code_hyphen_completions"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPICopilot"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "copilot_hyphen_ide_hyphen_code_hyphen_completions"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/copilot\/Types.swift#L1475"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Structure",
+    "symbolKind" : "struct",
+    "title" : "Components.Schemas.copilot_hyphen_ide_hyphen_code_hyphen_completions"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "struct"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "copilot_hyphen_ide_hyphen_code_hyphen_completions"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/components\/schemas\/copilot-ide-code-completions",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPICopilot\/Se",
+        "doc:\/\/GitHubRestAPICopilot\/SE",
+        "doc:\/\/GitHubRestAPICopilot\/SQ",
+        "doc:\/\/GitHubRestAPICopilot\/SH",
+        "doc:\/\/GitHubRestAPICopilot\/s8SendableP"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components\/Schemas\/copilot_hyphen_ide_hyphen_code_hyphen_completions\/editorsPayloadPayload",
+        "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components\/Schemas\/copilot_hyphen_ide_hyphen_code_hyphen_completions\/languagesPayloadPayload"
+      ],
+      "title" : "Structures"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components\/Schemas\/copilot_hyphen_ide_hyphen_code_hyphen_completions\/init(from:)",
+        "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components\/Schemas\/copilot_hyphen_ide_hyphen_code_hyphen_completions\/init(total_engaged_users:languages:editors:additionalProperties:)"
+      ],
+      "title" : "Initializers"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components\/Schemas\/copilot_hyphen_ide_hyphen_code_hyphen_completions\/additionalProperties",
+        "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components\/Schemas\/copilot_hyphen_ide_hyphen_code_hyphen_completions\/editors",
+        "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components\/Schemas\/copilot_hyphen_ide_hyphen_code_hyphen_completions\/languages",
+        "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components\/Schemas\/copilot_hyphen_ide_hyphen_code_hyphen_completions\/total_engaged_users"
+      ],
+      "title" : "Instance Properties"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components\/Schemas\/copilot_hyphen_ide_hyphen_code_hyphen_completions\/encode(to:)"
+      ],
+      "title" : "Instance Methods"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components\/Schemas\/copilot_hyphen_ide_hyphen_code_hyphen_completions\/editorsPayload",
+        "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components\/Schemas\/copilot_hyphen_ide_hyphen_code_hyphen_completions\/languagesPayload"
+      ],
+      "title" : "Type Aliases"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components\/Schemas\/copilot_hyphen_ide_hyphen_code_hyphen_completions\/CodingKeys"
+      ],
+      "title" : "Enumerations"
+    },
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components\/Schemas\/copilot_hyphen_ide_hyphen_code_hyphen_completions\/Equatable-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapicopilot\/components\/schemas\/copilot_hyphen_ide_hyphen_code_hyphen_completions"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPICopilot/SE": {
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/SE",
+  "title" : "Swift.Encodable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPICopilot/SH": {
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/SH",
+  "title" : "Swift.Hashable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPICopilot/SQ": {
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/SQ",
+  "title" : "Swift.Equatable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPICopilot/Se": {
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/Se",
+  "title" : "Swift.Decodable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPICopilot/documentation/GitHubRestAPICopilot": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPICopilot",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicopilot"
+},
+"doc://GitHubRestAPICopilot/documentation/GitHubRestAPICopilot/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicopilot\/components"
+},
+"doc://GitHubRestAPICopilot/documentation/GitHubRestAPICopilot/Components/Schemas": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/schemas",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components\/Schemas",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicopilot\/components\/schemas"
+},
+"doc://GitHubRestAPICopilot/documentation/GitHubRestAPICopilot/Components/Schemas/copilot_hyphen_ide_hyphen_code_hyphen_completions": {
+  "abstract" : [
+    {
+      "text" : "Usage metrics for Copilot editor code completions in the IDE.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "copilot_hyphen_ide_hyphen_code_hyphen_completions"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components\/Schemas\/copilot_hyphen_ide_hyphen_code_hyphen_completions",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "copilot_hyphen_ide_hyphen_code_hyphen_completions"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.copilot_hyphen_ide_hyphen_code_hyphen_completions",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicopilot\/components\/schemas\/copilot_hyphen_ide_hyphen_code_hyphen_completions"
+},
+"doc://GitHubRestAPICopilot/documentation/GitHubRestAPICopilot/Components/Schemas/copilot_hyphen_ide_hyphen_code_hyphen_completions/CodingKeys": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components\/Schemas\/copilot_hyphen_ide_hyphen_code_hyphen_completions\/CodingKeys",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.copilot_hyphen_ide_hyphen_code_hyphen_completions.CodingKeys",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicopilot\/components\/schemas\/copilot_hyphen_ide_hyphen_code_hyphen_completions\/codingkeys"
+},
+"doc://GitHubRestAPICopilot/documentation/GitHubRestAPICopilot/Components/Schemas/copilot_hyphen_ide_hyphen_code_hyphen_completions/Equatable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components\/Schemas\/copilot_hyphen_ide_hyphen_code_hyphen_completions\/Equatable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Equatable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicopilot\/components\/schemas\/copilot_hyphen_ide_hyphen_code_hyphen_completions\/equatable-implementations"
+},
+"doc://GitHubRestAPICopilot/documentation/GitHubRestAPICopilot/Components/Schemas/copilot_hyphen_ide_hyphen_code_hyphen_completions/additionalProperties": {
+  "abstract" : [
+    {
+      "text" : "A container of undocumented properties.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "additionalProperties"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:14OpenAPIRuntime0A18APIObjectContainerV",
+      "text" : "OpenAPIObjectContainer"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components\/Schemas\/copilot_hyphen_ide_hyphen_code_hyphen_completions\/additionalProperties",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "additionalProperties",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicopilot\/components\/schemas\/copilot_hyphen_ide_hyphen_code_hyphen_completions\/additionalproperties"
+},
+"doc://GitHubRestAPICopilot/documentation/GitHubRestAPICopilot/Components/Schemas/copilot_hyphen_ide_hyphen_code_hyphen_completions/editors": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "editors"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10ComponentsO7SchemasO019copilot_hyphen_ide_h6_code_H12_completionsV",
+      "text" : "copilot_hyphen_ide_hyphen_code_hyphen_completions"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10ComponentsO7SchemasO019copilot_hyphen_ide_h6_code_H12_completionsV14editorsPayloada",
+      "text" : "editorsPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components\/Schemas\/copilot_hyphen_ide_hyphen_code_hyphen_completions\/editors",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "editors",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicopilot\/components\/schemas\/copilot_hyphen_ide_hyphen_code_hyphen_completions\/editors"
+},
+"doc://GitHubRestAPICopilot/documentation/GitHubRestAPICopilot/Components/Schemas/copilot_hyphen_ide_hyphen_code_hyphen_completions/editorsPayload": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "editorsPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components\/Schemas\/copilot_hyphen_ide_hyphen_code_hyphen_completions\/editorsPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "editorsPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.copilot_hyphen_ide_hyphen_code_hyphen_completions.editorsPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicopilot\/components\/schemas\/copilot_hyphen_ide_hyphen_code_hyphen_completions\/editorspayload"
+},
+"doc://GitHubRestAPICopilot/documentation/GitHubRestAPICopilot/Components/Schemas/copilot_hyphen_ide_hyphen_code_hyphen_completions/editorsPayloadPayload": {
+  "abstract" : [
+    {
+      "text" : "Copilot code completion metrics for active editors.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "editorsPayloadPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components\/Schemas\/copilot_hyphen_ide_hyphen_code_hyphen_completions\/editorsPayloadPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "editorsPayloadPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.copilot_hyphen_ide_hyphen_code_hyphen_completions.editorsPayloadPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicopilot\/components\/schemas\/copilot_hyphen_ide_hyphen_code_hyphen_completions\/editorspayloadpayload"
+},
+"doc://GitHubRestAPICopilot/documentation/GitHubRestAPICopilot/Components/Schemas/copilot_hyphen_ide_hyphen_code_hyphen_completions/encode(to:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "encode"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "to"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:s7EncoderP",
+      "text" : "Encoder"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components\/Schemas\/copilot_hyphen_ide_hyphen_code_hyphen_completions\/encode(to:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "encode(to:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicopilot\/components\/schemas\/copilot_hyphen_ide_hyphen_code_hyphen_completions\/encode(to:)"
+},
+"doc://GitHubRestAPICopilot/documentation/GitHubRestAPICopilot/Components/Schemas/copilot_hyphen_ide_hyphen_code_hyphen_completions/init(from:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "from"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:s7DecoderP",
+      "text" : "Decoder"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components\/Schemas\/copilot_hyphen_ide_hyphen_code_hyphen_completions\/init(from:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(from:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicopilot\/components\/schemas\/copilot_hyphen_ide_hyphen_code_hyphen_completions\/init(from:)"
+},
+"doc://GitHubRestAPICopilot/documentation/GitHubRestAPICopilot/Components/Schemas/copilot_hyphen_ide_hyphen_code_hyphen_completions/init(total_engaged_users:languages:editors:additionalProperties:)": {
+  "abstract" : [
+    {
+      "text" : "Creates a new ",
+      "type" : "text"
+    },
+    {
+      "code" : "copilot_hyphen_ide_hyphen_code_hyphen_completions",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "total_engaged_users"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "languages"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10ComponentsO7SchemasO019copilot_hyphen_ide_h6_code_H12_completionsV",
+      "text" : "copilot_hyphen_ide_hyphen_code_hyphen_completions"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10ComponentsO7SchemasO019copilot_hyphen_ide_h6_code_H12_completionsV16languagesPayloada",
+      "text" : "languagesPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "editors"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10ComponentsO7SchemasO019copilot_hyphen_ide_h6_code_H12_completionsV",
+      "text" : "copilot_hyphen_ide_hyphen_code_hyphen_completions"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10ComponentsO7SchemasO019copilot_hyphen_ide_h6_code_H12_completionsV14editorsPayloada",
+      "text" : "editorsPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "additionalProperties"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:14OpenAPIRuntime0A18APIObjectContainerV",
+      "text" : "OpenAPIObjectContainer"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components\/Schemas\/copilot_hyphen_ide_hyphen_code_hyphen_completions\/init(total_engaged_users:languages:editors:additionalProperties:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(total_engaged_users:languages:editors:additionalProperties:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicopilot\/components\/schemas\/copilot_hyphen_ide_hyphen_code_hyphen_completions\/init(total_engaged_users:languages:editors:additionalproperties:)"
+},
+"doc://GitHubRestAPICopilot/documentation/GitHubRestAPICopilot/Components/Schemas/copilot_hyphen_ide_hyphen_code_hyphen_completions/languages": {
+  "abstract" : [
+    {
+      "text" : "Code completion metrics for active languages.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "languages"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10ComponentsO7SchemasO019copilot_hyphen_ide_h6_code_H12_completionsV",
+      "text" : "copilot_hyphen_ide_hyphen_code_hyphen_completions"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10ComponentsO7SchemasO019copilot_hyphen_ide_h6_code_H12_completionsV16languagesPayloada",
+      "text" : "languagesPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components\/Schemas\/copilot_hyphen_ide_hyphen_code_hyphen_completions\/languages",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "languages",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicopilot\/components\/schemas\/copilot_hyphen_ide_hyphen_code_hyphen_completions\/languages"
+},
+"doc://GitHubRestAPICopilot/documentation/GitHubRestAPICopilot/Components/Schemas/copilot_hyphen_ide_hyphen_code_hyphen_completions/languagesPayload": {
+  "abstract" : [
+    {
+      "text" : "Code completion metrics for active languages.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "languagesPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components\/Schemas\/copilot_hyphen_ide_hyphen_code_hyphen_completions\/languagesPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "languagesPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.copilot_hyphen_ide_hyphen_code_hyphen_completions.languagesPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicopilot\/components\/schemas\/copilot_hyphen_ide_hyphen_code_hyphen_completions\/languagespayload"
+},
+"doc://GitHubRestAPICopilot/documentation/GitHubRestAPICopilot/Components/Schemas/copilot_hyphen_ide_hyphen_code_hyphen_completions/languagesPayloadPayload": {
+  "abstract" : [
+    {
+      "text" : "Usage metrics for a given language for the given editor for Copilot code completions.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "languagesPayloadPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components\/Schemas\/copilot_hyphen_ide_hyphen_code_hyphen_completions\/languagesPayloadPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "languagesPayloadPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.copilot_hyphen_ide_hyphen_code_hyphen_completions.languagesPayloadPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicopilot\/components\/schemas\/copilot_hyphen_ide_hyphen_code_hyphen_completions\/languagespayloadpayload"
+},
+"doc://GitHubRestAPICopilot/documentation/GitHubRestAPICopilot/Components/Schemas/copilot_hyphen_ide_hyphen_code_hyphen_completions/total_engaged_users": {
+  "abstract" : [
+    {
+      "text" : "Number of users who accepted at least one Copilot code suggestion, across all active editors. Includes both full and partial acceptances.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "total_engaged_users"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components\/Schemas\/copilot_hyphen_ide_hyphen_code_hyphen_completions\/total_engaged_users",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "total_engaged_users",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicopilot\/components\/schemas\/copilot_hyphen_ide_hyphen_code_hyphen_completions\/total_engaged_users"
+},
+"doc://GitHubRestAPICopilot/s8SendableP": {
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/s8SendableP",
+  "title" : "Swift.Sendable",
+  "type" : "unresolvable"
+}
+}
+}

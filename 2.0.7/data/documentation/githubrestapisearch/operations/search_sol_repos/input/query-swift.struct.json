@@ -1,0 +1,1064 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Operations",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Operations\/search_sol_repos",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Operations\/search_sol_repos\/Input"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Operations\/search_sol_repos\/Input\/Query-swift.struct"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:19GitHubRestAPISearch10OperationsO16search_sol_reposO5InputV5QueryV",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "struct"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "Query"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPISearch"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "Query"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/search\/Types.swift#L6371"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Structure",
+    "symbolKind" : "struct",
+    "title" : "Operations.search_sol_repos.Input.Query"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "struct"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "Query"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/paths\/search\/repositories\/GET\/query",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPISearch\/SQ",
+        "doc:\/\/GitHubRestAPISearch\/SH",
+        "doc:\/\/GitHubRestAPISearch\/s8SendableP"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Operations\/search_sol_repos\/Input\/Query-swift.struct\/init(q:sort:order:per_page:page:)"
+      ],
+      "title" : "Initializers"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Operations\/search_sol_repos\/Input\/Query-swift.struct\/order-swift.property",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Operations\/search_sol_repos\/Input\/Query-swift.struct\/page",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Operations\/search_sol_repos\/Input\/Query-swift.struct\/per_page",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Operations\/search_sol_repos\/Input\/Query-swift.struct\/q",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Operations\/search_sol_repos\/Input\/Query-swift.struct\/sort"
+      ],
+      "title" : "Instance Properties"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Operations\/search_sol_repos\/Input\/Query-swift.struct\/order-swift.enum",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Operations\/search_sol_repos\/Input\/Query-swift.struct\/sortPayload"
+      ],
+      "title" : "Enumerations"
+    },
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Operations\/search_sol_repos\/Input\/Query-swift.struct\/Equatable-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapisearch\/operations\/search_sol_repos\/input\/query-swift.struct"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPISearch/SH": {
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/SH",
+  "title" : "Swift.Hashable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPISearch/SQ": {
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/SQ",
+  "title" : "Swift.Equatable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPISearch",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/operations"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Operations/search_sol_repos": {
+  "abstract" : [
+    {
+      "text" : "Search repositories",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "search_sol_repos"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Operations\/search_sol_repos",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "search_sol_repos"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.search_sol_repos",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/operations\/search_sol_repos"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Operations/search_sol_repos/Input": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Operations\/search_sol_repos\/Input",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.search_sol_repos.Input",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/operations\/search_sol_repos\/input"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Operations/search_sol_repos/Input/Query-swift.struct": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Query"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Operations\/search_sol_repos\/Input\/Query-swift.struct",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Query"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.search_sol_repos.Input.Query",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/operations\/search_sol_repos\/input\/query-swift.struct"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Operations/search_sol_repos/Input/Query-swift.struct/Equatable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Operations\/search_sol_repos\/Input\/Query-swift.struct\/Equatable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Equatable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/operations\/search_sol_repos\/input\/query-swift.struct\/equatable-implementations"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Operations/search_sol_repos/Input/Query-swift.struct/init(q:sort:order:per_page:page:)": {
+  "abstract" : [
+    {
+      "text" : "Creates a new ",
+      "type" : "text"
+    },
+    {
+      "code" : "Query",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "q"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "sort"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO16search_sol_reposO",
+      "text" : "search_sol_repos"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO16search_sol_reposO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO16search_sol_reposO5InputV5QueryV",
+      "text" : "Query"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO16search_sol_reposO5InputV5QueryV11sortPayloadO",
+      "text" : "sortPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "order"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10ComponentsO10ParametersO",
+      "text" : "Parameters"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10ComponentsO10ParametersO5orderO",
+      "text" : "order"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "per_page"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10ComponentsO10ParametersO",
+      "text" : "Parameters"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10ComponentsO10ParametersO15per_hyphen_pagea",
+      "text" : "per_hyphen_page"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "page"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10ComponentsO10ParametersO",
+      "text" : "Parameters"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10ComponentsO10ParametersO4pagea",
+      "text" : "page"
+    },
+    {
+      "kind" : "text",
+      "text" : "?)"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Operations\/search_sol_repos\/Input\/Query-swift.struct\/init(q:sort:order:per_page:page:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(q:sort:order:per_page:page:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/operations\/search_sol_repos\/input\/query-swift.struct\/init(q:sort:order:per_page:page:)"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Operations/search_sol_repos/Input/Query-swift.struct/order-swift.enum": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "order"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Operations\/search_sol_repos\/Input\/Query-swift.struct\/order-swift.enum",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "order"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.search_sol_repos.Input.Query.order",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/operations\/search_sol_repos\/input\/query-swift.struct\/order-swift.enum"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Operations/search_sol_repos/Input/Query-swift.struct/order-swift.property": {
+  "abstract" : [
+    {
+      "text" : "Determines whether the first search result returned is the highest number of matches (",
+      "type" : "text"
+    },
+    {
+      "code" : "desc",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ") or lowest number of matches (",
+      "type" : "text"
+    },
+    {
+      "code" : "asc",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : "). This parameter is ignored unless you provide ",
+      "type" : "text"
+    },
+    {
+      "code" : "sort",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "order"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10ComponentsO10ParametersO",
+      "text" : "Parameters"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10ComponentsO10ParametersO5orderO",
+      "text" : "order"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Operations\/search_sol_repos\/Input\/Query-swift.struct\/order-swift.property",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "order",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/operations\/search_sol_repos\/input\/query-swift.struct\/order-swift.property"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Operations/search_sol_repos/Input/Query-swift.struct/page": {
+  "abstract" : [
+    {
+      "text" : "The page number of the results to fetch. For more information, see “",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/docs.github.com\/rest\/using-the-rest-api\/using-pagination-in-the-rest-api",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ".”",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "page"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10ComponentsO10ParametersO",
+      "text" : "Parameters"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10ComponentsO10ParametersO4pagea",
+      "text" : "page"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Operations\/search_sol_repos\/Input\/Query-swift.struct\/page",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "page",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/operations\/search_sol_repos\/input\/query-swift.struct\/page"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Operations/search_sol_repos/Input/Query-swift.struct/per_page": {
+  "abstract" : [
+    {
+      "text" : "The number of results per page (max 100). For more information, see “",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/docs.github.com\/rest\/using-the-rest-api\/using-pagination-in-the-rest-api",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ".”",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "per_page"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10ComponentsO10ParametersO",
+      "text" : "Parameters"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10ComponentsO10ParametersO15per_hyphen_pagea",
+      "text" : "per_hyphen_page"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Operations\/search_sol_repos\/Input\/Query-swift.struct\/per_page",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "per_page",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/operations\/search_sol_repos\/input\/query-swift.struct\/per_page"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Operations/search_sol_repos/Input/Query-swift.struct/q": {
+  "abstract" : [
+    {
+      "text" : "The query contains one or more search keywords and qualifiers. Qualifiers allow you to limit your search to specific areas of GitHub. The REST API supports the same qualifiers as the web interface for GitHub. To learn more about the format of the query, see ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/docs.github.com\/rest\/search\/search#constructing-a-search-query",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ". See “",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/docs.github.com\/articles\/searching-for-repositories\/",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : "” for a detailed list of qualifiers.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "q"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Operations\/search_sol_repos\/Input\/Query-swift.struct\/q",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "q",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/operations\/search_sol_repos\/input\/query-swift.struct\/q"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Operations/search_sol_repos/Input/Query-swift.struct/sort": {
+  "abstract" : [
+    {
+      "text" : "Sorts the results of your query by number of ",
+      "type" : "text"
+    },
+    {
+      "code" : "stars",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ", ",
+      "type" : "text"
+    },
+    {
+      "code" : "forks",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ", or ",
+      "type" : "text"
+    },
+    {
+      "code" : "help-wanted-issues",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " or how recently the items were ",
+      "type" : "text"
+    },
+    {
+      "code" : "updated",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ". Default: ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/docs.github.com\/rest\/search\/search#ranking-search-results",
+      "isActive" : true,
+      "type" : "reference"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "sort"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO16search_sol_reposO",
+      "text" : "search_sol_repos"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO16search_sol_reposO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO16search_sol_reposO5InputV5QueryV",
+      "text" : "Query"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO16search_sol_reposO5InputV5QueryV11sortPayloadO",
+      "text" : "sortPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Operations\/search_sol_repos\/Input\/Query-swift.struct\/sort",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "sort",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/operations\/search_sol_repos\/input\/query-swift.struct\/sort"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Operations/search_sol_repos/Input/Query-swift.struct/sortPayload": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "sortPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Operations\/search_sol_repos\/Input\/Query-swift.struct\/sortPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "sortPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.search_sol_repos.Input.Query.sortPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/operations\/search_sol_repos\/input\/query-swift.struct\/sortpayload"
+},
+"doc://GitHubRestAPISearch/s8SendableP": {
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/s8SendableP",
+  "title" : "Swift.Sendable",
+  "type" : "unresolvable"
+},
+"https://docs.github.com/articles/searching-for-repositories/": {
+  "identifier" : "https:\/\/docs.github.com\/articles\/searching-for-repositories\/",
+  "title" : "Searching for repositories",
+  "titleInlineContent" : [
+    {
+      "text" : "Searching for repositories",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/docs.github.com\/articles\/searching-for-repositories\/"
+},
+"https://docs.github.com/rest/search/search#constructing-a-search-query": {
+  "identifier" : "https:\/\/docs.github.com\/rest\/search\/search#constructing-a-search-query",
+  "title" : "Constructing a search query",
+  "titleInlineContent" : [
+    {
+      "text" : "Constructing a search query",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/docs.github.com\/rest\/search\/search#constructing-a-search-query"
+},
+"https://docs.github.com/rest/search/search#ranking-search-results": {
+  "identifier" : "https:\/\/docs.github.com\/rest\/search\/search#ranking-search-results",
+  "title" : "best match",
+  "titleInlineContent" : [
+    {
+      "text" : "best match",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/docs.github.com\/rest\/search\/search#ranking-search-results"
+},
+"https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api": {
+  "identifier" : "https:\/\/docs.github.com\/rest\/using-the-rest-api\/using-pagination-in-the-rest-api",
+  "title" : "Using pagination in the REST API",
+  "titleInlineContent" : [
+    {
+      "text" : "Using pagination in the REST API",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/docs.github.com\/rest\/using-the-rest-api\/using-pagination-in-the-rest-api"
+}
+}
+}

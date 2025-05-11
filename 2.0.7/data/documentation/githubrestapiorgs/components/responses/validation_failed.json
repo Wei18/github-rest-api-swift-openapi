@@ -1,0 +1,458 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Responses"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Responses\/validation_failed"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:17GitHubRestAPIOrgs10ComponentsO9ResponsesO17validation_failedV",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "struct"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "validation_failed"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIOrgs"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "validation_failed"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/orgs\/Types.swift#L8541"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Structure",
+    "symbolKind" : "struct",
+    "title" : "Components.Responses.validation_failed"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "struct"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "validation_failed"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIOrgs\/SQ",
+        "doc:\/\/GitHubRestAPIOrgs\/SH",
+        "doc:\/\/GitHubRestAPIOrgs\/s8SendableP"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Responses\/validation_failed\/init(body:)"
+      ],
+      "title" : "Initializers"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Responses\/validation_failed\/body-swift.property"
+      ],
+      "title" : "Instance Properties"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Responses\/validation_failed\/Body-swift.enum"
+      ],
+      "title" : "Enumerations"
+    },
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Responses\/validation_failed\/Equatable-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapiorgs\/components\/responses\/validation_failed"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIOrgs/SH": {
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/SH",
+  "title" : "Swift.Hashable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIOrgs/SQ": {
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/SQ",
+  "title" : "Swift.Equatable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIOrgs",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Responses": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/responses",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Responses"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Responses",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Responses"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Responses",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/responses"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Responses/validation_failed": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "validation_failed"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Responses\/validation_failed",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "validation_failed"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Responses.validation_failed",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/responses\/validation_failed"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Responses/validation_failed/Body-swift.enum": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Body"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Responses\/validation_failed\/Body-swift.enum",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Body"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Responses.validation_failed.Body",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/responses\/validation_failed\/body-swift.enum"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Responses/validation_failed/Equatable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Responses\/validation_failed\/Equatable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Equatable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/responses\/validation_failed\/equatable-implementations"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Responses/validation_failed/body-swift.property": {
+  "abstract" : [
+    {
+      "text" : "Received HTTP response body",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "body"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO9ResponsesO",
+      "text" : "Responses"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO9ResponsesO17validation_failedV",
+      "text" : "validation_failed"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO9ResponsesO17validation_failedV4BodyO",
+      "text" : "Body"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Responses\/validation_failed\/body-swift.property",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "body",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/responses\/validation_failed\/body-swift.property"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Responses/validation_failed/init(body:)": {
+  "abstract" : [
+    {
+      "text" : "Creates a new ",
+      "type" : "text"
+    },
+    {
+      "code" : "validation_failed",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "body"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO9ResponsesO",
+      "text" : "Responses"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO9ResponsesO17validation_failedV",
+      "text" : "validation_failed"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO9ResponsesO17validation_failedV4BodyO",
+      "text" : "Body"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Responses\/validation_failed\/init(body:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(body:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/responses\/validation_failed\/init(body:)"
+},
+"doc://GitHubRestAPIOrgs/s8SendableP": {
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/s8SendableP",
+  "title" : "Swift.Sendable",
+  "type" : "unresolvable"
+}
+}
+}

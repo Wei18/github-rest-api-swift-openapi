@@ -1,0 +1,745 @@
+{
+  "abstract" : [
+    {
+      "text" : "Get GitHub meta information",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta",
+        "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta\/APIProtocol"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta\/APIProtocol\/meta_sol_get(headers:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "extendedModule" : "GitHubRestAPIMeta",
+    "externalID" : "s:17GitHubRestAPIMeta11APIProtocolPAAE12meta_sol_get7headersAA10OperationsOADO6OutputOAH5InputV7HeadersV_tYaKF",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "func"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "meta_sol_get"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "headers"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:17GitHubRestAPIMeta10OperationsO",
+        "text" : "Operations"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:17GitHubRestAPIMeta10OperationsO12meta_sol_getO",
+        "text" : "meta_sol_get"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:17GitHubRestAPIMeta10OperationsO12meta_sol_getO5InputV",
+        "text" : "Input"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:17GitHubRestAPIMeta10OperationsO12meta_sol_getO5InputV7HeadersV",
+        "text" : "Headers"
+      },
+      {
+        "kind" : "text",
+        "text" : ") "
+      },
+      {
+        "kind" : "keyword",
+        "text" : "async"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "keyword",
+        "text" : "throws"
+      },
+      {
+        "kind" : "text",
+        "text" : " -> "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:17GitHubRestAPIMeta10OperationsO",
+        "text" : "Operations"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:17GitHubRestAPIMeta10OperationsO12meta_sol_getO",
+        "text" : "meta_sol_get"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:17GitHubRestAPIMeta10OperationsO12meta_sol_getO6OutputO",
+        "text" : "Output"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIMeta"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/meta\/Types.swift#L82"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Instance Method",
+    "symbolKind" : "method",
+    "title" : "meta_sol_get(headers:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "func"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "meta_sol_get"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "headers"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta\/Operations",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:17GitHubRestAPIMeta10OperationsO",
+              "text" : "Operations"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta\/Operations\/meta_sol_get",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:17GitHubRestAPIMeta10OperationsO12meta_sol_getO",
+              "text" : "meta_sol_get"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta\/Operations\/meta_sol_get\/Input",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:17GitHubRestAPIMeta10OperationsO12meta_sol_getO5InputV",
+              "text" : "Input"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta\/Operations\/meta_sol_get\/Input\/Headers-swift.struct",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:17GitHubRestAPIMeta10OperationsO12meta_sol_getO5InputV7HeadersV",
+              "text" : "Headers"
+            },
+            {
+              "kind" : "text",
+              "text" : " = .init()) "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "async"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "throws"
+            },
+            {
+              "kind" : "text",
+              "text" : " -> "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta\/Operations",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:17GitHubRestAPIMeta10OperationsO",
+              "text" : "Operations"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta\/Operations\/meta_sol_get",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:17GitHubRestAPIMeta10OperationsO12meta_sol_getO",
+              "text" : "meta_sol_get"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta\/Operations\/meta_sol_get\/Output",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:17GitHubRestAPIMeta10OperationsO12meta_sol_getO6OutputO",
+              "text" : "Output"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Returns meta information about GitHub, including a list of GitHub’s IP addresses. For more information, see “",
+              "type" : "text"
+            },
+            {
+              "identifier" : "https:\/\/docs.github.com\/articles\/about-github-s-ip-addresses\/",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : ".”",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "The API’s response also includes a list of GitHub’s domain names.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "The values shown in the documentation’s response are example values. You must always query the API directly to get the latest values.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "[!NOTE]",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "This endpoint returns both IPv4 and IPv6 addresses. However, not all features support IPv6. You should refer to the specific documentation for each feature to determine if IPv6 is supported.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Note",
+          "style" : "note",
+          "type" : "aside"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "HTTP ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "GET \/meta",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/paths\/\/meta\/get(meta\/get)",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapimeta\/apiprotocol\/meta_sol_get(headers:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIMeta/documentation/GitHubRestAPIMeta": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIMeta",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimeta"
+},
+"doc://GitHubRestAPIMeta/documentation/GitHubRestAPIMeta/APIProtocol": {
+  "abstract" : [
+    {
+      "text" : "A type that performs HTTP operations defined by the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "protocol"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "APIProtocol"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta\/APIProtocol",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "APIProtocol"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "APIProtocol",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimeta\/apiprotocol"
+},
+"doc://GitHubRestAPIMeta/documentation/GitHubRestAPIMeta/APIProtocol/meta_sol_get(headers:)": {
+  "abstract" : [
+    {
+      "text" : "Get GitHub meta information",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "meta_sol_get"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIMeta10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIMeta10OperationsO12meta_sol_getO",
+      "text" : "meta_sol_get"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIMeta10OperationsO12meta_sol_getO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIMeta10OperationsO12meta_sol_getO5InputV7HeadersV",
+      "text" : "Headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIMeta10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIMeta10OperationsO12meta_sol_getO",
+      "text" : "meta_sol_get"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIMeta10OperationsO12meta_sol_getO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta\/APIProtocol\/meta_sol_get(headers:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "meta_sol_get(headers:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimeta\/apiprotocol\/meta_sol_get(headers:)"
+},
+"doc://GitHubRestAPIMeta/documentation/GitHubRestAPIMeta/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimeta\/operations"
+},
+"doc://GitHubRestAPIMeta/documentation/GitHubRestAPIMeta/Operations/meta_sol_get": {
+  "abstract" : [
+    {
+      "text" : "Get GitHub meta information",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "meta_sol_get"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta\/Operations\/meta_sol_get",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "meta_sol_get"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.meta_sol_get",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimeta\/operations\/meta_sol_get"
+},
+"doc://GitHubRestAPIMeta/documentation/GitHubRestAPIMeta/Operations/meta_sol_get/Input": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta\/Operations\/meta_sol_get\/Input",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.meta_sol_get.Input",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimeta\/operations\/meta_sol_get\/input"
+},
+"doc://GitHubRestAPIMeta/documentation/GitHubRestAPIMeta/Operations/meta_sol_get/Input/Headers-swift.struct": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Headers"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta\/Operations\/meta_sol_get\/Input\/Headers-swift.struct",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Headers"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.meta_sol_get.Input.Headers",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimeta\/operations\/meta_sol_get\/input\/headers-swift.struct"
+},
+"doc://GitHubRestAPIMeta/documentation/GitHubRestAPIMeta/Operations/meta_sol_get/Output": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta\/Operations\/meta_sol_get\/Output",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.meta_sol_get.Output",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimeta\/operations\/meta_sol_get\/output"
+},
+"https://docs.github.com/articles/about-github-s-ip-addresses/": {
+  "identifier" : "https:\/\/docs.github.com\/articles\/about-github-s-ip-addresses\/",
+  "title" : "About GitHub’s IP addresses",
+  "titleInlineContent" : [
+    {
+      "text" : "About GitHub’s IP addresses",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/docs.github.com\/articles\/about-github-s-ip-addresses\/"
+}
+}
+}

@@ -1,0 +1,360 @@
+{
+  "abstract" : [
+    {
+      "text" : "Allow repositories and branches to be created if a check would otherwise prohibit it.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos",
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components",
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Schemas",
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Schemas\/repository_hyphen_rule_hyphen_workflows",
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Schemas\/repository_hyphen_rule_hyphen_workflows\/parametersPayload"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Schemas\/repository_hyphen_rule_hyphen_workflows\/parametersPayload\/do_not_enforce_on_create"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:18GitHubRestAPIRepos10ComponentsO7SchemasO023repository_hyphen_rule_H10_workflowsV17parametersPayloadV24do_not_enforce_on_createSbSgvp",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "var"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "do_not_enforce_on_create"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:Sb",
+        "text" : "Bool"
+      },
+      {
+        "kind" : "text",
+        "text" : "?"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIRepos"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/repos\/Types.swift#L12837"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Instance Property",
+    "symbolKind" : "property",
+    "title" : "do_not_enforce_on_create"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "var"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "do_not_enforce_on_create"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:Sb",
+              "text" : "Bool"
+            },
+            {
+              "kind" : "text",
+              "text" : "?"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/components\/schemas\/repository-rule-workflows\/parameters\/do_not_enforce_on_create",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapirepos\/components\/schemas\/repository_hyphen_rule_hyphen_workflows\/parameterspayload\/do_not_enforce_on_create"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIRepos",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/components"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Components/Schemas": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/schemas",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Schemas",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/components\/schemas"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Components/Schemas/repository_hyphen_rule_hyphen_workflows": {
+  "abstract" : [
+    {
+      "text" : "Require all changes made to a targeted branch to pass the specified workflows before they can be merged.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "repository_hyphen_rule_hyphen_workflows"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Schemas\/repository_hyphen_rule_hyphen_workflows",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "repository_hyphen_rule_hyphen_workflows"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.repository_hyphen_rule_hyphen_workflows",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/components\/schemas\/repository_hyphen_rule_hyphen_workflows"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Components/Schemas/repository_hyphen_rule_hyphen_workflows/parametersPayload": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "parametersPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Schemas\/repository_hyphen_rule_hyphen_workflows\/parametersPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "parametersPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.repository_hyphen_rule_hyphen_workflows.parametersPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/components\/schemas\/repository_hyphen_rule_hyphen_workflows\/parameterspayload"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Components/Schemas/repository_hyphen_rule_hyphen_workflows/parametersPayload/do_not_enforce_on_create": {
+  "abstract" : [
+    {
+      "text" : "Allow repositories and branches to be created if a check would otherwise prohibit it.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "do_not_enforce_on_create"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Schemas\/repository_hyphen_rule_hyphen_workflows\/parametersPayload\/do_not_enforce_on_create",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "do_not_enforce_on_create",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/components\/schemas\/repository_hyphen_rule_hyphen_workflows\/parameterspayload\/do_not_enforce_on_create"
+}
+}
+}

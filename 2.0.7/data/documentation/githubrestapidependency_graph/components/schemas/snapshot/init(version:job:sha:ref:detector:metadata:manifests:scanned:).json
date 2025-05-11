@@ -1,0 +1,1228 @@
+{
+  "abstract" : [
+    {
+      "text" : "Creates a new ",
+      "type" : "text"
+    },
+    {
+      "code" : "snapshot",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph",
+        "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph\/Components",
+        "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph\/Components\/Schemas",
+        "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph\/Components\/Schemas\/snapshot"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph\/Components\/Schemas\/snapshot\/init(version:job:sha:ref:detector:metadata:manifests:scanned:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:29GitHubRestAPIDependency_Graph10ComponentsO7SchemasO8snapshotV7version3job3sha3ref8detector8metadata9manifests7scannedAGSi_AG0J7PayloadVS2SAG0mQ0VAeMVSgAG0oQ0VSg10Foundation4DateVtcfc",
+    "fragments" : [
+      {
+        "kind" : "identifier",
+        "text" : "init"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "version"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:Si",
+        "text" : "Int"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "job"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10ComponentsO7SchemasO",
+        "text" : "Schemas"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10ComponentsO7SchemasO8snapshotV",
+        "text" : "snapshot"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10ComponentsO7SchemasO8snapshotV10jobPayloadV",
+        "text" : "jobPayload"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "sha"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SS",
+        "text" : "String"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "ref"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SS",
+        "text" : "String"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "detector"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10ComponentsO7SchemasO",
+        "text" : "Schemas"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10ComponentsO7SchemasO8snapshotV",
+        "text" : "snapshot"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10ComponentsO7SchemasO8snapshotV15detectorPayloadV",
+        "text" : "detectorPayload"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "metadata"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10ComponentsO7SchemasO",
+        "text" : "Schemas"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10ComponentsO7SchemasO8metadataV",
+        "text" : "metadata"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "manifests"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10ComponentsO7SchemasO",
+        "text" : "Schemas"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10ComponentsO7SchemasO8snapshotV",
+        "text" : "snapshot"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10ComponentsO7SchemasO8snapshotV16manifestsPayloadV",
+        "text" : "manifestsPayload"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "scanned"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:10Foundation4DateV",
+        "text" : "Date"
+      },
+      {
+        "kind" : "text",
+        "text" : ")"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIDependency_Graph"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/dependency-graph\/Types.swift#L1033"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Initializer",
+    "symbolKind" : "init",
+    "title" : "init(version:job:sha:ref:detector:metadata:manifests:scanned:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "init"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "version"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:Si",
+              "text" : "Int"
+            },
+            {
+              "kind" : "text",
+              "text" : ", "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "job"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph\/Components\/Schemas",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10ComponentsO7SchemasO",
+              "text" : "Schemas"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph\/Components\/Schemas\/snapshot",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10ComponentsO7SchemasO8snapshotV",
+              "text" : "snapshot"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph\/Components\/Schemas\/snapshot\/jobPayload",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10ComponentsO7SchemasO8snapshotV10jobPayloadV",
+              "text" : "jobPayload"
+            },
+            {
+              "kind" : "text",
+              "text" : ", "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "sha"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:SS",
+              "text" : "String"
+            },
+            {
+              "kind" : "text",
+              "text" : ", "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "ref"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:SS",
+              "text" : "String"
+            },
+            {
+              "kind" : "text",
+              "text" : ", "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "detector"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph\/Components\/Schemas",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10ComponentsO7SchemasO",
+              "text" : "Schemas"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph\/Components\/Schemas\/snapshot",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10ComponentsO7SchemasO8snapshotV",
+              "text" : "snapshot"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph\/Components\/Schemas\/snapshot\/detectorPayload",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10ComponentsO7SchemasO8snapshotV15detectorPayloadV",
+              "text" : "detectorPayload"
+            },
+            {
+              "kind" : "text",
+              "text" : ", "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "metadata"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph\/Components\/Schemas",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10ComponentsO7SchemasO",
+              "text" : "Schemas"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph\/Components\/Schemas\/metadata",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10ComponentsO7SchemasO8metadataV",
+              "text" : "metadata"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "manifests"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph\/Components\/Schemas",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10ComponentsO7SchemasO",
+              "text" : "Schemas"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph\/Components\/Schemas\/snapshot",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10ComponentsO7SchemasO8snapshotV",
+              "text" : "snapshot"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph\/Components\/Schemas\/snapshot\/manifestsPayload",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10ComponentsO7SchemasO8snapshotV16manifestsPayloadV",
+              "text" : "manifestsPayload"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "scanned"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:10Foundation4DateV",
+              "text" : "Date"
+            },
+            {
+              "kind" : "text",
+              "text" : ")"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "kind" : "parameters",
+      "parameters" : [
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The version of the repository snapshot submission.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "version"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "job"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The commit SHA associated with this dependency snapshot. Maximum length: 40 characters.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "sha"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The repository branch that triggered this snapshot.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "ref"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "A description of the detector used.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "detector"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "metadata"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "A collection of package manifests, which are a collection of related dependencies declared in a file or representing a logical group of dependencies.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "manifests"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The time at which the snapshot was scanned.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "scanned"
+        }
+      ]
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapidependency_graph\/components\/schemas\/snapshot\/init(version:job:sha:ref:detector:metadata:manifests:scanned:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIDependency_Graph/documentation/GitHubRestAPIDependency_Graph": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIDependency_Graph",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependency_graph"
+},
+"doc://GitHubRestAPIDependency_Graph/documentation/GitHubRestAPIDependency_Graph/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependency_graph\/components"
+},
+"doc://GitHubRestAPIDependency_Graph/documentation/GitHubRestAPIDependency_Graph/Components/Schemas": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/schemas",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph\/Components\/Schemas",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependency_graph\/components\/schemas"
+},
+"doc://GitHubRestAPIDependency_Graph/documentation/GitHubRestAPIDependency_Graph/Components/Schemas/metadata": {
+  "abstract" : [
+    {
+      "text" : "User-defined metadata to store domain-specific information limited to 8 keys with scalar values.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "metadata"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph\/Components\/Schemas\/metadata",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "metadata"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.metadata",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependency_graph\/components\/schemas\/metadata"
+},
+"doc://GitHubRestAPIDependency_Graph/documentation/GitHubRestAPIDependency_Graph/Components/Schemas/snapshot": {
+  "abstract" : [
+    {
+      "text" : "Create a new snapshot of a repository’s dependencies.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "snapshot"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph\/Components\/Schemas\/snapshot",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "snapshot"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.snapshot",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependency_graph\/components\/schemas\/snapshot"
+},
+"doc://GitHubRestAPIDependency_Graph/documentation/GitHubRestAPIDependency_Graph/Components/Schemas/snapshot/detectorPayload": {
+  "abstract" : [
+    {
+      "text" : "A description of the detector used.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "detectorPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph\/Components\/Schemas\/snapshot\/detectorPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "detectorPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.snapshot.detectorPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependency_graph\/components\/schemas\/snapshot\/detectorpayload"
+},
+"doc://GitHubRestAPIDependency_Graph/documentation/GitHubRestAPIDependency_Graph/Components/Schemas/snapshot/init(version:job:sha:ref:detector:metadata:manifests:scanned:)": {
+  "abstract" : [
+    {
+      "text" : "Creates a new ",
+      "type" : "text"
+    },
+    {
+      "code" : "snapshot",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "version"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "job"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10ComponentsO7SchemasO8snapshotV",
+      "text" : "snapshot"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10ComponentsO7SchemasO8snapshotV10jobPayloadV",
+      "text" : "jobPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "sha"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "ref"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "detector"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10ComponentsO7SchemasO8snapshotV",
+      "text" : "snapshot"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10ComponentsO7SchemasO8snapshotV15detectorPayloadV",
+      "text" : "detectorPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "metadata"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10ComponentsO7SchemasO8metadataV",
+      "text" : "metadata"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "manifests"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10ComponentsO7SchemasO8snapshotV",
+      "text" : "snapshot"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10ComponentsO7SchemasO8snapshotV16manifestsPayloadV",
+      "text" : "manifestsPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "scanned"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:10Foundation4DateV",
+      "text" : "Date"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph\/Components\/Schemas\/snapshot\/init(version:job:sha:ref:detector:metadata:manifests:scanned:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(version:job:sha:ref:detector:metadata:manifests:scanned:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependency_graph\/components\/schemas\/snapshot\/init(version:job:sha:ref:detector:metadata:manifests:scanned:)"
+},
+"doc://GitHubRestAPIDependency_Graph/documentation/GitHubRestAPIDependency_Graph/Components/Schemas/snapshot/jobPayload": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "jobPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph\/Components\/Schemas\/snapshot\/jobPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "jobPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.snapshot.jobPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependency_graph\/components\/schemas\/snapshot\/jobpayload"
+},
+"doc://GitHubRestAPIDependency_Graph/documentation/GitHubRestAPIDependency_Graph/Components/Schemas/snapshot/manifestsPayload": {
+  "abstract" : [
+    {
+      "text" : "A collection of package manifests, which are a collection of related dependencies declared in a file or representing a logical group of dependencies.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "manifestsPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph\/Components\/Schemas\/snapshot\/manifestsPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "manifestsPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.snapshot.manifestsPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependency_graph\/components\/schemas\/snapshot\/manifestspayload"
+}
+}
+}

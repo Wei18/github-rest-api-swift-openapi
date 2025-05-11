@@ -1,0 +1,1514 @@
+{
+  "abstract" : [
+    {
+      "text" : "Timeline Committed Event",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues",
+        "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Components",
+        "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Components\/Schemas"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Components\/Schemas\/timeline_hyphen_committed_hyphen_event"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:19GitHubRestAPIIssues10ComponentsO7SchemasO026timeline_hyphen_committed_H6_eventV",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "struct"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "timeline_hyphen_committed_hyphen_event"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIIssues"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "timeline_hyphen_committed_hyphen_event"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/issues\/Types.swift#L7038"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Structure",
+    "symbolKind" : "struct",
+    "title" : "Components.Schemas.timeline_hyphen_committed_hyphen_event"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "struct"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "timeline_hyphen_committed_hyphen_event"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/components\/schemas\/timeline-committed-event",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIIssues\/Se",
+        "doc:\/\/GitHubRestAPIIssues\/SE",
+        "doc:\/\/GitHubRestAPIIssues\/SQ",
+        "doc:\/\/GitHubRestAPIIssues\/SH",
+        "doc:\/\/GitHubRestAPIIssues\/s8SendableP"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Components\/Schemas\/timeline_hyphen_committed_hyphen_event\/authorPayload",
+        "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Components\/Schemas\/timeline_hyphen_committed_hyphen_event\/committerPayload",
+        "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Components\/Schemas\/timeline_hyphen_committed_hyphen_event\/parentsPayloadPayload",
+        "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Components\/Schemas\/timeline_hyphen_committed_hyphen_event\/treePayload",
+        "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Components\/Schemas\/timeline_hyphen_committed_hyphen_event\/verificationPayload"
+      ],
+      "title" : "Structures"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Components\/Schemas\/timeline_hyphen_committed_hyphen_event\/init(event:sha:node_id:url:author:committer:message:tree:parents:verification:html_url:)",
+        "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Components\/Schemas\/timeline_hyphen_committed_hyphen_event\/init(from:)"
+      ],
+      "title" : "Initializers"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Components\/Schemas\/timeline_hyphen_committed_hyphen_event\/author",
+        "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Components\/Schemas\/timeline_hyphen_committed_hyphen_event\/committer",
+        "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Components\/Schemas\/timeline_hyphen_committed_hyphen_event\/event",
+        "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Components\/Schemas\/timeline_hyphen_committed_hyphen_event\/html_url",
+        "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Components\/Schemas\/timeline_hyphen_committed_hyphen_event\/message",
+        "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Components\/Schemas\/timeline_hyphen_committed_hyphen_event\/node_id",
+        "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Components\/Schemas\/timeline_hyphen_committed_hyphen_event\/parents",
+        "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Components\/Schemas\/timeline_hyphen_committed_hyphen_event\/sha",
+        "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Components\/Schemas\/timeline_hyphen_committed_hyphen_event\/tree",
+        "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Components\/Schemas\/timeline_hyphen_committed_hyphen_event\/url",
+        "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Components\/Schemas\/timeline_hyphen_committed_hyphen_event\/verification"
+      ],
+      "title" : "Instance Properties"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Components\/Schemas\/timeline_hyphen_committed_hyphen_event\/parentsPayload"
+      ],
+      "title" : "Type Aliases"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Components\/Schemas\/timeline_hyphen_committed_hyphen_event\/CodingKeys"
+      ],
+      "title" : "Enumerations"
+    },
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Components\/Schemas\/timeline_hyphen_committed_hyphen_event\/Equatable-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapiissues\/components\/schemas\/timeline_hyphen_committed_hyphen_event"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIIssues/SE": {
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/SE",
+  "title" : "Swift.Encodable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIIssues/SH": {
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/SH",
+  "title" : "Swift.Hashable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIIssues/SQ": {
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/SQ",
+  "title" : "Swift.Equatable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIIssues/Se": {
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/Se",
+  "title" : "Swift.Decodable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIIssues/documentation/GitHubRestAPIIssues": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIIssues",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiissues"
+},
+"doc://GitHubRestAPIIssues/documentation/GitHubRestAPIIssues/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiissues\/components"
+},
+"doc://GitHubRestAPIIssues/documentation/GitHubRestAPIIssues/Components/Schemas": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/schemas",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Components\/Schemas",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiissues\/components\/schemas"
+},
+"doc://GitHubRestAPIIssues/documentation/GitHubRestAPIIssues/Components/Schemas/timeline_hyphen_committed_hyphen_event": {
+  "abstract" : [
+    {
+      "text" : "Timeline Committed Event",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "timeline_hyphen_committed_hyphen_event"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Components\/Schemas\/timeline_hyphen_committed_hyphen_event",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "timeline_hyphen_committed_hyphen_event"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.timeline_hyphen_committed_hyphen_event",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiissues\/components\/schemas\/timeline_hyphen_committed_hyphen_event"
+},
+"doc://GitHubRestAPIIssues/documentation/GitHubRestAPIIssues/Components/Schemas/timeline_hyphen_committed_hyphen_event/CodingKeys": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Components\/Schemas\/timeline_hyphen_committed_hyphen_event\/CodingKeys",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.timeline_hyphen_committed_hyphen_event.CodingKeys",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiissues\/components\/schemas\/timeline_hyphen_committed_hyphen_event\/codingkeys"
+},
+"doc://GitHubRestAPIIssues/documentation/GitHubRestAPIIssues/Components/Schemas/timeline_hyphen_committed_hyphen_event/Equatable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Components\/Schemas\/timeline_hyphen_committed_hyphen_event\/Equatable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Equatable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiissues\/components\/schemas\/timeline_hyphen_committed_hyphen_event\/equatable-implementations"
+},
+"doc://GitHubRestAPIIssues/documentation/GitHubRestAPIIssues/Components/Schemas/timeline_hyphen_committed_hyphen_event/author": {
+  "abstract" : [
+    {
+      "text" : "Identifying information for the git-user",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "author"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIIssues10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIIssues10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIIssues10ComponentsO7SchemasO026timeline_hyphen_committed_H6_eventV",
+      "text" : "timeline_hyphen_committed_hyphen_event"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIIssues10ComponentsO7SchemasO026timeline_hyphen_committed_H6_eventV13authorPayloadV",
+      "text" : "authorPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Components\/Schemas\/timeline_hyphen_committed_hyphen_event\/author",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "author",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiissues\/components\/schemas\/timeline_hyphen_committed_hyphen_event\/author"
+},
+"doc://GitHubRestAPIIssues/documentation/GitHubRestAPIIssues/Components/Schemas/timeline_hyphen_committed_hyphen_event/authorPayload": {
+  "abstract" : [
+    {
+      "text" : "Identifying information for the git-user",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "authorPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Components\/Schemas\/timeline_hyphen_committed_hyphen_event\/authorPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "authorPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.timeline_hyphen_committed_hyphen_event.authorPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiissues\/components\/schemas\/timeline_hyphen_committed_hyphen_event\/authorpayload"
+},
+"doc://GitHubRestAPIIssues/documentation/GitHubRestAPIIssues/Components/Schemas/timeline_hyphen_committed_hyphen_event/committer": {
+  "abstract" : [
+    {
+      "text" : "Identifying information for the git-user",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "committer"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIIssues10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIIssues10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIIssues10ComponentsO7SchemasO026timeline_hyphen_committed_H6_eventV",
+      "text" : "timeline_hyphen_committed_hyphen_event"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIIssues10ComponentsO7SchemasO026timeline_hyphen_committed_H6_eventV16committerPayloadV",
+      "text" : "committerPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Components\/Schemas\/timeline_hyphen_committed_hyphen_event\/committer",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "committer",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiissues\/components\/schemas\/timeline_hyphen_committed_hyphen_event\/committer"
+},
+"doc://GitHubRestAPIIssues/documentation/GitHubRestAPIIssues/Components/Schemas/timeline_hyphen_committed_hyphen_event/committerPayload": {
+  "abstract" : [
+    {
+      "text" : "Identifying information for the git-user",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "committerPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Components\/Schemas\/timeline_hyphen_committed_hyphen_event\/committerPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "committerPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.timeline_hyphen_committed_hyphen_event.committerPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiissues\/components\/schemas\/timeline_hyphen_committed_hyphen_event\/committerpayload"
+},
+"doc://GitHubRestAPIIssues/documentation/GitHubRestAPIIssues/Components/Schemas/timeline_hyphen_committed_hyphen_event/event": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "event"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Components\/Schemas\/timeline_hyphen_committed_hyphen_event\/event",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "event",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiissues\/components\/schemas\/timeline_hyphen_committed_hyphen_event\/event"
+},
+"doc://GitHubRestAPIIssues/documentation/GitHubRestAPIIssues/Components/Schemas/timeline_hyphen_committed_hyphen_event/html_url": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "html_url"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Components\/Schemas\/timeline_hyphen_committed_hyphen_event\/html_url",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "html_url",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiissues\/components\/schemas\/timeline_hyphen_committed_hyphen_event\/html_url"
+},
+"doc://GitHubRestAPIIssues/documentation/GitHubRestAPIIssues/Components/Schemas/timeline_hyphen_committed_hyphen_event/init(event:sha:node_id:url:author:committer:message:tree:parents:verification:html_url:)": {
+  "abstract" : [
+    {
+      "text" : "Creates a new ",
+      "type" : "text"
+    },
+    {
+      "code" : "timeline_hyphen_committed_hyphen_event",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "event"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "sha"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "node_id"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "url"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "author"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIIssues10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIIssues10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIIssues10ComponentsO7SchemasO026timeline_hyphen_committed_H6_eventV",
+      "text" : "timeline_hyphen_committed_hyphen_event"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIIssues10ComponentsO7SchemasO026timeline_hyphen_committed_H6_eventV13authorPayloadV",
+      "text" : "authorPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "committer"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIIssues10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIIssues10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIIssues10ComponentsO7SchemasO026timeline_hyphen_committed_H6_eventV",
+      "text" : "timeline_hyphen_committed_hyphen_event"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIIssues10ComponentsO7SchemasO026timeline_hyphen_committed_H6_eventV16committerPayloadV",
+      "text" : "committerPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "message"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "tree"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIIssues10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIIssues10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIIssues10ComponentsO7SchemasO026timeline_hyphen_committed_H6_eventV",
+      "text" : "timeline_hyphen_committed_hyphen_event"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIIssues10ComponentsO7SchemasO026timeline_hyphen_committed_H6_eventV11treePayloadV",
+      "text" : "treePayload"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "parents"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIIssues10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIIssues10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIIssues10ComponentsO7SchemasO026timeline_hyphen_committed_H6_eventV",
+      "text" : "timeline_hyphen_committed_hyphen_event"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIIssues10ComponentsO7SchemasO026timeline_hyphen_committed_H6_eventV14parentsPayloada",
+      "text" : "parentsPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "verification"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIIssues10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIIssues10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIIssues10ComponentsO7SchemasO026timeline_hyphen_committed_H6_eventV",
+      "text" : "timeline_hyphen_committed_hyphen_event"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIIssues10ComponentsO7SchemasO026timeline_hyphen_committed_H6_eventV19verificationPayloadV",
+      "text" : "verificationPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "html_url"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Components\/Schemas\/timeline_hyphen_committed_hyphen_event\/init(event:sha:node_id:url:author:committer:message:tree:parents:verification:html_url:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(event:sha:node_id:url:author:committer:message:tree:parents:verification:html_url:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiissues\/components\/schemas\/timeline_hyphen_committed_hyphen_event\/init(event:sha:node_id:url:author:committer:message:tree:parents:verification:html_url:)"
+},
+"doc://GitHubRestAPIIssues/documentation/GitHubRestAPIIssues/Components/Schemas/timeline_hyphen_committed_hyphen_event/init(from:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "from"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:s7DecoderP",
+      "text" : "Decoder"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Components\/Schemas\/timeline_hyphen_committed_hyphen_event\/init(from:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(from:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiissues\/components\/schemas\/timeline_hyphen_committed_hyphen_event\/init(from:)"
+},
+"doc://GitHubRestAPIIssues/documentation/GitHubRestAPIIssues/Components/Schemas/timeline_hyphen_committed_hyphen_event/message": {
+  "abstract" : [
+    {
+      "text" : "Message describing the purpose of the commit",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "message"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Components\/Schemas\/timeline_hyphen_committed_hyphen_event\/message",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "message",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiissues\/components\/schemas\/timeline_hyphen_committed_hyphen_event\/message"
+},
+"doc://GitHubRestAPIIssues/documentation/GitHubRestAPIIssues/Components/Schemas/timeline_hyphen_committed_hyphen_event/node_id": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "node_id"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Components\/Schemas\/timeline_hyphen_committed_hyphen_event\/node_id",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "node_id",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiissues\/components\/schemas\/timeline_hyphen_committed_hyphen_event\/node_id"
+},
+"doc://GitHubRestAPIIssues/documentation/GitHubRestAPIIssues/Components/Schemas/timeline_hyphen_committed_hyphen_event/parents": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "parents"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIIssues10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIIssues10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIIssues10ComponentsO7SchemasO026timeline_hyphen_committed_H6_eventV",
+      "text" : "timeline_hyphen_committed_hyphen_event"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIIssues10ComponentsO7SchemasO026timeline_hyphen_committed_H6_eventV14parentsPayloada",
+      "text" : "parentsPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Components\/Schemas\/timeline_hyphen_committed_hyphen_event\/parents",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "parents",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiissues\/components\/schemas\/timeline_hyphen_committed_hyphen_event\/parents"
+},
+"doc://GitHubRestAPIIssues/documentation/GitHubRestAPIIssues/Components/Schemas/timeline_hyphen_committed_hyphen_event/parentsPayload": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "parentsPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Components\/Schemas\/timeline_hyphen_committed_hyphen_event\/parentsPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "parentsPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.timeline_hyphen_committed_hyphen_event.parentsPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiissues\/components\/schemas\/timeline_hyphen_committed_hyphen_event\/parentspayload"
+},
+"doc://GitHubRestAPIIssues/documentation/GitHubRestAPIIssues/Components/Schemas/timeline_hyphen_committed_hyphen_event/parentsPayloadPayload": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "parentsPayloadPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Components\/Schemas\/timeline_hyphen_committed_hyphen_event\/parentsPayloadPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "parentsPayloadPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.timeline_hyphen_committed_hyphen_event.parentsPayloadPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiissues\/components\/schemas\/timeline_hyphen_committed_hyphen_event\/parentspayloadpayload"
+},
+"doc://GitHubRestAPIIssues/documentation/GitHubRestAPIIssues/Components/Schemas/timeline_hyphen_committed_hyphen_event/sha": {
+  "abstract" : [
+    {
+      "text" : "SHA for the commit",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "sha"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Components\/Schemas\/timeline_hyphen_committed_hyphen_event\/sha",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "sha",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiissues\/components\/schemas\/timeline_hyphen_committed_hyphen_event\/sha"
+},
+"doc://GitHubRestAPIIssues/documentation/GitHubRestAPIIssues/Components/Schemas/timeline_hyphen_committed_hyphen_event/tree": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "tree"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIIssues10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIIssues10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIIssues10ComponentsO7SchemasO026timeline_hyphen_committed_H6_eventV",
+      "text" : "timeline_hyphen_committed_hyphen_event"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIIssues10ComponentsO7SchemasO026timeline_hyphen_committed_H6_eventV11treePayloadV",
+      "text" : "treePayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Components\/Schemas\/timeline_hyphen_committed_hyphen_event\/tree",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "tree",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiissues\/components\/schemas\/timeline_hyphen_committed_hyphen_event\/tree"
+},
+"doc://GitHubRestAPIIssues/documentation/GitHubRestAPIIssues/Components/Schemas/timeline_hyphen_committed_hyphen_event/treePayload": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "treePayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Components\/Schemas\/timeline_hyphen_committed_hyphen_event\/treePayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "treePayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.timeline_hyphen_committed_hyphen_event.treePayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiissues\/components\/schemas\/timeline_hyphen_committed_hyphen_event\/treepayload"
+},
+"doc://GitHubRestAPIIssues/documentation/GitHubRestAPIIssues/Components/Schemas/timeline_hyphen_committed_hyphen_event/url": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "url"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Components\/Schemas\/timeline_hyphen_committed_hyphen_event\/url",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "url",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiissues\/components\/schemas\/timeline_hyphen_committed_hyphen_event\/url"
+},
+"doc://GitHubRestAPIIssues/documentation/GitHubRestAPIIssues/Components/Schemas/timeline_hyphen_committed_hyphen_event/verification": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "verification"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIIssues10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIIssues10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIIssues10ComponentsO7SchemasO026timeline_hyphen_committed_H6_eventV",
+      "text" : "timeline_hyphen_committed_hyphen_event"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIIssues10ComponentsO7SchemasO026timeline_hyphen_committed_H6_eventV19verificationPayloadV",
+      "text" : "verificationPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Components\/Schemas\/timeline_hyphen_committed_hyphen_event\/verification",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "verification",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiissues\/components\/schemas\/timeline_hyphen_committed_hyphen_event\/verification"
+},
+"doc://GitHubRestAPIIssues/documentation/GitHubRestAPIIssues/Components/Schemas/timeline_hyphen_committed_hyphen_event/verificationPayload": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "verificationPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Components\/Schemas\/timeline_hyphen_committed_hyphen_event\/verificationPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "verificationPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.timeline_hyphen_committed_hyphen_event.verificationPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiissues\/components\/schemas\/timeline_hyphen_committed_hyphen_event\/verificationpayload"
+},
+"doc://GitHubRestAPIIssues/s8SendableP": {
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/s8SendableP",
+  "title" : "Swift.Sendable",
+  "type" : "unresolvable"
+}
+}
+}

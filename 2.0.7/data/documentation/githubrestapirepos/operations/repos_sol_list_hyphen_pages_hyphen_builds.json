@@ -1,0 +1,437 @@
+{
+  "abstract" : [
+    {
+      "text" : "List GitHub Pages builds",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos",
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Operations"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Operations\/repos_sol_list_hyphen_pages_hyphen_builds"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:18GitHubRestAPIRepos10OperationsO028repos_sol_list_hyphen_pages_I7_buildsO",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "enum"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "repos_sol_list_hyphen_pages_hyphen_builds"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIRepos"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "repos_sol_list_hyphen_pages_hyphen_builds"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/repos\/Types.swift#L52022"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Enumeration",
+    "symbolKind" : "enum",
+    "title" : "Operations.repos_sol_list_hyphen_pages_hyphen_builds"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "enum"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "repos_sol_list_hyphen_pages_hyphen_builds"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Lists builts of a GitHub Pages site.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "OAuth app tokens and personal access tokens (classic) need the ",
+              "type" : "text"
+            },
+            {
+              "code" : "repo",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " scope to use this endpoint.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "HTTP ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "GET \/repos\/{owner}\/{repo}\/pages\/builds",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/paths\/\/repos\/{owner}\/{repo}\/pages\/builds\/get(repos\/list-pages-builds)",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Operations\/repos_sol_list_hyphen_pages_hyphen_builds\/Input"
+      ],
+      "title" : "Structures"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Operations\/repos_sol_list_hyphen_pages_hyphen_builds\/id"
+      ],
+      "title" : "Type Properties"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Operations\/repos_sol_list_hyphen_pages_hyphen_builds\/AcceptableContentType",
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Operations\/repos_sol_list_hyphen_pages_hyphen_builds\/Output"
+      ],
+      "title" : "Enumerations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapirepos\/operations\/repos_sol_list_hyphen_pages_hyphen_builds"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIRepos",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/operations"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Operations/repos_sol_list_hyphen_pages_hyphen_builds": {
+  "abstract" : [
+    {
+      "text" : "List GitHub Pages builds",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "repos_sol_list_hyphen_pages_hyphen_builds"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Operations\/repos_sol_list_hyphen_pages_hyphen_builds",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "repos_sol_list_hyphen_pages_hyphen_builds"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.repos_sol_list_hyphen_pages_hyphen_builds",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/operations\/repos_sol_list_hyphen_pages_hyphen_builds"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Operations/repos_sol_list_hyphen_pages_hyphen_builds/AcceptableContentType": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AcceptableContentType"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Operations\/repos_sol_list_hyphen_pages_hyphen_builds\/AcceptableContentType",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AcceptableContentType"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.repos_sol_list_hyphen_pages_hyphen_builds.AcceptableContentType",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/operations\/repos_sol_list_hyphen_pages_hyphen_builds\/acceptablecontenttype"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Operations/repos_sol_list_hyphen_pages_hyphen_builds/Input": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Operations\/repos_sol_list_hyphen_pages_hyphen_builds\/Input",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.repos_sol_list_hyphen_pages_hyphen_builds.Input",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/operations\/repos_sol_list_hyphen_pages_hyphen_builds\/input"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Operations/repos_sol_list_hyphen_pages_hyphen_builds/Output": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Operations\/repos_sol_list_hyphen_pages_hyphen_builds\/Output",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.repos_sol_list_hyphen_pages_hyphen_builds.Output",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/operations\/repos_sol_list_hyphen_pages_hyphen_builds\/output"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Operations/repos_sol_list_hyphen_pages_hyphen_builds/id": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "id"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Operations\/repos_sol_list_hyphen_pages_hyphen_builds\/id",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "id",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/operations\/repos_sol_list_hyphen_pages_hyphen_builds\/id"
+}
+}
+}

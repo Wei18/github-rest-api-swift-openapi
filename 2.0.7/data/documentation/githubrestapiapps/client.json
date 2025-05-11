@@ -1,0 +1,3989 @@
+{
+  "abstract" : [
+    {
+      "text" : "GitHub’s v3 REST API.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Client"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:17GitHubRestAPIApps6ClientV",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "struct"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "Client"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIApps"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "Client"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Client.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/apps\/Client.swift#L14"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Structure",
+    "symbolKind" : "struct",
+    "title" : "Client"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "struct"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "Client"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/APIProtocol",
+        "doc:\/\/GitHubRestAPIApps\/s8SendableP"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Client\/init(serverURL:configuration:transport:middlewares:)"
+      ],
+      "title" : "Initializers"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Client\/apps_sol_add_hyphen_repo_hyphen_to_hyphen_installation_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Client\/apps_sol_check_hyphen_token(_:)",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Client\/apps_sol_create_hyphen_from_hyphen_manifest(_:)",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Client\/apps_sol_create_hyphen_installation_hyphen_access_hyphen_token(_:)",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Client\/apps_sol_delete_hyphen_authorization(_:)",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Client\/apps_sol_delete_hyphen_installation(_:)",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Client\/apps_sol_delete_hyphen_token(_:)",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Client\/apps_sol_get_hyphen_authenticated(_:)",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Client\/apps_sol_get_hyphen_by_hyphen_slug(_:)",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Client\/apps_sol_get_hyphen_installation(_:)",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Client\/apps_sol_get_hyphen_org_hyphen_installation(_:)",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Client\/apps_sol_get_hyphen_repo_hyphen_installation(_:)",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Client\/apps_sol_get_hyphen_subscription_hyphen_plan_hyphen_for_hyphen_account(_:)",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Client\/apps_sol_get_hyphen_subscription_hyphen_plan_hyphen_for_hyphen_account_hyphen_stubbed(_:)",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Client\/apps_sol_get_hyphen_user_hyphen_installation(_:)",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Client\/apps_sol_get_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app(_:)",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Client\/apps_sol_get_hyphen_webhook_hyphen_delivery(_:)",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Client\/apps_sol_list_hyphen_accounts_hyphen_for_hyphen_plan(_:)",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Client\/apps_sol_list_hyphen_accounts_hyphen_for_hyphen_plan_hyphen_stubbed(_:)",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Client\/apps_sol_list_hyphen_installation_hyphen_repos_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Client\/apps_sol_list_hyphen_installation_hyphen_requests_hyphen_for_hyphen_authenticated_hyphen_app(_:)",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Client\/apps_sol_list_hyphen_installations(_:)",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Client\/apps_sol_list_hyphen_installations_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Client\/apps_sol_list_hyphen_plans(_:)",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Client\/apps_sol_list_hyphen_plans_hyphen_stubbed(_:)",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Client\/apps_sol_list_hyphen_repos_hyphen_accessible_hyphen_to_hyphen_installation(_:)",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Client\/apps_sol_list_hyphen_subscriptions_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Client\/apps_sol_list_hyphen_subscriptions_hyphen_for_hyphen_authenticated_hyphen_user_hyphen_stubbed(_:)",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Client\/apps_sol_list_hyphen_webhook_hyphen_deliveries(_:)",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Client\/apps_sol_redeliver_hyphen_webhook_hyphen_delivery(_:)",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Client\/apps_sol_remove_hyphen_repo_hyphen_from_hyphen_installation_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Client\/apps_sol_reset_hyphen_token(_:)",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Client\/apps_sol_revoke_hyphen_installation_hyphen_access_hyphen_token(_:)",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Client\/apps_sol_scope_hyphen_token(_:)",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Client\/apps_sol_suspend_hyphen_installation(_:)",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Client\/apps_sol_unsuspend_hyphen_installation(_:)",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Client\/apps_sol_update_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app(_:)"
+      ],
+      "title" : "Instance Methods"
+    },
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Client\/APIProtocol-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapiapps\/client"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIApps",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/APIProtocol": {
+  "abstract" : [
+    {
+      "text" : "A type that performs HTTP operations defined by the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "protocol"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "APIProtocol"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/APIProtocol",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "APIProtocol"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "APIProtocol",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/apiprotocol"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Client": {
+  "abstract" : [
+    {
+      "text" : "GitHub’s v3 REST API.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Client"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Client",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Client"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Client",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/client"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Client/APIProtocol-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Client\/APIProtocol-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "APIProtocol Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/client\/apiprotocol-implementations"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Client/apps_sol_add_hyphen_repo_hyphen_to_hyphen_installation_hyphen_for_hyphen_authenticated_hyphen_user(_:)": {
+  "abstract" : [
+    {
+      "text" : "Add a repository to an app installation",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "apps_sol_add_hyphen_repo_hyphen_to_hyphen_installation_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO025apps_sol_add_hyphen_repo_i4_to_i14_installation_i5_for_i15_authenticated_I5_userO",
+      "text" : "apps_sol_add_hyphen_repo_hyphen_to_hyphen_installation_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO025apps_sol_add_hyphen_repo_i4_to_i14_installation_i5_for_i15_authenticated_I5_userO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO025apps_sol_add_hyphen_repo_i4_to_i14_installation_i5_for_i15_authenticated_I5_userO",
+      "text" : "apps_sol_add_hyphen_repo_hyphen_to_hyphen_installation_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO025apps_sol_add_hyphen_repo_i4_to_i14_installation_i5_for_i15_authenticated_I5_userO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Client\/apps_sol_add_hyphen_repo_hyphen_to_hyphen_installation_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "apps_sol_add_hyphen_repo_hyphen_to_hyphen_installation_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/client\/apps_sol_add_hyphen_repo_hyphen_to_hyphen_installation_hyphen_for_hyphen_authenticated_hyphen_user(_:)"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Client/apps_sol_check_hyphen_token(_:)": {
+  "abstract" : [
+    {
+      "text" : "Check a token",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "apps_sol_check_hyphen_token"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO27apps_sol_check_hyphen_tokenO",
+      "text" : "apps_sol_check_hyphen_token"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO27apps_sol_check_hyphen_tokenO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO27apps_sol_check_hyphen_tokenO",
+      "text" : "apps_sol_check_hyphen_token"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO27apps_sol_check_hyphen_tokenO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Client\/apps_sol_check_hyphen_token(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "apps_sol_check_hyphen_token(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/client\/apps_sol_check_hyphen_token(_:)"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Client/apps_sol_create_hyphen_from_hyphen_manifest(_:)": {
+  "abstract" : [
+    {
+      "text" : "Create a GitHub App from a manifest",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "apps_sol_create_hyphen_from_hyphen_manifest"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO028apps_sol_create_hyphen_from_I9_manifestO",
+      "text" : "apps_sol_create_hyphen_from_hyphen_manifest"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO028apps_sol_create_hyphen_from_I9_manifestO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO028apps_sol_create_hyphen_from_I9_manifestO",
+      "text" : "apps_sol_create_hyphen_from_hyphen_manifest"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO028apps_sol_create_hyphen_from_I9_manifestO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Client\/apps_sol_create_hyphen_from_hyphen_manifest(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "apps_sol_create_hyphen_from_hyphen_manifest(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/client\/apps_sol_create_hyphen_from_hyphen_manifest(_:)"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Client/apps_sol_create_hyphen_installation_hyphen_access_hyphen_token(_:)": {
+  "abstract" : [
+    {
+      "text" : "Create an installation access token for an app",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "apps_sol_create_hyphen_installation_hyphen_access_hyphen_token"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO036apps_sol_create_hyphen_installation_i8_access_I6_tokenO",
+      "text" : "apps_sol_create_hyphen_installation_hyphen_access_hyphen_token"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO036apps_sol_create_hyphen_installation_i8_access_I6_tokenO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO036apps_sol_create_hyphen_installation_i8_access_I6_tokenO",
+      "text" : "apps_sol_create_hyphen_installation_hyphen_access_hyphen_token"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO036apps_sol_create_hyphen_installation_i8_access_I6_tokenO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Client\/apps_sol_create_hyphen_installation_hyphen_access_hyphen_token(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "apps_sol_create_hyphen_installation_hyphen_access_hyphen_token(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/client\/apps_sol_create_hyphen_installation_hyphen_access_hyphen_token(_:)"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Client/apps_sol_delete_hyphen_authorization(_:)": {
+  "abstract" : [
+    {
+      "text" : "Delete an app authorization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "apps_sol_delete_hyphen_authorization"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO36apps_sol_delete_hyphen_authorizationO",
+      "text" : "apps_sol_delete_hyphen_authorization"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO36apps_sol_delete_hyphen_authorizationO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO36apps_sol_delete_hyphen_authorizationO",
+      "text" : "apps_sol_delete_hyphen_authorization"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO36apps_sol_delete_hyphen_authorizationO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Client\/apps_sol_delete_hyphen_authorization(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "apps_sol_delete_hyphen_authorization(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/client\/apps_sol_delete_hyphen_authorization(_:)"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Client/apps_sol_delete_hyphen_installation(_:)": {
+  "abstract" : [
+    {
+      "text" : "Delete an installation for the authenticated app",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "apps_sol_delete_hyphen_installation"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO35apps_sol_delete_hyphen_installationO",
+      "text" : "apps_sol_delete_hyphen_installation"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO35apps_sol_delete_hyphen_installationO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO35apps_sol_delete_hyphen_installationO",
+      "text" : "apps_sol_delete_hyphen_installation"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO35apps_sol_delete_hyphen_installationO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Client\/apps_sol_delete_hyphen_installation(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "apps_sol_delete_hyphen_installation(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/client\/apps_sol_delete_hyphen_installation(_:)"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Client/apps_sol_delete_hyphen_token(_:)": {
+  "abstract" : [
+    {
+      "text" : "Delete an app token",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "apps_sol_delete_hyphen_token"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO28apps_sol_delete_hyphen_tokenO",
+      "text" : "apps_sol_delete_hyphen_token"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO28apps_sol_delete_hyphen_tokenO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO28apps_sol_delete_hyphen_tokenO",
+      "text" : "apps_sol_delete_hyphen_token"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO28apps_sol_delete_hyphen_tokenO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Client\/apps_sol_delete_hyphen_token(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "apps_sol_delete_hyphen_token(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/client\/apps_sol_delete_hyphen_token(_:)"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Client/apps_sol_get_hyphen_authenticated(_:)": {
+  "abstract" : [
+    {
+      "text" : "Get the authenticated app",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "apps_sol_get_hyphen_authenticated"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO33apps_sol_get_hyphen_authenticatedO",
+      "text" : "apps_sol_get_hyphen_authenticated"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO33apps_sol_get_hyphen_authenticatedO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO33apps_sol_get_hyphen_authenticatedO",
+      "text" : "apps_sol_get_hyphen_authenticated"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO33apps_sol_get_hyphen_authenticatedO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Client\/apps_sol_get_hyphen_authenticated(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "apps_sol_get_hyphen_authenticated(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/client\/apps_sol_get_hyphen_authenticated(_:)"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Client/apps_sol_get_hyphen_by_hyphen_slug(_:)": {
+  "abstract" : [
+    {
+      "text" : "Get an app",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "apps_sol_get_hyphen_by_hyphen_slug"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO023apps_sol_get_hyphen_by_I5_slugO",
+      "text" : "apps_sol_get_hyphen_by_hyphen_slug"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO023apps_sol_get_hyphen_by_I5_slugO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO023apps_sol_get_hyphen_by_I5_slugO",
+      "text" : "apps_sol_get_hyphen_by_hyphen_slug"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO023apps_sol_get_hyphen_by_I5_slugO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Client\/apps_sol_get_hyphen_by_hyphen_slug(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "apps_sol_get_hyphen_by_hyphen_slug(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/client\/apps_sol_get_hyphen_by_hyphen_slug(_:)"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Client/apps_sol_get_hyphen_installation(_:)": {
+  "abstract" : [
+    {
+      "text" : "Get an installation for the authenticated app",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "apps_sol_get_hyphen_installation"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO32apps_sol_get_hyphen_installationO",
+      "text" : "apps_sol_get_hyphen_installation"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO32apps_sol_get_hyphen_installationO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO32apps_sol_get_hyphen_installationO",
+      "text" : "apps_sol_get_hyphen_installation"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO32apps_sol_get_hyphen_installationO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Client\/apps_sol_get_hyphen_installation(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "apps_sol_get_hyphen_installation(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/client\/apps_sol_get_hyphen_installation(_:)"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Client/apps_sol_get_hyphen_org_hyphen_installation(_:)": {
+  "abstract" : [
+    {
+      "text" : "Get an organization installation for the authenticated app",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "apps_sol_get_hyphen_org_hyphen_installation"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO024apps_sol_get_hyphen_org_I13_installationO",
+      "text" : "apps_sol_get_hyphen_org_hyphen_installation"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO024apps_sol_get_hyphen_org_I13_installationO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO024apps_sol_get_hyphen_org_I13_installationO",
+      "text" : "apps_sol_get_hyphen_org_hyphen_installation"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO024apps_sol_get_hyphen_org_I13_installationO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Client\/apps_sol_get_hyphen_org_hyphen_installation(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "apps_sol_get_hyphen_org_hyphen_installation(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/client\/apps_sol_get_hyphen_org_hyphen_installation(_:)"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Client/apps_sol_get_hyphen_repo_hyphen_installation(_:)": {
+  "abstract" : [
+    {
+      "text" : "Get a repository installation for the authenticated app",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "apps_sol_get_hyphen_repo_hyphen_installation"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO025apps_sol_get_hyphen_repo_I13_installationO",
+      "text" : "apps_sol_get_hyphen_repo_hyphen_installation"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO025apps_sol_get_hyphen_repo_I13_installationO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO025apps_sol_get_hyphen_repo_I13_installationO",
+      "text" : "apps_sol_get_hyphen_repo_hyphen_installation"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO025apps_sol_get_hyphen_repo_I13_installationO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Client\/apps_sol_get_hyphen_repo_hyphen_installation(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "apps_sol_get_hyphen_repo_hyphen_installation(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/client\/apps_sol_get_hyphen_repo_hyphen_installation(_:)"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Client/apps_sol_get_hyphen_subscription_hyphen_plan_hyphen_for_hyphen_account(_:)": {
+  "abstract" : [
+    {
+      "text" : "Get a subscription plan for an account",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "apps_sol_get_hyphen_subscription_hyphen_plan_hyphen_for_hyphen_account"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO033apps_sol_get_hyphen_subscription_i6_plan_i5_for_I8_accountO",
+      "text" : "apps_sol_get_hyphen_subscription_hyphen_plan_hyphen_for_hyphen_account"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO033apps_sol_get_hyphen_subscription_i6_plan_i5_for_I8_accountO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO033apps_sol_get_hyphen_subscription_i6_plan_i5_for_I8_accountO",
+      "text" : "apps_sol_get_hyphen_subscription_hyphen_plan_hyphen_for_hyphen_account"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO033apps_sol_get_hyphen_subscription_i6_plan_i5_for_I8_accountO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Client\/apps_sol_get_hyphen_subscription_hyphen_plan_hyphen_for_hyphen_account(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "apps_sol_get_hyphen_subscription_hyphen_plan_hyphen_for_hyphen_account(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/client\/apps_sol_get_hyphen_subscription_hyphen_plan_hyphen_for_hyphen_account(_:)"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Client/apps_sol_get_hyphen_subscription_hyphen_plan_hyphen_for_hyphen_account_hyphen_stubbed(_:)": {
+  "abstract" : [
+    {
+      "text" : "Get a subscription plan for an account (stubbed)",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "apps_sol_get_hyphen_subscription_hyphen_plan_hyphen_for_hyphen_account_hyphen_stubbed"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO033apps_sol_get_hyphen_subscription_i6_plan_i5_for_i9_account_I8_stubbedO",
+      "text" : "apps_sol_get_hyphen_subscription_hyphen_plan_hyphen_for_hyphen_account_hyphen_stubbed"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO033apps_sol_get_hyphen_subscription_i6_plan_i5_for_i9_account_I8_stubbedO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO033apps_sol_get_hyphen_subscription_i6_plan_i5_for_i9_account_I8_stubbedO",
+      "text" : "apps_sol_get_hyphen_subscription_hyphen_plan_hyphen_for_hyphen_account_hyphen_stubbed"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO033apps_sol_get_hyphen_subscription_i6_plan_i5_for_i9_account_I8_stubbedO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Client\/apps_sol_get_hyphen_subscription_hyphen_plan_hyphen_for_hyphen_account_hyphen_stubbed(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "apps_sol_get_hyphen_subscription_hyphen_plan_hyphen_for_hyphen_account_hyphen_stubbed(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/client\/apps_sol_get_hyphen_subscription_hyphen_plan_hyphen_for_hyphen_account_hyphen_stubbed(_:)"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Client/apps_sol_get_hyphen_user_hyphen_installation(_:)": {
+  "abstract" : [
+    {
+      "text" : "Get a user installation for the authenticated app",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "apps_sol_get_hyphen_user_hyphen_installation"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO025apps_sol_get_hyphen_user_I13_installationO",
+      "text" : "apps_sol_get_hyphen_user_hyphen_installation"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO025apps_sol_get_hyphen_user_I13_installationO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO025apps_sol_get_hyphen_user_I13_installationO",
+      "text" : "apps_sol_get_hyphen_user_hyphen_installation"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO025apps_sol_get_hyphen_user_I13_installationO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Client\/apps_sol_get_hyphen_user_hyphen_installation(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "apps_sol_get_hyphen_user_hyphen_installation(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/client\/apps_sol_get_hyphen_user_hyphen_installation(_:)"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Client/apps_sol_get_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app(_:)": {
+  "abstract" : [
+    {
+      "text" : "Get a webhook configuration for an app",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "apps_sol_get_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO028apps_sol_get_hyphen_webhook_i8_config_i5_for_I4_appO",
+      "text" : "apps_sol_get_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO028apps_sol_get_hyphen_webhook_i8_config_i5_for_I4_appO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO028apps_sol_get_hyphen_webhook_i8_config_i5_for_I4_appO",
+      "text" : "apps_sol_get_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO028apps_sol_get_hyphen_webhook_i8_config_i5_for_I4_appO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Client\/apps_sol_get_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "apps_sol_get_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/client\/apps_sol_get_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app(_:)"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Client/apps_sol_get_hyphen_webhook_hyphen_delivery(_:)": {
+  "abstract" : [
+    {
+      "text" : "Get a delivery for an app webhook",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "apps_sol_get_hyphen_webhook_hyphen_delivery"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO028apps_sol_get_hyphen_webhook_I9_deliveryO",
+      "text" : "apps_sol_get_hyphen_webhook_hyphen_delivery"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO028apps_sol_get_hyphen_webhook_I9_deliveryO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO028apps_sol_get_hyphen_webhook_I9_deliveryO",
+      "text" : "apps_sol_get_hyphen_webhook_hyphen_delivery"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO028apps_sol_get_hyphen_webhook_I9_deliveryO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Client\/apps_sol_get_hyphen_webhook_hyphen_delivery(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "apps_sol_get_hyphen_webhook_hyphen_delivery(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/client\/apps_sol_get_hyphen_webhook_hyphen_delivery(_:)"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Client/apps_sol_list_hyphen_accounts_hyphen_for_hyphen_plan(_:)": {
+  "abstract" : [
+    {
+      "text" : "List accounts for a plan",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "apps_sol_list_hyphen_accounts_hyphen_for_hyphen_plan"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO030apps_sol_list_hyphen_accounts_i5_for_I5_planO",
+      "text" : "apps_sol_list_hyphen_accounts_hyphen_for_hyphen_plan"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO030apps_sol_list_hyphen_accounts_i5_for_I5_planO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO030apps_sol_list_hyphen_accounts_i5_for_I5_planO",
+      "text" : "apps_sol_list_hyphen_accounts_hyphen_for_hyphen_plan"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO030apps_sol_list_hyphen_accounts_i5_for_I5_planO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Client\/apps_sol_list_hyphen_accounts_hyphen_for_hyphen_plan(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "apps_sol_list_hyphen_accounts_hyphen_for_hyphen_plan(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/client\/apps_sol_list_hyphen_accounts_hyphen_for_hyphen_plan(_:)"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Client/apps_sol_list_hyphen_accounts_hyphen_for_hyphen_plan_hyphen_stubbed(_:)": {
+  "abstract" : [
+    {
+      "text" : "List accounts for a plan (stubbed)",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "apps_sol_list_hyphen_accounts_hyphen_for_hyphen_plan_hyphen_stubbed"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO030apps_sol_list_hyphen_accounts_i5_for_i6_plan_I8_stubbedO",
+      "text" : "apps_sol_list_hyphen_accounts_hyphen_for_hyphen_plan_hyphen_stubbed"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO030apps_sol_list_hyphen_accounts_i5_for_i6_plan_I8_stubbedO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO030apps_sol_list_hyphen_accounts_i5_for_i6_plan_I8_stubbedO",
+      "text" : "apps_sol_list_hyphen_accounts_hyphen_for_hyphen_plan_hyphen_stubbed"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO030apps_sol_list_hyphen_accounts_i5_for_i6_plan_I8_stubbedO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Client\/apps_sol_list_hyphen_accounts_hyphen_for_hyphen_plan_hyphen_stubbed(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "apps_sol_list_hyphen_accounts_hyphen_for_hyphen_plan_hyphen_stubbed(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/client\/apps_sol_list_hyphen_accounts_hyphen_for_hyphen_plan_hyphen_stubbed(_:)"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Client/apps_sol_list_hyphen_installation_hyphen_repos_hyphen_for_hyphen_authenticated_hyphen_user(_:)": {
+  "abstract" : [
+    {
+      "text" : "List repositories accessible to the user access token",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "apps_sol_list_hyphen_installation_hyphen_repos_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO034apps_sol_list_hyphen_installation_i7_repos_i5_for_i15_authenticated_I5_userO",
+      "text" : "apps_sol_list_hyphen_installation_hyphen_repos_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO034apps_sol_list_hyphen_installation_i7_repos_i5_for_i15_authenticated_I5_userO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO034apps_sol_list_hyphen_installation_i7_repos_i5_for_i15_authenticated_I5_userO",
+      "text" : "apps_sol_list_hyphen_installation_hyphen_repos_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO034apps_sol_list_hyphen_installation_i7_repos_i5_for_i15_authenticated_I5_userO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Client\/apps_sol_list_hyphen_installation_hyphen_repos_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "apps_sol_list_hyphen_installation_hyphen_repos_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/client\/apps_sol_list_hyphen_installation_hyphen_repos_hyphen_for_hyphen_authenticated_hyphen_user(_:)"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Client/apps_sol_list_hyphen_installation_hyphen_requests_hyphen_for_hyphen_authenticated_hyphen_app(_:)": {
+  "abstract" : [
+    {
+      "text" : "List installation requests for the authenticated app",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "apps_sol_list_hyphen_installation_hyphen_requests_hyphen_for_hyphen_authenticated_hyphen_app"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO034apps_sol_list_hyphen_installation_i10_requests_i5_for_i15_authenticated_I4_appO",
+      "text" : "apps_sol_list_hyphen_installation_hyphen_requests_hyphen_for_hyphen_authenticated_hyphen_app"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO034apps_sol_list_hyphen_installation_i10_requests_i5_for_i15_authenticated_I4_appO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO034apps_sol_list_hyphen_installation_i10_requests_i5_for_i15_authenticated_I4_appO",
+      "text" : "apps_sol_list_hyphen_installation_hyphen_requests_hyphen_for_hyphen_authenticated_hyphen_app"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO034apps_sol_list_hyphen_installation_i10_requests_i5_for_i15_authenticated_I4_appO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Client\/apps_sol_list_hyphen_installation_hyphen_requests_hyphen_for_hyphen_authenticated_hyphen_app(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "apps_sol_list_hyphen_installation_hyphen_requests_hyphen_for_hyphen_authenticated_hyphen_app(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/client\/apps_sol_list_hyphen_installation_hyphen_requests_hyphen_for_hyphen_authenticated_hyphen_app(_:)"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Client/apps_sol_list_hyphen_installations(_:)": {
+  "abstract" : [
+    {
+      "text" : "List installations for the authenticated app",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "apps_sol_list_hyphen_installations"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO34apps_sol_list_hyphen_installationsO",
+      "text" : "apps_sol_list_hyphen_installations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO34apps_sol_list_hyphen_installationsO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO34apps_sol_list_hyphen_installationsO",
+      "text" : "apps_sol_list_hyphen_installations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO34apps_sol_list_hyphen_installationsO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Client\/apps_sol_list_hyphen_installations(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "apps_sol_list_hyphen_installations(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/client\/apps_sol_list_hyphen_installations(_:)"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Client/apps_sol_list_hyphen_installations_hyphen_for_hyphen_authenticated_hyphen_user(_:)": {
+  "abstract" : [
+    {
+      "text" : "List app installations accessible to the user access token",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "apps_sol_list_hyphen_installations_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO035apps_sol_list_hyphen_installations_i5_for_i15_authenticated_I5_userO",
+      "text" : "apps_sol_list_hyphen_installations_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO035apps_sol_list_hyphen_installations_i5_for_i15_authenticated_I5_userO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO035apps_sol_list_hyphen_installations_i5_for_i15_authenticated_I5_userO",
+      "text" : "apps_sol_list_hyphen_installations_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO035apps_sol_list_hyphen_installations_i5_for_i15_authenticated_I5_userO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Client\/apps_sol_list_hyphen_installations_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "apps_sol_list_hyphen_installations_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/client\/apps_sol_list_hyphen_installations_hyphen_for_hyphen_authenticated_hyphen_user(_:)"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Client/apps_sol_list_hyphen_plans(_:)": {
+  "abstract" : [
+    {
+      "text" : "List plans",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "apps_sol_list_hyphen_plans"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO26apps_sol_list_hyphen_plansO",
+      "text" : "apps_sol_list_hyphen_plans"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO26apps_sol_list_hyphen_plansO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO26apps_sol_list_hyphen_plansO",
+      "text" : "apps_sol_list_hyphen_plans"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO26apps_sol_list_hyphen_plansO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Client\/apps_sol_list_hyphen_plans(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "apps_sol_list_hyphen_plans(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/client\/apps_sol_list_hyphen_plans(_:)"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Client/apps_sol_list_hyphen_plans_hyphen_stubbed(_:)": {
+  "abstract" : [
+    {
+      "text" : "List plans (stubbed)",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "apps_sol_list_hyphen_plans_hyphen_stubbed"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO027apps_sol_list_hyphen_plans_I8_stubbedO",
+      "text" : "apps_sol_list_hyphen_plans_hyphen_stubbed"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO027apps_sol_list_hyphen_plans_I8_stubbedO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO027apps_sol_list_hyphen_plans_I8_stubbedO",
+      "text" : "apps_sol_list_hyphen_plans_hyphen_stubbed"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO027apps_sol_list_hyphen_plans_I8_stubbedO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Client\/apps_sol_list_hyphen_plans_hyphen_stubbed(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "apps_sol_list_hyphen_plans_hyphen_stubbed(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/client\/apps_sol_list_hyphen_plans_hyphen_stubbed(_:)"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Client/apps_sol_list_hyphen_repos_hyphen_accessible_hyphen_to_hyphen_installation(_:)": {
+  "abstract" : [
+    {
+      "text" : "List repositories accessible to the app installation",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "apps_sol_list_hyphen_repos_hyphen_accessible_hyphen_to_hyphen_installation"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO027apps_sol_list_hyphen_repos_i12_accessible_i4_to_I13_installationO",
+      "text" : "apps_sol_list_hyphen_repos_hyphen_accessible_hyphen_to_hyphen_installation"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO027apps_sol_list_hyphen_repos_i12_accessible_i4_to_I13_installationO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO027apps_sol_list_hyphen_repos_i12_accessible_i4_to_I13_installationO",
+      "text" : "apps_sol_list_hyphen_repos_hyphen_accessible_hyphen_to_hyphen_installation"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO027apps_sol_list_hyphen_repos_i12_accessible_i4_to_I13_installationO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Client\/apps_sol_list_hyphen_repos_hyphen_accessible_hyphen_to_hyphen_installation(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "apps_sol_list_hyphen_repos_hyphen_accessible_hyphen_to_hyphen_installation(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/client\/apps_sol_list_hyphen_repos_hyphen_accessible_hyphen_to_hyphen_installation(_:)"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Client/apps_sol_list_hyphen_subscriptions_hyphen_for_hyphen_authenticated_hyphen_user(_:)": {
+  "abstract" : [
+    {
+      "text" : "List subscriptions for the authenticated user",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "apps_sol_list_hyphen_subscriptions_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO035apps_sol_list_hyphen_subscriptions_i5_for_i15_authenticated_I5_userO",
+      "text" : "apps_sol_list_hyphen_subscriptions_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO035apps_sol_list_hyphen_subscriptions_i5_for_i15_authenticated_I5_userO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO035apps_sol_list_hyphen_subscriptions_i5_for_i15_authenticated_I5_userO",
+      "text" : "apps_sol_list_hyphen_subscriptions_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO035apps_sol_list_hyphen_subscriptions_i5_for_i15_authenticated_I5_userO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Client\/apps_sol_list_hyphen_subscriptions_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "apps_sol_list_hyphen_subscriptions_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/client\/apps_sol_list_hyphen_subscriptions_hyphen_for_hyphen_authenticated_hyphen_user(_:)"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Client/apps_sol_list_hyphen_subscriptions_hyphen_for_hyphen_authenticated_hyphen_user_hyphen_stubbed(_:)": {
+  "abstract" : [
+    {
+      "text" : "List subscriptions for the authenticated user (stubbed)",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "apps_sol_list_hyphen_subscriptions_hyphen_for_hyphen_authenticated_hyphen_user_hyphen_stubbed"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO035apps_sol_list_hyphen_subscriptions_i5_for_i15_authenticated_i6_user_I8_stubbedO",
+      "text" : "apps_sol_list_hyphen_subscriptions_hyphen_for_hyphen_authenticated_hyphen_user_hyphen_stubbed"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO035apps_sol_list_hyphen_subscriptions_i5_for_i15_authenticated_i6_user_I8_stubbedO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO035apps_sol_list_hyphen_subscriptions_i5_for_i15_authenticated_i6_user_I8_stubbedO",
+      "text" : "apps_sol_list_hyphen_subscriptions_hyphen_for_hyphen_authenticated_hyphen_user_hyphen_stubbed"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO035apps_sol_list_hyphen_subscriptions_i5_for_i15_authenticated_i6_user_I8_stubbedO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Client\/apps_sol_list_hyphen_subscriptions_hyphen_for_hyphen_authenticated_hyphen_user_hyphen_stubbed(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "apps_sol_list_hyphen_subscriptions_hyphen_for_hyphen_authenticated_hyphen_user_hyphen_stubbed(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/client\/apps_sol_list_hyphen_subscriptions_hyphen_for_hyphen_authenticated_hyphen_user_hyphen_stubbed(_:)"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Client/apps_sol_list_hyphen_webhook_hyphen_deliveries(_:)": {
+  "abstract" : [
+    {
+      "text" : "List deliveries for an app webhook",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "apps_sol_list_hyphen_webhook_hyphen_deliveries"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO029apps_sol_list_hyphen_webhook_I11_deliveriesO",
+      "text" : "apps_sol_list_hyphen_webhook_hyphen_deliveries"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO029apps_sol_list_hyphen_webhook_I11_deliveriesO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO029apps_sol_list_hyphen_webhook_I11_deliveriesO",
+      "text" : "apps_sol_list_hyphen_webhook_hyphen_deliveries"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO029apps_sol_list_hyphen_webhook_I11_deliveriesO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Client\/apps_sol_list_hyphen_webhook_hyphen_deliveries(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "apps_sol_list_hyphen_webhook_hyphen_deliveries(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/client\/apps_sol_list_hyphen_webhook_hyphen_deliveries(_:)"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Client/apps_sol_redeliver_hyphen_webhook_hyphen_delivery(_:)": {
+  "abstract" : [
+    {
+      "text" : "Redeliver a delivery for an app webhook",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "apps_sol_redeliver_hyphen_webhook_hyphen_delivery"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO034apps_sol_redeliver_hyphen_webhook_I9_deliveryO",
+      "text" : "apps_sol_redeliver_hyphen_webhook_hyphen_delivery"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO034apps_sol_redeliver_hyphen_webhook_I9_deliveryO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO034apps_sol_redeliver_hyphen_webhook_I9_deliveryO",
+      "text" : "apps_sol_redeliver_hyphen_webhook_hyphen_delivery"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO034apps_sol_redeliver_hyphen_webhook_I9_deliveryO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Client\/apps_sol_redeliver_hyphen_webhook_hyphen_delivery(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "apps_sol_redeliver_hyphen_webhook_hyphen_delivery(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/client\/apps_sol_redeliver_hyphen_webhook_hyphen_delivery(_:)"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Client/apps_sol_remove_hyphen_repo_hyphen_from_hyphen_installation_hyphen_for_hyphen_authenticated_hyphen_user(_:)": {
+  "abstract" : [
+    {
+      "text" : "Remove a repository from an app installation",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "apps_sol_remove_hyphen_repo_hyphen_from_hyphen_installation_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO028apps_sol_remove_hyphen_repo_i6_from_i14_installation_i5_for_i15_authenticated_I5_userO",
+      "text" : "apps_sol_remove_hyphen_repo_hyphen_from_hyphen_installation_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO028apps_sol_remove_hyphen_repo_i6_from_i14_installation_i5_for_i15_authenticated_I5_userO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO028apps_sol_remove_hyphen_repo_i6_from_i14_installation_i5_for_i15_authenticated_I5_userO",
+      "text" : "apps_sol_remove_hyphen_repo_hyphen_from_hyphen_installation_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO028apps_sol_remove_hyphen_repo_i6_from_i14_installation_i5_for_i15_authenticated_I5_userO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Client\/apps_sol_remove_hyphen_repo_hyphen_from_hyphen_installation_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "apps_sol_remove_hyphen_repo_hyphen_from_hyphen_installation_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/client\/apps_sol_remove_hyphen_repo_hyphen_from_hyphen_installation_hyphen_for_hyphen_authenticated_hyphen_user(_:)"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Client/apps_sol_reset_hyphen_token(_:)": {
+  "abstract" : [
+    {
+      "text" : "Reset a token",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "apps_sol_reset_hyphen_token"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO27apps_sol_reset_hyphen_tokenO",
+      "text" : "apps_sol_reset_hyphen_token"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO27apps_sol_reset_hyphen_tokenO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO27apps_sol_reset_hyphen_tokenO",
+      "text" : "apps_sol_reset_hyphen_token"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO27apps_sol_reset_hyphen_tokenO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Client\/apps_sol_reset_hyphen_token(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "apps_sol_reset_hyphen_token(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/client\/apps_sol_reset_hyphen_token(_:)"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Client/apps_sol_revoke_hyphen_installation_hyphen_access_hyphen_token(_:)": {
+  "abstract" : [
+    {
+      "text" : "Revoke an installation access token",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "apps_sol_revoke_hyphen_installation_hyphen_access_hyphen_token"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO036apps_sol_revoke_hyphen_installation_i8_access_I6_tokenO",
+      "text" : "apps_sol_revoke_hyphen_installation_hyphen_access_hyphen_token"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO036apps_sol_revoke_hyphen_installation_i8_access_I6_tokenO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO036apps_sol_revoke_hyphen_installation_i8_access_I6_tokenO",
+      "text" : "apps_sol_revoke_hyphen_installation_hyphen_access_hyphen_token"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO036apps_sol_revoke_hyphen_installation_i8_access_I6_tokenO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Client\/apps_sol_revoke_hyphen_installation_hyphen_access_hyphen_token(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "apps_sol_revoke_hyphen_installation_hyphen_access_hyphen_token(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/client\/apps_sol_revoke_hyphen_installation_hyphen_access_hyphen_token(_:)"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Client/apps_sol_scope_hyphen_token(_:)": {
+  "abstract" : [
+    {
+      "text" : "Create a scoped access token",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "apps_sol_scope_hyphen_token"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO27apps_sol_scope_hyphen_tokenO",
+      "text" : "apps_sol_scope_hyphen_token"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO27apps_sol_scope_hyphen_tokenO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO27apps_sol_scope_hyphen_tokenO",
+      "text" : "apps_sol_scope_hyphen_token"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO27apps_sol_scope_hyphen_tokenO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Client\/apps_sol_scope_hyphen_token(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "apps_sol_scope_hyphen_token(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/client\/apps_sol_scope_hyphen_token(_:)"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Client/apps_sol_suspend_hyphen_installation(_:)": {
+  "abstract" : [
+    {
+      "text" : "Suspend an app installation",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "apps_sol_suspend_hyphen_installation"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO36apps_sol_suspend_hyphen_installationO",
+      "text" : "apps_sol_suspend_hyphen_installation"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO36apps_sol_suspend_hyphen_installationO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO36apps_sol_suspend_hyphen_installationO",
+      "text" : "apps_sol_suspend_hyphen_installation"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO36apps_sol_suspend_hyphen_installationO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Client\/apps_sol_suspend_hyphen_installation(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "apps_sol_suspend_hyphen_installation(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/client\/apps_sol_suspend_hyphen_installation(_:)"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Client/apps_sol_unsuspend_hyphen_installation(_:)": {
+  "abstract" : [
+    {
+      "text" : "Unsuspend an app installation",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "apps_sol_unsuspend_hyphen_installation"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO38apps_sol_unsuspend_hyphen_installationO",
+      "text" : "apps_sol_unsuspend_hyphen_installation"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO38apps_sol_unsuspend_hyphen_installationO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO38apps_sol_unsuspend_hyphen_installationO",
+      "text" : "apps_sol_unsuspend_hyphen_installation"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO38apps_sol_unsuspend_hyphen_installationO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Client\/apps_sol_unsuspend_hyphen_installation(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "apps_sol_unsuspend_hyphen_installation(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/client\/apps_sol_unsuspend_hyphen_installation(_:)"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Client/apps_sol_update_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app(_:)": {
+  "abstract" : [
+    {
+      "text" : "Update a webhook configuration for an app",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "apps_sol_update_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO031apps_sol_update_hyphen_webhook_i8_config_i5_for_I4_appO",
+      "text" : "apps_sol_update_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO031apps_sol_update_hyphen_webhook_i8_config_i5_for_I4_appO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO031apps_sol_update_hyphen_webhook_i8_config_i5_for_I4_appO",
+      "text" : "apps_sol_update_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIApps10OperationsO031apps_sol_update_hyphen_webhook_i8_config_i5_for_I4_appO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Client\/apps_sol_update_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "apps_sol_update_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/client\/apps_sol_update_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app(_:)"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Client/init(serverURL:configuration:transport:middlewares:)": {
+  "abstract" : [
+    {
+      "text" : "Creates a new client.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "serverURL"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:10Foundation3URLV",
+      "text" : "URL"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:14OpenAPIRuntime13ConfigurationV",
+      "text" : "Configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "transport"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:14OpenAPIRuntime15ClientTransportP",
+      "text" : "ClientTransport"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "middlewares"
+    },
+    {
+      "kind" : "text",
+      "text" : ": ["
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:14OpenAPIRuntime16ClientMiddlewareP",
+      "text" : "ClientMiddleware"
+    },
+    {
+      "kind" : "text",
+      "text" : "])"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Client\/init(serverURL:configuration:transport:middlewares:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(serverURL:configuration:transport:middlewares:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/client\/init(serverurl:configuration:transport:middlewares:)"
+},
+"doc://GitHubRestAPIApps/s8SendableP": {
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/s8SendableP",
+  "title" : "Swift.Sendable",
+  "type" : "unresolvable"
+}
+}
+}

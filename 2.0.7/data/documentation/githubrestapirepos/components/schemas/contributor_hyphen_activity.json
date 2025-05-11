@@ -1,0 +1,772 @@
+{
+  "abstract" : [
+    {
+      "text" : "Contributor Activity",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos",
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components",
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Schemas"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Schemas\/contributor_hyphen_activity"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:18GitHubRestAPIRepos10ComponentsO7SchemasO27contributor_hyphen_activityV",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "struct"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "contributor_hyphen_activity"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIRepos"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "contributor_hyphen_activity"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/repos\/Types.swift#L22316"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Structure",
+    "symbolKind" : "struct",
+    "title" : "Components.Schemas.contributor_hyphen_activity"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "struct"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "contributor_hyphen_activity"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/components\/schemas\/contributor-activity",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIRepos\/Se",
+        "doc:\/\/GitHubRestAPIRepos\/SE",
+        "doc:\/\/GitHubRestAPIRepos\/SQ",
+        "doc:\/\/GitHubRestAPIRepos\/SH",
+        "doc:\/\/GitHubRestAPIRepos\/s8SendableP"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Schemas\/contributor_hyphen_activity\/weeksPayloadPayload"
+      ],
+      "title" : "Structures"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Schemas\/contributor_hyphen_activity\/init(author:total:weeks:)",
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Schemas\/contributor_hyphen_activity\/init(from:)"
+      ],
+      "title" : "Initializers"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Schemas\/contributor_hyphen_activity\/author",
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Schemas\/contributor_hyphen_activity\/total",
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Schemas\/contributor_hyphen_activity\/weeks"
+      ],
+      "title" : "Instance Properties"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Schemas\/contributor_hyphen_activity\/weeksPayload"
+      ],
+      "title" : "Type Aliases"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Schemas\/contributor_hyphen_activity\/CodingKeys"
+      ],
+      "title" : "Enumerations"
+    },
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Schemas\/contributor_hyphen_activity\/Equatable-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapirepos\/components\/schemas\/contributor_hyphen_activity"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIRepos/SE": {
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/SE",
+  "title" : "Swift.Encodable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIRepos/SH": {
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/SH",
+  "title" : "Swift.Hashable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIRepos/SQ": {
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/SQ",
+  "title" : "Swift.Equatable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIRepos/Se": {
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/Se",
+  "title" : "Swift.Decodable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIRepos",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/components"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Components/Schemas": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/schemas",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Schemas",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/components\/schemas"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Components/Schemas/contributor_hyphen_activity": {
+  "abstract" : [
+    {
+      "text" : "Contributor Activity",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "contributor_hyphen_activity"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Schemas\/contributor_hyphen_activity",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "contributor_hyphen_activity"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.contributor_hyphen_activity",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/components\/schemas\/contributor_hyphen_activity"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Components/Schemas/contributor_hyphen_activity/CodingKeys": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Schemas\/contributor_hyphen_activity\/CodingKeys",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.contributor_hyphen_activity.CodingKeys",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/components\/schemas\/contributor_hyphen_activity\/codingkeys"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Components/Schemas/contributor_hyphen_activity/Equatable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Schemas\/contributor_hyphen_activity\/Equatable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Equatable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/components\/schemas\/contributor_hyphen_activity\/equatable-implementations"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Components/Schemas/contributor_hyphen_activity/author": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "author"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIRepos10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIRepos10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIRepos10ComponentsO7SchemasO023nullable_hyphen_simple_H5_userV",
+      "text" : "nullable_hyphen_simple_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Schemas\/contributor_hyphen_activity\/author",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "author",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/components\/schemas\/contributor_hyphen_activity\/author"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Components/Schemas/contributor_hyphen_activity/init(author:total:weeks:)": {
+  "abstract" : [
+    {
+      "text" : "Creates a new ",
+      "type" : "text"
+    },
+    {
+      "code" : "contributor_hyphen_activity",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "author"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIRepos10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIRepos10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIRepos10ComponentsO7SchemasO023nullable_hyphen_simple_H5_userV",
+      "text" : "nullable_hyphen_simple_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "total"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "weeks"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIRepos10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIRepos10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIRepos10ComponentsO7SchemasO27contributor_hyphen_activityV",
+      "text" : "contributor_hyphen_activity"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIRepos10ComponentsO7SchemasO27contributor_hyphen_activityV12weeksPayloada",
+      "text" : "weeksPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Schemas\/contributor_hyphen_activity\/init(author:total:weeks:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(author:total:weeks:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/components\/schemas\/contributor_hyphen_activity\/init(author:total:weeks:)"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Components/Schemas/contributor_hyphen_activity/init(from:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "from"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:s7DecoderP",
+      "text" : "Decoder"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Schemas\/contributor_hyphen_activity\/init(from:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(from:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/components\/schemas\/contributor_hyphen_activity\/init(from:)"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Components/Schemas/contributor_hyphen_activity/total": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "total"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Schemas\/contributor_hyphen_activity\/total",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "total",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/components\/schemas\/contributor_hyphen_activity\/total"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Components/Schemas/contributor_hyphen_activity/weeks": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "weeks"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIRepos10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIRepos10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIRepos10ComponentsO7SchemasO27contributor_hyphen_activityV",
+      "text" : "contributor_hyphen_activity"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIRepos10ComponentsO7SchemasO27contributor_hyphen_activityV12weeksPayloada",
+      "text" : "weeksPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Schemas\/contributor_hyphen_activity\/weeks",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "weeks",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/components\/schemas\/contributor_hyphen_activity\/weeks"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Components/Schemas/contributor_hyphen_activity/weeksPayload": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "weeksPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Schemas\/contributor_hyphen_activity\/weeksPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "weeksPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.contributor_hyphen_activity.weeksPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/components\/schemas\/contributor_hyphen_activity\/weekspayload"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Components/Schemas/contributor_hyphen_activity/weeksPayloadPayload": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "weeksPayloadPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Schemas\/contributor_hyphen_activity\/weeksPayloadPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "weeksPayloadPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.contributor_hyphen_activity.weeksPayloadPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/components\/schemas\/contributor_hyphen_activity\/weekspayloadpayload"
+},
+"doc://GitHubRestAPIRepos/s8SendableP": {
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/s8SendableP",
+  "title" : "Swift.Sendable",
+  "type" : "unresolvable"
+}
+}
+}

@@ -1,0 +1,458 @@
+{
+  "abstract" : [
+    {
+      "text" : "Response",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues",
+        "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Operations",
+        "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Operations\/issues_sol_add_hyphen_assignees",
+        "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Operations\/issues_sol_add_hyphen_assignees\/Output"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Operations\/issues_sol_add_hyphen_assignees\/Output\/created(_:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:19GitHubRestAPIIssues10OperationsO31issues_sol_add_hyphen_assigneesO6OutputO7createdyA2G7CreatedVcAGmF",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "case"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "created"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:19GitHubRestAPIIssues10OperationsO",
+        "text" : "Operations"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:19GitHubRestAPIIssues10OperationsO31issues_sol_add_hyphen_assigneesO",
+        "text" : "issues_sol_add_hyphen_assignees"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:19GitHubRestAPIIssues10OperationsO31issues_sol_add_hyphen_assigneesO6OutputO",
+        "text" : "Output"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:19GitHubRestAPIIssues10OperationsO31issues_sol_add_hyphen_assigneesO6OutputO7CreatedV",
+        "text" : "Created"
+      },
+      {
+        "kind" : "text",
+        "text" : ")"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIIssues"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/issues\/Types.swift#L12835"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Case",
+    "symbolKind" : "case",
+    "title" : "Operations.issues_sol_add_hyphen_assignees.Output.created(_:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "case"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "created"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Operations",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:19GitHubRestAPIIssues10OperationsO",
+              "text" : "Operations"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Operations\/issues_sol_add_hyphen_assignees",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:19GitHubRestAPIIssues10OperationsO31issues_sol_add_hyphen_assigneesO",
+              "text" : "issues_sol_add_hyphen_assignees"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Operations\/issues_sol_add_hyphen_assignees\/Output",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:19GitHubRestAPIIssues10OperationsO31issues_sol_add_hyphen_assigneesO6OutputO",
+              "text" : "Output"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Operations\/issues_sol_add_hyphen_assignees\/Output\/Created-swift.struct",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:19GitHubRestAPIIssues10OperationsO31issues_sol_add_hyphen_assigneesO6OutputO7CreatedV",
+              "text" : "Created"
+            },
+            {
+              "kind" : "text",
+              "text" : ")"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/paths\/\/repos\/{owner}\/{repo}\/issues\/{issue_number}\/assignees\/post(issues\/add-assignees)\/responses\/201",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "HTTP response code: ",
+              "type" : "text"
+            },
+            {
+              "code" : "201 created",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ".",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapiissues\/operations\/issues_sol_add_hyphen_assignees\/output\/created(_:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIIssues/documentation/GitHubRestAPIIssues": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIIssues",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiissues"
+},
+"doc://GitHubRestAPIIssues/documentation/GitHubRestAPIIssues/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiissues\/operations"
+},
+"doc://GitHubRestAPIIssues/documentation/GitHubRestAPIIssues/Operations/issues_sol_add_hyphen_assignees": {
+  "abstract" : [
+    {
+      "text" : "Add assignees to an issue",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "issues_sol_add_hyphen_assignees"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Operations\/issues_sol_add_hyphen_assignees",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "issues_sol_add_hyphen_assignees"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.issues_sol_add_hyphen_assignees",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiissues\/operations\/issues_sol_add_hyphen_assignees"
+},
+"doc://GitHubRestAPIIssues/documentation/GitHubRestAPIIssues/Operations/issues_sol_add_hyphen_assignees/Output": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Operations\/issues_sol_add_hyphen_assignees\/Output",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.issues_sol_add_hyphen_assignees.Output",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiissues\/operations\/issues_sol_add_hyphen_assignees\/output"
+},
+"doc://GitHubRestAPIIssues/documentation/GitHubRestAPIIssues/Operations/issues_sol_add_hyphen_assignees/Output/Created-swift.struct": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Created"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Operations\/issues_sol_add_hyphen_assignees\/Output\/Created-swift.struct",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Created"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.issues_sol_add_hyphen_assignees.Output.Created",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiissues\/operations\/issues_sol_add_hyphen_assignees\/output\/created-swift.struct"
+},
+"doc://GitHubRestAPIIssues/documentation/GitHubRestAPIIssues/Operations/issues_sol_add_hyphen_assignees/Output/created(_:)": {
+  "abstract" : [
+    {
+      "text" : "Response",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "created"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIIssues10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIIssues10OperationsO31issues_sol_add_hyphen_assigneesO",
+      "text" : "issues_sol_add_hyphen_assignees"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIIssues10OperationsO31issues_sol_add_hyphen_assigneesO6OutputO",
+      "text" : "Output"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIIssues10OperationsO31issues_sol_add_hyphen_assigneesO6OutputO7CreatedV",
+      "text" : "Created"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Operations\/issues_sol_add_hyphen_assignees\/Output\/created(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Operations.issues_sol_add_hyphen_assignees.Output.created(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiissues\/operations\/issues_sol_add_hyphen_assignees\/output\/created(_:)"
+}
+}
+}

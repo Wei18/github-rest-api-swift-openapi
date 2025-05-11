@@ -1,0 +1,875 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers",
+        "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Components",
+        "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Components\/Schemas",
+        "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Components\/Schemas\/gpg_hyphen_key",
+        "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Components\/Schemas\/gpg_hyphen_key\/subkeysPayloadPayload"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Components\/Schemas\/gpg_hyphen_key\/subkeysPayloadPayload\/CodingKeys"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:18GitHubRestAPIUsers10ComponentsO7SchemasO14gpg_hyphen_keyV014subkeysPayloadK0V10CodingKeysO",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "enum"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "CodingKeys"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIUsers"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "CodingKeys"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/users\/Types.swift#L2408"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Enumeration",
+    "symbolKind" : "enum",
+    "title" : "Components.Schemas.gpg_hyphen_key.subkeysPayloadPayload.CodingKeys"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "enum"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "CodingKeys"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIUsers\/s9CodingKeyP",
+        "doc:\/\/GitHubRestAPIUsers\/s28CustomDebugStringConvertibleP",
+        "doc:\/\/GitHubRestAPIUsers\/s23CustomStringConvertibleP",
+        "doc:\/\/GitHubRestAPIUsers\/SQ",
+        "doc:\/\/GitHubRestAPIUsers\/SH",
+        "doc:\/\/GitHubRestAPIUsers\/SY",
+        "doc:\/\/GitHubRestAPIUsers\/s8SendableP"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Components\/Schemas\/gpg_hyphen_key\/subkeysPayloadPayload\/CodingKeys\/can_certify",
+        "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Components\/Schemas\/gpg_hyphen_key\/subkeysPayloadPayload\/CodingKeys\/can_encrypt_comms",
+        "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Components\/Schemas\/gpg_hyphen_key\/subkeysPayloadPayload\/CodingKeys\/can_encrypt_storage",
+        "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Components\/Schemas\/gpg_hyphen_key\/subkeysPayloadPayload\/CodingKeys\/can_sign",
+        "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Components\/Schemas\/gpg_hyphen_key\/subkeysPayloadPayload\/CodingKeys\/created_at",
+        "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Components\/Schemas\/gpg_hyphen_key\/subkeysPayloadPayload\/CodingKeys\/emails",
+        "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Components\/Schemas\/gpg_hyphen_key\/subkeysPayloadPayload\/CodingKeys\/expires_at",
+        "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Components\/Schemas\/gpg_hyphen_key\/subkeysPayloadPayload\/CodingKeys\/id",
+        "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Components\/Schemas\/gpg_hyphen_key\/subkeysPayloadPayload\/CodingKeys\/key_id",
+        "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Components\/Schemas\/gpg_hyphen_key\/subkeysPayloadPayload\/CodingKeys\/primary_key_id",
+        "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Components\/Schemas\/gpg_hyphen_key\/subkeysPayloadPayload\/CodingKeys\/public_key",
+        "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Components\/Schemas\/gpg_hyphen_key\/subkeysPayloadPayload\/CodingKeys\/raw_key",
+        "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Components\/Schemas\/gpg_hyphen_key\/subkeysPayloadPayload\/CodingKeys\/revoked",
+        "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Components\/Schemas\/gpg_hyphen_key\/subkeysPayloadPayload\/CodingKeys\/subkeys"
+      ],
+      "title" : "Enumeration Cases"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Components\/Schemas\/gpg_hyphen_key\/subkeysPayloadPayload\/CodingKeys\/init(intValue:)",
+        "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Components\/Schemas\/gpg_hyphen_key\/subkeysPayloadPayload\/CodingKeys\/init(rawValue:)",
+        "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Components\/Schemas\/gpg_hyphen_key\/subkeysPayloadPayload\/CodingKeys\/init(stringValue:)"
+      ],
+      "title" : "Initializers"
+    },
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Components\/Schemas\/gpg_hyphen_key\/subkeysPayloadPayload\/CodingKeys\/CodingKey-Implementations",
+        "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Components\/Schemas\/gpg_hyphen_key\/subkeysPayloadPayload\/CodingKeys\/Equatable-Implementations",
+        "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Components\/Schemas\/gpg_hyphen_key\/subkeysPayloadPayload\/CodingKeys\/RawRepresentable-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapiusers\/components\/schemas\/gpg_hyphen_key\/subkeyspayloadpayload\/codingkeys"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIUsers/SH": {
+  "identifier" : "doc:\/\/GitHubRestAPIUsers\/SH",
+  "title" : "Swift.Hashable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIUsers/SQ": {
+  "identifier" : "doc:\/\/GitHubRestAPIUsers\/SQ",
+  "title" : "Swift.Equatable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIUsers/SY": {
+  "identifier" : "doc:\/\/GitHubRestAPIUsers\/SY",
+  "title" : "Swift.RawRepresentable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIUsers/documentation/GitHubRestAPIUsers": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIUsers",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiusers"
+},
+"doc://GitHubRestAPIUsers/documentation/GitHubRestAPIUsers/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiusers\/components"
+},
+"doc://GitHubRestAPIUsers/documentation/GitHubRestAPIUsers/Components/Schemas": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/schemas",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Components\/Schemas",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiusers\/components\/schemas"
+},
+"doc://GitHubRestAPIUsers/documentation/GitHubRestAPIUsers/Components/Schemas/gpg_hyphen_key": {
+  "abstract" : [
+    {
+      "text" : "A unique encryption key",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "gpg_hyphen_key"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Components\/Schemas\/gpg_hyphen_key",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "gpg_hyphen_key"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.gpg_hyphen_key",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiusers\/components\/schemas\/gpg_hyphen_key"
+},
+"doc://GitHubRestAPIUsers/documentation/GitHubRestAPIUsers/Components/Schemas/gpg_hyphen_key/subkeysPayloadPayload": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "subkeysPayloadPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Components\/Schemas\/gpg_hyphen_key\/subkeysPayloadPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "subkeysPayloadPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.gpg_hyphen_key.subkeysPayloadPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiusers\/components\/schemas\/gpg_hyphen_key\/subkeyspayloadpayload"
+},
+"doc://GitHubRestAPIUsers/documentation/GitHubRestAPIUsers/Components/Schemas/gpg_hyphen_key/subkeysPayloadPayload/CodingKeys": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Components\/Schemas\/gpg_hyphen_key\/subkeysPayloadPayload\/CodingKeys",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.gpg_hyphen_key.subkeysPayloadPayload.CodingKeys",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiusers\/components\/schemas\/gpg_hyphen_key\/subkeyspayloadpayload\/codingkeys"
+},
+"doc://GitHubRestAPIUsers/documentation/GitHubRestAPIUsers/Components/Schemas/gpg_hyphen_key/subkeysPayloadPayload/CodingKeys/CodingKey-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Components\/Schemas\/gpg_hyphen_key\/subkeysPayloadPayload\/CodingKeys\/CodingKey-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "CodingKey Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiusers\/components\/schemas\/gpg_hyphen_key\/subkeyspayloadpayload\/codingkeys\/codingkey-implementations"
+},
+"doc://GitHubRestAPIUsers/documentation/GitHubRestAPIUsers/Components/Schemas/gpg_hyphen_key/subkeysPayloadPayload/CodingKeys/Equatable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Components\/Schemas\/gpg_hyphen_key\/subkeysPayloadPayload\/CodingKeys\/Equatable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Equatable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiusers\/components\/schemas\/gpg_hyphen_key\/subkeyspayloadpayload\/codingkeys\/equatable-implementations"
+},
+"doc://GitHubRestAPIUsers/documentation/GitHubRestAPIUsers/Components/Schemas/gpg_hyphen_key/subkeysPayloadPayload/CodingKeys/RawRepresentable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Components\/Schemas\/gpg_hyphen_key\/subkeysPayloadPayload\/CodingKeys\/RawRepresentable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "RawRepresentable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiusers\/components\/schemas\/gpg_hyphen_key\/subkeyspayloadpayload\/codingkeys\/rawrepresentable-implementations"
+},
+"doc://GitHubRestAPIUsers/documentation/GitHubRestAPIUsers/Components/Schemas/gpg_hyphen_key/subkeysPayloadPayload/CodingKeys/can_certify": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "can_certify"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Components\/Schemas\/gpg_hyphen_key\/subkeysPayloadPayload\/CodingKeys\/can_certify",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.gpg_hyphen_key.subkeysPayloadPayload.CodingKeys.can_certify",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiusers\/components\/schemas\/gpg_hyphen_key\/subkeyspayloadpayload\/codingkeys\/can_certify"
+},
+"doc://GitHubRestAPIUsers/documentation/GitHubRestAPIUsers/Components/Schemas/gpg_hyphen_key/subkeysPayloadPayload/CodingKeys/can_encrypt_comms": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "can_encrypt_comms"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Components\/Schemas\/gpg_hyphen_key\/subkeysPayloadPayload\/CodingKeys\/can_encrypt_comms",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.gpg_hyphen_key.subkeysPayloadPayload.CodingKeys.can_encrypt_comms",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiusers\/components\/schemas\/gpg_hyphen_key\/subkeyspayloadpayload\/codingkeys\/can_encrypt_comms"
+},
+"doc://GitHubRestAPIUsers/documentation/GitHubRestAPIUsers/Components/Schemas/gpg_hyphen_key/subkeysPayloadPayload/CodingKeys/can_encrypt_storage": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "can_encrypt_storage"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Components\/Schemas\/gpg_hyphen_key\/subkeysPayloadPayload\/CodingKeys\/can_encrypt_storage",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.gpg_hyphen_key.subkeysPayloadPayload.CodingKeys.can_encrypt_storage",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiusers\/components\/schemas\/gpg_hyphen_key\/subkeyspayloadpayload\/codingkeys\/can_encrypt_storage"
+},
+"doc://GitHubRestAPIUsers/documentation/GitHubRestAPIUsers/Components/Schemas/gpg_hyphen_key/subkeysPayloadPayload/CodingKeys/can_sign": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "can_sign"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Components\/Schemas\/gpg_hyphen_key\/subkeysPayloadPayload\/CodingKeys\/can_sign",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.gpg_hyphen_key.subkeysPayloadPayload.CodingKeys.can_sign",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiusers\/components\/schemas\/gpg_hyphen_key\/subkeyspayloadpayload\/codingkeys\/can_sign"
+},
+"doc://GitHubRestAPIUsers/documentation/GitHubRestAPIUsers/Components/Schemas/gpg_hyphen_key/subkeysPayloadPayload/CodingKeys/created_at": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "created_at"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Components\/Schemas\/gpg_hyphen_key\/subkeysPayloadPayload\/CodingKeys\/created_at",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.gpg_hyphen_key.subkeysPayloadPayload.CodingKeys.created_at",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiusers\/components\/schemas\/gpg_hyphen_key\/subkeyspayloadpayload\/codingkeys\/created_at"
+},
+"doc://GitHubRestAPIUsers/documentation/GitHubRestAPIUsers/Components/Schemas/gpg_hyphen_key/subkeysPayloadPayload/CodingKeys/emails": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "emails"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Components\/Schemas\/gpg_hyphen_key\/subkeysPayloadPayload\/CodingKeys\/emails",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.gpg_hyphen_key.subkeysPayloadPayload.CodingKeys.emails",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiusers\/components\/schemas\/gpg_hyphen_key\/subkeyspayloadpayload\/codingkeys\/emails"
+},
+"doc://GitHubRestAPIUsers/documentation/GitHubRestAPIUsers/Components/Schemas/gpg_hyphen_key/subkeysPayloadPayload/CodingKeys/expires_at": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "expires_at"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Components\/Schemas\/gpg_hyphen_key\/subkeysPayloadPayload\/CodingKeys\/expires_at",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.gpg_hyphen_key.subkeysPayloadPayload.CodingKeys.expires_at",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiusers\/components\/schemas\/gpg_hyphen_key\/subkeyspayloadpayload\/codingkeys\/expires_at"
+},
+"doc://GitHubRestAPIUsers/documentation/GitHubRestAPIUsers/Components/Schemas/gpg_hyphen_key/subkeysPayloadPayload/CodingKeys/id": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "id"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Components\/Schemas\/gpg_hyphen_key\/subkeysPayloadPayload\/CodingKeys\/id",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.gpg_hyphen_key.subkeysPayloadPayload.CodingKeys.id",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiusers\/components\/schemas\/gpg_hyphen_key\/subkeyspayloadpayload\/codingkeys\/id"
+},
+"doc://GitHubRestAPIUsers/documentation/GitHubRestAPIUsers/Components/Schemas/gpg_hyphen_key/subkeysPayloadPayload/CodingKeys/init(intValue:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "?("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "intValue"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Components\/Schemas\/gpg_hyphen_key\/subkeysPayloadPayload\/CodingKeys\/init(intValue:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(intValue:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiusers\/components\/schemas\/gpg_hyphen_key\/subkeyspayloadpayload\/codingkeys\/init(intvalue:)"
+},
+"doc://GitHubRestAPIUsers/documentation/GitHubRestAPIUsers/Components/Schemas/gpg_hyphen_key/subkeysPayloadPayload/CodingKeys/init(rawValue:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "?("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "rawValue"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Components\/Schemas\/gpg_hyphen_key\/subkeysPayloadPayload\/CodingKeys\/init(rawValue:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(rawValue:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiusers\/components\/schemas\/gpg_hyphen_key\/subkeyspayloadpayload\/codingkeys\/init(rawvalue:)"
+},
+"doc://GitHubRestAPIUsers/documentation/GitHubRestAPIUsers/Components/Schemas/gpg_hyphen_key/subkeysPayloadPayload/CodingKeys/init(stringValue:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "?("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "stringValue"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Components\/Schemas\/gpg_hyphen_key\/subkeysPayloadPayload\/CodingKeys\/init(stringValue:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(stringValue:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiusers\/components\/schemas\/gpg_hyphen_key\/subkeyspayloadpayload\/codingkeys\/init(stringvalue:)"
+},
+"doc://GitHubRestAPIUsers/documentation/GitHubRestAPIUsers/Components/Schemas/gpg_hyphen_key/subkeysPayloadPayload/CodingKeys/key_id": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "key_id"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Components\/Schemas\/gpg_hyphen_key\/subkeysPayloadPayload\/CodingKeys\/key_id",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.gpg_hyphen_key.subkeysPayloadPayload.CodingKeys.key_id",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiusers\/components\/schemas\/gpg_hyphen_key\/subkeyspayloadpayload\/codingkeys\/key_id"
+},
+"doc://GitHubRestAPIUsers/documentation/GitHubRestAPIUsers/Components/Schemas/gpg_hyphen_key/subkeysPayloadPayload/CodingKeys/primary_key_id": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "primary_key_id"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Components\/Schemas\/gpg_hyphen_key\/subkeysPayloadPayload\/CodingKeys\/primary_key_id",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.gpg_hyphen_key.subkeysPayloadPayload.CodingKeys.primary_key_id",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiusers\/components\/schemas\/gpg_hyphen_key\/subkeyspayloadpayload\/codingkeys\/primary_key_id"
+},
+"doc://GitHubRestAPIUsers/documentation/GitHubRestAPIUsers/Components/Schemas/gpg_hyphen_key/subkeysPayloadPayload/CodingKeys/public_key": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "public_key"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Components\/Schemas\/gpg_hyphen_key\/subkeysPayloadPayload\/CodingKeys\/public_key",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.gpg_hyphen_key.subkeysPayloadPayload.CodingKeys.public_key",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiusers\/components\/schemas\/gpg_hyphen_key\/subkeyspayloadpayload\/codingkeys\/public_key"
+},
+"doc://GitHubRestAPIUsers/documentation/GitHubRestAPIUsers/Components/Schemas/gpg_hyphen_key/subkeysPayloadPayload/CodingKeys/raw_key": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "raw_key"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Components\/Schemas\/gpg_hyphen_key\/subkeysPayloadPayload\/CodingKeys\/raw_key",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.gpg_hyphen_key.subkeysPayloadPayload.CodingKeys.raw_key",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiusers\/components\/schemas\/gpg_hyphen_key\/subkeyspayloadpayload\/codingkeys\/raw_key"
+},
+"doc://GitHubRestAPIUsers/documentation/GitHubRestAPIUsers/Components/Schemas/gpg_hyphen_key/subkeysPayloadPayload/CodingKeys/revoked": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "revoked"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Components\/Schemas\/gpg_hyphen_key\/subkeysPayloadPayload\/CodingKeys\/revoked",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.gpg_hyphen_key.subkeysPayloadPayload.CodingKeys.revoked",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiusers\/components\/schemas\/gpg_hyphen_key\/subkeyspayloadpayload\/codingkeys\/revoked"
+},
+"doc://GitHubRestAPIUsers/documentation/GitHubRestAPIUsers/Components/Schemas/gpg_hyphen_key/subkeysPayloadPayload/CodingKeys/subkeys": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "subkeys"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Components\/Schemas\/gpg_hyphen_key\/subkeysPayloadPayload\/CodingKeys\/subkeys",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.gpg_hyphen_key.subkeysPayloadPayload.CodingKeys.subkeys",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiusers\/components\/schemas\/gpg_hyphen_key\/subkeyspayloadpayload\/codingkeys\/subkeys"
+},
+"doc://GitHubRestAPIUsers/s23CustomStringConvertibleP": {
+  "identifier" : "doc:\/\/GitHubRestAPIUsers\/s23CustomStringConvertibleP",
+  "title" : "Swift.CustomStringConvertible",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIUsers/s28CustomDebugStringConvertibleP": {
+  "identifier" : "doc:\/\/GitHubRestAPIUsers\/s28CustomDebugStringConvertibleP",
+  "title" : "Swift.CustomDebugStringConvertible",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIUsers/s8SendableP": {
+  "identifier" : "doc:\/\/GitHubRestAPIUsers\/s8SendableP",
+  "title" : "Swift.Sendable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIUsers/s9CodingKeyP": {
+  "identifier" : "doc:\/\/GitHubRestAPIUsers\/s9CodingKeyP",
+  "title" : "Swift.CodingKey",
+  "type" : "unresolvable"
+}
+}
+}

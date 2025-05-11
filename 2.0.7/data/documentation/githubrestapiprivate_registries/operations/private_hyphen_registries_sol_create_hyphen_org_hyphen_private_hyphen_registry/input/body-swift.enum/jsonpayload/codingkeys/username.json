@@ -1,0 +1,338 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries",
+        "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries\/Operations",
+        "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries\/Operations\/private_hyphen_registries_sol_create_hyphen_org_hyphen_private_hyphen_registry",
+        "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries\/Operations\/private_hyphen_registries_sol_create_hyphen_org_hyphen_private_hyphen_registry\/Input",
+        "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries\/Operations\/private_hyphen_registries_sol_create_hyphen_org_hyphen_private_hyphen_registry\/Input\/Body-swift.enum",
+        "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries\/Operations\/private_hyphen_registries_sol_create_hyphen_org_hyphen_private_hyphen_registry\/Input\/Body-swift.enum\/jsonPayload",
+        "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries\/Operations\/private_hyphen_registries_sol_create_hyphen_org_hyphen_private_hyphen_registry\/Input\/Body-swift.enum\/jsonPayload\/CodingKeys"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries\/Operations\/private_hyphen_registries_sol_create_hyphen_org_hyphen_private_hyphen_registry\/Input\/Body-swift.enum\/jsonPayload\/CodingKeys\/username"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:31GitHubRestAPIPrivate_Registries10OperationsO037private_hyphen_registries_sol_create_h5_org_h1_g1_H9_registryO5InputV4BodyO11jsonPayloadV10CodingKeysO8usernameyA2MmF",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "case"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "username"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIPrivate_Registries"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/private-registries\/Types.swift#L1086"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Case",
+    "symbolKind" : "case",
+    "title" : "Operations.private_hyphen_registries_sol_create_hyphen_org_hyphen_private_hyphen_registry.Input.Body.jsonPayload.CodingKeys.username"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "case"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "username"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapiprivate_registries\/operations\/private_hyphen_registries_sol_create_hyphen_org_hyphen_private_hyphen_registry\/input\/body-swift.enum\/jsonpayload\/codingkeys\/username"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIPrivate_Registries/documentation/GitHubRestAPIPrivate_Registries": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIPrivate_Registries",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiprivate_registries"
+},
+"doc://GitHubRestAPIPrivate_Registries/documentation/GitHubRestAPIPrivate_Registries/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiprivate_registries\/operations"
+},
+"doc://GitHubRestAPIPrivate_Registries/documentation/GitHubRestAPIPrivate_Registries/Operations/private_hyphen_registries_sol_create_hyphen_org_hyphen_private_hyphen_registry": {
+  "abstract" : [
+    {
+      "text" : "Create a private registry for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "private_hyphen_registries_sol_create_hyphen_org_hyphen_private_hyphen_registry"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries\/Operations\/private_hyphen_registries_sol_create_hyphen_org_hyphen_private_hyphen_registry",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "private_hyphen_registries_sol_create_hyphen_org_hyphen_private_hyphen_registry"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.private_hyphen_registries_sol_create_hyphen_org_hyphen_private_hyphen_registry",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiprivate_registries\/operations\/private_hyphen_registries_sol_create_hyphen_org_hyphen_private_hyphen_registry"
+},
+"doc://GitHubRestAPIPrivate_Registries/documentation/GitHubRestAPIPrivate_Registries/Operations/private_hyphen_registries_sol_create_hyphen_org_hyphen_private_hyphen_registry/Input": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries\/Operations\/private_hyphen_registries_sol_create_hyphen_org_hyphen_private_hyphen_registry\/Input",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.private_hyphen_registries_sol_create_hyphen_org_hyphen_private_hyphen_registry.Input",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiprivate_registries\/operations\/private_hyphen_registries_sol_create_hyphen_org_hyphen_private_hyphen_registry\/input"
+},
+"doc://GitHubRestAPIPrivate_Registries/documentation/GitHubRestAPIPrivate_Registries/Operations/private_hyphen_registries_sol_create_hyphen_org_hyphen_private_hyphen_registry/Input/Body-swift.enum": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Body"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries\/Operations\/private_hyphen_registries_sol_create_hyphen_org_hyphen_private_hyphen_registry\/Input\/Body-swift.enum",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Body"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.private_hyphen_registries_sol_create_hyphen_org_hyphen_private_hyphen_registry.Input.Body",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiprivate_registries\/operations\/private_hyphen_registries_sol_create_hyphen_org_hyphen_private_hyphen_registry\/input\/body-swift.enum"
+},
+"doc://GitHubRestAPIPrivate_Registries/documentation/GitHubRestAPIPrivate_Registries/Operations/private_hyphen_registries_sol_create_hyphen_org_hyphen_private_hyphen_registry/Input/Body-swift.enum/jsonPayload": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "jsonPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries\/Operations\/private_hyphen_registries_sol_create_hyphen_org_hyphen_private_hyphen_registry\/Input\/Body-swift.enum\/jsonPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "jsonPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.private_hyphen_registries_sol_create_hyphen_org_hyphen_private_hyphen_registry.Input.Body.jsonPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiprivate_registries\/operations\/private_hyphen_registries_sol_create_hyphen_org_hyphen_private_hyphen_registry\/input\/body-swift.enum\/jsonpayload"
+},
+"doc://GitHubRestAPIPrivate_Registries/documentation/GitHubRestAPIPrivate_Registries/Operations/private_hyphen_registries_sol_create_hyphen_org_hyphen_private_hyphen_registry/Input/Body-swift.enum/jsonPayload/CodingKeys": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries\/Operations\/private_hyphen_registries_sol_create_hyphen_org_hyphen_private_hyphen_registry\/Input\/Body-swift.enum\/jsonPayload\/CodingKeys",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.private_hyphen_registries_sol_create_hyphen_org_hyphen_private_hyphen_registry.Input.Body.jsonPayload.CodingKeys",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiprivate_registries\/operations\/private_hyphen_registries_sol_create_hyphen_org_hyphen_private_hyphen_registry\/input\/body-swift.enum\/jsonpayload\/codingkeys"
+},
+"doc://GitHubRestAPIPrivate_Registries/documentation/GitHubRestAPIPrivate_Registries/Operations/private_hyphen_registries_sol_create_hyphen_org_hyphen_private_hyphen_registry/Input/Body-swift.enum/jsonPayload/CodingKeys/username": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "username"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries\/Operations\/private_hyphen_registries_sol_create_hyphen_org_hyphen_private_hyphen_registry\/Input\/Body-swift.enum\/jsonPayload\/CodingKeys\/username",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Operations.private_hyphen_registries_sol_create_hyphen_org_hyphen_private_hyphen_registry.Input.Body.jsonPayload.CodingKeys.username",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiprivate_registries\/operations\/private_hyphen_registries_sol_create_hyphen_org_hyphen_private_hyphen_registry\/input\/body-swift.enum\/jsonpayload\/codingkeys\/username"
+}
+}
+}

@@ -1,0 +1,260 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPILicenses\/documentation\/GitHubRestAPILicenses"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "GitHubRestAPILicenses",
+    "modules" : [
+      {
+        "name" : "GitHubRestAPILicenses"
+      }
+    ],
+    "role" : "collection",
+    "roleHeading" : "Framework",
+    "symbolKind" : "module",
+    "title" : "GitHubRestAPILicenses"
+  },
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPILicenses\/documentation\/GitHubRestAPILicenses\/APIProtocol"
+      ],
+      "title" : "Protocols"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPILicenses\/documentation\/GitHubRestAPILicenses\/Client"
+      ],
+      "title" : "Structures"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPILicenses\/documentation\/GitHubRestAPILicenses\/Components",
+        "doc:\/\/GitHubRestAPILicenses\/documentation\/GitHubRestAPILicenses\/Operations",
+        "doc:\/\/GitHubRestAPILicenses\/documentation\/GitHubRestAPILicenses\/Servers"
+      ],
+      "title" : "Enumerations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapilicenses"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPILicenses/documentation/GitHubRestAPILicenses": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPILicenses\/documentation\/GitHubRestAPILicenses",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPILicenses",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapilicenses"
+},
+"doc://GitHubRestAPILicenses/documentation/GitHubRestAPILicenses/APIProtocol": {
+  "abstract" : [
+    {
+      "text" : "A type that performs HTTP operations defined by the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "protocol"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "APIProtocol"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPILicenses\/documentation\/GitHubRestAPILicenses\/APIProtocol",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "APIProtocol"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "APIProtocol",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapilicenses\/apiprotocol"
+},
+"doc://GitHubRestAPILicenses/documentation/GitHubRestAPILicenses/Client": {
+  "abstract" : [
+    {
+      "text" : "GitHub’s v3 REST API.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Client"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPILicenses\/documentation\/GitHubRestAPILicenses\/Client",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Client"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Client",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapilicenses\/client"
+},
+"doc://GitHubRestAPILicenses/documentation/GitHubRestAPILicenses/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPILicenses\/documentation\/GitHubRestAPILicenses\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapilicenses\/components"
+},
+"doc://GitHubRestAPILicenses/documentation/GitHubRestAPILicenses/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPILicenses\/documentation\/GitHubRestAPILicenses\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapilicenses\/operations"
+},
+"doc://GitHubRestAPILicenses/documentation/GitHubRestAPILicenses/Servers": {
+  "abstract" : [
+    {
+      "text" : "Server URLs defined in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Servers"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPILicenses\/documentation\/GitHubRestAPILicenses\/Servers",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Servers"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Servers",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapilicenses\/servers"
+}
+}
+}

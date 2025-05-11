@@ -1,0 +1,875 @@
+{
+  "abstract" : [
+    {
+      "text" : "Download a user migration archive",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations",
+        "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/APIProtocol"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/APIProtocol\/migrations_sol_get_hyphen_archive_hyphen_for_hyphen_authenticated_hyphen_user(_:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:23GitHubRestAPIMigrations11APIProtocolP034migrations_sol_get_hyphen_archive_i5_for_i15_authenticated_I5_useryAA10OperationsOADO6OutputOAG5InputVYaKF",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "func"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "migrations_sol_get_hyphen_archive_hyphen_for_hyphen_authenticated_hyphen_user"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:23GitHubRestAPIMigrations10OperationsO",
+        "text" : "Operations"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:23GitHubRestAPIMigrations10OperationsO034migrations_sol_get_hyphen_archive_i5_for_i15_authenticated_I5_userO",
+        "text" : "migrations_sol_get_hyphen_archive_hyphen_for_hyphen_authenticated_hyphen_user"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:23GitHubRestAPIMigrations10OperationsO034migrations_sol_get_hyphen_archive_i5_for_i15_authenticated_I5_userO5InputV",
+        "text" : "Input"
+      },
+      {
+        "kind" : "text",
+        "text" : ") "
+      },
+      {
+        "kind" : "keyword",
+        "text" : "async"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "keyword",
+        "text" : "throws"
+      },
+      {
+        "kind" : "text",
+        "text" : " -> "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:23GitHubRestAPIMigrations10OperationsO",
+        "text" : "Operations"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:23GitHubRestAPIMigrations10OperationsO034migrations_sol_get_hyphen_archive_i5_for_i15_authenticated_I5_userO",
+        "text" : "migrations_sol_get_hyphen_archive_hyphen_for_hyphen_authenticated_hyphen_user"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:23GitHubRestAPIMigrations10OperationsO034migrations_sol_get_hyphen_archive_i5_for_i15_authenticated_I5_userO6OutputO",
+        "text" : "Output"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIMigrations"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/migrations\/Types.swift#L261"
+    },
+    "required" : true,
+    "role" : "symbol",
+    "roleHeading" : "Instance Method",
+    "symbolKind" : "method",
+    "title" : "migrations_sol_get_hyphen_archive_hyphen_for_hyphen_authenticated_hyphen_user(_:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "func"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "migrations_sol_get_hyphen_archive_hyphen_for_hyphen_authenticated_hyphen_user"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "_"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "internalParam",
+              "text" : "input"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Operations",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:23GitHubRestAPIMigrations10OperationsO",
+              "text" : "Operations"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Operations\/migrations_sol_get_hyphen_archive_hyphen_for_hyphen_authenticated_hyphen_user",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:23GitHubRestAPIMigrations10OperationsO034migrations_sol_get_hyphen_archive_i5_for_i15_authenticated_I5_userO",
+              "text" : "migrations_sol_get_hyphen_archive_hyphen_for_hyphen_authenticated_hyphen_user"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Operations\/migrations_sol_get_hyphen_archive_hyphen_for_hyphen_authenticated_hyphen_user\/Input",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:23GitHubRestAPIMigrations10OperationsO034migrations_sol_get_hyphen_archive_i5_for_i15_authenticated_I5_userO5InputV",
+              "text" : "Input"
+            },
+            {
+              "kind" : "text",
+              "text" : ") "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "async"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "throws"
+            },
+            {
+              "kind" : "text",
+              "text" : " -> "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Operations",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:23GitHubRestAPIMigrations10OperationsO",
+              "text" : "Operations"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Operations\/migrations_sol_get_hyphen_archive_hyphen_for_hyphen_authenticated_hyphen_user",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:23GitHubRestAPIMigrations10OperationsO034migrations_sol_get_hyphen_archive_i5_for_i15_authenticated_I5_userO",
+              "text" : "migrations_sol_get_hyphen_archive_hyphen_for_hyphen_authenticated_hyphen_user"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Operations\/migrations_sol_get_hyphen_archive_hyphen_for_hyphen_authenticated_hyphen_user\/Output",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:23GitHubRestAPIMigrations10OperationsO034migrations_sol_get_hyphen_archive_i5_for_i15_authenticated_I5_userO6OutputO",
+              "text" : "Output"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Fetches the URL to download the migration archive as a ",
+              "type" : "text"
+            },
+            {
+              "code" : "tar.gz",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " file. Depending on the resources your repository uses, the migration archive can contain JSON files with data for these objects:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "items" : [
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "attachments",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            },
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "bases",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            },
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "commit_comments",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            },
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "issue_comments",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            },
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "issue_events",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            },
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "issues",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            },
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "milestones",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            },
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "organizations",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            },
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "projects",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            },
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "protected_branches",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            },
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "pull_request_reviews",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            },
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "pull_requests",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            },
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "releases",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            },
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "repositories",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            },
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "review_comments",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            },
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "schema",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            },
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "users",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            }
+          ],
+          "type" : "unorderedList"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "The archive will also contain an ",
+              "type" : "text"
+            },
+            {
+              "code" : "attachments",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " directory that includes all attachment files uploaded to GitHub.com and a ",
+              "type" : "text"
+            },
+            {
+              "code" : "repositories",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " directory that contains the repository’s Git data.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "HTTP ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "GET \/user\/migrations\/{migration_id}\/archive",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/paths\/\/user\/migrations\/{migration_id}\/archive\/get(migrations\/get-archive-for-authenticated-user)",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapimigrations\/apiprotocol\/migrations_sol_get_hyphen_archive_hyphen_for_hyphen_authenticated_hyphen_user(_:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIMigrations/documentation/GitHubRestAPIMigrations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIMigrations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimigrations"
+},
+"doc://GitHubRestAPIMigrations/documentation/GitHubRestAPIMigrations/APIProtocol": {
+  "abstract" : [
+    {
+      "text" : "A type that performs HTTP operations defined by the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "protocol"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "APIProtocol"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/APIProtocol",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "APIProtocol"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "APIProtocol",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimigrations\/apiprotocol"
+},
+"doc://GitHubRestAPIMigrations/documentation/GitHubRestAPIMigrations/APIProtocol/migrations_sol_get_hyphen_archive_hyphen_for_hyphen_authenticated_hyphen_user(_:)": {
+  "abstract" : [
+    {
+      "text" : "Download a user migration archive",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "migrations_sol_get_hyphen_archive_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIMigrations10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIMigrations10OperationsO034migrations_sol_get_hyphen_archive_i5_for_i15_authenticated_I5_userO",
+      "text" : "migrations_sol_get_hyphen_archive_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIMigrations10OperationsO034migrations_sol_get_hyphen_archive_i5_for_i15_authenticated_I5_userO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIMigrations10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIMigrations10OperationsO034migrations_sol_get_hyphen_archive_i5_for_i15_authenticated_I5_userO",
+      "text" : "migrations_sol_get_hyphen_archive_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIMigrations10OperationsO034migrations_sol_get_hyphen_archive_i5_for_i15_authenticated_I5_userO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/APIProtocol\/migrations_sol_get_hyphen_archive_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+  "kind" : "symbol",
+  "required" : true,
+  "role" : "symbol",
+  "title" : "migrations_sol_get_hyphen_archive_hyphen_for_hyphen_authenticated_hyphen_user(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimigrations\/apiprotocol\/migrations_sol_get_hyphen_archive_hyphen_for_hyphen_authenticated_hyphen_user(_:)"
+},
+"doc://GitHubRestAPIMigrations/documentation/GitHubRestAPIMigrations/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimigrations\/operations"
+},
+"doc://GitHubRestAPIMigrations/documentation/GitHubRestAPIMigrations/Operations/migrations_sol_get_hyphen_archive_hyphen_for_hyphen_authenticated_hyphen_user": {
+  "abstract" : [
+    {
+      "text" : "Download a user migration archive",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "migrations_sol_get_hyphen_archive_hyphen_for_hyphen_authenticated_hyphen_user"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Operations\/migrations_sol_get_hyphen_archive_hyphen_for_hyphen_authenticated_hyphen_user",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "migrations_sol_get_hyphen_archive_hyphen_for_hyphen_authenticated_hyphen_user"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.migrations_sol_get_hyphen_archive_hyphen_for_hyphen_authenticated_hyphen_user",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimigrations\/operations\/migrations_sol_get_hyphen_archive_hyphen_for_hyphen_authenticated_hyphen_user"
+},
+"doc://GitHubRestAPIMigrations/documentation/GitHubRestAPIMigrations/Operations/migrations_sol_get_hyphen_archive_hyphen_for_hyphen_authenticated_hyphen_user/Input": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Operations\/migrations_sol_get_hyphen_archive_hyphen_for_hyphen_authenticated_hyphen_user\/Input",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.migrations_sol_get_hyphen_archive_hyphen_for_hyphen_authenticated_hyphen_user.Input",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimigrations\/operations\/migrations_sol_get_hyphen_archive_hyphen_for_hyphen_authenticated_hyphen_user\/input"
+},
+"doc://GitHubRestAPIMigrations/documentation/GitHubRestAPIMigrations/Operations/migrations_sol_get_hyphen_archive_hyphen_for_hyphen_authenticated_hyphen_user/Output": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Operations\/migrations_sol_get_hyphen_archive_hyphen_for_hyphen_authenticated_hyphen_user\/Output",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.migrations_sol_get_hyphen_archive_hyphen_for_hyphen_authenticated_hyphen_user.Output",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimigrations\/operations\/migrations_sol_get_hyphen_archive_hyphen_for_hyphen_authenticated_hyphen_user\/output"
+}
+}
+}

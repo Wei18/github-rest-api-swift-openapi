@@ -1,0 +1,300 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIClassroom\/documentation\/GitHubRestAPIClassroom",
+        "doc:\/\/GitHubRestAPIClassroom\/documentation\/GitHubRestAPIClassroom\/Components",
+        "doc:\/\/GitHubRestAPIClassroom\/documentation\/GitHubRestAPIClassroom\/Components\/Schemas",
+        "doc:\/\/GitHubRestAPIClassroom\/documentation\/GitHubRestAPIClassroom\/Components\/Schemas\/simple_hyphen_classroom_hyphen_repository"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIClassroom\/documentation\/GitHubRestAPIClassroom\/Components\/Schemas\/simple_hyphen_classroom_hyphen_repository\/init(from:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:22GitHubRestAPIClassroom10ComponentsO7SchemasO024simple_hyphen_classroom_H11_repositoryV4fromAGs7Decoder_p_tKcfc",
+    "fragments" : [
+      {
+        "kind" : "identifier",
+        "text" : "init"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "from"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:s7DecoderP",
+        "text" : "Decoder"
+      },
+      {
+        "kind" : "text",
+        "text" : ") "
+      },
+      {
+        "kind" : "keyword",
+        "text" : "throws"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIClassroom"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Initializer",
+    "symbolKind" : "init",
+    "title" : "init(from:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "init"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "from"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "internalParam",
+              "text" : "decoder"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:s7DecoderP",
+              "text" : "Decoder"
+            },
+            {
+              "kind" : "text",
+              "text" : ") "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "throws"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapiclassroom\/components\/schemas\/simple_hyphen_classroom_hyphen_repository\/init(from:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIClassroom/documentation/GitHubRestAPIClassroom": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIClassroom\/documentation\/GitHubRestAPIClassroom",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIClassroom",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiclassroom"
+},
+"doc://GitHubRestAPIClassroom/documentation/GitHubRestAPIClassroom/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIClassroom\/documentation\/GitHubRestAPIClassroom\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiclassroom\/components"
+},
+"doc://GitHubRestAPIClassroom/documentation/GitHubRestAPIClassroom/Components/Schemas": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/schemas",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIClassroom\/documentation\/GitHubRestAPIClassroom\/Components\/Schemas",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiclassroom\/components\/schemas"
+},
+"doc://GitHubRestAPIClassroom/documentation/GitHubRestAPIClassroom/Components/Schemas/simple_hyphen_classroom_hyphen_repository": {
+  "abstract" : [
+    {
+      "text" : "A GitHub repository view for Classroom",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "simple_hyphen_classroom_hyphen_repository"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIClassroom\/documentation\/GitHubRestAPIClassroom\/Components\/Schemas\/simple_hyphen_classroom_hyphen_repository",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "simple_hyphen_classroom_hyphen_repository"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.simple_hyphen_classroom_hyphen_repository",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiclassroom\/components\/schemas\/simple_hyphen_classroom_hyphen_repository"
+},
+"doc://GitHubRestAPIClassroom/documentation/GitHubRestAPIClassroom/Components/Schemas/simple_hyphen_classroom_hyphen_repository/init(from:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "from"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:s7DecoderP",
+      "text" : "Decoder"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIClassroom\/documentation\/GitHubRestAPIClassroom\/Components\/Schemas\/simple_hyphen_classroom_hyphen_repository\/init(from:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(from:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiclassroom\/components\/schemas\/simple_hyphen_classroom_hyphen_repository\/init(from:)"
+}
+}
+}

@@ -1,0 +1,422 @@
+{
+  "abstract" : [
+    {
+      "text" : "Creates a new ",
+      "type" : "text"
+    },
+    {
+      "code" : "cvss_v4Payload",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot",
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Components",
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Components\/Schemas",
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Components\/Schemas\/cvss_hyphen_severities",
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Components\/Schemas\/cvss_hyphen_severities\/cvss_v4Payload"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Components\/Schemas\/cvss_hyphen_severities\/cvss_v4Payload\/init(vector_string:score:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:23GitHubRestAPIDependabot10ComponentsO7SchemasO22cvss_hyphen_severitiesV0G10_v4PayloadV13vector_string5scoreAISSSg_SdSgtcfc",
+    "fragments" : [
+      {
+        "kind" : "identifier",
+        "text" : "init"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "vector_string"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SS",
+        "text" : "String"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "score"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:Sd",
+        "text" : "Double"
+      },
+      {
+        "kind" : "text",
+        "text" : "?)"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIDependabot"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/dependabot\/Types.swift#L609"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Initializer",
+    "symbolKind" : "init",
+    "title" : "init(vector_string:score:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "init"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "vector_string"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:SS",
+              "text" : "String"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "score"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:Sd",
+              "text" : "Double"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil)"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "kind" : "parameters",
+      "parameters" : [
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The CVSS 4 vector string.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "vector_string"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The CVSS 4 score.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "score"
+        }
+      ]
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapidependabot\/components\/schemas\/cvss_hyphen_severities\/cvss_v4payload\/init(vector_string:score:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIDependabot",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/components"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Components/Schemas": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/schemas",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Components\/Schemas",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/components\/schemas"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Components/Schemas/cvss_hyphen_severities": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "cvss_hyphen_severities"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Components\/Schemas\/cvss_hyphen_severities",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "cvss_hyphen_severities"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.cvss_hyphen_severities",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/components\/schemas\/cvss_hyphen_severities"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Components/Schemas/cvss_hyphen_severities/cvss_v4Payload": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "cvss_v4Payload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Components\/Schemas\/cvss_hyphen_severities\/cvss_v4Payload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "cvss_v4Payload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.cvss_hyphen_severities.cvss_v4Payload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/components\/schemas\/cvss_hyphen_severities\/cvss_v4payload"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Components/Schemas/cvss_hyphen_severities/cvss_v4Payload/init(vector_string:score:)": {
+  "abstract" : [
+    {
+      "text" : "Creates a new ",
+      "type" : "text"
+    },
+    {
+      "code" : "cvss_v4Payload",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "vector_string"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "score"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sd",
+      "text" : "Double"
+    },
+    {
+      "kind" : "text",
+      "text" : "?)"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Components\/Schemas\/cvss_hyphen_severities\/cvss_v4Payload\/init(vector_string:score:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(vector_string:score:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/components\/schemas\/cvss_hyphen_severities\/cvss_v4payload\/init(vector_string:score:)"
+}
+}
+}

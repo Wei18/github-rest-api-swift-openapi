@@ -1,0 +1,541 @@
+{
+  "abstract" : [
+    {
+      "text" : "Update Git LFS preference",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations",
+        "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Operations"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Operations\/migrations_sol_set_hyphen_lfs_hyphen_preference"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:23GitHubRestAPIMigrations10OperationsO030migrations_sol_set_hyphen_lfs_I11_preferenceO",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "enum"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "migrations_sol_set_hyphen_lfs_hyphen_preference"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIMigrations"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "migrations_sol_set_hyphen_lfs_hyphen_preference"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/migrations\/Types.swift#L6401"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Enumeration",
+    "symbolKind" : "enum",
+    "title" : "Operations.migrations_sol_set_hyphen_lfs_hyphen_preference"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "enum"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "migrations_sol_set_hyphen_lfs_hyphen_preference"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "You can import repositories from Subversion, Mercurial, and TFS that include files larger than 100MB. This ability",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "is powered by ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "https:\/\/git-lfs.com",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : ".",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "You can learn more about our LFS feature and working with large files ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "https:\/\/docs.github.com\/repositories\/working-with-files\/managing-large-files",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : ".",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "[!WARNING]",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "Endpoint closing down notice:",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "strong"
+                },
+                {
+                  "text" : " Due to very low levels of usage and available alternatives, this endpoint is closing down and will no longer be available from 00:00 UTC on April 12, 2024. For more details and alternatives, see the ",
+                  "type" : "text"
+                },
+                {
+                  "identifier" : "https:\/\/gh.io\/source-imports-api-deprecation",
+                  "isActive" : true,
+                  "type" : "reference"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Note",
+          "style" : "note",
+          "type" : "aside"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "HTTP ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "PATCH \/repos\/{owner}\/{repo}\/import\/lfs",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/paths\/\/repos\/{owner}\/{repo}\/import\/lfs\/patch(migrations\/set-lfs-preference)",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Operations\/migrations_sol_set_hyphen_lfs_hyphen_preference\/Input"
+      ],
+      "title" : "Structures"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Operations\/migrations_sol_set_hyphen_lfs_hyphen_preference\/id"
+      ],
+      "title" : "Type Properties"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Operations\/migrations_sol_set_hyphen_lfs_hyphen_preference\/AcceptableContentType",
+        "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Operations\/migrations_sol_set_hyphen_lfs_hyphen_preference\/Output"
+      ],
+      "title" : "Enumerations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapimigrations\/operations\/migrations_sol_set_hyphen_lfs_hyphen_preference"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIMigrations/documentation/GitHubRestAPIMigrations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIMigrations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimigrations"
+},
+"doc://GitHubRestAPIMigrations/documentation/GitHubRestAPIMigrations/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimigrations\/operations"
+},
+"doc://GitHubRestAPIMigrations/documentation/GitHubRestAPIMigrations/Operations/migrations_sol_set_hyphen_lfs_hyphen_preference": {
+  "abstract" : [
+    {
+      "text" : "Update Git LFS preference",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "migrations_sol_set_hyphen_lfs_hyphen_preference"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Operations\/migrations_sol_set_hyphen_lfs_hyphen_preference",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "migrations_sol_set_hyphen_lfs_hyphen_preference"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.migrations_sol_set_hyphen_lfs_hyphen_preference",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimigrations\/operations\/migrations_sol_set_hyphen_lfs_hyphen_preference"
+},
+"doc://GitHubRestAPIMigrations/documentation/GitHubRestAPIMigrations/Operations/migrations_sol_set_hyphen_lfs_hyphen_preference/AcceptableContentType": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AcceptableContentType"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Operations\/migrations_sol_set_hyphen_lfs_hyphen_preference\/AcceptableContentType",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AcceptableContentType"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.migrations_sol_set_hyphen_lfs_hyphen_preference.AcceptableContentType",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimigrations\/operations\/migrations_sol_set_hyphen_lfs_hyphen_preference\/acceptablecontenttype"
+},
+"doc://GitHubRestAPIMigrations/documentation/GitHubRestAPIMigrations/Operations/migrations_sol_set_hyphen_lfs_hyphen_preference/Input": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Operations\/migrations_sol_set_hyphen_lfs_hyphen_preference\/Input",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.migrations_sol_set_hyphen_lfs_hyphen_preference.Input",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimigrations\/operations\/migrations_sol_set_hyphen_lfs_hyphen_preference\/input"
+},
+"doc://GitHubRestAPIMigrations/documentation/GitHubRestAPIMigrations/Operations/migrations_sol_set_hyphen_lfs_hyphen_preference/Output": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Operations\/migrations_sol_set_hyphen_lfs_hyphen_preference\/Output",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.migrations_sol_set_hyphen_lfs_hyphen_preference.Output",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimigrations\/operations\/migrations_sol_set_hyphen_lfs_hyphen_preference\/output"
+},
+"doc://GitHubRestAPIMigrations/documentation/GitHubRestAPIMigrations/Operations/migrations_sol_set_hyphen_lfs_hyphen_preference/id": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "id"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Operations\/migrations_sol_set_hyphen_lfs_hyphen_preference\/id",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "id",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimigrations\/operations\/migrations_sol_set_hyphen_lfs_hyphen_preference\/id"
+},
+"https://docs.github.com/repositories/working-with-files/managing-large-files": {
+  "identifier" : "https:\/\/docs.github.com\/repositories\/working-with-files\/managing-large-files",
+  "title" : "on our help site",
+  "titleInlineContent" : [
+    {
+      "text" : "on our help",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "site",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/docs.github.com\/repositories\/working-with-files\/managing-large-files"
+},
+"https://gh.io/source-imports-api-deprecation": {
+  "identifier" : "https:\/\/gh.io\/source-imports-api-deprecation",
+  "title" : "changelog",
+  "titleInlineContent" : [
+    {
+      "text" : "changelog",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/gh.io\/source-imports-api-deprecation"
+},
+"https://git-lfs.com": {
+  "identifier" : "https:\/\/git-lfs.com",
+  "title" : "Git LFS",
+  "titleInlineContent" : [
+    {
+      "text" : "Git LFS",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/git-lfs.com"
+}
+}
+}

@@ -1,0 +1,533 @@
+{
+  "abstract" : [
+    {
+      "text" : "What to sort results by. ",
+      "type" : "text"
+    },
+    {
+      "code" : "popularity",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " will sort by the number of comments. ",
+      "type" : "text"
+    },
+    {
+      "code" : "long-running",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " will sort by date created and will limit the results to pull requests that have been open for more than a month and have had activity within the past month.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIPulls\/documentation\/GitHubRestAPIPulls",
+        "doc:\/\/GitHubRestAPIPulls\/documentation\/GitHubRestAPIPulls\/Operations",
+        "doc:\/\/GitHubRestAPIPulls\/documentation\/GitHubRestAPIPulls\/Operations\/pulls_sol_list",
+        "doc:\/\/GitHubRestAPIPulls\/documentation\/GitHubRestAPIPulls\/Operations\/pulls_sol_list\/Input",
+        "doc:\/\/GitHubRestAPIPulls\/documentation\/GitHubRestAPIPulls\/Operations\/pulls_sol_list\/Input\/Query-swift.struct"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIPulls\/documentation\/GitHubRestAPIPulls\/Operations\/pulls_sol_list\/Input\/Query-swift.struct\/sort"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:18GitHubRestAPIPulls10OperationsO14pulls_sol_listO5InputV5QueryV4sortAI0K7PayloadOSgvp",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "var"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "sort"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:18GitHubRestAPIPulls10OperationsO",
+        "text" : "Operations"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:18GitHubRestAPIPulls10OperationsO14pulls_sol_listO",
+        "text" : "pulls_sol_list"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:18GitHubRestAPIPulls10OperationsO14pulls_sol_listO5InputV",
+        "text" : "Input"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:18GitHubRestAPIPulls10OperationsO14pulls_sol_listO5InputV5QueryV",
+        "text" : "Query"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:18GitHubRestAPIPulls10OperationsO14pulls_sol_listO5InputV5QueryV11sortPayloadO",
+        "text" : "sortPayload"
+      },
+      {
+        "kind" : "text",
+        "text" : "?"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIPulls"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/pulls\/Types.swift#L5492"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Instance Property",
+    "symbolKind" : "property",
+    "title" : "sort"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "var"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "sort"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIPulls\/documentation\/GitHubRestAPIPulls\/Operations",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:18GitHubRestAPIPulls10OperationsO",
+              "text" : "Operations"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIPulls\/documentation\/GitHubRestAPIPulls\/Operations\/pulls_sol_list",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:18GitHubRestAPIPulls10OperationsO14pulls_sol_listO",
+              "text" : "pulls_sol_list"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIPulls\/documentation\/GitHubRestAPIPulls\/Operations\/pulls_sol_list\/Input",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:18GitHubRestAPIPulls10OperationsO14pulls_sol_listO5InputV",
+              "text" : "Input"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIPulls\/documentation\/GitHubRestAPIPulls\/Operations\/pulls_sol_list\/Input\/Query-swift.struct",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:18GitHubRestAPIPulls10OperationsO14pulls_sol_listO5InputV5QueryV",
+              "text" : "Query"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIPulls\/documentation\/GitHubRestAPIPulls\/Operations\/pulls_sol_list\/Input\/Query-swift.struct\/sortPayload",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:18GitHubRestAPIPulls10OperationsO14pulls_sol_listO5InputV5QueryV11sortPayloadO",
+              "text" : "sortPayload"
+            },
+            {
+              "kind" : "text",
+              "text" : "?"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/paths\/repos\/{owner}\/{repo}\/pulls\/GET\/query\/sort",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapipulls\/operations\/pulls_sol_list\/input\/query-swift.struct\/sort"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIPulls/documentation/GitHubRestAPIPulls": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPulls\/documentation\/GitHubRestAPIPulls",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIPulls",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipulls"
+},
+"doc://GitHubRestAPIPulls/documentation/GitHubRestAPIPulls/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPulls\/documentation\/GitHubRestAPIPulls\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipulls\/operations"
+},
+"doc://GitHubRestAPIPulls/documentation/GitHubRestAPIPulls/Operations/pulls_sol_list": {
+  "abstract" : [
+    {
+      "text" : "List pull requests",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "pulls_sol_list"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPulls\/documentation\/GitHubRestAPIPulls\/Operations\/pulls_sol_list",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "pulls_sol_list"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.pulls_sol_list",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipulls\/operations\/pulls_sol_list"
+},
+"doc://GitHubRestAPIPulls/documentation/GitHubRestAPIPulls/Operations/pulls_sol_list/Input": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPulls\/documentation\/GitHubRestAPIPulls\/Operations\/pulls_sol_list\/Input",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.pulls_sol_list.Input",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipulls\/operations\/pulls_sol_list\/input"
+},
+"doc://GitHubRestAPIPulls/documentation/GitHubRestAPIPulls/Operations/pulls_sol_list/Input/Query-swift.struct": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Query"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPulls\/documentation\/GitHubRestAPIPulls\/Operations\/pulls_sol_list\/Input\/Query-swift.struct",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Query"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.pulls_sol_list.Input.Query",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipulls\/operations\/pulls_sol_list\/input\/query-swift.struct"
+},
+"doc://GitHubRestAPIPulls/documentation/GitHubRestAPIPulls/Operations/pulls_sol_list/Input/Query-swift.struct/sort": {
+  "abstract" : [
+    {
+      "text" : "What to sort results by. ",
+      "type" : "text"
+    },
+    {
+      "code" : "popularity",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " will sort by the number of comments. ",
+      "type" : "text"
+    },
+    {
+      "code" : "long-running",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " will sort by date created and will limit the results to pull requests that have been open for more than a month and have had activity within the past month.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "sort"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIPulls10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIPulls10OperationsO14pulls_sol_listO",
+      "text" : "pulls_sol_list"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIPulls10OperationsO14pulls_sol_listO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIPulls10OperationsO14pulls_sol_listO5InputV5QueryV",
+      "text" : "Query"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIPulls10OperationsO14pulls_sol_listO5InputV5QueryV11sortPayloadO",
+      "text" : "sortPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPulls\/documentation\/GitHubRestAPIPulls\/Operations\/pulls_sol_list\/Input\/Query-swift.struct\/sort",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "sort",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipulls\/operations\/pulls_sol_list\/input\/query-swift.struct\/sort"
+},
+"doc://GitHubRestAPIPulls/documentation/GitHubRestAPIPulls/Operations/pulls_sol_list/Input/Query-swift.struct/sortPayload": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "sortPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPulls\/documentation\/GitHubRestAPIPulls\/Operations\/pulls_sol_list\/Input\/Query-swift.struct\/sortPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "sortPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.pulls_sol_list.Input.Query.sortPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipulls\/operations\/pulls_sol_list\/input\/query-swift.struct\/sortpayload"
+}
+}
+}

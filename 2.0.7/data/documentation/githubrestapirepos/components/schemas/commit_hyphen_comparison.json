@@ -1,0 +1,1362 @@
+{
+  "abstract" : [
+    {
+      "text" : "Commit Comparison",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos",
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components",
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Schemas"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Schemas\/commit_hyphen_comparison"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:18GitHubRestAPIRepos10ComponentsO7SchemasO24commit_hyphen_comparisonV",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "struct"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "commit_hyphen_comparison"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIRepos"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "commit_hyphen_comparison"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/repos\/Types.swift#L18032"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Structure",
+    "symbolKind" : "struct",
+    "title" : "Components.Schemas.commit_hyphen_comparison"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "struct"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "commit_hyphen_comparison"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/components\/schemas\/commit-comparison",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIRepos\/Se",
+        "doc:\/\/GitHubRestAPIRepos\/SE",
+        "doc:\/\/GitHubRestAPIRepos\/SQ",
+        "doc:\/\/GitHubRestAPIRepos\/SH",
+        "doc:\/\/GitHubRestAPIRepos\/s8SendableP"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Schemas\/commit_hyphen_comparison\/init(from:)",
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Schemas\/commit_hyphen_comparison\/init(url:html_url:permalink_url:diff_url:patch_url:base_commit:merge_base_commit:status:ahead_by:behind_by:total_commits:commits:files:)"
+      ],
+      "title" : "Initializers"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Schemas\/commit_hyphen_comparison\/ahead_by",
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Schemas\/commit_hyphen_comparison\/base_commit",
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Schemas\/commit_hyphen_comparison\/behind_by",
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Schemas\/commit_hyphen_comparison\/commits",
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Schemas\/commit_hyphen_comparison\/diff_url",
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Schemas\/commit_hyphen_comparison\/files",
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Schemas\/commit_hyphen_comparison\/html_url",
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Schemas\/commit_hyphen_comparison\/merge_base_commit",
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Schemas\/commit_hyphen_comparison\/patch_url",
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Schemas\/commit_hyphen_comparison\/permalink_url",
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Schemas\/commit_hyphen_comparison\/status",
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Schemas\/commit_hyphen_comparison\/total_commits",
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Schemas\/commit_hyphen_comparison\/url"
+      ],
+      "title" : "Instance Properties"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Schemas\/commit_hyphen_comparison\/CodingKeys",
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Schemas\/commit_hyphen_comparison\/statusPayload"
+      ],
+      "title" : "Enumerations"
+    },
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Schemas\/commit_hyphen_comparison\/Equatable-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapirepos\/components\/schemas\/commit_hyphen_comparison"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIRepos/SE": {
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/SE",
+  "title" : "Swift.Encodable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIRepos/SH": {
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/SH",
+  "title" : "Swift.Hashable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIRepos/SQ": {
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/SQ",
+  "title" : "Swift.Equatable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIRepos/Se": {
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/Se",
+  "title" : "Swift.Decodable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIRepos",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/components"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Components/Schemas": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/schemas",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Schemas",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/components\/schemas"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Components/Schemas/commit_hyphen_comparison": {
+  "abstract" : [
+    {
+      "text" : "Commit Comparison",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "commit_hyphen_comparison"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Schemas\/commit_hyphen_comparison",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "commit_hyphen_comparison"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.commit_hyphen_comparison",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/components\/schemas\/commit_hyphen_comparison"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Components/Schemas/commit_hyphen_comparison/CodingKeys": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Schemas\/commit_hyphen_comparison\/CodingKeys",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.commit_hyphen_comparison.CodingKeys",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/components\/schemas\/commit_hyphen_comparison\/codingkeys"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Components/Schemas/commit_hyphen_comparison/Equatable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Schemas\/commit_hyphen_comparison\/Equatable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Equatable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/components\/schemas\/commit_hyphen_comparison\/equatable-implementations"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Components/Schemas/commit_hyphen_comparison/ahead_by": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ahead_by"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Schemas\/commit_hyphen_comparison\/ahead_by",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "ahead_by",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/components\/schemas\/commit_hyphen_comparison\/ahead_by"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Components/Schemas/commit_hyphen_comparison/base_commit": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "base_commit"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIRepos10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIRepos10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIRepos10ComponentsO7SchemasO6commitV",
+      "text" : "commit"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Schemas\/commit_hyphen_comparison\/base_commit",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "base_commit",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/components\/schemas\/commit_hyphen_comparison\/base_commit"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Components/Schemas/commit_hyphen_comparison/behind_by": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "behind_by"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Schemas\/commit_hyphen_comparison\/behind_by",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "behind_by",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/components\/schemas\/commit_hyphen_comparison\/behind_by"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Components/Schemas/commit_hyphen_comparison/commits": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "commits"
+    },
+    {
+      "kind" : "text",
+      "text" : ": ["
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIRepos10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIRepos10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIRepos10ComponentsO7SchemasO6commitV",
+      "text" : "commit"
+    },
+    {
+      "kind" : "text",
+      "text" : "]"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Schemas\/commit_hyphen_comparison\/commits",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "commits",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/components\/schemas\/commit_hyphen_comparison\/commits"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Components/Schemas/commit_hyphen_comparison/diff_url": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "diff_url"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Schemas\/commit_hyphen_comparison\/diff_url",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "diff_url",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/components\/schemas\/commit_hyphen_comparison\/diff_url"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Components/Schemas/commit_hyphen_comparison/files": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "files"
+    },
+    {
+      "kind" : "text",
+      "text" : ": ["
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIRepos10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIRepos10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIRepos10ComponentsO7SchemasO17diff_hyphen_entryV",
+      "text" : "diff_hyphen_entry"
+    },
+    {
+      "kind" : "text",
+      "text" : "]?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Schemas\/commit_hyphen_comparison\/files",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "files",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/components\/schemas\/commit_hyphen_comparison\/files"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Components/Schemas/commit_hyphen_comparison/html_url": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "html_url"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Schemas\/commit_hyphen_comparison\/html_url",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "html_url",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/components\/schemas\/commit_hyphen_comparison\/html_url"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Components/Schemas/commit_hyphen_comparison/init(from:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "from"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:s7DecoderP",
+      "text" : "Decoder"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Schemas\/commit_hyphen_comparison\/init(from:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(from:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/components\/schemas\/commit_hyphen_comparison\/init(from:)"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Components/Schemas/commit_hyphen_comparison/init(url:html_url:permalink_url:diff_url:patch_url:base_commit:merge_base_commit:status:ahead_by:behind_by:total_commits:commits:files:)": {
+  "abstract" : [
+    {
+      "text" : "Creates a new ",
+      "type" : "text"
+    },
+    {
+      "code" : "commit_hyphen_comparison",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "url"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "html_url"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "permalink_url"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "diff_url"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "patch_url"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "base_commit"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIRepos10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIRepos10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIRepos10ComponentsO7SchemasO6commitV",
+      "text" : "commit"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "merge_base_commit"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIRepos10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIRepos10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIRepos10ComponentsO7SchemasO6commitV",
+      "text" : "commit"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "status"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIRepos10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIRepos10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIRepos10ComponentsO7SchemasO24commit_hyphen_comparisonV",
+      "text" : "commit_hyphen_comparison"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIRepos10ComponentsO7SchemasO24commit_hyphen_comparisonV13statusPayloadO",
+      "text" : "statusPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "ahead_by"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "behind_by"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "total_commits"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "commits"
+    },
+    {
+      "kind" : "text",
+      "text" : ": ["
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIRepos10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIRepos10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIRepos10ComponentsO7SchemasO6commitV",
+      "text" : "commit"
+    },
+    {
+      "kind" : "text",
+      "text" : "], "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "files"
+    },
+    {
+      "kind" : "text",
+      "text" : ": ["
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIRepos10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIRepos10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIRepos10ComponentsO7SchemasO17diff_hyphen_entryV",
+      "text" : "diff_hyphen_entry"
+    },
+    {
+      "kind" : "text",
+      "text" : "]?)"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Schemas\/commit_hyphen_comparison\/init(url:html_url:permalink_url:diff_url:patch_url:base_commit:merge_base_commit:status:ahead_by:behind_by:total_commits:commits:files:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(url:html_url:permalink_url:diff_url:patch_url:base_commit:merge_base_commit:status:ahead_by:behind_by:total_commits:commits:files:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/components\/schemas\/commit_hyphen_comparison\/init(url:html_url:permalink_url:diff_url:patch_url:base_commit:merge_base_commit:status:ahead_by:behind_by:total_commits:commits:files:)"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Components/Schemas/commit_hyphen_comparison/merge_base_commit": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "merge_base_commit"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIRepos10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIRepos10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIRepos10ComponentsO7SchemasO6commitV",
+      "text" : "commit"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Schemas\/commit_hyphen_comparison\/merge_base_commit",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "merge_base_commit",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/components\/schemas\/commit_hyphen_comparison\/merge_base_commit"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Components/Schemas/commit_hyphen_comparison/patch_url": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "patch_url"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Schemas\/commit_hyphen_comparison\/patch_url",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "patch_url",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/components\/schemas\/commit_hyphen_comparison\/patch_url"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Components/Schemas/commit_hyphen_comparison/permalink_url": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "permalink_url"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Schemas\/commit_hyphen_comparison\/permalink_url",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "permalink_url",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/components\/schemas\/commit_hyphen_comparison\/permalink_url"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Components/Schemas/commit_hyphen_comparison/status": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "status"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIRepos10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIRepos10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIRepos10ComponentsO7SchemasO24commit_hyphen_comparisonV",
+      "text" : "commit_hyphen_comparison"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIRepos10ComponentsO7SchemasO24commit_hyphen_comparisonV13statusPayloadO",
+      "text" : "statusPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Schemas\/commit_hyphen_comparison\/status",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "status",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/components\/schemas\/commit_hyphen_comparison\/status"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Components/Schemas/commit_hyphen_comparison/statusPayload": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "statusPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Schemas\/commit_hyphen_comparison\/statusPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "statusPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.commit_hyphen_comparison.statusPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/components\/schemas\/commit_hyphen_comparison\/statuspayload"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Components/Schemas/commit_hyphen_comparison/total_commits": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "total_commits"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Schemas\/commit_hyphen_comparison\/total_commits",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "total_commits",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/components\/schemas\/commit_hyphen_comparison\/total_commits"
+},
+"doc://GitHubRestAPIRepos/documentation/GitHubRestAPIRepos/Components/Schemas/commit_hyphen_comparison/url": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "url"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/documentation\/GitHubRestAPIRepos\/Components\/Schemas\/commit_hyphen_comparison\/url",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "url",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirepos\/components\/schemas\/commit_hyphen_comparison\/url"
+},
+"doc://GitHubRestAPIRepos/s8SendableP": {
+  "identifier" : "doc:\/\/GitHubRestAPIRepos\/s8SendableP",
+  "title" : "Swift.Sendable",
+  "type" : "unresolvable"
+}
+}
+}

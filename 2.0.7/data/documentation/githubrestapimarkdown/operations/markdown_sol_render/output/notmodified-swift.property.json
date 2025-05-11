@@ -1,0 +1,561 @@
+{
+  "abstract" : [
+    {
+      "text" : "The associated value of the enum case if ",
+      "type" : "text"
+    },
+    {
+      "code" : "self",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " is ",
+      "type" : "text"
+    },
+    {
+      "code" : ".notModified",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIMarkdown\/documentation\/GitHubRestAPIMarkdown",
+        "doc:\/\/GitHubRestAPIMarkdown\/documentation\/GitHubRestAPIMarkdown\/Operations",
+        "doc:\/\/GitHubRestAPIMarkdown\/documentation\/GitHubRestAPIMarkdown\/Operations\/markdown_sol_render",
+        "doc:\/\/GitHubRestAPIMarkdown\/documentation\/GitHubRestAPIMarkdown\/Operations\/markdown_sol_render\/Output"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIMarkdown\/documentation\/GitHubRestAPIMarkdown\/Operations\/markdown_sol_render\/Output\/notModified-swift.property"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:21GitHubRestAPIMarkdown10OperationsO19markdown_sol_renderO6OutputO11notModifiedAA10ComponentsO9ResponsesO0J9_modifiedVvp",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "var"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "notModified"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:21GitHubRestAPIMarkdown10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:21GitHubRestAPIMarkdown10ComponentsO9ResponsesO",
+        "text" : "Responses"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:21GitHubRestAPIMarkdown10ComponentsO9ResponsesO12not_modifiedV",
+        "text" : "not_modified"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIMarkdown"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/markdown\/Types.swift#L292"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Instance Property",
+    "symbolKind" : "property",
+    "title" : "notModified"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "var"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "notModified"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIMarkdown\/documentation\/GitHubRestAPIMarkdown\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:21GitHubRestAPIMarkdown10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIMarkdown\/documentation\/GitHubRestAPIMarkdown\/Components\/Responses",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:21GitHubRestAPIMarkdown10ComponentsO9ResponsesO",
+              "text" : "Responses"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIMarkdown\/documentation\/GitHubRestAPIMarkdown\/Components\/Responses\/not_modified",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:21GitHubRestAPIMarkdown10ComponentsO9ResponsesO12not_modifiedV",
+              "text" : "not_modified"
+            },
+            {
+              "kind" : "text",
+              "text" : " { "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "get"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "throws"
+            },
+            {
+              "kind" : "text",
+              "text" : " }"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "An error if ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "self",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : " is not ",
+                  "type" : "text"
+                },
+                {
+                  "code" : ".notModified",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Throws",
+          "style" : "note",
+          "type" : "aside"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "",
+                  "type" : "text"
+                },
+                {
+                  "code" : ".notModified",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "See Also",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapimarkdown\/operations\/markdown_sol_render\/output\/notmodified-swift.property"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIMarkdown/documentation/GitHubRestAPIMarkdown": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMarkdown\/documentation\/GitHubRestAPIMarkdown",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIMarkdown",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimarkdown"
+},
+"doc://GitHubRestAPIMarkdown/documentation/GitHubRestAPIMarkdown/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMarkdown\/documentation\/GitHubRestAPIMarkdown\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimarkdown\/components"
+},
+"doc://GitHubRestAPIMarkdown/documentation/GitHubRestAPIMarkdown/Components/Responses": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/responses",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Responses"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMarkdown\/documentation\/GitHubRestAPIMarkdown\/Components\/Responses",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Responses"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Responses",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimarkdown\/components\/responses"
+},
+"doc://GitHubRestAPIMarkdown/documentation/GitHubRestAPIMarkdown/Components/Responses/not_modified": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "not_modified"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMarkdown\/documentation\/GitHubRestAPIMarkdown\/Components\/Responses\/not_modified",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "not_modified"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Responses.not_modified",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimarkdown\/components\/responses\/not_modified"
+},
+"doc://GitHubRestAPIMarkdown/documentation/GitHubRestAPIMarkdown/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMarkdown\/documentation\/GitHubRestAPIMarkdown\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimarkdown\/operations"
+},
+"doc://GitHubRestAPIMarkdown/documentation/GitHubRestAPIMarkdown/Operations/markdown_sol_render": {
+  "abstract" : [
+    {
+      "text" : "Render a Markdown document",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "markdown_sol_render"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMarkdown\/documentation\/GitHubRestAPIMarkdown\/Operations\/markdown_sol_render",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "markdown_sol_render"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.markdown_sol_render",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimarkdown\/operations\/markdown_sol_render"
+},
+"doc://GitHubRestAPIMarkdown/documentation/GitHubRestAPIMarkdown/Operations/markdown_sol_render/Output": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMarkdown\/documentation\/GitHubRestAPIMarkdown\/Operations\/markdown_sol_render\/Output",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.markdown_sol_render.Output",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimarkdown\/operations\/markdown_sol_render\/output"
+},
+"doc://GitHubRestAPIMarkdown/documentation/GitHubRestAPIMarkdown/Operations/markdown_sol_render/Output/notModified-swift.property": {
+  "abstract" : [
+    {
+      "text" : "The associated value of the enum case if ",
+      "type" : "text"
+    },
+    {
+      "code" : "self",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " is ",
+      "type" : "text"
+    },
+    {
+      "code" : ".notModified",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "notModified"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIMarkdown10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIMarkdown10ComponentsO9ResponsesO",
+      "text" : "Responses"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIMarkdown10ComponentsO9ResponsesO12not_modifiedV",
+      "text" : "not_modified"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMarkdown\/documentation\/GitHubRestAPIMarkdown\/Operations\/markdown_sol_render\/Output\/notModified-swift.property",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "notModified",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimarkdown\/operations\/markdown_sol_render\/output\/notmodified-swift.property"
+}
+}
+}

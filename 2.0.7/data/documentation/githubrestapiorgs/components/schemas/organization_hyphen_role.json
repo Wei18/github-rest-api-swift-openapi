@@ -1,0 +1,1174 @@
+{
+  "abstract" : [
+    {
+      "text" : "Organization roles",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Schemas"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Schemas\/organization_hyphen_role"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:17GitHubRestAPIOrgs10ComponentsO7SchemasO24organization_hyphen_roleV",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "struct"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "organization_hyphen_role"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIOrgs"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "organization_hyphen_role"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/orgs\/Types.swift#L6847"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Structure",
+    "symbolKind" : "struct",
+    "title" : "Components.Schemas.organization_hyphen_role"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "struct"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "organization_hyphen_role"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/components\/schemas\/organization-role",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIOrgs\/Se",
+        "doc:\/\/GitHubRestAPIOrgs\/SE",
+        "doc:\/\/GitHubRestAPIOrgs\/SQ",
+        "doc:\/\/GitHubRestAPIOrgs\/SH",
+        "doc:\/\/GitHubRestAPIOrgs\/s8SendableP"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Schemas\/organization_hyphen_role\/init(from:)",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Schemas\/organization_hyphen_role\/init(id:name:description:base_role:source:permissions:organization:created_at:updated_at:)"
+      ],
+      "title" : "Initializers"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Schemas\/organization_hyphen_role\/base_role",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Schemas\/organization_hyphen_role\/created_at",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Schemas\/organization_hyphen_role\/description",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Schemas\/organization_hyphen_role\/id",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Schemas\/organization_hyphen_role\/name",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Schemas\/organization_hyphen_role\/organization",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Schemas\/organization_hyphen_role\/permissions",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Schemas\/organization_hyphen_role\/source",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Schemas\/organization_hyphen_role\/updated_at"
+      ],
+      "title" : "Instance Properties"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Schemas\/organization_hyphen_role\/CodingKeys",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Schemas\/organization_hyphen_role\/base_rolePayload",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Schemas\/organization_hyphen_role\/sourcePayload"
+      ],
+      "title" : "Enumerations"
+    },
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Schemas\/organization_hyphen_role\/Equatable-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapiorgs\/components\/schemas\/organization_hyphen_role"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIOrgs/SE": {
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/SE",
+  "title" : "Swift.Encodable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIOrgs/SH": {
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/SH",
+  "title" : "Swift.Hashable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIOrgs/SQ": {
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/SQ",
+  "title" : "Swift.Equatable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIOrgs/Se": {
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/Se",
+  "title" : "Swift.Decodable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIOrgs",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Schemas": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/schemas",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Schemas",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/schemas"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Schemas/organization_hyphen_role": {
+  "abstract" : [
+    {
+      "text" : "Organization roles",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "organization_hyphen_role"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Schemas\/organization_hyphen_role",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "organization_hyphen_role"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.organization_hyphen_role",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/schemas\/organization_hyphen_role"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Schemas/organization_hyphen_role/CodingKeys": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Schemas\/organization_hyphen_role\/CodingKeys",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.organization_hyphen_role.CodingKeys",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/schemas\/organization_hyphen_role\/codingkeys"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Schemas/organization_hyphen_role/Equatable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Schemas\/organization_hyphen_role\/Equatable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Equatable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/schemas\/organization_hyphen_role\/equatable-implementations"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Schemas/organization_hyphen_role/base_role": {
+  "abstract" : [
+    {
+      "text" : "The system role from which this role inherits permissions.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "base_role"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO7SchemasO24organization_hyphen_roleV",
+      "text" : "organization_hyphen_role"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO7SchemasO24organization_hyphen_roleV05base_I7PayloadO",
+      "text" : "base_rolePayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Schemas\/organization_hyphen_role\/base_role",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "base_role",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/schemas\/organization_hyphen_role\/base_role"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Schemas/organization_hyphen_role/base_rolePayload": {
+  "abstract" : [
+    {
+      "text" : "The system role from which this role inherits permissions.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "base_rolePayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Schemas\/organization_hyphen_role\/base_rolePayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "base_rolePayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.organization_hyphen_role.base_rolePayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/schemas\/organization_hyphen_role\/base_rolepayload"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Schemas/organization_hyphen_role/created_at": {
+  "abstract" : [
+    {
+      "text" : "The date and time the role was created.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "created_at"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:10Foundation4DateV",
+      "text" : "Date"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Schemas\/organization_hyphen_role\/created_at",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "created_at",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/schemas\/organization_hyphen_role\/created_at"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Schemas/organization_hyphen_role/description": {
+  "abstract" : [
+    {
+      "text" : "A short description about who this role is for or what permissions it grants.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "description"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Schemas\/organization_hyphen_role\/description",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "description",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/schemas\/organization_hyphen_role\/description"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Schemas/organization_hyphen_role/id": {
+  "abstract" : [
+    {
+      "text" : "The unique identifier of the role.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "id"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:s5Int64V",
+      "text" : "Int64"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Schemas\/organization_hyphen_role\/id",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "id",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/schemas\/organization_hyphen_role\/id"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Schemas/organization_hyphen_role/init(from:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "from"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:s7DecoderP",
+      "text" : "Decoder"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Schemas\/organization_hyphen_role\/init(from:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(from:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/schemas\/organization_hyphen_role\/init(from:)"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Schemas/organization_hyphen_role/init(id:name:description:base_role:source:permissions:organization:created_at:updated_at:)": {
+  "abstract" : [
+    {
+      "text" : "Creates a new ",
+      "type" : "text"
+    },
+    {
+      "code" : "organization_hyphen_role",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "id"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:s5Int64V",
+      "text" : "Int64"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "name"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "description"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "base_role"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO7SchemasO24organization_hyphen_roleV",
+      "text" : "organization_hyphen_role"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO7SchemasO24organization_hyphen_roleV05base_I7PayloadO",
+      "text" : "base_rolePayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "source"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO7SchemasO24organization_hyphen_roleV",
+      "text" : "organization_hyphen_role"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO7SchemasO24organization_hyphen_roleV13sourcePayloadO",
+      "text" : "sourcePayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "permissions"
+    },
+    {
+      "kind" : "text",
+      "text" : ": ["
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "], "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "organization"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO7SchemasO023nullable_hyphen_simple_H5_userV",
+      "text" : "nullable_hyphen_simple_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "created_at"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:10Foundation4DateV",
+      "text" : "Date"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "updated_at"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:10Foundation4DateV",
+      "text" : "Date"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Schemas\/organization_hyphen_role\/init(id:name:description:base_role:source:permissions:organization:created_at:updated_at:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(id:name:description:base_role:source:permissions:organization:created_at:updated_at:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/schemas\/organization_hyphen_role\/init(id:name:description:base_role:source:permissions:organization:created_at:updated_at:)"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Schemas/organization_hyphen_role/name": {
+  "abstract" : [
+    {
+      "text" : "The name of the role.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "name"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Schemas\/organization_hyphen_role\/name",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "name",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/schemas\/organization_hyphen_role\/name"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Schemas/organization_hyphen_role/organization": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "organization"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO7SchemasO023nullable_hyphen_simple_H5_userV",
+      "text" : "nullable_hyphen_simple_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Schemas\/organization_hyphen_role\/organization",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "organization",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/schemas\/organization_hyphen_role\/organization"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Schemas/organization_hyphen_role/permissions": {
+  "abstract" : [
+    {
+      "text" : "A list of permissions included in this role.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "permissions"
+    },
+    {
+      "kind" : "text",
+      "text" : ": ["
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "]"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Schemas\/organization_hyphen_role\/permissions",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "permissions",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/schemas\/organization_hyphen_role\/permissions"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Schemas/organization_hyphen_role/source": {
+  "abstract" : [
+    {
+      "text" : "Source answers the question, “where did this role come from?”",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "source"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO7SchemasO24organization_hyphen_roleV",
+      "text" : "organization_hyphen_role"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO7SchemasO24organization_hyphen_roleV13sourcePayloadO",
+      "text" : "sourcePayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Schemas\/organization_hyphen_role\/source",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "source",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/schemas\/organization_hyphen_role\/source"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Schemas/organization_hyphen_role/sourcePayload": {
+  "abstract" : [
+    {
+      "text" : "Source answers the question, “where did this role come from?”",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "sourcePayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Schemas\/organization_hyphen_role\/sourcePayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "sourcePayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.organization_hyphen_role.sourcePayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/schemas\/organization_hyphen_role\/sourcepayload"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Schemas/organization_hyphen_role/updated_at": {
+  "abstract" : [
+    {
+      "text" : "The date and time the role was last updated.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "updated_at"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:10Foundation4DateV",
+      "text" : "Date"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Schemas\/organization_hyphen_role\/updated_at",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "updated_at",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/schemas\/organization_hyphen_role\/updated_at"
+},
+"doc://GitHubRestAPIOrgs/s8SendableP": {
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/s8SendableP",
+  "title" : "Swift.Sendable",
+  "type" : "unresolvable"
+}
+}
+}

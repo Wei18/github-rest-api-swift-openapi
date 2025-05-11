@@ -1,0 +1,591 @@
+{
+  "abstract" : [
+    {
+      "text" : "Update a review comment for a pull request",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIPulls\/documentation\/GitHubRestAPIPulls",
+        "doc:\/\/GitHubRestAPIPulls\/documentation\/GitHubRestAPIPulls\/Operations"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIPulls\/documentation\/GitHubRestAPIPulls\/Operations\/pulls_sol_update_hyphen_review_hyphen_comment"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:18GitHubRestAPIPulls10OperationsO031pulls_sol_update_hyphen_review_I8_commentO",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "enum"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "pulls_sol_update_hyphen_review_hyphen_comment"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIPulls"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "pulls_sol_update_hyphen_review_hyphen_comment"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/pulls\/Types.swift#L6440"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Enumeration",
+    "symbolKind" : "enum",
+    "title" : "Operations.pulls_sol_update_hyphen_review_hyphen_comment"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "enum"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "pulls_sol_update_hyphen_review_hyphen_comment"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Edits the content of a specified review comment.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "This endpoint supports the following custom media types. For more information, see “",
+              "type" : "text"
+            },
+            {
+              "identifier" : "https:\/\/docs.github.com\/rest\/using-the-rest-api\/getting-started-with-the-rest-api#media-types",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : ".”",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "items" : [
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "inlineContent" : [
+                        {
+                          "code" : "application\/vnd.github-commitcomment.raw+json",
+                          "type" : "codeVoice"
+                        }
+                      ],
+                      "type" : "strong"
+                    },
+                    {
+                      "text" : ": Returns the raw markdown body. Response will include ",
+                      "type" : "text"
+                    },
+                    {
+                      "code" : "body",
+                      "type" : "codeVoice"
+                    },
+                    {
+                      "text" : ". This is the default if you do not pass any specific media type.",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            },
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "inlineContent" : [
+                        {
+                          "code" : "application\/vnd.github-commitcomment.text+json",
+                          "type" : "codeVoice"
+                        }
+                      ],
+                      "type" : "strong"
+                    },
+                    {
+                      "text" : ": Returns a text only representation of the markdown body. Response will include ",
+                      "type" : "text"
+                    },
+                    {
+                      "code" : "body_text",
+                      "type" : "codeVoice"
+                    },
+                    {
+                      "text" : ".",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            },
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "inlineContent" : [
+                        {
+                          "code" : "application\/vnd.github-commitcomment.html+json",
+                          "type" : "codeVoice"
+                        }
+                      ],
+                      "type" : "strong"
+                    },
+                    {
+                      "text" : ": Returns HTML rendered from the body’s markdown. Response will include ",
+                      "type" : "text"
+                    },
+                    {
+                      "code" : "body_html",
+                      "type" : "codeVoice"
+                    },
+                    {
+                      "text" : ".",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            },
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "inlineContent" : [
+                        {
+                          "code" : "application\/vnd.github-commitcomment.full+json",
+                          "type" : "codeVoice"
+                        }
+                      ],
+                      "type" : "strong"
+                    },
+                    {
+                      "text" : ": Returns raw, text, and HTML representations. Response will include ",
+                      "type" : "text"
+                    },
+                    {
+                      "code" : "body",
+                      "type" : "codeVoice"
+                    },
+                    {
+                      "text" : ", ",
+                      "type" : "text"
+                    },
+                    {
+                      "code" : "body_text",
+                      "type" : "codeVoice"
+                    },
+                    {
+                      "text" : ", and ",
+                      "type" : "text"
+                    },
+                    {
+                      "code" : "body_html",
+                      "type" : "codeVoice"
+                    },
+                    {
+                      "text" : ".",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            }
+          ],
+          "type" : "unorderedList"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "HTTP ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "PATCH \/repos\/{owner}\/{repo}\/pulls\/comments\/{comment_id}",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/paths\/\/repos\/{owner}\/{repo}\/pulls\/comments\/{comment_id}\/patch(pulls\/update-review-comment)",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIPulls\/documentation\/GitHubRestAPIPulls\/Operations\/pulls_sol_update_hyphen_review_hyphen_comment\/Input"
+      ],
+      "title" : "Structures"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIPulls\/documentation\/GitHubRestAPIPulls\/Operations\/pulls_sol_update_hyphen_review_hyphen_comment\/id"
+      ],
+      "title" : "Type Properties"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIPulls\/documentation\/GitHubRestAPIPulls\/Operations\/pulls_sol_update_hyphen_review_hyphen_comment\/AcceptableContentType",
+        "doc:\/\/GitHubRestAPIPulls\/documentation\/GitHubRestAPIPulls\/Operations\/pulls_sol_update_hyphen_review_hyphen_comment\/Output"
+      ],
+      "title" : "Enumerations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapipulls\/operations\/pulls_sol_update_hyphen_review_hyphen_comment"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIPulls/documentation/GitHubRestAPIPulls": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPulls\/documentation\/GitHubRestAPIPulls",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIPulls",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipulls"
+},
+"doc://GitHubRestAPIPulls/documentation/GitHubRestAPIPulls/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPulls\/documentation\/GitHubRestAPIPulls\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipulls\/operations"
+},
+"doc://GitHubRestAPIPulls/documentation/GitHubRestAPIPulls/Operations/pulls_sol_update_hyphen_review_hyphen_comment": {
+  "abstract" : [
+    {
+      "text" : "Update a review comment for a pull request",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "pulls_sol_update_hyphen_review_hyphen_comment"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPulls\/documentation\/GitHubRestAPIPulls\/Operations\/pulls_sol_update_hyphen_review_hyphen_comment",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "pulls_sol_update_hyphen_review_hyphen_comment"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.pulls_sol_update_hyphen_review_hyphen_comment",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipulls\/operations\/pulls_sol_update_hyphen_review_hyphen_comment"
+},
+"doc://GitHubRestAPIPulls/documentation/GitHubRestAPIPulls/Operations/pulls_sol_update_hyphen_review_hyphen_comment/AcceptableContentType": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AcceptableContentType"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPulls\/documentation\/GitHubRestAPIPulls\/Operations\/pulls_sol_update_hyphen_review_hyphen_comment\/AcceptableContentType",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AcceptableContentType"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.pulls_sol_update_hyphen_review_hyphen_comment.AcceptableContentType",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipulls\/operations\/pulls_sol_update_hyphen_review_hyphen_comment\/acceptablecontenttype"
+},
+"doc://GitHubRestAPIPulls/documentation/GitHubRestAPIPulls/Operations/pulls_sol_update_hyphen_review_hyphen_comment/Input": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPulls\/documentation\/GitHubRestAPIPulls\/Operations\/pulls_sol_update_hyphen_review_hyphen_comment\/Input",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.pulls_sol_update_hyphen_review_hyphen_comment.Input",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipulls\/operations\/pulls_sol_update_hyphen_review_hyphen_comment\/input"
+},
+"doc://GitHubRestAPIPulls/documentation/GitHubRestAPIPulls/Operations/pulls_sol_update_hyphen_review_hyphen_comment/Output": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPulls\/documentation\/GitHubRestAPIPulls\/Operations\/pulls_sol_update_hyphen_review_hyphen_comment\/Output",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.pulls_sol_update_hyphen_review_hyphen_comment.Output",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipulls\/operations\/pulls_sol_update_hyphen_review_hyphen_comment\/output"
+},
+"doc://GitHubRestAPIPulls/documentation/GitHubRestAPIPulls/Operations/pulls_sol_update_hyphen_review_hyphen_comment/id": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "id"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPulls\/documentation\/GitHubRestAPIPulls\/Operations\/pulls_sol_update_hyphen_review_hyphen_comment\/id",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "id",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipulls\/operations\/pulls_sol_update_hyphen_review_hyphen_comment\/id"
+},
+"https://docs.github.com/rest/using-the-rest-api/getting-started-with-the-rest-api#media-types": {
+  "identifier" : "https:\/\/docs.github.com\/rest\/using-the-rest-api\/getting-started-with-the-rest-api#media-types",
+  "title" : "Media types",
+  "titleInlineContent" : [
+    {
+      "text" : "Media types",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/docs.github.com\/rest\/using-the-rest-api\/getting-started-with-the-rest-api#media-types"
+}
+}
+}

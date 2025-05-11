@@ -1,0 +1,547 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/orgs_sol_list_hyphen_pat_hyphen_grants",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/orgs_sol_list_hyphen_pat_hyphen_grants\/Output",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/orgs_sol_list_hyphen_pat_hyphen_grants\/Output\/Ok-swift.struct",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/orgs_sol_list_hyphen_pat_hyphen_grants\/Output\/Ok-swift.struct\/Body-swift.enum"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/orgs_sol_list_hyphen_pat_hyphen_grants\/Output\/Ok-swift.struct\/Body-swift.enum\/json(_:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:17GitHubRestAPIOrgs10OperationsO025orgs_sol_list_hyphen_pat_I7_grantsO6OutputO2OkV4BodyO4jsonyAKSayAA10ComponentsO7SchemasO013organization_i14_programmatic_i8_access_I6_grantVGcAKmF",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "case"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "json"
+      },
+      {
+        "kind" : "text",
+        "text" : "(["
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO7SchemasO",
+        "text" : "Schemas"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO7SchemasO033organization_hyphen_programmatic_h8_access_H6_grantV",
+        "text" : "organization_hyphen_programmatic_hyphen_access_hyphen_grant"
+      },
+      {
+        "kind" : "text",
+        "text" : "])"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIOrgs"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/orgs\/Types.swift#L21349"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Case",
+    "symbolKind" : "case",
+    "title" : "Operations.orgs_sol_list_hyphen_pat_hyphen_grants.Output.Ok.Body.json(_:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "case"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "json"
+            },
+            {
+              "kind" : "text",
+              "text" : "(["
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Schemas",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO7SchemasO",
+              "text" : "Schemas"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Schemas\/organization_hyphen_programmatic_hyphen_access_hyphen_grant",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO7SchemasO033organization_hyphen_programmatic_h8_access_H6_grantV",
+              "text" : "organization_hyphen_programmatic_hyphen_access_hyphen_grant"
+            },
+            {
+              "kind" : "text",
+              "text" : "])"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/paths\/orgs\/{org}\/personal-access-tokens\/GET\/responses\/200\/content\/application\\\/json",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapiorgs\/operations\/orgs_sol_list_hyphen_pat_hyphen_grants\/output\/ok-swift.struct\/body-swift.enum\/json(_:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIOrgs",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Schemas": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/schemas",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Schemas",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/schemas"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Schemas/organization_hyphen_programmatic_hyphen_access_hyphen_grant": {
+  "abstract" : [
+    {
+      "text" : "Minimal representation of an organization programmatic access grant for enumerations",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "organization_hyphen_programmatic_hyphen_access_hyphen_grant"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Schemas\/organization_hyphen_programmatic_hyphen_access_hyphen_grant",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "organization_hyphen_programmatic_hyphen_access_hyphen_grant"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.organization_hyphen_programmatic_hyphen_access_hyphen_grant",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/schemas\/organization_hyphen_programmatic_hyphen_access_hyphen_grant"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/operations"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Operations/orgs_sol_list_hyphen_pat_hyphen_grants": {
+  "abstract" : [
+    {
+      "text" : "List fine-grained personal access tokens with access to organization resources",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "orgs_sol_list_hyphen_pat_hyphen_grants"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/orgs_sol_list_hyphen_pat_hyphen_grants",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "orgs_sol_list_hyphen_pat_hyphen_grants"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.orgs_sol_list_hyphen_pat_hyphen_grants",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/operations\/orgs_sol_list_hyphen_pat_hyphen_grants"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Operations/orgs_sol_list_hyphen_pat_hyphen_grants/Output": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/orgs_sol_list_hyphen_pat_hyphen_grants\/Output",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.orgs_sol_list_hyphen_pat_hyphen_grants.Output",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/operations\/orgs_sol_list_hyphen_pat_hyphen_grants\/output"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Operations/orgs_sol_list_hyphen_pat_hyphen_grants/Output/Ok-swift.struct": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Ok"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/orgs_sol_list_hyphen_pat_hyphen_grants\/Output\/Ok-swift.struct",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Ok"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.orgs_sol_list_hyphen_pat_hyphen_grants.Output.Ok",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/operations\/orgs_sol_list_hyphen_pat_hyphen_grants\/output\/ok-swift.struct"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Operations/orgs_sol_list_hyphen_pat_hyphen_grants/Output/Ok-swift.struct/Body-swift.enum": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Body"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/orgs_sol_list_hyphen_pat_hyphen_grants\/Output\/Ok-swift.struct\/Body-swift.enum",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Body"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.orgs_sol_list_hyphen_pat_hyphen_grants.Output.Ok.Body",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/operations\/orgs_sol_list_hyphen_pat_hyphen_grants\/output\/ok-swift.struct\/body-swift.enum"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Operations/orgs_sol_list_hyphen_pat_hyphen_grants/Output/Ok-swift.struct/Body-swift.enum/json(_:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "json"
+    },
+    {
+      "kind" : "text",
+      "text" : "(["
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO7SchemasO033organization_hyphen_programmatic_h8_access_H6_grantV",
+      "text" : "organization_hyphen_programmatic_hyphen_access_hyphen_grant"
+    },
+    {
+      "kind" : "text",
+      "text" : "])"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/orgs_sol_list_hyphen_pat_hyphen_grants\/Output\/Ok-swift.struct\/Body-swift.enum\/json(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Operations.orgs_sol_list_hyphen_pat_hyphen_grants.Output.Ok.Body.json(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/operations\/orgs_sol_list_hyphen_pat_hyphen_grants\/output\/ok-swift.struct\/body-swift.enum\/json(_:)"
+}
+}
+}

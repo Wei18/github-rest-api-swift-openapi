@@ -1,0 +1,506 @@
+{
+  "abstract" : [
+    {
+      "text" : "Service unavailable",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning",
+        "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Operations",
+        "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Operations\/code_hyphen_scanning_sol_list_hyphen_codeql_hyphen_databases",
+        "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Operations\/code_hyphen_scanning_sol_list_hyphen_codeql_hyphen_databases\/Output"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Operations\/code_hyphen_scanning_sol_list_hyphen_codeql_hyphen_databases\/Output\/serviceUnavailable(_:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:26GitHubRestAPICode_Scanning10OperationsO030code_hyphen_scanning_sol_list_h8_codeql_H10_databasesO6OutputO18serviceUnavailableyAgA10ComponentsO9ResponsesO0O12_unavailableVcAGmF",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "case"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "serviceUnavailable"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO9ResponsesO",
+        "text" : "Responses"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO9ResponsesO19service_unavailableV",
+        "text" : "service_unavailable"
+      },
+      {
+        "kind" : "text",
+        "text" : ")"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPICode_Scanning"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/code-scanning\/Types.swift#L7353"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Case",
+    "symbolKind" : "case",
+    "title" : "Operations.code_hyphen_scanning_sol_list_hyphen_codeql_hyphen_databases.Output.serviceUnavailable(_:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "case"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "serviceUnavailable"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Components\/Responses",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO9ResponsesO",
+              "text" : "Responses"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Components\/Responses\/service_unavailable",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO9ResponsesO19service_unavailableV",
+              "text" : "service_unavailable"
+            },
+            {
+              "kind" : "text",
+              "text" : ")"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/paths\/\/repos\/{owner}\/{repo}\/code-scanning\/codeql\/databases\/get(code-scanning\/list-codeql-databases)\/responses\/503",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "HTTP response code: ",
+              "type" : "text"
+            },
+            {
+              "code" : "503 serviceUnavailable",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ".",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapicode_scanning\/operations\/code_hyphen_scanning_sol_list_hyphen_codeql_hyphen_databases\/output\/serviceunavailable(_:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPICode_Scanning/documentation/GitHubRestAPICode_Scanning": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPICode_Scanning",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_scanning"
+},
+"doc://GitHubRestAPICode_Scanning/documentation/GitHubRestAPICode_Scanning/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_scanning\/components"
+},
+"doc://GitHubRestAPICode_Scanning/documentation/GitHubRestAPICode_Scanning/Components/Responses": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/responses",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Responses"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Components\/Responses",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Responses"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Responses",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_scanning\/components\/responses"
+},
+"doc://GitHubRestAPICode_Scanning/documentation/GitHubRestAPICode_Scanning/Components/Responses/service_unavailable": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "service_unavailable"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Components\/Responses\/service_unavailable",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "service_unavailable"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Responses.service_unavailable",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_scanning\/components\/responses\/service_unavailable"
+},
+"doc://GitHubRestAPICode_Scanning/documentation/GitHubRestAPICode_Scanning/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_scanning\/operations"
+},
+"doc://GitHubRestAPICode_Scanning/documentation/GitHubRestAPICode_Scanning/Operations/code_hyphen_scanning_sol_list_hyphen_codeql_hyphen_databases": {
+  "abstract" : [
+    {
+      "text" : "List CodeQL databases for a repository",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "code_hyphen_scanning_sol_list_hyphen_codeql_hyphen_databases"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Operations\/code_hyphen_scanning_sol_list_hyphen_codeql_hyphen_databases",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "code_hyphen_scanning_sol_list_hyphen_codeql_hyphen_databases"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.code_hyphen_scanning_sol_list_hyphen_codeql_hyphen_databases",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_scanning\/operations\/code_hyphen_scanning_sol_list_hyphen_codeql_hyphen_databases"
+},
+"doc://GitHubRestAPICode_Scanning/documentation/GitHubRestAPICode_Scanning/Operations/code_hyphen_scanning_sol_list_hyphen_codeql_hyphen_databases/Output": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Operations\/code_hyphen_scanning_sol_list_hyphen_codeql_hyphen_databases\/Output",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.code_hyphen_scanning_sol_list_hyphen_codeql_hyphen_databases.Output",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_scanning\/operations\/code_hyphen_scanning_sol_list_hyphen_codeql_hyphen_databases\/output"
+},
+"doc://GitHubRestAPICode_Scanning/documentation/GitHubRestAPICode_Scanning/Operations/code_hyphen_scanning_sol_list_hyphen_codeql_hyphen_databases/Output/serviceUnavailable(_:)": {
+  "abstract" : [
+    {
+      "text" : "Service unavailable",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "serviceUnavailable"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO9ResponsesO",
+      "text" : "Responses"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO9ResponsesO19service_unavailableV",
+      "text" : "service_unavailable"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Operations\/code_hyphen_scanning_sol_list_hyphen_codeql_hyphen_databases\/Output\/serviceUnavailable(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Operations.code_hyphen_scanning_sol_list_hyphen_codeql_hyphen_databases.Output.serviceUnavailable(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_scanning\/operations\/code_hyphen_scanning_sol_list_hyphen_codeql_hyphen_databases\/output\/serviceunavailable(_:)"
+}
+}
+}

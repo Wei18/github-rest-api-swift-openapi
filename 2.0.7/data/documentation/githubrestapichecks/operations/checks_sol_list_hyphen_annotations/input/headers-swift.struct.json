@@ -1,0 +1,489 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks",
+        "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks\/Operations",
+        "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks\/Operations\/checks_sol_list_hyphen_annotations",
+        "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks\/Operations\/checks_sol_list_hyphen_annotations\/Input"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks\/Operations\/checks_sol_list_hyphen_annotations\/Input\/Headers-swift.struct"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:19GitHubRestAPIChecks10OperationsO34checks_sol_list_hyphen_annotationsO5InputV7HeadersV",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "struct"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "Headers"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIChecks"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "Headers"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/checks\/Types.swift#L3476"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Structure",
+    "symbolKind" : "struct",
+    "title" : "Operations.checks_sol_list_hyphen_annotations.Input.Headers"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "struct"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "Headers"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/paths\/repos\/{owner}\/{repo}\/check-runs\/{check_run_id}\/annotations\/GET\/header",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIChecks\/SQ",
+        "doc:\/\/GitHubRestAPIChecks\/SH",
+        "doc:\/\/GitHubRestAPIChecks\/s8SendableP"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks\/Operations\/checks_sol_list_hyphen_annotations\/Input\/Headers-swift.struct\/init(accept:)"
+      ],
+      "title" : "Initializers"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks\/Operations\/checks_sol_list_hyphen_annotations\/Input\/Headers-swift.struct\/accept"
+      ],
+      "title" : "Instance Properties"
+    },
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks\/Operations\/checks_sol_list_hyphen_annotations\/Input\/Headers-swift.struct\/Equatable-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapichecks\/operations\/checks_sol_list_hyphen_annotations\/input\/headers-swift.struct"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIChecks/SH": {
+  "identifier" : "doc:\/\/GitHubRestAPIChecks\/SH",
+  "title" : "Swift.Hashable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIChecks/SQ": {
+  "identifier" : "doc:\/\/GitHubRestAPIChecks\/SQ",
+  "title" : "Swift.Equatable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIChecks/documentation/GitHubRestAPIChecks": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIChecks",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapichecks"
+},
+"doc://GitHubRestAPIChecks/documentation/GitHubRestAPIChecks/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapichecks\/operations"
+},
+"doc://GitHubRestAPIChecks/documentation/GitHubRestAPIChecks/Operations/checks_sol_list_hyphen_annotations": {
+  "abstract" : [
+    {
+      "text" : "List check run annotations",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "checks_sol_list_hyphen_annotations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks\/Operations\/checks_sol_list_hyphen_annotations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "checks_sol_list_hyphen_annotations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.checks_sol_list_hyphen_annotations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapichecks\/operations\/checks_sol_list_hyphen_annotations"
+},
+"doc://GitHubRestAPIChecks/documentation/GitHubRestAPIChecks/Operations/checks_sol_list_hyphen_annotations/Input": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks\/Operations\/checks_sol_list_hyphen_annotations\/Input",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.checks_sol_list_hyphen_annotations.Input",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapichecks\/operations\/checks_sol_list_hyphen_annotations\/input"
+},
+"doc://GitHubRestAPIChecks/documentation/GitHubRestAPIChecks/Operations/checks_sol_list_hyphen_annotations/Input/Headers-swift.struct": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Headers"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks\/Operations\/checks_sol_list_hyphen_annotations\/Input\/Headers-swift.struct",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Headers"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.checks_sol_list_hyphen_annotations.Input.Headers",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapichecks\/operations\/checks_sol_list_hyphen_annotations\/input\/headers-swift.struct"
+},
+"doc://GitHubRestAPIChecks/documentation/GitHubRestAPIChecks/Operations/checks_sol_list_hyphen_annotations/Input/Headers-swift.struct/Equatable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks\/Operations\/checks_sol_list_hyphen_annotations\/Input\/Headers-swift.struct\/Equatable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Equatable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapichecks\/operations\/checks_sol_list_hyphen_annotations\/input\/headers-swift.struct\/equatable-implementations"
+},
+"doc://GitHubRestAPIChecks/documentation/GitHubRestAPIChecks/Operations/checks_sol_list_hyphen_annotations/Input/Headers-swift.struct/accept": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "accept"
+    },
+    {
+      "kind" : "text",
+      "text" : ": ["
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:14OpenAPIRuntime23AcceptHeaderContentTypeV",
+      "text" : "AcceptHeaderContentType"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIChecks10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIChecks10OperationsO34checks_sol_list_hyphen_annotationsO",
+      "text" : "checks_sol_list_hyphen_annotations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIChecks10OperationsO34checks_sol_list_hyphen_annotationsO21AcceptableContentTypeO",
+      "text" : "AcceptableContentType"
+    },
+    {
+      "kind" : "text",
+      "text" : ">]"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks\/Operations\/checks_sol_list_hyphen_annotations\/Input\/Headers-swift.struct\/accept",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "accept",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapichecks\/operations\/checks_sol_list_hyphen_annotations\/input\/headers-swift.struct\/accept"
+},
+"doc://GitHubRestAPIChecks/documentation/GitHubRestAPIChecks/Operations/checks_sol_list_hyphen_annotations/Input/Headers-swift.struct/init(accept:)": {
+  "abstract" : [
+    {
+      "text" : "Creates a new ",
+      "type" : "text"
+    },
+    {
+      "code" : "Headers",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "accept"
+    },
+    {
+      "kind" : "text",
+      "text" : ": ["
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:14OpenAPIRuntime23AcceptHeaderContentTypeV",
+      "text" : "AcceptHeaderContentType"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIChecks10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIChecks10OperationsO34checks_sol_list_hyphen_annotationsO",
+      "text" : "checks_sol_list_hyphen_annotations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIChecks10OperationsO34checks_sol_list_hyphen_annotationsO21AcceptableContentTypeO",
+      "text" : "AcceptableContentType"
+    },
+    {
+      "kind" : "text",
+      "text" : ">])"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks\/Operations\/checks_sol_list_hyphen_annotations\/Input\/Headers-swift.struct\/init(accept:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(accept:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapichecks\/operations\/checks_sol_list_hyphen_annotations\/input\/headers-swift.struct\/init(accept:)"
+},
+"doc://GitHubRestAPIChecks/s8SendableP": {
+  "identifier" : "doc:\/\/GitHubRestAPIChecks\/s8SendableP",
+  "title" : "Swift.Sendable",
+  "type" : "unresolvable"
+}
+}
+}

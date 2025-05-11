@@ -1,0 +1,249 @@
+{
+  "abstract" : [
+    {
+      "text" : "Server URLs defined in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Servers"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:20GitHubRestAPIActions7ServersO",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "enum"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "Servers"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIActions"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "Servers"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/actions\/Types.swift#L4319"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Enumeration",
+    "symbolKind" : "enum",
+    "title" : "Servers"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "enum"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "Servers"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Servers\/server1()"
+      ],
+      "title" : "Type Methods"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Servers\/Server1"
+      ],
+      "title" : "Enumerations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapiactions\/servers"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIActions",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Servers": {
+  "abstract" : [
+    {
+      "text" : "Server URLs defined in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Servers"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Servers",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Servers"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Servers",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/servers"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Servers/Server1": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Server1"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Servers\/Server1",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Server1"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Servers.Server1",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/servers\/server1"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Servers/server1()": {
+  "abstract" : [
+
+  ],
+  "deprecated" : true,
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "server1"
+    },
+    {
+      "kind" : "text",
+      "text" : "() "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:10Foundation3URLV",
+      "text" : "URL"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Servers\/server1()",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "server1()",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/servers\/server1()"
+}
+}
+}

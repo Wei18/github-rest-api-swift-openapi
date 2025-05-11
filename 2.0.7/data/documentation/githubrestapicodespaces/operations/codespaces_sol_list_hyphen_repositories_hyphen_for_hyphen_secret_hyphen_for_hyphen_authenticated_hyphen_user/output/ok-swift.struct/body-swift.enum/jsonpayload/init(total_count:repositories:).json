@@ -1,0 +1,653 @@
+{
+  "abstract" : [
+    {
+      "text" : "Creates a new ",
+      "type" : "text"
+    },
+    {
+      "code" : "jsonPayload",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/codespaces_sol_list_hyphen_repositories_hyphen_for_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/codespaces_sol_list_hyphen_repositories_hyphen_for_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user\/Output",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/codespaces_sol_list_hyphen_repositories_hyphen_for_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user\/Output\/Ok-swift.struct",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/codespaces_sol_list_hyphen_repositories_hyphen_for_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user\/Output\/Ok-swift.struct\/Body-swift.enum",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/codespaces_sol_list_hyphen_repositories_hyphen_for_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user\/Output\/Ok-swift.struct\/Body-swift.enum\/jsonPayload"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/codespaces_sol_list_hyphen_repositories_hyphen_for_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user\/Output\/Ok-swift.struct\/Body-swift.enum\/jsonPayload\/init(total_count:repositories:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:23GitHubRestAPICodespaces10OperationsO040codespaces_sol_list_hyphen_repositories_i5_for_i8_secret_i1_k1_i15_authenticated_I5_userO6OutputO2OkV4BodyO11jsonPayloadV11total_count0J0AMSi_SayAA10ComponentsO7SchemasO08minimal_I11_repositoryVGtcfc",
+    "fragments" : [
+      {
+        "kind" : "identifier",
+        "text" : "init"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "total_count"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:Si",
+        "text" : "Int"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "repositories"
+      },
+      {
+        "kind" : "text",
+        "text" : ": ["
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:23GitHubRestAPICodespaces10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:23GitHubRestAPICodespaces10ComponentsO7SchemasO",
+        "text" : "Schemas"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:23GitHubRestAPICodespaces10ComponentsO7SchemasO25minimal_hyphen_repositoryV",
+        "text" : "minimal_hyphen_repository"
+      },
+      {
+        "kind" : "text",
+        "text" : "])"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPICodespaces"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/codespaces\/Types.swift#L15358"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Initializer",
+    "symbolKind" : "init",
+    "title" : "init(total_count:repositories:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "init"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "total_count"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:Si",
+              "text" : "Int"
+            },
+            {
+              "kind" : "text",
+              "text" : ", "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "repositories"
+            },
+            {
+              "kind" : "text",
+              "text" : ": ["
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:23GitHubRestAPICodespaces10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:23GitHubRestAPICodespaces10ComponentsO7SchemasO",
+              "text" : "Schemas"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas\/minimal_hyphen_repository",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:23GitHubRestAPICodespaces10ComponentsO7SchemasO25minimal_hyphen_repositoryV",
+              "text" : "minimal_hyphen_repository"
+            },
+            {
+              "kind" : "text",
+              "text" : "])"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "kind" : "parameters",
+      "parameters" : [
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "total_count"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "repositories"
+        }
+      ]
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapicodespaces\/operations\/codespaces_sol_list_hyphen_repositories_hyphen_for_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user\/output\/ok-swift.struct\/body-swift.enum\/jsonpayload\/init(total_count:repositories:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPICodespaces",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/components"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Components/Schemas": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/schemas",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/components\/schemas"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Components/Schemas/minimal_hyphen_repository": {
+  "abstract" : [
+    {
+      "text" : "Minimal Repository",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "minimal_hyphen_repository"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas\/minimal_hyphen_repository",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "minimal_hyphen_repository"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.minimal_hyphen_repository",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/components\/schemas\/minimal_hyphen_repository"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/operations"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Operations/codespaces_sol_list_hyphen_repositories_hyphen_for_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user": {
+  "abstract" : [
+    {
+      "text" : "List selected repositories for a user secret",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "codespaces_sol_list_hyphen_repositories_hyphen_for_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/codespaces_sol_list_hyphen_repositories_hyphen_for_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "codespaces_sol_list_hyphen_repositories_hyphen_for_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.codespaces_sol_list_hyphen_repositories_hyphen_for_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/operations\/codespaces_sol_list_hyphen_repositories_hyphen_for_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Operations/codespaces_sol_list_hyphen_repositories_hyphen_for_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user/Output": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/codespaces_sol_list_hyphen_repositories_hyphen_for_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user\/Output",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.codespaces_sol_list_hyphen_repositories_hyphen_for_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user.Output",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/operations\/codespaces_sol_list_hyphen_repositories_hyphen_for_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user\/output"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Operations/codespaces_sol_list_hyphen_repositories_hyphen_for_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user/Output/Ok-swift.struct": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Ok"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/codespaces_sol_list_hyphen_repositories_hyphen_for_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user\/Output\/Ok-swift.struct",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Ok"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.codespaces_sol_list_hyphen_repositories_hyphen_for_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/operations\/codespaces_sol_list_hyphen_repositories_hyphen_for_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user\/output\/ok-swift.struct"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Operations/codespaces_sol_list_hyphen_repositories_hyphen_for_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user/Output/Ok-swift.struct/Body-swift.enum": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Body"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/codespaces_sol_list_hyphen_repositories_hyphen_for_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user\/Output\/Ok-swift.struct\/Body-swift.enum",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Body"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.codespaces_sol_list_hyphen_repositories_hyphen_for_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Body",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/operations\/codespaces_sol_list_hyphen_repositories_hyphen_for_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user\/output\/ok-swift.struct\/body-swift.enum"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Operations/codespaces_sol_list_hyphen_repositories_hyphen_for_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user/Output/Ok-swift.struct/Body-swift.enum/jsonPayload": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "jsonPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/codespaces_sol_list_hyphen_repositories_hyphen_for_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user\/Output\/Ok-swift.struct\/Body-swift.enum\/jsonPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "jsonPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.codespaces_sol_list_hyphen_repositories_hyphen_for_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user.Output.Ok.Body.jsonPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/operations\/codespaces_sol_list_hyphen_repositories_hyphen_for_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user\/output\/ok-swift.struct\/body-swift.enum\/jsonpayload"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Operations/codespaces_sol_list_hyphen_repositories_hyphen_for_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user/Output/Ok-swift.struct/Body-swift.enum/jsonPayload/init(total_count:repositories:)": {
+  "abstract" : [
+    {
+      "text" : "Creates a new ",
+      "type" : "text"
+    },
+    {
+      "code" : "jsonPayload",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "total_count"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "repositories"
+    },
+    {
+      "kind" : "text",
+      "text" : ": ["
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10ComponentsO7SchemasO25minimal_hyphen_repositoryV",
+      "text" : "minimal_hyphen_repository"
+    },
+    {
+      "kind" : "text",
+      "text" : "])"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/codespaces_sol_list_hyphen_repositories_hyphen_for_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user\/Output\/Ok-swift.struct\/Body-swift.enum\/jsonPayload\/init(total_count:repositories:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(total_count:repositories:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/operations\/codespaces_sol_list_hyphen_repositories_hyphen_for_hyphen_secret_hyphen_for_hyphen_authenticated_hyphen_user\/output\/ok-swift.struct\/body-swift.enum\/jsonpayload\/init(total_count:repositories:)"
+}
+}
+}

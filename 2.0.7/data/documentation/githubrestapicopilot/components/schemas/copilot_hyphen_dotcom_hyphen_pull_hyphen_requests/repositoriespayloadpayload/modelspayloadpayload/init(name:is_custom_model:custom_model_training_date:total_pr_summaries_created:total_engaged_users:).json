@@ -1,0 +1,652 @@
+{
+  "abstract" : [
+    {
+      "text" : "Creates a new ",
+      "type" : "text"
+    },
+    {
+      "code" : "modelsPayloadPayload",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot",
+        "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components",
+        "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components\/Schemas",
+        "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components\/Schemas\/copilot_hyphen_dotcom_hyphen_pull_hyphen_requests",
+        "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components\/Schemas\/copilot_hyphen_dotcom_hyphen_pull_hyphen_requests\/repositoriesPayloadPayload",
+        "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components\/Schemas\/copilot_hyphen_dotcom_hyphen_pull_hyphen_requests\/repositoriesPayloadPayload\/modelsPayloadPayload"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components\/Schemas\/copilot_hyphen_dotcom_hyphen_pull_hyphen_requests\/repositoriesPayloadPayload\/modelsPayloadPayload\/init(name:is_custom_model:custom_model_training_date:total_pr_summaries_created:total_engaged_users:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:20GitHubRestAPICopilot10ComponentsO7SchemasO022copilot_hyphen_dotcom_h6_pull_H9_requestsV019repositoriesPayloadM0V06modelsmM0V4name15is_custom_model0q1_R14_training_date26total_pr_summaries_created0U14_engaged_usersAKSSSg_SbSgAQSiSgAStcfc",
+    "fragments" : [
+      {
+        "kind" : "identifier",
+        "text" : "init"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "name"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SS",
+        "text" : "String"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "is_custom_model"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:Sb",
+        "text" : "Bool"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "custom_model_training_date"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SS",
+        "text" : "String"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "total_pr_summaries_created"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:Si",
+        "text" : "Int"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "total_engaged_users"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:Si",
+        "text" : "Int"
+      },
+      {
+        "kind" : "text",
+        "text" : "?)"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPICopilot"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/copilot\/Types.swift#L2114"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Initializer",
+    "symbolKind" : "init",
+    "title" : "init(name:is_custom_model:custom_model_training_date:total_pr_summaries_created:total_engaged_users:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "init"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "name"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:SS",
+              "text" : "String"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "is_custom_model"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:Sb",
+              "text" : "Bool"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "custom_model_training_date"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:SS",
+              "text" : "String"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "total_pr_summaries_created"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:Si",
+              "text" : "Int"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "total_engaged_users"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:Si",
+              "text" : "Int"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil)"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "kind" : "parameters",
+      "parameters" : [
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Name of the model used for Copilot pull request summaries. If the default model is used will appear as ‘default’.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "name"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Indicates whether a model is custom or default.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "is_custom_model"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The training date for the custom model.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "custom_model_training_date"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The number of pull request summaries generated using Copilot for Pull Requests in the given repository.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "total_pr_summaries_created"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The number of users who generated pull request summaries using Copilot for Pull Requests in the given repository and model.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "total_engaged_users"
+        }
+      ]
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapicopilot\/components\/schemas\/copilot_hyphen_dotcom_hyphen_pull_hyphen_requests\/repositoriespayloadpayload\/modelspayloadpayload\/init(name:is_custom_model:custom_model_training_date:total_pr_summaries_created:total_engaged_users:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPICopilot/documentation/GitHubRestAPICopilot": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPICopilot",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicopilot"
+},
+"doc://GitHubRestAPICopilot/documentation/GitHubRestAPICopilot/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicopilot\/components"
+},
+"doc://GitHubRestAPICopilot/documentation/GitHubRestAPICopilot/Components/Schemas": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/schemas",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components\/Schemas",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicopilot\/components\/schemas"
+},
+"doc://GitHubRestAPICopilot/documentation/GitHubRestAPICopilot/Components/Schemas/copilot_hyphen_dotcom_hyphen_pull_hyphen_requests": {
+  "abstract" : [
+    {
+      "text" : "Usage metrics for Copilot for pull requests.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "copilot_hyphen_dotcom_hyphen_pull_hyphen_requests"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components\/Schemas\/copilot_hyphen_dotcom_hyphen_pull_hyphen_requests",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "copilot_hyphen_dotcom_hyphen_pull_hyphen_requests"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.copilot_hyphen_dotcom_hyphen_pull_hyphen_requests",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicopilot\/components\/schemas\/copilot_hyphen_dotcom_hyphen_pull_hyphen_requests"
+},
+"doc://GitHubRestAPICopilot/documentation/GitHubRestAPICopilot/Components/Schemas/copilot_hyphen_dotcom_hyphen_pull_hyphen_requests/repositoriesPayloadPayload": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "repositoriesPayloadPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components\/Schemas\/copilot_hyphen_dotcom_hyphen_pull_hyphen_requests\/repositoriesPayloadPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "repositoriesPayloadPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.copilot_hyphen_dotcom_hyphen_pull_hyphen_requests.repositoriesPayloadPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicopilot\/components\/schemas\/copilot_hyphen_dotcom_hyphen_pull_hyphen_requests\/repositoriespayloadpayload"
+},
+"doc://GitHubRestAPICopilot/documentation/GitHubRestAPICopilot/Components/Schemas/copilot_hyphen_dotcom_hyphen_pull_hyphen_requests/repositoriesPayloadPayload/modelsPayloadPayload": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "modelsPayloadPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components\/Schemas\/copilot_hyphen_dotcom_hyphen_pull_hyphen_requests\/repositoriesPayloadPayload\/modelsPayloadPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "modelsPayloadPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.copilot_hyphen_dotcom_hyphen_pull_hyphen_requests.repositoriesPayloadPayload.modelsPayloadPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicopilot\/components\/schemas\/copilot_hyphen_dotcom_hyphen_pull_hyphen_requests\/repositoriespayloadpayload\/modelspayloadpayload"
+},
+"doc://GitHubRestAPICopilot/documentation/GitHubRestAPICopilot/Components/Schemas/copilot_hyphen_dotcom_hyphen_pull_hyphen_requests/repositoriesPayloadPayload/modelsPayloadPayload/init(name:is_custom_model:custom_model_training_date:total_pr_summaries_created:total_engaged_users:)": {
+  "abstract" : [
+    {
+      "text" : "Creates a new ",
+      "type" : "text"
+    },
+    {
+      "code" : "modelsPayloadPayload",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "name"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "is_custom_model"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "custom_model_training_date"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "total_pr_summaries_created"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "total_engaged_users"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : "?)"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Components\/Schemas\/copilot_hyphen_dotcom_hyphen_pull_hyphen_requests\/repositoriesPayloadPayload\/modelsPayloadPayload\/init(name:is_custom_model:custom_model_training_date:total_pr_summaries_created:total_engaged_users:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(name:is_custom_model:custom_model_training_date:total_pr_summaries_created:total_engaged_users:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicopilot\/components\/schemas\/copilot_hyphen_dotcom_hyphen_pull_hyphen_requests\/repositoriespayloadpayload\/modelspayloadpayload\/init(name:is_custom_model:custom_model_training_date:total_pr_summaries_created:total_engaged_users:)"
+}
+}
+}

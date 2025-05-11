@@ -1,0 +1,628 @@
+{
+  "abstract" : [
+    {
+      "text" : "The associated value of the enum case if ",
+      "type" : "text"
+    },
+    {
+      "code" : "self",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " is ",
+      "type" : "text"
+    },
+    {
+      "code" : ".json",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks",
+        "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks\/Operations",
+        "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks\/Operations\/checks_sol_rerequest_hyphen_run",
+        "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks\/Operations\/checks_sol_rerequest_hyphen_run\/Output",
+        "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks\/Operations\/checks_sol_rerequest_hyphen_run\/Output\/Forbidden-swift.struct",
+        "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks\/Operations\/checks_sol_rerequest_hyphen_run\/Output\/Forbidden-swift.struct\/Body-swift.enum"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks\/Operations\/checks_sol_rerequest_hyphen_run\/Output\/Forbidden-swift.struct\/Body-swift.enum\/json"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:19GitHubRestAPIChecks10OperationsO31checks_sol_rerequest_hyphen_runO6OutputO9ForbiddenV4BodyO4jsonAA10ComponentsO7SchemasO06basic_I6_errorVvp",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "var"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "json"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:19GitHubRestAPIChecks10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:19GitHubRestAPIChecks10ComponentsO7SchemasO",
+        "text" : "Schemas"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:19GitHubRestAPIChecks10ComponentsO7SchemasO18basic_hyphen_errorV",
+        "text" : "basic_hyphen_error"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIChecks"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/checks\/Types.swift#L3733"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Instance Property",
+    "symbolKind" : "property",
+    "title" : "json"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "var"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "json"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:19GitHubRestAPIChecks10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks\/Components\/Schemas",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:19GitHubRestAPIChecks10ComponentsO7SchemasO",
+              "text" : "Schemas"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks\/Components\/Schemas\/basic_hyphen_error",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:19GitHubRestAPIChecks10ComponentsO7SchemasO18basic_hyphen_errorV",
+              "text" : "basic_hyphen_error"
+            },
+            {
+              "kind" : "text",
+              "text" : " { "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "get"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "throws"
+            },
+            {
+              "kind" : "text",
+              "text" : " }"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "An error if ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "self",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : " is not ",
+                  "type" : "text"
+                },
+                {
+                  "code" : ".json",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Throws",
+          "style" : "note",
+          "type" : "aside"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "",
+                  "type" : "text"
+                },
+                {
+                  "code" : ".json",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "See Also",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapichecks\/operations\/checks_sol_rerequest_hyphen_run\/output\/forbidden-swift.struct\/body-swift.enum\/json"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIChecks/documentation/GitHubRestAPIChecks": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIChecks",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapichecks"
+},
+"doc://GitHubRestAPIChecks/documentation/GitHubRestAPIChecks/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapichecks\/components"
+},
+"doc://GitHubRestAPIChecks/documentation/GitHubRestAPIChecks/Components/Schemas": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/schemas",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks\/Components\/Schemas",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapichecks\/components\/schemas"
+},
+"doc://GitHubRestAPIChecks/documentation/GitHubRestAPIChecks/Components/Schemas/basic_hyphen_error": {
+  "abstract" : [
+    {
+      "text" : "Basic Error",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "basic_hyphen_error"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks\/Components\/Schemas\/basic_hyphen_error",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "basic_hyphen_error"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.basic_hyphen_error",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapichecks\/components\/schemas\/basic_hyphen_error"
+},
+"doc://GitHubRestAPIChecks/documentation/GitHubRestAPIChecks/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapichecks\/operations"
+},
+"doc://GitHubRestAPIChecks/documentation/GitHubRestAPIChecks/Operations/checks_sol_rerequest_hyphen_run": {
+  "abstract" : [
+    {
+      "text" : "Rerequest a check run",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "checks_sol_rerequest_hyphen_run"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks\/Operations\/checks_sol_rerequest_hyphen_run",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "checks_sol_rerequest_hyphen_run"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.checks_sol_rerequest_hyphen_run",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapichecks\/operations\/checks_sol_rerequest_hyphen_run"
+},
+"doc://GitHubRestAPIChecks/documentation/GitHubRestAPIChecks/Operations/checks_sol_rerequest_hyphen_run/Output": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks\/Operations\/checks_sol_rerequest_hyphen_run\/Output",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.checks_sol_rerequest_hyphen_run.Output",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapichecks\/operations\/checks_sol_rerequest_hyphen_run\/output"
+},
+"doc://GitHubRestAPIChecks/documentation/GitHubRestAPIChecks/Operations/checks_sol_rerequest_hyphen_run/Output/Forbidden-swift.struct": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Forbidden"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks\/Operations\/checks_sol_rerequest_hyphen_run\/Output\/Forbidden-swift.struct",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Forbidden"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.checks_sol_rerequest_hyphen_run.Output.Forbidden",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapichecks\/operations\/checks_sol_rerequest_hyphen_run\/output\/forbidden-swift.struct"
+},
+"doc://GitHubRestAPIChecks/documentation/GitHubRestAPIChecks/Operations/checks_sol_rerequest_hyphen_run/Output/Forbidden-swift.struct/Body-swift.enum": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Body"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks\/Operations\/checks_sol_rerequest_hyphen_run\/Output\/Forbidden-swift.struct\/Body-swift.enum",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Body"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.checks_sol_rerequest_hyphen_run.Output.Forbidden.Body",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapichecks\/operations\/checks_sol_rerequest_hyphen_run\/output\/forbidden-swift.struct\/body-swift.enum"
+},
+"doc://GitHubRestAPIChecks/documentation/GitHubRestAPIChecks/Operations/checks_sol_rerequest_hyphen_run/Output/Forbidden-swift.struct/Body-swift.enum/json": {
+  "abstract" : [
+    {
+      "text" : "The associated value of the enum case if ",
+      "type" : "text"
+    },
+    {
+      "code" : "self",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " is ",
+      "type" : "text"
+    },
+    {
+      "code" : ".json",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "json"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIChecks10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIChecks10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIChecks10ComponentsO7SchemasO18basic_hyphen_errorV",
+      "text" : "basic_hyphen_error"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks\/Operations\/checks_sol_rerequest_hyphen_run\/Output\/Forbidden-swift.struct\/Body-swift.enum\/json",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "json",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapichecks\/operations\/checks_sol_rerequest_hyphen_run\/output\/forbidden-swift.struct\/body-swift.enum\/json"
+}
+}
+}

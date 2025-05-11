@@ -1,0 +1,599 @@
+{
+  "abstract" : [
+    {
+      "text" : "Creates a new ",
+      "type" : "text"
+    },
+    {
+      "code" : "jsonPayload",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues",
+        "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Operations",
+        "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Operations\/issues_sol_update_hyphen_label",
+        "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Operations\/issues_sol_update_hyphen_label\/Input",
+        "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Operations\/issues_sol_update_hyphen_label\/Input\/Body-swift.enum",
+        "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Operations\/issues_sol_update_hyphen_label\/Input\/Body-swift.enum\/jsonPayload"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Operations\/issues_sol_update_hyphen_label\/Input\/Body-swift.enum\/jsonPayload\/init(new_name:color:description:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:19GitHubRestAPIIssues10OperationsO30issues_sol_update_hyphen_labelO5InputV4BodyO11jsonPayloadV8new_name5color11descriptionAKSSSg_A2Otcfc",
+    "fragments" : [
+      {
+        "kind" : "identifier",
+        "text" : "init"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "new_name"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SS",
+        "text" : "String"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "color"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SS",
+        "text" : "String"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "description"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SS",
+        "text" : "String"
+      },
+      {
+        "kind" : "text",
+        "text" : "?)"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIIssues"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/issues\/Types.swift#L17944"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Initializer",
+    "symbolKind" : "init",
+    "title" : "init(new_name:color:description:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "init"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "new_name"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:SS",
+              "text" : "String"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "color"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:SS",
+              "text" : "String"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "description"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:SS",
+              "text" : "String"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil)"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "kind" : "parameters",
+      "parameters" : [
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The new name of the label. Emoji can be added to label names, using either native emoji or colon-style markup. For example, typing ",
+                  "type" : "text"
+                },
+                {
+                  "code" : ":strawberry:",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : " will render the emoji ",
+                  "type" : "text"
+                },
+                {
+                  "identifier" : "https:\/\/github.githubassets.com\/images\/icons\/emoji\/unicode\/1f353.png",
+                  "type" : "image"
+                },
+                {
+                  "text" : ". For a full list of available emoji and codes, see “",
+                  "type" : "text"
+                },
+                {
+                  "identifier" : "https:\/\/github.com\/ikatyang\/emoji-cheat-sheet",
+                  "isActive" : true,
+                  "type" : "reference"
+                },
+                {
+                  "text" : ".”",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "new_name"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The ",
+                  "type" : "text"
+                },
+                {
+                  "identifier" : "http:\/\/www.color-hex.com\/",
+                  "isActive" : true,
+                  "type" : "reference"
+                },
+                {
+                  "text" : " for the label, without the leading ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "color"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "A short description of the label. Must be 100 characters or fewer.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "description"
+        }
+      ]
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapiissues\/operations\/issues_sol_update_hyphen_label\/input\/body-swift.enum\/jsonpayload\/init(new_name:color:description:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIIssues/documentation/GitHubRestAPIIssues": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIIssues",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiissues"
+},
+"doc://GitHubRestAPIIssues/documentation/GitHubRestAPIIssues/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiissues\/operations"
+},
+"doc://GitHubRestAPIIssues/documentation/GitHubRestAPIIssues/Operations/issues_sol_update_hyphen_label": {
+  "abstract" : [
+    {
+      "text" : "Update a label",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "issues_sol_update_hyphen_label"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Operations\/issues_sol_update_hyphen_label",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "issues_sol_update_hyphen_label"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.issues_sol_update_hyphen_label",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiissues\/operations\/issues_sol_update_hyphen_label"
+},
+"doc://GitHubRestAPIIssues/documentation/GitHubRestAPIIssues/Operations/issues_sol_update_hyphen_label/Input": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Operations\/issues_sol_update_hyphen_label\/Input",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.issues_sol_update_hyphen_label.Input",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiissues\/operations\/issues_sol_update_hyphen_label\/input"
+},
+"doc://GitHubRestAPIIssues/documentation/GitHubRestAPIIssues/Operations/issues_sol_update_hyphen_label/Input/Body-swift.enum": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Body"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Operations\/issues_sol_update_hyphen_label\/Input\/Body-swift.enum",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Body"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.issues_sol_update_hyphen_label.Input.Body",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiissues\/operations\/issues_sol_update_hyphen_label\/input\/body-swift.enum"
+},
+"doc://GitHubRestAPIIssues/documentation/GitHubRestAPIIssues/Operations/issues_sol_update_hyphen_label/Input/Body-swift.enum/jsonPayload": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "jsonPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Operations\/issues_sol_update_hyphen_label\/Input\/Body-swift.enum\/jsonPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "jsonPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.issues_sol_update_hyphen_label.Input.Body.jsonPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiissues\/operations\/issues_sol_update_hyphen_label\/input\/body-swift.enum\/jsonpayload"
+},
+"doc://GitHubRestAPIIssues/documentation/GitHubRestAPIIssues/Operations/issues_sol_update_hyphen_label/Input/Body-swift.enum/jsonPayload/init(new_name:color:description:)": {
+  "abstract" : [
+    {
+      "text" : "Creates a new ",
+      "type" : "text"
+    },
+    {
+      "code" : "jsonPayload",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "new_name"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "color"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "description"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?)"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Operations\/issues_sol_update_hyphen_label\/Input\/Body-swift.enum\/jsonPayload\/init(new_name:color:description:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(new_name:color:description:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiissues\/operations\/issues_sol_update_hyphen_label\/input\/body-swift.enum\/jsonpayload\/init(new_name:color:description:)"
+},
+"http://www.color-hex.com/": {
+  "identifier" : "http:\/\/www.color-hex.com\/",
+  "title" : "hexadecimal color code",
+  "titleInlineContent" : [
+    {
+      "text" : "hexadecimal color code",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "http:\/\/www.color-hex.com\/"
+},
+"https://github.com/ikatyang/emoji-cheat-sheet": {
+  "identifier" : "https:\/\/github.com\/ikatyang\/emoji-cheat-sheet",
+  "title" : "Emoji cheat sheet",
+  "titleInlineContent" : [
+    {
+      "text" : "Emoji cheat sheet",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/github.com\/ikatyang\/emoji-cheat-sheet"
+},
+"https://github.githubassets.com/images/icons/emoji/unicode/1f353.png": {
+  "alt" : ":strawberry:",
+  "identifier" : "https:\/\/github.githubassets.com\/images\/icons\/emoji\/unicode\/1f353.png",
+  "type" : "image",
+  "variants" : [
+    {
+      "traits" : [
+        "1x",
+        "light"
+      ],
+      "url" : "https:\/\/github.githubassets.com\/images\/icons\/emoji\/unicode\/1f353.png"
+    }
+  ]
+}
+}
+}

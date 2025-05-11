@@ -1,0 +1,563 @@
+{
+  "abstract" : [
+    {
+      "text" : "The system role from which this role inherits permissions.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Schemas",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Schemas\/organization_hyphen_role"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Schemas\/organization_hyphen_role\/base_rolePayload"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:17GitHubRestAPIOrgs10ComponentsO7SchemasO24organization_hyphen_roleV05base_I7PayloadO",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "enum"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "base_rolePayload"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIOrgs"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "base_rolePayload"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/orgs\/Types.swift#L6863"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Enumeration",
+    "symbolKind" : "enum",
+    "title" : "Components.Schemas.organization_hyphen_role.base_rolePayload"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "enum"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "base_rolePayload"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/components\/schemas\/organization-role\/base_role",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIOrgs\/s12CaseIterableP",
+        "doc:\/\/GitHubRestAPIOrgs\/Se",
+        "doc:\/\/GitHubRestAPIOrgs\/SE",
+        "doc:\/\/GitHubRestAPIOrgs\/SQ",
+        "doc:\/\/GitHubRestAPIOrgs\/SH",
+        "doc:\/\/GitHubRestAPIOrgs\/SY",
+        "doc:\/\/GitHubRestAPIOrgs\/s8SendableP"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Schemas\/organization_hyphen_role\/base_rolePayload\/admin",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Schemas\/organization_hyphen_role\/base_rolePayload\/maintain",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Schemas\/organization_hyphen_role\/base_rolePayload\/read",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Schemas\/organization_hyphen_role\/base_rolePayload\/triage",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Schemas\/organization_hyphen_role\/base_rolePayload\/write"
+      ],
+      "title" : "Enumeration Cases"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Schemas\/organization_hyphen_role\/base_rolePayload\/init(rawValue:)"
+      ],
+      "title" : "Initializers"
+    },
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Schemas\/organization_hyphen_role\/base_rolePayload\/Equatable-Implementations",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Schemas\/organization_hyphen_role\/base_rolePayload\/RawRepresentable-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapiorgs\/components\/schemas\/organization_hyphen_role\/base_rolepayload"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIOrgs/SE": {
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/SE",
+  "title" : "Swift.Encodable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIOrgs/SH": {
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/SH",
+  "title" : "Swift.Hashable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIOrgs/SQ": {
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/SQ",
+  "title" : "Swift.Equatable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIOrgs/SY": {
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/SY",
+  "title" : "Swift.RawRepresentable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIOrgs/Se": {
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/Se",
+  "title" : "Swift.Decodable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIOrgs",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Schemas": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/schemas",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Schemas",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/schemas"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Schemas/organization_hyphen_role": {
+  "abstract" : [
+    {
+      "text" : "Organization roles",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "organization_hyphen_role"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Schemas\/organization_hyphen_role",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "organization_hyphen_role"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.organization_hyphen_role",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/schemas\/organization_hyphen_role"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Schemas/organization_hyphen_role/base_rolePayload": {
+  "abstract" : [
+    {
+      "text" : "The system role from which this role inherits permissions.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "base_rolePayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Schemas\/organization_hyphen_role\/base_rolePayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "base_rolePayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.organization_hyphen_role.base_rolePayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/schemas\/organization_hyphen_role\/base_rolepayload"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Schemas/organization_hyphen_role/base_rolePayload/Equatable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Schemas\/organization_hyphen_role\/base_rolePayload\/Equatable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Equatable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/schemas\/organization_hyphen_role\/base_rolepayload\/equatable-implementations"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Schemas/organization_hyphen_role/base_rolePayload/RawRepresentable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Schemas\/organization_hyphen_role\/base_rolePayload\/RawRepresentable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "RawRepresentable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/schemas\/organization_hyphen_role\/base_rolepayload\/rawrepresentable-implementations"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Schemas/organization_hyphen_role/base_rolePayload/admin": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "admin"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Schemas\/organization_hyphen_role\/base_rolePayload\/admin",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.organization_hyphen_role.base_rolePayload.admin",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/schemas\/organization_hyphen_role\/base_rolepayload\/admin"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Schemas/organization_hyphen_role/base_rolePayload/init(rawValue:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "?("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "rawValue"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Schemas\/organization_hyphen_role\/base_rolePayload\/init(rawValue:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(rawValue:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/schemas\/organization_hyphen_role\/base_rolepayload\/init(rawvalue:)"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Schemas/organization_hyphen_role/base_rolePayload/maintain": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "maintain"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Schemas\/organization_hyphen_role\/base_rolePayload\/maintain",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.organization_hyphen_role.base_rolePayload.maintain",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/schemas\/organization_hyphen_role\/base_rolepayload\/maintain"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Schemas/organization_hyphen_role/base_rolePayload/read": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "read"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Schemas\/organization_hyphen_role\/base_rolePayload\/read",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.organization_hyphen_role.base_rolePayload.read",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/schemas\/organization_hyphen_role\/base_rolepayload\/read"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Schemas/organization_hyphen_role/base_rolePayload/triage": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "triage"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Schemas\/organization_hyphen_role\/base_rolePayload\/triage",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.organization_hyphen_role.base_rolePayload.triage",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/schemas\/organization_hyphen_role\/base_rolepayload\/triage"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Schemas/organization_hyphen_role/base_rolePayload/write": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "write"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Schemas\/organization_hyphen_role\/base_rolePayload\/write",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.organization_hyphen_role.base_rolePayload.write",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/schemas\/organization_hyphen_role\/base_rolepayload\/write"
+},
+"doc://GitHubRestAPIOrgs/s12CaseIterableP": {
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/s12CaseIterableP",
+  "title" : "Swift.CaseIterable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIOrgs/s8SendableP": {
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/s8SendableP",
+  "title" : "Swift.Sendable",
+  "type" : "unresolvable"
+}
+}
+}

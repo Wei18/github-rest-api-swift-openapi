@@ -1,0 +1,476 @@
+{
+  "abstract" : [
+    {
+      "text" : "The type of GitHub user that can comment, open issues, or create pull requests while the interaction limit is in effect.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions",
+        "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Components",
+        "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Components\/Schemas"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Components\/Schemas\/interaction_hyphen_group"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:25GitHubRestAPIInteractions10ComponentsO7SchemasO24interaction_hyphen_groupO",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "enum"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "interaction_hyphen_group"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIInteractions"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "interaction_hyphen_group"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/interactions\/Types.swift#L349"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Enumeration",
+    "symbolKind" : "enum",
+    "title" : "Components.Schemas.interaction_hyphen_group"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "enum"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "interaction_hyphen_group"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/components\/schemas\/interaction-group",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIInteractions\/s12CaseIterableP",
+        "doc:\/\/GitHubRestAPIInteractions\/Se",
+        "doc:\/\/GitHubRestAPIInteractions\/SE",
+        "doc:\/\/GitHubRestAPIInteractions\/SQ",
+        "doc:\/\/GitHubRestAPIInteractions\/SH",
+        "doc:\/\/GitHubRestAPIInteractions\/SY",
+        "doc:\/\/GitHubRestAPIInteractions\/s8SendableP"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Components\/Schemas\/interaction_hyphen_group\/collaborators_only",
+        "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Components\/Schemas\/interaction_hyphen_group\/contributors_only",
+        "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Components\/Schemas\/interaction_hyphen_group\/existing_users"
+      ],
+      "title" : "Enumeration Cases"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Components\/Schemas\/interaction_hyphen_group\/init(rawValue:)"
+      ],
+      "title" : "Initializers"
+    },
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Components\/Schemas\/interaction_hyphen_group\/Equatable-Implementations",
+        "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Components\/Schemas\/interaction_hyphen_group\/RawRepresentable-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapiinteractions\/components\/schemas\/interaction_hyphen_group"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIInteractions/SE": {
+  "identifier" : "doc:\/\/GitHubRestAPIInteractions\/SE",
+  "title" : "Swift.Encodable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIInteractions/SH": {
+  "identifier" : "doc:\/\/GitHubRestAPIInteractions\/SH",
+  "title" : "Swift.Hashable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIInteractions/SQ": {
+  "identifier" : "doc:\/\/GitHubRestAPIInteractions\/SQ",
+  "title" : "Swift.Equatable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIInteractions/SY": {
+  "identifier" : "doc:\/\/GitHubRestAPIInteractions\/SY",
+  "title" : "Swift.RawRepresentable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIInteractions/Se": {
+  "identifier" : "doc:\/\/GitHubRestAPIInteractions\/Se",
+  "title" : "Swift.Decodable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIInteractions/documentation/GitHubRestAPIInteractions": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIInteractions",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiinteractions"
+},
+"doc://GitHubRestAPIInteractions/documentation/GitHubRestAPIInteractions/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiinteractions\/components"
+},
+"doc://GitHubRestAPIInteractions/documentation/GitHubRestAPIInteractions/Components/Schemas": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/schemas",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Components\/Schemas",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiinteractions\/components\/schemas"
+},
+"doc://GitHubRestAPIInteractions/documentation/GitHubRestAPIInteractions/Components/Schemas/interaction_hyphen_group": {
+  "abstract" : [
+    {
+      "text" : "The type of GitHub user that can comment, open issues, or create pull requests while the interaction limit is in effect.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "interaction_hyphen_group"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Components\/Schemas\/interaction_hyphen_group",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "interaction_hyphen_group"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.interaction_hyphen_group",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiinteractions\/components\/schemas\/interaction_hyphen_group"
+},
+"doc://GitHubRestAPIInteractions/documentation/GitHubRestAPIInteractions/Components/Schemas/interaction_hyphen_group/Equatable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Components\/Schemas\/interaction_hyphen_group\/Equatable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Equatable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiinteractions\/components\/schemas\/interaction_hyphen_group\/equatable-implementations"
+},
+"doc://GitHubRestAPIInteractions/documentation/GitHubRestAPIInteractions/Components/Schemas/interaction_hyphen_group/RawRepresentable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Components\/Schemas\/interaction_hyphen_group\/RawRepresentable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "RawRepresentable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiinteractions\/components\/schemas\/interaction_hyphen_group\/rawrepresentable-implementations"
+},
+"doc://GitHubRestAPIInteractions/documentation/GitHubRestAPIInteractions/Components/Schemas/interaction_hyphen_group/collaborators_only": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "collaborators_only"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Components\/Schemas\/interaction_hyphen_group\/collaborators_only",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.interaction_hyphen_group.collaborators_only",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiinteractions\/components\/schemas\/interaction_hyphen_group\/collaborators_only"
+},
+"doc://GitHubRestAPIInteractions/documentation/GitHubRestAPIInteractions/Components/Schemas/interaction_hyphen_group/contributors_only": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "contributors_only"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Components\/Schemas\/interaction_hyphen_group\/contributors_only",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.interaction_hyphen_group.contributors_only",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiinteractions\/components\/schemas\/interaction_hyphen_group\/contributors_only"
+},
+"doc://GitHubRestAPIInteractions/documentation/GitHubRestAPIInteractions/Components/Schemas/interaction_hyphen_group/existing_users": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "existing_users"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Components\/Schemas\/interaction_hyphen_group\/existing_users",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.interaction_hyphen_group.existing_users",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiinteractions\/components\/schemas\/interaction_hyphen_group\/existing_users"
+},
+"doc://GitHubRestAPIInteractions/documentation/GitHubRestAPIInteractions/Components/Schemas/interaction_hyphen_group/init(rawValue:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "?("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "rawValue"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Components\/Schemas\/interaction_hyphen_group\/init(rawValue:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(rawValue:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiinteractions\/components\/schemas\/interaction_hyphen_group\/init(rawvalue:)"
+},
+"doc://GitHubRestAPIInteractions/s12CaseIterableP": {
+  "identifier" : "doc:\/\/GitHubRestAPIInteractions\/s12CaseIterableP",
+  "title" : "Swift.CaseIterable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIInteractions/s8SendableP": {
+  "identifier" : "doc:\/\/GitHubRestAPIInteractions\/s8SendableP",
+  "title" : "Swift.Sendable",
+  "type" : "unresolvable"
+}
+}
+}

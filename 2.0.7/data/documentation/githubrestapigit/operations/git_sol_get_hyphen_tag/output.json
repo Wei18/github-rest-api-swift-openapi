@@ -1,0 +1,789 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit",
+        "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations",
+        "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/git_sol_get_hyphen_tag"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/git_sol_get_hyphen_tag\/Output"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:16GitHubRestAPIGit10OperationsO22git_sol_get_hyphen_tagO6OutputO",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "enum"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "Output"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIGit"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "Output"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/git\/Types.swift#L4408"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Enumeration",
+    "symbolKind" : "enum",
+    "title" : "Operations.git_sol_get_hyphen_tag.Output"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "enum"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "Output"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIGit\/SQ",
+        "doc:\/\/GitHubRestAPIGit\/SH",
+        "doc:\/\/GitHubRestAPIGit\/s8SendableP"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/git_sol_get_hyphen_tag\/Output\/Ok-swift.struct"
+      ],
+      "title" : "Structures"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/git_sol_get_hyphen_tag\/Output\/conflict(_:)",
+        "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/git_sol_get_hyphen_tag\/Output\/notFound(_:)",
+        "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/git_sol_get_hyphen_tag\/Output\/ok(_:)",
+        "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/git_sol_get_hyphen_tag\/Output\/undocumented(statusCode:_:)"
+      ],
+      "title" : "Enumeration Cases"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/git_sol_get_hyphen_tag\/Output\/conflict",
+        "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/git_sol_get_hyphen_tag\/Output\/notFound",
+        "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/git_sol_get_hyphen_tag\/Output\/ok-swift.property"
+      ],
+      "title" : "Instance Properties"
+    },
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/git_sol_get_hyphen_tag\/Output\/Equatable-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapigit\/operations\/git_sol_get_hyphen_tag\/output"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIGit/SH": {
+  "identifier" : "doc:\/\/GitHubRestAPIGit\/SH",
+  "title" : "Swift.Hashable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIGit/SQ": {
+  "identifier" : "doc:\/\/GitHubRestAPIGit\/SQ",
+  "title" : "Swift.Equatable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIGit/documentation/GitHubRestAPIGit": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIGit",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigit"
+},
+"doc://GitHubRestAPIGit/documentation/GitHubRestAPIGit/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigit\/operations"
+},
+"doc://GitHubRestAPIGit/documentation/GitHubRestAPIGit/Operations/git_sol_get_hyphen_tag": {
+  "abstract" : [
+    {
+      "text" : "Get a tag",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "git_sol_get_hyphen_tag"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/git_sol_get_hyphen_tag",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "git_sol_get_hyphen_tag"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.git_sol_get_hyphen_tag",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigit\/operations\/git_sol_get_hyphen_tag"
+},
+"doc://GitHubRestAPIGit/documentation/GitHubRestAPIGit/Operations/git_sol_get_hyphen_tag/Output": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/git_sol_get_hyphen_tag\/Output",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.git_sol_get_hyphen_tag.Output",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigit\/operations\/git_sol_get_hyphen_tag\/output"
+},
+"doc://GitHubRestAPIGit/documentation/GitHubRestAPIGit/Operations/git_sol_get_hyphen_tag/Output/Equatable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/git_sol_get_hyphen_tag\/Output\/Equatable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Equatable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigit\/operations\/git_sol_get_hyphen_tag\/output\/equatable-implementations"
+},
+"doc://GitHubRestAPIGit/documentation/GitHubRestAPIGit/Operations/git_sol_get_hyphen_tag/Output/Ok-swift.struct": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Ok"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/git_sol_get_hyphen_tag\/Output\/Ok-swift.struct",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Ok"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.git_sol_get_hyphen_tag.Output.Ok",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigit\/operations\/git_sol_get_hyphen_tag\/output\/ok-swift.struct"
+},
+"doc://GitHubRestAPIGit/documentation/GitHubRestAPIGit/Operations/git_sol_get_hyphen_tag/Output/conflict": {
+  "abstract" : [
+    {
+      "text" : "The associated value of the enum case if ",
+      "type" : "text"
+    },
+    {
+      "code" : "self",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " is ",
+      "type" : "text"
+    },
+    {
+      "code" : ".conflict",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "conflict"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:16GitHubRestAPIGit10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:16GitHubRestAPIGit10ComponentsO9ResponsesO",
+      "text" : "Responses"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:16GitHubRestAPIGit10ComponentsO9ResponsesO8conflictV",
+      "text" : "conflict"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/git_sol_get_hyphen_tag\/Output\/conflict",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "conflict",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigit\/operations\/git_sol_get_hyphen_tag\/output\/conflict"
+},
+"doc://GitHubRestAPIGit/documentation/GitHubRestAPIGit/Operations/git_sol_get_hyphen_tag/Output/conflict(_:)": {
+  "abstract" : [
+    {
+      "text" : "Conflict",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "conflict"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:16GitHubRestAPIGit10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:16GitHubRestAPIGit10ComponentsO9ResponsesO",
+      "text" : "Responses"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:16GitHubRestAPIGit10ComponentsO9ResponsesO8conflictV",
+      "text" : "conflict"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/git_sol_get_hyphen_tag\/Output\/conflict(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Operations.git_sol_get_hyphen_tag.Output.conflict(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigit\/operations\/git_sol_get_hyphen_tag\/output\/conflict(_:)"
+},
+"doc://GitHubRestAPIGit/documentation/GitHubRestAPIGit/Operations/git_sol_get_hyphen_tag/Output/notFound": {
+  "abstract" : [
+    {
+      "text" : "The associated value of the enum case if ",
+      "type" : "text"
+    },
+    {
+      "code" : "self",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " is ",
+      "type" : "text"
+    },
+    {
+      "code" : ".notFound",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "notFound"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:16GitHubRestAPIGit10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:16GitHubRestAPIGit10ComponentsO9ResponsesO",
+      "text" : "Responses"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:16GitHubRestAPIGit10ComponentsO9ResponsesO9not_foundV",
+      "text" : "not_found"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/git_sol_get_hyphen_tag\/Output\/notFound",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "notFound",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigit\/operations\/git_sol_get_hyphen_tag\/output\/notfound"
+},
+"doc://GitHubRestAPIGit/documentation/GitHubRestAPIGit/Operations/git_sol_get_hyphen_tag/Output/notFound(_:)": {
+  "abstract" : [
+    {
+      "text" : "Resource not found",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "notFound"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:16GitHubRestAPIGit10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:16GitHubRestAPIGit10ComponentsO9ResponsesO",
+      "text" : "Responses"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:16GitHubRestAPIGit10ComponentsO9ResponsesO9not_foundV",
+      "text" : "not_found"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/git_sol_get_hyphen_tag\/Output\/notFound(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Operations.git_sol_get_hyphen_tag.Output.notFound(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigit\/operations\/git_sol_get_hyphen_tag\/output\/notfound(_:)"
+},
+"doc://GitHubRestAPIGit/documentation/GitHubRestAPIGit/Operations/git_sol_get_hyphen_tag/Output/ok(_:)": {
+  "abstract" : [
+    {
+      "text" : "Response",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ok"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:16GitHubRestAPIGit10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:16GitHubRestAPIGit10OperationsO22git_sol_get_hyphen_tagO",
+      "text" : "git_sol_get_hyphen_tag"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:16GitHubRestAPIGit10OperationsO22git_sol_get_hyphen_tagO6OutputO",
+      "text" : "Output"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:16GitHubRestAPIGit10OperationsO22git_sol_get_hyphen_tagO6OutputO2OkV",
+      "text" : "Ok"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/git_sol_get_hyphen_tag\/Output\/ok(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Operations.git_sol_get_hyphen_tag.Output.ok(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigit\/operations\/git_sol_get_hyphen_tag\/output\/ok(_:)"
+},
+"doc://GitHubRestAPIGit/documentation/GitHubRestAPIGit/Operations/git_sol_get_hyphen_tag/Output/ok-swift.property": {
+  "abstract" : [
+    {
+      "text" : "The associated value of the enum case if ",
+      "type" : "text"
+    },
+    {
+      "code" : "self",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " is ",
+      "type" : "text"
+    },
+    {
+      "code" : ".ok",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ok"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:16GitHubRestAPIGit10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:16GitHubRestAPIGit10OperationsO22git_sol_get_hyphen_tagO",
+      "text" : "git_sol_get_hyphen_tag"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:16GitHubRestAPIGit10OperationsO22git_sol_get_hyphen_tagO6OutputO",
+      "text" : "Output"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:16GitHubRestAPIGit10OperationsO22git_sol_get_hyphen_tagO6OutputO2OkV",
+      "text" : "Ok"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/git_sol_get_hyphen_tag\/Output\/ok-swift.property",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "ok",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigit\/operations\/git_sol_get_hyphen_tag\/output\/ok-swift.property"
+},
+"doc://GitHubRestAPIGit/documentation/GitHubRestAPIGit/Operations/git_sol_get_hyphen_tag/Output/undocumented(statusCode:_:)": {
+  "abstract" : [
+    {
+      "text" : "Undocumented response.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "undocumented"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "statusCode"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:14OpenAPIRuntime19UndocumentedPayloadV",
+      "text" : "UndocumentedPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/git_sol_get_hyphen_tag\/Output\/undocumented(statusCode:_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Operations.git_sol_get_hyphen_tag.Output.undocumented(statusCode:_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigit\/operations\/git_sol_get_hyphen_tag\/output\/undocumented(statuscode:_:)"
+},
+"doc://GitHubRestAPIGit/s8SendableP": {
+  "identifier" : "doc:\/\/GitHubRestAPIGit\/s8SendableP",
+  "title" : "Swift.Sendable",
+  "type" : "unresolvable"
+}
+}
+}

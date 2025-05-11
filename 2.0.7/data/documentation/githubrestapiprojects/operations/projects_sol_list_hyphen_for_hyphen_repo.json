@@ -1,0 +1,473 @@
+{
+  "abstract" : [
+    {
+      "text" : "List repository projects",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIProjects\/documentation\/GitHubRestAPIProjects",
+        "doc:\/\/GitHubRestAPIProjects\/documentation\/GitHubRestAPIProjects\/Operations"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIProjects\/documentation\/GitHubRestAPIProjects\/Operations\/projects_sol_list_hyphen_for_hyphen_repo"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:21GitHubRestAPIProjects10OperationsO029projects_sol_list_hyphen_for_I5_repoO",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "enum"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "projects_sol_list_hyphen_for_hyphen_repo"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIProjects"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "projects_sol_list_hyphen_for_hyphen_repo"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/projects\/Types.swift#L7845"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Enumeration",
+    "symbolKind" : "enum",
+    "title" : "Operations.projects_sol_list_hyphen_for_hyphen_repo"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "enum"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "projects_sol_list_hyphen_for_hyphen_repo"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "[!WARNING]",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "inlineContent" : [
+                    {
+                      "text" : "Closing down notice:",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "strong"
+                },
+                {
+                  "text" : " Projects (classic) is being deprecated in favor of the new Projects experience.",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "See the ",
+                  "type" : "text"
+                },
+                {
+                  "identifier" : "https:\/\/github.blog\/changelog\/2024-05-23-sunset-notice-projects-classic\/",
+                  "isActive" : true,
+                  "type" : "reference"
+                },
+                {
+                  "text" : " for more information.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Note",
+          "style" : "note",
+          "type" : "aside"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "HTTP ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "GET \/repos\/{owner}\/{repo}\/projects",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/paths\/\/repos\/{owner}\/{repo}\/projects\/get(projects\/list-for-repo)",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIProjects\/documentation\/GitHubRestAPIProjects\/Operations\/projects_sol_list_hyphen_for_hyphen_repo\/Input"
+      ],
+      "title" : "Structures"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIProjects\/documentation\/GitHubRestAPIProjects\/Operations\/projects_sol_list_hyphen_for_hyphen_repo\/id"
+      ],
+      "title" : "Type Properties"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIProjects\/documentation\/GitHubRestAPIProjects\/Operations\/projects_sol_list_hyphen_for_hyphen_repo\/AcceptableContentType",
+        "doc:\/\/GitHubRestAPIProjects\/documentation\/GitHubRestAPIProjects\/Operations\/projects_sol_list_hyphen_for_hyphen_repo\/Output"
+      ],
+      "title" : "Enumerations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapiprojects\/operations\/projects_sol_list_hyphen_for_hyphen_repo"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIProjects/documentation/GitHubRestAPIProjects": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIProjects\/documentation\/GitHubRestAPIProjects",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIProjects",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiprojects"
+},
+"doc://GitHubRestAPIProjects/documentation/GitHubRestAPIProjects/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIProjects\/documentation\/GitHubRestAPIProjects\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiprojects\/operations"
+},
+"doc://GitHubRestAPIProjects/documentation/GitHubRestAPIProjects/Operations/projects_sol_list_hyphen_for_hyphen_repo": {
+  "abstract" : [
+    {
+      "text" : "List repository projects",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "projects_sol_list_hyphen_for_hyphen_repo"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIProjects\/documentation\/GitHubRestAPIProjects\/Operations\/projects_sol_list_hyphen_for_hyphen_repo",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "projects_sol_list_hyphen_for_hyphen_repo"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.projects_sol_list_hyphen_for_hyphen_repo",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiprojects\/operations\/projects_sol_list_hyphen_for_hyphen_repo"
+},
+"doc://GitHubRestAPIProjects/documentation/GitHubRestAPIProjects/Operations/projects_sol_list_hyphen_for_hyphen_repo/AcceptableContentType": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AcceptableContentType"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIProjects\/documentation\/GitHubRestAPIProjects\/Operations\/projects_sol_list_hyphen_for_hyphen_repo\/AcceptableContentType",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AcceptableContentType"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.projects_sol_list_hyphen_for_hyphen_repo.AcceptableContentType",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiprojects\/operations\/projects_sol_list_hyphen_for_hyphen_repo\/acceptablecontenttype"
+},
+"doc://GitHubRestAPIProjects/documentation/GitHubRestAPIProjects/Operations/projects_sol_list_hyphen_for_hyphen_repo/Input": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIProjects\/documentation\/GitHubRestAPIProjects\/Operations\/projects_sol_list_hyphen_for_hyphen_repo\/Input",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.projects_sol_list_hyphen_for_hyphen_repo.Input",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiprojects\/operations\/projects_sol_list_hyphen_for_hyphen_repo\/input"
+},
+"doc://GitHubRestAPIProjects/documentation/GitHubRestAPIProjects/Operations/projects_sol_list_hyphen_for_hyphen_repo/Output": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIProjects\/documentation\/GitHubRestAPIProjects\/Operations\/projects_sol_list_hyphen_for_hyphen_repo\/Output",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.projects_sol_list_hyphen_for_hyphen_repo.Output",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiprojects\/operations\/projects_sol_list_hyphen_for_hyphen_repo\/output"
+},
+"doc://GitHubRestAPIProjects/documentation/GitHubRestAPIProjects/Operations/projects_sol_list_hyphen_for_hyphen_repo/id": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "id"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIProjects\/documentation\/GitHubRestAPIProjects\/Operations\/projects_sol_list_hyphen_for_hyphen_repo\/id",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "id",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiprojects\/operations\/projects_sol_list_hyphen_for_hyphen_repo\/id"
+},
+"https://github.blog/changelog/2024-05-23-sunset-notice-projects-classic/": {
+  "identifier" : "https:\/\/github.blog\/changelog\/2024-05-23-sunset-notice-projects-classic\/",
+  "title" : "changelog",
+  "titleInlineContent" : [
+    {
+      "text" : "changelog",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/github.blog\/changelog\/2024-05-23-sunset-notice-projects-classic\/"
+}
+}
+}

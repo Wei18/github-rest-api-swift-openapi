@@ -1,0 +1,921 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Components",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Components\/Schemas",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Components\/Schemas\/integration"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Components\/Schemas\/integration\/CodingKeys"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:17GitHubRestAPIApps10ComponentsO7SchemasO11integrationV10CodingKeysO",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "enum"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "CodingKeys"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIApps"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "CodingKeys"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/apps\/Types.swift#L1529"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Enumeration",
+    "symbolKind" : "enum",
+    "title" : "Components.Schemas.integration.CodingKeys"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "enum"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "CodingKeys"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIApps\/s9CodingKeyP",
+        "doc:\/\/GitHubRestAPIApps\/s28CustomDebugStringConvertibleP",
+        "doc:\/\/GitHubRestAPIApps\/s23CustomStringConvertibleP",
+        "doc:\/\/GitHubRestAPIApps\/SQ",
+        "doc:\/\/GitHubRestAPIApps\/SH",
+        "doc:\/\/GitHubRestAPIApps\/SY",
+        "doc:\/\/GitHubRestAPIApps\/s8SendableP"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Components\/Schemas\/integration\/CodingKeys\/client_id",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Components\/Schemas\/integration\/CodingKeys\/client_secret",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Components\/Schemas\/integration\/CodingKeys\/created_at",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Components\/Schemas\/integration\/CodingKeys\/description-swift.enum.case",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Components\/Schemas\/integration\/CodingKeys\/events",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Components\/Schemas\/integration\/CodingKeys\/external_url",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Components\/Schemas\/integration\/CodingKeys\/html_url",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Components\/Schemas\/integration\/CodingKeys\/id",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Components\/Schemas\/integration\/CodingKeys\/installations_count",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Components\/Schemas\/integration\/CodingKeys\/name",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Components\/Schemas\/integration\/CodingKeys\/node_id",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Components\/Schemas\/integration\/CodingKeys\/owner",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Components\/Schemas\/integration\/CodingKeys\/pem",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Components\/Schemas\/integration\/CodingKeys\/permissions",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Components\/Schemas\/integration\/CodingKeys\/slug",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Components\/Schemas\/integration\/CodingKeys\/updated_at",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Components\/Schemas\/integration\/CodingKeys\/webhook_secret"
+      ],
+      "title" : "Enumeration Cases"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Components\/Schemas\/integration\/CodingKeys\/init(intValue:)",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Components\/Schemas\/integration\/CodingKeys\/init(rawValue:)",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Components\/Schemas\/integration\/CodingKeys\/init(stringValue:)"
+      ],
+      "title" : "Initializers"
+    },
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Components\/Schemas\/integration\/CodingKeys\/CodingKey-Implementations",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Components\/Schemas\/integration\/CodingKeys\/Equatable-Implementations",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Components\/Schemas\/integration\/CodingKeys\/RawRepresentable-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapiapps\/components\/schemas\/integration\/codingkeys"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIApps/SH": {
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/SH",
+  "title" : "Swift.Hashable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIApps/SQ": {
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/SQ",
+  "title" : "Swift.Equatable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIApps/SY": {
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/SY",
+  "title" : "Swift.RawRepresentable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIApps",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/components"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Components/Schemas": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/schemas",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Components\/Schemas",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/components\/schemas"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Components/Schemas/integration": {
+  "abstract" : [
+    {
+      "text" : "GitHub apps are a new way to extend GitHub. They can be installed directly on organizations and user accounts and granted access to specific repositories. They come with granular permissions and built-in webhooks. GitHub apps are first class actors within GitHub.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "integration"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Components\/Schemas\/integration",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "integration"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.integration",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/components\/schemas\/integration"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Components/Schemas/integration/CodingKeys": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Components\/Schemas\/integration\/CodingKeys",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.integration.CodingKeys",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/components\/schemas\/integration\/codingkeys"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Components/Schemas/integration/CodingKeys/CodingKey-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Components\/Schemas\/integration\/CodingKeys\/CodingKey-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "CodingKey Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/components\/schemas\/integration\/codingkeys\/codingkey-implementations"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Components/Schemas/integration/CodingKeys/Equatable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Components\/Schemas\/integration\/CodingKeys\/Equatable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Equatable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/components\/schemas\/integration\/codingkeys\/equatable-implementations"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Components/Schemas/integration/CodingKeys/RawRepresentable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Components\/Schemas\/integration\/CodingKeys\/RawRepresentable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "RawRepresentable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/components\/schemas\/integration\/codingkeys\/rawrepresentable-implementations"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Components/Schemas/integration/CodingKeys/client_id": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "client_id"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Components\/Schemas\/integration\/CodingKeys\/client_id",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.integration.CodingKeys.client_id",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/components\/schemas\/integration\/codingkeys\/client_id"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Components/Schemas/integration/CodingKeys/client_secret": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "client_secret"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Components\/Schemas\/integration\/CodingKeys\/client_secret",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.integration.CodingKeys.client_secret",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/components\/schemas\/integration\/codingkeys\/client_secret"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Components/Schemas/integration/CodingKeys/created_at": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "created_at"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Components\/Schemas\/integration\/CodingKeys\/created_at",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.integration.CodingKeys.created_at",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/components\/schemas\/integration\/codingkeys\/created_at"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Components/Schemas/integration/CodingKeys/description-swift.enum.case": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "description"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Components\/Schemas\/integration\/CodingKeys\/description-swift.enum.case",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.integration.CodingKeys.description",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/components\/schemas\/integration\/codingkeys\/description-swift.enum.case"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Components/Schemas/integration/CodingKeys/events": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "events"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Components\/Schemas\/integration\/CodingKeys\/events",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.integration.CodingKeys.events",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/components\/schemas\/integration\/codingkeys\/events"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Components/Schemas/integration/CodingKeys/external_url": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "external_url"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Components\/Schemas\/integration\/CodingKeys\/external_url",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.integration.CodingKeys.external_url",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/components\/schemas\/integration\/codingkeys\/external_url"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Components/Schemas/integration/CodingKeys/html_url": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "html_url"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Components\/Schemas\/integration\/CodingKeys\/html_url",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.integration.CodingKeys.html_url",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/components\/schemas\/integration\/codingkeys\/html_url"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Components/Schemas/integration/CodingKeys/id": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "id"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Components\/Schemas\/integration\/CodingKeys\/id",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.integration.CodingKeys.id",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/components\/schemas\/integration\/codingkeys\/id"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Components/Schemas/integration/CodingKeys/init(intValue:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "?("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "intValue"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Components\/Schemas\/integration\/CodingKeys\/init(intValue:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(intValue:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/components\/schemas\/integration\/codingkeys\/init(intvalue:)"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Components/Schemas/integration/CodingKeys/init(rawValue:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "?("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "rawValue"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Components\/Schemas\/integration\/CodingKeys\/init(rawValue:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(rawValue:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/components\/schemas\/integration\/codingkeys\/init(rawvalue:)"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Components/Schemas/integration/CodingKeys/init(stringValue:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "?("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "stringValue"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Components\/Schemas\/integration\/CodingKeys\/init(stringValue:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(stringValue:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/components\/schemas\/integration\/codingkeys\/init(stringvalue:)"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Components/Schemas/integration/CodingKeys/installations_count": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "installations_count"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Components\/Schemas\/integration\/CodingKeys\/installations_count",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.integration.CodingKeys.installations_count",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/components\/schemas\/integration\/codingkeys\/installations_count"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Components/Schemas/integration/CodingKeys/name": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "name"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Components\/Schemas\/integration\/CodingKeys\/name",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.integration.CodingKeys.name",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/components\/schemas\/integration\/codingkeys\/name"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Components/Schemas/integration/CodingKeys/node_id": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "node_id"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Components\/Schemas\/integration\/CodingKeys\/node_id",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.integration.CodingKeys.node_id",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/components\/schemas\/integration\/codingkeys\/node_id"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Components/Schemas/integration/CodingKeys/owner": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "owner"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Components\/Schemas\/integration\/CodingKeys\/owner",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.integration.CodingKeys.owner",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/components\/schemas\/integration\/codingkeys\/owner"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Components/Schemas/integration/CodingKeys/pem": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "pem"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Components\/Schemas\/integration\/CodingKeys\/pem",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.integration.CodingKeys.pem",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/components\/schemas\/integration\/codingkeys\/pem"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Components/Schemas/integration/CodingKeys/permissions": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "permissions"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Components\/Schemas\/integration\/CodingKeys\/permissions",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.integration.CodingKeys.permissions",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/components\/schemas\/integration\/codingkeys\/permissions"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Components/Schemas/integration/CodingKeys/slug": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "slug"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Components\/Schemas\/integration\/CodingKeys\/slug",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.integration.CodingKeys.slug",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/components\/schemas\/integration\/codingkeys\/slug"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Components/Schemas/integration/CodingKeys/updated_at": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "updated_at"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Components\/Schemas\/integration\/CodingKeys\/updated_at",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.integration.CodingKeys.updated_at",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/components\/schemas\/integration\/codingkeys\/updated_at"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Components/Schemas/integration/CodingKeys/webhook_secret": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "webhook_secret"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Components\/Schemas\/integration\/CodingKeys\/webhook_secret",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.integration.CodingKeys.webhook_secret",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/components\/schemas\/integration\/codingkeys\/webhook_secret"
+},
+"doc://GitHubRestAPIApps/s23CustomStringConvertibleP": {
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/s23CustomStringConvertibleP",
+  "title" : "Swift.CustomStringConvertible",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIApps/s28CustomDebugStringConvertibleP": {
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/s28CustomDebugStringConvertibleP",
+  "title" : "Swift.CustomDebugStringConvertible",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIApps/s8SendableP": {
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/s8SendableP",
+  "title" : "Swift.Sendable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIApps/s9CodingKeyP": {
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/s9CodingKeyP",
+  "title" : "Swift.CodingKey",
+  "type" : "unresolvable"
+}
+}
+}

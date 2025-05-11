@@ -1,0 +1,307 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot",
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Components",
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Components\/Schemas",
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Components\/Schemas\/security_hyphen_advisory_hyphen_epss",
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Components\/Schemas\/security_hyphen_advisory_hyphen_epss\/CodingKeys"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Components\/Schemas\/security_hyphen_advisory_hyphen_epss\/CodingKeys\/CodingKey-Implementations"
+  },
+  "kind" : "article",
+  "metadata" : {
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIDependabot"
+      }
+    ],
+    "role" : "collectionGroup",
+    "title" : "CodingKey Implementations"
+  },
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Components\/Schemas\/security_hyphen_advisory_hyphen_epss\/CodingKeys\/debugDescription",
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Components\/Schemas\/security_hyphen_advisory_hyphen_epss\/CodingKeys\/description"
+      ],
+      "title" : "Instance Properties"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapidependabot\/components\/schemas\/security_hyphen_advisory_hyphen_epss\/codingkeys\/codingkey-implementations"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIDependabot",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/components"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Components/Schemas": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/schemas",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Components\/Schemas",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/components\/schemas"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Components/Schemas/security_hyphen_advisory_hyphen_epss": {
+  "abstract" : [
+    {
+      "text" : "The EPSS scores as calculated by the ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/www.first.org\/epss",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "security_hyphen_advisory_hyphen_epss"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Components\/Schemas\/security_hyphen_advisory_hyphen_epss",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "security_hyphen_advisory_hyphen_epss"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.security_hyphen_advisory_hyphen_epss",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/components\/schemas\/security_hyphen_advisory_hyphen_epss"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Components/Schemas/security_hyphen_advisory_hyphen_epss/CodingKeys": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Components\/Schemas\/security_hyphen_advisory_hyphen_epss\/CodingKeys",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.security_hyphen_advisory_hyphen_epss.CodingKeys",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/components\/schemas\/security_hyphen_advisory_hyphen_epss\/codingkeys"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Components/Schemas/security_hyphen_advisory_hyphen_epss/CodingKeys/debugDescription": {
+  "abstract" : [
+    {
+      "text" : "A textual representation of this key, suitable for debugging.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "debugDescription"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Components\/Schemas\/security_hyphen_advisory_hyphen_epss\/CodingKeys\/debugDescription",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "debugDescription",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/components\/schemas\/security_hyphen_advisory_hyphen_epss\/codingkeys\/debugdescription"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Components/Schemas/security_hyphen_advisory_hyphen_epss/CodingKeys/description": {
+  "abstract" : [
+    {
+      "text" : "A textual representation of this key.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "description"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Components\/Schemas\/security_hyphen_advisory_hyphen_epss\/CodingKeys\/description",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "description",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/components\/schemas\/security_hyphen_advisory_hyphen_epss\/codingkeys\/description"
+},
+"https://www.first.org/epss": {
+  "identifier" : "https:\/\/www.first.org\/epss",
+  "title" : "Exploit Prediction Scoring System",
+  "titleInlineContent" : [
+    {
+      "text" : "Exploit Prediction Scoring System",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/www.first.org\/epss"
+}
+}
+}

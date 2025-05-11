@@ -1,0 +1,1009 @@
+{
+  "abstract" : [
+    {
+      "text" : "Projects are a way to organize columns and cards of work.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIProjects\/documentation\/GitHubRestAPIProjects",
+        "doc:\/\/GitHubRestAPIProjects\/documentation\/GitHubRestAPIProjects\/Components",
+        "doc:\/\/GitHubRestAPIProjects\/documentation\/GitHubRestAPIProjects\/Components\/Schemas"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIProjects\/documentation\/GitHubRestAPIProjects\/Components\/Schemas\/project"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:21GitHubRestAPIProjects10ComponentsO7SchemasO7projectV",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "struct"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "project"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIProjects"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "project"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/projects\/Types.swift#L1261"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Structure",
+    "symbolKind" : "struct",
+    "title" : "Components.Schemas.project"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "struct"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "project"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/components\/schemas\/project",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIProjects\/Se",
+        "doc:\/\/GitHubRestAPIProjects\/SE",
+        "doc:\/\/GitHubRestAPIProjects\/SQ",
+        "doc:\/\/GitHubRestAPIProjects\/SH",
+        "doc:\/\/GitHubRestAPIProjects\/s8SendableP"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIProjects\/documentation\/GitHubRestAPIProjects\/Components\/Schemas\/project\/init(from:)"
+      ],
+      "title" : "Initializers"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIProjects\/documentation\/GitHubRestAPIProjects\/Components\/Schemas\/project\/body",
+        "doc:\/\/GitHubRestAPIProjects\/documentation\/GitHubRestAPIProjects\/Components\/Schemas\/project\/columns_url",
+        "doc:\/\/GitHubRestAPIProjects\/documentation\/GitHubRestAPIProjects\/Components\/Schemas\/project\/created_at",
+        "doc:\/\/GitHubRestAPIProjects\/documentation\/GitHubRestAPIProjects\/Components\/Schemas\/project\/creator",
+        "doc:\/\/GitHubRestAPIProjects\/documentation\/GitHubRestAPIProjects\/Components\/Schemas\/project\/html_url",
+        "doc:\/\/GitHubRestAPIProjects\/documentation\/GitHubRestAPIProjects\/Components\/Schemas\/project\/id",
+        "doc:\/\/GitHubRestAPIProjects\/documentation\/GitHubRestAPIProjects\/Components\/Schemas\/project\/name",
+        "doc:\/\/GitHubRestAPIProjects\/documentation\/GitHubRestAPIProjects\/Components\/Schemas\/project\/node_id",
+        "doc:\/\/GitHubRestAPIProjects\/documentation\/GitHubRestAPIProjects\/Components\/Schemas\/project\/number",
+        "doc:\/\/GitHubRestAPIProjects\/documentation\/GitHubRestAPIProjects\/Components\/Schemas\/project\/organization_permission",
+        "doc:\/\/GitHubRestAPIProjects\/documentation\/GitHubRestAPIProjects\/Components\/Schemas\/project\/owner_url",
+        "doc:\/\/GitHubRestAPIProjects\/documentation\/GitHubRestAPIProjects\/Components\/Schemas\/project\/state",
+        "doc:\/\/GitHubRestAPIProjects\/documentation\/GitHubRestAPIProjects\/Components\/Schemas\/project\/updated_at",
+        "doc:\/\/GitHubRestAPIProjects\/documentation\/GitHubRestAPIProjects\/Components\/Schemas\/project\/url"
+      ],
+      "title" : "Instance Properties"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIProjects\/documentation\/GitHubRestAPIProjects\/Components\/Schemas\/project\/CodingKeys",
+        "doc:\/\/GitHubRestAPIProjects\/documentation\/GitHubRestAPIProjects\/Components\/Schemas\/project\/organization_permissionPayload"
+      ],
+      "title" : "Enumerations"
+    },
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIProjects\/documentation\/GitHubRestAPIProjects\/Components\/Schemas\/project\/Equatable-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapiprojects\/components\/schemas\/project"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIProjects/SE": {
+  "identifier" : "doc:\/\/GitHubRestAPIProjects\/SE",
+  "title" : "Swift.Encodable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIProjects/SH": {
+  "identifier" : "doc:\/\/GitHubRestAPIProjects\/SH",
+  "title" : "Swift.Hashable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIProjects/SQ": {
+  "identifier" : "doc:\/\/GitHubRestAPIProjects\/SQ",
+  "title" : "Swift.Equatable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIProjects/Se": {
+  "identifier" : "doc:\/\/GitHubRestAPIProjects\/Se",
+  "title" : "Swift.Decodable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIProjects/documentation/GitHubRestAPIProjects": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIProjects\/documentation\/GitHubRestAPIProjects",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIProjects",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiprojects"
+},
+"doc://GitHubRestAPIProjects/documentation/GitHubRestAPIProjects/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIProjects\/documentation\/GitHubRestAPIProjects\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiprojects\/components"
+},
+"doc://GitHubRestAPIProjects/documentation/GitHubRestAPIProjects/Components/Schemas": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/schemas",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIProjects\/documentation\/GitHubRestAPIProjects\/Components\/Schemas",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiprojects\/components\/schemas"
+},
+"doc://GitHubRestAPIProjects/documentation/GitHubRestAPIProjects/Components/Schemas/project": {
+  "abstract" : [
+    {
+      "text" : "Projects are a way to organize columns and cards of work.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "project"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIProjects\/documentation\/GitHubRestAPIProjects\/Components\/Schemas\/project",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "project"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.project",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiprojects\/components\/schemas\/project"
+},
+"doc://GitHubRestAPIProjects/documentation/GitHubRestAPIProjects/Components/Schemas/project/CodingKeys": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIProjects\/documentation\/GitHubRestAPIProjects\/Components\/Schemas\/project\/CodingKeys",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.project.CodingKeys",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiprojects\/components\/schemas\/project\/codingkeys"
+},
+"doc://GitHubRestAPIProjects/documentation/GitHubRestAPIProjects/Components/Schemas/project/Equatable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIProjects\/documentation\/GitHubRestAPIProjects\/Components\/Schemas\/project\/Equatable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Equatable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiprojects\/components\/schemas\/project\/equatable-implementations"
+},
+"doc://GitHubRestAPIProjects/documentation/GitHubRestAPIProjects/Components/Schemas/project/body": {
+  "abstract" : [
+    {
+      "text" : "Body of the project",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "body"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIProjects\/documentation\/GitHubRestAPIProjects\/Components\/Schemas\/project\/body",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "body",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiprojects\/components\/schemas\/project\/body"
+},
+"doc://GitHubRestAPIProjects/documentation/GitHubRestAPIProjects/Components/Schemas/project/columns_url": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "columns_url"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIProjects\/documentation\/GitHubRestAPIProjects\/Components\/Schemas\/project\/columns_url",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "columns_url",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiprojects\/components\/schemas\/project\/columns_url"
+},
+"doc://GitHubRestAPIProjects/documentation/GitHubRestAPIProjects/Components/Schemas/project/created_at": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "created_at"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:10Foundation4DateV",
+      "text" : "Date"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIProjects\/documentation\/GitHubRestAPIProjects\/Components\/Schemas\/project\/created_at",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "created_at",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiprojects\/components\/schemas\/project\/created_at"
+},
+"doc://GitHubRestAPIProjects/documentation/GitHubRestAPIProjects/Components/Schemas/project/creator": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "creator"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIProjects10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIProjects10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIProjects10ComponentsO7SchemasO023nullable_hyphen_simple_H5_userV",
+      "text" : "nullable_hyphen_simple_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIProjects\/documentation\/GitHubRestAPIProjects\/Components\/Schemas\/project\/creator",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "creator",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiprojects\/components\/schemas\/project\/creator"
+},
+"doc://GitHubRestAPIProjects/documentation/GitHubRestAPIProjects/Components/Schemas/project/html_url": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "html_url"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIProjects\/documentation\/GitHubRestAPIProjects\/Components\/Schemas\/project\/html_url",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "html_url",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiprojects\/components\/schemas\/project\/html_url"
+},
+"doc://GitHubRestAPIProjects/documentation/GitHubRestAPIProjects/Components/Schemas/project/id": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "id"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIProjects\/documentation\/GitHubRestAPIProjects\/Components\/Schemas\/project\/id",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "id",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiprojects\/components\/schemas\/project\/id"
+},
+"doc://GitHubRestAPIProjects/documentation/GitHubRestAPIProjects/Components/Schemas/project/init(from:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "from"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:s7DecoderP",
+      "text" : "Decoder"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIProjects\/documentation\/GitHubRestAPIProjects\/Components\/Schemas\/project\/init(from:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(from:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiprojects\/components\/schemas\/project\/init(from:)"
+},
+"doc://GitHubRestAPIProjects/documentation/GitHubRestAPIProjects/Components/Schemas/project/name": {
+  "abstract" : [
+    {
+      "text" : "Name of the project",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "name"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIProjects\/documentation\/GitHubRestAPIProjects\/Components\/Schemas\/project\/name",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "name",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiprojects\/components\/schemas\/project\/name"
+},
+"doc://GitHubRestAPIProjects/documentation/GitHubRestAPIProjects/Components/Schemas/project/node_id": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "node_id"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIProjects\/documentation\/GitHubRestAPIProjects\/Components\/Schemas\/project\/node_id",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "node_id",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiprojects\/components\/schemas\/project\/node_id"
+},
+"doc://GitHubRestAPIProjects/documentation/GitHubRestAPIProjects/Components/Schemas/project/number": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "number"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIProjects\/documentation\/GitHubRestAPIProjects\/Components\/Schemas\/project\/number",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "number",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiprojects\/components\/schemas\/project\/number"
+},
+"doc://GitHubRestAPIProjects/documentation/GitHubRestAPIProjects/Components/Schemas/project/organization_permission": {
+  "abstract" : [
+    {
+      "text" : "The baseline permission that all organization members have on this project. Only present if owner is an organization.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "organization_permission"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIProjects10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIProjects10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIProjects10ComponentsO7SchemasO7projectV",
+      "text" : "project"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIProjects10ComponentsO7SchemasO7projectV30organization_permissionPayloadO",
+      "text" : "organization_permissionPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIProjects\/documentation\/GitHubRestAPIProjects\/Components\/Schemas\/project\/organization_permission",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "organization_permission",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiprojects\/components\/schemas\/project\/organization_permission"
+},
+"doc://GitHubRestAPIProjects/documentation/GitHubRestAPIProjects/Components/Schemas/project/organization_permissionPayload": {
+  "abstract" : [
+    {
+      "text" : "The baseline permission that all organization members have on this project. Only present if owner is an organization.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "organization_permissionPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIProjects\/documentation\/GitHubRestAPIProjects\/Components\/Schemas\/project\/organization_permissionPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "organization_permissionPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.project.organization_permissionPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiprojects\/components\/schemas\/project\/organization_permissionpayload"
+},
+"doc://GitHubRestAPIProjects/documentation/GitHubRestAPIProjects/Components/Schemas/project/owner_url": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "owner_url"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIProjects\/documentation\/GitHubRestAPIProjects\/Components\/Schemas\/project\/owner_url",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "owner_url",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiprojects\/components\/schemas\/project\/owner_url"
+},
+"doc://GitHubRestAPIProjects/documentation/GitHubRestAPIProjects/Components/Schemas/project/state": {
+  "abstract" : [
+    {
+      "text" : "State of the project; either ‘open’ or ‘closed’",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "state"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIProjects\/documentation\/GitHubRestAPIProjects\/Components\/Schemas\/project\/state",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "state",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiprojects\/components\/schemas\/project\/state"
+},
+"doc://GitHubRestAPIProjects/documentation/GitHubRestAPIProjects/Components/Schemas/project/updated_at": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "updated_at"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:10Foundation4DateV",
+      "text" : "Date"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIProjects\/documentation\/GitHubRestAPIProjects\/Components\/Schemas\/project\/updated_at",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "updated_at",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiprojects\/components\/schemas\/project\/updated_at"
+},
+"doc://GitHubRestAPIProjects/documentation/GitHubRestAPIProjects/Components/Schemas/project/url": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "url"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIProjects\/documentation\/GitHubRestAPIProjects\/Components\/Schemas\/project\/url",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "url",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiprojects\/components\/schemas\/project\/url"
+},
+"doc://GitHubRestAPIProjects/s8SendableP": {
+  "identifier" : "doc:\/\/GitHubRestAPIProjects\/s8SendableP",
+  "title" : "Swift.Sendable",
+  "type" : "unresolvable"
+}
+}
+}

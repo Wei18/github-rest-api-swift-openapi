@@ -1,0 +1,500 @@
+{
+  "abstract" : [
+    {
+      "text" : "Create a CodeQL variant analysis",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning",
+        "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Operations"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Operations\/code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:26GitHubRestAPICode_Scanning10OperationsO032code_hyphen_scanning_sol_create_h9_variant_H9_analysisO",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "enum"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPICode_Scanning"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/code-scanning\/Types.swift#L7874"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Enumeration",
+    "symbolKind" : "enum",
+    "title" : "Operations.code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "enum"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Creates a new CodeQL variant analysis, which will run a CodeQL query against one or more repositories.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Get started by learning more about ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "https:\/\/docs.github.com\/code-security\/codeql-for-vs-code\/getting-started-with-codeql-for-vs-code\/running-codeql-queries-at-scale-with-multi-repository-variant-analysis",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : ".",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Use the ",
+              "type" : "text"
+            },
+            {
+              "code" : "owner",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " and ",
+              "type" : "text"
+            },
+            {
+              "code" : "repo",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " parameters in the URL to specify the controller repository that",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "will be used for running GitHub Actions workflows and storing the results of the CodeQL variant analysis.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "OAuth app tokens and personal access tokens (classic) need the ",
+              "type" : "text"
+            },
+            {
+              "code" : "repo",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " scope to use this endpoint.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "HTTP ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "POST \/repos\/{owner}\/{repo}\/code-scanning\/codeql\/variant-analyses",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/paths\/\/repos\/{owner}\/{repo}\/code-scanning\/codeql\/variant-analyses\/post(code-scanning\/create-variant-analysis)",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Operations\/code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis\/Input"
+      ],
+      "title" : "Structures"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Operations\/code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis\/id"
+      ],
+      "title" : "Type Properties"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Operations\/code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis\/AcceptableContentType",
+        "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Operations\/code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis\/Output"
+      ],
+      "title" : "Enumerations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapicode_scanning\/operations\/code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPICode_Scanning/documentation/GitHubRestAPICode_Scanning": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPICode_Scanning",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_scanning"
+},
+"doc://GitHubRestAPICode_Scanning/documentation/GitHubRestAPICode_Scanning/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_scanning\/operations"
+},
+"doc://GitHubRestAPICode_Scanning/documentation/GitHubRestAPICode_Scanning/Operations/code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis": {
+  "abstract" : [
+    {
+      "text" : "Create a CodeQL variant analysis",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Operations\/code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_scanning\/operations\/code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis"
+},
+"doc://GitHubRestAPICode_Scanning/documentation/GitHubRestAPICode_Scanning/Operations/code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis/AcceptableContentType": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AcceptableContentType"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Operations\/code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis\/AcceptableContentType",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AcceptableContentType"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis.AcceptableContentType",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_scanning\/operations\/code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis\/acceptablecontenttype"
+},
+"doc://GitHubRestAPICode_Scanning/documentation/GitHubRestAPICode_Scanning/Operations/code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis/Input": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Operations\/code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis\/Input",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis.Input",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_scanning\/operations\/code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis\/input"
+},
+"doc://GitHubRestAPICode_Scanning/documentation/GitHubRestAPICode_Scanning/Operations/code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis/Output": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Operations\/code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis\/Output",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis.Output",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_scanning\/operations\/code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis\/output"
+},
+"doc://GitHubRestAPICode_Scanning/documentation/GitHubRestAPICode_Scanning/Operations/code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis/id": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "id"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Operations\/code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis\/id",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "id",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_scanning\/operations\/code_hyphen_scanning_sol_create_hyphen_variant_hyphen_analysis\/id"
+},
+"https://docs.github.com/code-security/codeql-for-vs-code/getting-started-with-codeql-for-vs-code/running-codeql-queries-at-scale-with-multi-repository-variant-analysis": {
+  "identifier" : "https:\/\/docs.github.com\/code-security\/codeql-for-vs-code\/getting-started-with-codeql-for-vs-code\/running-codeql-queries-at-scale-with-multi-repository-variant-analysis",
+  "title" : "running CodeQL queries at scale with Multi-Repository Variant Analysis",
+  "titleInlineContent" : [
+    {
+      "text" : "running CodeQL queries at scale with Multi-Repository Variant Analysis",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/docs.github.com\/code-security\/codeql-for-vs-code\/getting-started-with-codeql-for-vs-code\/running-codeql-queries-at-scale-with-multi-repository-variant-analysis"
+}
+}
+}

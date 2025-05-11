@@ -1,0 +1,736 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks",
+        "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks\/Operations",
+        "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks\/Operations\/checks_sol_create_hyphen_suite"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks\/Operations\/checks_sol_create_hyphen_suite\/Input"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:19GitHubRestAPIChecks10OperationsO30checks_sol_create_hyphen_suiteO5InputV",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "struct"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "Input"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIChecks"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "Input"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/checks\/Types.swift#L3893"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Structure",
+    "symbolKind" : "struct",
+    "title" : "Operations.checks_sol_create_hyphen_suite.Input"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "struct"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "Input"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIChecks\/SQ",
+        "doc:\/\/GitHubRestAPIChecks\/SH",
+        "doc:\/\/GitHubRestAPIChecks\/s8SendableP"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks\/Operations\/checks_sol_create_hyphen_suite\/Input\/Headers-swift.struct",
+        "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks\/Operations\/checks_sol_create_hyphen_suite\/Input\/Path-swift.struct"
+      ],
+      "title" : "Structures"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks\/Operations\/checks_sol_create_hyphen_suite\/Input\/init(path:headers:body:)"
+      ],
+      "title" : "Initializers"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks\/Operations\/checks_sol_create_hyphen_suite\/Input\/body-swift.property",
+        "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks\/Operations\/checks_sol_create_hyphen_suite\/Input\/headers-swift.property",
+        "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks\/Operations\/checks_sol_create_hyphen_suite\/Input\/path-swift.property"
+      ],
+      "title" : "Instance Properties"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks\/Operations\/checks_sol_create_hyphen_suite\/Input\/Body-swift.enum"
+      ],
+      "title" : "Enumerations"
+    },
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks\/Operations\/checks_sol_create_hyphen_suite\/Input\/Equatable-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapichecks\/operations\/checks_sol_create_hyphen_suite\/input"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIChecks/SH": {
+  "identifier" : "doc:\/\/GitHubRestAPIChecks\/SH",
+  "title" : "Swift.Hashable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIChecks/SQ": {
+  "identifier" : "doc:\/\/GitHubRestAPIChecks\/SQ",
+  "title" : "Swift.Equatable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIChecks/documentation/GitHubRestAPIChecks": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIChecks",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapichecks"
+},
+"doc://GitHubRestAPIChecks/documentation/GitHubRestAPIChecks/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapichecks\/operations"
+},
+"doc://GitHubRestAPIChecks/documentation/GitHubRestAPIChecks/Operations/checks_sol_create_hyphen_suite": {
+  "abstract" : [
+    {
+      "text" : "Create a check suite",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "checks_sol_create_hyphen_suite"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks\/Operations\/checks_sol_create_hyphen_suite",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "checks_sol_create_hyphen_suite"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.checks_sol_create_hyphen_suite",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapichecks\/operations\/checks_sol_create_hyphen_suite"
+},
+"doc://GitHubRestAPIChecks/documentation/GitHubRestAPIChecks/Operations/checks_sol_create_hyphen_suite/Input": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks\/Operations\/checks_sol_create_hyphen_suite\/Input",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.checks_sol_create_hyphen_suite.Input",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapichecks\/operations\/checks_sol_create_hyphen_suite\/input"
+},
+"doc://GitHubRestAPIChecks/documentation/GitHubRestAPIChecks/Operations/checks_sol_create_hyphen_suite/Input/Body-swift.enum": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Body"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks\/Operations\/checks_sol_create_hyphen_suite\/Input\/Body-swift.enum",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Body"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.checks_sol_create_hyphen_suite.Input.Body",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapichecks\/operations\/checks_sol_create_hyphen_suite\/input\/body-swift.enum"
+},
+"doc://GitHubRestAPIChecks/documentation/GitHubRestAPIChecks/Operations/checks_sol_create_hyphen_suite/Input/Equatable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks\/Operations\/checks_sol_create_hyphen_suite\/Input\/Equatable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Equatable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapichecks\/operations\/checks_sol_create_hyphen_suite\/input\/equatable-implementations"
+},
+"doc://GitHubRestAPIChecks/documentation/GitHubRestAPIChecks/Operations/checks_sol_create_hyphen_suite/Input/Headers-swift.struct": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Headers"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks\/Operations\/checks_sol_create_hyphen_suite\/Input\/Headers-swift.struct",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Headers"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.checks_sol_create_hyphen_suite.Input.Headers",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapichecks\/operations\/checks_sol_create_hyphen_suite\/input\/headers-swift.struct"
+},
+"doc://GitHubRestAPIChecks/documentation/GitHubRestAPIChecks/Operations/checks_sol_create_hyphen_suite/Input/Path-swift.struct": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Path"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks\/Operations\/checks_sol_create_hyphen_suite\/Input\/Path-swift.struct",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Path"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.checks_sol_create_hyphen_suite.Input.Path",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapichecks\/operations\/checks_sol_create_hyphen_suite\/input\/path-swift.struct"
+},
+"doc://GitHubRestAPIChecks/documentation/GitHubRestAPIChecks/Operations/checks_sol_create_hyphen_suite/Input/body-swift.property": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "body"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIChecks10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIChecks10OperationsO30checks_sol_create_hyphen_suiteO",
+      "text" : "checks_sol_create_hyphen_suite"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIChecks10OperationsO30checks_sol_create_hyphen_suiteO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIChecks10OperationsO30checks_sol_create_hyphen_suiteO5InputV4BodyO",
+      "text" : "Body"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks\/Operations\/checks_sol_create_hyphen_suite\/Input\/body-swift.property",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "body",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapichecks\/operations\/checks_sol_create_hyphen_suite\/input\/body-swift.property"
+},
+"doc://GitHubRestAPIChecks/documentation/GitHubRestAPIChecks/Operations/checks_sol_create_hyphen_suite/Input/headers-swift.property": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIChecks10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIChecks10OperationsO30checks_sol_create_hyphen_suiteO",
+      "text" : "checks_sol_create_hyphen_suite"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIChecks10OperationsO30checks_sol_create_hyphen_suiteO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIChecks10OperationsO30checks_sol_create_hyphen_suiteO5InputV7HeadersV",
+      "text" : "Headers"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks\/Operations\/checks_sol_create_hyphen_suite\/Input\/headers-swift.property",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "headers",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapichecks\/operations\/checks_sol_create_hyphen_suite\/input\/headers-swift.property"
+},
+"doc://GitHubRestAPIChecks/documentation/GitHubRestAPIChecks/Operations/checks_sol_create_hyphen_suite/Input/init(path:headers:body:)": {
+  "abstract" : [
+    {
+      "text" : "Creates a new ",
+      "type" : "text"
+    },
+    {
+      "code" : "Input",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "path"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIChecks10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIChecks10OperationsO30checks_sol_create_hyphen_suiteO",
+      "text" : "checks_sol_create_hyphen_suite"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIChecks10OperationsO30checks_sol_create_hyphen_suiteO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIChecks10OperationsO30checks_sol_create_hyphen_suiteO5InputV4PathV",
+      "text" : "Path"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIChecks10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIChecks10OperationsO30checks_sol_create_hyphen_suiteO",
+      "text" : "checks_sol_create_hyphen_suite"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIChecks10OperationsO30checks_sol_create_hyphen_suiteO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIChecks10OperationsO30checks_sol_create_hyphen_suiteO5InputV7HeadersV",
+      "text" : "Headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "body"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIChecks10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIChecks10OperationsO30checks_sol_create_hyphen_suiteO",
+      "text" : "checks_sol_create_hyphen_suite"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIChecks10OperationsO30checks_sol_create_hyphen_suiteO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIChecks10OperationsO30checks_sol_create_hyphen_suiteO5InputV4BodyO",
+      "text" : "Body"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks\/Operations\/checks_sol_create_hyphen_suite\/Input\/init(path:headers:body:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(path:headers:body:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapichecks\/operations\/checks_sol_create_hyphen_suite\/input\/init(path:headers:body:)"
+},
+"doc://GitHubRestAPIChecks/documentation/GitHubRestAPIChecks/Operations/checks_sol_create_hyphen_suite/Input/path-swift.property": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "path"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIChecks10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIChecks10OperationsO30checks_sol_create_hyphen_suiteO",
+      "text" : "checks_sol_create_hyphen_suite"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIChecks10OperationsO30checks_sol_create_hyphen_suiteO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPIChecks10OperationsO30checks_sol_create_hyphen_suiteO5InputV4PathV",
+      "text" : "Path"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIChecks\/documentation\/GitHubRestAPIChecks\/Operations\/checks_sol_create_hyphen_suite\/Input\/path-swift.property",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "path",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapichecks\/operations\/checks_sol_create_hyphen_suite\/input\/path-swift.property"
+},
+"doc://GitHubRestAPIChecks/s8SendableP": {
+  "identifier" : "doc:\/\/GitHubRestAPIChecks\/s8SendableP",
+  "title" : "Swift.Sendable",
+  "type" : "unresolvable"
+}
+}
+}

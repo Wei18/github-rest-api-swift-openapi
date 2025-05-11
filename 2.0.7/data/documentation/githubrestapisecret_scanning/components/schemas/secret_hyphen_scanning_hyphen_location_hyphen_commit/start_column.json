@@ -1,0 +1,316 @@
+{
+  "abstract" : [
+    {
+      "text" : "The column at which the secret starts within the start line when the file is interpreted as 8BIT ASCII",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning",
+        "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Components",
+        "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Components\/Schemas",
+        "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Components\/Schemas\/secret_hyphen_scanning_hyphen_location_hyphen_commit"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Components\/Schemas\/secret_hyphen_scanning_hyphen_location_hyphen_commit\/start_column"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:28GitHubRestAPISecret_Scanning10ComponentsO7SchemasO023secret_hyphen_scanning_i10_location_I7_commitV12start_columnSdvp",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "var"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "start_column"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:Sd",
+        "text" : "Double"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPISecret_Scanning"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/secret-scanning\/Types.swift#L1470"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Instance Property",
+    "symbolKind" : "property",
+    "title" : "start_column"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "var"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "start_column"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:Sd",
+              "text" : "Double"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/components\/schemas\/secret-scanning-location-commit\/start_column",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapisecret_scanning\/components\/schemas\/secret_hyphen_scanning_hyphen_location_hyphen_commit\/start_column"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPISecret_Scanning/documentation/GitHubRestAPISecret_Scanning": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPISecret_Scanning",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecret_scanning"
+},
+"doc://GitHubRestAPISecret_Scanning/documentation/GitHubRestAPISecret_Scanning/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecret_scanning\/components"
+},
+"doc://GitHubRestAPISecret_Scanning/documentation/GitHubRestAPISecret_Scanning/Components/Schemas": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/schemas",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Components\/Schemas",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecret_scanning\/components\/schemas"
+},
+"doc://GitHubRestAPISecret_Scanning/documentation/GitHubRestAPISecret_Scanning/Components/Schemas/secret_hyphen_scanning_hyphen_location_hyphen_commit": {
+  "abstract" : [
+    {
+      "text" : "Represents a ‘commit’ secret scanning location type. This location type shows that a secret was detected inside a commit to a repository.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "secret_hyphen_scanning_hyphen_location_hyphen_commit"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Components\/Schemas\/secret_hyphen_scanning_hyphen_location_hyphen_commit",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "secret_hyphen_scanning_hyphen_location_hyphen_commit"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.secret_hyphen_scanning_hyphen_location_hyphen_commit",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecret_scanning\/components\/schemas\/secret_hyphen_scanning_hyphen_location_hyphen_commit"
+},
+"doc://GitHubRestAPISecret_Scanning/documentation/GitHubRestAPISecret_Scanning/Components/Schemas/secret_hyphen_scanning_hyphen_location_hyphen_commit/start_column": {
+  "abstract" : [
+    {
+      "text" : "The column at which the secret starts within the start line when the file is interpreted as 8BIT ASCII",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "start_column"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sd",
+      "text" : "Double"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Components\/Schemas\/secret_hyphen_scanning_hyphen_location_hyphen_commit\/start_column",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "start_column",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecret_scanning\/components\/schemas\/secret_hyphen_scanning_hyphen_location_hyphen_commit\/start_column"
+}
+}
+}

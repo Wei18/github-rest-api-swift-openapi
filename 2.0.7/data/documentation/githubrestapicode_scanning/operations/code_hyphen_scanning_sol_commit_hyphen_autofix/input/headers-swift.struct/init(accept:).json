@@ -1,0 +1,472 @@
+{
+  "abstract" : [
+    {
+      "text" : "Creates a new ",
+      "type" : "text"
+    },
+    {
+      "code" : "Headers",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning",
+        "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Operations",
+        "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Operations\/code_hyphen_scanning_sol_commit_hyphen_autofix",
+        "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Operations\/code_hyphen_scanning_sol_commit_hyphen_autofix\/Input",
+        "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Operations\/code_hyphen_scanning_sol_commit_hyphen_autofix\/Input\/Headers-swift.struct"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Operations\/code_hyphen_scanning_sol_commit_hyphen_autofix\/Input\/Headers-swift.struct\/init(accept:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:26GitHubRestAPICode_Scanning10OperationsO032code_hyphen_scanning_sol_commit_H8_autofixO5InputV7HeadersV6acceptAISay14OpenAPIRuntime23AcceptHeaderContentTypeVyAE010AcceptabletU0OGG_tcfc",
+    "fragments" : [
+      {
+        "kind" : "identifier",
+        "text" : "init"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "accept"
+      },
+      {
+        "kind" : "text",
+        "text" : ": ["
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:14OpenAPIRuntime23AcceptHeaderContentTypeV",
+        "text" : "AcceptHeaderContentType"
+      },
+      {
+        "kind" : "text",
+        "text" : "<"
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10OperationsO",
+        "text" : "Operations"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10OperationsO032code_hyphen_scanning_sol_commit_H8_autofixO",
+        "text" : "code_hyphen_scanning_sol_commit_hyphen_autofix"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10OperationsO032code_hyphen_scanning_sol_commit_H8_autofixO21AcceptableContentTypeO",
+        "text" : "AcceptableContentType"
+      },
+      {
+        "kind" : "text",
+        "text" : ">])"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPICode_Scanning"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/code-scanning\/Types.swift#L5771"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Initializer",
+    "symbolKind" : "init",
+    "title" : "init(accept:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "init"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "accept"
+            },
+            {
+              "kind" : "text",
+              "text" : ": ["
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:14OpenAPIRuntime23AcceptHeaderContentTypeV",
+              "text" : "AcceptHeaderContentType"
+            },
+            {
+              "kind" : "text",
+              "text" : "<"
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Operations",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10OperationsO",
+              "text" : "Operations"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Operations\/code_hyphen_scanning_sol_commit_hyphen_autofix",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10OperationsO032code_hyphen_scanning_sol_commit_H8_autofixO",
+              "text" : "code_hyphen_scanning_sol_commit_hyphen_autofix"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Operations\/code_hyphen_scanning_sol_commit_hyphen_autofix\/AcceptableContentType",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10OperationsO032code_hyphen_scanning_sol_commit_H8_autofixO21AcceptableContentTypeO",
+              "text" : "AcceptableContentType"
+            },
+            {
+              "kind" : "text",
+              "text" : ">] = .defaultValues())"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "kind" : "parameters",
+      "parameters" : [
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "accept"
+        }
+      ]
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapicode_scanning\/operations\/code_hyphen_scanning_sol_commit_hyphen_autofix\/input\/headers-swift.struct\/init(accept:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPICode_Scanning/documentation/GitHubRestAPICode_Scanning": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPICode_Scanning",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_scanning"
+},
+"doc://GitHubRestAPICode_Scanning/documentation/GitHubRestAPICode_Scanning/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_scanning\/operations"
+},
+"doc://GitHubRestAPICode_Scanning/documentation/GitHubRestAPICode_Scanning/Operations/code_hyphen_scanning_sol_commit_hyphen_autofix": {
+  "abstract" : [
+    {
+      "text" : "Commit an autofix for a code scanning alert",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "code_hyphen_scanning_sol_commit_hyphen_autofix"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Operations\/code_hyphen_scanning_sol_commit_hyphen_autofix",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "code_hyphen_scanning_sol_commit_hyphen_autofix"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.code_hyphen_scanning_sol_commit_hyphen_autofix",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_scanning\/operations\/code_hyphen_scanning_sol_commit_hyphen_autofix"
+},
+"doc://GitHubRestAPICode_Scanning/documentation/GitHubRestAPICode_Scanning/Operations/code_hyphen_scanning_sol_commit_hyphen_autofix/AcceptableContentType": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AcceptableContentType"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Operations\/code_hyphen_scanning_sol_commit_hyphen_autofix\/AcceptableContentType",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AcceptableContentType"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.code_hyphen_scanning_sol_commit_hyphen_autofix.AcceptableContentType",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_scanning\/operations\/code_hyphen_scanning_sol_commit_hyphen_autofix\/acceptablecontenttype"
+},
+"doc://GitHubRestAPICode_Scanning/documentation/GitHubRestAPICode_Scanning/Operations/code_hyphen_scanning_sol_commit_hyphen_autofix/Input": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Operations\/code_hyphen_scanning_sol_commit_hyphen_autofix\/Input",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.code_hyphen_scanning_sol_commit_hyphen_autofix.Input",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_scanning\/operations\/code_hyphen_scanning_sol_commit_hyphen_autofix\/input"
+},
+"doc://GitHubRestAPICode_Scanning/documentation/GitHubRestAPICode_Scanning/Operations/code_hyphen_scanning_sol_commit_hyphen_autofix/Input/Headers-swift.struct": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Headers"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Operations\/code_hyphen_scanning_sol_commit_hyphen_autofix\/Input\/Headers-swift.struct",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Headers"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.code_hyphen_scanning_sol_commit_hyphen_autofix.Input.Headers",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_scanning\/operations\/code_hyphen_scanning_sol_commit_hyphen_autofix\/input\/headers-swift.struct"
+},
+"doc://GitHubRestAPICode_Scanning/documentation/GitHubRestAPICode_Scanning/Operations/code_hyphen_scanning_sol_commit_hyphen_autofix/Input/Headers-swift.struct/init(accept:)": {
+  "abstract" : [
+    {
+      "text" : "Creates a new ",
+      "type" : "text"
+    },
+    {
+      "code" : "Headers",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "accept"
+    },
+    {
+      "kind" : "text",
+      "text" : ": ["
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:14OpenAPIRuntime23AcceptHeaderContentTypeV",
+      "text" : "AcceptHeaderContentType"
+    },
+    {
+      "kind" : "text",
+      "text" : "<"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10OperationsO032code_hyphen_scanning_sol_commit_H8_autofixO",
+      "text" : "code_hyphen_scanning_sol_commit_hyphen_autofix"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10OperationsO032code_hyphen_scanning_sol_commit_H8_autofixO21AcceptableContentTypeO",
+      "text" : "AcceptableContentType"
+    },
+    {
+      "kind" : "text",
+      "text" : ">])"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Operations\/code_hyphen_scanning_sol_commit_hyphen_autofix\/Input\/Headers-swift.struct\/init(accept:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(accept:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_scanning\/operations\/code_hyphen_scanning_sol_commit_hyphen_autofix\/input\/headers-swift.struct\/init(accept:)"
+}
+}
+}

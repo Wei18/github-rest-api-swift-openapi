@@ -1,0 +1,976 @@
+{
+  "abstract" : [
+    {
+      "text" : "Search commits",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch",
+        "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/APIProtocol"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/APIProtocol\/search_sol_commits(query:headers:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "extendedModule" : "GitHubRestAPISearch",
+    "externalID" : "s:19GitHubRestAPISearch11APIProtocolPAAE18search_sol_commits5query7headersAA10OperationsOADO6OutputOAI5InputV5QueryV_AM7HeadersVtYaKF",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "func"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "search_sol_commits"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "query"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO",
+        "text" : "Operations"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO18search_sol_commitsO",
+        "text" : "search_sol_commits"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO18search_sol_commitsO5InputV",
+        "text" : "Input"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO18search_sol_commitsO5InputV5QueryV",
+        "text" : "Query"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "headers"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO",
+        "text" : "Operations"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO18search_sol_commitsO",
+        "text" : "search_sol_commits"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO18search_sol_commitsO5InputV",
+        "text" : "Input"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO18search_sol_commitsO5InputV7HeadersV",
+        "text" : "Headers"
+      },
+      {
+        "kind" : "text",
+        "text" : ") "
+      },
+      {
+        "kind" : "keyword",
+        "text" : "async"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "keyword",
+        "text" : "throws"
+      },
+      {
+        "kind" : "text",
+        "text" : " -> "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO",
+        "text" : "Operations"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO18search_sol_commitsO",
+        "text" : "search_sol_commits"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO18search_sol_commitsO6OutputO",
+        "text" : "Output"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPISearch"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/search\/Types.swift#L177"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Instance Method",
+    "symbolKind" : "method",
+    "title" : "search_sol_commits(query:headers:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "func"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "search_sol_commits"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "query"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Operations",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO",
+              "text" : "Operations"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Operations\/search_sol_commits",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO18search_sol_commitsO",
+              "text" : "search_sol_commits"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Operations\/search_sol_commits\/Input",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO18search_sol_commitsO5InputV",
+              "text" : "Input"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Operations\/search_sol_commits\/Input\/Query-swift.struct",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO18search_sol_commitsO5InputV5QueryV",
+              "text" : "Query"
+            },
+            {
+              "kind" : "text",
+              "text" : ", "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "headers"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Operations",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO",
+              "text" : "Operations"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Operations\/search_sol_commits",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO18search_sol_commitsO",
+              "text" : "search_sol_commits"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Operations\/search_sol_commits\/Input",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO18search_sol_commitsO5InputV",
+              "text" : "Input"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Operations\/search_sol_commits\/Input\/Headers-swift.struct",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO18search_sol_commitsO5InputV7HeadersV",
+              "text" : "Headers"
+            },
+            {
+              "kind" : "text",
+              "text" : " = .init()) "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "async"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "throws"
+            },
+            {
+              "kind" : "text",
+              "text" : " -> "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Operations",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO",
+              "text" : "Operations"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Operations\/search_sol_commits",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO18search_sol_commitsO",
+              "text" : "search_sol_commits"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Operations\/search_sol_commits\/Output",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO18search_sol_commitsO6OutputO",
+              "text" : "Output"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Find commits via various criteria on the default branch (usually ",
+              "type" : "text"
+            },
+            {
+              "code" : "main",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : "). This method returns up to 100 results ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "https:\/\/docs.github.com\/rest\/guides\/using-pagination-in-the-rest-api",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : ".",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "When searching for commits, you can get text match metadata for the ",
+              "type" : "text"
+            },
+            {
+              "inlineContent" : [
+                {
+                  "text" : "message",
+                  "type" : "text"
+                }
+              ],
+              "type" : "strong"
+            },
+            {
+              "text" : " field when you provide the ",
+              "type" : "text"
+            },
+            {
+              "code" : "text-match",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " media type. For more details about how to receive highlighted search results, see ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "https:\/\/docs.github.com\/rest\/search\/search#text-match-metadata",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : ".",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "For example, if you want to find commits related to CSS in the ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "https:\/\/github.com\/octocat\/Spoon-Knife",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : " repository. Your query would look something like this:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "code" : "q=repo:octocat\/Spoon-Knife+css",
+              "type" : "codeVoice"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "HTTP ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "GET \/search\/commits",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/paths\/\/search\/commits\/get(search\/commits)",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapisearch\/apiprotocol\/search_sol_commits(query:headers:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPISearch",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/APIProtocol": {
+  "abstract" : [
+    {
+      "text" : "A type that performs HTTP operations defined by the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "protocol"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "APIProtocol"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/APIProtocol",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "APIProtocol"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "APIProtocol",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/apiprotocol"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/APIProtocol/search_sol_commits(query:headers:)": {
+  "abstract" : [
+    {
+      "text" : "Search commits",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "search_sol_commits"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "query"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO18search_sol_commitsO",
+      "text" : "search_sol_commits"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO18search_sol_commitsO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO18search_sol_commitsO5InputV5QueryV",
+      "text" : "Query"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO18search_sol_commitsO",
+      "text" : "search_sol_commits"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO18search_sol_commitsO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO18search_sol_commitsO5InputV7HeadersV",
+      "text" : "Headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO18search_sol_commitsO",
+      "text" : "search_sol_commits"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:19GitHubRestAPISearch10OperationsO18search_sol_commitsO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/APIProtocol\/search_sol_commits(query:headers:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "search_sol_commits(query:headers:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/apiprotocol\/search_sol_commits(query:headers:)"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/operations"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Operations/search_sol_commits": {
+  "abstract" : [
+    {
+      "text" : "Search commits",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "search_sol_commits"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Operations\/search_sol_commits",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "search_sol_commits"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.search_sol_commits",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/operations\/search_sol_commits"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Operations/search_sol_commits/Input": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Operations\/search_sol_commits\/Input",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.search_sol_commits.Input",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/operations\/search_sol_commits\/input"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Operations/search_sol_commits/Input/Headers-swift.struct": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Headers"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Operations\/search_sol_commits\/Input\/Headers-swift.struct",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Headers"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.search_sol_commits.Input.Headers",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/operations\/search_sol_commits\/input\/headers-swift.struct"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Operations/search_sol_commits/Input/Query-swift.struct": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Query"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Operations\/search_sol_commits\/Input\/Query-swift.struct",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Query"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.search_sol_commits.Input.Query",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/operations\/search_sol_commits\/input\/query-swift.struct"
+},
+"doc://GitHubRestAPISearch/documentation/GitHubRestAPISearch/Operations/search_sol_commits/Output": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISearch\/documentation\/GitHubRestAPISearch\/Operations\/search_sol_commits\/Output",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.search_sol_commits.Output",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisearch\/operations\/search_sol_commits\/output"
+},
+"https://docs.github.com/rest/guides/using-pagination-in-the-rest-api": {
+  "identifier" : "https:\/\/docs.github.com\/rest\/guides\/using-pagination-in-the-rest-api",
+  "title" : "per page",
+  "titleInlineContent" : [
+    {
+      "text" : "per page",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/docs.github.com\/rest\/guides\/using-pagination-in-the-rest-api"
+},
+"https://docs.github.com/rest/search/search#text-match-metadata": {
+  "identifier" : "https:\/\/docs.github.com\/rest\/search\/search#text-match-metadata",
+  "title" : "Text match metadata",
+  "titleInlineContent" : [
+    {
+      "text" : "Text match",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "metadata",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/docs.github.com\/rest\/search\/search#text-match-metadata"
+},
+"https://github.com/octocat/Spoon-Knife": {
+  "identifier" : "https:\/\/github.com\/octocat\/Spoon-Knife",
+  "title" : "octocat\/Spoon-Knife",
+  "titleInlineContent" : [
+    {
+      "text" : "octocat\/Spoon-Knife",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/github.com\/octocat\/Spoon-Knife"
+}
+}
+}

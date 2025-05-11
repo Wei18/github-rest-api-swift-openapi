@@ -1,0 +1,507 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta",
+        "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta\/Operations",
+        "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta\/Operations\/meta_sol_get",
+        "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta\/Operations\/meta_sol_get\/Output",
+        "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta\/Operations\/meta_sol_get\/Output\/Ok-swift.struct"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta\/Operations\/meta_sol_get\/Output\/Ok-swift.struct\/Body-swift.enum"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:17GitHubRestAPIMeta10OperationsO12meta_sol_getO6OutputO2OkV4BodyO",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "enum"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "Body"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIMeta"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "Body"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/meta\/Types.swift#L836"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Enumeration",
+    "symbolKind" : "enum",
+    "title" : "Operations.meta_sol_get.Output.Ok.Body"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "enum"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "Body"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/paths\/meta\/GET\/responses\/200\/content",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIMeta\/SQ",
+        "doc:\/\/GitHubRestAPIMeta\/SH",
+        "doc:\/\/GitHubRestAPIMeta\/s8SendableP"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta\/Operations\/meta_sol_get\/Output\/Ok-swift.struct\/Body-swift.enum\/json(_:)"
+      ],
+      "title" : "Enumeration Cases"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta\/Operations\/meta_sol_get\/Output\/Ok-swift.struct\/Body-swift.enum\/json"
+      ],
+      "title" : "Instance Properties"
+    },
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta\/Operations\/meta_sol_get\/Output\/Ok-swift.struct\/Body-swift.enum\/Equatable-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapimeta\/operations\/meta_sol_get\/output\/ok-swift.struct\/body-swift.enum"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIMeta/SH": {
+  "identifier" : "doc:\/\/GitHubRestAPIMeta\/SH",
+  "title" : "Swift.Hashable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIMeta/SQ": {
+  "identifier" : "doc:\/\/GitHubRestAPIMeta\/SQ",
+  "title" : "Swift.Equatable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIMeta/documentation/GitHubRestAPIMeta": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIMeta",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimeta"
+},
+"doc://GitHubRestAPIMeta/documentation/GitHubRestAPIMeta/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimeta\/operations"
+},
+"doc://GitHubRestAPIMeta/documentation/GitHubRestAPIMeta/Operations/meta_sol_get": {
+  "abstract" : [
+    {
+      "text" : "Get GitHub meta information",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "meta_sol_get"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta\/Operations\/meta_sol_get",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "meta_sol_get"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.meta_sol_get",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimeta\/operations\/meta_sol_get"
+},
+"doc://GitHubRestAPIMeta/documentation/GitHubRestAPIMeta/Operations/meta_sol_get/Output": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta\/Operations\/meta_sol_get\/Output",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.meta_sol_get.Output",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimeta\/operations\/meta_sol_get\/output"
+},
+"doc://GitHubRestAPIMeta/documentation/GitHubRestAPIMeta/Operations/meta_sol_get/Output/Ok-swift.struct": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Ok"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta\/Operations\/meta_sol_get\/Output\/Ok-swift.struct",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Ok"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.meta_sol_get.Output.Ok",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimeta\/operations\/meta_sol_get\/output\/ok-swift.struct"
+},
+"doc://GitHubRestAPIMeta/documentation/GitHubRestAPIMeta/Operations/meta_sol_get/Output/Ok-swift.struct/Body-swift.enum": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Body"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta\/Operations\/meta_sol_get\/Output\/Ok-swift.struct\/Body-swift.enum",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Body"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.meta_sol_get.Output.Ok.Body",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimeta\/operations\/meta_sol_get\/output\/ok-swift.struct\/body-swift.enum"
+},
+"doc://GitHubRestAPIMeta/documentation/GitHubRestAPIMeta/Operations/meta_sol_get/Output/Ok-swift.struct/Body-swift.enum/Equatable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta\/Operations\/meta_sol_get\/Output\/Ok-swift.struct\/Body-swift.enum\/Equatable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Equatable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimeta\/operations\/meta_sol_get\/output\/ok-swift.struct\/body-swift.enum\/equatable-implementations"
+},
+"doc://GitHubRestAPIMeta/documentation/GitHubRestAPIMeta/Operations/meta_sol_get/Output/Ok-swift.struct/Body-swift.enum/json": {
+  "abstract" : [
+    {
+      "text" : "The associated value of the enum case if ",
+      "type" : "text"
+    },
+    {
+      "code" : "self",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " is ",
+      "type" : "text"
+    },
+    {
+      "code" : ".json",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "json"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIMeta10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIMeta10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIMeta10ComponentsO7SchemasO19api_hyphen_overviewV",
+      "text" : "api_hyphen_overview"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta\/Operations\/meta_sol_get\/Output\/Ok-swift.struct\/Body-swift.enum\/json",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "json",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimeta\/operations\/meta_sol_get\/output\/ok-swift.struct\/body-swift.enum\/json"
+},
+"doc://GitHubRestAPIMeta/documentation/GitHubRestAPIMeta/Operations/meta_sol_get/Output/Ok-swift.struct/Body-swift.enum/json(_:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "json"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIMeta10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIMeta10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIMeta10ComponentsO7SchemasO19api_hyphen_overviewV",
+      "text" : "api_hyphen_overview"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta\/Operations\/meta_sol_get\/Output\/Ok-swift.struct\/Body-swift.enum\/json(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Operations.meta_sol_get.Output.Ok.Body.json(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimeta\/operations\/meta_sol_get\/output\/ok-swift.struct\/body-swift.enum\/json(_:)"
+},
+"doc://GitHubRestAPIMeta/s8SendableP": {
+  "identifier" : "doc:\/\/GitHubRestAPIMeta\/s8SendableP",
+  "title" : "Swift.Sendable",
+  "type" : "unresolvable"
+}
+}
+}

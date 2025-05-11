@@ -1,0 +1,875 @@
+{
+  "abstract" : [
+    {
+      "text" : "State of this codespace.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas\/codespace_hyphen_with_hyphen_full_hyphen_repository"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas\/codespace_hyphen_with_hyphen_full_hyphen_repository\/statePayload"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:23GitHubRestAPICodespaces10ComponentsO7SchemasO022codespace_hyphen_with_h6_full_H11_repositoryV12statePayloadO",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "enum"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "statePayload"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPICodespaces"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "statePayload"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/codespaces\/Types.swift#L5995"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Enumeration",
+    "symbolKind" : "enum",
+    "title" : "Components.Schemas.codespace_hyphen_with_hyphen_full_hyphen_repository.statePayload"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "enum"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "statePayload"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/components\/schemas\/codespace-with-full-repository\/state",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPICodespaces\/s12CaseIterableP",
+        "doc:\/\/GitHubRestAPICodespaces\/Se",
+        "doc:\/\/GitHubRestAPICodespaces\/SE",
+        "doc:\/\/GitHubRestAPICodespaces\/SQ",
+        "doc:\/\/GitHubRestAPICodespaces\/SH",
+        "doc:\/\/GitHubRestAPICodespaces\/SY",
+        "doc:\/\/GitHubRestAPICodespaces\/s8SendableP"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas\/codespace_hyphen_with_hyphen_full_hyphen_repository\/statePayload\/Archived",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas\/codespace_hyphen_with_hyphen_full_hyphen_repository\/statePayload\/Available",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas\/codespace_hyphen_with_hyphen_full_hyphen_repository\/statePayload\/Awaiting",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas\/codespace_hyphen_with_hyphen_full_hyphen_repository\/statePayload\/Created",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas\/codespace_hyphen_with_hyphen_full_hyphen_repository\/statePayload\/Deleted",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas\/codespace_hyphen_with_hyphen_full_hyphen_repository\/statePayload\/Exporting",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas\/codespace_hyphen_with_hyphen_full_hyphen_repository\/statePayload\/Failed",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas\/codespace_hyphen_with_hyphen_full_hyphen_repository\/statePayload\/Moved",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas\/codespace_hyphen_with_hyphen_full_hyphen_repository\/statePayload\/Provisioning",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas\/codespace_hyphen_with_hyphen_full_hyphen_repository\/statePayload\/Queued",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas\/codespace_hyphen_with_hyphen_full_hyphen_repository\/statePayload\/Rebuilding",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas\/codespace_hyphen_with_hyphen_full_hyphen_repository\/statePayload\/Shutdown",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas\/codespace_hyphen_with_hyphen_full_hyphen_repository\/statePayload\/ShuttingDown",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas\/codespace_hyphen_with_hyphen_full_hyphen_repository\/statePayload\/Starting",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas\/codespace_hyphen_with_hyphen_full_hyphen_repository\/statePayload\/Unavailable",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas\/codespace_hyphen_with_hyphen_full_hyphen_repository\/statePayload\/Unknown",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas\/codespace_hyphen_with_hyphen_full_hyphen_repository\/statePayload\/Updating"
+      ],
+      "title" : "Enumeration Cases"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas\/codespace_hyphen_with_hyphen_full_hyphen_repository\/statePayload\/init(rawValue:)"
+      ],
+      "title" : "Initializers"
+    },
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas\/codespace_hyphen_with_hyphen_full_hyphen_repository\/statePayload\/Equatable-Implementations",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas\/codespace_hyphen_with_hyphen_full_hyphen_repository\/statePayload\/RawRepresentable-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapicodespaces\/components\/schemas\/codespace_hyphen_with_hyphen_full_hyphen_repository\/statepayload"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPICodespaces/SE": {
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/SE",
+  "title" : "Swift.Encodable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPICodespaces/SH": {
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/SH",
+  "title" : "Swift.Hashable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPICodespaces/SQ": {
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/SQ",
+  "title" : "Swift.Equatable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPICodespaces/SY": {
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/SY",
+  "title" : "Swift.RawRepresentable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPICodespaces/Se": {
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/Se",
+  "title" : "Swift.Decodable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPICodespaces",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/components"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Components/Schemas": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/schemas",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/components\/schemas"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Components/Schemas/codespace_hyphen_with_hyphen_full_hyphen_repository": {
+  "abstract" : [
+    {
+      "text" : "A codespace.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "codespace_hyphen_with_hyphen_full_hyphen_repository"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas\/codespace_hyphen_with_hyphen_full_hyphen_repository",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "codespace_hyphen_with_hyphen_full_hyphen_repository"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.codespace_hyphen_with_hyphen_full_hyphen_repository",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/components\/schemas\/codespace_hyphen_with_hyphen_full_hyphen_repository"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Components/Schemas/codespace_hyphen_with_hyphen_full_hyphen_repository/statePayload": {
+  "abstract" : [
+    {
+      "text" : "State of this codespace.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "statePayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas\/codespace_hyphen_with_hyphen_full_hyphen_repository\/statePayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "statePayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.codespace_hyphen_with_hyphen_full_hyphen_repository.statePayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/components\/schemas\/codespace_hyphen_with_hyphen_full_hyphen_repository\/statepayload"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Components/Schemas/codespace_hyphen_with_hyphen_full_hyphen_repository/statePayload/Archived": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Archived"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas\/codespace_hyphen_with_hyphen_full_hyphen_repository\/statePayload\/Archived",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.codespace_hyphen_with_hyphen_full_hyphen_repository.statePayload.Archived",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/components\/schemas\/codespace_hyphen_with_hyphen_full_hyphen_repository\/statepayload\/archived"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Components/Schemas/codespace_hyphen_with_hyphen_full_hyphen_repository/statePayload/Available": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Available"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas\/codespace_hyphen_with_hyphen_full_hyphen_repository\/statePayload\/Available",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.codespace_hyphen_with_hyphen_full_hyphen_repository.statePayload.Available",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/components\/schemas\/codespace_hyphen_with_hyphen_full_hyphen_repository\/statepayload\/available"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Components/Schemas/codespace_hyphen_with_hyphen_full_hyphen_repository/statePayload/Awaiting": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Awaiting"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas\/codespace_hyphen_with_hyphen_full_hyphen_repository\/statePayload\/Awaiting",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.codespace_hyphen_with_hyphen_full_hyphen_repository.statePayload.Awaiting",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/components\/schemas\/codespace_hyphen_with_hyphen_full_hyphen_repository\/statepayload\/awaiting"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Components/Schemas/codespace_hyphen_with_hyphen_full_hyphen_repository/statePayload/Created": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Created"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas\/codespace_hyphen_with_hyphen_full_hyphen_repository\/statePayload\/Created",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.codespace_hyphen_with_hyphen_full_hyphen_repository.statePayload.Created",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/components\/schemas\/codespace_hyphen_with_hyphen_full_hyphen_repository\/statepayload\/created"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Components/Schemas/codespace_hyphen_with_hyphen_full_hyphen_repository/statePayload/Deleted": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Deleted"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas\/codespace_hyphen_with_hyphen_full_hyphen_repository\/statePayload\/Deleted",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.codespace_hyphen_with_hyphen_full_hyphen_repository.statePayload.Deleted",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/components\/schemas\/codespace_hyphen_with_hyphen_full_hyphen_repository\/statepayload\/deleted"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Components/Schemas/codespace_hyphen_with_hyphen_full_hyphen_repository/statePayload/Equatable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas\/codespace_hyphen_with_hyphen_full_hyphen_repository\/statePayload\/Equatable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Equatable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/components\/schemas\/codespace_hyphen_with_hyphen_full_hyphen_repository\/statepayload\/equatable-implementations"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Components/Schemas/codespace_hyphen_with_hyphen_full_hyphen_repository/statePayload/Exporting": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Exporting"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas\/codespace_hyphen_with_hyphen_full_hyphen_repository\/statePayload\/Exporting",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.codespace_hyphen_with_hyphen_full_hyphen_repository.statePayload.Exporting",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/components\/schemas\/codespace_hyphen_with_hyphen_full_hyphen_repository\/statepayload\/exporting"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Components/Schemas/codespace_hyphen_with_hyphen_full_hyphen_repository/statePayload/Failed": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Failed"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas\/codespace_hyphen_with_hyphen_full_hyphen_repository\/statePayload\/Failed",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.codespace_hyphen_with_hyphen_full_hyphen_repository.statePayload.Failed",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/components\/schemas\/codespace_hyphen_with_hyphen_full_hyphen_repository\/statepayload\/failed"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Components/Schemas/codespace_hyphen_with_hyphen_full_hyphen_repository/statePayload/Moved": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Moved"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas\/codespace_hyphen_with_hyphen_full_hyphen_repository\/statePayload\/Moved",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.codespace_hyphen_with_hyphen_full_hyphen_repository.statePayload.Moved",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/components\/schemas\/codespace_hyphen_with_hyphen_full_hyphen_repository\/statepayload\/moved"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Components/Schemas/codespace_hyphen_with_hyphen_full_hyphen_repository/statePayload/Provisioning": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Provisioning"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas\/codespace_hyphen_with_hyphen_full_hyphen_repository\/statePayload\/Provisioning",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.codespace_hyphen_with_hyphen_full_hyphen_repository.statePayload.Provisioning",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/components\/schemas\/codespace_hyphen_with_hyphen_full_hyphen_repository\/statepayload\/provisioning"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Components/Schemas/codespace_hyphen_with_hyphen_full_hyphen_repository/statePayload/Queued": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Queued"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas\/codespace_hyphen_with_hyphen_full_hyphen_repository\/statePayload\/Queued",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.codespace_hyphen_with_hyphen_full_hyphen_repository.statePayload.Queued",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/components\/schemas\/codespace_hyphen_with_hyphen_full_hyphen_repository\/statepayload\/queued"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Components/Schemas/codespace_hyphen_with_hyphen_full_hyphen_repository/statePayload/RawRepresentable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas\/codespace_hyphen_with_hyphen_full_hyphen_repository\/statePayload\/RawRepresentable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "RawRepresentable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/components\/schemas\/codespace_hyphen_with_hyphen_full_hyphen_repository\/statepayload\/rawrepresentable-implementations"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Components/Schemas/codespace_hyphen_with_hyphen_full_hyphen_repository/statePayload/Rebuilding": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Rebuilding"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas\/codespace_hyphen_with_hyphen_full_hyphen_repository\/statePayload\/Rebuilding",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.codespace_hyphen_with_hyphen_full_hyphen_repository.statePayload.Rebuilding",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/components\/schemas\/codespace_hyphen_with_hyphen_full_hyphen_repository\/statepayload\/rebuilding"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Components/Schemas/codespace_hyphen_with_hyphen_full_hyphen_repository/statePayload/Shutdown": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Shutdown"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas\/codespace_hyphen_with_hyphen_full_hyphen_repository\/statePayload\/Shutdown",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.codespace_hyphen_with_hyphen_full_hyphen_repository.statePayload.Shutdown",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/components\/schemas\/codespace_hyphen_with_hyphen_full_hyphen_repository\/statepayload\/shutdown"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Components/Schemas/codespace_hyphen_with_hyphen_full_hyphen_repository/statePayload/ShuttingDown": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ShuttingDown"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas\/codespace_hyphen_with_hyphen_full_hyphen_repository\/statePayload\/ShuttingDown",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.codespace_hyphen_with_hyphen_full_hyphen_repository.statePayload.ShuttingDown",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/components\/schemas\/codespace_hyphen_with_hyphen_full_hyphen_repository\/statepayload\/shuttingdown"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Components/Schemas/codespace_hyphen_with_hyphen_full_hyphen_repository/statePayload/Starting": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Starting"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas\/codespace_hyphen_with_hyphen_full_hyphen_repository\/statePayload\/Starting",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.codespace_hyphen_with_hyphen_full_hyphen_repository.statePayload.Starting",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/components\/schemas\/codespace_hyphen_with_hyphen_full_hyphen_repository\/statepayload\/starting"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Components/Schemas/codespace_hyphen_with_hyphen_full_hyphen_repository/statePayload/Unavailable": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Unavailable"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas\/codespace_hyphen_with_hyphen_full_hyphen_repository\/statePayload\/Unavailable",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.codespace_hyphen_with_hyphen_full_hyphen_repository.statePayload.Unavailable",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/components\/schemas\/codespace_hyphen_with_hyphen_full_hyphen_repository\/statepayload\/unavailable"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Components/Schemas/codespace_hyphen_with_hyphen_full_hyphen_repository/statePayload/Unknown": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Unknown"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas\/codespace_hyphen_with_hyphen_full_hyphen_repository\/statePayload\/Unknown",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.codespace_hyphen_with_hyphen_full_hyphen_repository.statePayload.Unknown",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/components\/schemas\/codespace_hyphen_with_hyphen_full_hyphen_repository\/statepayload\/unknown"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Components/Schemas/codespace_hyphen_with_hyphen_full_hyphen_repository/statePayload/Updating": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Updating"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas\/codespace_hyphen_with_hyphen_full_hyphen_repository\/statePayload\/Updating",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.codespace_hyphen_with_hyphen_full_hyphen_repository.statePayload.Updating",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/components\/schemas\/codespace_hyphen_with_hyphen_full_hyphen_repository\/statepayload\/updating"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Components/Schemas/codespace_hyphen_with_hyphen_full_hyphen_repository/statePayload/init(rawValue:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "?("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "rawValue"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas\/codespace_hyphen_with_hyphen_full_hyphen_repository\/statePayload\/init(rawValue:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(rawValue:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/components\/schemas\/codespace_hyphen_with_hyphen_full_hyphen_repository\/statepayload\/init(rawvalue:)"
+},
+"doc://GitHubRestAPICodespaces/s12CaseIterableP": {
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/s12CaseIterableP",
+  "title" : "Swift.CaseIterable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPICodespaces/s8SendableP": {
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/s8SendableP",
+  "title" : "Swift.Sendable",
+  "type" : "unresolvable"
+}
+}
+}

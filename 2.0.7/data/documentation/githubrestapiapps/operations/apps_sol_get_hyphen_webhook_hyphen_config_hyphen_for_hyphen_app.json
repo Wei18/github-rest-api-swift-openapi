@@ -1,0 +1,471 @@
+{
+  "abstract" : [
+    {
+      "text" : "Get a webhook configuration for an app",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/apps_sol_get_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:17GitHubRestAPIApps10OperationsO028apps_sol_get_hyphen_webhook_i8_config_i5_for_I4_appO",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "enum"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "apps_sol_get_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIApps"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "apps_sol_get_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/apps\/Types.swift#L5484"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Enumeration",
+    "symbolKind" : "enum",
+    "title" : "Operations.apps_sol_get_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "enum"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "apps_sol_get_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Returns the webhook configuration for a GitHub App. For more information about configuring a webhook for your app, see “",
+              "type" : "text"
+            },
+            {
+              "identifier" : "\/developers\/apps\/creating-a-github-app",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : ".”",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "You must use a ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "https:\/\/docs.github.com\/apps\/building-github-apps\/authenticating-with-github-apps\/#authenticating-as-a-github-app",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : " to access this endpoint.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "HTTP ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "GET \/app\/hook\/config",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/paths\/\/app\/hook\/config\/get(apps\/get-webhook-config-for-app)",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/apps_sol_get_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app\/Input"
+      ],
+      "title" : "Structures"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/apps_sol_get_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app\/id"
+      ],
+      "title" : "Type Properties"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/apps_sol_get_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app\/AcceptableContentType",
+        "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/apps_sol_get_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app\/Output"
+      ],
+      "title" : "Enumerations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapiapps\/operations\/apps_sol_get_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"/developers/apps/creating-a-github-app": {
+  "identifier" : "\/developers\/apps\/creating-a-github-app",
+  "title" : "Creating a GitHub App",
+  "titleInlineContent" : [
+    {
+      "text" : "Creating a GitHub App",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "\/developers\/apps\/creating-a-github-app"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIApps",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/operations"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Operations/apps_sol_get_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app": {
+  "abstract" : [
+    {
+      "text" : "Get a webhook configuration for an app",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "apps_sol_get_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/apps_sol_get_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "apps_sol_get_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.apps_sol_get_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/operations\/apps_sol_get_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Operations/apps_sol_get_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app/AcceptableContentType": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AcceptableContentType"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/apps_sol_get_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app\/AcceptableContentType",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AcceptableContentType"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.apps_sol_get_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app.AcceptableContentType",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/operations\/apps_sol_get_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app\/acceptablecontenttype"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Operations/apps_sol_get_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app/Input": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/apps_sol_get_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app\/Input",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.apps_sol_get_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app.Input",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/operations\/apps_sol_get_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app\/input"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Operations/apps_sol_get_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app/Output": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/apps_sol_get_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app\/Output",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.apps_sol_get_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app.Output",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/operations\/apps_sol_get_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app\/output"
+},
+"doc://GitHubRestAPIApps/documentation/GitHubRestAPIApps/Operations/apps_sol_get_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app/id": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "id"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIApps\/documentation\/GitHubRestAPIApps\/Operations\/apps_sol_get_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app\/id",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "id",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiapps\/operations\/apps_sol_get_hyphen_webhook_hyphen_config_hyphen_for_hyphen_app\/id"
+},
+"https://docs.github.com/apps/building-github-apps/authenticating-with-github-apps/#authenticating-as-a-github-app": {
+  "identifier" : "https:\/\/docs.github.com\/apps\/building-github-apps\/authenticating-with-github-apps\/#authenticating-as-a-github-app",
+  "title" : "JWT",
+  "titleInlineContent" : [
+    {
+      "text" : "JWT",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/docs.github.com\/apps\/building-github-apps\/authenticating-with-github-apps\/#authenticating-as-a-github-app"
+}
+}
+}

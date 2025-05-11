@@ -1,0 +1,1384 @@
+{
+  "abstract" : [
+    {
+      "text" : "The campaign metadata and alert stats.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPICampaigns\/documentation\/GitHubRestAPICampaigns",
+        "doc:\/\/GitHubRestAPICampaigns\/documentation\/GitHubRestAPICampaigns\/Components",
+        "doc:\/\/GitHubRestAPICampaigns\/documentation\/GitHubRestAPICampaigns\/Components\/Schemas"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPICampaigns\/documentation\/GitHubRestAPICampaigns\/Components\/Schemas\/campaign_hyphen_summary"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:22GitHubRestAPICampaigns10ComponentsO7SchemasO23campaign_hyphen_summaryV",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "struct"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "campaign_hyphen_summary"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPICampaigns"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "campaign_hyphen_summary"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/campaigns\/Types.swift#L642"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Structure",
+    "symbolKind" : "struct",
+    "title" : "Components.Schemas.campaign_hyphen_summary"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "struct"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "campaign_hyphen_summary"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/components\/schemas\/campaign-summary",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPICampaigns\/Se",
+        "doc:\/\/GitHubRestAPICampaigns\/SE",
+        "doc:\/\/GitHubRestAPICampaigns\/SQ",
+        "doc:\/\/GitHubRestAPICampaigns\/SH",
+        "doc:\/\/GitHubRestAPICampaigns\/s8SendableP"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPICampaigns\/documentation\/GitHubRestAPICampaigns\/Components\/Schemas\/campaign_hyphen_summary\/alert_statsPayload"
+      ],
+      "title" : "Structures"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPICampaigns\/documentation\/GitHubRestAPICampaigns\/Components\/Schemas\/campaign_hyphen_summary\/init(from:)",
+        "doc:\/\/GitHubRestAPICampaigns\/documentation\/GitHubRestAPICampaigns\/Components\/Schemas\/campaign_hyphen_summary\/init(number:created_at:updated_at:name:description:managers:team_managers:published_at:ends_at:closed_at:state:contact_link:alert_stats:)"
+      ],
+      "title" : "Initializers"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPICampaigns\/documentation\/GitHubRestAPICampaigns\/Components\/Schemas\/campaign_hyphen_summary\/alert_stats",
+        "doc:\/\/GitHubRestAPICampaigns\/documentation\/GitHubRestAPICampaigns\/Components\/Schemas\/campaign_hyphen_summary\/closed_at",
+        "doc:\/\/GitHubRestAPICampaigns\/documentation\/GitHubRestAPICampaigns\/Components\/Schemas\/campaign_hyphen_summary\/contact_link",
+        "doc:\/\/GitHubRestAPICampaigns\/documentation\/GitHubRestAPICampaigns\/Components\/Schemas\/campaign_hyphen_summary\/created_at",
+        "doc:\/\/GitHubRestAPICampaigns\/documentation\/GitHubRestAPICampaigns\/Components\/Schemas\/campaign_hyphen_summary\/description",
+        "doc:\/\/GitHubRestAPICampaigns\/documentation\/GitHubRestAPICampaigns\/Components\/Schemas\/campaign_hyphen_summary\/ends_at",
+        "doc:\/\/GitHubRestAPICampaigns\/documentation\/GitHubRestAPICampaigns\/Components\/Schemas\/campaign_hyphen_summary\/managers",
+        "doc:\/\/GitHubRestAPICampaigns\/documentation\/GitHubRestAPICampaigns\/Components\/Schemas\/campaign_hyphen_summary\/name",
+        "doc:\/\/GitHubRestAPICampaigns\/documentation\/GitHubRestAPICampaigns\/Components\/Schemas\/campaign_hyphen_summary\/number",
+        "doc:\/\/GitHubRestAPICampaigns\/documentation\/GitHubRestAPICampaigns\/Components\/Schemas\/campaign_hyphen_summary\/published_at",
+        "doc:\/\/GitHubRestAPICampaigns\/documentation\/GitHubRestAPICampaigns\/Components\/Schemas\/campaign_hyphen_summary\/state",
+        "doc:\/\/GitHubRestAPICampaigns\/documentation\/GitHubRestAPICampaigns\/Components\/Schemas\/campaign_hyphen_summary\/team_managers",
+        "doc:\/\/GitHubRestAPICampaigns\/documentation\/GitHubRestAPICampaigns\/Components\/Schemas\/campaign_hyphen_summary\/updated_at"
+      ],
+      "title" : "Instance Properties"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPICampaigns\/documentation\/GitHubRestAPICampaigns\/Components\/Schemas\/campaign_hyphen_summary\/CodingKeys"
+      ],
+      "title" : "Enumerations"
+    },
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPICampaigns\/documentation\/GitHubRestAPICampaigns\/Components\/Schemas\/campaign_hyphen_summary\/Equatable-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapicampaigns\/components\/schemas\/campaign_hyphen_summary"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPICampaigns/SE": {
+  "identifier" : "doc:\/\/GitHubRestAPICampaigns\/SE",
+  "title" : "Swift.Encodable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPICampaigns/SH": {
+  "identifier" : "doc:\/\/GitHubRestAPICampaigns\/SH",
+  "title" : "Swift.Hashable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPICampaigns/SQ": {
+  "identifier" : "doc:\/\/GitHubRestAPICampaigns\/SQ",
+  "title" : "Swift.Equatable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPICampaigns/Se": {
+  "identifier" : "doc:\/\/GitHubRestAPICampaigns\/Se",
+  "title" : "Swift.Decodable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPICampaigns/documentation/GitHubRestAPICampaigns": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICampaigns\/documentation\/GitHubRestAPICampaigns",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPICampaigns",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicampaigns"
+},
+"doc://GitHubRestAPICampaigns/documentation/GitHubRestAPICampaigns/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICampaigns\/documentation\/GitHubRestAPICampaigns\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicampaigns\/components"
+},
+"doc://GitHubRestAPICampaigns/documentation/GitHubRestAPICampaigns/Components/Schemas": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/schemas",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICampaigns\/documentation\/GitHubRestAPICampaigns\/Components\/Schemas",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicampaigns\/components\/schemas"
+},
+"doc://GitHubRestAPICampaigns/documentation/GitHubRestAPICampaigns/Components/Schemas/campaign_hyphen_summary": {
+  "abstract" : [
+    {
+      "text" : "The campaign metadata and alert stats.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "campaign_hyphen_summary"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICampaigns\/documentation\/GitHubRestAPICampaigns\/Components\/Schemas\/campaign_hyphen_summary",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "campaign_hyphen_summary"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.campaign_hyphen_summary",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicampaigns\/components\/schemas\/campaign_hyphen_summary"
+},
+"doc://GitHubRestAPICampaigns/documentation/GitHubRestAPICampaigns/Components/Schemas/campaign_hyphen_summary/CodingKeys": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICampaigns\/documentation\/GitHubRestAPICampaigns\/Components\/Schemas\/campaign_hyphen_summary\/CodingKeys",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.campaign_hyphen_summary.CodingKeys",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicampaigns\/components\/schemas\/campaign_hyphen_summary\/codingkeys"
+},
+"doc://GitHubRestAPICampaigns/documentation/GitHubRestAPICampaigns/Components/Schemas/campaign_hyphen_summary/Equatable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICampaigns\/documentation\/GitHubRestAPICampaigns\/Components\/Schemas\/campaign_hyphen_summary\/Equatable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Equatable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicampaigns\/components\/schemas\/campaign_hyphen_summary\/equatable-implementations"
+},
+"doc://GitHubRestAPICampaigns/documentation/GitHubRestAPICampaigns/Components/Schemas/campaign_hyphen_summary/alert_stats": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "alert_stats"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPICampaigns10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPICampaigns10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPICampaigns10ComponentsO7SchemasO23campaign_hyphen_summaryV",
+      "text" : "campaign_hyphen_summary"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPICampaigns10ComponentsO7SchemasO23campaign_hyphen_summaryV18alert_statsPayloadV",
+      "text" : "alert_statsPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICampaigns\/documentation\/GitHubRestAPICampaigns\/Components\/Schemas\/campaign_hyphen_summary\/alert_stats",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "alert_stats",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicampaigns\/components\/schemas\/campaign_hyphen_summary\/alert_stats"
+},
+"doc://GitHubRestAPICampaigns/documentation/GitHubRestAPICampaigns/Components/Schemas/campaign_hyphen_summary/alert_statsPayload": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "alert_statsPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICampaigns\/documentation\/GitHubRestAPICampaigns\/Components\/Schemas\/campaign_hyphen_summary\/alert_statsPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "alert_statsPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.campaign_hyphen_summary.alert_statsPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicampaigns\/components\/schemas\/campaign_hyphen_summary\/alert_statspayload"
+},
+"doc://GitHubRestAPICampaigns/documentation/GitHubRestAPICampaigns/Components/Schemas/campaign_hyphen_summary/closed_at": {
+  "abstract" : [
+    {
+      "text" : "The date and time the campaign was closed, in ISO 8601 format’:’ YYYY-MM-DDTHH:MM:SSZ. Will be null if the campaign is still open.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "closed_at"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:10Foundation4DateV",
+      "text" : "Date"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICampaigns\/documentation\/GitHubRestAPICampaigns\/Components\/Schemas\/campaign_hyphen_summary\/closed_at",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "closed_at",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicampaigns\/components\/schemas\/campaign_hyphen_summary\/closed_at"
+},
+"doc://GitHubRestAPICampaigns/documentation/GitHubRestAPICampaigns/Components/Schemas/campaign_hyphen_summary/contact_link": {
+  "abstract" : [
+    {
+      "text" : "The contact link of the campaign.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "contact_link"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICampaigns\/documentation\/GitHubRestAPICampaigns\/Components\/Schemas\/campaign_hyphen_summary\/contact_link",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "contact_link",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicampaigns\/components\/schemas\/campaign_hyphen_summary\/contact_link"
+},
+"doc://GitHubRestAPICampaigns/documentation/GitHubRestAPICampaigns/Components/Schemas/campaign_hyphen_summary/created_at": {
+  "abstract" : [
+    {
+      "text" : "The date and time the campaign was created, in ISO 8601 format’:’ YYYY-MM-DDTHH:MM:SSZ.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "created_at"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:10Foundation4DateV",
+      "text" : "Date"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICampaigns\/documentation\/GitHubRestAPICampaigns\/Components\/Schemas\/campaign_hyphen_summary\/created_at",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "created_at",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicampaigns\/components\/schemas\/campaign_hyphen_summary\/created_at"
+},
+"doc://GitHubRestAPICampaigns/documentation/GitHubRestAPICampaigns/Components/Schemas/campaign_hyphen_summary/description": {
+  "abstract" : [
+    {
+      "text" : "The campaign description",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "description"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICampaigns\/documentation\/GitHubRestAPICampaigns\/Components\/Schemas\/campaign_hyphen_summary\/description",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "description",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicampaigns\/components\/schemas\/campaign_hyphen_summary\/description"
+},
+"doc://GitHubRestAPICampaigns/documentation/GitHubRestAPICampaigns/Components/Schemas/campaign_hyphen_summary/ends_at": {
+  "abstract" : [
+    {
+      "text" : "The date and time the campaign has ended, in ISO 8601 format’:’ YYYY-MM-DDTHH:MM:SSZ.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ends_at"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:10Foundation4DateV",
+      "text" : "Date"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICampaigns\/documentation\/GitHubRestAPICampaigns\/Components\/Schemas\/campaign_hyphen_summary\/ends_at",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "ends_at",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicampaigns\/components\/schemas\/campaign_hyphen_summary\/ends_at"
+},
+"doc://GitHubRestAPICampaigns/documentation/GitHubRestAPICampaigns/Components/Schemas/campaign_hyphen_summary/init(from:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "from"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:s7DecoderP",
+      "text" : "Decoder"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICampaigns\/documentation\/GitHubRestAPICampaigns\/Components\/Schemas\/campaign_hyphen_summary\/init(from:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(from:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicampaigns\/components\/schemas\/campaign_hyphen_summary\/init(from:)"
+},
+"doc://GitHubRestAPICampaigns/documentation/GitHubRestAPICampaigns/Components/Schemas/campaign_hyphen_summary/init(number:created_at:updated_at:name:description:managers:team_managers:published_at:ends_at:closed_at:state:contact_link:alert_stats:)": {
+  "abstract" : [
+    {
+      "text" : "Creates a new ",
+      "type" : "text"
+    },
+    {
+      "code" : "campaign_hyphen_summary",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "number"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "created_at"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:10Foundation4DateV",
+      "text" : "Date"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "updated_at"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:10Foundation4DateV",
+      "text" : "Date"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "name"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "description"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "managers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": ["
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPICampaigns10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPICampaigns10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPICampaigns10ComponentsO7SchemasO18simple_hyphen_userV",
+      "text" : "simple_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "], "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "team_managers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": ["
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPICampaigns10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPICampaigns10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPICampaigns10ComponentsO7SchemasO4teamV",
+      "text" : "team"
+    },
+    {
+      "kind" : "text",
+      "text" : "]?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "published_at"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:10Foundation4DateV",
+      "text" : "Date"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "ends_at"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:10Foundation4DateV",
+      "text" : "Date"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "closed_at"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:10Foundation4DateV",
+      "text" : "Date"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "state"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPICampaigns10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPICampaigns10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPICampaigns10ComponentsO7SchemasO21campaign_hyphen_stateO",
+      "text" : "campaign_hyphen_state"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "contact_link"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "alert_stats"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPICampaigns10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPICampaigns10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPICampaigns10ComponentsO7SchemasO23campaign_hyphen_summaryV",
+      "text" : "campaign_hyphen_summary"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPICampaigns10ComponentsO7SchemasO23campaign_hyphen_summaryV18alert_statsPayloadV",
+      "text" : "alert_statsPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "?)"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICampaigns\/documentation\/GitHubRestAPICampaigns\/Components\/Schemas\/campaign_hyphen_summary\/init(number:created_at:updated_at:name:description:managers:team_managers:published_at:ends_at:closed_at:state:contact_link:alert_stats:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(number:created_at:updated_at:name:description:managers:team_managers:published_at:ends_at:closed_at:state:contact_link:alert_stats:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicampaigns\/components\/schemas\/campaign_hyphen_summary\/init(number:created_at:updated_at:name:description:managers:team_managers:published_at:ends_at:closed_at:state:contact_link:alert_stats:)"
+},
+"doc://GitHubRestAPICampaigns/documentation/GitHubRestAPICampaigns/Components/Schemas/campaign_hyphen_summary/managers": {
+  "abstract" : [
+    {
+      "text" : "The campaign managers",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "managers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": ["
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPICampaigns10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPICampaigns10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPICampaigns10ComponentsO7SchemasO18simple_hyphen_userV",
+      "text" : "simple_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "]"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICampaigns\/documentation\/GitHubRestAPICampaigns\/Components\/Schemas\/campaign_hyphen_summary\/managers",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "managers",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicampaigns\/components\/schemas\/campaign_hyphen_summary\/managers"
+},
+"doc://GitHubRestAPICampaigns/documentation/GitHubRestAPICampaigns/Components/Schemas/campaign_hyphen_summary/name": {
+  "abstract" : [
+    {
+      "text" : "The campaign name",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "name"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICampaigns\/documentation\/GitHubRestAPICampaigns\/Components\/Schemas\/campaign_hyphen_summary\/name",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "name",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicampaigns\/components\/schemas\/campaign_hyphen_summary\/name"
+},
+"doc://GitHubRestAPICampaigns/documentation/GitHubRestAPICampaigns/Components/Schemas/campaign_hyphen_summary/number": {
+  "abstract" : [
+    {
+      "text" : "The number of the newly created campaign",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "number"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICampaigns\/documentation\/GitHubRestAPICampaigns\/Components\/Schemas\/campaign_hyphen_summary\/number",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "number",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicampaigns\/components\/schemas\/campaign_hyphen_summary\/number"
+},
+"doc://GitHubRestAPICampaigns/documentation/GitHubRestAPICampaigns/Components/Schemas/campaign_hyphen_summary/published_at": {
+  "abstract" : [
+    {
+      "text" : "The date and time the campaign was published, in ISO 8601 format’:’ YYYY-MM-DDTHH:MM:SSZ.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "published_at"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:10Foundation4DateV",
+      "text" : "Date"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICampaigns\/documentation\/GitHubRestAPICampaigns\/Components\/Schemas\/campaign_hyphen_summary\/published_at",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "published_at",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicampaigns\/components\/schemas\/campaign_hyphen_summary\/published_at"
+},
+"doc://GitHubRestAPICampaigns/documentation/GitHubRestAPICampaigns/Components/Schemas/campaign_hyphen_summary/state": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "state"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPICampaigns10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPICampaigns10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPICampaigns10ComponentsO7SchemasO21campaign_hyphen_stateO",
+      "text" : "campaign_hyphen_state"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICampaigns\/documentation\/GitHubRestAPICampaigns\/Components\/Schemas\/campaign_hyphen_summary\/state",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "state",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicampaigns\/components\/schemas\/campaign_hyphen_summary\/state"
+},
+"doc://GitHubRestAPICampaigns/documentation/GitHubRestAPICampaigns/Components/Schemas/campaign_hyphen_summary/team_managers": {
+  "abstract" : [
+    {
+      "text" : "The campaign team managers",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "team_managers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": ["
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPICampaigns10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPICampaigns10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPICampaigns10ComponentsO7SchemasO4teamV",
+      "text" : "team"
+    },
+    {
+      "kind" : "text",
+      "text" : "]?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICampaigns\/documentation\/GitHubRestAPICampaigns\/Components\/Schemas\/campaign_hyphen_summary\/team_managers",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "team_managers",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicampaigns\/components\/schemas\/campaign_hyphen_summary\/team_managers"
+},
+"doc://GitHubRestAPICampaigns/documentation/GitHubRestAPICampaigns/Components/Schemas/campaign_hyphen_summary/updated_at": {
+  "abstract" : [
+    {
+      "text" : "The date and time the campaign was last updated, in ISO 8601 format’:’ YYYY-MM-DDTHH:MM:SSZ.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "updated_at"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:10Foundation4DateV",
+      "text" : "Date"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICampaigns\/documentation\/GitHubRestAPICampaigns\/Components\/Schemas\/campaign_hyphen_summary\/updated_at",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "updated_at",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicampaigns\/components\/schemas\/campaign_hyphen_summary\/updated_at"
+},
+"doc://GitHubRestAPICampaigns/s8SendableP": {
+  "identifier" : "doc:\/\/GitHubRestAPICampaigns\/s8SendableP",
+  "title" : "Swift.Sendable",
+  "type" : "unresolvable"
+}
+}
+}

@@ -1,0 +1,313 @@
+{
+  "abstract" : [
+    {
+      "text" : "The date and time at which the variable was last updated, in ISO 8601 format’:’ YYYY-MM-DDTHH:MM:SSZ.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Components",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Components\/Schemas",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Components\/Schemas\/actions_hyphen_variable"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Components\/Schemas\/actions_hyphen_variable\/updated_at"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:20GitHubRestAPIActions10ComponentsO7SchemasO23actions_hyphen_variableV10updated_at10Foundation4DateVvp",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "var"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "updated_at"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:10Foundation4DateV",
+        "text" : "Date"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIActions"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/actions\/Types.swift#L8655"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Instance Property",
+    "symbolKind" : "property",
+    "title" : "updated_at"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "var"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "updated_at"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:10Foundation4DateV",
+              "text" : "Date"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/components\/schemas\/actions-variable\/updated_at",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapiactions\/components\/schemas\/actions_hyphen_variable\/updated_at"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIActions",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/components"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Components/Schemas": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/schemas",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Components\/Schemas",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/components\/schemas"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Components/Schemas/actions_hyphen_variable": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "actions_hyphen_variable"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Components\/Schemas\/actions_hyphen_variable",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "actions_hyphen_variable"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.actions_hyphen_variable",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/components\/schemas\/actions_hyphen_variable"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Components/Schemas/actions_hyphen_variable/updated_at": {
+  "abstract" : [
+    {
+      "text" : "The date and time at which the variable was last updated, in ISO 8601 format’:’ YYYY-MM-DDTHH:MM:SSZ.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "updated_at"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:10Foundation4DateV",
+      "text" : "Date"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Components\/Schemas\/actions_hyphen_variable\/updated_at",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "updated_at",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/components\/schemas\/actions_hyphen_variable\/updated_at"
+}
+}
+}

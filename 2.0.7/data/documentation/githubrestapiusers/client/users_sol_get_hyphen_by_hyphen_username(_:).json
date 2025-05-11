@@ -1,0 +1,757 @@
+{
+  "abstract" : [
+    {
+      "text" : "Get a user",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers",
+        "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Client"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Client\/users_sol_get_hyphen_by_hyphen_username(_:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:18GitHubRestAPIUsers6ClientV024users_sol_get_hyphen_by_I9_usernameyAA10OperationsOADO6OutputOAG5InputVYaKF",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "func"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "users_sol_get_hyphen_by_hyphen_username"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:18GitHubRestAPIUsers10OperationsO",
+        "text" : "Operations"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:18GitHubRestAPIUsers10OperationsO024users_sol_get_hyphen_by_I9_usernameO",
+        "text" : "users_sol_get_hyphen_by_hyphen_username"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:18GitHubRestAPIUsers10OperationsO024users_sol_get_hyphen_by_I9_usernameO5InputV",
+        "text" : "Input"
+      },
+      {
+        "kind" : "text",
+        "text" : ") "
+      },
+      {
+        "kind" : "keyword",
+        "text" : "async"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "keyword",
+        "text" : "throws"
+      },
+      {
+        "kind" : "text",
+        "text" : " -> "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:18GitHubRestAPIUsers10OperationsO",
+        "text" : "Operations"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:18GitHubRestAPIUsers10OperationsO024users_sol_get_hyphen_by_I9_usernameO",
+        "text" : "users_sol_get_hyphen_by_hyphen_username"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:18GitHubRestAPIUsers10OperationsO024users_sol_get_hyphen_by_I9_usernameO6OutputO",
+        "text" : "Output"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIUsers"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Client.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/users\/Client.swift#L4579"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Instance Method",
+    "symbolKind" : "method",
+    "title" : "users_sol_get_hyphen_by_hyphen_username(_:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "func"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "users_sol_get_hyphen_by_hyphen_username"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "_"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "internalParam",
+              "text" : "input"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Operations",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:18GitHubRestAPIUsers10OperationsO",
+              "text" : "Operations"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Operations\/users_sol_get_hyphen_by_hyphen_username",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:18GitHubRestAPIUsers10OperationsO024users_sol_get_hyphen_by_I9_usernameO",
+              "text" : "users_sol_get_hyphen_by_hyphen_username"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Operations\/users_sol_get_hyphen_by_hyphen_username\/Input",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:18GitHubRestAPIUsers10OperationsO024users_sol_get_hyphen_by_I9_usernameO5InputV",
+              "text" : "Input"
+            },
+            {
+              "kind" : "text",
+              "text" : ") "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "async"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "throws"
+            },
+            {
+              "kind" : "text",
+              "text" : " -> "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Operations",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:18GitHubRestAPIUsers10OperationsO",
+              "text" : "Operations"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Operations\/users_sol_get_hyphen_by_hyphen_username",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:18GitHubRestAPIUsers10OperationsO024users_sol_get_hyphen_by_I9_usernameO",
+              "text" : "users_sol_get_hyphen_by_hyphen_username"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Operations\/users_sol_get_hyphen_by_hyphen_username\/Output",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:18GitHubRestAPIUsers10OperationsO024users_sol_get_hyphen_by_I9_usernameO6OutputO",
+              "text" : "Output"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Provides publicly available information about someone with a GitHub account.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "If you are requesting information about an ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "https:\/\/docs.github.com\/enterprise-cloud@latest\/admin\/managing-iam\/understanding-iam-for-enterprises\/about-enterprise-managed-users",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : ", or a GitHub App bot that is installed in an organization that uses Enterprise Managed Users, your requests must be authenticated as a user or GitHub App that has access to the organization to view that account’s information. If you are not authorized, the request will return a ",
+              "type" : "text"
+            },
+            {
+              "code" : "404 Not Found",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " status.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "The ",
+              "type" : "text"
+            },
+            {
+              "code" : "email",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " key in the following response is the publicly visible email address from your GitHub ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "https:\/\/github.com\/settings\/profile",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : ". When setting up your profile, you can select a primary email address to be public which provides an email entry for this endpoint. If you do not set a public email address for ",
+              "type" : "text"
+            },
+            {
+              "code" : "email",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ", then it will have a value of ",
+              "type" : "text"
+            },
+            {
+              "code" : "null",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ". You only see publicly visible email addresses when authenticated with GitHub. For more information, see ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "https:\/\/docs.github.com\/rest\/guides\/getting-started-with-the-rest-api#authentication",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : ".",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "The Emails API enables you to list all of your email addresses, and toggle a primary email to be visible publicly. For more information, see ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "https:\/\/docs.github.com\/rest\/users\/emails",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : ".",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "HTTP ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "GET \/users\/{username}",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/paths\/\/users\/{username}\/get(users\/get-by-username)",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapiusers\/client\/users_sol_get_hyphen_by_hyphen_username(_:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIUsers/documentation/GitHubRestAPIUsers": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIUsers",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiusers"
+},
+"doc://GitHubRestAPIUsers/documentation/GitHubRestAPIUsers/Client": {
+  "abstract" : [
+    {
+      "text" : "GitHub’s v3 REST API.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Client"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Client",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Client"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Client",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiusers\/client"
+},
+"doc://GitHubRestAPIUsers/documentation/GitHubRestAPIUsers/Client/users_sol_get_hyphen_by_hyphen_username(_:)": {
+  "abstract" : [
+    {
+      "text" : "Get a user",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "users_sol_get_hyphen_by_hyphen_username"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIUsers10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIUsers10OperationsO024users_sol_get_hyphen_by_I9_usernameO",
+      "text" : "users_sol_get_hyphen_by_hyphen_username"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIUsers10OperationsO024users_sol_get_hyphen_by_I9_usernameO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIUsers10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIUsers10OperationsO024users_sol_get_hyphen_by_I9_usernameO",
+      "text" : "users_sol_get_hyphen_by_hyphen_username"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIUsers10OperationsO024users_sol_get_hyphen_by_I9_usernameO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Client\/users_sol_get_hyphen_by_hyphen_username(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "users_sol_get_hyphen_by_hyphen_username(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiusers\/client\/users_sol_get_hyphen_by_hyphen_username(_:)"
+},
+"doc://GitHubRestAPIUsers/documentation/GitHubRestAPIUsers/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiusers\/operations"
+},
+"doc://GitHubRestAPIUsers/documentation/GitHubRestAPIUsers/Operations/users_sol_get_hyphen_by_hyphen_username": {
+  "abstract" : [
+    {
+      "text" : "Get a user",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "users_sol_get_hyphen_by_hyphen_username"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Operations\/users_sol_get_hyphen_by_hyphen_username",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "users_sol_get_hyphen_by_hyphen_username"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.users_sol_get_hyphen_by_hyphen_username",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiusers\/operations\/users_sol_get_hyphen_by_hyphen_username"
+},
+"doc://GitHubRestAPIUsers/documentation/GitHubRestAPIUsers/Operations/users_sol_get_hyphen_by_hyphen_username/Input": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Operations\/users_sol_get_hyphen_by_hyphen_username\/Input",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.users_sol_get_hyphen_by_hyphen_username.Input",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiusers\/operations\/users_sol_get_hyphen_by_hyphen_username\/input"
+},
+"doc://GitHubRestAPIUsers/documentation/GitHubRestAPIUsers/Operations/users_sol_get_hyphen_by_hyphen_username/Output": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Operations\/users_sol_get_hyphen_by_hyphen_username\/Output",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.users_sol_get_hyphen_by_hyphen_username.Output",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiusers\/operations\/users_sol_get_hyphen_by_hyphen_username\/output"
+},
+"https://docs.github.com/enterprise-cloud@latest/admin/managing-iam/understanding-iam-for-enterprises/about-enterprise-managed-users": {
+  "identifier" : "https:\/\/docs.github.com\/enterprise-cloud@latest\/admin\/managing-iam\/understanding-iam-for-enterprises\/about-enterprise-managed-users",
+  "title" : "Enterprise Managed User",
+  "titleInlineContent" : [
+    {
+      "text" : "Enterprise Managed User",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/docs.github.com\/enterprise-cloud@latest\/admin\/managing-iam\/understanding-iam-for-enterprises\/about-enterprise-managed-users"
+},
+"https://docs.github.com/rest/guides/getting-started-with-the-rest-api#authentication": {
+  "identifier" : "https:\/\/docs.github.com\/rest\/guides\/getting-started-with-the-rest-api#authentication",
+  "title" : "Authentication",
+  "titleInlineContent" : [
+    {
+      "text" : "Authentication",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/docs.github.com\/rest\/guides\/getting-started-with-the-rest-api#authentication"
+},
+"https://docs.github.com/rest/users/emails": {
+  "identifier" : "https:\/\/docs.github.com\/rest\/users\/emails",
+  "title" : "Emails API",
+  "titleInlineContent" : [
+    {
+      "text" : "Emails API",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/docs.github.com\/rest\/users\/emails"
+},
+"https://github.com/settings/profile": {
+  "identifier" : "https:\/\/github.com\/settings\/profile",
+  "title" : "profile page",
+  "titleInlineContent" : [
+    {
+      "text" : "profile page",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/github.com\/settings\/profile"
+}
+}
+}

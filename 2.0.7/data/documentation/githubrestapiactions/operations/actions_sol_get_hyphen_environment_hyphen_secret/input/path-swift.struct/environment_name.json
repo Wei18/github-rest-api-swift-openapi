@@ -1,0 +1,536 @@
+{
+  "abstract" : [
+    {
+      "text" : "The name of the environment. The name must be URL encoded. For example, any slashes in the name must be replaced with ",
+      "type" : "text"
+    },
+    {
+      "code" : "%2F",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/actions_sol_get_hyphen_environment_hyphen_secret",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/actions_sol_get_hyphen_environment_hyphen_secret\/Input",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/actions_sol_get_hyphen_environment_hyphen_secret\/Input\/Path-swift.struct"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/actions_sol_get_hyphen_environment_hyphen_secret\/Input\/Path-swift.struct\/environment_name"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:20GitHubRestAPIActions10OperationsO035actions_sol_get_hyphen_environment_I7_secretO5InputV4PathV0J5_nameSSvp",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "var"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "environment_name"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:20GitHubRestAPIActions10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:20GitHubRestAPIActions10ComponentsO10ParametersO",
+        "text" : "Parameters"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:20GitHubRestAPIActions10ComponentsO10ParametersO23environment_hyphen_namea",
+        "text" : "environment_hyphen_name"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIActions"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/actions\/Types.swift#L33435"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Instance Property",
+    "symbolKind" : "property",
+    "title" : "environment_name"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "var"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "environment_name"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:20GitHubRestAPIActions10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Components\/Parameters",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:20GitHubRestAPIActions10ComponentsO10ParametersO",
+              "text" : "Parameters"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Components\/Parameters\/environment_hyphen_name",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:20GitHubRestAPIActions10ComponentsO10ParametersO23environment_hyphen_namea",
+              "text" : "environment_hyphen_name"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/paths\/repos\/{owner}\/{repo}\/environments\/{environment_name}\/secrets\/{secret_name}\/GET\/path\/environment_name",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapiactions\/operations\/actions_sol_get_hyphen_environment_hyphen_secret\/input\/path-swift.struct\/environment_name"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIActions",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/components"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Components/Parameters": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/parameters",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Parameters"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Components\/Parameters",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Parameters"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/components\/parameters"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Components/Parameters/environment_hyphen_name": {
+  "abstract" : [
+    {
+      "text" : "The name of the environment. The name must be URL encoded. For example, any slashes in the name must be replaced with ",
+      "type" : "text"
+    },
+    {
+      "code" : "%2F",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "environment_hyphen_name"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Components\/Parameters\/environment_hyphen_name",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "environment_hyphen_name"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.environment_hyphen_name",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/components\/parameters\/environment_hyphen_name"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/actions_sol_get_hyphen_environment_hyphen_secret": {
+  "abstract" : [
+    {
+      "text" : "Get an environment secret",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "actions_sol_get_hyphen_environment_hyphen_secret"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/actions_sol_get_hyphen_environment_hyphen_secret",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "actions_sol_get_hyphen_environment_hyphen_secret"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.actions_sol_get_hyphen_environment_hyphen_secret",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actions_sol_get_hyphen_environment_hyphen_secret"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/actions_sol_get_hyphen_environment_hyphen_secret/Input": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/actions_sol_get_hyphen_environment_hyphen_secret\/Input",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.actions_sol_get_hyphen_environment_hyphen_secret.Input",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actions_sol_get_hyphen_environment_hyphen_secret\/input"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/actions_sol_get_hyphen_environment_hyphen_secret/Input/Path-swift.struct": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Path"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/actions_sol_get_hyphen_environment_hyphen_secret\/Input\/Path-swift.struct",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Path"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.actions_sol_get_hyphen_environment_hyphen_secret.Input.Path",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actions_sol_get_hyphen_environment_hyphen_secret\/input\/path-swift.struct"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/actions_sol_get_hyphen_environment_hyphen_secret/Input/Path-swift.struct/environment_name": {
+  "abstract" : [
+    {
+      "text" : "The name of the environment. The name must be URL encoded. For example, any slashes in the name must be replaced with ",
+      "type" : "text"
+    },
+    {
+      "code" : "%2F",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "environment_name"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIActions10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIActions10ComponentsO10ParametersO",
+      "text" : "Parameters"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIActions10ComponentsO10ParametersO23environment_hyphen_namea",
+      "text" : "environment_hyphen_name"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/actions_sol_get_hyphen_environment_hyphen_secret\/Input\/Path-swift.struct\/environment_name",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "environment_name",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actions_sol_get_hyphen_environment_hyphen_secret\/input\/path-swift.struct\/environment_name"
+}
+}
+}

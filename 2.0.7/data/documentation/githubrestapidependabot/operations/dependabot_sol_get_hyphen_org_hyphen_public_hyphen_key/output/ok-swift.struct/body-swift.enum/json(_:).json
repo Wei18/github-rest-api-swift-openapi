@@ -1,0 +1,547 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot",
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations",
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations\/dependabot_sol_get_hyphen_org_hyphen_public_hyphen_key",
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations\/dependabot_sol_get_hyphen_org_hyphen_public_hyphen_key\/Output",
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations\/dependabot_sol_get_hyphen_org_hyphen_public_hyphen_key\/Output\/Ok-swift.struct",
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations\/dependabot_sol_get_hyphen_org_hyphen_public_hyphen_key\/Output\/Ok-swift.struct\/Body-swift.enum"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations\/dependabot_sol_get_hyphen_org_hyphen_public_hyphen_key\/Output\/Ok-swift.struct\/Body-swift.enum\/json(_:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:23GitHubRestAPIDependabot10OperationsO030dependabot_sol_get_hyphen_org_i8_public_I4_keyO6OutputO2OkV4BodyO4jsonyAkA10ComponentsO7SchemasO0f1_i1_k1_i1_L0VcAKmF",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "case"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "json"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:23GitHubRestAPIDependabot10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:23GitHubRestAPIDependabot10ComponentsO7SchemasO",
+        "text" : "Schemas"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:23GitHubRestAPIDependabot10ComponentsO7SchemasO025dependabot_hyphen_public_H4_keyV",
+        "text" : "dependabot_hyphen_public_hyphen_key"
+      },
+      {
+        "kind" : "text",
+        "text" : ")"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIDependabot"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/dependabot\/Types.swift#L5067"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Case",
+    "symbolKind" : "case",
+    "title" : "Operations.dependabot_sol_get_hyphen_org_hyphen_public_hyphen_key.Output.Ok.Body.json(_:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "case"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "json"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:23GitHubRestAPIDependabot10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Components\/Schemas",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:23GitHubRestAPIDependabot10ComponentsO7SchemasO",
+              "text" : "Schemas"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Components\/Schemas\/dependabot_hyphen_public_hyphen_key",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:23GitHubRestAPIDependabot10ComponentsO7SchemasO025dependabot_hyphen_public_H4_keyV",
+              "text" : "dependabot_hyphen_public_hyphen_key"
+            },
+            {
+              "kind" : "text",
+              "text" : ")"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/paths\/orgs\/{org}\/dependabot\/secrets\/public-key\/GET\/responses\/200\/content\/application\\\/json",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapidependabot\/operations\/dependabot_sol_get_hyphen_org_hyphen_public_hyphen_key\/output\/ok-swift.struct\/body-swift.enum\/json(_:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIDependabot",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/components"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Components/Schemas": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/schemas",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Components\/Schemas",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/components\/schemas"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Components/Schemas/dependabot_hyphen_public_hyphen_key": {
+  "abstract" : [
+    {
+      "text" : "The public key used for setting Dependabot Secrets.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "dependabot_hyphen_public_hyphen_key"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Components\/Schemas\/dependabot_hyphen_public_hyphen_key",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "dependabot_hyphen_public_hyphen_key"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.dependabot_hyphen_public_hyphen_key",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/components\/schemas\/dependabot_hyphen_public_hyphen_key"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/operations"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Operations/dependabot_sol_get_hyphen_org_hyphen_public_hyphen_key": {
+  "abstract" : [
+    {
+      "text" : "Get an organization public key",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "dependabot_sol_get_hyphen_org_hyphen_public_hyphen_key"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations\/dependabot_sol_get_hyphen_org_hyphen_public_hyphen_key",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "dependabot_sol_get_hyphen_org_hyphen_public_hyphen_key"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.dependabot_sol_get_hyphen_org_hyphen_public_hyphen_key",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/operations\/dependabot_sol_get_hyphen_org_hyphen_public_hyphen_key"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Operations/dependabot_sol_get_hyphen_org_hyphen_public_hyphen_key/Output": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations\/dependabot_sol_get_hyphen_org_hyphen_public_hyphen_key\/Output",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.dependabot_sol_get_hyphen_org_hyphen_public_hyphen_key.Output",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/operations\/dependabot_sol_get_hyphen_org_hyphen_public_hyphen_key\/output"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Operations/dependabot_sol_get_hyphen_org_hyphen_public_hyphen_key/Output/Ok-swift.struct": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Ok"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations\/dependabot_sol_get_hyphen_org_hyphen_public_hyphen_key\/Output\/Ok-swift.struct",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Ok"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.dependabot_sol_get_hyphen_org_hyphen_public_hyphen_key.Output.Ok",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/operations\/dependabot_sol_get_hyphen_org_hyphen_public_hyphen_key\/output\/ok-swift.struct"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Operations/dependabot_sol_get_hyphen_org_hyphen_public_hyphen_key/Output/Ok-swift.struct/Body-swift.enum": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Body"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations\/dependabot_sol_get_hyphen_org_hyphen_public_hyphen_key\/Output\/Ok-swift.struct\/Body-swift.enum",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Body"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.dependabot_sol_get_hyphen_org_hyphen_public_hyphen_key.Output.Ok.Body",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/operations\/dependabot_sol_get_hyphen_org_hyphen_public_hyphen_key\/output\/ok-swift.struct\/body-swift.enum"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Operations/dependabot_sol_get_hyphen_org_hyphen_public_hyphen_key/Output/Ok-swift.struct/Body-swift.enum/json(_:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "json"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10ComponentsO7SchemasO025dependabot_hyphen_public_H4_keyV",
+      "text" : "dependabot_hyphen_public_hyphen_key"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations\/dependabot_sol_get_hyphen_org_hyphen_public_hyphen_key\/Output\/Ok-swift.struct\/Body-swift.enum\/json(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Operations.dependabot_sol_get_hyphen_org_hyphen_public_hyphen_key.Output.Ok.Body.json(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/operations\/dependabot_sol_get_hyphen_org_hyphen_public_hyphen_key\/output\/ok-swift.struct\/body-swift.enum\/json(_:)"
+}
+}
+}

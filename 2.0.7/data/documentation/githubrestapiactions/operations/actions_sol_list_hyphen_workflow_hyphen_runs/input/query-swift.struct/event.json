@@ -1,0 +1,635 @@
+{
+  "abstract" : [
+    {
+      "text" : "Returns workflow run triggered by the event you specify. For example, ",
+      "type" : "text"
+    },
+    {
+      "code" : "push",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ", ",
+      "type" : "text"
+    },
+    {
+      "code" : "pull_request",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " or ",
+      "type" : "text"
+    },
+    {
+      "code" : "issue",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ". For more information, see “",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/docs.github.com\/actions\/automating-your-workflow-with-github-actions\/events-that-trigger-workflows",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ".”",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/actions_sol_list_hyphen_workflow_hyphen_runs",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/actions_sol_list_hyphen_workflow_hyphen_runs\/Input",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/actions_sol_list_hyphen_workflow_hyphen_runs\/Input\/Query-swift.struct"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/actions_sol_list_hyphen_workflow_hyphen_runs\/Input\/Query-swift.struct\/event"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:20GitHubRestAPIActions10OperationsO033actions_sol_list_hyphen_workflow_I5_runsO5InputV5QueryV5eventSSSgvp",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "var"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "event"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:20GitHubRestAPIActions10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:20GitHubRestAPIActions10ComponentsO10ParametersO",
+        "text" : "Parameters"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:20GitHubRestAPIActions10ComponentsO10ParametersO5eventa",
+        "text" : "event"
+      },
+      {
+        "kind" : "text",
+        "text" : "?"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIActions"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/actions\/Types.swift#L32605"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Instance Property",
+    "symbolKind" : "property",
+    "title" : "event"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "var"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "event"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:20GitHubRestAPIActions10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Components\/Parameters",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:20GitHubRestAPIActions10ComponentsO10ParametersO",
+              "text" : "Parameters"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Components\/Parameters\/event",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:20GitHubRestAPIActions10ComponentsO10ParametersO5eventa",
+              "text" : "event"
+            },
+            {
+              "kind" : "text",
+              "text" : "?"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/paths\/repos\/{owner}\/{repo}\/actions\/workflows\/{workflow_id}\/runs\/GET\/query\/event",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapiactions\/operations\/actions_sol_list_hyphen_workflow_hyphen_runs\/input\/query-swift.struct\/event"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIActions",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/components"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Components/Parameters": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/parameters",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Parameters"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Components\/Parameters",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Parameters"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/components\/parameters"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Components/Parameters/event": {
+  "abstract" : [
+    {
+      "text" : "Returns workflow run triggered by the event you specify. For example, ",
+      "type" : "text"
+    },
+    {
+      "code" : "push",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ", ",
+      "type" : "text"
+    },
+    {
+      "code" : "pull_request",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " or ",
+      "type" : "text"
+    },
+    {
+      "code" : "issue",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ". For more information, see “",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/docs.github.com\/actions\/automating-your-workflow-with-github-actions\/events-that-trigger-workflows",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ".”",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "event"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Components\/Parameters\/event",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "event"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.event",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/components\/parameters\/event"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/actions_sol_list_hyphen_workflow_hyphen_runs": {
+  "abstract" : [
+    {
+      "text" : "List workflow runs for a workflow",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "actions_sol_list_hyphen_workflow_hyphen_runs"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/actions_sol_list_hyphen_workflow_hyphen_runs",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "actions_sol_list_hyphen_workflow_hyphen_runs"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.actions_sol_list_hyphen_workflow_hyphen_runs",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actions_sol_list_hyphen_workflow_hyphen_runs"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/actions_sol_list_hyphen_workflow_hyphen_runs/Input": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/actions_sol_list_hyphen_workflow_hyphen_runs\/Input",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.actions_sol_list_hyphen_workflow_hyphen_runs.Input",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actions_sol_list_hyphen_workflow_hyphen_runs\/input"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/actions_sol_list_hyphen_workflow_hyphen_runs/Input/Query-swift.struct": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Query"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/actions_sol_list_hyphen_workflow_hyphen_runs\/Input\/Query-swift.struct",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Query"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.actions_sol_list_hyphen_workflow_hyphen_runs.Input.Query",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actions_sol_list_hyphen_workflow_hyphen_runs\/input\/query-swift.struct"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/actions_sol_list_hyphen_workflow_hyphen_runs/Input/Query-swift.struct/event": {
+  "abstract" : [
+    {
+      "text" : "Returns workflow run triggered by the event you specify. For example, ",
+      "type" : "text"
+    },
+    {
+      "code" : "push",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ", ",
+      "type" : "text"
+    },
+    {
+      "code" : "pull_request",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " or ",
+      "type" : "text"
+    },
+    {
+      "code" : "issue",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ". For more information, see “",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/docs.github.com\/actions\/automating-your-workflow-with-github-actions\/events-that-trigger-workflows",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ".”",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "event"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIActions10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIActions10ComponentsO10ParametersO",
+      "text" : "Parameters"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIActions10ComponentsO10ParametersO5eventa",
+      "text" : "event"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/actions_sol_list_hyphen_workflow_hyphen_runs\/Input\/Query-swift.struct\/event",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "event",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actions_sol_list_hyphen_workflow_hyphen_runs\/input\/query-swift.struct\/event"
+},
+"https://docs.github.com/actions/automating-your-workflow-with-github-actions/events-that-trigger-workflows": {
+  "identifier" : "https:\/\/docs.github.com\/actions\/automating-your-workflow-with-github-actions\/events-that-trigger-workflows",
+  "title" : "Events that trigger workflows",
+  "titleInlineContent" : [
+    {
+      "text" : "Events that trigger workflows",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/docs.github.com\/actions\/automating-your-workflow-with-github-actions\/events-that-trigger-workflows"
+}
+}
+}

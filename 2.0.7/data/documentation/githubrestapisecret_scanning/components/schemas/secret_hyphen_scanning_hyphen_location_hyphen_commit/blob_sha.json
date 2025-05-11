@@ -1,0 +1,316 @@
+{
+  "abstract" : [
+    {
+      "text" : "SHA-1 hash ID of the associated blob",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning",
+        "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Components",
+        "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Components\/Schemas",
+        "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Components\/Schemas\/secret_hyphen_scanning_hyphen_location_hyphen_commit"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Components\/Schemas\/secret_hyphen_scanning_hyphen_location_hyphen_commit\/blob_sha"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:28GitHubRestAPISecret_Scanning10ComponentsO7SchemasO023secret_hyphen_scanning_i10_location_I7_commitV8blob_shaSSvp",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "var"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "blob_sha"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SS",
+        "text" : "String"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPISecret_Scanning"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/secret-scanning\/Types.swift#L1478"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Instance Property",
+    "symbolKind" : "property",
+    "title" : "blob_sha"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "var"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "blob_sha"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:SS",
+              "text" : "String"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/components\/schemas\/secret-scanning-location-commit\/blob_sha",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapisecret_scanning\/components\/schemas\/secret_hyphen_scanning_hyphen_location_hyphen_commit\/blob_sha"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPISecret_Scanning/documentation/GitHubRestAPISecret_Scanning": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPISecret_Scanning",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecret_scanning"
+},
+"doc://GitHubRestAPISecret_Scanning/documentation/GitHubRestAPISecret_Scanning/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecret_scanning\/components"
+},
+"doc://GitHubRestAPISecret_Scanning/documentation/GitHubRestAPISecret_Scanning/Components/Schemas": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/schemas",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Components\/Schemas",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecret_scanning\/components\/schemas"
+},
+"doc://GitHubRestAPISecret_Scanning/documentation/GitHubRestAPISecret_Scanning/Components/Schemas/secret_hyphen_scanning_hyphen_location_hyphen_commit": {
+  "abstract" : [
+    {
+      "text" : "Represents a ‘commit’ secret scanning location type. This location type shows that a secret was detected inside a commit to a repository.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "secret_hyphen_scanning_hyphen_location_hyphen_commit"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Components\/Schemas\/secret_hyphen_scanning_hyphen_location_hyphen_commit",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "secret_hyphen_scanning_hyphen_location_hyphen_commit"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.secret_hyphen_scanning_hyphen_location_hyphen_commit",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecret_scanning\/components\/schemas\/secret_hyphen_scanning_hyphen_location_hyphen_commit"
+},
+"doc://GitHubRestAPISecret_Scanning/documentation/GitHubRestAPISecret_Scanning/Components/Schemas/secret_hyphen_scanning_hyphen_location_hyphen_commit/blob_sha": {
+  "abstract" : [
+    {
+      "text" : "SHA-1 hash ID of the associated blob",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "blob_sha"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Components\/Schemas\/secret_hyphen_scanning_hyphen_location_hyphen_commit\/blob_sha",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "blob_sha",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecret_scanning\/components\/schemas\/secret_hyphen_scanning_hyphen_location_hyphen_commit\/blob_sha"
+}
+}
+}

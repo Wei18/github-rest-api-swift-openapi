@@ -1,0 +1,2595 @@
+{
+  "abstract" : [
+    {
+      "text" : "Creates a new ",
+      "type" : "text"
+    },
+    {
+      "code" : "Query",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning",
+        "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Operations",
+        "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Operations\/code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo",
+        "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Operations\/code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo\/Input",
+        "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Operations\/code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo\/Input\/Query-swift.struct"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Operations\/code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo\/Input\/Query-swift.struct\/init(tool_name:tool_guid:page:per_page:ref:pr:direction:before:after:sort:state:severity:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:26GitHubRestAPICode_Scanning10OperationsO030code_hyphen_scanning_sol_list_h8_alerts_h5_for_H5_repoO5InputV5QueryV9tool_name0Q5_guid4page04per_T03ref2pr9direction6before5after4sort5state8severityAISSSg_AVSiSgAwvwA10ComponentsO10ParametersOAPOSgA2vI11sortPayloadOSgAY7SchemasO0g1_h1_i1_h7_alert_h7_state_H6_queryOSgA6_0g1_h1_i1_h7_alert_H9_severityOSgtcfc",
+    "fragments" : [
+      {
+        "kind" : "identifier",
+        "text" : "init"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "tool_name"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO10ParametersO",
+        "text" : "Parameters"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO10ParametersO16tool_hyphen_namea",
+        "text" : "tool_hyphen_name"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "tool_guid"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO10ParametersO",
+        "text" : "Parameters"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO10ParametersO16tool_hyphen_guida",
+        "text" : "tool_hyphen_guid"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "page"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO10ParametersO",
+        "text" : "Parameters"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO10ParametersO4pagea",
+        "text" : "page"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "per_page"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO10ParametersO",
+        "text" : "Parameters"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO10ParametersO15per_hyphen_pagea",
+        "text" : "per_hyphen_page"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "ref"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO10ParametersO",
+        "text" : "Parameters"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO10ParametersO14git_hyphen_refa",
+        "text" : "git_hyphen_ref"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "pr"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO10ParametersO",
+        "text" : "Parameters"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO10ParametersO15pr_hyphen_aliasa",
+        "text" : "pr_hyphen_alias"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "direction"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO10ParametersO",
+        "text" : "Parameters"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO10ParametersO9directionO",
+        "text" : "direction"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "before"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO10ParametersO",
+        "text" : "Parameters"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO10ParametersO24pagination_hyphen_beforea",
+        "text" : "pagination_hyphen_before"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "after"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO10ParametersO",
+        "text" : "Parameters"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO10ParametersO23pagination_hyphen_aftera",
+        "text" : "pagination_hyphen_after"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "sort"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10OperationsO",
+        "text" : "Operations"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10OperationsO030code_hyphen_scanning_sol_list_h8_alerts_h5_for_H5_repoO",
+        "text" : "code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10OperationsO030code_hyphen_scanning_sol_list_h8_alerts_h5_for_H5_repoO5InputV",
+        "text" : "Input"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10OperationsO030code_hyphen_scanning_sol_list_h8_alerts_h5_for_H5_repoO5InputV5QueryV",
+        "text" : "Query"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10OperationsO030code_hyphen_scanning_sol_list_h8_alerts_h5_for_H5_repoO5InputV5QueryV11sortPayloadO",
+        "text" : "sortPayload"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "state"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO7SchemasO",
+        "text" : "Schemas"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO7SchemasO021code_hyphen_scanning_i7_alert_i7_state_I6_queryO",
+        "text" : "code_hyphen_scanning_hyphen_alert_hyphen_state_hyphen_query"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "severity"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO7SchemasO",
+        "text" : "Schemas"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO7SchemasO021code_hyphen_scanning_i7_alert_I9_severityO",
+        "text" : "code_hyphen_scanning_hyphen_alert_hyphen_severity"
+      },
+      {
+        "kind" : "text",
+        "text" : "?)"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPICode_Scanning"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/code-scanning\/Types.swift#L4365"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Initializer",
+    "symbolKind" : "init",
+    "title" : "init(tool_name:tool_guid:page:per_page:ref:pr:direction:before:after:sort:state:severity:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "init"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "tool_name"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Components\/Parameters",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO10ParametersO",
+              "text" : "Parameters"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Components\/Parameters\/tool_hyphen_name",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO10ParametersO16tool_hyphen_namea",
+              "text" : "tool_hyphen_name"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "tool_guid"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Components\/Parameters",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO10ParametersO",
+              "text" : "Parameters"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Components\/Parameters\/tool_hyphen_guid",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO10ParametersO16tool_hyphen_guida",
+              "text" : "tool_hyphen_guid"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "page"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Components\/Parameters",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO10ParametersO",
+              "text" : "Parameters"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Components\/Parameters\/page",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO10ParametersO4pagea",
+              "text" : "page"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "per_page"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Components\/Parameters",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO10ParametersO",
+              "text" : "Parameters"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Components\/Parameters\/per_hyphen_page",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO10ParametersO15per_hyphen_pagea",
+              "text" : "per_hyphen_page"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "ref"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Components\/Parameters",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO10ParametersO",
+              "text" : "Parameters"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Components\/Parameters\/git_hyphen_ref",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO10ParametersO14git_hyphen_refa",
+              "text" : "git_hyphen_ref"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "pr"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Components\/Parameters",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO10ParametersO",
+              "text" : "Parameters"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Components\/Parameters\/pr_hyphen_alias",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO10ParametersO15pr_hyphen_aliasa",
+              "text" : "pr_hyphen_alias"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "direction"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Components\/Parameters",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO10ParametersO",
+              "text" : "Parameters"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Components\/Parameters\/direction",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO10ParametersO9directionO",
+              "text" : "direction"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "before"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Components\/Parameters",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO10ParametersO",
+              "text" : "Parameters"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Components\/Parameters\/pagination_hyphen_before",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO10ParametersO24pagination_hyphen_beforea",
+              "text" : "pagination_hyphen_before"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "after"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Components\/Parameters",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO10ParametersO",
+              "text" : "Parameters"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Components\/Parameters\/pagination_hyphen_after",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO10ParametersO23pagination_hyphen_aftera",
+              "text" : "pagination_hyphen_after"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "sort"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Operations",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10OperationsO",
+              "text" : "Operations"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Operations\/code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10OperationsO030code_hyphen_scanning_sol_list_h8_alerts_h5_for_H5_repoO",
+              "text" : "code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Operations\/code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo\/Input",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10OperationsO030code_hyphen_scanning_sol_list_h8_alerts_h5_for_H5_repoO5InputV",
+              "text" : "Input"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Operations\/code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo\/Input\/Query-swift.struct",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10OperationsO030code_hyphen_scanning_sol_list_h8_alerts_h5_for_H5_repoO5InputV5QueryV",
+              "text" : "Query"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Operations\/code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo\/Input\/Query-swift.struct\/sortPayload",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10OperationsO030code_hyphen_scanning_sol_list_h8_alerts_h5_for_H5_repoO5InputV5QueryV11sortPayloadO",
+              "text" : "sortPayload"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "state"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Components\/Schemas",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO7SchemasO",
+              "text" : "Schemas"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Components\/Schemas\/code_hyphen_scanning_hyphen_alert_hyphen_state_hyphen_query",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO7SchemasO021code_hyphen_scanning_i7_alert_i7_state_I6_queryO",
+              "text" : "code_hyphen_scanning_hyphen_alert_hyphen_state_hyphen_query"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "severity"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Components\/Schemas",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO7SchemasO",
+              "text" : "Schemas"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Components\/Schemas\/code_hyphen_scanning_hyphen_alert_hyphen_severity",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO7SchemasO021code_hyphen_scanning_i7_alert_I9_severityO",
+              "text" : "code_hyphen_scanning_hyphen_alert_hyphen_severity"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil)"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "kind" : "parameters",
+      "parameters" : [
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The name of a code scanning tool. Only results by this tool will be listed. You can specify the tool by using either ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "tool_name",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : " or ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "tool_guid",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ", but not both.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "tool_name"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The GUID of a code scanning tool. Only results by this tool will be listed. Note that some code scanning tools may not include a GUID in their analysis data. You can specify the tool by using either ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "tool_guid",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : " or ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "tool_name",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ", but not both.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "tool_guid"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The page number of the results to fetch. For more information, see “",
+                  "type" : "text"
+                },
+                {
+                  "identifier" : "https:\/\/docs.github.com\/rest\/using-the-rest-api\/using-pagination-in-the-rest-api",
+                  "isActive" : true,
+                  "type" : "reference"
+                },
+                {
+                  "text" : ".”",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "page"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The number of results per page (max 100). For more information, see “",
+                  "type" : "text"
+                },
+                {
+                  "identifier" : "https:\/\/docs.github.com\/rest\/using-the-rest-api\/using-pagination-in-the-rest-api",
+                  "isActive" : true,
+                  "type" : "reference"
+                },
+                {
+                  "text" : ".”",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "per_page"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The Git reference for the results you want to list. The ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "ref",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : " for a branch can be formatted either as ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "refs\/heads\/<branch name>",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : " or simply ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "<branch name>",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ". To reference a pull request use ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "refs\/pull\/<number>\/merge",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "ref"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The number of the pull request for the results you want to list.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "pr"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The direction to sort the results by.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "direction"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "A cursor, as given in the ",
+                  "type" : "text"
+                },
+                {
+                  "identifier" : "https:\/\/docs.github.com\/rest\/guides\/using-pagination-in-the-rest-api#using-link-headers",
+                  "isActive" : true,
+                  "type" : "reference"
+                },
+                {
+                  "text" : ". If specified, the query only searches for results before this cursor. For more information, see “",
+                  "type" : "text"
+                },
+                {
+                  "identifier" : "https:\/\/docs.github.com\/rest\/using-the-rest-api\/using-pagination-in-the-rest-api",
+                  "isActive" : true,
+                  "type" : "reference"
+                },
+                {
+                  "text" : ".”",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "before"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "A cursor, as given in the ",
+                  "type" : "text"
+                },
+                {
+                  "identifier" : "https:\/\/docs.github.com\/rest\/guides\/using-pagination-in-the-rest-api#using-link-headers",
+                  "isActive" : true,
+                  "type" : "reference"
+                },
+                {
+                  "text" : ". If specified, the query only searches for results after this cursor. For more information, see “",
+                  "type" : "text"
+                },
+                {
+                  "identifier" : "https:\/\/docs.github.com\/rest\/using-the-rest-api\/using-pagination-in-the-rest-api",
+                  "isActive" : true,
+                  "type" : "reference"
+                },
+                {
+                  "text" : ".”",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "after"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The property by which to sort the results.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "sort"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "If specified, only code scanning alerts with this state will be returned.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "state"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "If specified, only code scanning alerts with this severity will be returned.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "severity"
+        }
+      ]
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapicode_scanning\/operations\/code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo\/input\/query-swift.struct\/init(tool_name:tool_guid:page:per_page:ref:pr:direction:before:after:sort:state:severity:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPICode_Scanning/documentation/GitHubRestAPICode_Scanning": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPICode_Scanning",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_scanning"
+},
+"doc://GitHubRestAPICode_Scanning/documentation/GitHubRestAPICode_Scanning/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_scanning\/components"
+},
+"doc://GitHubRestAPICode_Scanning/documentation/GitHubRestAPICode_Scanning/Components/Parameters": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/parameters",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Parameters"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Components\/Parameters",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Parameters"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_scanning\/components\/parameters"
+},
+"doc://GitHubRestAPICode_Scanning/documentation/GitHubRestAPICode_Scanning/Components/Parameters/direction": {
+  "abstract" : [
+    {
+      "text" : "The direction to sort the results by.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "direction"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Components\/Parameters\/direction",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "direction"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.direction",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_scanning\/components\/parameters\/direction"
+},
+"doc://GitHubRestAPICode_Scanning/documentation/GitHubRestAPICode_Scanning/Components/Parameters/git_hyphen_ref": {
+  "abstract" : [
+    {
+      "text" : "The Git reference for the results you want to list. The ",
+      "type" : "text"
+    },
+    {
+      "code" : "ref",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " for a branch can be formatted either as ",
+      "type" : "text"
+    },
+    {
+      "code" : "refs\/heads\/<branch name>",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " or simply ",
+      "type" : "text"
+    },
+    {
+      "code" : "<branch name>",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ". To reference a pull request use ",
+      "type" : "text"
+    },
+    {
+      "code" : "refs\/pull\/<number>\/merge",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "git_hyphen_ref"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Components\/Parameters\/git_hyphen_ref",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "git_hyphen_ref"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.git_hyphen_ref",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_scanning\/components\/parameters\/git_hyphen_ref"
+},
+"doc://GitHubRestAPICode_Scanning/documentation/GitHubRestAPICode_Scanning/Components/Parameters/page": {
+  "abstract" : [
+    {
+      "text" : "The page number of the results to fetch. For more information, see “",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/docs.github.com\/rest\/using-the-rest-api\/using-pagination-in-the-rest-api",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ".”",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "page"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Components\/Parameters\/page",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "page"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.page",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_scanning\/components\/parameters\/page"
+},
+"doc://GitHubRestAPICode_Scanning/documentation/GitHubRestAPICode_Scanning/Components/Parameters/pagination_hyphen_after": {
+  "abstract" : [
+    {
+      "text" : "A cursor, as given in the ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/docs.github.com\/rest\/guides\/using-pagination-in-the-rest-api#using-link-headers",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ". If specified, the query only searches for results after this cursor. For more information, see “",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/docs.github.com\/rest\/using-the-rest-api\/using-pagination-in-the-rest-api",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ".”",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "pagination_hyphen_after"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Components\/Parameters\/pagination_hyphen_after",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "pagination_hyphen_after"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.pagination_hyphen_after",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_scanning\/components\/parameters\/pagination_hyphen_after"
+},
+"doc://GitHubRestAPICode_Scanning/documentation/GitHubRestAPICode_Scanning/Components/Parameters/pagination_hyphen_before": {
+  "abstract" : [
+    {
+      "text" : "A cursor, as given in the ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/docs.github.com\/rest\/guides\/using-pagination-in-the-rest-api#using-link-headers",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ". If specified, the query only searches for results before this cursor. For more information, see “",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/docs.github.com\/rest\/using-the-rest-api\/using-pagination-in-the-rest-api",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ".”",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "pagination_hyphen_before"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Components\/Parameters\/pagination_hyphen_before",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "pagination_hyphen_before"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.pagination_hyphen_before",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_scanning\/components\/parameters\/pagination_hyphen_before"
+},
+"doc://GitHubRestAPICode_Scanning/documentation/GitHubRestAPICode_Scanning/Components/Parameters/per_hyphen_page": {
+  "abstract" : [
+    {
+      "text" : "The number of results per page (max 100). For more information, see “",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/docs.github.com\/rest\/using-the-rest-api\/using-pagination-in-the-rest-api",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ".”",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "per_hyphen_page"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Components\/Parameters\/per_hyphen_page",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "per_hyphen_page"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.per_hyphen_page",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_scanning\/components\/parameters\/per_hyphen_page"
+},
+"doc://GitHubRestAPICode_Scanning/documentation/GitHubRestAPICode_Scanning/Components/Parameters/pr_hyphen_alias": {
+  "abstract" : [
+    {
+      "text" : "The number of the pull request for the results you want to list.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "pr_hyphen_alias"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Components\/Parameters\/pr_hyphen_alias",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "pr_hyphen_alias"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.pr_hyphen_alias",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_scanning\/components\/parameters\/pr_hyphen_alias"
+},
+"doc://GitHubRestAPICode_Scanning/documentation/GitHubRestAPICode_Scanning/Components/Parameters/tool_hyphen_guid": {
+  "abstract" : [
+    {
+      "text" : "The GUID of a code scanning tool. Only results by this tool will be listed. Note that some code scanning tools may not include a GUID in their analysis data. You can specify the tool by using either ",
+      "type" : "text"
+    },
+    {
+      "code" : "tool_guid",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " or ",
+      "type" : "text"
+    },
+    {
+      "code" : "tool_name",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ", but not both.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "tool_hyphen_guid"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Components\/Parameters\/tool_hyphen_guid",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "tool_hyphen_guid"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.tool_hyphen_guid",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_scanning\/components\/parameters\/tool_hyphen_guid"
+},
+"doc://GitHubRestAPICode_Scanning/documentation/GitHubRestAPICode_Scanning/Components/Parameters/tool_hyphen_name": {
+  "abstract" : [
+    {
+      "text" : "The name of a code scanning tool. Only results by this tool will be listed. You can specify the tool by using either ",
+      "type" : "text"
+    },
+    {
+      "code" : "tool_name",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " or ",
+      "type" : "text"
+    },
+    {
+      "code" : "tool_guid",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ", but not both.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "tool_hyphen_name"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Components\/Parameters\/tool_hyphen_name",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "tool_hyphen_name"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.tool_hyphen_name",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_scanning\/components\/parameters\/tool_hyphen_name"
+},
+"doc://GitHubRestAPICode_Scanning/documentation/GitHubRestAPICode_Scanning/Components/Schemas": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/schemas",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Components\/Schemas",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_scanning\/components\/schemas"
+},
+"doc://GitHubRestAPICode_Scanning/documentation/GitHubRestAPICode_Scanning/Components/Schemas/code_hyphen_scanning_hyphen_alert_hyphen_severity": {
+  "abstract" : [
+    {
+      "text" : "Severity of a code scanning alert.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "code_hyphen_scanning_hyphen_alert_hyphen_severity"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Components\/Schemas\/code_hyphen_scanning_hyphen_alert_hyphen_severity",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "code_hyphen_scanning_hyphen_alert_hyphen_severity"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_severity",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_scanning\/components\/schemas\/code_hyphen_scanning_hyphen_alert_hyphen_severity"
+},
+"doc://GitHubRestAPICode_Scanning/documentation/GitHubRestAPICode_Scanning/Components/Schemas/code_hyphen_scanning_hyphen_alert_hyphen_state_hyphen_query": {
+  "abstract" : [
+    {
+      "text" : "State of a code scanning alert.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "code_hyphen_scanning_hyphen_alert_hyphen_state_hyphen_query"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Components\/Schemas\/code_hyphen_scanning_hyphen_alert_hyphen_state_hyphen_query",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "code_hyphen_scanning_hyphen_alert_hyphen_state_hyphen_query"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.code_hyphen_scanning_hyphen_alert_hyphen_state_hyphen_query",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_scanning\/components\/schemas\/code_hyphen_scanning_hyphen_alert_hyphen_state_hyphen_query"
+},
+"doc://GitHubRestAPICode_Scanning/documentation/GitHubRestAPICode_Scanning/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_scanning\/operations"
+},
+"doc://GitHubRestAPICode_Scanning/documentation/GitHubRestAPICode_Scanning/Operations/code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo": {
+  "abstract" : [
+    {
+      "text" : "List code scanning alerts for a repository",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Operations\/code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_scanning\/operations\/code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo"
+},
+"doc://GitHubRestAPICode_Scanning/documentation/GitHubRestAPICode_Scanning/Operations/code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo/Input": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Operations\/code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo\/Input",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo.Input",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_scanning\/operations\/code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo\/input"
+},
+"doc://GitHubRestAPICode_Scanning/documentation/GitHubRestAPICode_Scanning/Operations/code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo/Input/Query-swift.struct": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Query"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Operations\/code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo\/Input\/Query-swift.struct",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Query"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo.Input.Query",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_scanning\/operations\/code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo\/input\/query-swift.struct"
+},
+"doc://GitHubRestAPICode_Scanning/documentation/GitHubRestAPICode_Scanning/Operations/code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo/Input/Query-swift.struct/init(tool_name:tool_guid:page:per_page:ref:pr:direction:before:after:sort:state:severity:)": {
+  "abstract" : [
+    {
+      "text" : "Creates a new ",
+      "type" : "text"
+    },
+    {
+      "code" : "Query",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "tool_name"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO10ParametersO",
+      "text" : "Parameters"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO10ParametersO16tool_hyphen_namea",
+      "text" : "tool_hyphen_name"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "tool_guid"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO10ParametersO",
+      "text" : "Parameters"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO10ParametersO16tool_hyphen_guida",
+      "text" : "tool_hyphen_guid"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "page"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO10ParametersO",
+      "text" : "Parameters"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO10ParametersO4pagea",
+      "text" : "page"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "per_page"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO10ParametersO",
+      "text" : "Parameters"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO10ParametersO15per_hyphen_pagea",
+      "text" : "per_hyphen_page"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "ref"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO10ParametersO",
+      "text" : "Parameters"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO10ParametersO14git_hyphen_refa",
+      "text" : "git_hyphen_ref"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "pr"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO10ParametersO",
+      "text" : "Parameters"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO10ParametersO15pr_hyphen_aliasa",
+      "text" : "pr_hyphen_alias"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "direction"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO10ParametersO",
+      "text" : "Parameters"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO10ParametersO9directionO",
+      "text" : "direction"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "before"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO10ParametersO",
+      "text" : "Parameters"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO10ParametersO24pagination_hyphen_beforea",
+      "text" : "pagination_hyphen_before"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "after"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO10ParametersO",
+      "text" : "Parameters"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO10ParametersO23pagination_hyphen_aftera",
+      "text" : "pagination_hyphen_after"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "sort"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10OperationsO030code_hyphen_scanning_sol_list_h8_alerts_h5_for_H5_repoO",
+      "text" : "code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10OperationsO030code_hyphen_scanning_sol_list_h8_alerts_h5_for_H5_repoO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10OperationsO030code_hyphen_scanning_sol_list_h8_alerts_h5_for_H5_repoO5InputV5QueryV",
+      "text" : "Query"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10OperationsO030code_hyphen_scanning_sol_list_h8_alerts_h5_for_H5_repoO5InputV5QueryV11sortPayloadO",
+      "text" : "sortPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "state"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO7SchemasO021code_hyphen_scanning_i7_alert_i7_state_I6_queryO",
+      "text" : "code_hyphen_scanning_hyphen_alert_hyphen_state_hyphen_query"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "severity"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Scanning10ComponentsO7SchemasO021code_hyphen_scanning_i7_alert_I9_severityO",
+      "text" : "code_hyphen_scanning_hyphen_alert_hyphen_severity"
+    },
+    {
+      "kind" : "text",
+      "text" : "?)"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Operations\/code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo\/Input\/Query-swift.struct\/init(tool_name:tool_guid:page:per_page:ref:pr:direction:before:after:sort:state:severity:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(tool_name:tool_guid:page:per_page:ref:pr:direction:before:after:sort:state:severity:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_scanning\/operations\/code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo\/input\/query-swift.struct\/init(tool_name:tool_guid:page:per_page:ref:pr:direction:before:after:sort:state:severity:)"
+},
+"doc://GitHubRestAPICode_Scanning/documentation/GitHubRestAPICode_Scanning/Operations/code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo/Input/Query-swift.struct/sortPayload": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "sortPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Scanning\/documentation\/GitHubRestAPICode_Scanning\/Operations\/code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo\/Input\/Query-swift.struct\/sortPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "sortPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo.Input.Query.sortPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_scanning\/operations\/code_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo\/input\/query-swift.struct\/sortpayload"
+},
+"https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers": {
+  "identifier" : "https:\/\/docs.github.com\/rest\/guides\/using-pagination-in-the-rest-api#using-link-headers",
+  "title" : "Link header",
+  "titleInlineContent" : [
+    {
+      "text" : "Link header",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/docs.github.com\/rest\/guides\/using-pagination-in-the-rest-api#using-link-headers"
+},
+"https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api": {
+  "identifier" : "https:\/\/docs.github.com\/rest\/using-the-rest-api\/using-pagination-in-the-rest-api",
+  "title" : "Using pagination in the REST API",
+  "titleInlineContent" : [
+    {
+      "text" : "Using pagination in the REST API",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/docs.github.com\/rest\/using-the-rest-api\/using-pagination-in-the-rest-api"
+}
+}
+}

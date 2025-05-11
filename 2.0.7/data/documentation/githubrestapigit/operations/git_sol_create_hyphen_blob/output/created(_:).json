@@ -1,0 +1,458 @@
+{
+  "abstract" : [
+    {
+      "text" : "Response",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit",
+        "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations",
+        "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/git_sol_create_hyphen_blob",
+        "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/git_sol_create_hyphen_blob\/Output"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/git_sol_create_hyphen_blob\/Output\/created(_:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:16GitHubRestAPIGit10OperationsO26git_sol_create_hyphen_blobO6OutputO7createdyA2G7CreatedVcAGmF",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "case"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "created"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:16GitHubRestAPIGit10OperationsO",
+        "text" : "Operations"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:16GitHubRestAPIGit10OperationsO26git_sol_create_hyphen_blobO",
+        "text" : "git_sol_create_hyphen_blob"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:16GitHubRestAPIGit10OperationsO26git_sol_create_hyphen_blobO6OutputO",
+        "text" : "Output"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:16GitHubRestAPIGit10OperationsO26git_sol_create_hyphen_blobO6OutputO7CreatedV",
+        "text" : "Created"
+      },
+      {
+        "kind" : "text",
+        "text" : ")"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIGit"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/git\/Types.swift#L1844"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Case",
+    "symbolKind" : "case",
+    "title" : "Operations.git_sol_create_hyphen_blob.Output.created(_:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "case"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "created"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:16GitHubRestAPIGit10OperationsO",
+              "text" : "Operations"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/git_sol_create_hyphen_blob",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:16GitHubRestAPIGit10OperationsO26git_sol_create_hyphen_blobO",
+              "text" : "git_sol_create_hyphen_blob"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/git_sol_create_hyphen_blob\/Output",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:16GitHubRestAPIGit10OperationsO26git_sol_create_hyphen_blobO6OutputO",
+              "text" : "Output"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/git_sol_create_hyphen_blob\/Output\/Created-swift.struct",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:16GitHubRestAPIGit10OperationsO26git_sol_create_hyphen_blobO6OutputO7CreatedV",
+              "text" : "Created"
+            },
+            {
+              "kind" : "text",
+              "text" : ")"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/paths\/\/repos\/{owner}\/{repo}\/git\/blobs\/post(git\/create-blob)\/responses\/201",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "HTTP response code: ",
+              "type" : "text"
+            },
+            {
+              "code" : "201 created",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ".",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapigit\/operations\/git_sol_create_hyphen_blob\/output\/created(_:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIGit/documentation/GitHubRestAPIGit": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIGit",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigit"
+},
+"doc://GitHubRestAPIGit/documentation/GitHubRestAPIGit/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigit\/operations"
+},
+"doc://GitHubRestAPIGit/documentation/GitHubRestAPIGit/Operations/git_sol_create_hyphen_blob": {
+  "abstract" : [
+    {
+      "text" : "Create a blob",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "git_sol_create_hyphen_blob"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/git_sol_create_hyphen_blob",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "git_sol_create_hyphen_blob"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.git_sol_create_hyphen_blob",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigit\/operations\/git_sol_create_hyphen_blob"
+},
+"doc://GitHubRestAPIGit/documentation/GitHubRestAPIGit/Operations/git_sol_create_hyphen_blob/Output": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/git_sol_create_hyphen_blob\/Output",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.git_sol_create_hyphen_blob.Output",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigit\/operations\/git_sol_create_hyphen_blob\/output"
+},
+"doc://GitHubRestAPIGit/documentation/GitHubRestAPIGit/Operations/git_sol_create_hyphen_blob/Output/Created-swift.struct": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Created"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/git_sol_create_hyphen_blob\/Output\/Created-swift.struct",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Created"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.git_sol_create_hyphen_blob.Output.Created",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigit\/operations\/git_sol_create_hyphen_blob\/output\/created-swift.struct"
+},
+"doc://GitHubRestAPIGit/documentation/GitHubRestAPIGit/Operations/git_sol_create_hyphen_blob/Output/created(_:)": {
+  "abstract" : [
+    {
+      "text" : "Response",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "created"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:16GitHubRestAPIGit10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:16GitHubRestAPIGit10OperationsO26git_sol_create_hyphen_blobO",
+      "text" : "git_sol_create_hyphen_blob"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:16GitHubRestAPIGit10OperationsO26git_sol_create_hyphen_blobO6OutputO",
+      "text" : "Output"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:16GitHubRestAPIGit10OperationsO26git_sol_create_hyphen_blobO6OutputO7CreatedV",
+      "text" : "Created"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/git_sol_create_hyphen_blob\/Output\/created(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Operations.git_sol_create_hyphen_blob.Output.created(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigit\/operations\/git_sol_create_hyphen_blob\/output\/created(_:)"
+}
+}
+}

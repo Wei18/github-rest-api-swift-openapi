@@ -1,0 +1,608 @@
+{
+  "abstract" : [
+    {
+      "text" : "A workflow referenced\/reused by the initial caller workflow",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Components",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Components\/Schemas"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Components\/Schemas\/referenced_hyphen_workflow"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:20GitHubRestAPIActions10ComponentsO7SchemasO26referenced_hyphen_workflowV",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "struct"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "referenced_hyphen_workflow"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIActions"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "referenced_hyphen_workflow"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/actions\/Types.swift#L8748"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Structure",
+    "symbolKind" : "struct",
+    "title" : "Components.Schemas.referenced_hyphen_workflow"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "struct"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "referenced_hyphen_workflow"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/components\/schemas\/referenced-workflow",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIActions\/Se",
+        "doc:\/\/GitHubRestAPIActions\/SE",
+        "doc:\/\/GitHubRestAPIActions\/SQ",
+        "doc:\/\/GitHubRestAPIActions\/SH",
+        "doc:\/\/GitHubRestAPIActions\/s8SendableP"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Components\/Schemas\/referenced_hyphen_workflow\/init(from:)",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Components\/Schemas\/referenced_hyphen_workflow\/init(path:sha:ref:)"
+      ],
+      "title" : "Initializers"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Components\/Schemas\/referenced_hyphen_workflow\/path",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Components\/Schemas\/referenced_hyphen_workflow\/ref",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Components\/Schemas\/referenced_hyphen_workflow\/sha"
+      ],
+      "title" : "Instance Properties"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Components\/Schemas\/referenced_hyphen_workflow\/CodingKeys"
+      ],
+      "title" : "Enumerations"
+    },
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Components\/Schemas\/referenced_hyphen_workflow\/Equatable-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapiactions\/components\/schemas\/referenced_hyphen_workflow"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIActions/SE": {
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/SE",
+  "title" : "Swift.Encodable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIActions/SH": {
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/SH",
+  "title" : "Swift.Hashable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIActions/SQ": {
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/SQ",
+  "title" : "Swift.Equatable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIActions/Se": {
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/Se",
+  "title" : "Swift.Decodable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIActions",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/components"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Components/Schemas": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/schemas",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Components\/Schemas",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/components\/schemas"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Components/Schemas/referenced_hyphen_workflow": {
+  "abstract" : [
+    {
+      "text" : "A workflow referenced\/reused by the initial caller workflow",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "referenced_hyphen_workflow"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Components\/Schemas\/referenced_hyphen_workflow",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "referenced_hyphen_workflow"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.referenced_hyphen_workflow",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/components\/schemas\/referenced_hyphen_workflow"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Components/Schemas/referenced_hyphen_workflow/CodingKeys": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Components\/Schemas\/referenced_hyphen_workflow\/CodingKeys",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.referenced_hyphen_workflow.CodingKeys",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/components\/schemas\/referenced_hyphen_workflow\/codingkeys"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Components/Schemas/referenced_hyphen_workflow/Equatable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Components\/Schemas\/referenced_hyphen_workflow\/Equatable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Equatable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/components\/schemas\/referenced_hyphen_workflow\/equatable-implementations"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Components/Schemas/referenced_hyphen_workflow/init(from:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "from"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:s7DecoderP",
+      "text" : "Decoder"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Components\/Schemas\/referenced_hyphen_workflow\/init(from:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(from:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/components\/schemas\/referenced_hyphen_workflow\/init(from:)"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Components/Schemas/referenced_hyphen_workflow/init(path:sha:ref:)": {
+  "abstract" : [
+    {
+      "text" : "Creates a new ",
+      "type" : "text"
+    },
+    {
+      "code" : "referenced_hyphen_workflow",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "path"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "sha"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "ref"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?)"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Components\/Schemas\/referenced_hyphen_workflow\/init(path:sha:ref:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(path:sha:ref:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/components\/schemas\/referenced_hyphen_workflow\/init(path:sha:ref:)"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Components/Schemas/referenced_hyphen_workflow/path": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "path"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Components\/Schemas\/referenced_hyphen_workflow\/path",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "path",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/components\/schemas\/referenced_hyphen_workflow\/path"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Components/Schemas/referenced_hyphen_workflow/ref": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ref"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Components\/Schemas\/referenced_hyphen_workflow\/ref",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "ref",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/components\/schemas\/referenced_hyphen_workflow\/ref"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Components/Schemas/referenced_hyphen_workflow/sha": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "sha"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Components\/Schemas\/referenced_hyphen_workflow\/sha",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "sha",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/components\/schemas\/referenced_hyphen_workflow\/sha"
+},
+"doc://GitHubRestAPIActions/s8SendableP": {
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/s8SendableP",
+  "title" : "Swift.Sendable",
+  "type" : "unresolvable"
+}
+}
+}

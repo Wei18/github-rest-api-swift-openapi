@@ -1,0 +1,770 @@
+{
+  "abstract" : [
+    {
+      "text" : "Add team member (Legacy)",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teams_sol_add_hyphen_member_hyphen_legacy(_:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:18GitHubRestAPITeams6ClientV028teams_sol_add_hyphen_member_I7_legacyyAA10OperationsOADO6OutputOAG5InputVYaKF",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "func"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "teams_sol_add_hyphen_member_hyphen_legacy"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+        "text" : "Operations"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO028teams_sol_add_hyphen_member_I7_legacyO",
+        "text" : "teams_sol_add_hyphen_member_hyphen_legacy"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO028teams_sol_add_hyphen_member_I7_legacyO5InputV",
+        "text" : "Input"
+      },
+      {
+        "kind" : "text",
+        "text" : ") "
+      },
+      {
+        "kind" : "keyword",
+        "text" : "async"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "keyword",
+        "text" : "throws"
+      },
+      {
+        "kind" : "text",
+        "text" : " -> "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+        "text" : "Operations"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO028teams_sol_add_hyphen_member_I7_legacyO",
+        "text" : "teams_sol_add_hyphen_member_hyphen_legacy"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO028teams_sol_add_hyphen_member_I7_legacyO6OutputO",
+        "text" : "Output"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPITeams"
+      }
+    ],
+    "platforms" : [
+
+    ],
+    "remoteSource" : {
+      "fileName" : "Client.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/teams\/Client.swift#L3791"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Instance Method",
+    "symbolKind" : "method",
+    "title" : "teams_sol_add_hyphen_member_hyphen_legacy(_:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "func"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "teams_sol_add_hyphen_member_hyphen_legacy"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "_"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "internalParam",
+              "text" : "input"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Operations",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+              "text" : "Operations"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Operations\/teams_sol_add_hyphen_member_hyphen_legacy",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO028teams_sol_add_hyphen_member_I7_legacyO",
+              "text" : "teams_sol_add_hyphen_member_hyphen_legacy"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Operations\/teams_sol_add_hyphen_member_hyphen_legacy\/Input",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO028teams_sol_add_hyphen_member_I7_legacyO5InputV",
+              "text" : "Input"
+            },
+            {
+              "kind" : "text",
+              "text" : ") "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "async"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "throws"
+            },
+            {
+              "kind" : "text",
+              "text" : " -> "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Operations",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+              "text" : "Operations"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Operations\/teams_sol_add_hyphen_member_hyphen_legacy",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO028teams_sol_add_hyphen_member_I7_legacyO",
+              "text" : "teams_sol_add_hyphen_member_hyphen_legacy"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Operations\/teams_sol_add_hyphen_member_hyphen_legacy\/Output",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO028teams_sol_add_hyphen_member_I7_legacyO6OutputO",
+              "text" : "Output"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "The “Add team member” endpoint (described below) is closing down.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "We recommend using the ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "https:\/\/docs.github.com\/rest\/teams\/members#add-or-update-team-membership-for-a-user",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : " endpoint instead. It allows you to invite new organization members to your teams.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Team synchronization is available for organizations using GitHub Enterprise Cloud. For more information, see ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "https:\/\/docs.github.com\/github\/getting-started-with-github\/githubs-products",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : " in the GitHub Help documentation.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "To add someone to a team, the authenticated user must be an organization owner or a team maintainer in the team they’re changing. The person being added to the team must be a member of the team’s organization.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "[!NOTE]",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "When you have team synchronization set up for a team with your organization’s identity provider (IdP), you will see an error if you attempt to use the API for making changes to the team’s membership. If you have access to manage group membership in your IdP, you can manage GitHub team membership through your identity provider, which automatically adds and removes team members in an organization. For more information, see “",
+                  "type" : "text"
+                },
+                {
+                  "identifier" : "https:\/\/docs.github.com\/articles\/synchronizing-teams-between-your-identity-provider-and-github\/",
+                  "isActive" : true,
+                  "type" : "reference"
+                },
+                {
+                  "text" : ".”",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Note",
+          "style" : "note",
+          "type" : "aside"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Note that you’ll need to set ",
+              "type" : "text"
+            },
+            {
+              "code" : "Content-Length",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " to zero when calling out to this endpoint. For more information, see “",
+              "type" : "text"
+            },
+            {
+              "identifier" : "https:\/\/docs.github.com\/rest\/guides\/getting-started-with-the-rest-api#http-method",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : ".”",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "HTTP ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "PUT \/teams\/{team_id}\/members\/{username}",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/paths\/\/teams\/{team_id}\/members\/{username}\/put(teams\/add-member-legacy)",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapiteams\/client\/teams_sol_add_hyphen_member_hyphen_legacy(_:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPITeams",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Client": {
+  "abstract" : [
+    {
+      "text" : "GitHub’s v3 REST API.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Client"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Client"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Client",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/client"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Client/teams_sol_add_hyphen_member_hyphen_legacy(_:)": {
+  "abstract" : [
+    {
+      "text" : "Add team member (Legacy)",
+      "type" : "text"
+    }
+  ],
+  "deprecated" : true,
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "teams_sol_add_hyphen_member_hyphen_legacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO028teams_sol_add_hyphen_member_I7_legacyO",
+      "text" : "teams_sol_add_hyphen_member_hyphen_legacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO028teams_sol_add_hyphen_member_I7_legacyO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO028teams_sol_add_hyphen_member_I7_legacyO",
+      "text" : "teams_sol_add_hyphen_member_hyphen_legacy"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10OperationsO028teams_sol_add_hyphen_member_I7_legacyO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Client\/teams_sol_add_hyphen_member_hyphen_legacy(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "teams_sol_add_hyphen_member_hyphen_legacy(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/client\/teams_sol_add_hyphen_member_hyphen_legacy(_:)"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/operations"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Operations/teams_sol_add_hyphen_member_hyphen_legacy": {
+  "abstract" : [
+    {
+      "text" : "Add team member (Legacy)",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "teams_sol_add_hyphen_member_hyphen_legacy"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Operations\/teams_sol_add_hyphen_member_hyphen_legacy",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "teams_sol_add_hyphen_member_hyphen_legacy"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.teams_sol_add_hyphen_member_hyphen_legacy",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/operations\/teams_sol_add_hyphen_member_hyphen_legacy"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Operations/teams_sol_add_hyphen_member_hyphen_legacy/Input": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Operations\/teams_sol_add_hyphen_member_hyphen_legacy\/Input",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.teams_sol_add_hyphen_member_hyphen_legacy.Input",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/operations\/teams_sol_add_hyphen_member_hyphen_legacy\/input"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Operations/teams_sol_add_hyphen_member_hyphen_legacy/Output": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Operations\/teams_sol_add_hyphen_member_hyphen_legacy\/Output",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.teams_sol_add_hyphen_member_hyphen_legacy.Output",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/operations\/teams_sol_add_hyphen_member_hyphen_legacy\/output"
+},
+"https://docs.github.com/articles/synchronizing-teams-between-your-identity-provider-and-github/": {
+  "identifier" : "https:\/\/docs.github.com\/articles\/synchronizing-teams-between-your-identity-provider-and-github\/",
+  "title" : "Synchronizing teams between your identity provider and GitHub",
+  "titleInlineContent" : [
+    {
+      "text" : "Synchronizing teams between your identity provider and GitHub",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/docs.github.com\/articles\/synchronizing-teams-between-your-identity-provider-and-github\/"
+},
+"https://docs.github.com/github/getting-started-with-github/githubs-products": {
+  "identifier" : "https:\/\/docs.github.com\/github\/getting-started-with-github\/githubs-products",
+  "title" : "GitHub’s products",
+  "titleInlineContent" : [
+    {
+      "text" : "GitHub’s products",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/docs.github.com\/github\/getting-started-with-github\/githubs-products"
+},
+"https://docs.github.com/rest/guides/getting-started-with-the-rest-api#http-method": {
+  "identifier" : "https:\/\/docs.github.com\/rest\/guides\/getting-started-with-the-rest-api#http-method",
+  "title" : "HTTP method",
+  "titleInlineContent" : [
+    {
+      "text" : "HTTP method",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/docs.github.com\/rest\/guides\/getting-started-with-the-rest-api#http-method"
+},
+"https://docs.github.com/rest/teams/members#add-or-update-team-membership-for-a-user": {
+  "identifier" : "https:\/\/docs.github.com\/rest\/teams\/members#add-or-update-team-membership-for-a-user",
+  "title" : "Add or update team membership for a user",
+  "titleInlineContent" : [
+    {
+      "text" : "Add or update team membership for a user",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/docs.github.com\/rest\/teams\/members#add-or-update-team-membership-for-a-user"
+}
+}
+}

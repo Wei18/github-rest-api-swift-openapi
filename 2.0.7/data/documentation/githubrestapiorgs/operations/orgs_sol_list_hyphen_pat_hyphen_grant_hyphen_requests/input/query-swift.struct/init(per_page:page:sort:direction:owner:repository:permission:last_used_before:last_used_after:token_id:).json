@@ -1,0 +1,2056 @@
+{
+  "abstract" : [
+    {
+      "text" : "Creates a new ",
+      "type" : "text"
+    },
+    {
+      "code" : "Query",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/orgs_sol_list_hyphen_pat_hyphen_grant_hyphen_requests",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/orgs_sol_list_hyphen_pat_hyphen_grant_hyphen_requests\/Input",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/orgs_sol_list_hyphen_pat_hyphen_grant_hyphen_requests\/Input\/Query-swift.struct"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/orgs_sol_list_hyphen_pat_hyphen_grant_hyphen_requests\/Input\/Query-swift.struct\/init(per_page:page:sort:direction:owner:repository:permission:last_used_before:last_used_after:token_id:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:17GitHubRestAPIOrgs10OperationsO025orgs_sol_list_hyphen_pat_i7_grant_I9_requestsO5InputV5QueryV8per_page0P04sort9direction5owner10repository10permission16last_used_before0v1_W6_after8token_idAISiSg_AtA10ComponentsO10ParametersO09personal_i8_access_i1_z1_i1_Q0OSgAxMOSgSaySSGSgSSSgA4_10Foundation4DateVSgA8_A3_tcfc",
+    "fragments" : [
+      {
+        "kind" : "identifier",
+        "text" : "init"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "per_page"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO10ParametersO",
+        "text" : "Parameters"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO10ParametersO15per_hyphen_pagea",
+        "text" : "per_hyphen_page"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "page"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO10ParametersO",
+        "text" : "Parameters"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO10ParametersO4pagea",
+        "text" : "page"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "sort"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO10ParametersO",
+        "text" : "Parameters"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO10ParametersO023personal_hyphen_access_h7_token_H5_sortO",
+        "text" : "personal_hyphen_access_hyphen_token_hyphen_sort"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "direction"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO10ParametersO",
+        "text" : "Parameters"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO10ParametersO9directionO",
+        "text" : "direction"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "owner"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO10ParametersO",
+        "text" : "Parameters"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO10ParametersO023personal_hyphen_access_h7_token_H6_ownera",
+        "text" : "personal_hyphen_access_hyphen_token_hyphen_owner"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "repository"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO10ParametersO",
+        "text" : "Parameters"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO10ParametersO023personal_hyphen_access_h7_token_H11_repositorya",
+        "text" : "personal_hyphen_access_hyphen_token_hyphen_repository"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "permission"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO10ParametersO",
+        "text" : "Parameters"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO10ParametersO023personal_hyphen_access_h7_token_H11_permissiona",
+        "text" : "personal_hyphen_access_hyphen_token_hyphen_permission"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "last_used_before"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO10ParametersO",
+        "text" : "Parameters"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO10ParametersO023personal_hyphen_access_h7_token_H7_beforea",
+        "text" : "personal_hyphen_access_hyphen_token_hyphen_before"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "last_used_after"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO10ParametersO",
+        "text" : "Parameters"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO10ParametersO023personal_hyphen_access_h7_token_H6_aftera",
+        "text" : "personal_hyphen_access_hyphen_token_hyphen_after"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "token_id"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO10ParametersO",
+        "text" : "Parameters"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO10ParametersO023personal_hyphen_access_h7_token_h1_j1_H3_ida",
+        "text" : "personal_hyphen_access_hyphen_token_hyphen_token_hyphen_id"
+      },
+      {
+        "kind" : "text",
+        "text" : "?)"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIOrgs"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/orgs\/Types.swift#L20083"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Initializer",
+    "symbolKind" : "init",
+    "title" : "init(per_page:page:sort:direction:owner:repository:permission:last_used_before:last_used_after:token_id:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "init"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "per_page"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO10ParametersO",
+              "text" : "Parameters"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/per_hyphen_page",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO10ParametersO15per_hyphen_pagea",
+              "text" : "per_hyphen_page"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "page"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO10ParametersO",
+              "text" : "Parameters"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/page",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO10ParametersO4pagea",
+              "text" : "page"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "sort"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO10ParametersO",
+              "text" : "Parameters"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/personal_hyphen_access_hyphen_token_hyphen_sort",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO10ParametersO023personal_hyphen_access_h7_token_H5_sortO",
+              "text" : "personal_hyphen_access_hyphen_token_hyphen_sort"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "direction"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO10ParametersO",
+              "text" : "Parameters"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/direction",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO10ParametersO9directionO",
+              "text" : "direction"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "owner"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO10ParametersO",
+              "text" : "Parameters"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/personal_hyphen_access_hyphen_token_hyphen_owner",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO10ParametersO023personal_hyphen_access_h7_token_H6_ownera",
+              "text" : "personal_hyphen_access_hyphen_token_hyphen_owner"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "repository"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO10ParametersO",
+              "text" : "Parameters"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/personal_hyphen_access_hyphen_token_hyphen_repository",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO10ParametersO023personal_hyphen_access_h7_token_H11_repositorya",
+              "text" : "personal_hyphen_access_hyphen_token_hyphen_repository"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "permission"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO10ParametersO",
+              "text" : "Parameters"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/personal_hyphen_access_hyphen_token_hyphen_permission",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO10ParametersO023personal_hyphen_access_h7_token_H11_permissiona",
+              "text" : "personal_hyphen_access_hyphen_token_hyphen_permission"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "last_used_before"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO10ParametersO",
+              "text" : "Parameters"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/personal_hyphen_access_hyphen_token_hyphen_before",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO10ParametersO023personal_hyphen_access_h7_token_H7_beforea",
+              "text" : "personal_hyphen_access_hyphen_token_hyphen_before"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "last_used_after"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO10ParametersO",
+              "text" : "Parameters"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/personal_hyphen_access_hyphen_token_hyphen_after",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO10ParametersO023personal_hyphen_access_h7_token_H6_aftera",
+              "text" : "personal_hyphen_access_hyphen_token_hyphen_after"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "token_id"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO10ParametersO",
+              "text" : "Parameters"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/personal_hyphen_access_hyphen_token_hyphen_token_hyphen_id",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO10ParametersO023personal_hyphen_access_h7_token_h1_j1_H3_ida",
+              "text" : "personal_hyphen_access_hyphen_token_hyphen_token_hyphen_id"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil)"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "kind" : "parameters",
+      "parameters" : [
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The number of results per page (max 100). For more information, see “",
+                  "type" : "text"
+                },
+                {
+                  "identifier" : "https:\/\/docs.github.com\/rest\/using-the-rest-api\/using-pagination-in-the-rest-api",
+                  "isActive" : true,
+                  "type" : "reference"
+                },
+                {
+                  "text" : ".”",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "per_page"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The page number of the results to fetch. For more information, see “",
+                  "type" : "text"
+                },
+                {
+                  "identifier" : "https:\/\/docs.github.com\/rest\/using-the-rest-api\/using-pagination-in-the-rest-api",
+                  "isActive" : true,
+                  "type" : "reference"
+                },
+                {
+                  "text" : ".”",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "page"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The property by which to sort the results.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "sort"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The direction to sort the results by.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "direction"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "A list of owner usernames to use to filter the results.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "owner"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The name of the repository to use to filter the results.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "repository"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The permission to use to filter the results.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "permission"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Only show fine-grained personal access tokens used before the given time. This is a timestamp in ",
+                  "type" : "text"
+                },
+                {
+                  "identifier" : "https:\/\/en.wikipedia.org\/wiki\/ISO_8601",
+                  "isActive" : true,
+                  "type" : "reference"
+                },
+                {
+                  "text" : " format: ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "YYYY-MM-DDTHH:MM:SSZ",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "last_used_before"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Only show fine-grained personal access tokens used after the given time. This is a timestamp in ",
+                  "type" : "text"
+                },
+                {
+                  "identifier" : "https:\/\/en.wikipedia.org\/wiki\/ISO_8601",
+                  "isActive" : true,
+                  "type" : "reference"
+                },
+                {
+                  "text" : " format: ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "YYYY-MM-DDTHH:MM:SSZ",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "last_used_after"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The ID of the token",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "token_id"
+        }
+      ]
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapiorgs\/operations\/orgs_sol_list_hyphen_pat_hyphen_grant_hyphen_requests\/input\/query-swift.struct\/init(per_page:page:sort:direction:owner:repository:permission:last_used_before:last_used_after:token_id:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIOrgs",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Parameters": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/parameters",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Parameters"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Parameters"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/parameters"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Parameters/direction": {
+  "abstract" : [
+    {
+      "text" : "The direction to sort the results by.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "direction"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/direction",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "direction"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.direction",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/parameters\/direction"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Parameters/page": {
+  "abstract" : [
+    {
+      "text" : "The page number of the results to fetch. For more information, see “",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/docs.github.com\/rest\/using-the-rest-api\/using-pagination-in-the-rest-api",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ".”",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "page"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/page",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "page"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.page",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/parameters\/page"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Parameters/per_hyphen_page": {
+  "abstract" : [
+    {
+      "text" : "The number of results per page (max 100). For more information, see “",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/docs.github.com\/rest\/using-the-rest-api\/using-pagination-in-the-rest-api",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ".”",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "per_hyphen_page"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/per_hyphen_page",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "per_hyphen_page"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.per_hyphen_page",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/parameters\/per_hyphen_page"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Parameters/personal_hyphen_access_hyphen_token_hyphen_after": {
+  "abstract" : [
+    {
+      "text" : "Only show fine-grained personal access tokens used after the given time. This is a timestamp in ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/en.wikipedia.org\/wiki\/ISO_8601",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : " format: ",
+      "type" : "text"
+    },
+    {
+      "code" : "YYYY-MM-DDTHH:MM:SSZ",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "personal_hyphen_access_hyphen_token_hyphen_after"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/personal_hyphen_access_hyphen_token_hyphen_after",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "personal_hyphen_access_hyphen_token_hyphen_after"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.personal_hyphen_access_hyphen_token_hyphen_after",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/parameters\/personal_hyphen_access_hyphen_token_hyphen_after"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Parameters/personal_hyphen_access_hyphen_token_hyphen_before": {
+  "abstract" : [
+    {
+      "text" : "Only show fine-grained personal access tokens used before the given time. This is a timestamp in ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/en.wikipedia.org\/wiki\/ISO_8601",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : " format: ",
+      "type" : "text"
+    },
+    {
+      "code" : "YYYY-MM-DDTHH:MM:SSZ",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "personal_hyphen_access_hyphen_token_hyphen_before"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/personal_hyphen_access_hyphen_token_hyphen_before",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "personal_hyphen_access_hyphen_token_hyphen_before"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.personal_hyphen_access_hyphen_token_hyphen_before",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/parameters\/personal_hyphen_access_hyphen_token_hyphen_before"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Parameters/personal_hyphen_access_hyphen_token_hyphen_owner": {
+  "abstract" : [
+    {
+      "text" : "A list of owner usernames to use to filter the results.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "personal_hyphen_access_hyphen_token_hyphen_owner"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/personal_hyphen_access_hyphen_token_hyphen_owner",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "personal_hyphen_access_hyphen_token_hyphen_owner"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.personal_hyphen_access_hyphen_token_hyphen_owner",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/parameters\/personal_hyphen_access_hyphen_token_hyphen_owner"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Parameters/personal_hyphen_access_hyphen_token_hyphen_permission": {
+  "abstract" : [
+    {
+      "text" : "The permission to use to filter the results.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "personal_hyphen_access_hyphen_token_hyphen_permission"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/personal_hyphen_access_hyphen_token_hyphen_permission",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "personal_hyphen_access_hyphen_token_hyphen_permission"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.personal_hyphen_access_hyphen_token_hyphen_permission",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/parameters\/personal_hyphen_access_hyphen_token_hyphen_permission"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Parameters/personal_hyphen_access_hyphen_token_hyphen_repository": {
+  "abstract" : [
+    {
+      "text" : "The name of the repository to use to filter the results.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "personal_hyphen_access_hyphen_token_hyphen_repository"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/personal_hyphen_access_hyphen_token_hyphen_repository",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "personal_hyphen_access_hyphen_token_hyphen_repository"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.personal_hyphen_access_hyphen_token_hyphen_repository",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/parameters\/personal_hyphen_access_hyphen_token_hyphen_repository"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Parameters/personal_hyphen_access_hyphen_token_hyphen_sort": {
+  "abstract" : [
+    {
+      "text" : "The property by which to sort the results.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "personal_hyphen_access_hyphen_token_hyphen_sort"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/personal_hyphen_access_hyphen_token_hyphen_sort",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "personal_hyphen_access_hyphen_token_hyphen_sort"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.personal_hyphen_access_hyphen_token_hyphen_sort",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/parameters\/personal_hyphen_access_hyphen_token_hyphen_sort"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Parameters/personal_hyphen_access_hyphen_token_hyphen_token_hyphen_id": {
+  "abstract" : [
+    {
+      "text" : "The ID of the token",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "personal_hyphen_access_hyphen_token_hyphen_token_hyphen_id"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/personal_hyphen_access_hyphen_token_hyphen_token_hyphen_id",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "personal_hyphen_access_hyphen_token_hyphen_token_hyphen_id"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.personal_hyphen_access_hyphen_token_hyphen_token_hyphen_id",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/parameters\/personal_hyphen_access_hyphen_token_hyphen_token_hyphen_id"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/operations"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Operations/orgs_sol_list_hyphen_pat_hyphen_grant_hyphen_requests": {
+  "abstract" : [
+    {
+      "text" : "List requests to access organization resources with fine-grained personal access tokens",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "orgs_sol_list_hyphen_pat_hyphen_grant_hyphen_requests"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/orgs_sol_list_hyphen_pat_hyphen_grant_hyphen_requests",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "orgs_sol_list_hyphen_pat_hyphen_grant_hyphen_requests"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.orgs_sol_list_hyphen_pat_hyphen_grant_hyphen_requests",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/operations\/orgs_sol_list_hyphen_pat_hyphen_grant_hyphen_requests"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Operations/orgs_sol_list_hyphen_pat_hyphen_grant_hyphen_requests/Input": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/orgs_sol_list_hyphen_pat_hyphen_grant_hyphen_requests\/Input",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.orgs_sol_list_hyphen_pat_hyphen_grant_hyphen_requests.Input",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/operations\/orgs_sol_list_hyphen_pat_hyphen_grant_hyphen_requests\/input"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Operations/orgs_sol_list_hyphen_pat_hyphen_grant_hyphen_requests/Input/Query-swift.struct": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Query"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/orgs_sol_list_hyphen_pat_hyphen_grant_hyphen_requests\/Input\/Query-swift.struct",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Query"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.orgs_sol_list_hyphen_pat_hyphen_grant_hyphen_requests.Input.Query",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/operations\/orgs_sol_list_hyphen_pat_hyphen_grant_hyphen_requests\/input\/query-swift.struct"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Operations/orgs_sol_list_hyphen_pat_hyphen_grant_hyphen_requests/Input/Query-swift.struct/init(per_page:page:sort:direction:owner:repository:permission:last_used_before:last_used_after:token_id:)": {
+  "abstract" : [
+    {
+      "text" : "Creates a new ",
+      "type" : "text"
+    },
+    {
+      "code" : "Query",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "per_page"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO10ParametersO",
+      "text" : "Parameters"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO10ParametersO15per_hyphen_pagea",
+      "text" : "per_hyphen_page"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "page"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO10ParametersO",
+      "text" : "Parameters"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO10ParametersO4pagea",
+      "text" : "page"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "sort"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO10ParametersO",
+      "text" : "Parameters"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO10ParametersO023personal_hyphen_access_h7_token_H5_sortO",
+      "text" : "personal_hyphen_access_hyphen_token_hyphen_sort"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "direction"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO10ParametersO",
+      "text" : "Parameters"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO10ParametersO9directionO",
+      "text" : "direction"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "owner"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO10ParametersO",
+      "text" : "Parameters"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO10ParametersO023personal_hyphen_access_h7_token_H6_ownera",
+      "text" : "personal_hyphen_access_hyphen_token_hyphen_owner"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "repository"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO10ParametersO",
+      "text" : "Parameters"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO10ParametersO023personal_hyphen_access_h7_token_H11_repositorya",
+      "text" : "personal_hyphen_access_hyphen_token_hyphen_repository"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "permission"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO10ParametersO",
+      "text" : "Parameters"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO10ParametersO023personal_hyphen_access_h7_token_H11_permissiona",
+      "text" : "personal_hyphen_access_hyphen_token_hyphen_permission"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "last_used_before"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO10ParametersO",
+      "text" : "Parameters"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO10ParametersO023personal_hyphen_access_h7_token_H7_beforea",
+      "text" : "personal_hyphen_access_hyphen_token_hyphen_before"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "last_used_after"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO10ParametersO",
+      "text" : "Parameters"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO10ParametersO023personal_hyphen_access_h7_token_H6_aftera",
+      "text" : "personal_hyphen_access_hyphen_token_hyphen_after"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "token_id"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO10ParametersO",
+      "text" : "Parameters"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOrgs10ComponentsO10ParametersO023personal_hyphen_access_h7_token_h1_j1_H3_ida",
+      "text" : "personal_hyphen_access_hyphen_token_hyphen_token_hyphen_id"
+    },
+    {
+      "kind" : "text",
+      "text" : "?)"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Operations\/orgs_sol_list_hyphen_pat_hyphen_grant_hyphen_requests\/Input\/Query-swift.struct\/init(per_page:page:sort:direction:owner:repository:permission:last_used_before:last_used_after:token_id:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(per_page:page:sort:direction:owner:repository:permission:last_used_before:last_used_after:token_id:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/operations\/orgs_sol_list_hyphen_pat_hyphen_grant_hyphen_requests\/input\/query-swift.struct\/init(per_page:page:sort:direction:owner:repository:permission:last_used_before:last_used_after:token_id:)"
+},
+"https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api": {
+  "identifier" : "https:\/\/docs.github.com\/rest\/using-the-rest-api\/using-pagination-in-the-rest-api",
+  "title" : "Using pagination in the REST API",
+  "titleInlineContent" : [
+    {
+      "text" : "Using pagination in the REST API",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/docs.github.com\/rest\/using-the-rest-api\/using-pagination-in-the-rest-api"
+},
+"https://en.wikipedia.org/wiki/ISO_8601": {
+  "identifier" : "https:\/\/en.wikipedia.org\/wiki\/ISO_8601",
+  "title" : "ISO 8601",
+  "titleInlineContent" : [
+    {
+      "text" : "ISO 8601",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/en.wikipedia.org\/wiki\/ISO_8601"
+}
+}
+}

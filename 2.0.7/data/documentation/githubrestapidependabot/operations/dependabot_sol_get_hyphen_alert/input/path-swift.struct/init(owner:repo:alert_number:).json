@@ -1,0 +1,888 @@
+{
+  "abstract" : [
+    {
+      "text" : "Creates a new ",
+      "type" : "text"
+    },
+    {
+      "code" : "Path",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot",
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations",
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations\/dependabot_sol_get_hyphen_alert",
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations\/dependabot_sol_get_hyphen_alert\/Input",
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations\/dependabot_sol_get_hyphen_alert\/Input\/Path-swift.struct"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations\/dependabot_sol_get_hyphen_alert\/Input\/Path-swift.struct\/init(owner:repo:alert_number:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:23GitHubRestAPIDependabot10OperationsO31dependabot_sol_get_hyphen_alertO5InputV4PathV5owner4repo0J7_numberAISS_SSSitcfc",
+    "fragments" : [
+      {
+        "kind" : "identifier",
+        "text" : "init"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "owner"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:23GitHubRestAPIDependabot10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:23GitHubRestAPIDependabot10ComponentsO10ParametersO",
+        "text" : "Parameters"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:23GitHubRestAPIDependabot10ComponentsO10ParametersO5ownera",
+        "text" : "owner"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "repo"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:23GitHubRestAPIDependabot10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:23GitHubRestAPIDependabot10ComponentsO10ParametersO",
+        "text" : "Parameters"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:23GitHubRestAPIDependabot10ComponentsO10ParametersO4repoa",
+        "text" : "repo"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "alert_number"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:23GitHubRestAPIDependabot10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:23GitHubRestAPIDependabot10ComponentsO10ParametersO",
+        "text" : "Parameters"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:23GitHubRestAPIDependabot10ComponentsO10ParametersO024dependabot_hyphen_alert_H7_numbera",
+        "text" : "dependabot_hyphen_alert_hyphen_number"
+      },
+      {
+        "kind" : "text",
+        "text" : ")"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIDependabot"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/dependabot\/Types.swift#L6680"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Initializer",
+    "symbolKind" : "init",
+    "title" : "init(owner:repo:alert_number:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "init"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "owner"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:23GitHubRestAPIDependabot10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Components\/Parameters",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:23GitHubRestAPIDependabot10ComponentsO10ParametersO",
+              "text" : "Parameters"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Components\/Parameters\/owner",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:23GitHubRestAPIDependabot10ComponentsO10ParametersO5ownera",
+              "text" : "owner"
+            },
+            {
+              "kind" : "text",
+              "text" : ", "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "repo"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:23GitHubRestAPIDependabot10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Components\/Parameters",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:23GitHubRestAPIDependabot10ComponentsO10ParametersO",
+              "text" : "Parameters"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Components\/Parameters\/repo",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:23GitHubRestAPIDependabot10ComponentsO10ParametersO4repoa",
+              "text" : "repo"
+            },
+            {
+              "kind" : "text",
+              "text" : ", "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "alert_number"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:23GitHubRestAPIDependabot10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Components\/Parameters",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:23GitHubRestAPIDependabot10ComponentsO10ParametersO",
+              "text" : "Parameters"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Components\/Parameters\/dependabot_hyphen_alert_hyphen_number",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:23GitHubRestAPIDependabot10ComponentsO10ParametersO024dependabot_hyphen_alert_H7_numbera",
+              "text" : "dependabot_hyphen_alert_hyphen_number"
+            },
+            {
+              "kind" : "text",
+              "text" : ")"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "kind" : "parameters",
+      "parameters" : [
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The account owner of the repository. The name is not case sensitive.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "owner"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The name of the repository without the ",
+                  "type" : "text"
+                },
+                {
+                  "code" : ".git",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : " extension. The name is not case sensitive.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "repo"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The number that identifies a Dependabot alert in its repository.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "alert_number"
+        }
+      ]
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapidependabot\/operations\/dependabot_sol_get_hyphen_alert\/input\/path-swift.struct\/init(owner:repo:alert_number:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIDependabot",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/components"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Components/Parameters": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/parameters",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Parameters"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Components\/Parameters",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Parameters"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/components\/parameters"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Components/Parameters/dependabot_hyphen_alert_hyphen_number": {
+  "abstract" : [
+    {
+      "text" : "The number that identifies a Dependabot alert in its repository.",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "You can find this at the end of the URL for a Dependabot alert within GitHub,",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "or in ",
+      "type" : "text"
+    },
+    {
+      "code" : "number",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " fields in the response from the",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "code" : "GET \/repos\/{owner}\/{repo}\/dependabot\/alerts",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " operation.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "dependabot_hyphen_alert_hyphen_number"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Components\/Parameters\/dependabot_hyphen_alert_hyphen_number",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "dependabot_hyphen_alert_hyphen_number"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.dependabot_hyphen_alert_hyphen_number",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/components\/parameters\/dependabot_hyphen_alert_hyphen_number"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Components/Parameters/owner": {
+  "abstract" : [
+    {
+      "text" : "The account owner of the repository. The name is not case sensitive.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "owner"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Components\/Parameters\/owner",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "owner"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.owner",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/components\/parameters\/owner"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Components/Parameters/repo": {
+  "abstract" : [
+    {
+      "text" : "The name of the repository without the ",
+      "type" : "text"
+    },
+    {
+      "code" : ".git",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " extension. The name is not case sensitive.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "repo"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Components\/Parameters\/repo",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "repo"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.repo",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/components\/parameters\/repo"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/operations"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Operations/dependabot_sol_get_hyphen_alert": {
+  "abstract" : [
+    {
+      "text" : "Get a Dependabot alert",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "dependabot_sol_get_hyphen_alert"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations\/dependabot_sol_get_hyphen_alert",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "dependabot_sol_get_hyphen_alert"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.dependabot_sol_get_hyphen_alert",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/operations\/dependabot_sol_get_hyphen_alert"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Operations/dependabot_sol_get_hyphen_alert/Input": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations\/dependabot_sol_get_hyphen_alert\/Input",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.dependabot_sol_get_hyphen_alert.Input",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/operations\/dependabot_sol_get_hyphen_alert\/input"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Operations/dependabot_sol_get_hyphen_alert/Input/Path-swift.struct": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Path"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations\/dependabot_sol_get_hyphen_alert\/Input\/Path-swift.struct",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Path"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.dependabot_sol_get_hyphen_alert.Input.Path",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/operations\/dependabot_sol_get_hyphen_alert\/input\/path-swift.struct"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Operations/dependabot_sol_get_hyphen_alert/Input/Path-swift.struct/init(owner:repo:alert_number:)": {
+  "abstract" : [
+    {
+      "text" : "Creates a new ",
+      "type" : "text"
+    },
+    {
+      "code" : "Path",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "owner"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10ComponentsO10ParametersO",
+      "text" : "Parameters"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10ComponentsO10ParametersO5ownera",
+      "text" : "owner"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "repo"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10ComponentsO10ParametersO",
+      "text" : "Parameters"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10ComponentsO10ParametersO4repoa",
+      "text" : "repo"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "alert_number"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10ComponentsO10ParametersO",
+      "text" : "Parameters"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIDependabot10ComponentsO10ParametersO024dependabot_hyphen_alert_H7_numbera",
+      "text" : "dependabot_hyphen_alert_hyphen_number"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations\/dependabot_sol_get_hyphen_alert\/Input\/Path-swift.struct\/init(owner:repo:alert_number:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(owner:repo:alert_number:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/operations\/dependabot_sol_get_hyphen_alert\/input\/path-swift.struct\/init(owner:repo:alert_number:)"
+}
+}
+}

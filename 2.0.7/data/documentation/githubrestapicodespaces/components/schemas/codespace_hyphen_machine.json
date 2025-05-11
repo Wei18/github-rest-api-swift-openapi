@@ -1,0 +1,926 @@
+{
+  "abstract" : [
+    {
+      "text" : "A description of the machine powering a codespace.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas\/codespace_hyphen_machine"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:23GitHubRestAPICodespaces10ComponentsO7SchemasO24codespace_hyphen_machineV",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "struct"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "codespace_hyphen_machine"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPICodespaces"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "codespace_hyphen_machine"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/codespaces\/Types.swift#L5665"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Structure",
+    "symbolKind" : "struct",
+    "title" : "Components.Schemas.codespace_hyphen_machine"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "struct"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "codespace_hyphen_machine"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/components\/schemas\/codespace-machine",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPICodespaces\/Se",
+        "doc:\/\/GitHubRestAPICodespaces\/SE",
+        "doc:\/\/GitHubRestAPICodespaces\/SQ",
+        "doc:\/\/GitHubRestAPICodespaces\/SH",
+        "doc:\/\/GitHubRestAPICodespaces\/s8SendableP"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas\/codespace_hyphen_machine\/init(from:)",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas\/codespace_hyphen_machine\/init(name:display_name:operating_system:storage_in_bytes:memory_in_bytes:cpus:prebuild_availability:)"
+      ],
+      "title" : "Initializers"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas\/codespace_hyphen_machine\/cpus",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas\/codespace_hyphen_machine\/display_name",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas\/codespace_hyphen_machine\/memory_in_bytes",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas\/codespace_hyphen_machine\/name",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas\/codespace_hyphen_machine\/operating_system",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas\/codespace_hyphen_machine\/prebuild_availability",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas\/codespace_hyphen_machine\/storage_in_bytes"
+      ],
+      "title" : "Instance Properties"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas\/codespace_hyphen_machine\/CodingKeys",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas\/codespace_hyphen_machine\/prebuild_availabilityPayload"
+      ],
+      "title" : "Enumerations"
+    },
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas\/codespace_hyphen_machine\/Equatable-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapicodespaces\/components\/schemas\/codespace_hyphen_machine"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPICodespaces/SE": {
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/SE",
+  "title" : "Swift.Encodable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPICodespaces/SH": {
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/SH",
+  "title" : "Swift.Hashable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPICodespaces/SQ": {
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/SQ",
+  "title" : "Swift.Equatable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPICodespaces/Se": {
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/Se",
+  "title" : "Swift.Decodable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPICodespaces",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/components"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Components/Schemas": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/schemas",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/components\/schemas"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Components/Schemas/codespace_hyphen_machine": {
+  "abstract" : [
+    {
+      "text" : "A description of the machine powering a codespace.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "codespace_hyphen_machine"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas\/codespace_hyphen_machine",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "codespace_hyphen_machine"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.codespace_hyphen_machine",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/components\/schemas\/codespace_hyphen_machine"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Components/Schemas/codespace_hyphen_machine/CodingKeys": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas\/codespace_hyphen_machine\/CodingKeys",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.codespace_hyphen_machine.CodingKeys",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/components\/schemas\/codespace_hyphen_machine\/codingkeys"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Components/Schemas/codespace_hyphen_machine/Equatable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas\/codespace_hyphen_machine\/Equatable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Equatable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/components\/schemas\/codespace_hyphen_machine\/equatable-implementations"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Components/Schemas/codespace_hyphen_machine/cpus": {
+  "abstract" : [
+    {
+      "text" : "How many cores are available to the codespace.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "cpus"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas\/codespace_hyphen_machine\/cpus",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "cpus",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/components\/schemas\/codespace_hyphen_machine\/cpus"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Components/Schemas/codespace_hyphen_machine/display_name": {
+  "abstract" : [
+    {
+      "text" : "The display name of the machine includes cores, memory, and storage.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "display_name"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas\/codespace_hyphen_machine\/display_name",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "display_name",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/components\/schemas\/codespace_hyphen_machine\/display_name"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Components/Schemas/codespace_hyphen_machine/init(from:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "from"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:s7DecoderP",
+      "text" : "Decoder"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas\/codespace_hyphen_machine\/init(from:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(from:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/components\/schemas\/codespace_hyphen_machine\/init(from:)"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Components/Schemas/codespace_hyphen_machine/init(name:display_name:operating_system:storage_in_bytes:memory_in_bytes:cpus:prebuild_availability:)": {
+  "abstract" : [
+    {
+      "text" : "Creates a new ",
+      "type" : "text"
+    },
+    {
+      "code" : "codespace_hyphen_machine",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "name"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "display_name"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "operating_system"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "storage_in_bytes"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "memory_in_bytes"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "cpus"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "prebuild_availability"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10ComponentsO7SchemasO24codespace_hyphen_machineV",
+      "text" : "codespace_hyphen_machine"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10ComponentsO7SchemasO24codespace_hyphen_machineV28prebuild_availabilityPayloadO",
+      "text" : "prebuild_availabilityPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "?)"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas\/codespace_hyphen_machine\/init(name:display_name:operating_system:storage_in_bytes:memory_in_bytes:cpus:prebuild_availability:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(name:display_name:operating_system:storage_in_bytes:memory_in_bytes:cpus:prebuild_availability:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/components\/schemas\/codespace_hyphen_machine\/init(name:display_name:operating_system:storage_in_bytes:memory_in_bytes:cpus:prebuild_availability:)"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Components/Schemas/codespace_hyphen_machine/memory_in_bytes": {
+  "abstract" : [
+    {
+      "text" : "How much memory is available to the codespace.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "memory_in_bytes"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas\/codespace_hyphen_machine\/memory_in_bytes",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "memory_in_bytes",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/components\/schemas\/codespace_hyphen_machine\/memory_in_bytes"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Components/Schemas/codespace_hyphen_machine/name": {
+  "abstract" : [
+    {
+      "text" : "The name of the machine.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "name"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas\/codespace_hyphen_machine\/name",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "name",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/components\/schemas\/codespace_hyphen_machine\/name"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Components/Schemas/codespace_hyphen_machine/operating_system": {
+  "abstract" : [
+    {
+      "text" : "The operating system of the machine.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "operating_system"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas\/codespace_hyphen_machine\/operating_system",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "operating_system",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/components\/schemas\/codespace_hyphen_machine\/operating_system"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Components/Schemas/codespace_hyphen_machine/prebuild_availability": {
+  "abstract" : [
+    {
+      "text" : "Whether a prebuild is currently available when creating a codespace for this machine and repository. If a branch was not specified as a ref, the default branch will be assumed. Value will be “null” if prebuilds are not supported or prebuild availability could not be determined. Value will be “none” if no prebuild is available. Latest values “ready” and “in_progress” indicate the prebuild availability status.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "prebuild_availability"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10ComponentsO7SchemasO24codespace_hyphen_machineV",
+      "text" : "codespace_hyphen_machine"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10ComponentsO7SchemasO24codespace_hyphen_machineV28prebuild_availabilityPayloadO",
+      "text" : "prebuild_availabilityPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas\/codespace_hyphen_machine\/prebuild_availability",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "prebuild_availability",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/components\/schemas\/codespace_hyphen_machine\/prebuild_availability"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Components/Schemas/codespace_hyphen_machine/prebuild_availabilityPayload": {
+  "abstract" : [
+    {
+      "text" : "Whether a prebuild is currently available when creating a codespace for this machine and repository. If a branch was not specified as a ref, the default branch will be assumed. Value will be “null” if prebuilds are not supported or prebuild availability could not be determined. Value will be “none” if no prebuild is available. Latest values “ready” and “in_progress” indicate the prebuild availability status.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "prebuild_availabilityPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas\/codespace_hyphen_machine\/prebuild_availabilityPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "prebuild_availabilityPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.codespace_hyphen_machine.prebuild_availabilityPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/components\/schemas\/codespace_hyphen_machine\/prebuild_availabilitypayload"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Components/Schemas/codespace_hyphen_machine/storage_in_bytes": {
+  "abstract" : [
+    {
+      "text" : "How much storage is available to the codespace.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "storage_in_bytes"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas\/codespace_hyphen_machine\/storage_in_bytes",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "storage_in_bytes",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/components\/schemas\/codespace_hyphen_machine\/storage_in_bytes"
+},
+"doc://GitHubRestAPICodespaces/s8SendableP": {
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/s8SendableP",
+  "title" : "Swift.Sendable",
+  "type" : "unresolvable"
+}
+}
+}

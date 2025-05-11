@@ -1,0 +1,506 @@
+{
+  "abstract" : [
+    {
+      "text" : "Not modified",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIGitignore\/documentation\/GitHubRestAPIGitignore",
+        "doc:\/\/GitHubRestAPIGitignore\/documentation\/GitHubRestAPIGitignore\/Operations",
+        "doc:\/\/GitHubRestAPIGitignore\/documentation\/GitHubRestAPIGitignore\/Operations\/gitignore_sol_get_hyphen_all_hyphen_templates",
+        "doc:\/\/GitHubRestAPIGitignore\/documentation\/GitHubRestAPIGitignore\/Operations\/gitignore_sol_get_hyphen_all_hyphen_templates\/Output"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIGitignore\/documentation\/GitHubRestAPIGitignore\/Operations\/gitignore_sol_get_hyphen_all_hyphen_templates\/Output\/notModified(_:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:22GitHubRestAPIGitignore10OperationsO029gitignore_sol_get_hyphen_all_I10_templatesO6OutputO11notModifiedyAgA10ComponentsO9ResponsesO0M9_modifiedVcAGmF",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "case"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "notModified"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:22GitHubRestAPIGitignore10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:22GitHubRestAPIGitignore10ComponentsO9ResponsesO",
+        "text" : "Responses"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:22GitHubRestAPIGitignore10ComponentsO9ResponsesO12not_modifiedV",
+        "text" : "not_modified"
+      },
+      {
+        "kind" : "text",
+        "text" : ")"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIGitignore"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/gitignore\/Types.swift#L218"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Case",
+    "symbolKind" : "case",
+    "title" : "Operations.gitignore_sol_get_hyphen_all_hyphen_templates.Output.notModified(_:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "case"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "notModified"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIGitignore\/documentation\/GitHubRestAPIGitignore\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:22GitHubRestAPIGitignore10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIGitignore\/documentation\/GitHubRestAPIGitignore\/Components\/Responses",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:22GitHubRestAPIGitignore10ComponentsO9ResponsesO",
+              "text" : "Responses"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIGitignore\/documentation\/GitHubRestAPIGitignore\/Components\/Responses\/not_modified",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:22GitHubRestAPIGitignore10ComponentsO9ResponsesO12not_modifiedV",
+              "text" : "not_modified"
+            },
+            {
+              "kind" : "text",
+              "text" : ")"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/paths\/\/gitignore\/templates\/get(gitignore\/get-all-templates)\/responses\/304",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "HTTP response code: ",
+              "type" : "text"
+            },
+            {
+              "code" : "304 notModified",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ".",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapigitignore\/operations\/gitignore_sol_get_hyphen_all_hyphen_templates\/output\/notmodified(_:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIGitignore/documentation/GitHubRestAPIGitignore": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGitignore\/documentation\/GitHubRestAPIGitignore",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIGitignore",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigitignore"
+},
+"doc://GitHubRestAPIGitignore/documentation/GitHubRestAPIGitignore/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGitignore\/documentation\/GitHubRestAPIGitignore\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigitignore\/components"
+},
+"doc://GitHubRestAPIGitignore/documentation/GitHubRestAPIGitignore/Components/Responses": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/responses",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Responses"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGitignore\/documentation\/GitHubRestAPIGitignore\/Components\/Responses",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Responses"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Responses",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigitignore\/components\/responses"
+},
+"doc://GitHubRestAPIGitignore/documentation/GitHubRestAPIGitignore/Components/Responses/not_modified": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "not_modified"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGitignore\/documentation\/GitHubRestAPIGitignore\/Components\/Responses\/not_modified",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "not_modified"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Responses.not_modified",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigitignore\/components\/responses\/not_modified"
+},
+"doc://GitHubRestAPIGitignore/documentation/GitHubRestAPIGitignore/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGitignore\/documentation\/GitHubRestAPIGitignore\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigitignore\/operations"
+},
+"doc://GitHubRestAPIGitignore/documentation/GitHubRestAPIGitignore/Operations/gitignore_sol_get_hyphen_all_hyphen_templates": {
+  "abstract" : [
+    {
+      "text" : "Get all gitignore templates",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "gitignore_sol_get_hyphen_all_hyphen_templates"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGitignore\/documentation\/GitHubRestAPIGitignore\/Operations\/gitignore_sol_get_hyphen_all_hyphen_templates",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "gitignore_sol_get_hyphen_all_hyphen_templates"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.gitignore_sol_get_hyphen_all_hyphen_templates",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigitignore\/operations\/gitignore_sol_get_hyphen_all_hyphen_templates"
+},
+"doc://GitHubRestAPIGitignore/documentation/GitHubRestAPIGitignore/Operations/gitignore_sol_get_hyphen_all_hyphen_templates/Output": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGitignore\/documentation\/GitHubRestAPIGitignore\/Operations\/gitignore_sol_get_hyphen_all_hyphen_templates\/Output",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.gitignore_sol_get_hyphen_all_hyphen_templates.Output",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigitignore\/operations\/gitignore_sol_get_hyphen_all_hyphen_templates\/output"
+},
+"doc://GitHubRestAPIGitignore/documentation/GitHubRestAPIGitignore/Operations/gitignore_sol_get_hyphen_all_hyphen_templates/Output/notModified(_:)": {
+  "abstract" : [
+    {
+      "text" : "Not modified",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "notModified"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPIGitignore10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPIGitignore10ComponentsO9ResponsesO",
+      "text" : "Responses"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPIGitignore10ComponentsO9ResponsesO12not_modifiedV",
+      "text" : "not_modified"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGitignore\/documentation\/GitHubRestAPIGitignore\/Operations\/gitignore_sol_get_hyphen_all_hyphen_templates\/Output\/notModified(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Operations.gitignore_sol_get_hyphen_all_hyphen_templates.Output.notModified(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigitignore\/operations\/gitignore_sol_get_hyphen_all_hyphen_templates\/output\/notmodified(_:)"
+}
+}
+}

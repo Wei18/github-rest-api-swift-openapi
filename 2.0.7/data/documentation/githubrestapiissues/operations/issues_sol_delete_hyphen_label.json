@@ -1,0 +1,388 @@
+{
+  "abstract" : [
+    {
+      "text" : "Delete a label",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues",
+        "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Operations"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Operations\/issues_sol_delete_hyphen_label"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:19GitHubRestAPIIssues10OperationsO30issues_sol_delete_hyphen_labelO",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "enum"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "issues_sol_delete_hyphen_label"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIIssues"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "issues_sol_delete_hyphen_label"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/issues\/Types.swift#L18068"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Enumeration",
+    "symbolKind" : "enum",
+    "title" : "Operations.issues_sol_delete_hyphen_label"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "enum"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "issues_sol_delete_hyphen_label"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Deletes a label using the given label name.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "HTTP ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "DELETE \/repos\/{owner}\/{repo}\/labels\/{name}",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/paths\/\/repos\/{owner}\/{repo}\/labels\/{name}\/delete(issues\/delete-label)",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Operations\/issues_sol_delete_hyphen_label\/Input"
+      ],
+      "title" : "Structures"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Operations\/issues_sol_delete_hyphen_label\/id"
+      ],
+      "title" : "Type Properties"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Operations\/issues_sol_delete_hyphen_label\/Output"
+      ],
+      "title" : "Enumerations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapiissues\/operations\/issues_sol_delete_hyphen_label"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIIssues/documentation/GitHubRestAPIIssues": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIIssues",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiissues"
+},
+"doc://GitHubRestAPIIssues/documentation/GitHubRestAPIIssues/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiissues\/operations"
+},
+"doc://GitHubRestAPIIssues/documentation/GitHubRestAPIIssues/Operations/issues_sol_delete_hyphen_label": {
+  "abstract" : [
+    {
+      "text" : "Delete a label",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "issues_sol_delete_hyphen_label"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Operations\/issues_sol_delete_hyphen_label",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "issues_sol_delete_hyphen_label"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.issues_sol_delete_hyphen_label",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiissues\/operations\/issues_sol_delete_hyphen_label"
+},
+"doc://GitHubRestAPIIssues/documentation/GitHubRestAPIIssues/Operations/issues_sol_delete_hyphen_label/Input": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Operations\/issues_sol_delete_hyphen_label\/Input",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.issues_sol_delete_hyphen_label.Input",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiissues\/operations\/issues_sol_delete_hyphen_label\/input"
+},
+"doc://GitHubRestAPIIssues/documentation/GitHubRestAPIIssues/Operations/issues_sol_delete_hyphen_label/Output": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Operations\/issues_sol_delete_hyphen_label\/Output",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.issues_sol_delete_hyphen_label.Output",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiissues\/operations\/issues_sol_delete_hyphen_label\/output"
+},
+"doc://GitHubRestAPIIssues/documentation/GitHubRestAPIIssues/Operations/issues_sol_delete_hyphen_label/id": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "id"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Operations\/issues_sol_delete_hyphen_label\/id",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "id",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiissues\/operations\/issues_sol_delete_hyphen_label\/id"
+}
+}
+}

@@ -1,0 +1,485 @@
+{
+  "abstract" : [
+    {
+      "text" : "The level at which the comment is targeted, can be a diff line or a file.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues",
+        "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Components",
+        "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Components\/Schemas",
+        "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Components\/Schemas\/pull_hyphen_request_hyphen_review_hyphen_comment"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Components\/Schemas\/pull_hyphen_request_hyphen_review_hyphen_comment\/subject_typePayload"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:19GitHubRestAPIIssues10ComponentsO7SchemasO020pull_hyphen_request_h8_review_H8_commentV19subject_typePayloadO",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "enum"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "subject_typePayload"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIIssues"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "subject_typePayload"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/issues\/Types.swift#L7636"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Enumeration",
+    "symbolKind" : "enum",
+    "title" : "Components.Schemas.pull_hyphen_request_hyphen_review_hyphen_comment.subject_typePayload"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "enum"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "subject_typePayload"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/components\/schemas\/pull-request-review-comment\/subject_type",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIIssues\/s12CaseIterableP",
+        "doc:\/\/GitHubRestAPIIssues\/Se",
+        "doc:\/\/GitHubRestAPIIssues\/SE",
+        "doc:\/\/GitHubRestAPIIssues\/SQ",
+        "doc:\/\/GitHubRestAPIIssues\/SH",
+        "doc:\/\/GitHubRestAPIIssues\/SY",
+        "doc:\/\/GitHubRestAPIIssues\/s8SendableP"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Components\/Schemas\/pull_hyphen_request_hyphen_review_hyphen_comment\/subject_typePayload\/file",
+        "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Components\/Schemas\/pull_hyphen_request_hyphen_review_hyphen_comment\/subject_typePayload\/line"
+      ],
+      "title" : "Enumeration Cases"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Components\/Schemas\/pull_hyphen_request_hyphen_review_hyphen_comment\/subject_typePayload\/init(rawValue:)"
+      ],
+      "title" : "Initializers"
+    },
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Components\/Schemas\/pull_hyphen_request_hyphen_review_hyphen_comment\/subject_typePayload\/Equatable-Implementations",
+        "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Components\/Schemas\/pull_hyphen_request_hyphen_review_hyphen_comment\/subject_typePayload\/RawRepresentable-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapiissues\/components\/schemas\/pull_hyphen_request_hyphen_review_hyphen_comment\/subject_typepayload"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIIssues/SE": {
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/SE",
+  "title" : "Swift.Encodable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIIssues/SH": {
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/SH",
+  "title" : "Swift.Hashable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIIssues/SQ": {
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/SQ",
+  "title" : "Swift.Equatable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIIssues/SY": {
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/SY",
+  "title" : "Swift.RawRepresentable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIIssues/Se": {
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/Se",
+  "title" : "Swift.Decodable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIIssues/documentation/GitHubRestAPIIssues": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIIssues",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiissues"
+},
+"doc://GitHubRestAPIIssues/documentation/GitHubRestAPIIssues/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiissues\/components"
+},
+"doc://GitHubRestAPIIssues/documentation/GitHubRestAPIIssues/Components/Schemas": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/schemas",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Components\/Schemas",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiissues\/components\/schemas"
+},
+"doc://GitHubRestAPIIssues/documentation/GitHubRestAPIIssues/Components/Schemas/pull_hyphen_request_hyphen_review_hyphen_comment": {
+  "abstract" : [
+    {
+      "text" : "Pull Request Review Comments are comments on a portion of the Pull Request’s diff.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "pull_hyphen_request_hyphen_review_hyphen_comment"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Components\/Schemas\/pull_hyphen_request_hyphen_review_hyphen_comment",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "pull_hyphen_request_hyphen_review_hyphen_comment"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.pull_hyphen_request_hyphen_review_hyphen_comment",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiissues\/components\/schemas\/pull_hyphen_request_hyphen_review_hyphen_comment"
+},
+"doc://GitHubRestAPIIssues/documentation/GitHubRestAPIIssues/Components/Schemas/pull_hyphen_request_hyphen_review_hyphen_comment/subject_typePayload": {
+  "abstract" : [
+    {
+      "text" : "The level at which the comment is targeted, can be a diff line or a file.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "subject_typePayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Components\/Schemas\/pull_hyphen_request_hyphen_review_hyphen_comment\/subject_typePayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "subject_typePayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.pull_hyphen_request_hyphen_review_hyphen_comment.subject_typePayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiissues\/components\/schemas\/pull_hyphen_request_hyphen_review_hyphen_comment\/subject_typepayload"
+},
+"doc://GitHubRestAPIIssues/documentation/GitHubRestAPIIssues/Components/Schemas/pull_hyphen_request_hyphen_review_hyphen_comment/subject_typePayload/Equatable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Components\/Schemas\/pull_hyphen_request_hyphen_review_hyphen_comment\/subject_typePayload\/Equatable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Equatable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiissues\/components\/schemas\/pull_hyphen_request_hyphen_review_hyphen_comment\/subject_typepayload\/equatable-implementations"
+},
+"doc://GitHubRestAPIIssues/documentation/GitHubRestAPIIssues/Components/Schemas/pull_hyphen_request_hyphen_review_hyphen_comment/subject_typePayload/RawRepresentable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Components\/Schemas\/pull_hyphen_request_hyphen_review_hyphen_comment\/subject_typePayload\/RawRepresentable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "RawRepresentable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiissues\/components\/schemas\/pull_hyphen_request_hyphen_review_hyphen_comment\/subject_typepayload\/rawrepresentable-implementations"
+},
+"doc://GitHubRestAPIIssues/documentation/GitHubRestAPIIssues/Components/Schemas/pull_hyphen_request_hyphen_review_hyphen_comment/subject_typePayload/file": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "file"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Components\/Schemas\/pull_hyphen_request_hyphen_review_hyphen_comment\/subject_typePayload\/file",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.pull_hyphen_request_hyphen_review_hyphen_comment.subject_typePayload.file",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiissues\/components\/schemas\/pull_hyphen_request_hyphen_review_hyphen_comment\/subject_typepayload\/file"
+},
+"doc://GitHubRestAPIIssues/documentation/GitHubRestAPIIssues/Components/Schemas/pull_hyphen_request_hyphen_review_hyphen_comment/subject_typePayload/init(rawValue:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "?("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "rawValue"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Components\/Schemas\/pull_hyphen_request_hyphen_review_hyphen_comment\/subject_typePayload\/init(rawValue:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(rawValue:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiissues\/components\/schemas\/pull_hyphen_request_hyphen_review_hyphen_comment\/subject_typepayload\/init(rawvalue:)"
+},
+"doc://GitHubRestAPIIssues/documentation/GitHubRestAPIIssues/Components/Schemas/pull_hyphen_request_hyphen_review_hyphen_comment/subject_typePayload/line": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "line"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/documentation\/GitHubRestAPIIssues\/Components\/Schemas\/pull_hyphen_request_hyphen_review_hyphen_comment\/subject_typePayload\/line",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.pull_hyphen_request_hyphen_review_hyphen_comment.subject_typePayload.line",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiissues\/components\/schemas\/pull_hyphen_request_hyphen_review_hyphen_comment\/subject_typepayload\/line"
+},
+"doc://GitHubRestAPIIssues/s12CaseIterableP": {
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/s12CaseIterableP",
+  "title" : "Swift.CaseIterable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIIssues/s8SendableP": {
+  "identifier" : "doc:\/\/GitHubRestAPIIssues\/s8SendableP",
+  "title" : "Swift.Sendable",
+  "type" : "unresolvable"
+}
+}
+}

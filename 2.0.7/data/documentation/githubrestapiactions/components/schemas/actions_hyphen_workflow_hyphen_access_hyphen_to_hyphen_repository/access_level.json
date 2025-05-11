@@ -1,0 +1,485 @@
+{
+  "abstract" : [
+    {
+      "text" : "Defines the level of access that workflows outside of the repository have to actions and reusable workflows within the",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "repository.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Components",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Components\/Schemas",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Components\/Schemas\/actions_hyphen_workflow_hyphen_access_hyphen_to_hyphen_repository"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Components\/Schemas\/actions_hyphen_workflow_hyphen_access_hyphen_to_hyphen_repository\/access_level"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:20GitHubRestAPIActions10ComponentsO7SchemasO024actions_hyphen_workflow_h8_access_h4_to_H11_repositoryV0J6_levelAG0j1_M7PayloadOvp",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "var"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "access_level"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:20GitHubRestAPIActions10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:20GitHubRestAPIActions10ComponentsO7SchemasO",
+        "text" : "Schemas"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:20GitHubRestAPIActions10ComponentsO7SchemasO024actions_hyphen_workflow_h8_access_h4_to_H11_repositoryV",
+        "text" : "actions_hyphen_workflow_hyphen_access_hyphen_to_hyphen_repository"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:20GitHubRestAPIActions10ComponentsO7SchemasO024actions_hyphen_workflow_h8_access_h4_to_H11_repositoryV0J13_levelPayloadO",
+        "text" : "access_levelPayload"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIActions"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/actions\/Types.swift#L8733"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Instance Property",
+    "symbolKind" : "property",
+    "title" : "access_level"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "var"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "access_level"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:20GitHubRestAPIActions10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Components\/Schemas",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:20GitHubRestAPIActions10ComponentsO7SchemasO",
+              "text" : "Schemas"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Components\/Schemas\/actions_hyphen_workflow_hyphen_access_hyphen_to_hyphen_repository",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:20GitHubRestAPIActions10ComponentsO7SchemasO024actions_hyphen_workflow_h8_access_h4_to_H11_repositoryV",
+              "text" : "actions_hyphen_workflow_hyphen_access_hyphen_to_hyphen_repository"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Components\/Schemas\/actions_hyphen_workflow_hyphen_access_hyphen_to_hyphen_repository\/access_levelPayload",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:20GitHubRestAPIActions10ComponentsO7SchemasO024actions_hyphen_workflow_h8_access_h4_to_H11_repositoryV0J13_levelPayloadO",
+              "text" : "access_levelPayload"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "code" : "none",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " means the access is only possible from workflows in this repository. ",
+              "type" : "text"
+            },
+            {
+              "code" : "user",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " level access allows sharing across user owned private repositories only. ",
+              "type" : "text"
+            },
+            {
+              "code" : "organization",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " level access allows sharing across the organization.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/components\/schemas\/actions-workflow-access-to-repository\/access_level",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapiactions\/components\/schemas\/actions_hyphen_workflow_hyphen_access_hyphen_to_hyphen_repository\/access_level"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIActions",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/components"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Components/Schemas": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/schemas",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Components\/Schemas",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/components\/schemas"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Components/Schemas/actions_hyphen_workflow_hyphen_access_hyphen_to_hyphen_repository": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "actions_hyphen_workflow_hyphen_access_hyphen_to_hyphen_repository"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Components\/Schemas\/actions_hyphen_workflow_hyphen_access_hyphen_to_hyphen_repository",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "actions_hyphen_workflow_hyphen_access_hyphen_to_hyphen_repository"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.actions_hyphen_workflow_hyphen_access_hyphen_to_hyphen_repository",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/components\/schemas\/actions_hyphen_workflow_hyphen_access_hyphen_to_hyphen_repository"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Components/Schemas/actions_hyphen_workflow_hyphen_access_hyphen_to_hyphen_repository/access_level": {
+  "abstract" : [
+    {
+      "text" : "Defines the level of access that workflows outside of the repository have to actions and reusable workflows within the",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "repository.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "access_level"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIActions10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIActions10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIActions10ComponentsO7SchemasO024actions_hyphen_workflow_h8_access_h4_to_H11_repositoryV",
+      "text" : "actions_hyphen_workflow_hyphen_access_hyphen_to_hyphen_repository"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIActions10ComponentsO7SchemasO024actions_hyphen_workflow_h8_access_h4_to_H11_repositoryV0J13_levelPayloadO",
+      "text" : "access_levelPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Components\/Schemas\/actions_hyphen_workflow_hyphen_access_hyphen_to_hyphen_repository\/access_level",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "access_level",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/components\/schemas\/actions_hyphen_workflow_hyphen_access_hyphen_to_hyphen_repository\/access_level"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Components/Schemas/actions_hyphen_workflow_hyphen_access_hyphen_to_hyphen_repository/access_levelPayload": {
+  "abstract" : [
+    {
+      "text" : "Defines the level of access that workflows outside of the repository have to actions and reusable workflows within the",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "repository.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "access_levelPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Components\/Schemas\/actions_hyphen_workflow_hyphen_access_hyphen_to_hyphen_repository\/access_levelPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "access_levelPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.actions_hyphen_workflow_hyphen_access_hyphen_to_hyphen_repository.access_levelPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/components\/schemas\/actions_hyphen_workflow_hyphen_access_hyphen_to_hyphen_repository\/access_levelpayload"
+}
+}
+}

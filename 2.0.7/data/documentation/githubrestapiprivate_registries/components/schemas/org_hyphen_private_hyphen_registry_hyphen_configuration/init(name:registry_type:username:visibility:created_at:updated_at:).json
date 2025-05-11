@@ -1,0 +1,891 @@
+{
+  "abstract" : [
+    {
+      "text" : "Creates a new ",
+      "type" : "text"
+    },
+    {
+      "code" : "org_hyphen_private_hyphen_registry_hyphen_configuration",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries",
+        "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries\/Components",
+        "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries\/Components\/Schemas",
+        "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries\/Components\/Schemas\/org_hyphen_private_hyphen_registry_hyphen_configuration"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries\/Components\/Schemas\/org_hyphen_private_hyphen_registry_hyphen_configuration\/init(name:registry_type:username:visibility:created_at:updated_at:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:31GitHubRestAPIPrivate_Registries10ComponentsO7SchemasO019org_hyphen_private_i10_registry_I14_configurationV4name0K5_type8username10visibility10created_at08updated_R0AGSS_AG0k1_N7PayloadOSSSgAG0pT0O10Foundation4DateVAUtcfc",
+    "fragments" : [
+      {
+        "kind" : "identifier",
+        "text" : "init"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "name"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SS",
+        "text" : "String"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "registry_type"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:31GitHubRestAPIPrivate_Registries10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:31GitHubRestAPIPrivate_Registries10ComponentsO7SchemasO",
+        "text" : "Schemas"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:31GitHubRestAPIPrivate_Registries10ComponentsO7SchemasO019org_hyphen_private_i10_registry_I14_configurationV",
+        "text" : "org_hyphen_private_hyphen_registry_hyphen_configuration"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:31GitHubRestAPIPrivate_Registries10ComponentsO7SchemasO019org_hyphen_private_i10_registry_I14_configurationV0K12_typePayloadO",
+        "text" : "registry_typePayload"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "username"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SS",
+        "text" : "String"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "visibility"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:31GitHubRestAPIPrivate_Registries10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:31GitHubRestAPIPrivate_Registries10ComponentsO7SchemasO",
+        "text" : "Schemas"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:31GitHubRestAPIPrivate_Registries10ComponentsO7SchemasO019org_hyphen_private_i10_registry_I14_configurationV",
+        "text" : "org_hyphen_private_hyphen_registry_hyphen_configuration"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:31GitHubRestAPIPrivate_Registries10ComponentsO7SchemasO019org_hyphen_private_i10_registry_I14_configurationV17visibilityPayloadO",
+        "text" : "visibilityPayload"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "created_at"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:10Foundation4DateV",
+        "text" : "Date"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "updated_at"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:10Foundation4DateV",
+        "text" : "Date"
+      },
+      {
+        "kind" : "text",
+        "text" : ")"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIPrivate_Registries"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/private-registries\/Types.swift#L477"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Initializer",
+    "symbolKind" : "init",
+    "title" : "init(name:registry_type:username:visibility:created_at:updated_at:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "init"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "name"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:SS",
+              "text" : "String"
+            },
+            {
+              "kind" : "text",
+              "text" : ", "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "registry_type"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:31GitHubRestAPIPrivate_Registries10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries\/Components\/Schemas",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:31GitHubRestAPIPrivate_Registries10ComponentsO7SchemasO",
+              "text" : "Schemas"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries\/Components\/Schemas\/org_hyphen_private_hyphen_registry_hyphen_configuration",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:31GitHubRestAPIPrivate_Registries10ComponentsO7SchemasO019org_hyphen_private_i10_registry_I14_configurationV",
+              "text" : "org_hyphen_private_hyphen_registry_hyphen_configuration"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries\/Components\/Schemas\/org_hyphen_private_hyphen_registry_hyphen_configuration\/registry_typePayload",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:31GitHubRestAPIPrivate_Registries10ComponentsO7SchemasO019org_hyphen_private_i10_registry_I14_configurationV0K12_typePayloadO",
+              "text" : "registry_typePayload"
+            },
+            {
+              "kind" : "text",
+              "text" : ", "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "username"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:SS",
+              "text" : "String"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "visibility"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:31GitHubRestAPIPrivate_Registries10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries\/Components\/Schemas",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:31GitHubRestAPIPrivate_Registries10ComponentsO7SchemasO",
+              "text" : "Schemas"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries\/Components\/Schemas\/org_hyphen_private_hyphen_registry_hyphen_configuration",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:31GitHubRestAPIPrivate_Registries10ComponentsO7SchemasO019org_hyphen_private_i10_registry_I14_configurationV",
+              "text" : "org_hyphen_private_hyphen_registry_hyphen_configuration"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries\/Components\/Schemas\/org_hyphen_private_hyphen_registry_hyphen_configuration\/visibilityPayload",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:31GitHubRestAPIPrivate_Registries10ComponentsO7SchemasO019org_hyphen_private_i10_registry_I14_configurationV17visibilityPayloadO",
+              "text" : "visibilityPayload"
+            },
+            {
+              "kind" : "text",
+              "text" : ", "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "created_at"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:10Foundation4DateV",
+              "text" : "Date"
+            },
+            {
+              "kind" : "text",
+              "text" : ", "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "updated_at"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:10Foundation4DateV",
+              "text" : "Date"
+            },
+            {
+              "kind" : "text",
+              "text" : ")"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "kind" : "parameters",
+      "parameters" : [
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The name of the private registry configuration.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "name"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The registry type.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "registry_type"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The username to use when authenticating with the private registry.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "username"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Which type of organization repositories have access to the private registry.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "visibility"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "created_at"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "updated_at"
+        }
+      ]
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapiprivate_registries\/components\/schemas\/org_hyphen_private_hyphen_registry_hyphen_configuration\/init(name:registry_type:username:visibility:created_at:updated_at:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIPrivate_Registries/documentation/GitHubRestAPIPrivate_Registries": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIPrivate_Registries",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiprivate_registries"
+},
+"doc://GitHubRestAPIPrivate_Registries/documentation/GitHubRestAPIPrivate_Registries/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiprivate_registries\/components"
+},
+"doc://GitHubRestAPIPrivate_Registries/documentation/GitHubRestAPIPrivate_Registries/Components/Schemas": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/schemas",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries\/Components\/Schemas",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiprivate_registries\/components\/schemas"
+},
+"doc://GitHubRestAPIPrivate_Registries/documentation/GitHubRestAPIPrivate_Registries/Components/Schemas/org_hyphen_private_hyphen_registry_hyphen_configuration": {
+  "abstract" : [
+    {
+      "text" : "Private registry configuration for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "org_hyphen_private_hyphen_registry_hyphen_configuration"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries\/Components\/Schemas\/org_hyphen_private_hyphen_registry_hyphen_configuration",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "org_hyphen_private_hyphen_registry_hyphen_configuration"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.org_hyphen_private_hyphen_registry_hyphen_configuration",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiprivate_registries\/components\/schemas\/org_hyphen_private_hyphen_registry_hyphen_configuration"
+},
+"doc://GitHubRestAPIPrivate_Registries/documentation/GitHubRestAPIPrivate_Registries/Components/Schemas/org_hyphen_private_hyphen_registry_hyphen_configuration/init(name:registry_type:username:visibility:created_at:updated_at:)": {
+  "abstract" : [
+    {
+      "text" : "Creates a new ",
+      "type" : "text"
+    },
+    {
+      "code" : "org_hyphen_private_hyphen_registry_hyphen_configuration",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "name"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "registry_type"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:31GitHubRestAPIPrivate_Registries10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:31GitHubRestAPIPrivate_Registries10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:31GitHubRestAPIPrivate_Registries10ComponentsO7SchemasO019org_hyphen_private_i10_registry_I14_configurationV",
+      "text" : "org_hyphen_private_hyphen_registry_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:31GitHubRestAPIPrivate_Registries10ComponentsO7SchemasO019org_hyphen_private_i10_registry_I14_configurationV0K12_typePayloadO",
+      "text" : "registry_typePayload"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "username"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "visibility"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:31GitHubRestAPIPrivate_Registries10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:31GitHubRestAPIPrivate_Registries10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:31GitHubRestAPIPrivate_Registries10ComponentsO7SchemasO019org_hyphen_private_i10_registry_I14_configurationV",
+      "text" : "org_hyphen_private_hyphen_registry_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:31GitHubRestAPIPrivate_Registries10ComponentsO7SchemasO019org_hyphen_private_i10_registry_I14_configurationV17visibilityPayloadO",
+      "text" : "visibilityPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "created_at"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:10Foundation4DateV",
+      "text" : "Date"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "updated_at"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:10Foundation4DateV",
+      "text" : "Date"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries\/Components\/Schemas\/org_hyphen_private_hyphen_registry_hyphen_configuration\/init(name:registry_type:username:visibility:created_at:updated_at:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(name:registry_type:username:visibility:created_at:updated_at:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiprivate_registries\/components\/schemas\/org_hyphen_private_hyphen_registry_hyphen_configuration\/init(name:registry_type:username:visibility:created_at:updated_at:)"
+},
+"doc://GitHubRestAPIPrivate_Registries/documentation/GitHubRestAPIPrivate_Registries/Components/Schemas/org_hyphen_private_hyphen_registry_hyphen_configuration/registry_typePayload": {
+  "abstract" : [
+    {
+      "text" : "The registry type.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "registry_typePayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries\/Components\/Schemas\/org_hyphen_private_hyphen_registry_hyphen_configuration\/registry_typePayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "registry_typePayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.org_hyphen_private_hyphen_registry_hyphen_configuration.registry_typePayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiprivate_registries\/components\/schemas\/org_hyphen_private_hyphen_registry_hyphen_configuration\/registry_typepayload"
+},
+"doc://GitHubRestAPIPrivate_Registries/documentation/GitHubRestAPIPrivate_Registries/Components/Schemas/org_hyphen_private_hyphen_registry_hyphen_configuration/visibilityPayload": {
+  "abstract" : [
+    {
+      "text" : "Which type of organization repositories have access to the private registry.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "visibilityPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries\/Components\/Schemas\/org_hyphen_private_hyphen_registry_hyphen_configuration\/visibilityPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "visibilityPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.org_hyphen_private_hyphen_registry_hyphen_configuration.visibilityPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiprivate_registries\/components\/schemas\/org_hyphen_private_hyphen_registry_hyphen_configuration\/visibilitypayload"
+}
+}
+}

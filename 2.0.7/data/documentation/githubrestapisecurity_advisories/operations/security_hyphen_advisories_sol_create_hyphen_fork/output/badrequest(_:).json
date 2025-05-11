@@ -1,0 +1,506 @@
+{
+  "abstract" : [
+    {
+      "text" : "Bad Request",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories",
+        "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Operations",
+        "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Operations\/security_hyphen_advisories_sol_create_hyphen_fork",
+        "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Operations\/security_hyphen_advisories_sol_create_hyphen_fork\/Output"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Operations\/security_hyphen_advisories_sol_create_hyphen_fork\/Output\/badRequest(_:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:32GitHubRestAPISecurity_Advisories10OperationsO038security_hyphen_advisories_sol_create_H5_forkO6OutputO10badRequestyAgA10ComponentsO9ResponsesO0N8_requestVcAGmF",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "case"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "badRequest"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:32GitHubRestAPISecurity_Advisories10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:32GitHubRestAPISecurity_Advisories10ComponentsO9ResponsesO",
+        "text" : "Responses"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:32GitHubRestAPISecurity_Advisories10ComponentsO9ResponsesO11bad_requestV",
+        "text" : "bad_request"
+      },
+      {
+        "kind" : "text",
+        "text" : ")"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPISecurity_Advisories"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/security-advisories\/Types.swift#L8845"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Case",
+    "symbolKind" : "case",
+    "title" : "Operations.security_hyphen_advisories_sol_create_hyphen_fork.Output.badRequest(_:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "case"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "badRequest"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:32GitHubRestAPISecurity_Advisories10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Components\/Responses",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:32GitHubRestAPISecurity_Advisories10ComponentsO9ResponsesO",
+              "text" : "Responses"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Components\/Responses\/bad_request",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:32GitHubRestAPISecurity_Advisories10ComponentsO9ResponsesO11bad_requestV",
+              "text" : "bad_request"
+            },
+            {
+              "kind" : "text",
+              "text" : ")"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/paths\/\/repos\/{owner}\/{repo}\/security-advisories\/{ghsa_id}\/forks\/post(security-advisories\/create-fork)\/responses\/400",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "HTTP response code: ",
+              "type" : "text"
+            },
+            {
+              "code" : "400 badRequest",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ".",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapisecurity_advisories\/operations\/security_hyphen_advisories_sol_create_hyphen_fork\/output\/badrequest(_:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPISecurity_Advisories/documentation/GitHubRestAPISecurity_Advisories": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPISecurity_Advisories",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecurity_advisories"
+},
+"doc://GitHubRestAPISecurity_Advisories/documentation/GitHubRestAPISecurity_Advisories/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecurity_advisories\/components"
+},
+"doc://GitHubRestAPISecurity_Advisories/documentation/GitHubRestAPISecurity_Advisories/Components/Responses": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/responses",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Responses"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Components\/Responses",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Responses"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Responses",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecurity_advisories\/components\/responses"
+},
+"doc://GitHubRestAPISecurity_Advisories/documentation/GitHubRestAPISecurity_Advisories/Components/Responses/bad_request": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "bad_request"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Components\/Responses\/bad_request",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "bad_request"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Responses.bad_request",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecurity_advisories\/components\/responses\/bad_request"
+},
+"doc://GitHubRestAPISecurity_Advisories/documentation/GitHubRestAPISecurity_Advisories/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecurity_advisories\/operations"
+},
+"doc://GitHubRestAPISecurity_Advisories/documentation/GitHubRestAPISecurity_Advisories/Operations/security_hyphen_advisories_sol_create_hyphen_fork": {
+  "abstract" : [
+    {
+      "text" : "Create a temporary private fork",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "security_hyphen_advisories_sol_create_hyphen_fork"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Operations\/security_hyphen_advisories_sol_create_hyphen_fork",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "security_hyphen_advisories_sol_create_hyphen_fork"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.security_hyphen_advisories_sol_create_hyphen_fork",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecurity_advisories\/operations\/security_hyphen_advisories_sol_create_hyphen_fork"
+},
+"doc://GitHubRestAPISecurity_Advisories/documentation/GitHubRestAPISecurity_Advisories/Operations/security_hyphen_advisories_sol_create_hyphen_fork/Output": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Operations\/security_hyphen_advisories_sol_create_hyphen_fork\/Output",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.security_hyphen_advisories_sol_create_hyphen_fork.Output",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecurity_advisories\/operations\/security_hyphen_advisories_sol_create_hyphen_fork\/output"
+},
+"doc://GitHubRestAPISecurity_Advisories/documentation/GitHubRestAPISecurity_Advisories/Operations/security_hyphen_advisories_sol_create_hyphen_fork/Output/badRequest(_:)": {
+  "abstract" : [
+    {
+      "text" : "Bad Request",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "badRequest"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:32GitHubRestAPISecurity_Advisories10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:32GitHubRestAPISecurity_Advisories10ComponentsO9ResponsesO",
+      "text" : "Responses"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:32GitHubRestAPISecurity_Advisories10ComponentsO9ResponsesO11bad_requestV",
+      "text" : "bad_request"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Operations\/security_hyphen_advisories_sol_create_hyphen_fork\/Output\/badRequest(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Operations.security_hyphen_advisories_sol_create_hyphen_fork.Output.badRequest(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecurity_advisories\/operations\/security_hyphen_advisories_sol_create_hyphen_fork\/output\/badrequest(_:)"
+}
+}
+}

@@ -1,0 +1,958 @@
+{
+  "abstract" : [
+    {
+      "text" : "Creates a new ",
+      "type" : "text"
+    },
+    {
+      "code" : "Query",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions",
+        "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Operations",
+        "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Operations\/reactions_sol_list_hyphen_for_hyphen_issue_hyphen_comment",
+        "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Operations\/reactions_sol_list_hyphen_for_hyphen_issue_hyphen_comment\/Input",
+        "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Operations\/reactions_sol_list_hyphen_for_hyphen_issue_hyphen_comment\/Input\/Query-swift.struct"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Operations\/reactions_sol_list_hyphen_for_hyphen_issue_hyphen_comment\/Input\/Query-swift.struct\/init(content:per_page:page:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:22GitHubRestAPIReactions10OperationsO030reactions_sol_list_hyphen_for_i7_issue_I8_commentO5InputV5QueryV7content8per_page0Q0A2I0O7PayloadOSg_SiSgAPtcfc",
+    "fragments" : [
+      {
+        "kind" : "identifier",
+        "text" : "init"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "content"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:22GitHubRestAPIReactions10OperationsO",
+        "text" : "Operations"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:22GitHubRestAPIReactions10OperationsO030reactions_sol_list_hyphen_for_i7_issue_I8_commentO",
+        "text" : "reactions_sol_list_hyphen_for_hyphen_issue_hyphen_comment"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:22GitHubRestAPIReactions10OperationsO030reactions_sol_list_hyphen_for_i7_issue_I8_commentO5InputV",
+        "text" : "Input"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:22GitHubRestAPIReactions10OperationsO030reactions_sol_list_hyphen_for_i7_issue_I8_commentO5InputV5QueryV",
+        "text" : "Query"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:22GitHubRestAPIReactions10OperationsO030reactions_sol_list_hyphen_for_i7_issue_I8_commentO5InputV5QueryV14contentPayloadO",
+        "text" : "contentPayload"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "per_page"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:22GitHubRestAPIReactions10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:22GitHubRestAPIReactions10ComponentsO10ParametersO",
+        "text" : "Parameters"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:22GitHubRestAPIReactions10ComponentsO10ParametersO15per_hyphen_pagea",
+        "text" : "per_hyphen_page"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "page"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:22GitHubRestAPIReactions10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:22GitHubRestAPIReactions10ComponentsO10ParametersO",
+        "text" : "Parameters"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:22GitHubRestAPIReactions10ComponentsO10ParametersO4pagea",
+        "text" : "page"
+      },
+      {
+        "kind" : "text",
+        "text" : "?)"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIReactions"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/reactions\/Types.swift#L3076"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Initializer",
+    "symbolKind" : "init",
+    "title" : "init(content:per_page:page:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "init"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "content"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Operations",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:22GitHubRestAPIReactions10OperationsO",
+              "text" : "Operations"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Operations\/reactions_sol_list_hyphen_for_hyphen_issue_hyphen_comment",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:22GitHubRestAPIReactions10OperationsO030reactions_sol_list_hyphen_for_i7_issue_I8_commentO",
+              "text" : "reactions_sol_list_hyphen_for_hyphen_issue_hyphen_comment"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Operations\/reactions_sol_list_hyphen_for_hyphen_issue_hyphen_comment\/Input",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:22GitHubRestAPIReactions10OperationsO030reactions_sol_list_hyphen_for_i7_issue_I8_commentO5InputV",
+              "text" : "Input"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Operations\/reactions_sol_list_hyphen_for_hyphen_issue_hyphen_comment\/Input\/Query-swift.struct",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:22GitHubRestAPIReactions10OperationsO030reactions_sol_list_hyphen_for_i7_issue_I8_commentO5InputV5QueryV",
+              "text" : "Query"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Operations\/reactions_sol_list_hyphen_for_hyphen_issue_hyphen_comment\/Input\/Query-swift.struct\/contentPayload",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:22GitHubRestAPIReactions10OperationsO030reactions_sol_list_hyphen_for_i7_issue_I8_commentO5InputV5QueryV14contentPayloadO",
+              "text" : "contentPayload"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "per_page"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:22GitHubRestAPIReactions10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Components\/Parameters",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:22GitHubRestAPIReactions10ComponentsO10ParametersO",
+              "text" : "Parameters"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Components\/Parameters\/per_hyphen_page",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:22GitHubRestAPIReactions10ComponentsO10ParametersO15per_hyphen_pagea",
+              "text" : "per_hyphen_page"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "page"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:22GitHubRestAPIReactions10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Components\/Parameters",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:22GitHubRestAPIReactions10ComponentsO10ParametersO",
+              "text" : "Parameters"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Components\/Parameters\/page",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:22GitHubRestAPIReactions10ComponentsO10ParametersO4pagea",
+              "text" : "page"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil)"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "kind" : "parameters",
+      "parameters" : [
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Returns a single ",
+                  "type" : "text"
+                },
+                {
+                  "identifier" : "https:\/\/docs.github.com\/rest\/reactions\/reactions#about-reactions",
+                  "isActive" : true,
+                  "type" : "reference"
+                },
+                {
+                  "text" : ". Omit this parameter to list all reactions to an issue comment.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "content"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The number of results per page (max 100). For more information, see “",
+                  "type" : "text"
+                },
+                {
+                  "identifier" : "https:\/\/docs.github.com\/rest\/using-the-rest-api\/using-pagination-in-the-rest-api",
+                  "isActive" : true,
+                  "type" : "reference"
+                },
+                {
+                  "text" : ".”",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "per_page"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The page number of the results to fetch. For more information, see “",
+                  "type" : "text"
+                },
+                {
+                  "identifier" : "https:\/\/docs.github.com\/rest\/using-the-rest-api\/using-pagination-in-the-rest-api",
+                  "isActive" : true,
+                  "type" : "reference"
+                },
+                {
+                  "text" : ".”",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "page"
+        }
+      ]
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapireactions\/operations\/reactions_sol_list_hyphen_for_hyphen_issue_hyphen_comment\/input\/query-swift.struct\/init(content:per_page:page:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIReactions/documentation/GitHubRestAPIReactions": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIReactions",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapireactions"
+},
+"doc://GitHubRestAPIReactions/documentation/GitHubRestAPIReactions/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapireactions\/components"
+},
+"doc://GitHubRestAPIReactions/documentation/GitHubRestAPIReactions/Components/Parameters": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/parameters",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Parameters"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Components\/Parameters",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Parameters"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapireactions\/components\/parameters"
+},
+"doc://GitHubRestAPIReactions/documentation/GitHubRestAPIReactions/Components/Parameters/page": {
+  "abstract" : [
+    {
+      "text" : "The page number of the results to fetch. For more information, see “",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/docs.github.com\/rest\/using-the-rest-api\/using-pagination-in-the-rest-api",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ".”",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "page"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Components\/Parameters\/page",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "page"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.page",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapireactions\/components\/parameters\/page"
+},
+"doc://GitHubRestAPIReactions/documentation/GitHubRestAPIReactions/Components/Parameters/per_hyphen_page": {
+  "abstract" : [
+    {
+      "text" : "The number of results per page (max 100). For more information, see “",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/docs.github.com\/rest\/using-the-rest-api\/using-pagination-in-the-rest-api",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ".”",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "per_hyphen_page"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Components\/Parameters\/per_hyphen_page",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "per_hyphen_page"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.per_hyphen_page",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapireactions\/components\/parameters\/per_hyphen_page"
+},
+"doc://GitHubRestAPIReactions/documentation/GitHubRestAPIReactions/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapireactions\/operations"
+},
+"doc://GitHubRestAPIReactions/documentation/GitHubRestAPIReactions/Operations/reactions_sol_list_hyphen_for_hyphen_issue_hyphen_comment": {
+  "abstract" : [
+    {
+      "text" : "List reactions for an issue comment",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "reactions_sol_list_hyphen_for_hyphen_issue_hyphen_comment"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Operations\/reactions_sol_list_hyphen_for_hyphen_issue_hyphen_comment",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "reactions_sol_list_hyphen_for_hyphen_issue_hyphen_comment"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.reactions_sol_list_hyphen_for_hyphen_issue_hyphen_comment",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapireactions\/operations\/reactions_sol_list_hyphen_for_hyphen_issue_hyphen_comment"
+},
+"doc://GitHubRestAPIReactions/documentation/GitHubRestAPIReactions/Operations/reactions_sol_list_hyphen_for_hyphen_issue_hyphen_comment/Input": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Operations\/reactions_sol_list_hyphen_for_hyphen_issue_hyphen_comment\/Input",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.reactions_sol_list_hyphen_for_hyphen_issue_hyphen_comment.Input",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapireactions\/operations\/reactions_sol_list_hyphen_for_hyphen_issue_hyphen_comment\/input"
+},
+"doc://GitHubRestAPIReactions/documentation/GitHubRestAPIReactions/Operations/reactions_sol_list_hyphen_for_hyphen_issue_hyphen_comment/Input/Query-swift.struct": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Query"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Operations\/reactions_sol_list_hyphen_for_hyphen_issue_hyphen_comment\/Input\/Query-swift.struct",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Query"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.reactions_sol_list_hyphen_for_hyphen_issue_hyphen_comment.Input.Query",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapireactions\/operations\/reactions_sol_list_hyphen_for_hyphen_issue_hyphen_comment\/input\/query-swift.struct"
+},
+"doc://GitHubRestAPIReactions/documentation/GitHubRestAPIReactions/Operations/reactions_sol_list_hyphen_for_hyphen_issue_hyphen_comment/Input/Query-swift.struct/contentPayload": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "contentPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Operations\/reactions_sol_list_hyphen_for_hyphen_issue_hyphen_comment\/Input\/Query-swift.struct\/contentPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "contentPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.reactions_sol_list_hyphen_for_hyphen_issue_hyphen_comment.Input.Query.contentPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapireactions\/operations\/reactions_sol_list_hyphen_for_hyphen_issue_hyphen_comment\/input\/query-swift.struct\/contentpayload"
+},
+"doc://GitHubRestAPIReactions/documentation/GitHubRestAPIReactions/Operations/reactions_sol_list_hyphen_for_hyphen_issue_hyphen_comment/Input/Query-swift.struct/init(content:per_page:page:)": {
+  "abstract" : [
+    {
+      "text" : "Creates a new ",
+      "type" : "text"
+    },
+    {
+      "code" : "Query",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "content"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPIReactions10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPIReactions10OperationsO030reactions_sol_list_hyphen_for_i7_issue_I8_commentO",
+      "text" : "reactions_sol_list_hyphen_for_hyphen_issue_hyphen_comment"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPIReactions10OperationsO030reactions_sol_list_hyphen_for_i7_issue_I8_commentO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPIReactions10OperationsO030reactions_sol_list_hyphen_for_i7_issue_I8_commentO5InputV5QueryV",
+      "text" : "Query"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPIReactions10OperationsO030reactions_sol_list_hyphen_for_i7_issue_I8_commentO5InputV5QueryV14contentPayloadO",
+      "text" : "contentPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "per_page"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPIReactions10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPIReactions10ComponentsO10ParametersO",
+      "text" : "Parameters"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPIReactions10ComponentsO10ParametersO15per_hyphen_pagea",
+      "text" : "per_hyphen_page"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "page"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPIReactions10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPIReactions10ComponentsO10ParametersO",
+      "text" : "Parameters"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPIReactions10ComponentsO10ParametersO4pagea",
+      "text" : "page"
+    },
+    {
+      "kind" : "text",
+      "text" : "?)"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Operations\/reactions_sol_list_hyphen_for_hyphen_issue_hyphen_comment\/Input\/Query-swift.struct\/init(content:per_page:page:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(content:per_page:page:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapireactions\/operations\/reactions_sol_list_hyphen_for_hyphen_issue_hyphen_comment\/input\/query-swift.struct\/init(content:per_page:page:)"
+},
+"https://docs.github.com/rest/reactions/reactions#about-reactions": {
+  "identifier" : "https:\/\/docs.github.com\/rest\/reactions\/reactions#about-reactions",
+  "title" : "reaction type",
+  "titleInlineContent" : [
+    {
+      "text" : "reaction type",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/docs.github.com\/rest\/reactions\/reactions#about-reactions"
+},
+"https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api": {
+  "identifier" : "https:\/\/docs.github.com\/rest\/using-the-rest-api\/using-pagination-in-the-rest-api",
+  "title" : "Using pagination in the REST API",
+  "titleInlineContent" : [
+    {
+      "text" : "Using pagination in the REST API",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/docs.github.com\/rest\/using-the-rest-api\/using-pagination-in-the-rest-api"
+}
+}
+}

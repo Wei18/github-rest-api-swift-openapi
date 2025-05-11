@@ -1,0 +1,316 @@
+{
+  "abstract" : [
+    {
+      "text" : "The Base64 encoded public key.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas\/codespaces_hyphen_user_hyphen_public_hyphen_key"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas\/codespaces_hyphen_user_hyphen_public_hyphen_key\/key"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:23GitHubRestAPICodespaces10ComponentsO7SchemasO023codespaces_hyphen_user_h8_public_H4_keyV0K0SSvp",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "var"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "key"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SS",
+        "text" : "String"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPICodespaces"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/codespaces\/Types.swift#L5863"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Instance Property",
+    "symbolKind" : "property",
+    "title" : "key"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "var"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "key"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:SS",
+              "text" : "String"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/components\/schemas\/codespaces-user-public-key\/key",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapicodespaces\/components\/schemas\/codespaces_hyphen_user_hyphen_public_hyphen_key\/key"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPICodespaces",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/components"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Components/Schemas": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/schemas",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/components\/schemas"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Components/Schemas/codespaces_hyphen_user_hyphen_public_hyphen_key": {
+  "abstract" : [
+    {
+      "text" : "The public key used for setting user Codespaces’ Secrets.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "codespaces_hyphen_user_hyphen_public_hyphen_key"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas\/codespaces_hyphen_user_hyphen_public_hyphen_key",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "codespaces_hyphen_user_hyphen_public_hyphen_key"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.codespaces_hyphen_user_hyphen_public_hyphen_key",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/components\/schemas\/codespaces_hyphen_user_hyphen_public_hyphen_key"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Components/Schemas/codespaces_hyphen_user_hyphen_public_hyphen_key/key": {
+  "abstract" : [
+    {
+      "text" : "The Base64 encoded public key.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "key"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Components\/Schemas\/codespaces_hyphen_user_hyphen_public_hyphen_key\/key",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "key",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/components\/schemas\/codespaces_hyphen_user_hyphen_public_hyphen_key\/key"
+}
+}
+}

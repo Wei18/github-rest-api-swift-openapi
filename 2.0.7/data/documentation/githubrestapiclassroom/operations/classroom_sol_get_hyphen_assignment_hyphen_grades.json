@@ -1,0 +1,420 @@
+{
+  "abstract" : [
+    {
+      "text" : "Get assignment grades",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIClassroom\/documentation\/GitHubRestAPIClassroom",
+        "doc:\/\/GitHubRestAPIClassroom\/documentation\/GitHubRestAPIClassroom\/Operations"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIClassroom\/documentation\/GitHubRestAPIClassroom\/Operations\/classroom_sol_get_hyphen_assignment_hyphen_grades"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:22GitHubRestAPIClassroom10OperationsO036classroom_sol_get_hyphen_assignment_I7_gradesO",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "enum"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "classroom_sol_get_hyphen_assignment_hyphen_grades"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIClassroom"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "classroom_sol_get_hyphen_assignment_hyphen_grades"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/classroom\/Types.swift#L1340"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Enumeration",
+    "symbolKind" : "enum",
+    "title" : "Operations.classroom_sol_get_hyphen_assignment_hyphen_grades"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "enum"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "classroom_sol_get_hyphen_assignment_hyphen_grades"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Gets grades for a GitHub Classroom assignment. Grades will only be returned if the current user is an administrator of the GitHub Classroom for the assignment.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "HTTP ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "GET \/assignments\/{assignment_id}\/grades",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/paths\/\/assignments\/{assignment_id}\/grades\/get(classroom\/get-assignment-grades)",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIClassroom\/documentation\/GitHubRestAPIClassroom\/Operations\/classroom_sol_get_hyphen_assignment_hyphen_grades\/Input"
+      ],
+      "title" : "Structures"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIClassroom\/documentation\/GitHubRestAPIClassroom\/Operations\/classroom_sol_get_hyphen_assignment_hyphen_grades\/id"
+      ],
+      "title" : "Type Properties"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIClassroom\/documentation\/GitHubRestAPIClassroom\/Operations\/classroom_sol_get_hyphen_assignment_hyphen_grades\/AcceptableContentType",
+        "doc:\/\/GitHubRestAPIClassroom\/documentation\/GitHubRestAPIClassroom\/Operations\/classroom_sol_get_hyphen_assignment_hyphen_grades\/Output"
+      ],
+      "title" : "Enumerations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapiclassroom\/operations\/classroom_sol_get_hyphen_assignment_hyphen_grades"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIClassroom/documentation/GitHubRestAPIClassroom": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIClassroom\/documentation\/GitHubRestAPIClassroom",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIClassroom",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiclassroom"
+},
+"doc://GitHubRestAPIClassroom/documentation/GitHubRestAPIClassroom/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIClassroom\/documentation\/GitHubRestAPIClassroom\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiclassroom\/operations"
+},
+"doc://GitHubRestAPIClassroom/documentation/GitHubRestAPIClassroom/Operations/classroom_sol_get_hyphen_assignment_hyphen_grades": {
+  "abstract" : [
+    {
+      "text" : "Get assignment grades",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "classroom_sol_get_hyphen_assignment_hyphen_grades"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIClassroom\/documentation\/GitHubRestAPIClassroom\/Operations\/classroom_sol_get_hyphen_assignment_hyphen_grades",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "classroom_sol_get_hyphen_assignment_hyphen_grades"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.classroom_sol_get_hyphen_assignment_hyphen_grades",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiclassroom\/operations\/classroom_sol_get_hyphen_assignment_hyphen_grades"
+},
+"doc://GitHubRestAPIClassroom/documentation/GitHubRestAPIClassroom/Operations/classroom_sol_get_hyphen_assignment_hyphen_grades/AcceptableContentType": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AcceptableContentType"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIClassroom\/documentation\/GitHubRestAPIClassroom\/Operations\/classroom_sol_get_hyphen_assignment_hyphen_grades\/AcceptableContentType",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AcceptableContentType"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.classroom_sol_get_hyphen_assignment_hyphen_grades.AcceptableContentType",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiclassroom\/operations\/classroom_sol_get_hyphen_assignment_hyphen_grades\/acceptablecontenttype"
+},
+"doc://GitHubRestAPIClassroom/documentation/GitHubRestAPIClassroom/Operations/classroom_sol_get_hyphen_assignment_hyphen_grades/Input": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIClassroom\/documentation\/GitHubRestAPIClassroom\/Operations\/classroom_sol_get_hyphen_assignment_hyphen_grades\/Input",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.classroom_sol_get_hyphen_assignment_hyphen_grades.Input",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiclassroom\/operations\/classroom_sol_get_hyphen_assignment_hyphen_grades\/input"
+},
+"doc://GitHubRestAPIClassroom/documentation/GitHubRestAPIClassroom/Operations/classroom_sol_get_hyphen_assignment_hyphen_grades/Output": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIClassroom\/documentation\/GitHubRestAPIClassroom\/Operations\/classroom_sol_get_hyphen_assignment_hyphen_grades\/Output",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.classroom_sol_get_hyphen_assignment_hyphen_grades.Output",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiclassroom\/operations\/classroom_sol_get_hyphen_assignment_hyphen_grades\/output"
+},
+"doc://GitHubRestAPIClassroom/documentation/GitHubRestAPIClassroom/Operations/classroom_sol_get_hyphen_assignment_hyphen_grades/id": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "id"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIClassroom\/documentation\/GitHubRestAPIClassroom\/Operations\/classroom_sol_get_hyphen_assignment_hyphen_grades\/id",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "id",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiclassroom\/operations\/classroom_sol_get_hyphen_assignment_hyphen_grades\/id"
+}
+}
+}

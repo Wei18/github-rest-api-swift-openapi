@@ -1,0 +1,1727 @@
+{
+  "abstract" : [
+    {
+      "text" : "Groups of organization members that gives permissions on specified repositories.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Components",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Components\/Schemas"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Components\/Schemas\/team_hyphen_full"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:18GitHubRestAPITeams10ComponentsO7SchemasO16team_hyphen_fullV",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "struct"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "team_hyphen_full"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPITeams"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "team_hyphen_full"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/teams\/Types.swift#L4113"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Structure",
+    "symbolKind" : "struct",
+    "title" : "Components.Schemas.team_hyphen_full"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "struct"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "team_hyphen_full"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/components\/schemas\/team-full",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPITeams\/Se",
+        "doc:\/\/GitHubRestAPITeams\/SE",
+        "doc:\/\/GitHubRestAPITeams\/SQ",
+        "doc:\/\/GitHubRestAPITeams\/SH",
+        "doc:\/\/GitHubRestAPITeams\/s8SendableP"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Components\/Schemas\/team_hyphen_full\/init(from:)",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Components\/Schemas\/team_hyphen_full\/init(id:node_id:url:html_url:name:slug:description:privacy:notification_setting:permission:members_url:repositories_url:parent:members_count:repos_count:created_at:updated_at:organization:ldap_dn:)"
+      ],
+      "title" : "Initializers"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Components\/Schemas\/team_hyphen_full\/created_at",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Components\/Schemas\/team_hyphen_full\/description",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Components\/Schemas\/team_hyphen_full\/html_url",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Components\/Schemas\/team_hyphen_full\/id",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Components\/Schemas\/team_hyphen_full\/ldap_dn",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Components\/Schemas\/team_hyphen_full\/members_count",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Components\/Schemas\/team_hyphen_full\/members_url",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Components\/Schemas\/team_hyphen_full\/name",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Components\/Schemas\/team_hyphen_full\/node_id",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Components\/Schemas\/team_hyphen_full\/notification_setting",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Components\/Schemas\/team_hyphen_full\/organization",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Components\/Schemas\/team_hyphen_full\/parent",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Components\/Schemas\/team_hyphen_full\/permission",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Components\/Schemas\/team_hyphen_full\/privacy",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Components\/Schemas\/team_hyphen_full\/repos_count",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Components\/Schemas\/team_hyphen_full\/repositories_url",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Components\/Schemas\/team_hyphen_full\/slug",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Components\/Schemas\/team_hyphen_full\/updated_at",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Components\/Schemas\/team_hyphen_full\/url"
+      ],
+      "title" : "Instance Properties"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Components\/Schemas\/team_hyphen_full\/CodingKeys",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Components\/Schemas\/team_hyphen_full\/notification_settingPayload",
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Components\/Schemas\/team_hyphen_full\/privacyPayload"
+      ],
+      "title" : "Enumerations"
+    },
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Components\/Schemas\/team_hyphen_full\/Equatable-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapiteams\/components\/schemas\/team_hyphen_full"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPITeams/SE": {
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/SE",
+  "title" : "Swift.Encodable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPITeams/SH": {
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/SH",
+  "title" : "Swift.Hashable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPITeams/SQ": {
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/SQ",
+  "title" : "Swift.Equatable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPITeams/Se": {
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/Se",
+  "title" : "Swift.Decodable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPITeams",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/components"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Components/Schemas": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/schemas",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Components\/Schemas",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/components\/schemas"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Components/Schemas/team_hyphen_full": {
+  "abstract" : [
+    {
+      "text" : "Groups of organization members that gives permissions on specified repositories.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "team_hyphen_full"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Components\/Schemas\/team_hyphen_full",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "team_hyphen_full"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.team_hyphen_full",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/components\/schemas\/team_hyphen_full"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Components/Schemas/team_hyphen_full/CodingKeys": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Components\/Schemas\/team_hyphen_full\/CodingKeys",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.team_hyphen_full.CodingKeys",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/components\/schemas\/team_hyphen_full\/codingkeys"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Components/Schemas/team_hyphen_full/Equatable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Components\/Schemas\/team_hyphen_full\/Equatable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Equatable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/components\/schemas\/team_hyphen_full\/equatable-implementations"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Components/Schemas/team_hyphen_full/created_at": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "created_at"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:10Foundation4DateV",
+      "text" : "Date"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Components\/Schemas\/team_hyphen_full\/created_at",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "created_at",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/components\/schemas\/team_hyphen_full\/created_at"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Components/Schemas/team_hyphen_full/description": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "description"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Components\/Schemas\/team_hyphen_full\/description",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "description",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/components\/schemas\/team_hyphen_full\/description"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Components/Schemas/team_hyphen_full/html_url": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "html_url"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Components\/Schemas\/team_hyphen_full\/html_url",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "html_url",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/components\/schemas\/team_hyphen_full\/html_url"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Components/Schemas/team_hyphen_full/id": {
+  "abstract" : [
+    {
+      "text" : "Unique identifier of the team",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "id"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Components\/Schemas\/team_hyphen_full\/id",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "id",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/components\/schemas\/team_hyphen_full\/id"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Components/Schemas/team_hyphen_full/init(from:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "from"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:s7DecoderP",
+      "text" : "Decoder"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Components\/Schemas\/team_hyphen_full\/init(from:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(from:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/components\/schemas\/team_hyphen_full\/init(from:)"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Components/Schemas/team_hyphen_full/init(id:node_id:url:html_url:name:slug:description:privacy:notification_setting:permission:members_url:repositories_url:parent:members_count:repos_count:created_at:updated_at:organization:ldap_dn:)": {
+  "abstract" : [
+    {
+      "text" : "Creates a new ",
+      "type" : "text"
+    },
+    {
+      "code" : "team_hyphen_full",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "id"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "node_id"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "url"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "html_url"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "name"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "slug"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "description"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "privacy"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10ComponentsO7SchemasO16team_hyphen_fullV",
+      "text" : "team_hyphen_full"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10ComponentsO7SchemasO16team_hyphen_fullV14privacyPayloadO",
+      "text" : "privacyPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "notification_setting"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10ComponentsO7SchemasO16team_hyphen_fullV",
+      "text" : "team_hyphen_full"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10ComponentsO7SchemasO16team_hyphen_fullV27notification_settingPayloadO",
+      "text" : "notification_settingPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "permission"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "members_url"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "repositories_url"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "parent"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10ComponentsO7SchemasO021nullable_hyphen_team_H7_simpleV",
+      "text" : "nullable_hyphen_team_hyphen_simple"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "members_count"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "repos_count"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "created_at"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:10Foundation4DateV",
+      "text" : "Date"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "updated_at"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:10Foundation4DateV",
+      "text" : "Date"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "organization"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10ComponentsO7SchemasO24team_hyphen_organizationV",
+      "text" : "team_hyphen_organization"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "ldap_dn"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?)"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Components\/Schemas\/team_hyphen_full\/init(id:node_id:url:html_url:name:slug:description:privacy:notification_setting:permission:members_url:repositories_url:parent:members_count:repos_count:created_at:updated_at:organization:ldap_dn:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(id:node_id:url:html_url:name:slug:description:privacy:notification_setting:permission:members_url:repositories_url:parent:members_count:repos_count:created_at:updated_at:organization:ldap_dn:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/components\/schemas\/team_hyphen_full\/init(id:node_id:url:html_url:name:slug:description:privacy:notification_setting:permission:members_url:repositories_url:parent:members_count:repos_count:created_at:updated_at:organization:ldap_dn:)"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Components/Schemas/team_hyphen_full/ldap_dn": {
+  "abstract" : [
+    {
+      "text" : "Distinguished Name (DN) that team maps to within LDAP environment",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ldap_dn"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Components\/Schemas\/team_hyphen_full\/ldap_dn",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "ldap_dn",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/components\/schemas\/team_hyphen_full\/ldap_dn"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Components/Schemas/team_hyphen_full/members_count": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "members_count"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Components\/Schemas\/team_hyphen_full\/members_count",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "members_count",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/components\/schemas\/team_hyphen_full\/members_count"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Components/Schemas/team_hyphen_full/members_url": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "members_url"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Components\/Schemas\/team_hyphen_full\/members_url",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "members_url",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/components\/schemas\/team_hyphen_full\/members_url"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Components/Schemas/team_hyphen_full/name": {
+  "abstract" : [
+    {
+      "text" : "Name of the team",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "name"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Components\/Schemas\/team_hyphen_full\/name",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "name",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/components\/schemas\/team_hyphen_full\/name"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Components/Schemas/team_hyphen_full/node_id": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "node_id"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Components\/Schemas\/team_hyphen_full\/node_id",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "node_id",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/components\/schemas\/team_hyphen_full\/node_id"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Components/Schemas/team_hyphen_full/notification_setting": {
+  "abstract" : [
+    {
+      "text" : "The notification setting the team has set",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "notification_setting"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10ComponentsO7SchemasO16team_hyphen_fullV",
+      "text" : "team_hyphen_full"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10ComponentsO7SchemasO16team_hyphen_fullV27notification_settingPayloadO",
+      "text" : "notification_settingPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Components\/Schemas\/team_hyphen_full\/notification_setting",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "notification_setting",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/components\/schemas\/team_hyphen_full\/notification_setting"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Components/Schemas/team_hyphen_full/notification_settingPayload": {
+  "abstract" : [
+    {
+      "text" : "The notification setting the team has set",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "notification_settingPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Components\/Schemas\/team_hyphen_full\/notification_settingPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "notification_settingPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.team_hyphen_full.notification_settingPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/components\/schemas\/team_hyphen_full\/notification_settingpayload"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Components/Schemas/team_hyphen_full/organization": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "organization"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10ComponentsO7SchemasO24team_hyphen_organizationV",
+      "text" : "team_hyphen_organization"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Components\/Schemas\/team_hyphen_full\/organization",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "organization",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/components\/schemas\/team_hyphen_full\/organization"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Components/Schemas/team_hyphen_full/parent": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "parent"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10ComponentsO7SchemasO021nullable_hyphen_team_H7_simpleV",
+      "text" : "nullable_hyphen_team_hyphen_simple"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Components\/Schemas\/team_hyphen_full\/parent",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "parent",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/components\/schemas\/team_hyphen_full\/parent"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Components/Schemas/team_hyphen_full/permission": {
+  "abstract" : [
+    {
+      "text" : "Permission that the team will have for its repositories",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "permission"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Components\/Schemas\/team_hyphen_full\/permission",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "permission",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/components\/schemas\/team_hyphen_full\/permission"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Components/Schemas/team_hyphen_full/privacy": {
+  "abstract" : [
+    {
+      "text" : "The level of privacy this team should have",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "privacy"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10ComponentsO7SchemasO16team_hyphen_fullV",
+      "text" : "team_hyphen_full"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPITeams10ComponentsO7SchemasO16team_hyphen_fullV14privacyPayloadO",
+      "text" : "privacyPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Components\/Schemas\/team_hyphen_full\/privacy",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "privacy",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/components\/schemas\/team_hyphen_full\/privacy"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Components/Schemas/team_hyphen_full/privacyPayload": {
+  "abstract" : [
+    {
+      "text" : "The level of privacy this team should have",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "privacyPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Components\/Schemas\/team_hyphen_full\/privacyPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "privacyPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.team_hyphen_full.privacyPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/components\/schemas\/team_hyphen_full\/privacypayload"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Components/Schemas/team_hyphen_full/repos_count": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "repos_count"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Components\/Schemas\/team_hyphen_full\/repos_count",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "repos_count",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/components\/schemas\/team_hyphen_full\/repos_count"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Components/Schemas/team_hyphen_full/repositories_url": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "repositories_url"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Components\/Schemas\/team_hyphen_full\/repositories_url",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "repositories_url",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/components\/schemas\/team_hyphen_full\/repositories_url"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Components/Schemas/team_hyphen_full/slug": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "slug"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Components\/Schemas\/team_hyphen_full\/slug",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "slug",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/components\/schemas\/team_hyphen_full\/slug"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Components/Schemas/team_hyphen_full/updated_at": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "updated_at"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:10Foundation4DateV",
+      "text" : "Date"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Components\/Schemas\/team_hyphen_full\/updated_at",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "updated_at",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/components\/schemas\/team_hyphen_full\/updated_at"
+},
+"doc://GitHubRestAPITeams/documentation/GitHubRestAPITeams/Components/Schemas/team_hyphen_full/url": {
+  "abstract" : [
+    {
+      "text" : "URL for the team",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "url"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/documentation\/GitHubRestAPITeams\/Components\/Schemas\/team_hyphen_full\/url",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "url",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiteams\/components\/schemas\/team_hyphen_full\/url"
+},
+"doc://GitHubRestAPITeams/s8SendableP": {
+  "identifier" : "doc:\/\/GitHubRestAPITeams\/s8SendableP",
+  "title" : "Swift.Sendable",
+  "type" : "unresolvable"
+}
+}
+}

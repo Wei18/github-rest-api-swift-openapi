@@ -1,0 +1,608 @@
+{
+  "abstract" : [
+    {
+      "text" : "List matching references",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit",
+        "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/git_sol_list_hyphen_matching_hyphen_refs"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:16GitHubRestAPIGit10OperationsO029git_sol_list_hyphen_matching_I5_refsO",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "enum"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "git_sol_list_hyphen_matching_hyphen_refs"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIGit"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "git_sol_list_hyphen_matching_hyphen_refs"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/git\/Types.swift#L2933"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Enumeration",
+    "symbolKind" : "enum",
+    "title" : "Operations.git_sol_list_hyphen_matching_hyphen_refs"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "enum"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "git_sol_list_hyphen_matching_hyphen_refs"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Returns an array of references from your Git database that match the supplied name. The ",
+              "type" : "text"
+            },
+            {
+              "code" : ":ref",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " in the URL must be formatted as ",
+              "type" : "text"
+            },
+            {
+              "code" : "heads\/<branch name>",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " for branches and ",
+              "type" : "text"
+            },
+            {
+              "code" : "tags\/<tag name>",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " for tags. If the ",
+              "type" : "text"
+            },
+            {
+              "code" : ":ref",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " doesn’t exist in the repository, but existing refs start with ",
+              "type" : "text"
+            },
+            {
+              "code" : ":ref",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ", they will be returned as an array.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "When you use this endpoint without providing a ",
+              "type" : "text"
+            },
+            {
+              "code" : ":ref",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ", it will return an array of all the references from your Git database, including notes and stashes if they exist on the server. Anything in the namespace is returned, not just ",
+              "type" : "text"
+            },
+            {
+              "code" : "heads",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " and ",
+              "type" : "text"
+            },
+            {
+              "code" : "tags",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ".",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "[!NOTE]",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "You need to explicitly ",
+                  "type" : "text"
+                },
+                {
+                  "identifier" : "https:\/\/docs.github.com\/rest\/pulls\/pulls#get-a-pull-request",
+                  "isActive" : true,
+                  "type" : "reference"
+                },
+                {
+                  "text" : " to trigger a test merge commit, which checks the mergeability of pull requests. For more information, see “",
+                  "type" : "text"
+                },
+                {
+                  "identifier" : "https:\/\/docs.github.com\/rest\/guides\/getting-started-with-the-git-database-api#checking-mergeability-of-pull-requests",
+                  "isActive" : true,
+                  "type" : "reference"
+                },
+                {
+                  "text" : "”.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Note",
+          "style" : "note",
+          "type" : "aside"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "If you request matching references for a branch named ",
+              "type" : "text"
+            },
+            {
+              "code" : "feature",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " but the branch ",
+              "type" : "text"
+            },
+            {
+              "code" : "feature",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " doesn’t exist, the response can still include other matching head refs that start with the word ",
+              "type" : "text"
+            },
+            {
+              "code" : "feature",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ", such as ",
+              "type" : "text"
+            },
+            {
+              "code" : "featureA",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " and ",
+              "type" : "text"
+            },
+            {
+              "code" : "featureB",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ".",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "HTTP ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "GET \/repos\/{owner}\/{repo}\/git\/matching-refs\/{ref}",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/paths\/\/repos\/{owner}\/{repo}\/git\/matching-refs\/{ref}\/get(git\/list-matching-refs)",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/git_sol_list_hyphen_matching_hyphen_refs\/Input"
+      ],
+      "title" : "Structures"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/git_sol_list_hyphen_matching_hyphen_refs\/id"
+      ],
+      "title" : "Type Properties"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/git_sol_list_hyphen_matching_hyphen_refs\/AcceptableContentType",
+        "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/git_sol_list_hyphen_matching_hyphen_refs\/Output"
+      ],
+      "title" : "Enumerations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapigit\/operations\/git_sol_list_hyphen_matching_hyphen_refs"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIGit/documentation/GitHubRestAPIGit": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIGit",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigit"
+},
+"doc://GitHubRestAPIGit/documentation/GitHubRestAPIGit/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigit\/operations"
+},
+"doc://GitHubRestAPIGit/documentation/GitHubRestAPIGit/Operations/git_sol_list_hyphen_matching_hyphen_refs": {
+  "abstract" : [
+    {
+      "text" : "List matching references",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "git_sol_list_hyphen_matching_hyphen_refs"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/git_sol_list_hyphen_matching_hyphen_refs",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "git_sol_list_hyphen_matching_hyphen_refs"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.git_sol_list_hyphen_matching_hyphen_refs",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigit\/operations\/git_sol_list_hyphen_matching_hyphen_refs"
+},
+"doc://GitHubRestAPIGit/documentation/GitHubRestAPIGit/Operations/git_sol_list_hyphen_matching_hyphen_refs/AcceptableContentType": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AcceptableContentType"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/git_sol_list_hyphen_matching_hyphen_refs\/AcceptableContentType",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AcceptableContentType"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.git_sol_list_hyphen_matching_hyphen_refs.AcceptableContentType",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigit\/operations\/git_sol_list_hyphen_matching_hyphen_refs\/acceptablecontenttype"
+},
+"doc://GitHubRestAPIGit/documentation/GitHubRestAPIGit/Operations/git_sol_list_hyphen_matching_hyphen_refs/Input": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/git_sol_list_hyphen_matching_hyphen_refs\/Input",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.git_sol_list_hyphen_matching_hyphen_refs.Input",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigit\/operations\/git_sol_list_hyphen_matching_hyphen_refs\/input"
+},
+"doc://GitHubRestAPIGit/documentation/GitHubRestAPIGit/Operations/git_sol_list_hyphen_matching_hyphen_refs/Output": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/git_sol_list_hyphen_matching_hyphen_refs\/Output",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.git_sol_list_hyphen_matching_hyphen_refs.Output",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigit\/operations\/git_sol_list_hyphen_matching_hyphen_refs\/output"
+},
+"doc://GitHubRestAPIGit/documentation/GitHubRestAPIGit/Operations/git_sol_list_hyphen_matching_hyphen_refs/id": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "id"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/git_sol_list_hyphen_matching_hyphen_refs\/id",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "id",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigit\/operations\/git_sol_list_hyphen_matching_hyphen_refs\/id"
+},
+"https://docs.github.com/rest/guides/getting-started-with-the-git-database-api#checking-mergeability-of-pull-requests": {
+  "identifier" : "https:\/\/docs.github.com\/rest\/guides\/getting-started-with-the-git-database-api#checking-mergeability-of-pull-requests",
+  "title" : "Checking mergeability of pull requests",
+  "titleInlineContent" : [
+    {
+      "text" : "Checking mergeability of pull requests",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/docs.github.com\/rest\/guides\/getting-started-with-the-git-database-api#checking-mergeability-of-pull-requests"
+},
+"https://docs.github.com/rest/pulls/pulls#get-a-pull-request": {
+  "identifier" : "https:\/\/docs.github.com\/rest\/pulls\/pulls#get-a-pull-request",
+  "title" : "request a pull request",
+  "titleInlineContent" : [
+    {
+      "text" : "request a pull request",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/docs.github.com\/rest\/pulls\/pulls#get-a-pull-request"
+}
+}
+}

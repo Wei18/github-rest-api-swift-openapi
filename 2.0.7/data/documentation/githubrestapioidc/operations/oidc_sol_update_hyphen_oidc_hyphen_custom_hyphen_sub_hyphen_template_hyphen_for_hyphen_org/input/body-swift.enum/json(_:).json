@@ -1,0 +1,515 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIOidc\/documentation\/GitHubRestAPIOidc",
+        "doc:\/\/GitHubRestAPIOidc\/documentation\/GitHubRestAPIOidc\/Operations",
+        "doc:\/\/GitHubRestAPIOidc\/documentation\/GitHubRestAPIOidc\/Operations\/oidc_sol_update_hyphen_oidc_hyphen_custom_hyphen_sub_hyphen_template_hyphen_for_hyphen_org",
+        "doc:\/\/GitHubRestAPIOidc\/documentation\/GitHubRestAPIOidc\/Operations\/oidc_sol_update_hyphen_oidc_hyphen_custom_hyphen_sub_hyphen_template_hyphen_for_hyphen_org\/Input",
+        "doc:\/\/GitHubRestAPIOidc\/documentation\/GitHubRestAPIOidc\/Operations\/oidc_sol_update_hyphen_oidc_hyphen_custom_hyphen_sub_hyphen_template_hyphen_for_hyphen_org\/Input\/Body-swift.enum"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIOidc\/documentation\/GitHubRestAPIOidc\/Operations\/oidc_sol_update_hyphen_oidc_hyphen_custom_hyphen_sub_hyphen_template_hyphen_for_hyphen_org\/Input\/Body-swift.enum\/json(_:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:17GitHubRestAPIOidc10OperationsO023oidc_sol_update_hyphen_f1_i8_custom_i5_sub_i10_template_i5_for_I4_orgO5InputV4BodyO4jsonyAiA10ComponentsO7SchemasO0f1_i1_j1_i1_K0VcAImF",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "case"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "json"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:17GitHubRestAPIOidc10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:17GitHubRestAPIOidc10ComponentsO7SchemasO",
+        "text" : "Schemas"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:17GitHubRestAPIOidc10ComponentsO7SchemasO019oidc_hyphen_custom_H4_subV",
+        "text" : "oidc_hyphen_custom_hyphen_sub"
+      },
+      {
+        "kind" : "text",
+        "text" : ")"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIOidc"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/oidc\/Types.swift#L413"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Case",
+    "symbolKind" : "case",
+    "title" : "Operations.oidc_sol_update_hyphen_oidc_hyphen_custom_hyphen_sub_hyphen_template_hyphen_for_hyphen_org.Input.Body.json(_:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "case"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "json"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIOidc\/documentation\/GitHubRestAPIOidc\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:17GitHubRestAPIOidc10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIOidc\/documentation\/GitHubRestAPIOidc\/Components\/Schemas",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:17GitHubRestAPIOidc10ComponentsO7SchemasO",
+              "text" : "Schemas"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIOidc\/documentation\/GitHubRestAPIOidc\/Components\/Schemas\/oidc_hyphen_custom_hyphen_sub",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:17GitHubRestAPIOidc10ComponentsO7SchemasO019oidc_hyphen_custom_H4_subV",
+              "text" : "oidc_hyphen_custom_hyphen_sub"
+            },
+            {
+              "kind" : "text",
+              "text" : ")"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/paths\/orgs\/{org}\/actions\/oidc\/customization\/sub\/PUT\/requestBody\/content\/application\\\/json",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapioidc\/operations\/oidc_sol_update_hyphen_oidc_hyphen_custom_hyphen_sub_hyphen_template_hyphen_for_hyphen_org\/input\/body-swift.enum\/json(_:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIOidc/documentation/GitHubRestAPIOidc": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOidc\/documentation\/GitHubRestAPIOidc",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIOidc",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapioidc"
+},
+"doc://GitHubRestAPIOidc/documentation/GitHubRestAPIOidc/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOidc\/documentation\/GitHubRestAPIOidc\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapioidc\/components"
+},
+"doc://GitHubRestAPIOidc/documentation/GitHubRestAPIOidc/Components/Schemas": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/schemas",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOidc\/documentation\/GitHubRestAPIOidc\/Components\/Schemas",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapioidc\/components\/schemas"
+},
+"doc://GitHubRestAPIOidc/documentation/GitHubRestAPIOidc/Components/Schemas/oidc_hyphen_custom_hyphen_sub": {
+  "abstract" : [
+    {
+      "text" : "Actions OIDC Subject customization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "oidc_hyphen_custom_hyphen_sub"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOidc\/documentation\/GitHubRestAPIOidc\/Components\/Schemas\/oidc_hyphen_custom_hyphen_sub",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "oidc_hyphen_custom_hyphen_sub"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.oidc_hyphen_custom_hyphen_sub",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapioidc\/components\/schemas\/oidc_hyphen_custom_hyphen_sub"
+},
+"doc://GitHubRestAPIOidc/documentation/GitHubRestAPIOidc/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOidc\/documentation\/GitHubRestAPIOidc\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapioidc\/operations"
+},
+"doc://GitHubRestAPIOidc/documentation/GitHubRestAPIOidc/Operations/oidc_sol_update_hyphen_oidc_hyphen_custom_hyphen_sub_hyphen_template_hyphen_for_hyphen_org": {
+  "abstract" : [
+    {
+      "text" : "Set the customization template for an OIDC subject claim for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "oidc_sol_update_hyphen_oidc_hyphen_custom_hyphen_sub_hyphen_template_hyphen_for_hyphen_org"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOidc\/documentation\/GitHubRestAPIOidc\/Operations\/oidc_sol_update_hyphen_oidc_hyphen_custom_hyphen_sub_hyphen_template_hyphen_for_hyphen_org",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "oidc_sol_update_hyphen_oidc_hyphen_custom_hyphen_sub_hyphen_template_hyphen_for_hyphen_org"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.oidc_sol_update_hyphen_oidc_hyphen_custom_hyphen_sub_hyphen_template_hyphen_for_hyphen_org",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapioidc\/operations\/oidc_sol_update_hyphen_oidc_hyphen_custom_hyphen_sub_hyphen_template_hyphen_for_hyphen_org"
+},
+"doc://GitHubRestAPIOidc/documentation/GitHubRestAPIOidc/Operations/oidc_sol_update_hyphen_oidc_hyphen_custom_hyphen_sub_hyphen_template_hyphen_for_hyphen_org/Input": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOidc\/documentation\/GitHubRestAPIOidc\/Operations\/oidc_sol_update_hyphen_oidc_hyphen_custom_hyphen_sub_hyphen_template_hyphen_for_hyphen_org\/Input",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.oidc_sol_update_hyphen_oidc_hyphen_custom_hyphen_sub_hyphen_template_hyphen_for_hyphen_org.Input",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapioidc\/operations\/oidc_sol_update_hyphen_oidc_hyphen_custom_hyphen_sub_hyphen_template_hyphen_for_hyphen_org\/input"
+},
+"doc://GitHubRestAPIOidc/documentation/GitHubRestAPIOidc/Operations/oidc_sol_update_hyphen_oidc_hyphen_custom_hyphen_sub_hyphen_template_hyphen_for_hyphen_org/Input/Body-swift.enum": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Body"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOidc\/documentation\/GitHubRestAPIOidc\/Operations\/oidc_sol_update_hyphen_oidc_hyphen_custom_hyphen_sub_hyphen_template_hyphen_for_hyphen_org\/Input\/Body-swift.enum",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Body"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.oidc_sol_update_hyphen_oidc_hyphen_custom_hyphen_sub_hyphen_template_hyphen_for_hyphen_org.Input.Body",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapioidc\/operations\/oidc_sol_update_hyphen_oidc_hyphen_custom_hyphen_sub_hyphen_template_hyphen_for_hyphen_org\/input\/body-swift.enum"
+},
+"doc://GitHubRestAPIOidc/documentation/GitHubRestAPIOidc/Operations/oidc_sol_update_hyphen_oidc_hyphen_custom_hyphen_sub_hyphen_template_hyphen_for_hyphen_org/Input/Body-swift.enum/json(_:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "json"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOidc10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOidc10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:17GitHubRestAPIOidc10ComponentsO7SchemasO019oidc_hyphen_custom_H4_subV",
+      "text" : "oidc_hyphen_custom_hyphen_sub"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOidc\/documentation\/GitHubRestAPIOidc\/Operations\/oidc_sol_update_hyphen_oidc_hyphen_custom_hyphen_sub_hyphen_template_hyphen_for_hyphen_org\/Input\/Body-swift.enum\/json(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Operations.oidc_sol_update_hyphen_oidc_hyphen_custom_hyphen_sub_hyphen_template_hyphen_for_hyphen_org.Input.Body.json(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapioidc\/operations\/oidc_sol_update_hyphen_oidc_hyphen_custom_hyphen_sub_hyphen_template_hyphen_for_hyphen_org\/input\/body-swift.enum\/json(_:)"
+}
+}
+}

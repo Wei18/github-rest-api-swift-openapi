@@ -1,0 +1,596 @@
+{
+  "abstract" : [
+    {
+      "text" : "The property to sort the results by. ",
+      "type" : "text"
+    },
+    {
+      "code" : "created_at",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " means when the cache was created. ",
+      "type" : "text"
+    },
+    {
+      "code" : "last_accessed_at",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " means when the cache was last accessed. ",
+      "type" : "text"
+    },
+    {
+      "code" : "size_in_bytes",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " is the size of the cache in bytes.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/actions_sol_get_hyphen_actions_hyphen_cache_hyphen_list",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/actions_sol_get_hyphen_actions_hyphen_cache_hyphen_list\/Input",
+        "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/actions_sol_get_hyphen_actions_hyphen_cache_hyphen_list\/Input\/Query-swift.struct"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/actions_sol_get_hyphen_actions_hyphen_cache_hyphen_list\/Input\/Query-swift.struct\/sort"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:20GitHubRestAPIActions10OperationsO023actions_sol_get_hyphen_f1_i7_cache_I5_listO5InputV5QueryV4sortAA10ComponentsO10ParametersO0f1_i1_j1_i1_k1_i1_N0OSgvp",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "var"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "sort"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:20GitHubRestAPIActions10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:20GitHubRestAPIActions10ComponentsO10ParametersO",
+        "text" : "Parameters"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:20GitHubRestAPIActions10ComponentsO10ParametersO021actions_hyphen_cache_h6_list_H5_sortO",
+        "text" : "actions_hyphen_cache_hyphen_list_hyphen_sort"
+      },
+      {
+        "kind" : "text",
+        "text" : "?"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIActions"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/actions\/Types.swift#L21707"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Instance Property",
+    "symbolKind" : "property",
+    "title" : "sort"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "var"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "sort"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:20GitHubRestAPIActions10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Components\/Parameters",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:20GitHubRestAPIActions10ComponentsO10ParametersO",
+              "text" : "Parameters"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Components\/Parameters\/actions_hyphen_cache_hyphen_list_hyphen_sort",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:20GitHubRestAPIActions10ComponentsO10ParametersO021actions_hyphen_cache_h6_list_H5_sortO",
+              "text" : "actions_hyphen_cache_hyphen_list_hyphen_sort"
+            },
+            {
+              "kind" : "text",
+              "text" : "?"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/paths\/repos\/{owner}\/{repo}\/actions\/caches\/GET\/query\/sort",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapiactions\/operations\/actions_sol_get_hyphen_actions_hyphen_cache_hyphen_list\/input\/query-swift.struct\/sort"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIActions",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/components"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Components/Parameters": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/parameters",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Parameters"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Components\/Parameters",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Parameters"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/components\/parameters"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Components/Parameters/actions_hyphen_cache_hyphen_list_hyphen_sort": {
+  "abstract" : [
+    {
+      "text" : "The property to sort the results by. ",
+      "type" : "text"
+    },
+    {
+      "code" : "created_at",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " means when the cache was created. ",
+      "type" : "text"
+    },
+    {
+      "code" : "last_accessed_at",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " means when the cache was last accessed. ",
+      "type" : "text"
+    },
+    {
+      "code" : "size_in_bytes",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " is the size of the cache in bytes.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "actions_hyphen_cache_hyphen_list_hyphen_sort"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Components\/Parameters\/actions_hyphen_cache_hyphen_list_hyphen_sort",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "actions_hyphen_cache_hyphen_list_hyphen_sort"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.actions_hyphen_cache_hyphen_list_hyphen_sort",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/components\/parameters\/actions_hyphen_cache_hyphen_list_hyphen_sort"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/actions_sol_get_hyphen_actions_hyphen_cache_hyphen_list": {
+  "abstract" : [
+    {
+      "text" : "List GitHub Actions caches for a repository",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "actions_sol_get_hyphen_actions_hyphen_cache_hyphen_list"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/actions_sol_get_hyphen_actions_hyphen_cache_hyphen_list",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "actions_sol_get_hyphen_actions_hyphen_cache_hyphen_list"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.actions_sol_get_hyphen_actions_hyphen_cache_hyphen_list",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actions_sol_get_hyphen_actions_hyphen_cache_hyphen_list"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/actions_sol_get_hyphen_actions_hyphen_cache_hyphen_list/Input": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/actions_sol_get_hyphen_actions_hyphen_cache_hyphen_list\/Input",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.actions_sol_get_hyphen_actions_hyphen_cache_hyphen_list.Input",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actions_sol_get_hyphen_actions_hyphen_cache_hyphen_list\/input"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/actions_sol_get_hyphen_actions_hyphen_cache_hyphen_list/Input/Query-swift.struct": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Query"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/actions_sol_get_hyphen_actions_hyphen_cache_hyphen_list\/Input\/Query-swift.struct",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Query"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.actions_sol_get_hyphen_actions_hyphen_cache_hyphen_list.Input.Query",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actions_sol_get_hyphen_actions_hyphen_cache_hyphen_list\/input\/query-swift.struct"
+},
+"doc://GitHubRestAPIActions/documentation/GitHubRestAPIActions/Operations/actions_sol_get_hyphen_actions_hyphen_cache_hyphen_list/Input/Query-swift.struct/sort": {
+  "abstract" : [
+    {
+      "text" : "The property to sort the results by. ",
+      "type" : "text"
+    },
+    {
+      "code" : "created_at",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " means when the cache was created. ",
+      "type" : "text"
+    },
+    {
+      "code" : "last_accessed_at",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " means when the cache was last accessed. ",
+      "type" : "text"
+    },
+    {
+      "code" : "size_in_bytes",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " is the size of the cache in bytes.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "sort"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIActions10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIActions10ComponentsO10ParametersO",
+      "text" : "Parameters"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIActions10ComponentsO10ParametersO021actions_hyphen_cache_h6_list_H5_sortO",
+      "text" : "actions_hyphen_cache_hyphen_list_hyphen_sort"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActions\/documentation\/GitHubRestAPIActions\/Operations\/actions_sol_get_hyphen_actions_hyphen_cache_hyphen_list\/Input\/Query-swift.struct\/sort",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "sort",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactions\/operations\/actions_sol_get_hyphen_actions_hyphen_cache_hyphen_list\/input\/query-swift.struct\/sort"
+}
+}
+}

@@ -1,0 +1,544 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIHosted_Compute\/documentation\/GitHubRestAPIHosted_Compute",
+        "doc:\/\/GitHubRestAPIHosted_Compute\/documentation\/GitHubRestAPIHosted_Compute\/Operations",
+        "doc:\/\/GitHubRestAPIHosted_Compute\/documentation\/GitHubRestAPIHosted_Compute\/Operations\/hosted_hyphen_compute_sol_create_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org",
+        "doc:\/\/GitHubRestAPIHosted_Compute\/documentation\/GitHubRestAPIHosted_Compute\/Operations\/hosted_hyphen_compute_sol_create_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org\/Input",
+        "doc:\/\/GitHubRestAPIHosted_Compute\/documentation\/GitHubRestAPIHosted_Compute\/Operations\/hosted_hyphen_compute_sol_create_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org\/Input\/Body-swift.enum",
+        "doc:\/\/GitHubRestAPIHosted_Compute\/documentation\/GitHubRestAPIHosted_Compute\/Operations\/hosted_hyphen_compute_sol_create_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org\/Input\/Body-swift.enum\/jsonPayload",
+        "doc:\/\/GitHubRestAPIHosted_Compute\/documentation\/GitHubRestAPIHosted_Compute\/Operations\/hosted_hyphen_compute_sol_create_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org\/Input\/Body-swift.enum\/jsonPayload\/compute_servicePayload",
+        "doc:\/\/GitHubRestAPIHosted_Compute\/documentation\/GitHubRestAPIHosted_Compute\/Operations\/hosted_hyphen_compute_sol_create_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org\/Input\/Body-swift.enum\/jsonPayload\/compute_servicePayload\/RawRepresentable-Implementations"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIHosted_Compute\/documentation\/GitHubRestAPIHosted_Compute\/Operations\/hosted_hyphen_compute_sol_create_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org\/Input\/Body-swift.enum\/jsonPayload\/compute_servicePayload\/hash(into:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "conformance" : {
+      "availabilityPrefix" : [
+        {
+          "text" : "Available when",
+          "type" : "text"
+        }
+      ],
+      "conformancePrefix" : [
+        {
+          "text" : "Conforms when",
+          "type" : "text"
+        }
+      ],
+      "constraints" : [
+        {
+          "code" : "Self",
+          "type" : "codeVoice"
+        },
+        {
+          "text" : " conforms to ",
+          "type" : "text"
+        },
+        {
+          "code" : "Hashable",
+          "type" : "codeVoice"
+        },
+        {
+          "text" : " and ",
+          "type" : "text"
+        },
+        {
+          "code" : "RawValue",
+          "type" : "codeVoice"
+        },
+        {
+          "text" : " conforms to ",
+          "type" : "text"
+        },
+        {
+          "code" : "Hashable",
+          "type" : "codeVoice"
+        },
+        {
+          "text" : ".",
+          "type" : "text"
+        }
+      ]
+    },
+    "extendedModule" : "Swift",
+    "externalID" : "s:SYsSHRzSH8RawValueSYRpzrlE4hash4intoys6HasherVz_tF::SYNTHESIZED::s:27GitHubRestAPIHosted_Compute10OperationsO033hosted_hyphen_compute_sol_create_h9_network_h15_configuration_h5_for_H4_orgO5InputV4BodyO11jsonPayloadV0i8_serviceS0O",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "func"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "hash"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "into"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "keyword",
+        "text" : "inout"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:s6HasherV",
+        "text" : "Hasher"
+      },
+      {
+        "kind" : "text",
+        "text" : ")"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIHosted_Compute",
+        "relatedModules" : [
+          "Swift"
+        ]
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Instance Method",
+    "symbolKind" : "method",
+    "title" : "hash(into:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "func"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "hash"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "into"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "internalParam",
+              "text" : "hasher"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "inout"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:s6HasherV",
+              "text" : "Hasher"
+            },
+            {
+              "kind" : "text",
+              "text" : ")"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapihosted_compute\/operations\/hosted_hyphen_compute_sol_create_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org\/input\/body-swift.enum\/jsonpayload\/compute_servicepayload\/hash(into:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIHosted_Compute/documentation/GitHubRestAPIHosted_Compute": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIHosted_Compute\/documentation\/GitHubRestAPIHosted_Compute",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIHosted_Compute",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapihosted_compute"
+},
+"doc://GitHubRestAPIHosted_Compute/documentation/GitHubRestAPIHosted_Compute/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIHosted_Compute\/documentation\/GitHubRestAPIHosted_Compute\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapihosted_compute\/operations"
+},
+"doc://GitHubRestAPIHosted_Compute/documentation/GitHubRestAPIHosted_Compute/Operations/hosted_hyphen_compute_sol_create_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org": {
+  "abstract" : [
+    {
+      "text" : "Create a hosted compute network configuration for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "hosted_hyphen_compute_sol_create_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIHosted_Compute\/documentation\/GitHubRestAPIHosted_Compute\/Operations\/hosted_hyphen_compute_sol_create_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "hosted_hyphen_compute_sol_create_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.hosted_hyphen_compute_sol_create_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapihosted_compute\/operations\/hosted_hyphen_compute_sol_create_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org"
+},
+"doc://GitHubRestAPIHosted_Compute/documentation/GitHubRestAPIHosted_Compute/Operations/hosted_hyphen_compute_sol_create_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org/Input": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIHosted_Compute\/documentation\/GitHubRestAPIHosted_Compute\/Operations\/hosted_hyphen_compute_sol_create_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org\/Input",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.hosted_hyphen_compute_sol_create_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.Input",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapihosted_compute\/operations\/hosted_hyphen_compute_sol_create_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org\/input"
+},
+"doc://GitHubRestAPIHosted_Compute/documentation/GitHubRestAPIHosted_Compute/Operations/hosted_hyphen_compute_sol_create_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org/Input/Body-swift.enum": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Body"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIHosted_Compute\/documentation\/GitHubRestAPIHosted_Compute\/Operations\/hosted_hyphen_compute_sol_create_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org\/Input\/Body-swift.enum",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Body"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.hosted_hyphen_compute_sol_create_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.Input.Body",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapihosted_compute\/operations\/hosted_hyphen_compute_sol_create_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org\/input\/body-swift.enum"
+},
+"doc://GitHubRestAPIHosted_Compute/documentation/GitHubRestAPIHosted_Compute/Operations/hosted_hyphen_compute_sol_create_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org/Input/Body-swift.enum/jsonPayload": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "jsonPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIHosted_Compute\/documentation\/GitHubRestAPIHosted_Compute\/Operations\/hosted_hyphen_compute_sol_create_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org\/Input\/Body-swift.enum\/jsonPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "jsonPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.hosted_hyphen_compute_sol_create_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.Input.Body.jsonPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapihosted_compute\/operations\/hosted_hyphen_compute_sol_create_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org\/input\/body-swift.enum\/jsonpayload"
+},
+"doc://GitHubRestAPIHosted_Compute/documentation/GitHubRestAPIHosted_Compute/Operations/hosted_hyphen_compute_sol_create_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org/Input/Body-swift.enum/jsonPayload/compute_servicePayload": {
+  "abstract" : [
+    {
+      "text" : "The hosted compute service to use for the network configuration.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "compute_servicePayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIHosted_Compute\/documentation\/GitHubRestAPIHosted_Compute\/Operations\/hosted_hyphen_compute_sol_create_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org\/Input\/Body-swift.enum\/jsonPayload\/compute_servicePayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "compute_servicePayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.hosted_hyphen_compute_sol_create_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.Input.Body.jsonPayload.compute_servicePayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapihosted_compute\/operations\/hosted_hyphen_compute_sol_create_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org\/input\/body-swift.enum\/jsonpayload\/compute_servicepayload"
+},
+"doc://GitHubRestAPIHosted_Compute/documentation/GitHubRestAPIHosted_Compute/Operations/hosted_hyphen_compute_sol_create_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org/Input/Body-swift.enum/jsonPayload/compute_servicePayload/RawRepresentable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIHosted_Compute\/documentation\/GitHubRestAPIHosted_Compute\/Operations\/hosted_hyphen_compute_sol_create_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org\/Input\/Body-swift.enum\/jsonPayload\/compute_servicePayload\/RawRepresentable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "RawRepresentable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapihosted_compute\/operations\/hosted_hyphen_compute_sol_create_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org\/input\/body-swift.enum\/jsonpayload\/compute_servicepayload\/rawrepresentable-implementations"
+},
+"doc://GitHubRestAPIHosted_Compute/documentation/GitHubRestAPIHosted_Compute/Operations/hosted_hyphen_compute_sol_create_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org/Input/Body-swift.enum/jsonPayload/compute_servicePayload/hash(into:)": {
+  "abstract" : [
+
+  ],
+  "conformance" : {
+    "availabilityPrefix" : [
+      {
+        "text" : "Available when",
+        "type" : "text"
+      }
+    ],
+    "conformancePrefix" : [
+      {
+        "text" : "Conforms when",
+        "type" : "text"
+      }
+    ],
+    "constraints" : [
+      {
+        "code" : "Self",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : " conforms to ",
+        "type" : "text"
+      },
+      {
+        "code" : "Hashable",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : " and ",
+        "type" : "text"
+      },
+      {
+        "code" : "RawValue",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : " conforms to ",
+        "type" : "text"
+      },
+      {
+        "code" : "Hashable",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : ".",
+        "type" : "text"
+      }
+    ]
+  },
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "hash"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "into"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "inout"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:s6HasherV",
+      "text" : "Hasher"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIHosted_Compute\/documentation\/GitHubRestAPIHosted_Compute\/Operations\/hosted_hyphen_compute_sol_create_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org\/Input\/Body-swift.enum\/jsonPayload\/compute_servicePayload\/hash(into:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "hash(into:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapihosted_compute\/operations\/hosted_hyphen_compute_sol_create_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org\/input\/body-swift.enum\/jsonpayload\/compute_servicepayload\/hash(into:)"
+}
+}
+}

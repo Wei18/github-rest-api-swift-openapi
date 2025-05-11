@@ -1,0 +1,694 @@
+{
+  "abstract" : [
+    {
+      "text" : "Remove interaction restrictions for an organization",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions",
+        "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Client",
+        "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Client\/APIProtocol-Implementations"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Client\/interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_org(path:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "extendedModule" : "GitHubRestAPIInteractions",
+    "externalID" : "s:25GitHubRestAPIInteractions11APIProtocolPAAE044interactions_sol_remove_hyphen_restrictions_i5_for_I4_org4pathAA10OperationsOADO6OutputOAH5InputV4PathV_tYaKF::SYNTHESIZED::s:25GitHubRestAPIInteractions6ClientV",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "func"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_org"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "path"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO",
+        "text" : "Operations"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO044interactions_sol_remove_hyphen_restrictions_i5_for_I4_orgO",
+        "text" : "interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_org"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO044interactions_sol_remove_hyphen_restrictions_i5_for_I4_orgO5InputV",
+        "text" : "Input"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO044interactions_sol_remove_hyphen_restrictions_i5_for_I4_orgO5InputV4PathV",
+        "text" : "Path"
+      },
+      {
+        "kind" : "text",
+        "text" : ") "
+      },
+      {
+        "kind" : "keyword",
+        "text" : "async"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "keyword",
+        "text" : "throws"
+      },
+      {
+        "kind" : "text",
+        "text" : " -> "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO",
+        "text" : "Operations"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO044interactions_sol_remove_hyphen_restrictions_i5_for_I4_orgO",
+        "text" : "interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_org"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO044interactions_sol_remove_hyphen_restrictions_i5_for_I4_orgO6OutputO",
+        "text" : "Output"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIInteractions"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/interactions\/Types.swift#L119"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Instance Method",
+    "symbolKind" : "method",
+    "title" : "interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_org(path:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "func"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_org"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "path"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Operations",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO",
+              "text" : "Operations"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Operations\/interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_org",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO044interactions_sol_remove_hyphen_restrictions_i5_for_I4_orgO",
+              "text" : "interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_org"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Operations\/interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_org\/Input",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO044interactions_sol_remove_hyphen_restrictions_i5_for_I4_orgO5InputV",
+              "text" : "Input"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Operations\/interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_org\/Input\/Path-swift.struct",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO044interactions_sol_remove_hyphen_restrictions_i5_for_I4_orgO5InputV4PathV",
+              "text" : "Path"
+            },
+            {
+              "kind" : "text",
+              "text" : ") "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "async"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "throws"
+            },
+            {
+              "kind" : "text",
+              "text" : " -> "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Operations",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO",
+              "text" : "Operations"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Operations\/interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_org",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO044interactions_sol_remove_hyphen_restrictions_i5_for_I4_orgO",
+              "text" : "interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_org"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Operations\/interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_org\/Output",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO044interactions_sol_remove_hyphen_restrictions_i5_for_I4_orgO6OutputO",
+              "text" : "Output"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Removes all interaction restrictions from public repositories in the given organization. You must be an organization owner to remove restrictions.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "HTTP ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "DELETE \/orgs\/{org}\/interaction-limits",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/paths\/\/orgs\/{org}\/interaction-limits\/delete(interactions\/remove-restrictions-for-org)",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapiinteractions\/client\/interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_org(path:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIInteractions/documentation/GitHubRestAPIInteractions": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIInteractions",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiinteractions"
+},
+"doc://GitHubRestAPIInteractions/documentation/GitHubRestAPIInteractions/Client": {
+  "abstract" : [
+    {
+      "text" : "GitHub’s v3 REST API.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Client"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Client",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Client"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Client",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiinteractions\/client"
+},
+"doc://GitHubRestAPIInteractions/documentation/GitHubRestAPIInteractions/Client/APIProtocol-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Client\/APIProtocol-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "APIProtocol Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiinteractions\/client\/apiprotocol-implementations"
+},
+"doc://GitHubRestAPIInteractions/documentation/GitHubRestAPIInteractions/Client/interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_org(path:)": {
+  "abstract" : [
+    {
+      "text" : "Remove interaction restrictions for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_org"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "path"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO044interactions_sol_remove_hyphen_restrictions_i5_for_I4_orgO",
+      "text" : "interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_org"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO044interactions_sol_remove_hyphen_restrictions_i5_for_I4_orgO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO044interactions_sol_remove_hyphen_restrictions_i5_for_I4_orgO5InputV4PathV",
+      "text" : "Path"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO044interactions_sol_remove_hyphen_restrictions_i5_for_I4_orgO",
+      "text" : "interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_org"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO044interactions_sol_remove_hyphen_restrictions_i5_for_I4_orgO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Client\/interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_org(path:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_org(path:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiinteractions\/client\/interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_org(path:)"
+},
+"doc://GitHubRestAPIInteractions/documentation/GitHubRestAPIInteractions/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiinteractions\/operations"
+},
+"doc://GitHubRestAPIInteractions/documentation/GitHubRestAPIInteractions/Operations/interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_org": {
+  "abstract" : [
+    {
+      "text" : "Remove interaction restrictions for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_org"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Operations\/interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_org",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_org"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_org",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiinteractions\/operations\/interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_org"
+},
+"doc://GitHubRestAPIInteractions/documentation/GitHubRestAPIInteractions/Operations/interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_org/Input": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Operations\/interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_org\/Input",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_org.Input",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiinteractions\/operations\/interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_org\/input"
+},
+"doc://GitHubRestAPIInteractions/documentation/GitHubRestAPIInteractions/Operations/interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_org/Input/Path-swift.struct": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Path"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Operations\/interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_org\/Input\/Path-swift.struct",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Path"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_org.Input.Path",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiinteractions\/operations\/interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_org\/input\/path-swift.struct"
+},
+"doc://GitHubRestAPIInteractions/documentation/GitHubRestAPIInteractions/Operations/interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_org/Output": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Operations\/interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_org\/Output",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_org.Output",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiinteractions\/operations\/interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_org\/output"
+}
+}
+}

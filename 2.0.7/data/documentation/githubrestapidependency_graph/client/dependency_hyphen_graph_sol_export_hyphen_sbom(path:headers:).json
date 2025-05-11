@@ -1,0 +1,861 @@
+{
+  "abstract" : [
+    {
+      "text" : "Export a software bill of materials (SBOM) for a repository.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph",
+        "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph\/Client",
+        "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph\/Client\/APIProtocol-Implementations"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph\/Client\/dependency_hyphen_graph_sol_export_hyphen_sbom(path:headers:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "extendedModule" : "GitHubRestAPIDependency_Graph",
+    "externalID" : "s:29GitHubRestAPIDependency_Graph11APIProtocolPAAE035dependency_hyphen_graph_sol_export_H5_sbom4path7headersAA10OperationsOADO6OutputOAI5InputV4PathV_AM7HeadersVtYaKF::SYNTHESIZED::s:29GitHubRestAPIDependency_Graph6ClientV",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "func"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "dependency_hyphen_graph_sol_export_hyphen_sbom"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "path"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10OperationsO",
+        "text" : "Operations"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10OperationsO035dependency_hyphen_graph_sol_export_H5_sbomO",
+        "text" : "dependency_hyphen_graph_sol_export_hyphen_sbom"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10OperationsO035dependency_hyphen_graph_sol_export_H5_sbomO5InputV",
+        "text" : "Input"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10OperationsO035dependency_hyphen_graph_sol_export_H5_sbomO5InputV4PathV",
+        "text" : "Path"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "headers"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10OperationsO",
+        "text" : "Operations"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10OperationsO035dependency_hyphen_graph_sol_export_H5_sbomO",
+        "text" : "dependency_hyphen_graph_sol_export_hyphen_sbom"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10OperationsO035dependency_hyphen_graph_sol_export_H5_sbomO5InputV",
+        "text" : "Input"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10OperationsO035dependency_hyphen_graph_sol_export_H5_sbomO5InputV7HeadersV",
+        "text" : "Headers"
+      },
+      {
+        "kind" : "text",
+        "text" : ") "
+      },
+      {
+        "kind" : "keyword",
+        "text" : "async"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "keyword",
+        "text" : "throws"
+      },
+      {
+        "kind" : "text",
+        "text" : " -> "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10OperationsO",
+        "text" : "Operations"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10OperationsO035dependency_hyphen_graph_sol_export_H5_sbomO",
+        "text" : "dependency_hyphen_graph_sol_export_hyphen_sbom"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10OperationsO035dependency_hyphen_graph_sol_export_H5_sbomO6OutputO",
+        "text" : "Output"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIDependency_Graph"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/dependency-graph\/Types.swift#L66"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Instance Method",
+    "symbolKind" : "method",
+    "title" : "dependency_hyphen_graph_sol_export_hyphen_sbom(path:headers:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "func"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "dependency_hyphen_graph_sol_export_hyphen_sbom"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "path"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph\/Operations",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10OperationsO",
+              "text" : "Operations"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph\/Operations\/dependency_hyphen_graph_sol_export_hyphen_sbom",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10OperationsO035dependency_hyphen_graph_sol_export_H5_sbomO",
+              "text" : "dependency_hyphen_graph_sol_export_hyphen_sbom"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph\/Operations\/dependency_hyphen_graph_sol_export_hyphen_sbom\/Input",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10OperationsO035dependency_hyphen_graph_sol_export_H5_sbomO5InputV",
+              "text" : "Input"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph\/Operations\/dependency_hyphen_graph_sol_export_hyphen_sbom\/Input\/Path-swift.struct",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10OperationsO035dependency_hyphen_graph_sol_export_H5_sbomO5InputV4PathV",
+              "text" : "Path"
+            },
+            {
+              "kind" : "text",
+              "text" : ", "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "headers"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph\/Operations",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10OperationsO",
+              "text" : "Operations"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph\/Operations\/dependency_hyphen_graph_sol_export_hyphen_sbom",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10OperationsO035dependency_hyphen_graph_sol_export_H5_sbomO",
+              "text" : "dependency_hyphen_graph_sol_export_hyphen_sbom"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph\/Operations\/dependency_hyphen_graph_sol_export_hyphen_sbom\/Input",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10OperationsO035dependency_hyphen_graph_sol_export_H5_sbomO5InputV",
+              "text" : "Input"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph\/Operations\/dependency_hyphen_graph_sol_export_hyphen_sbom\/Input\/Headers-swift.struct",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10OperationsO035dependency_hyphen_graph_sol_export_H5_sbomO5InputV7HeadersV",
+              "text" : "Headers"
+            },
+            {
+              "kind" : "text",
+              "text" : " = .init()) "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "async"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "throws"
+            },
+            {
+              "kind" : "text",
+              "text" : " -> "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph\/Operations",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10OperationsO",
+              "text" : "Operations"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph\/Operations\/dependency_hyphen_graph_sol_export_hyphen_sbom",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10OperationsO035dependency_hyphen_graph_sol_export_H5_sbomO",
+              "text" : "dependency_hyphen_graph_sol_export_hyphen_sbom"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph\/Operations\/dependency_hyphen_graph_sol_export_hyphen_sbom\/Output",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10OperationsO035dependency_hyphen_graph_sol_export_H5_sbomO6OutputO",
+              "text" : "Output"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Exports the software bill of materials (SBOM) for a repository in SPDX JSON format.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "HTTP ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "GET \/repos\/{owner}\/{repo}\/dependency-graph\/sbom",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/paths\/\/repos\/{owner}\/{repo}\/dependency-graph\/sbom\/get(dependency-graph\/export-sbom)",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapidependency_graph\/client\/dependency_hyphen_graph_sol_export_hyphen_sbom(path:headers:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIDependency_Graph/documentation/GitHubRestAPIDependency_Graph": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIDependency_Graph",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependency_graph"
+},
+"doc://GitHubRestAPIDependency_Graph/documentation/GitHubRestAPIDependency_Graph/Client": {
+  "abstract" : [
+    {
+      "text" : "GitHub’s v3 REST API.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Client"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph\/Client",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Client"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Client",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependency_graph\/client"
+},
+"doc://GitHubRestAPIDependency_Graph/documentation/GitHubRestAPIDependency_Graph/Client/APIProtocol-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph\/Client\/APIProtocol-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "APIProtocol Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependency_graph\/client\/apiprotocol-implementations"
+},
+"doc://GitHubRestAPIDependency_Graph/documentation/GitHubRestAPIDependency_Graph/Client/dependency_hyphen_graph_sol_export_hyphen_sbom(path:headers:)": {
+  "abstract" : [
+    {
+      "text" : "Export a software bill of materials (SBOM) for a repository.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "dependency_hyphen_graph_sol_export_hyphen_sbom"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "path"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10OperationsO035dependency_hyphen_graph_sol_export_H5_sbomO",
+      "text" : "dependency_hyphen_graph_sol_export_hyphen_sbom"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10OperationsO035dependency_hyphen_graph_sol_export_H5_sbomO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10OperationsO035dependency_hyphen_graph_sol_export_H5_sbomO5InputV4PathV",
+      "text" : "Path"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10OperationsO035dependency_hyphen_graph_sol_export_H5_sbomO",
+      "text" : "dependency_hyphen_graph_sol_export_hyphen_sbom"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10OperationsO035dependency_hyphen_graph_sol_export_H5_sbomO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10OperationsO035dependency_hyphen_graph_sol_export_H5_sbomO5InputV7HeadersV",
+      "text" : "Headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10OperationsO035dependency_hyphen_graph_sol_export_H5_sbomO",
+      "text" : "dependency_hyphen_graph_sol_export_hyphen_sbom"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10OperationsO035dependency_hyphen_graph_sol_export_H5_sbomO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph\/Client\/dependency_hyphen_graph_sol_export_hyphen_sbom(path:headers:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "dependency_hyphen_graph_sol_export_hyphen_sbom(path:headers:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependency_graph\/client\/dependency_hyphen_graph_sol_export_hyphen_sbom(path:headers:)"
+},
+"doc://GitHubRestAPIDependency_Graph/documentation/GitHubRestAPIDependency_Graph/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependency_graph\/operations"
+},
+"doc://GitHubRestAPIDependency_Graph/documentation/GitHubRestAPIDependency_Graph/Operations/dependency_hyphen_graph_sol_export_hyphen_sbom": {
+  "abstract" : [
+    {
+      "text" : "Export a software bill of materials (SBOM) for a repository.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "dependency_hyphen_graph_sol_export_hyphen_sbom"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph\/Operations\/dependency_hyphen_graph_sol_export_hyphen_sbom",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "dependency_hyphen_graph_sol_export_hyphen_sbom"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.dependency_hyphen_graph_sol_export_hyphen_sbom",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependency_graph\/operations\/dependency_hyphen_graph_sol_export_hyphen_sbom"
+},
+"doc://GitHubRestAPIDependency_Graph/documentation/GitHubRestAPIDependency_Graph/Operations/dependency_hyphen_graph_sol_export_hyphen_sbom/Input": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph\/Operations\/dependency_hyphen_graph_sol_export_hyphen_sbom\/Input",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.dependency_hyphen_graph_sol_export_hyphen_sbom.Input",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependency_graph\/operations\/dependency_hyphen_graph_sol_export_hyphen_sbom\/input"
+},
+"doc://GitHubRestAPIDependency_Graph/documentation/GitHubRestAPIDependency_Graph/Operations/dependency_hyphen_graph_sol_export_hyphen_sbom/Input/Headers-swift.struct": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Headers"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph\/Operations\/dependency_hyphen_graph_sol_export_hyphen_sbom\/Input\/Headers-swift.struct",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Headers"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.dependency_hyphen_graph_sol_export_hyphen_sbom.Input.Headers",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependency_graph\/operations\/dependency_hyphen_graph_sol_export_hyphen_sbom\/input\/headers-swift.struct"
+},
+"doc://GitHubRestAPIDependency_Graph/documentation/GitHubRestAPIDependency_Graph/Operations/dependency_hyphen_graph_sol_export_hyphen_sbom/Input/Path-swift.struct": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Path"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph\/Operations\/dependency_hyphen_graph_sol_export_hyphen_sbom\/Input\/Path-swift.struct",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Path"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.dependency_hyphen_graph_sol_export_hyphen_sbom.Input.Path",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependency_graph\/operations\/dependency_hyphen_graph_sol_export_hyphen_sbom\/input\/path-swift.struct"
+},
+"doc://GitHubRestAPIDependency_Graph/documentation/GitHubRestAPIDependency_Graph/Operations/dependency_hyphen_graph_sol_export_hyphen_sbom/Output": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph\/Operations\/dependency_hyphen_graph_sol_export_hyphen_sbom\/Output",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.dependency_hyphen_graph_sol_export_hyphen_sbom.Output",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependency_graph\/operations\/dependency_hyphen_graph_sol_export_hyphen_sbom\/output"
+}
+}
+}

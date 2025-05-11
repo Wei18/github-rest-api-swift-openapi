@@ -1,0 +1,707 @@
+{
+  "abstract" : [
+    {
+      "text" : "Creates a new ",
+      "type" : "text"
+    },
+    {
+      "code" : "network_hyphen_configuration",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIHosted_Compute\/documentation\/GitHubRestAPIHosted_Compute",
+        "doc:\/\/GitHubRestAPIHosted_Compute\/documentation\/GitHubRestAPIHosted_Compute\/Components",
+        "doc:\/\/GitHubRestAPIHosted_Compute\/documentation\/GitHubRestAPIHosted_Compute\/Components\/Schemas",
+        "doc:\/\/GitHubRestAPIHosted_Compute\/documentation\/GitHubRestAPIHosted_Compute\/Components\/Schemas\/network_hyphen_configuration"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIHosted_Compute\/documentation\/GitHubRestAPIHosted_Compute\/Components\/Schemas\/network_hyphen_configuration\/init(id:name:compute_service:network_settings_ids:created_on:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:27GitHubRestAPIHosted_Compute10ComponentsO7SchemasO28network_hyphen_configurationV2id4name15compute_service0H13_settings_ids10created_onAGSS_SSAG0m1_N7PayloadOSgSaySSGSg10Foundation4DateVSgtcfc",
+    "fragments" : [
+      {
+        "kind" : "identifier",
+        "text" : "init"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "id"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SS",
+        "text" : "String"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "name"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SS",
+        "text" : "String"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "compute_service"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:27GitHubRestAPIHosted_Compute10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:27GitHubRestAPIHosted_Compute10ComponentsO7SchemasO",
+        "text" : "Schemas"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:27GitHubRestAPIHosted_Compute10ComponentsO7SchemasO28network_hyphen_configurationV",
+        "text" : "network_hyphen_configuration"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:27GitHubRestAPIHosted_Compute10ComponentsO7SchemasO28network_hyphen_configurationV22compute_servicePayloadO",
+        "text" : "compute_servicePayload"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "network_settings_ids"
+      },
+      {
+        "kind" : "text",
+        "text" : ": ["
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SS",
+        "text" : "String"
+      },
+      {
+        "kind" : "text",
+        "text" : "]?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "created_on"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:10Foundation4DateV",
+        "text" : "Date"
+      },
+      {
+        "kind" : "text",
+        "text" : "?)"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIHosted_Compute"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/hosted-compute\/Types.swift#L239"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Initializer",
+    "symbolKind" : "init",
+    "title" : "init(id:name:compute_service:network_settings_ids:created_on:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "init"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "id"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:SS",
+              "text" : "String"
+            },
+            {
+              "kind" : "text",
+              "text" : ", "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "name"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:SS",
+              "text" : "String"
+            },
+            {
+              "kind" : "text",
+              "text" : ", "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "compute_service"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIHosted_Compute\/documentation\/GitHubRestAPIHosted_Compute\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:27GitHubRestAPIHosted_Compute10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIHosted_Compute\/documentation\/GitHubRestAPIHosted_Compute\/Components\/Schemas",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:27GitHubRestAPIHosted_Compute10ComponentsO7SchemasO",
+              "text" : "Schemas"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIHosted_Compute\/documentation\/GitHubRestAPIHosted_Compute\/Components\/Schemas\/network_hyphen_configuration",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:27GitHubRestAPIHosted_Compute10ComponentsO7SchemasO28network_hyphen_configurationV",
+              "text" : "network_hyphen_configuration"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIHosted_Compute\/documentation\/GitHubRestAPIHosted_Compute\/Components\/Schemas\/network_hyphen_configuration\/compute_servicePayload",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:27GitHubRestAPIHosted_Compute10ComponentsO7SchemasO28network_hyphen_configurationV22compute_servicePayloadO",
+              "text" : "compute_servicePayload"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "network_settings_ids"
+            },
+            {
+              "kind" : "text",
+              "text" : ": ["
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:SS",
+              "text" : "String"
+            },
+            {
+              "kind" : "text",
+              "text" : "]? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "created_on"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:10Foundation4DateV",
+              "text" : "Date"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil)"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "kind" : "parameters",
+      "parameters" : [
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The unique identifier of the network configuration.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "id"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The name of the network configuration.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "name"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The hosted compute service the network configuration supports.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "compute_service"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The unique identifier of each network settings in the configuration.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "network_settings_ids"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The time at which the network configuration was created, in ISO 8601 format.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "created_on"
+        }
+      ]
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapihosted_compute\/components\/schemas\/network_hyphen_configuration\/init(id:name:compute_service:network_settings_ids:created_on:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIHosted_Compute/documentation/GitHubRestAPIHosted_Compute": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIHosted_Compute\/documentation\/GitHubRestAPIHosted_Compute",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIHosted_Compute",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapihosted_compute"
+},
+"doc://GitHubRestAPIHosted_Compute/documentation/GitHubRestAPIHosted_Compute/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIHosted_Compute\/documentation\/GitHubRestAPIHosted_Compute\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapihosted_compute\/components"
+},
+"doc://GitHubRestAPIHosted_Compute/documentation/GitHubRestAPIHosted_Compute/Components/Schemas": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/schemas",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIHosted_Compute\/documentation\/GitHubRestAPIHosted_Compute\/Components\/Schemas",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapihosted_compute\/components\/schemas"
+},
+"doc://GitHubRestAPIHosted_Compute/documentation/GitHubRestAPIHosted_Compute/Components/Schemas/network_hyphen_configuration": {
+  "abstract" : [
+    {
+      "text" : "A hosted compute network configuration.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "network_hyphen_configuration"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIHosted_Compute\/documentation\/GitHubRestAPIHosted_Compute\/Components\/Schemas\/network_hyphen_configuration",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "network_hyphen_configuration"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.network_hyphen_configuration",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapihosted_compute\/components\/schemas\/network_hyphen_configuration"
+},
+"doc://GitHubRestAPIHosted_Compute/documentation/GitHubRestAPIHosted_Compute/Components/Schemas/network_hyphen_configuration/compute_servicePayload": {
+  "abstract" : [
+    {
+      "text" : "The hosted compute service the network configuration supports.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "compute_servicePayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIHosted_Compute\/documentation\/GitHubRestAPIHosted_Compute\/Components\/Schemas\/network_hyphen_configuration\/compute_servicePayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "compute_servicePayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.network_hyphen_configuration.compute_servicePayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapihosted_compute\/components\/schemas\/network_hyphen_configuration\/compute_servicepayload"
+},
+"doc://GitHubRestAPIHosted_Compute/documentation/GitHubRestAPIHosted_Compute/Components/Schemas/network_hyphen_configuration/init(id:name:compute_service:network_settings_ids:created_on:)": {
+  "abstract" : [
+    {
+      "text" : "Creates a new ",
+      "type" : "text"
+    },
+    {
+      "code" : "network_hyphen_configuration",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "id"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "name"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "compute_service"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:27GitHubRestAPIHosted_Compute10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:27GitHubRestAPIHosted_Compute10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:27GitHubRestAPIHosted_Compute10ComponentsO7SchemasO28network_hyphen_configurationV",
+      "text" : "network_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:27GitHubRestAPIHosted_Compute10ComponentsO7SchemasO28network_hyphen_configurationV22compute_servicePayloadO",
+      "text" : "compute_servicePayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "network_settings_ids"
+    },
+    {
+      "kind" : "text",
+      "text" : ": ["
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "]?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "created_on"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:10Foundation4DateV",
+      "text" : "Date"
+    },
+    {
+      "kind" : "text",
+      "text" : "?)"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIHosted_Compute\/documentation\/GitHubRestAPIHosted_Compute\/Components\/Schemas\/network_hyphen_configuration\/init(id:name:compute_service:network_settings_ids:created_on:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(id:name:compute_service:network_settings_ids:created_on:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapihosted_compute\/components\/schemas\/network_hyphen_configuration\/init(id:name:compute_service:network_settings_ids:created_on:)"
+}
+}
+}

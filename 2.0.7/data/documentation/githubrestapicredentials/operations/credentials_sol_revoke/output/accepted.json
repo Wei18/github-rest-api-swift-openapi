@@ -1,0 +1,561 @@
+{
+  "abstract" : [
+    {
+      "text" : "The associated value of the enum case if ",
+      "type" : "text"
+    },
+    {
+      "code" : "self",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " is ",
+      "type" : "text"
+    },
+    {
+      "code" : ".accepted",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPICredentials\/documentation\/GitHubRestAPICredentials",
+        "doc:\/\/GitHubRestAPICredentials\/documentation\/GitHubRestAPICredentials\/Operations",
+        "doc:\/\/GitHubRestAPICredentials\/documentation\/GitHubRestAPICredentials\/Operations\/credentials_sol_revoke",
+        "doc:\/\/GitHubRestAPICredentials\/documentation\/GitHubRestAPICredentials\/Operations\/credentials_sol_revoke\/Output"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPICredentials\/documentation\/GitHubRestAPICredentials\/Operations\/credentials_sol_revoke\/Output\/accepted"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:24GitHubRestAPICredentials10OperationsO22credentials_sol_revokeO6OutputO8acceptedAA10ComponentsO9ResponsesOAHVvp",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "var"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "accepted"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:24GitHubRestAPICredentials10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:24GitHubRestAPICredentials10ComponentsO9ResponsesO",
+        "text" : "Responses"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:24GitHubRestAPICredentials10ComponentsO9ResponsesO8acceptedV",
+        "text" : "accepted"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPICredentials"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/credentials\/Types.swift#L335"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Instance Property",
+    "symbolKind" : "property",
+    "title" : "accepted"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "var"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "accepted"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICredentials\/documentation\/GitHubRestAPICredentials\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:24GitHubRestAPICredentials10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICredentials\/documentation\/GitHubRestAPICredentials\/Components\/Responses",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:24GitHubRestAPICredentials10ComponentsO9ResponsesO",
+              "text" : "Responses"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICredentials\/documentation\/GitHubRestAPICredentials\/Components\/Responses\/accepted",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:24GitHubRestAPICredentials10ComponentsO9ResponsesO8acceptedV",
+              "text" : "accepted"
+            },
+            {
+              "kind" : "text",
+              "text" : " { "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "get"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "throws"
+            },
+            {
+              "kind" : "text",
+              "text" : " }"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "An error if ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "self",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : " is not ",
+                  "type" : "text"
+                },
+                {
+                  "code" : ".accepted",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Throws",
+          "style" : "note",
+          "type" : "aside"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "",
+                  "type" : "text"
+                },
+                {
+                  "code" : ".accepted",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "See Also",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapicredentials\/operations\/credentials_sol_revoke\/output\/accepted"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPICredentials/documentation/GitHubRestAPICredentials": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICredentials\/documentation\/GitHubRestAPICredentials",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPICredentials",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicredentials"
+},
+"doc://GitHubRestAPICredentials/documentation/GitHubRestAPICredentials/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICredentials\/documentation\/GitHubRestAPICredentials\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicredentials\/components"
+},
+"doc://GitHubRestAPICredentials/documentation/GitHubRestAPICredentials/Components/Responses": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/responses",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Responses"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICredentials\/documentation\/GitHubRestAPICredentials\/Components\/Responses",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Responses"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Responses",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicredentials\/components\/responses"
+},
+"doc://GitHubRestAPICredentials/documentation/GitHubRestAPICredentials/Components/Responses/accepted": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "accepted"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICredentials\/documentation\/GitHubRestAPICredentials\/Components\/Responses\/accepted",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "accepted"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Responses.accepted",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicredentials\/components\/responses\/accepted"
+},
+"doc://GitHubRestAPICredentials/documentation/GitHubRestAPICredentials/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICredentials\/documentation\/GitHubRestAPICredentials\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicredentials\/operations"
+},
+"doc://GitHubRestAPICredentials/documentation/GitHubRestAPICredentials/Operations/credentials_sol_revoke": {
+  "abstract" : [
+    {
+      "text" : "Revoke a list of credentials",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "credentials_sol_revoke"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICredentials\/documentation\/GitHubRestAPICredentials\/Operations\/credentials_sol_revoke",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "credentials_sol_revoke"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.credentials_sol_revoke",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicredentials\/operations\/credentials_sol_revoke"
+},
+"doc://GitHubRestAPICredentials/documentation/GitHubRestAPICredentials/Operations/credentials_sol_revoke/Output": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICredentials\/documentation\/GitHubRestAPICredentials\/Operations\/credentials_sol_revoke\/Output",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.credentials_sol_revoke.Output",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicredentials\/operations\/credentials_sol_revoke\/output"
+},
+"doc://GitHubRestAPICredentials/documentation/GitHubRestAPICredentials/Operations/credentials_sol_revoke/Output/accepted": {
+  "abstract" : [
+    {
+      "text" : "The associated value of the enum case if ",
+      "type" : "text"
+    },
+    {
+      "code" : "self",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " is ",
+      "type" : "text"
+    },
+    {
+      "code" : ".accepted",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "accepted"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:24GitHubRestAPICredentials10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:24GitHubRestAPICredentials10ComponentsO9ResponsesO",
+      "text" : "Responses"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:24GitHubRestAPICredentials10ComponentsO9ResponsesO8acceptedV",
+      "text" : "accepted"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICredentials\/documentation\/GitHubRestAPICredentials\/Operations\/credentials_sol_revoke\/Output\/accepted",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "accepted",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicredentials\/operations\/credentials_sol_revoke\/output\/accepted"
+}
+}
+}

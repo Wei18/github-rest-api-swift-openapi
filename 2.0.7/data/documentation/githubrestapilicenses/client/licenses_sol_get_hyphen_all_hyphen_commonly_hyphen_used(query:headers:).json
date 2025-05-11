@@ -1,0 +1,882 @@
+{
+  "abstract" : [
+    {
+      "text" : "Get all commonly used licenses",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPILicenses\/documentation\/GitHubRestAPILicenses",
+        "doc:\/\/GitHubRestAPILicenses\/documentation\/GitHubRestAPILicenses\/Client",
+        "doc:\/\/GitHubRestAPILicenses\/documentation\/GitHubRestAPILicenses\/Client\/APIProtocol-Implementations"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPILicenses\/documentation\/GitHubRestAPILicenses\/Client\/licenses_sol_get_hyphen_all_hyphen_commonly_hyphen_used(query:headers:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "extendedModule" : "GitHubRestAPILicenses",
+    "externalID" : "s:21GitHubRestAPILicenses11APIProtocolPAAE028licenses_sol_get_hyphen_all_i10_commonly_I5_used5query7headersAA10OperationsOADO6OutputOAI5InputV5QueryV_AM7HeadersVtYaKF::SYNTHESIZED::s:21GitHubRestAPILicenses6ClientV",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "func"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "licenses_sol_get_hyphen_all_hyphen_commonly_hyphen_used"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "query"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:21GitHubRestAPILicenses10OperationsO",
+        "text" : "Operations"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:21GitHubRestAPILicenses10OperationsO028licenses_sol_get_hyphen_all_i10_commonly_I5_usedO",
+        "text" : "licenses_sol_get_hyphen_all_hyphen_commonly_hyphen_used"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:21GitHubRestAPILicenses10OperationsO028licenses_sol_get_hyphen_all_i10_commonly_I5_usedO5InputV",
+        "text" : "Input"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:21GitHubRestAPILicenses10OperationsO028licenses_sol_get_hyphen_all_i10_commonly_I5_usedO5InputV5QueryV",
+        "text" : "Query"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "headers"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:21GitHubRestAPILicenses10OperationsO",
+        "text" : "Operations"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:21GitHubRestAPILicenses10OperationsO028licenses_sol_get_hyphen_all_i10_commonly_I5_usedO",
+        "text" : "licenses_sol_get_hyphen_all_hyphen_commonly_hyphen_used"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:21GitHubRestAPILicenses10OperationsO028licenses_sol_get_hyphen_all_i10_commonly_I5_usedO5InputV",
+        "text" : "Input"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:21GitHubRestAPILicenses10OperationsO028licenses_sol_get_hyphen_all_i10_commonly_I5_usedO5InputV7HeadersV",
+        "text" : "Headers"
+      },
+      {
+        "kind" : "text",
+        "text" : ") "
+      },
+      {
+        "kind" : "keyword",
+        "text" : "async"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "keyword",
+        "text" : "throws"
+      },
+      {
+        "kind" : "text",
+        "text" : " -> "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:21GitHubRestAPILicenses10OperationsO",
+        "text" : "Operations"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:21GitHubRestAPILicenses10OperationsO028licenses_sol_get_hyphen_all_i10_commonly_I5_usedO",
+        "text" : "licenses_sol_get_hyphen_all_hyphen_commonly_hyphen_used"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:21GitHubRestAPILicenses10OperationsO028licenses_sol_get_hyphen_all_i10_commonly_I5_usedO6OutputO",
+        "text" : "Output"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPILicenses"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/licenses\/Types.swift#L50"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Instance Method",
+    "symbolKind" : "method",
+    "title" : "licenses_sol_get_hyphen_all_hyphen_commonly_hyphen_used(query:headers:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "func"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "licenses_sol_get_hyphen_all_hyphen_commonly_hyphen_used"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "query"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPILicenses\/documentation\/GitHubRestAPILicenses\/Operations",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:21GitHubRestAPILicenses10OperationsO",
+              "text" : "Operations"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPILicenses\/documentation\/GitHubRestAPILicenses\/Operations\/licenses_sol_get_hyphen_all_hyphen_commonly_hyphen_used",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:21GitHubRestAPILicenses10OperationsO028licenses_sol_get_hyphen_all_i10_commonly_I5_usedO",
+              "text" : "licenses_sol_get_hyphen_all_hyphen_commonly_hyphen_used"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPILicenses\/documentation\/GitHubRestAPILicenses\/Operations\/licenses_sol_get_hyphen_all_hyphen_commonly_hyphen_used\/Input",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:21GitHubRestAPILicenses10OperationsO028licenses_sol_get_hyphen_all_i10_commonly_I5_usedO5InputV",
+              "text" : "Input"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPILicenses\/documentation\/GitHubRestAPILicenses\/Operations\/licenses_sol_get_hyphen_all_hyphen_commonly_hyphen_used\/Input\/Query-swift.struct",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:21GitHubRestAPILicenses10OperationsO028licenses_sol_get_hyphen_all_i10_commonly_I5_usedO5InputV5QueryV",
+              "text" : "Query"
+            },
+            {
+              "kind" : "text",
+              "text" : " = .init(), "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "headers"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPILicenses\/documentation\/GitHubRestAPILicenses\/Operations",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:21GitHubRestAPILicenses10OperationsO",
+              "text" : "Operations"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPILicenses\/documentation\/GitHubRestAPILicenses\/Operations\/licenses_sol_get_hyphen_all_hyphen_commonly_hyphen_used",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:21GitHubRestAPILicenses10OperationsO028licenses_sol_get_hyphen_all_i10_commonly_I5_usedO",
+              "text" : "licenses_sol_get_hyphen_all_hyphen_commonly_hyphen_used"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPILicenses\/documentation\/GitHubRestAPILicenses\/Operations\/licenses_sol_get_hyphen_all_hyphen_commonly_hyphen_used\/Input",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:21GitHubRestAPILicenses10OperationsO028licenses_sol_get_hyphen_all_i10_commonly_I5_usedO5InputV",
+              "text" : "Input"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPILicenses\/documentation\/GitHubRestAPILicenses\/Operations\/licenses_sol_get_hyphen_all_hyphen_commonly_hyphen_used\/Input\/Headers-swift.struct",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:21GitHubRestAPILicenses10OperationsO028licenses_sol_get_hyphen_all_i10_commonly_I5_usedO5InputV7HeadersV",
+              "text" : "Headers"
+            },
+            {
+              "kind" : "text",
+              "text" : " = .init()) "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "async"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "throws"
+            },
+            {
+              "kind" : "text",
+              "text" : " -> "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPILicenses\/documentation\/GitHubRestAPILicenses\/Operations",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:21GitHubRestAPILicenses10OperationsO",
+              "text" : "Operations"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPILicenses\/documentation\/GitHubRestAPILicenses\/Operations\/licenses_sol_get_hyphen_all_hyphen_commonly_hyphen_used",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:21GitHubRestAPILicenses10OperationsO028licenses_sol_get_hyphen_all_i10_commonly_I5_usedO",
+              "text" : "licenses_sol_get_hyphen_all_hyphen_commonly_hyphen_used"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPILicenses\/documentation\/GitHubRestAPILicenses\/Operations\/licenses_sol_get_hyphen_all_hyphen_commonly_hyphen_used\/Output",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:21GitHubRestAPILicenses10OperationsO028licenses_sol_get_hyphen_all_i10_commonly_I5_usedO6OutputO",
+              "text" : "Output"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Lists the most commonly used licenses on GitHub. For more information, see “",
+              "type" : "text"
+            },
+            {
+              "identifier" : "https:\/\/docs.github.com\/repositories\/managing-your-repositorys-settings-and-features\/customizing-your-repository\/licensing-a-repository",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : ".”",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "HTTP ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "GET \/licenses",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/paths\/\/licenses\/get(licenses\/get-all-commonly-used)",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapilicenses\/client\/licenses_sol_get_hyphen_all_hyphen_commonly_hyphen_used(query:headers:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPILicenses/documentation/GitHubRestAPILicenses": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPILicenses\/documentation\/GitHubRestAPILicenses",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPILicenses",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapilicenses"
+},
+"doc://GitHubRestAPILicenses/documentation/GitHubRestAPILicenses/Client": {
+  "abstract" : [
+    {
+      "text" : "GitHub’s v3 REST API.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Client"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPILicenses\/documentation\/GitHubRestAPILicenses\/Client",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Client"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Client",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapilicenses\/client"
+},
+"doc://GitHubRestAPILicenses/documentation/GitHubRestAPILicenses/Client/APIProtocol-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPILicenses\/documentation\/GitHubRestAPILicenses\/Client\/APIProtocol-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "APIProtocol Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapilicenses\/client\/apiprotocol-implementations"
+},
+"doc://GitHubRestAPILicenses/documentation/GitHubRestAPILicenses/Client/licenses_sol_get_hyphen_all_hyphen_commonly_hyphen_used(query:headers:)": {
+  "abstract" : [
+    {
+      "text" : "Get all commonly used licenses",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "licenses_sol_get_hyphen_all_hyphen_commonly_hyphen_used"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "query"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPILicenses10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPILicenses10OperationsO028licenses_sol_get_hyphen_all_i10_commonly_I5_usedO",
+      "text" : "licenses_sol_get_hyphen_all_hyphen_commonly_hyphen_used"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPILicenses10OperationsO028licenses_sol_get_hyphen_all_i10_commonly_I5_usedO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPILicenses10OperationsO028licenses_sol_get_hyphen_all_i10_commonly_I5_usedO5InputV5QueryV",
+      "text" : "Query"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPILicenses10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPILicenses10OperationsO028licenses_sol_get_hyphen_all_i10_commonly_I5_usedO",
+      "text" : "licenses_sol_get_hyphen_all_hyphen_commonly_hyphen_used"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPILicenses10OperationsO028licenses_sol_get_hyphen_all_i10_commonly_I5_usedO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPILicenses10OperationsO028licenses_sol_get_hyphen_all_i10_commonly_I5_usedO5InputV7HeadersV",
+      "text" : "Headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPILicenses10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPILicenses10OperationsO028licenses_sol_get_hyphen_all_i10_commonly_I5_usedO",
+      "text" : "licenses_sol_get_hyphen_all_hyphen_commonly_hyphen_used"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPILicenses10OperationsO028licenses_sol_get_hyphen_all_i10_commonly_I5_usedO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPILicenses\/documentation\/GitHubRestAPILicenses\/Client\/licenses_sol_get_hyphen_all_hyphen_commonly_hyphen_used(query:headers:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "licenses_sol_get_hyphen_all_hyphen_commonly_hyphen_used(query:headers:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapilicenses\/client\/licenses_sol_get_hyphen_all_hyphen_commonly_hyphen_used(query:headers:)"
+},
+"doc://GitHubRestAPILicenses/documentation/GitHubRestAPILicenses/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPILicenses\/documentation\/GitHubRestAPILicenses\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapilicenses\/operations"
+},
+"doc://GitHubRestAPILicenses/documentation/GitHubRestAPILicenses/Operations/licenses_sol_get_hyphen_all_hyphen_commonly_hyphen_used": {
+  "abstract" : [
+    {
+      "text" : "Get all commonly used licenses",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "licenses_sol_get_hyphen_all_hyphen_commonly_hyphen_used"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPILicenses\/documentation\/GitHubRestAPILicenses\/Operations\/licenses_sol_get_hyphen_all_hyphen_commonly_hyphen_used",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "licenses_sol_get_hyphen_all_hyphen_commonly_hyphen_used"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.licenses_sol_get_hyphen_all_hyphen_commonly_hyphen_used",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapilicenses\/operations\/licenses_sol_get_hyphen_all_hyphen_commonly_hyphen_used"
+},
+"doc://GitHubRestAPILicenses/documentation/GitHubRestAPILicenses/Operations/licenses_sol_get_hyphen_all_hyphen_commonly_hyphen_used/Input": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPILicenses\/documentation\/GitHubRestAPILicenses\/Operations\/licenses_sol_get_hyphen_all_hyphen_commonly_hyphen_used\/Input",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.licenses_sol_get_hyphen_all_hyphen_commonly_hyphen_used.Input",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapilicenses\/operations\/licenses_sol_get_hyphen_all_hyphen_commonly_hyphen_used\/input"
+},
+"doc://GitHubRestAPILicenses/documentation/GitHubRestAPILicenses/Operations/licenses_sol_get_hyphen_all_hyphen_commonly_hyphen_used/Input/Headers-swift.struct": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Headers"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPILicenses\/documentation\/GitHubRestAPILicenses\/Operations\/licenses_sol_get_hyphen_all_hyphen_commonly_hyphen_used\/Input\/Headers-swift.struct",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Headers"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.licenses_sol_get_hyphen_all_hyphen_commonly_hyphen_used.Input.Headers",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapilicenses\/operations\/licenses_sol_get_hyphen_all_hyphen_commonly_hyphen_used\/input\/headers-swift.struct"
+},
+"doc://GitHubRestAPILicenses/documentation/GitHubRestAPILicenses/Operations/licenses_sol_get_hyphen_all_hyphen_commonly_hyphen_used/Input/Query-swift.struct": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Query"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPILicenses\/documentation\/GitHubRestAPILicenses\/Operations\/licenses_sol_get_hyphen_all_hyphen_commonly_hyphen_used\/Input\/Query-swift.struct",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Query"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.licenses_sol_get_hyphen_all_hyphen_commonly_hyphen_used.Input.Query",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapilicenses\/operations\/licenses_sol_get_hyphen_all_hyphen_commonly_hyphen_used\/input\/query-swift.struct"
+},
+"doc://GitHubRestAPILicenses/documentation/GitHubRestAPILicenses/Operations/licenses_sol_get_hyphen_all_hyphen_commonly_hyphen_used/Output": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPILicenses\/documentation\/GitHubRestAPILicenses\/Operations\/licenses_sol_get_hyphen_all_hyphen_commonly_hyphen_used\/Output",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.licenses_sol_get_hyphen_all_hyphen_commonly_hyphen_used.Output",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapilicenses\/operations\/licenses_sol_get_hyphen_all_hyphen_commonly_hyphen_used\/output"
+},
+"https://docs.github.com/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository": {
+  "identifier" : "https:\/\/docs.github.com\/repositories\/managing-your-repositorys-settings-and-features\/customizing-your-repository\/licensing-a-repository",
+  "title" : "Licensing a repository ",
+  "titleInlineContent" : [
+    {
+      "text" : "Licensing a repository ",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/docs.github.com\/repositories\/managing-your-repositorys-settings-and-features\/customizing-your-repository\/licensing-a-repository"
+}
+}
+}

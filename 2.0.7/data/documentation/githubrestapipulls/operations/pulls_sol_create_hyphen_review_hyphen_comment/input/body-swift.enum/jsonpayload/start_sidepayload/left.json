@@ -1,0 +1,407 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIPulls\/documentation\/GitHubRestAPIPulls",
+        "doc:\/\/GitHubRestAPIPulls\/documentation\/GitHubRestAPIPulls\/Operations",
+        "doc:\/\/GitHubRestAPIPulls\/documentation\/GitHubRestAPIPulls\/Operations\/pulls_sol_create_hyphen_review_hyphen_comment",
+        "doc:\/\/GitHubRestAPIPulls\/documentation\/GitHubRestAPIPulls\/Operations\/pulls_sol_create_hyphen_review_hyphen_comment\/Input",
+        "doc:\/\/GitHubRestAPIPulls\/documentation\/GitHubRestAPIPulls\/Operations\/pulls_sol_create_hyphen_review_hyphen_comment\/Input\/Body-swift.enum",
+        "doc:\/\/GitHubRestAPIPulls\/documentation\/GitHubRestAPIPulls\/Operations\/pulls_sol_create_hyphen_review_hyphen_comment\/Input\/Body-swift.enum\/jsonPayload",
+        "doc:\/\/GitHubRestAPIPulls\/documentation\/GitHubRestAPIPulls\/Operations\/pulls_sol_create_hyphen_review_hyphen_comment\/Input\/Body-swift.enum\/jsonPayload\/start_sidePayload"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIPulls\/documentation\/GitHubRestAPIPulls\/Operations\/pulls_sol_create_hyphen_review_hyphen_comment\/Input\/Body-swift.enum\/jsonPayload\/start_sidePayload\/LEFT"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:18GitHubRestAPIPulls10OperationsO031pulls_sol_create_hyphen_review_I8_commentO5InputV4BodyO11jsonPayloadV010start_sideO0O4LEFTyA2MmF",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "case"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "LEFT"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIPulls"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/pulls\/Types.swift#L7669"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Case",
+    "symbolKind" : "case",
+    "title" : "Operations.pulls_sol_create_hyphen_review_hyphen_comment.Input.Body.jsonPayload.start_sidePayload.LEFT"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "case"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "LEFT"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapipulls\/operations\/pulls_sol_create_hyphen_review_hyphen_comment\/input\/body-swift.enum\/jsonpayload\/start_sidepayload\/left"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIPulls/documentation/GitHubRestAPIPulls": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPulls\/documentation\/GitHubRestAPIPulls",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIPulls",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipulls"
+},
+"doc://GitHubRestAPIPulls/documentation/GitHubRestAPIPulls/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPulls\/documentation\/GitHubRestAPIPulls\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipulls\/operations"
+},
+"doc://GitHubRestAPIPulls/documentation/GitHubRestAPIPulls/Operations/pulls_sol_create_hyphen_review_hyphen_comment": {
+  "abstract" : [
+    {
+      "text" : "Create a review comment for a pull request",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "pulls_sol_create_hyphen_review_hyphen_comment"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPulls\/documentation\/GitHubRestAPIPulls\/Operations\/pulls_sol_create_hyphen_review_hyphen_comment",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "pulls_sol_create_hyphen_review_hyphen_comment"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.pulls_sol_create_hyphen_review_hyphen_comment",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipulls\/operations\/pulls_sol_create_hyphen_review_hyphen_comment"
+},
+"doc://GitHubRestAPIPulls/documentation/GitHubRestAPIPulls/Operations/pulls_sol_create_hyphen_review_hyphen_comment/Input": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPulls\/documentation\/GitHubRestAPIPulls\/Operations\/pulls_sol_create_hyphen_review_hyphen_comment\/Input",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.pulls_sol_create_hyphen_review_hyphen_comment.Input",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipulls\/operations\/pulls_sol_create_hyphen_review_hyphen_comment\/input"
+},
+"doc://GitHubRestAPIPulls/documentation/GitHubRestAPIPulls/Operations/pulls_sol_create_hyphen_review_hyphen_comment/Input/Body-swift.enum": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Body"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPulls\/documentation\/GitHubRestAPIPulls\/Operations\/pulls_sol_create_hyphen_review_hyphen_comment\/Input\/Body-swift.enum",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Body"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.pulls_sol_create_hyphen_review_hyphen_comment.Input.Body",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipulls\/operations\/pulls_sol_create_hyphen_review_hyphen_comment\/input\/body-swift.enum"
+},
+"doc://GitHubRestAPIPulls/documentation/GitHubRestAPIPulls/Operations/pulls_sol_create_hyphen_review_hyphen_comment/Input/Body-swift.enum/jsonPayload": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "jsonPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPulls\/documentation\/GitHubRestAPIPulls\/Operations\/pulls_sol_create_hyphen_review_hyphen_comment\/Input\/Body-swift.enum\/jsonPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "jsonPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.pulls_sol_create_hyphen_review_hyphen_comment.Input.Body.jsonPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipulls\/operations\/pulls_sol_create_hyphen_review_hyphen_comment\/input\/body-swift.enum\/jsonpayload"
+},
+"doc://GitHubRestAPIPulls/documentation/GitHubRestAPIPulls/Operations/pulls_sol_create_hyphen_review_hyphen_comment/Input/Body-swift.enum/jsonPayload/start_sidePayload": {
+  "abstract" : [
+    {
+      "inlineContent" : [
+        {
+          "text" : "Required when using multi-line comments unless using ",
+          "type" : "text"
+        },
+        {
+          "code" : "in_reply_to",
+          "type" : "codeVoice"
+        }
+      ],
+      "type" : "strong"
+    },
+    {
+      "text" : ". The ",
+      "type" : "text"
+    },
+    {
+      "code" : "start_side",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " is the starting side of the diff that the comment applies to. Can be ",
+      "type" : "text"
+    },
+    {
+      "code" : "LEFT",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " or ",
+      "type" : "text"
+    },
+    {
+      "code" : "RIGHT",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ". To learn more about multi-line comments, see “",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/docs.github.com\/articles\/commenting-on-a-pull-request#adding-line-comments-to-a-pull-request",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : "” in the GitHub Help documentation. See ",
+      "type" : "text"
+    },
+    {
+      "code" : "side",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in this table for additional context.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "start_sidePayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPulls\/documentation\/GitHubRestAPIPulls\/Operations\/pulls_sol_create_hyphen_review_hyphen_comment\/Input\/Body-swift.enum\/jsonPayload\/start_sidePayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "start_sidePayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.pulls_sol_create_hyphen_review_hyphen_comment.Input.Body.jsonPayload.start_sidePayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipulls\/operations\/pulls_sol_create_hyphen_review_hyphen_comment\/input\/body-swift.enum\/jsonpayload\/start_sidepayload"
+},
+"doc://GitHubRestAPIPulls/documentation/GitHubRestAPIPulls/Operations/pulls_sol_create_hyphen_review_hyphen_comment/Input/Body-swift.enum/jsonPayload/start_sidePayload/LEFT": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "LEFT"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPulls\/documentation\/GitHubRestAPIPulls\/Operations\/pulls_sol_create_hyphen_review_hyphen_comment\/Input\/Body-swift.enum\/jsonPayload\/start_sidePayload\/LEFT",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Operations.pulls_sol_create_hyphen_review_hyphen_comment.Input.Body.jsonPayload.start_sidePayload.LEFT",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipulls\/operations\/pulls_sol_create_hyphen_review_hyphen_comment\/input\/body-swift.enum\/jsonpayload\/start_sidepayload\/left"
+},
+"https://docs.github.com/articles/commenting-on-a-pull-request#adding-line-comments-to-a-pull-request": {
+  "identifier" : "https:\/\/docs.github.com\/articles\/commenting-on-a-pull-request#adding-line-comments-to-a-pull-request",
+  "title" : "Commenting on a pull request",
+  "titleInlineContent" : [
+    {
+      "text" : "Commenting on a pull request",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/docs.github.com\/articles\/commenting-on-a-pull-request#adding-line-comments-to-a-pull-request"
+}
+}
+}

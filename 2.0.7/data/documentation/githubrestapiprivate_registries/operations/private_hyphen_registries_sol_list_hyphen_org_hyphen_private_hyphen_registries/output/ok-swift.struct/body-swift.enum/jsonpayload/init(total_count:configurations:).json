@@ -1,0 +1,653 @@
+{
+  "abstract" : [
+    {
+      "text" : "Creates a new ",
+      "type" : "text"
+    },
+    {
+      "code" : "jsonPayload",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries",
+        "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries\/Operations",
+        "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries\/Operations\/private_hyphen_registries_sol_list_hyphen_org_hyphen_private_hyphen_registries",
+        "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries\/Operations\/private_hyphen_registries_sol_list_hyphen_org_hyphen_private_hyphen_registries\/Output",
+        "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries\/Operations\/private_hyphen_registries_sol_list_hyphen_org_hyphen_private_hyphen_registries\/Output\/Ok-swift.struct",
+        "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries\/Operations\/private_hyphen_registries_sol_list_hyphen_org_hyphen_private_hyphen_registries\/Output\/Ok-swift.struct\/Body-swift.enum",
+        "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries\/Operations\/private_hyphen_registries_sol_list_hyphen_org_hyphen_private_hyphen_registries\/Output\/Ok-swift.struct\/Body-swift.enum\/jsonPayload"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries\/Operations\/private_hyphen_registries_sol_list_hyphen_org_hyphen_private_hyphen_registries\/Output\/Ok-swift.struct\/Body-swift.enum\/jsonPayload\/init(total_count:configurations:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:31GitHubRestAPIPrivate_Registries10OperationsO035private_hyphen_registries_sol_list_h5_org_h1_g1_h1_I0O6OutputO2OkV4BodyO11jsonPayloadV11total_count14configurationsAMSi_SayAA10ComponentsO7SchemasO0l1_h1_g1_h10_registry_H14_configurationVGtcfc",
+    "fragments" : [
+      {
+        "kind" : "identifier",
+        "text" : "init"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "total_count"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:Si",
+        "text" : "Int"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "configurations"
+      },
+      {
+        "kind" : "text",
+        "text" : ": ["
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:31GitHubRestAPIPrivate_Registries10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:31GitHubRestAPIPrivate_Registries10ComponentsO7SchemasO",
+        "text" : "Schemas"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:31GitHubRestAPIPrivate_Registries10ComponentsO7SchemasO019org_hyphen_private_i10_registry_I14_configurationV",
+        "text" : "org_hyphen_private_hyphen_registry_hyphen_configuration"
+      },
+      {
+        "kind" : "text",
+        "text" : "])"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIPrivate_Registries"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/private-registries\/Types.swift#L831"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Initializer",
+    "symbolKind" : "init",
+    "title" : "init(total_count:configurations:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "init"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "total_count"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:Si",
+              "text" : "Int"
+            },
+            {
+              "kind" : "text",
+              "text" : ", "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "configurations"
+            },
+            {
+              "kind" : "text",
+              "text" : ": ["
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:31GitHubRestAPIPrivate_Registries10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries\/Components\/Schemas",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:31GitHubRestAPIPrivate_Registries10ComponentsO7SchemasO",
+              "text" : "Schemas"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries\/Components\/Schemas\/org_hyphen_private_hyphen_registry_hyphen_configuration",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:31GitHubRestAPIPrivate_Registries10ComponentsO7SchemasO019org_hyphen_private_i10_registry_I14_configurationV",
+              "text" : "org_hyphen_private_hyphen_registry_hyphen_configuration"
+            },
+            {
+              "kind" : "text",
+              "text" : "])"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "kind" : "parameters",
+      "parameters" : [
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "total_count"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "configurations"
+        }
+      ]
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapiprivate_registries\/operations\/private_hyphen_registries_sol_list_hyphen_org_hyphen_private_hyphen_registries\/output\/ok-swift.struct\/body-swift.enum\/jsonpayload\/init(total_count:configurations:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIPrivate_Registries/documentation/GitHubRestAPIPrivate_Registries": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIPrivate_Registries",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiprivate_registries"
+},
+"doc://GitHubRestAPIPrivate_Registries/documentation/GitHubRestAPIPrivate_Registries/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiprivate_registries\/components"
+},
+"doc://GitHubRestAPIPrivate_Registries/documentation/GitHubRestAPIPrivate_Registries/Components/Schemas": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/schemas",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries\/Components\/Schemas",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiprivate_registries\/components\/schemas"
+},
+"doc://GitHubRestAPIPrivate_Registries/documentation/GitHubRestAPIPrivate_Registries/Components/Schemas/org_hyphen_private_hyphen_registry_hyphen_configuration": {
+  "abstract" : [
+    {
+      "text" : "Private registry configuration for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "org_hyphen_private_hyphen_registry_hyphen_configuration"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries\/Components\/Schemas\/org_hyphen_private_hyphen_registry_hyphen_configuration",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "org_hyphen_private_hyphen_registry_hyphen_configuration"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.org_hyphen_private_hyphen_registry_hyphen_configuration",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiprivate_registries\/components\/schemas\/org_hyphen_private_hyphen_registry_hyphen_configuration"
+},
+"doc://GitHubRestAPIPrivate_Registries/documentation/GitHubRestAPIPrivate_Registries/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiprivate_registries\/operations"
+},
+"doc://GitHubRestAPIPrivate_Registries/documentation/GitHubRestAPIPrivate_Registries/Operations/private_hyphen_registries_sol_list_hyphen_org_hyphen_private_hyphen_registries": {
+  "abstract" : [
+    {
+      "text" : "List private registries for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "private_hyphen_registries_sol_list_hyphen_org_hyphen_private_hyphen_registries"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries\/Operations\/private_hyphen_registries_sol_list_hyphen_org_hyphen_private_hyphen_registries",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "private_hyphen_registries_sol_list_hyphen_org_hyphen_private_hyphen_registries"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.private_hyphen_registries_sol_list_hyphen_org_hyphen_private_hyphen_registries",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiprivate_registries\/operations\/private_hyphen_registries_sol_list_hyphen_org_hyphen_private_hyphen_registries"
+},
+"doc://GitHubRestAPIPrivate_Registries/documentation/GitHubRestAPIPrivate_Registries/Operations/private_hyphen_registries_sol_list_hyphen_org_hyphen_private_hyphen_registries/Output": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries\/Operations\/private_hyphen_registries_sol_list_hyphen_org_hyphen_private_hyphen_registries\/Output",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.private_hyphen_registries_sol_list_hyphen_org_hyphen_private_hyphen_registries.Output",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiprivate_registries\/operations\/private_hyphen_registries_sol_list_hyphen_org_hyphen_private_hyphen_registries\/output"
+},
+"doc://GitHubRestAPIPrivate_Registries/documentation/GitHubRestAPIPrivate_Registries/Operations/private_hyphen_registries_sol_list_hyphen_org_hyphen_private_hyphen_registries/Output/Ok-swift.struct": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Ok"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries\/Operations\/private_hyphen_registries_sol_list_hyphen_org_hyphen_private_hyphen_registries\/Output\/Ok-swift.struct",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Ok"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.private_hyphen_registries_sol_list_hyphen_org_hyphen_private_hyphen_registries.Output.Ok",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiprivate_registries\/operations\/private_hyphen_registries_sol_list_hyphen_org_hyphen_private_hyphen_registries\/output\/ok-swift.struct"
+},
+"doc://GitHubRestAPIPrivate_Registries/documentation/GitHubRestAPIPrivate_Registries/Operations/private_hyphen_registries_sol_list_hyphen_org_hyphen_private_hyphen_registries/Output/Ok-swift.struct/Body-swift.enum": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Body"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries\/Operations\/private_hyphen_registries_sol_list_hyphen_org_hyphen_private_hyphen_registries\/Output\/Ok-swift.struct\/Body-swift.enum",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Body"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.private_hyphen_registries_sol_list_hyphen_org_hyphen_private_hyphen_registries.Output.Ok.Body",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiprivate_registries\/operations\/private_hyphen_registries_sol_list_hyphen_org_hyphen_private_hyphen_registries\/output\/ok-swift.struct\/body-swift.enum"
+},
+"doc://GitHubRestAPIPrivate_Registries/documentation/GitHubRestAPIPrivate_Registries/Operations/private_hyphen_registries_sol_list_hyphen_org_hyphen_private_hyphen_registries/Output/Ok-swift.struct/Body-swift.enum/jsonPayload": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "jsonPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries\/Operations\/private_hyphen_registries_sol_list_hyphen_org_hyphen_private_hyphen_registries\/Output\/Ok-swift.struct\/Body-swift.enum\/jsonPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "jsonPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.private_hyphen_registries_sol_list_hyphen_org_hyphen_private_hyphen_registries.Output.Ok.Body.jsonPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiprivate_registries\/operations\/private_hyphen_registries_sol_list_hyphen_org_hyphen_private_hyphen_registries\/output\/ok-swift.struct\/body-swift.enum\/jsonpayload"
+},
+"doc://GitHubRestAPIPrivate_Registries/documentation/GitHubRestAPIPrivate_Registries/Operations/private_hyphen_registries_sol_list_hyphen_org_hyphen_private_hyphen_registries/Output/Ok-swift.struct/Body-swift.enum/jsonPayload/init(total_count:configurations:)": {
+  "abstract" : [
+    {
+      "text" : "Creates a new ",
+      "type" : "text"
+    },
+    {
+      "code" : "jsonPayload",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "total_count"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "configurations"
+    },
+    {
+      "kind" : "text",
+      "text" : ": ["
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:31GitHubRestAPIPrivate_Registries10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:31GitHubRestAPIPrivate_Registries10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:31GitHubRestAPIPrivate_Registries10ComponentsO7SchemasO019org_hyphen_private_i10_registry_I14_configurationV",
+      "text" : "org_hyphen_private_hyphen_registry_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "])"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries\/Operations\/private_hyphen_registries_sol_list_hyphen_org_hyphen_private_hyphen_registries\/Output\/Ok-swift.struct\/Body-swift.enum\/jsonPayload\/init(total_count:configurations:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(total_count:configurations:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiprivate_registries\/operations\/private_hyphen_registries_sol_list_hyphen_org_hyphen_private_hyphen_registries\/output\/ok-swift.struct\/body-swift.enum\/jsonpayload\/init(total_count:configurations:)"
+}
+}
+}

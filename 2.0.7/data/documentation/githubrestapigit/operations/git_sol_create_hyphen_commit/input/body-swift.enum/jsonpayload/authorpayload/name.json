@@ -1,0 +1,436 @@
+{
+  "abstract" : [
+    {
+      "text" : "The name of the author (or committer) of the commit",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit",
+        "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations",
+        "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/git_sol_create_hyphen_commit",
+        "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/git_sol_create_hyphen_commit\/Input",
+        "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/git_sol_create_hyphen_commit\/Input\/Body-swift.enum",
+        "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/git_sol_create_hyphen_commit\/Input\/Body-swift.enum\/jsonPayload",
+        "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/git_sol_create_hyphen_commit\/Input\/Body-swift.enum\/jsonPayload\/authorPayload"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/git_sol_create_hyphen_commit\/Input\/Body-swift.enum\/jsonPayload\/authorPayload\/name"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:16GitHubRestAPIGit10OperationsO28git_sol_create_hyphen_commitO5InputV4BodyO11jsonPayloadV06authorN0V4nameSSvp",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "var"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "name"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SS",
+        "text" : "String"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIGit"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/git\/Types.swift#L2391"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Instance Property",
+    "symbolKind" : "property",
+    "title" : "name"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "var"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "name"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:SS",
+              "text" : "String"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/paths\/repos\/{owner}\/{repo}\/git\/commits\/POST\/requestBody\/json\/author\/name",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapigit\/operations\/git_sol_create_hyphen_commit\/input\/body-swift.enum\/jsonpayload\/authorpayload\/name"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIGit/documentation/GitHubRestAPIGit": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIGit",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigit"
+},
+"doc://GitHubRestAPIGit/documentation/GitHubRestAPIGit/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigit\/operations"
+},
+"doc://GitHubRestAPIGit/documentation/GitHubRestAPIGit/Operations/git_sol_create_hyphen_commit": {
+  "abstract" : [
+    {
+      "text" : "Create a commit",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "git_sol_create_hyphen_commit"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/git_sol_create_hyphen_commit",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "git_sol_create_hyphen_commit"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.git_sol_create_hyphen_commit",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigit\/operations\/git_sol_create_hyphen_commit"
+},
+"doc://GitHubRestAPIGit/documentation/GitHubRestAPIGit/Operations/git_sol_create_hyphen_commit/Input": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/git_sol_create_hyphen_commit\/Input",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.git_sol_create_hyphen_commit.Input",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigit\/operations\/git_sol_create_hyphen_commit\/input"
+},
+"doc://GitHubRestAPIGit/documentation/GitHubRestAPIGit/Operations/git_sol_create_hyphen_commit/Input/Body-swift.enum": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Body"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/git_sol_create_hyphen_commit\/Input\/Body-swift.enum",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Body"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.git_sol_create_hyphen_commit.Input.Body",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigit\/operations\/git_sol_create_hyphen_commit\/input\/body-swift.enum"
+},
+"doc://GitHubRestAPIGit/documentation/GitHubRestAPIGit/Operations/git_sol_create_hyphen_commit/Input/Body-swift.enum/jsonPayload": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "jsonPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/git_sol_create_hyphen_commit\/Input\/Body-swift.enum\/jsonPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "jsonPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.git_sol_create_hyphen_commit.Input.Body.jsonPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigit\/operations\/git_sol_create_hyphen_commit\/input\/body-swift.enum\/jsonpayload"
+},
+"doc://GitHubRestAPIGit/documentation/GitHubRestAPIGit/Operations/git_sol_create_hyphen_commit/Input/Body-swift.enum/jsonPayload/authorPayload": {
+  "abstract" : [
+    {
+      "text" : "Information about the author of the commit. By default, the ",
+      "type" : "text"
+    },
+    {
+      "code" : "author",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " will be the authenticated user and the current date. See the ",
+      "type" : "text"
+    },
+    {
+      "code" : "author",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " and ",
+      "type" : "text"
+    },
+    {
+      "code" : "committer",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " object below for details.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "authorPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/git_sol_create_hyphen_commit\/Input\/Body-swift.enum\/jsonPayload\/authorPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "authorPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.git_sol_create_hyphen_commit.Input.Body.jsonPayload.authorPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigit\/operations\/git_sol_create_hyphen_commit\/input\/body-swift.enum\/jsonpayload\/authorpayload"
+},
+"doc://GitHubRestAPIGit/documentation/GitHubRestAPIGit/Operations/git_sol_create_hyphen_commit/Input/Body-swift.enum/jsonPayload/authorPayload/name": {
+  "abstract" : [
+    {
+      "text" : "The name of the author (or committer) of the commit",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "name"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/git_sol_create_hyphen_commit\/Input\/Body-swift.enum\/jsonPayload\/authorPayload\/name",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "name",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigit\/operations\/git_sol_create_hyphen_commit\/input\/body-swift.enum\/jsonpayload\/authorpayload\/name"
+}
+}
+}

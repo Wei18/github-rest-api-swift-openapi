@@ -1,0 +1,544 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning",
+        "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Operations",
+        "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Operations\/secret_hyphen_scanning_sol_get_hyphen_scan_hyphen_history",
+        "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Operations\/secret_hyphen_scanning_sol_get_hyphen_scan_hyphen_history\/Output",
+        "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Operations\/secret_hyphen_scanning_sol_get_hyphen_scan_hyphen_history\/Output\/Ok-swift.struct",
+        "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Operations\/secret_hyphen_scanning_sol_get_hyphen_scan_hyphen_history\/Output\/Ok-swift.struct\/Body-swift.enum"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Operations\/secret_hyphen_scanning_sol_get_hyphen_scan_hyphen_history\/Output\/Ok-swift.struct\/Body-swift.enum\/json(_:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:28GitHubRestAPISecret_Scanning10OperationsO031secret_hyphen_scanning_sol_get_h6_scan_H8_historyO6OutputO2OkV4BodyO4jsonyAkA10ComponentsO7SchemasO0g1_h1_i1_h1_l1_h1_M0VcAKmF",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "case"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "json"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:28GitHubRestAPISecret_Scanning10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:28GitHubRestAPISecret_Scanning10ComponentsO7SchemasO",
+        "text" : "Schemas"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:28GitHubRestAPISecret_Scanning10ComponentsO7SchemasO023secret_hyphen_scanning_i6_scan_I8_historyV",
+        "text" : "secret_hyphen_scanning_hyphen_scan_hyphen_history"
+      },
+      {
+        "kind" : "text",
+        "text" : ")"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPISecret_Scanning"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/secret-scanning\/Types.swift#L4566"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Case",
+    "symbolKind" : "case",
+    "title" : "Operations.secret_hyphen_scanning_sol_get_hyphen_scan_hyphen_history.Output.Ok.Body.json(_:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "case"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "json"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:28GitHubRestAPISecret_Scanning10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Components\/Schemas",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:28GitHubRestAPISecret_Scanning10ComponentsO7SchemasO",
+              "text" : "Schemas"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Components\/Schemas\/secret_hyphen_scanning_hyphen_scan_hyphen_history",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:28GitHubRestAPISecret_Scanning10ComponentsO7SchemasO023secret_hyphen_scanning_i6_scan_I8_historyV",
+              "text" : "secret_hyphen_scanning_hyphen_scan_hyphen_history"
+            },
+            {
+              "kind" : "text",
+              "text" : ")"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/paths\/repos\/{owner}\/{repo}\/secret-scanning\/scan-history\/GET\/responses\/200\/content\/application\\\/json",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapisecret_scanning\/operations\/secret_hyphen_scanning_sol_get_hyphen_scan_hyphen_history\/output\/ok-swift.struct\/body-swift.enum\/json(_:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPISecret_Scanning/documentation/GitHubRestAPISecret_Scanning": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPISecret_Scanning",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecret_scanning"
+},
+"doc://GitHubRestAPISecret_Scanning/documentation/GitHubRestAPISecret_Scanning/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecret_scanning\/components"
+},
+"doc://GitHubRestAPISecret_Scanning/documentation/GitHubRestAPISecret_Scanning/Components/Schemas": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/schemas",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Components\/Schemas",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecret_scanning\/components\/schemas"
+},
+"doc://GitHubRestAPISecret_Scanning/documentation/GitHubRestAPISecret_Scanning/Components/Schemas/secret_hyphen_scanning_hyphen_scan_hyphen_history": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "secret_hyphen_scanning_hyphen_scan_hyphen_history"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Components\/Schemas\/secret_hyphen_scanning_hyphen_scan_hyphen_history",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "secret_hyphen_scanning_hyphen_scan_hyphen_history"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.secret_hyphen_scanning_hyphen_scan_hyphen_history",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecret_scanning\/components\/schemas\/secret_hyphen_scanning_hyphen_scan_hyphen_history"
+},
+"doc://GitHubRestAPISecret_Scanning/documentation/GitHubRestAPISecret_Scanning/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecret_scanning\/operations"
+},
+"doc://GitHubRestAPISecret_Scanning/documentation/GitHubRestAPISecret_Scanning/Operations/secret_hyphen_scanning_sol_get_hyphen_scan_hyphen_history": {
+  "abstract" : [
+    {
+      "text" : "Get secret scanning scan history for a repository",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "secret_hyphen_scanning_sol_get_hyphen_scan_hyphen_history"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Operations\/secret_hyphen_scanning_sol_get_hyphen_scan_hyphen_history",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "secret_hyphen_scanning_sol_get_hyphen_scan_hyphen_history"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.secret_hyphen_scanning_sol_get_hyphen_scan_hyphen_history",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecret_scanning\/operations\/secret_hyphen_scanning_sol_get_hyphen_scan_hyphen_history"
+},
+"doc://GitHubRestAPISecret_Scanning/documentation/GitHubRestAPISecret_Scanning/Operations/secret_hyphen_scanning_sol_get_hyphen_scan_hyphen_history/Output": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Operations\/secret_hyphen_scanning_sol_get_hyphen_scan_hyphen_history\/Output",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.secret_hyphen_scanning_sol_get_hyphen_scan_hyphen_history.Output",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecret_scanning\/operations\/secret_hyphen_scanning_sol_get_hyphen_scan_hyphen_history\/output"
+},
+"doc://GitHubRestAPISecret_Scanning/documentation/GitHubRestAPISecret_Scanning/Operations/secret_hyphen_scanning_sol_get_hyphen_scan_hyphen_history/Output/Ok-swift.struct": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Ok"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Operations\/secret_hyphen_scanning_sol_get_hyphen_scan_hyphen_history\/Output\/Ok-swift.struct",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Ok"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.secret_hyphen_scanning_sol_get_hyphen_scan_hyphen_history.Output.Ok",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecret_scanning\/operations\/secret_hyphen_scanning_sol_get_hyphen_scan_hyphen_history\/output\/ok-swift.struct"
+},
+"doc://GitHubRestAPISecret_Scanning/documentation/GitHubRestAPISecret_Scanning/Operations/secret_hyphen_scanning_sol_get_hyphen_scan_hyphen_history/Output/Ok-swift.struct/Body-swift.enum": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Body"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Operations\/secret_hyphen_scanning_sol_get_hyphen_scan_hyphen_history\/Output\/Ok-swift.struct\/Body-swift.enum",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Body"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.secret_hyphen_scanning_sol_get_hyphen_scan_hyphen_history.Output.Ok.Body",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecret_scanning\/operations\/secret_hyphen_scanning_sol_get_hyphen_scan_hyphen_history\/output\/ok-swift.struct\/body-swift.enum"
+},
+"doc://GitHubRestAPISecret_Scanning/documentation/GitHubRestAPISecret_Scanning/Operations/secret_hyphen_scanning_sol_get_hyphen_scan_hyphen_history/Output/Ok-swift.struct/Body-swift.enum/json(_:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "json"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:28GitHubRestAPISecret_Scanning10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:28GitHubRestAPISecret_Scanning10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:28GitHubRestAPISecret_Scanning10ComponentsO7SchemasO023secret_hyphen_scanning_i6_scan_I8_historyV",
+      "text" : "secret_hyphen_scanning_hyphen_scan_hyphen_history"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Operations\/secret_hyphen_scanning_sol_get_hyphen_scan_hyphen_history\/Output\/Ok-swift.struct\/Body-swift.enum\/json(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Operations.secret_hyphen_scanning_sol_get_hyphen_scan_hyphen_history.Output.Ok.Body.json(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecret_scanning\/operations\/secret_hyphen_scanning_sol_get_hyphen_scan_hyphen_history\/output\/ok-swift.struct\/body-swift.enum\/json(_:)"
+}
+}
+}

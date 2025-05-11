@@ -1,0 +1,444 @@
+{
+  "abstract" : [
+    {
+      "text" : "A notation of whether a dependency is requested directly by this manifest or is a dependency of another dependency.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph",
+        "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph\/Components",
+        "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph\/Components\/Schemas",
+        "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph\/Components\/Schemas\/dependency"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph\/Components\/Schemas\/dependency\/relationship"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:29GitHubRestAPIDependency_Graph10ComponentsO7SchemasO10dependencyV12relationshipAG0I7PayloadOSgvp",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "var"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "relationship"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10ComponentsO7SchemasO",
+        "text" : "Schemas"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10ComponentsO7SchemasO10dependencyV",
+        "text" : "dependency"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10ComponentsO7SchemasO10dependencyV19relationshipPayloadO",
+        "text" : "relationshipPayload"
+      },
+      {
+        "kind" : "text",
+        "text" : "?"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIDependency_Graph"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/dependency-graph\/Types.swift#L672"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Instance Property",
+    "symbolKind" : "property",
+    "title" : "relationship"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "var"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "relationship"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph\/Components\/Schemas",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10ComponentsO7SchemasO",
+              "text" : "Schemas"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph\/Components\/Schemas\/dependency",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10ComponentsO7SchemasO10dependencyV",
+              "text" : "dependency"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph\/Components\/Schemas\/dependency\/relationshipPayload",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10ComponentsO7SchemasO10dependencyV19relationshipPayloadO",
+              "text" : "relationshipPayload"
+            },
+            {
+              "kind" : "text",
+              "text" : "?"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/components\/schemas\/dependency\/relationship",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapidependency_graph\/components\/schemas\/dependency\/relationship"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIDependency_Graph/documentation/GitHubRestAPIDependency_Graph": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIDependency_Graph",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependency_graph"
+},
+"doc://GitHubRestAPIDependency_Graph/documentation/GitHubRestAPIDependency_Graph/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependency_graph\/components"
+},
+"doc://GitHubRestAPIDependency_Graph/documentation/GitHubRestAPIDependency_Graph/Components/Schemas": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/schemas",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph\/Components\/Schemas",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependency_graph\/components\/schemas"
+},
+"doc://GitHubRestAPIDependency_Graph/documentation/GitHubRestAPIDependency_Graph/Components/Schemas/dependency": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "dependency"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph\/Components\/Schemas\/dependency",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "dependency"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.dependency",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependency_graph\/components\/schemas\/dependency"
+},
+"doc://GitHubRestAPIDependency_Graph/documentation/GitHubRestAPIDependency_Graph/Components/Schemas/dependency/relationship": {
+  "abstract" : [
+    {
+      "text" : "A notation of whether a dependency is requested directly by this manifest or is a dependency of another dependency.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "relationship"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10ComponentsO7SchemasO10dependencyV",
+      "text" : "dependency"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10ComponentsO7SchemasO10dependencyV19relationshipPayloadO",
+      "text" : "relationshipPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph\/Components\/Schemas\/dependency\/relationship",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "relationship",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependency_graph\/components\/schemas\/dependency\/relationship"
+},
+"doc://GitHubRestAPIDependency_Graph/documentation/GitHubRestAPIDependency_Graph/Components/Schemas/dependency/relationshipPayload": {
+  "abstract" : [
+    {
+      "text" : "A notation of whether a dependency is requested directly by this manifest or is a dependency of another dependency.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "relationshipPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph\/Components\/Schemas\/dependency\/relationshipPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "relationshipPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.dependency.relationshipPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependency_graph\/components\/schemas\/dependency\/relationshippayload"
+}
+}
+}

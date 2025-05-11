@@ -1,0 +1,572 @@
+{
+  "abstract" : [
+    {
+      "text" : "If specified, only return results for a single year. The value of ",
+      "type" : "text"
+    },
+    {
+      "code" : "year",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " is an integer with four digits representing a year. For example, ",
+      "type" : "text"
+    },
+    {
+      "code" : "2025",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ". Default value is the current year.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling",
+        "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Operations",
+        "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Operations\/billing_sol_get_hyphen_github_hyphen_billing_hyphen_usage_hyphen_report_hyphen_org",
+        "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Operations\/billing_sol_get_hyphen_github_hyphen_billing_hyphen_usage_hyphen_report_hyphen_org\/Input",
+        "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Operations\/billing_sol_get_hyphen_github_hyphen_billing_hyphen_usage_hyphen_report_hyphen_org\/Input\/Query-swift.struct"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Operations\/billing_sol_get_hyphen_github_hyphen_billing_hyphen_usage_hyphen_report_hyphen_org\/Input\/Query-swift.struct\/year"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:20GitHubRestAPIBilling10OperationsO030billing_sol_get_hyphen_github_i1_f1_i7_usage_i8_report_I4_orgO5InputV5QueryV4yearSiSgvp",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "var"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "year"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:20GitHubRestAPIBilling10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:20GitHubRestAPIBilling10ComponentsO10ParametersO",
+        "text" : "Parameters"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:20GitHubRestAPIBilling10ComponentsO10ParametersO021billing_hyphen_usage_h8_report_H5_yeara",
+        "text" : "billing_hyphen_usage_hyphen_report_hyphen_year"
+      },
+      {
+        "kind" : "text",
+        "text" : "?"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIBilling"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/billing\/Types.swift#L1122"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Instance Property",
+    "symbolKind" : "property",
+    "title" : "year"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "var"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "year"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:20GitHubRestAPIBilling10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components\/Parameters",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:20GitHubRestAPIBilling10ComponentsO10ParametersO",
+              "text" : "Parameters"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components\/Parameters\/billing_hyphen_usage_hyphen_report_hyphen_year",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:20GitHubRestAPIBilling10ComponentsO10ParametersO021billing_hyphen_usage_h8_report_H5_yeara",
+              "text" : "billing_hyphen_usage_hyphen_report_hyphen_year"
+            },
+            {
+              "kind" : "text",
+              "text" : "?"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/paths\/organizations\/{org}\/settings\/billing\/usage\/GET\/query\/year",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapibilling\/operations\/billing_sol_get_hyphen_github_hyphen_billing_hyphen_usage_hyphen_report_hyphen_org\/input\/query-swift.struct\/year"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIBilling/documentation/GitHubRestAPIBilling": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIBilling",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapibilling"
+},
+"doc://GitHubRestAPIBilling/documentation/GitHubRestAPIBilling/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapibilling\/components"
+},
+"doc://GitHubRestAPIBilling/documentation/GitHubRestAPIBilling/Components/Parameters": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/parameters",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Parameters"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components\/Parameters",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Parameters"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapibilling\/components\/parameters"
+},
+"doc://GitHubRestAPIBilling/documentation/GitHubRestAPIBilling/Components/Parameters/billing_hyphen_usage_hyphen_report_hyphen_year": {
+  "abstract" : [
+    {
+      "text" : "If specified, only return results for a single year. The value of ",
+      "type" : "text"
+    },
+    {
+      "code" : "year",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " is an integer with four digits representing a year. For example, ",
+      "type" : "text"
+    },
+    {
+      "code" : "2025",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ". Default value is the current year.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "billing_hyphen_usage_hyphen_report_hyphen_year"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components\/Parameters\/billing_hyphen_usage_hyphen_report_hyphen_year",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "billing_hyphen_usage_hyphen_report_hyphen_year"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.billing_hyphen_usage_hyphen_report_hyphen_year",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapibilling\/components\/parameters\/billing_hyphen_usage_hyphen_report_hyphen_year"
+},
+"doc://GitHubRestAPIBilling/documentation/GitHubRestAPIBilling/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapibilling\/operations"
+},
+"doc://GitHubRestAPIBilling/documentation/GitHubRestAPIBilling/Operations/billing_sol_get_hyphen_github_hyphen_billing_hyphen_usage_hyphen_report_hyphen_org": {
+  "abstract" : [
+    {
+      "text" : "Get billing usage report for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "billing_sol_get_hyphen_github_hyphen_billing_hyphen_usage_hyphen_report_hyphen_org"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Operations\/billing_sol_get_hyphen_github_hyphen_billing_hyphen_usage_hyphen_report_hyphen_org",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "billing_sol_get_hyphen_github_hyphen_billing_hyphen_usage_hyphen_report_hyphen_org"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.billing_sol_get_hyphen_github_hyphen_billing_hyphen_usage_hyphen_report_hyphen_org",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapibilling\/operations\/billing_sol_get_hyphen_github_hyphen_billing_hyphen_usage_hyphen_report_hyphen_org"
+},
+"doc://GitHubRestAPIBilling/documentation/GitHubRestAPIBilling/Operations/billing_sol_get_hyphen_github_hyphen_billing_hyphen_usage_hyphen_report_hyphen_org/Input": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Operations\/billing_sol_get_hyphen_github_hyphen_billing_hyphen_usage_hyphen_report_hyphen_org\/Input",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.billing_sol_get_hyphen_github_hyphen_billing_hyphen_usage_hyphen_report_hyphen_org.Input",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapibilling\/operations\/billing_sol_get_hyphen_github_hyphen_billing_hyphen_usage_hyphen_report_hyphen_org\/input"
+},
+"doc://GitHubRestAPIBilling/documentation/GitHubRestAPIBilling/Operations/billing_sol_get_hyphen_github_hyphen_billing_hyphen_usage_hyphen_report_hyphen_org/Input/Query-swift.struct": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Query"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Operations\/billing_sol_get_hyphen_github_hyphen_billing_hyphen_usage_hyphen_report_hyphen_org\/Input\/Query-swift.struct",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Query"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.billing_sol_get_hyphen_github_hyphen_billing_hyphen_usage_hyphen_report_hyphen_org.Input.Query",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapibilling\/operations\/billing_sol_get_hyphen_github_hyphen_billing_hyphen_usage_hyphen_report_hyphen_org\/input\/query-swift.struct"
+},
+"doc://GitHubRestAPIBilling/documentation/GitHubRestAPIBilling/Operations/billing_sol_get_hyphen_github_hyphen_billing_hyphen_usage_hyphen_report_hyphen_org/Input/Query-swift.struct/year": {
+  "abstract" : [
+    {
+      "text" : "If specified, only return results for a single year. The value of ",
+      "type" : "text"
+    },
+    {
+      "code" : "year",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " is an integer with four digits representing a year. For example, ",
+      "type" : "text"
+    },
+    {
+      "code" : "2025",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ". Default value is the current year.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "year"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIBilling10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIBilling10ComponentsO10ParametersO",
+      "text" : "Parameters"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIBilling10ComponentsO10ParametersO021billing_hyphen_usage_h8_report_H5_yeara",
+      "text" : "billing_hyphen_usage_hyphen_report_hyphen_year"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Operations\/billing_sol_get_hyphen_github_hyphen_billing_hyphen_usage_hyphen_report_hyphen_org\/Input\/Query-swift.struct\/year",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "year",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapibilling\/operations\/billing_sol_get_hyphen_github_hyphen_billing_hyphen_usage_hyphen_report_hyphen_org\/input\/query-swift.struct\/year"
+}
+}
+}

@@ -1,0 +1,480 @@
+{
+  "abstract" : [
+    {
+      "text" : "Create a tree",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit",
+        "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/git_sol_create_hyphen_tree"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:16GitHubRestAPIGit10OperationsO26git_sol_create_hyphen_treeO",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "enum"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "git_sol_create_hyphen_tree"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIGit"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "git_sol_create_hyphen_tree"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/git\/Types.swift#L4547"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Enumeration",
+    "symbolKind" : "enum",
+    "title" : "Operations.git_sol_create_hyphen_tree"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "enum"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "git_sol_create_hyphen_tree"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "The tree creation API accepts nested entries. If you specify both a tree and a nested path modifying that tree, this endpoint will overwrite the contents of the tree with the new path contents, and create a new tree structure.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "If you use this endpoint to add, delete, or modify the file contents in a tree, you will need to commit the tree and then update a branch to point to the commit. For more information see “",
+              "type" : "text"
+            },
+            {
+              "identifier" : "https:\/\/docs.github.com\/rest\/git\/commits#create-a-commit",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : "” and “",
+              "type" : "text"
+            },
+            {
+              "identifier" : "https:\/\/docs.github.com\/rest\/git\/refs#update-a-reference",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : ".”",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Returns an error if you try to delete a file that does not exist.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "HTTP ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "POST \/repos\/{owner}\/{repo}\/git\/trees",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/paths\/\/repos\/{owner}\/{repo}\/git\/trees\/post(git\/create-tree)",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/git_sol_create_hyphen_tree\/Input"
+      ],
+      "title" : "Structures"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/git_sol_create_hyphen_tree\/id"
+      ],
+      "title" : "Type Properties"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/git_sol_create_hyphen_tree\/AcceptableContentType",
+        "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/git_sol_create_hyphen_tree\/Output"
+      ],
+      "title" : "Enumerations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapigit\/operations\/git_sol_create_hyphen_tree"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIGit/documentation/GitHubRestAPIGit": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIGit",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigit"
+},
+"doc://GitHubRestAPIGit/documentation/GitHubRestAPIGit/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigit\/operations"
+},
+"doc://GitHubRestAPIGit/documentation/GitHubRestAPIGit/Operations/git_sol_create_hyphen_tree": {
+  "abstract" : [
+    {
+      "text" : "Create a tree",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "git_sol_create_hyphen_tree"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/git_sol_create_hyphen_tree",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "git_sol_create_hyphen_tree"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.git_sol_create_hyphen_tree",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigit\/operations\/git_sol_create_hyphen_tree"
+},
+"doc://GitHubRestAPIGit/documentation/GitHubRestAPIGit/Operations/git_sol_create_hyphen_tree/AcceptableContentType": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AcceptableContentType"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/git_sol_create_hyphen_tree\/AcceptableContentType",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AcceptableContentType"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.git_sol_create_hyphen_tree.AcceptableContentType",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigit\/operations\/git_sol_create_hyphen_tree\/acceptablecontenttype"
+},
+"doc://GitHubRestAPIGit/documentation/GitHubRestAPIGit/Operations/git_sol_create_hyphen_tree/Input": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/git_sol_create_hyphen_tree\/Input",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.git_sol_create_hyphen_tree.Input",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigit\/operations\/git_sol_create_hyphen_tree\/input"
+},
+"doc://GitHubRestAPIGit/documentation/GitHubRestAPIGit/Operations/git_sol_create_hyphen_tree/Output": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/git_sol_create_hyphen_tree\/Output",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.git_sol_create_hyphen_tree.Output",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigit\/operations\/git_sol_create_hyphen_tree\/output"
+},
+"doc://GitHubRestAPIGit/documentation/GitHubRestAPIGit/Operations/git_sol_create_hyphen_tree/id": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "id"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGit\/documentation\/GitHubRestAPIGit\/Operations\/git_sol_create_hyphen_tree\/id",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "id",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigit\/operations\/git_sol_create_hyphen_tree\/id"
+},
+"https://docs.github.com/rest/git/commits#create-a-commit": {
+  "identifier" : "https:\/\/docs.github.com\/rest\/git\/commits#create-a-commit",
+  "title" : "Create a commit",
+  "titleInlineContent" : [
+    {
+      "text" : "Create a commit",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/docs.github.com\/rest\/git\/commits#create-a-commit"
+},
+"https://docs.github.com/rest/git/refs#update-a-reference": {
+  "identifier" : "https:\/\/docs.github.com\/rest\/git\/refs#update-a-reference",
+  "title" : "Update a reference",
+  "titleInlineContent" : [
+    {
+      "text" : "Update a reference",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/docs.github.com\/rest\/git\/refs#update-a-reference"
+}
+}
+}

@@ -1,0 +1,420 @@
+{
+  "abstract" : [
+    {
+      "text" : "Get all codes of conduct",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPICodes_Of_Conduct\/documentation\/GitHubRestAPICodes_Of_Conduct",
+        "doc:\/\/GitHubRestAPICodes_Of_Conduct\/documentation\/GitHubRestAPICodes_Of_Conduct\/Operations"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPICodes_Of_Conduct\/documentation\/GitHubRestAPICodes_Of_Conduct\/Operations\/codes_hyphen_of_hyphen_conduct_sol_get_hyphen_all_hyphen_codes_hyphen_of_hyphen_conduct"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:29GitHubRestAPICodes_Of_Conduct10OperationsO016codes_hyphen_of_i17_conduct_sol_get_i5_all_i1_h1_i1_j1_i1_K0O",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "enum"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "codes_hyphen_of_hyphen_conduct_sol_get_hyphen_all_hyphen_codes_hyphen_of_hyphen_conduct"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPICodes_Of_Conduct"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "codes_hyphen_of_hyphen_conduct_sol_get_hyphen_all_hyphen_codes_hyphen_of_hyphen_conduct"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/codes-of-conduct\/Types.swift#L213"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Enumeration",
+    "symbolKind" : "enum",
+    "title" : "Operations.codes_hyphen_of_hyphen_conduct_sol_get_hyphen_all_hyphen_codes_hyphen_of_hyphen_conduct"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "enum"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "codes_hyphen_of_hyphen_conduct_sol_get_hyphen_all_hyphen_codes_hyphen_of_hyphen_conduct"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Returns array of all GitHub’s codes of conduct.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "HTTP ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "GET \/codes_of_conduct",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/paths\/\/codes_of_conduct\/get(codes-of-conduct\/get-all-codes-of-conduct)",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPICodes_Of_Conduct\/documentation\/GitHubRestAPICodes_Of_Conduct\/Operations\/codes_hyphen_of_hyphen_conduct_sol_get_hyphen_all_hyphen_codes_hyphen_of_hyphen_conduct\/Input"
+      ],
+      "title" : "Structures"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPICodes_Of_Conduct\/documentation\/GitHubRestAPICodes_Of_Conduct\/Operations\/codes_hyphen_of_hyphen_conduct_sol_get_hyphen_all_hyphen_codes_hyphen_of_hyphen_conduct\/id"
+      ],
+      "title" : "Type Properties"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPICodes_Of_Conduct\/documentation\/GitHubRestAPICodes_Of_Conduct\/Operations\/codes_hyphen_of_hyphen_conduct_sol_get_hyphen_all_hyphen_codes_hyphen_of_hyphen_conduct\/AcceptableContentType",
+        "doc:\/\/GitHubRestAPICodes_Of_Conduct\/documentation\/GitHubRestAPICodes_Of_Conduct\/Operations\/codes_hyphen_of_hyphen_conduct_sol_get_hyphen_all_hyphen_codes_hyphen_of_hyphen_conduct\/Output"
+      ],
+      "title" : "Enumerations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapicodes_of_conduct\/operations\/codes_hyphen_of_hyphen_conduct_sol_get_hyphen_all_hyphen_codes_hyphen_of_hyphen_conduct"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPICodes_Of_Conduct/documentation/GitHubRestAPICodes_Of_Conduct": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodes_Of_Conduct\/documentation\/GitHubRestAPICodes_Of_Conduct",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPICodes_Of_Conduct",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodes_of_conduct"
+},
+"doc://GitHubRestAPICodes_Of_Conduct/documentation/GitHubRestAPICodes_Of_Conduct/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodes_Of_Conduct\/documentation\/GitHubRestAPICodes_Of_Conduct\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodes_of_conduct\/operations"
+},
+"doc://GitHubRestAPICodes_Of_Conduct/documentation/GitHubRestAPICodes_Of_Conduct/Operations/codes_hyphen_of_hyphen_conduct_sol_get_hyphen_all_hyphen_codes_hyphen_of_hyphen_conduct": {
+  "abstract" : [
+    {
+      "text" : "Get all codes of conduct",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "codes_hyphen_of_hyphen_conduct_sol_get_hyphen_all_hyphen_codes_hyphen_of_hyphen_conduct"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodes_Of_Conduct\/documentation\/GitHubRestAPICodes_Of_Conduct\/Operations\/codes_hyphen_of_hyphen_conduct_sol_get_hyphen_all_hyphen_codes_hyphen_of_hyphen_conduct",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "codes_hyphen_of_hyphen_conduct_sol_get_hyphen_all_hyphen_codes_hyphen_of_hyphen_conduct"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.codes_hyphen_of_hyphen_conduct_sol_get_hyphen_all_hyphen_codes_hyphen_of_hyphen_conduct",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodes_of_conduct\/operations\/codes_hyphen_of_hyphen_conduct_sol_get_hyphen_all_hyphen_codes_hyphen_of_hyphen_conduct"
+},
+"doc://GitHubRestAPICodes_Of_Conduct/documentation/GitHubRestAPICodes_Of_Conduct/Operations/codes_hyphen_of_hyphen_conduct_sol_get_hyphen_all_hyphen_codes_hyphen_of_hyphen_conduct/AcceptableContentType": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AcceptableContentType"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodes_Of_Conduct\/documentation\/GitHubRestAPICodes_Of_Conduct\/Operations\/codes_hyphen_of_hyphen_conduct_sol_get_hyphen_all_hyphen_codes_hyphen_of_hyphen_conduct\/AcceptableContentType",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AcceptableContentType"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.codes_hyphen_of_hyphen_conduct_sol_get_hyphen_all_hyphen_codes_hyphen_of_hyphen_conduct.AcceptableContentType",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodes_of_conduct\/operations\/codes_hyphen_of_hyphen_conduct_sol_get_hyphen_all_hyphen_codes_hyphen_of_hyphen_conduct\/acceptablecontenttype"
+},
+"doc://GitHubRestAPICodes_Of_Conduct/documentation/GitHubRestAPICodes_Of_Conduct/Operations/codes_hyphen_of_hyphen_conduct_sol_get_hyphen_all_hyphen_codes_hyphen_of_hyphen_conduct/Input": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodes_Of_Conduct\/documentation\/GitHubRestAPICodes_Of_Conduct\/Operations\/codes_hyphen_of_hyphen_conduct_sol_get_hyphen_all_hyphen_codes_hyphen_of_hyphen_conduct\/Input",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.codes_hyphen_of_hyphen_conduct_sol_get_hyphen_all_hyphen_codes_hyphen_of_hyphen_conduct.Input",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodes_of_conduct\/operations\/codes_hyphen_of_hyphen_conduct_sol_get_hyphen_all_hyphen_codes_hyphen_of_hyphen_conduct\/input"
+},
+"doc://GitHubRestAPICodes_Of_Conduct/documentation/GitHubRestAPICodes_Of_Conduct/Operations/codes_hyphen_of_hyphen_conduct_sol_get_hyphen_all_hyphen_codes_hyphen_of_hyphen_conduct/Output": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodes_Of_Conduct\/documentation\/GitHubRestAPICodes_Of_Conduct\/Operations\/codes_hyphen_of_hyphen_conduct_sol_get_hyphen_all_hyphen_codes_hyphen_of_hyphen_conduct\/Output",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.codes_hyphen_of_hyphen_conduct_sol_get_hyphen_all_hyphen_codes_hyphen_of_hyphen_conduct.Output",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodes_of_conduct\/operations\/codes_hyphen_of_hyphen_conduct_sol_get_hyphen_all_hyphen_codes_hyphen_of_hyphen_conduct\/output"
+},
+"doc://GitHubRestAPICodes_Of_Conduct/documentation/GitHubRestAPICodes_Of_Conduct/Operations/codes_hyphen_of_hyphen_conduct_sol_get_hyphen_all_hyphen_codes_hyphen_of_hyphen_conduct/id": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "id"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodes_Of_Conduct\/documentation\/GitHubRestAPICodes_Of_Conduct\/Operations\/codes_hyphen_of_hyphen_conduct_sol_get_hyphen_all_hyphen_codes_hyphen_of_hyphen_conduct\/id",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "id",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodes_of_conduct\/operations\/codes_hyphen_of_hyphen_conduct_sol_get_hyphen_all_hyphen_codes_hyphen_of_hyphen_conduct\/id"
+}
+}
+}

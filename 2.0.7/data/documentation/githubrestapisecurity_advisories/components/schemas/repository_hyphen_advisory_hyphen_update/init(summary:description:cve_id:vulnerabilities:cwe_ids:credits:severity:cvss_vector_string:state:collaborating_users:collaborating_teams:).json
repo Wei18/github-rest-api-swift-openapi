@@ -1,0 +1,1475 @@
+{
+  "abstract" : [
+    {
+      "text" : "Creates a new ",
+      "type" : "text"
+    },
+    {
+      "code" : "repository_hyphen_advisory_hyphen_update",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories",
+        "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Components",
+        "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Components\/Schemas",
+        "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Components\/Schemas\/repository_hyphen_advisory_hyphen_update"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Components\/Schemas\/repository_hyphen_advisory_hyphen_update\/init(summary:description:cve_id:vulnerabilities:cwe_ids:credits:severity:cvss_vector_string:state:collaborating_users:collaborating_teams:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:32GitHubRestAPISecurity_Advisories10ComponentsO7SchemasO027repository_hyphen_advisory_I7_updateV7summary11description6cve_id15vulnerabilities7cwe_ids7credits8severity18cvss_vector_string5state19collaborating_users0Y6_teamsAGSSSg_A2SSayAG0P14PayloadPayloadVGSgSaySSGSgSayAG0S14PayloadPayloadVGSgAG0T7PayloadOSgAsG0X7PayloadOSgA2Ytcfc",
+    "fragments" : [
+      {
+        "kind" : "identifier",
+        "text" : "init"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "summary"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SS",
+        "text" : "String"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "description"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SS",
+        "text" : "String"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "cve_id"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SS",
+        "text" : "String"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "vulnerabilities"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:32GitHubRestAPISecurity_Advisories10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:32GitHubRestAPISecurity_Advisories10ComponentsO7SchemasO",
+        "text" : "Schemas"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:32GitHubRestAPISecurity_Advisories10ComponentsO7SchemasO027repository_hyphen_advisory_I7_updateV",
+        "text" : "repository_hyphen_advisory_hyphen_update"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:32GitHubRestAPISecurity_Advisories10ComponentsO7SchemasO027repository_hyphen_advisory_I7_updateV22vulnerabilitiesPayloada",
+        "text" : "vulnerabilitiesPayload"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "cwe_ids"
+      },
+      {
+        "kind" : "text",
+        "text" : ": ["
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SS",
+        "text" : "String"
+      },
+      {
+        "kind" : "text",
+        "text" : "]?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "credits"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:32GitHubRestAPISecurity_Advisories10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:32GitHubRestAPISecurity_Advisories10ComponentsO7SchemasO",
+        "text" : "Schemas"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:32GitHubRestAPISecurity_Advisories10ComponentsO7SchemasO027repository_hyphen_advisory_I7_updateV",
+        "text" : "repository_hyphen_advisory_hyphen_update"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:32GitHubRestAPISecurity_Advisories10ComponentsO7SchemasO027repository_hyphen_advisory_I7_updateV14creditsPayloada",
+        "text" : "creditsPayload"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "severity"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:32GitHubRestAPISecurity_Advisories10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:32GitHubRestAPISecurity_Advisories10ComponentsO7SchemasO",
+        "text" : "Schemas"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:32GitHubRestAPISecurity_Advisories10ComponentsO7SchemasO027repository_hyphen_advisory_I7_updateV",
+        "text" : "repository_hyphen_advisory_hyphen_update"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:32GitHubRestAPISecurity_Advisories10ComponentsO7SchemasO027repository_hyphen_advisory_I7_updateV15severityPayloadO",
+        "text" : "severityPayload"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "cvss_vector_string"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SS",
+        "text" : "String"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "state"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:32GitHubRestAPISecurity_Advisories10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:32GitHubRestAPISecurity_Advisories10ComponentsO7SchemasO",
+        "text" : "Schemas"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:32GitHubRestAPISecurity_Advisories10ComponentsO7SchemasO027repository_hyphen_advisory_I7_updateV",
+        "text" : "repository_hyphen_advisory_hyphen_update"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:32GitHubRestAPISecurity_Advisories10ComponentsO7SchemasO027repository_hyphen_advisory_I7_updateV12statePayloadO",
+        "text" : "statePayload"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "collaborating_users"
+      },
+      {
+        "kind" : "text",
+        "text" : ": ["
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SS",
+        "text" : "String"
+      },
+      {
+        "kind" : "text",
+        "text" : "]?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "collaborating_teams"
+      },
+      {
+        "kind" : "text",
+        "text" : ": ["
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SS",
+        "text" : "String"
+      },
+      {
+        "kind" : "text",
+        "text" : "]?)"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPISecurity_Advisories"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/security-advisories\/Types.swift#L6132"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Initializer",
+    "symbolKind" : "init",
+    "title" : "init(summary:description:cve_id:vulnerabilities:cwe_ids:credits:severity:cvss_vector_string:state:collaborating_users:collaborating_teams:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "init"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "summary"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:SS",
+              "text" : "String"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "description"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:SS",
+              "text" : "String"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "cve_id"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:SS",
+              "text" : "String"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "vulnerabilities"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:32GitHubRestAPISecurity_Advisories10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Components\/Schemas",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:32GitHubRestAPISecurity_Advisories10ComponentsO7SchemasO",
+              "text" : "Schemas"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Components\/Schemas\/repository_hyphen_advisory_hyphen_update",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:32GitHubRestAPISecurity_Advisories10ComponentsO7SchemasO027repository_hyphen_advisory_I7_updateV",
+              "text" : "repository_hyphen_advisory_hyphen_update"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Components\/Schemas\/repository_hyphen_advisory_hyphen_update\/vulnerabilitiesPayload",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:32GitHubRestAPISecurity_Advisories10ComponentsO7SchemasO027repository_hyphen_advisory_I7_updateV22vulnerabilitiesPayloada",
+              "text" : "vulnerabilitiesPayload"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "cwe_ids"
+            },
+            {
+              "kind" : "text",
+              "text" : ": ["
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:SS",
+              "text" : "String"
+            },
+            {
+              "kind" : "text",
+              "text" : "]? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "credits"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:32GitHubRestAPISecurity_Advisories10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Components\/Schemas",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:32GitHubRestAPISecurity_Advisories10ComponentsO7SchemasO",
+              "text" : "Schemas"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Components\/Schemas\/repository_hyphen_advisory_hyphen_update",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:32GitHubRestAPISecurity_Advisories10ComponentsO7SchemasO027repository_hyphen_advisory_I7_updateV",
+              "text" : "repository_hyphen_advisory_hyphen_update"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Components\/Schemas\/repository_hyphen_advisory_hyphen_update\/creditsPayload",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:32GitHubRestAPISecurity_Advisories10ComponentsO7SchemasO027repository_hyphen_advisory_I7_updateV14creditsPayloada",
+              "text" : "creditsPayload"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "severity"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:32GitHubRestAPISecurity_Advisories10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Components\/Schemas",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:32GitHubRestAPISecurity_Advisories10ComponentsO7SchemasO",
+              "text" : "Schemas"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Components\/Schemas\/repository_hyphen_advisory_hyphen_update",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:32GitHubRestAPISecurity_Advisories10ComponentsO7SchemasO027repository_hyphen_advisory_I7_updateV",
+              "text" : "repository_hyphen_advisory_hyphen_update"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Components\/Schemas\/repository_hyphen_advisory_hyphen_update\/severityPayload",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:32GitHubRestAPISecurity_Advisories10ComponentsO7SchemasO027repository_hyphen_advisory_I7_updateV15severityPayloadO",
+              "text" : "severityPayload"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "cvss_vector_string"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:SS",
+              "text" : "String"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "state"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:32GitHubRestAPISecurity_Advisories10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Components\/Schemas",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:32GitHubRestAPISecurity_Advisories10ComponentsO7SchemasO",
+              "text" : "Schemas"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Components\/Schemas\/repository_hyphen_advisory_hyphen_update",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:32GitHubRestAPISecurity_Advisories10ComponentsO7SchemasO027repository_hyphen_advisory_I7_updateV",
+              "text" : "repository_hyphen_advisory_hyphen_update"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Components\/Schemas\/repository_hyphen_advisory_hyphen_update\/statePayload",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:32GitHubRestAPISecurity_Advisories10ComponentsO7SchemasO027repository_hyphen_advisory_I7_updateV12statePayloadO",
+              "text" : "statePayload"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "collaborating_users"
+            },
+            {
+              "kind" : "text",
+              "text" : ": ["
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:SS",
+              "text" : "String"
+            },
+            {
+              "kind" : "text",
+              "text" : "]? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "collaborating_teams"
+            },
+            {
+              "kind" : "text",
+              "text" : ": ["
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:SS",
+              "text" : "String"
+            },
+            {
+              "kind" : "text",
+              "text" : "]? = nil)"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "kind" : "parameters",
+      "parameters" : [
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "A short summary of the advisory.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "summary"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "A detailed description of what the advisory impacts.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "description"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The Common Vulnerabilities and Exposures (CVE) ID.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "cve_id"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "A product affected by the vulnerability detailed in a repository security advisory.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "vulnerabilities"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "A list of Common Weakness Enumeration (CWE) IDs.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "cwe_ids"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "A list of users receiving credit for their participation in the security advisory.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "credits"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The severity of the advisory. You must choose between setting this field or ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "cvss_vector_string",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "severity"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The CVSS vector that calculates the severity of the advisory. You must choose between setting this field or ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "severity",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "cvss_vector_string"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The state of the advisory.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "state"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "A list of usernames who have been granted write access to the advisory.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "collaborating_users"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "A list of team slugs which have been granted write access to the advisory.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "collaborating_teams"
+        }
+      ]
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapisecurity_advisories\/components\/schemas\/repository_hyphen_advisory_hyphen_update\/init(summary:description:cve_id:vulnerabilities:cwe_ids:credits:severity:cvss_vector_string:state:collaborating_users:collaborating_teams:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPISecurity_Advisories/documentation/GitHubRestAPISecurity_Advisories": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPISecurity_Advisories",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecurity_advisories"
+},
+"doc://GitHubRestAPISecurity_Advisories/documentation/GitHubRestAPISecurity_Advisories/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecurity_advisories\/components"
+},
+"doc://GitHubRestAPISecurity_Advisories/documentation/GitHubRestAPISecurity_Advisories/Components/Schemas": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/schemas",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Components\/Schemas",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecurity_advisories\/components\/schemas"
+},
+"doc://GitHubRestAPISecurity_Advisories/documentation/GitHubRestAPISecurity_Advisories/Components/Schemas/repository_hyphen_advisory_hyphen_update": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "repository_hyphen_advisory_hyphen_update"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Components\/Schemas\/repository_hyphen_advisory_hyphen_update",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "repository_hyphen_advisory_hyphen_update"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.repository_hyphen_advisory_hyphen_update",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecurity_advisories\/components\/schemas\/repository_hyphen_advisory_hyphen_update"
+},
+"doc://GitHubRestAPISecurity_Advisories/documentation/GitHubRestAPISecurity_Advisories/Components/Schemas/repository_hyphen_advisory_hyphen_update/creditsPayload": {
+  "abstract" : [
+    {
+      "text" : "A list of users receiving credit for their participation in the security advisory.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "creditsPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Components\/Schemas\/repository_hyphen_advisory_hyphen_update\/creditsPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "creditsPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.repository_hyphen_advisory_hyphen_update.creditsPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecurity_advisories\/components\/schemas\/repository_hyphen_advisory_hyphen_update\/creditspayload"
+},
+"doc://GitHubRestAPISecurity_Advisories/documentation/GitHubRestAPISecurity_Advisories/Components/Schemas/repository_hyphen_advisory_hyphen_update/init(summary:description:cve_id:vulnerabilities:cwe_ids:credits:severity:cvss_vector_string:state:collaborating_users:collaborating_teams:)": {
+  "abstract" : [
+    {
+      "text" : "Creates a new ",
+      "type" : "text"
+    },
+    {
+      "code" : "repository_hyphen_advisory_hyphen_update",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "summary"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "description"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "cve_id"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "vulnerabilities"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:32GitHubRestAPISecurity_Advisories10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:32GitHubRestAPISecurity_Advisories10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:32GitHubRestAPISecurity_Advisories10ComponentsO7SchemasO027repository_hyphen_advisory_I7_updateV",
+      "text" : "repository_hyphen_advisory_hyphen_update"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:32GitHubRestAPISecurity_Advisories10ComponentsO7SchemasO027repository_hyphen_advisory_I7_updateV22vulnerabilitiesPayloada",
+      "text" : "vulnerabilitiesPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "cwe_ids"
+    },
+    {
+      "kind" : "text",
+      "text" : ": ["
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "]?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "credits"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:32GitHubRestAPISecurity_Advisories10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:32GitHubRestAPISecurity_Advisories10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:32GitHubRestAPISecurity_Advisories10ComponentsO7SchemasO027repository_hyphen_advisory_I7_updateV",
+      "text" : "repository_hyphen_advisory_hyphen_update"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:32GitHubRestAPISecurity_Advisories10ComponentsO7SchemasO027repository_hyphen_advisory_I7_updateV14creditsPayloada",
+      "text" : "creditsPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "severity"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:32GitHubRestAPISecurity_Advisories10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:32GitHubRestAPISecurity_Advisories10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:32GitHubRestAPISecurity_Advisories10ComponentsO7SchemasO027repository_hyphen_advisory_I7_updateV",
+      "text" : "repository_hyphen_advisory_hyphen_update"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:32GitHubRestAPISecurity_Advisories10ComponentsO7SchemasO027repository_hyphen_advisory_I7_updateV15severityPayloadO",
+      "text" : "severityPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "cvss_vector_string"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "state"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:32GitHubRestAPISecurity_Advisories10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:32GitHubRestAPISecurity_Advisories10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:32GitHubRestAPISecurity_Advisories10ComponentsO7SchemasO027repository_hyphen_advisory_I7_updateV",
+      "text" : "repository_hyphen_advisory_hyphen_update"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:32GitHubRestAPISecurity_Advisories10ComponentsO7SchemasO027repository_hyphen_advisory_I7_updateV12statePayloadO",
+      "text" : "statePayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "collaborating_users"
+    },
+    {
+      "kind" : "text",
+      "text" : ": ["
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "]?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "collaborating_teams"
+    },
+    {
+      "kind" : "text",
+      "text" : ": ["
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "]?)"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Components\/Schemas\/repository_hyphen_advisory_hyphen_update\/init(summary:description:cve_id:vulnerabilities:cwe_ids:credits:severity:cvss_vector_string:state:collaborating_users:collaborating_teams:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(summary:description:cve_id:vulnerabilities:cwe_ids:credits:severity:cvss_vector_string:state:collaborating_users:collaborating_teams:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecurity_advisories\/components\/schemas\/repository_hyphen_advisory_hyphen_update\/init(summary:description:cve_id:vulnerabilities:cwe_ids:credits:severity:cvss_vector_string:state:collaborating_users:collaborating_teams:)"
+},
+"doc://GitHubRestAPISecurity_Advisories/documentation/GitHubRestAPISecurity_Advisories/Components/Schemas/repository_hyphen_advisory_hyphen_update/severityPayload": {
+  "abstract" : [
+    {
+      "text" : "The severity of the advisory. You must choose between setting this field or ",
+      "type" : "text"
+    },
+    {
+      "code" : "cvss_vector_string",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "severityPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Components\/Schemas\/repository_hyphen_advisory_hyphen_update\/severityPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "severityPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.repository_hyphen_advisory_hyphen_update.severityPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecurity_advisories\/components\/schemas\/repository_hyphen_advisory_hyphen_update\/severitypayload"
+},
+"doc://GitHubRestAPISecurity_Advisories/documentation/GitHubRestAPISecurity_Advisories/Components/Schemas/repository_hyphen_advisory_hyphen_update/statePayload": {
+  "abstract" : [
+    {
+      "text" : "The state of the advisory.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "statePayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Components\/Schemas\/repository_hyphen_advisory_hyphen_update\/statePayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "statePayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.repository_hyphen_advisory_hyphen_update.statePayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecurity_advisories\/components\/schemas\/repository_hyphen_advisory_hyphen_update\/statepayload"
+},
+"doc://GitHubRestAPISecurity_Advisories/documentation/GitHubRestAPISecurity_Advisories/Components/Schemas/repository_hyphen_advisory_hyphen_update/vulnerabilitiesPayload": {
+  "abstract" : [
+    {
+      "text" : "A product affected by the vulnerability detailed in a repository security advisory.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "vulnerabilitiesPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecurity_Advisories\/documentation\/GitHubRestAPISecurity_Advisories\/Components\/Schemas\/repository_hyphen_advisory_hyphen_update\/vulnerabilitiesPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "vulnerabilitiesPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.repository_hyphen_advisory_hyphen_update.vulnerabilitiesPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecurity_advisories\/components\/schemas\/repository_hyphen_advisory_hyphen_update\/vulnerabilitiespayload"
+}
+}
+}

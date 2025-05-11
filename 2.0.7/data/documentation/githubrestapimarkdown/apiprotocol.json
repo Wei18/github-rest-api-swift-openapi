@@ -1,0 +1,746 @@
+{
+  "abstract" : [
+    {
+      "text" : "A type that performs HTTP operations defined by the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIMarkdown\/documentation\/GitHubRestAPIMarkdown"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIMarkdown\/documentation\/GitHubRestAPIMarkdown\/APIProtocol"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:21GitHubRestAPIMarkdown11APIProtocolP",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "protocol"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "APIProtocol"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIMarkdown"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "APIProtocol"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/markdown\/Types.swift#L13"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Protocol",
+    "symbolKind" : "protocol",
+    "title" : "APIProtocol"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "protocol"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "APIProtocol"
+            },
+            {
+              "kind" : "text",
+              "text" : " : "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:s8SendableP",
+              "text" : "Sendable"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIMarkdown\/s8SendableP"
+      ],
+      "kind" : "relationships",
+      "title" : "Inherits From",
+      "type" : "inheritsFrom"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIMarkdown\/documentation\/GitHubRestAPIMarkdown\/Client"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforming Types",
+      "type" : "conformingTypes"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIMarkdown\/documentation\/GitHubRestAPIMarkdown\/APIProtocol\/markdown_sol_render(_:)",
+        "doc:\/\/GitHubRestAPIMarkdown\/documentation\/GitHubRestAPIMarkdown\/APIProtocol\/markdown_sol_render(headers:body:)",
+        "doc:\/\/GitHubRestAPIMarkdown\/documentation\/GitHubRestAPIMarkdown\/APIProtocol\/markdown_sol_render_hyphen_raw(_:)",
+        "doc:\/\/GitHubRestAPIMarkdown\/documentation\/GitHubRestAPIMarkdown\/APIProtocol\/markdown_sol_render_hyphen_raw(headers:body:)"
+      ],
+      "title" : "Instance Methods"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapimarkdown\/apiprotocol"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIMarkdown/documentation/GitHubRestAPIMarkdown": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMarkdown\/documentation\/GitHubRestAPIMarkdown",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIMarkdown",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimarkdown"
+},
+"doc://GitHubRestAPIMarkdown/documentation/GitHubRestAPIMarkdown/APIProtocol": {
+  "abstract" : [
+    {
+      "text" : "A type that performs HTTP operations defined by the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "protocol"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "APIProtocol"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMarkdown\/documentation\/GitHubRestAPIMarkdown\/APIProtocol",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "APIProtocol"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "APIProtocol",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimarkdown\/apiprotocol"
+},
+"doc://GitHubRestAPIMarkdown/documentation/GitHubRestAPIMarkdown/APIProtocol/markdown_sol_render(_:)": {
+  "abstract" : [
+    {
+      "text" : "Render a Markdown document",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "markdown_sol_render"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIMarkdown10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIMarkdown10OperationsO19markdown_sol_renderO",
+      "text" : "markdown_sol_render"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIMarkdown10OperationsO19markdown_sol_renderO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIMarkdown10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIMarkdown10OperationsO19markdown_sol_renderO",
+      "text" : "markdown_sol_render"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIMarkdown10OperationsO19markdown_sol_renderO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMarkdown\/documentation\/GitHubRestAPIMarkdown\/APIProtocol\/markdown_sol_render(_:)",
+  "kind" : "symbol",
+  "required" : true,
+  "role" : "symbol",
+  "title" : "markdown_sol_render(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimarkdown\/apiprotocol\/markdown_sol_render(_:)"
+},
+"doc://GitHubRestAPIMarkdown/documentation/GitHubRestAPIMarkdown/APIProtocol/markdown_sol_render(headers:body:)": {
+  "abstract" : [
+    {
+      "text" : "Render a Markdown document",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "markdown_sol_render"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIMarkdown10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIMarkdown10OperationsO19markdown_sol_renderO",
+      "text" : "markdown_sol_render"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIMarkdown10OperationsO19markdown_sol_renderO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIMarkdown10OperationsO19markdown_sol_renderO5InputV7HeadersV",
+      "text" : "Headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "body"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIMarkdown10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIMarkdown10OperationsO19markdown_sol_renderO",
+      "text" : "markdown_sol_render"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIMarkdown10OperationsO19markdown_sol_renderO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIMarkdown10OperationsO19markdown_sol_renderO5InputV4BodyO",
+      "text" : "Body"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIMarkdown10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIMarkdown10OperationsO19markdown_sol_renderO",
+      "text" : "markdown_sol_render"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIMarkdown10OperationsO19markdown_sol_renderO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMarkdown\/documentation\/GitHubRestAPIMarkdown\/APIProtocol\/markdown_sol_render(headers:body:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "markdown_sol_render(headers:body:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimarkdown\/apiprotocol\/markdown_sol_render(headers:body:)"
+},
+"doc://GitHubRestAPIMarkdown/documentation/GitHubRestAPIMarkdown/APIProtocol/markdown_sol_render_hyphen_raw(_:)": {
+  "abstract" : [
+    {
+      "text" : "Render a Markdown document in raw mode",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "markdown_sol_render_hyphen_raw"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIMarkdown10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIMarkdown10OperationsO30markdown_sol_render_hyphen_rawO",
+      "text" : "markdown_sol_render_hyphen_raw"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIMarkdown10OperationsO30markdown_sol_render_hyphen_rawO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIMarkdown10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIMarkdown10OperationsO30markdown_sol_render_hyphen_rawO",
+      "text" : "markdown_sol_render_hyphen_raw"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIMarkdown10OperationsO30markdown_sol_render_hyphen_rawO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMarkdown\/documentation\/GitHubRestAPIMarkdown\/APIProtocol\/markdown_sol_render_hyphen_raw(_:)",
+  "kind" : "symbol",
+  "required" : true,
+  "role" : "symbol",
+  "title" : "markdown_sol_render_hyphen_raw(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimarkdown\/apiprotocol\/markdown_sol_render_hyphen_raw(_:)"
+},
+"doc://GitHubRestAPIMarkdown/documentation/GitHubRestAPIMarkdown/APIProtocol/markdown_sol_render_hyphen_raw(headers:body:)": {
+  "abstract" : [
+    {
+      "text" : "Render a Markdown document in raw mode",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "markdown_sol_render_hyphen_raw"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIMarkdown10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIMarkdown10OperationsO30markdown_sol_render_hyphen_rawO",
+      "text" : "markdown_sol_render_hyphen_raw"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIMarkdown10OperationsO30markdown_sol_render_hyphen_rawO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIMarkdown10OperationsO30markdown_sol_render_hyphen_rawO5InputV7HeadersV",
+      "text" : "Headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "body"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIMarkdown10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIMarkdown10OperationsO30markdown_sol_render_hyphen_rawO",
+      "text" : "markdown_sol_render_hyphen_raw"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIMarkdown10OperationsO30markdown_sol_render_hyphen_rawO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIMarkdown10OperationsO30markdown_sol_render_hyphen_rawO5InputV4BodyO",
+      "text" : "Body"
+    },
+    {
+      "kind" : "text",
+      "text" : "?) "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIMarkdown10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIMarkdown10OperationsO30markdown_sol_render_hyphen_rawO",
+      "text" : "markdown_sol_render_hyphen_raw"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIMarkdown10OperationsO30markdown_sol_render_hyphen_rawO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMarkdown\/documentation\/GitHubRestAPIMarkdown\/APIProtocol\/markdown_sol_render_hyphen_raw(headers:body:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "markdown_sol_render_hyphen_raw(headers:body:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimarkdown\/apiprotocol\/markdown_sol_render_hyphen_raw(headers:body:)"
+},
+"doc://GitHubRestAPIMarkdown/documentation/GitHubRestAPIMarkdown/Client": {
+  "abstract" : [
+    {
+      "text" : "GitHub’s v3 REST API.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Client"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMarkdown\/documentation\/GitHubRestAPIMarkdown\/Client",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Client"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Client",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimarkdown\/client"
+},
+"doc://GitHubRestAPIMarkdown/s8SendableP": {
+  "identifier" : "doc:\/\/GitHubRestAPIMarkdown\/s8SendableP",
+  "title" : "Swift.Sendable",
+  "type" : "unresolvable"
+}
+}
+}

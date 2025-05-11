@@ -1,0 +1,486 @@
+{
+  "abstract" : [
+    {
+      "text" : "The default value for a merge commit title.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations",
+        "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components",
+        "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas",
+        "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas\/repository"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas\/repository\/merge_commit_title"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:23GitHubRestAPIMigrations10ComponentsO7SchemasO10repositoryV18merge_commit_titleAG0h1_i1_J7PayloadOSgvp",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "var"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "merge_commit_title"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:23GitHubRestAPIMigrations10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:23GitHubRestAPIMigrations10ComponentsO7SchemasO",
+        "text" : "Schemas"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:23GitHubRestAPIMigrations10ComponentsO7SchemasO10repositoryV",
+        "text" : "repository"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:23GitHubRestAPIMigrations10ComponentsO7SchemasO10repositoryV25merge_commit_titlePayloadO",
+        "text" : "merge_commit_titlePayload"
+      },
+      {
+        "kind" : "text",
+        "text" : "?"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIMigrations"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/migrations\/Types.swift#L1586"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Instance Property",
+    "symbolKind" : "property",
+    "title" : "merge_commit_title"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "var"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "merge_commit_title"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:23GitHubRestAPIMigrations10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:23GitHubRestAPIMigrations10ComponentsO7SchemasO",
+              "text" : "Schemas"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas\/repository",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:23GitHubRestAPIMigrations10ComponentsO7SchemasO10repositoryV",
+              "text" : "repository"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas\/repository\/merge_commit_titlePayload",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:23GitHubRestAPIMigrations10ComponentsO7SchemasO10repositoryV25merge_commit_titlePayloadO",
+              "text" : "merge_commit_titlePayload"
+            },
+            {
+              "kind" : "text",
+              "text" : "?"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "items" : [
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "code" : "PR_TITLE",
+                      "type" : "codeVoice"
+                    },
+                    {
+                      "text" : " - default to the pull request’s title.",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            },
+            {
+              "content" : [
+                {
+                  "inlineContent" : [
+                    {
+                      "code" : "MERGE_MESSAGE",
+                      "type" : "codeVoice"
+                    },
+                    {
+                      "text" : " - default to the classic title for a merge message (e.g., Merge pull request #123 from branch-name).",
+                      "type" : "text"
+                    }
+                  ],
+                  "type" : "paragraph"
+                }
+              ]
+            }
+          ],
+          "type" : "unorderedList"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/components\/schemas\/repository\/merge_commit_title",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapimigrations\/components\/schemas\/repository\/merge_commit_title"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIMigrations/documentation/GitHubRestAPIMigrations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIMigrations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimigrations"
+},
+"doc://GitHubRestAPIMigrations/documentation/GitHubRestAPIMigrations/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimigrations\/components"
+},
+"doc://GitHubRestAPIMigrations/documentation/GitHubRestAPIMigrations/Components/Schemas": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/schemas",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimigrations\/components\/schemas"
+},
+"doc://GitHubRestAPIMigrations/documentation/GitHubRestAPIMigrations/Components/Schemas/repository": {
+  "abstract" : [
+    {
+      "text" : "A repository on GitHub.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "repository"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas\/repository",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "repository"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.repository",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimigrations\/components\/schemas\/repository"
+},
+"doc://GitHubRestAPIMigrations/documentation/GitHubRestAPIMigrations/Components/Schemas/repository/merge_commit_title": {
+  "abstract" : [
+    {
+      "text" : "The default value for a merge commit title.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "merge_commit_title"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIMigrations10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIMigrations10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIMigrations10ComponentsO7SchemasO10repositoryV",
+      "text" : "repository"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPIMigrations10ComponentsO7SchemasO10repositoryV25merge_commit_titlePayloadO",
+      "text" : "merge_commit_titlePayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas\/repository\/merge_commit_title",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "merge_commit_title",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimigrations\/components\/schemas\/repository\/merge_commit_title"
+},
+"doc://GitHubRestAPIMigrations/documentation/GitHubRestAPIMigrations/Components/Schemas/repository/merge_commit_titlePayload": {
+  "abstract" : [
+    {
+      "text" : "The default value for a merge commit title.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "merge_commit_titlePayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas\/repository\/merge_commit_titlePayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "merge_commit_titlePayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.repository.merge_commit_titlePayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimigrations\/components\/schemas\/repository\/merge_commit_titlepayload"
+}
+}
+}

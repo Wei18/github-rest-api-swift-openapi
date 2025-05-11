@@ -1,0 +1,1025 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling",
+        "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components",
+        "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components\/Schemas",
+        "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components\/Schemas\/billing_hyphen_usage_hyphen_report_hyphen_user"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components\/Schemas\/billing_hyphen_usage_hyphen_report_hyphen_user\/usageItemsPayloadPayload"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:20GitHubRestAPIBilling10ComponentsO7SchemasO021billing_hyphen_usage_h8_report_H5_userV0i12ItemsPayloadM0V",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "struct"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "usageItemsPayloadPayload"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIBilling"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "usageItemsPayloadPayload"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/billing\/Types.swift#L726"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Structure",
+    "symbolKind" : "struct",
+    "title" : "Components.Schemas.billing_hyphen_usage_hyphen_report_hyphen_user.usageItemsPayloadPayload"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "struct"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "usageItemsPayloadPayload"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/components\/schemas\/billing-usage-report-user\/usageItemsPayload",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIBilling\/Se",
+        "doc:\/\/GitHubRestAPIBilling\/SE",
+        "doc:\/\/GitHubRestAPIBilling\/SQ",
+        "doc:\/\/GitHubRestAPIBilling\/SH",
+        "doc:\/\/GitHubRestAPIBilling\/s8SendableP"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components\/Schemas\/billing_hyphen_usage_hyphen_report_hyphen_user\/usageItemsPayloadPayload\/init(date:product:sku:quantity:unitType:pricePerUnit:grossAmount:discountAmount:netAmount:repositoryName:)",
+        "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components\/Schemas\/billing_hyphen_usage_hyphen_report_hyphen_user\/usageItemsPayloadPayload\/init(from:)"
+      ],
+      "title" : "Initializers"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components\/Schemas\/billing_hyphen_usage_hyphen_report_hyphen_user\/usageItemsPayloadPayload\/date",
+        "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components\/Schemas\/billing_hyphen_usage_hyphen_report_hyphen_user\/usageItemsPayloadPayload\/discountAmount",
+        "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components\/Schemas\/billing_hyphen_usage_hyphen_report_hyphen_user\/usageItemsPayloadPayload\/grossAmount",
+        "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components\/Schemas\/billing_hyphen_usage_hyphen_report_hyphen_user\/usageItemsPayloadPayload\/netAmount",
+        "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components\/Schemas\/billing_hyphen_usage_hyphen_report_hyphen_user\/usageItemsPayloadPayload\/pricePerUnit",
+        "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components\/Schemas\/billing_hyphen_usage_hyphen_report_hyphen_user\/usageItemsPayloadPayload\/product",
+        "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components\/Schemas\/billing_hyphen_usage_hyphen_report_hyphen_user\/usageItemsPayloadPayload\/quantity",
+        "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components\/Schemas\/billing_hyphen_usage_hyphen_report_hyphen_user\/usageItemsPayloadPayload\/repositoryName",
+        "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components\/Schemas\/billing_hyphen_usage_hyphen_report_hyphen_user\/usageItemsPayloadPayload\/sku",
+        "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components\/Schemas\/billing_hyphen_usage_hyphen_report_hyphen_user\/usageItemsPayloadPayload\/unitType"
+      ],
+      "title" : "Instance Properties"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components\/Schemas\/billing_hyphen_usage_hyphen_report_hyphen_user\/usageItemsPayloadPayload\/CodingKeys"
+      ],
+      "title" : "Enumerations"
+    },
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components\/Schemas\/billing_hyphen_usage_hyphen_report_hyphen_user\/usageItemsPayloadPayload\/Equatable-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapibilling\/components\/schemas\/billing_hyphen_usage_hyphen_report_hyphen_user\/usageitemspayloadpayload"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIBilling/SE": {
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/SE",
+  "title" : "Swift.Encodable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIBilling/SH": {
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/SH",
+  "title" : "Swift.Hashable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIBilling/SQ": {
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/SQ",
+  "title" : "Swift.Equatable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIBilling/Se": {
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/Se",
+  "title" : "Swift.Decodable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIBilling/documentation/GitHubRestAPIBilling": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIBilling",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapibilling"
+},
+"doc://GitHubRestAPIBilling/documentation/GitHubRestAPIBilling/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapibilling\/components"
+},
+"doc://GitHubRestAPIBilling/documentation/GitHubRestAPIBilling/Components/Schemas": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/schemas",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components\/Schemas",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapibilling\/components\/schemas"
+},
+"doc://GitHubRestAPIBilling/documentation/GitHubRestAPIBilling/Components/Schemas/billing_hyphen_usage_hyphen_report_hyphen_user": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "billing_hyphen_usage_hyphen_report_hyphen_user"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components\/Schemas\/billing_hyphen_usage_hyphen_report_hyphen_user",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "billing_hyphen_usage_hyphen_report_hyphen_user"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.billing_hyphen_usage_hyphen_report_hyphen_user",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapibilling\/components\/schemas\/billing_hyphen_usage_hyphen_report_hyphen_user"
+},
+"doc://GitHubRestAPIBilling/documentation/GitHubRestAPIBilling/Components/Schemas/billing_hyphen_usage_hyphen_report_hyphen_user/usageItemsPayloadPayload": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "usageItemsPayloadPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components\/Schemas\/billing_hyphen_usage_hyphen_report_hyphen_user\/usageItemsPayloadPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "usageItemsPayloadPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.billing_hyphen_usage_hyphen_report_hyphen_user.usageItemsPayloadPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapibilling\/components\/schemas\/billing_hyphen_usage_hyphen_report_hyphen_user\/usageitemspayloadpayload"
+},
+"doc://GitHubRestAPIBilling/documentation/GitHubRestAPIBilling/Components/Schemas/billing_hyphen_usage_hyphen_report_hyphen_user/usageItemsPayloadPayload/CodingKeys": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components\/Schemas\/billing_hyphen_usage_hyphen_report_hyphen_user\/usageItemsPayloadPayload\/CodingKeys",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.billing_hyphen_usage_hyphen_report_hyphen_user.usageItemsPayloadPayload.CodingKeys",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapibilling\/components\/schemas\/billing_hyphen_usage_hyphen_report_hyphen_user\/usageitemspayloadpayload\/codingkeys"
+},
+"doc://GitHubRestAPIBilling/documentation/GitHubRestAPIBilling/Components/Schemas/billing_hyphen_usage_hyphen_report_hyphen_user/usageItemsPayloadPayload/Equatable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components\/Schemas\/billing_hyphen_usage_hyphen_report_hyphen_user\/usageItemsPayloadPayload\/Equatable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Equatable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapibilling\/components\/schemas\/billing_hyphen_usage_hyphen_report_hyphen_user\/usageitemspayloadpayload\/equatable-implementations"
+},
+"doc://GitHubRestAPIBilling/documentation/GitHubRestAPIBilling/Components/Schemas/billing_hyphen_usage_hyphen_report_hyphen_user/usageItemsPayloadPayload/date": {
+  "abstract" : [
+    {
+      "text" : "Date of the usage line item.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "date"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components\/Schemas\/billing_hyphen_usage_hyphen_report_hyphen_user\/usageItemsPayloadPayload\/date",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "date",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapibilling\/components\/schemas\/billing_hyphen_usage_hyphen_report_hyphen_user\/usageitemspayloadpayload\/date"
+},
+"doc://GitHubRestAPIBilling/documentation/GitHubRestAPIBilling/Components/Schemas/billing_hyphen_usage_hyphen_report_hyphen_user/usageItemsPayloadPayload/discountAmount": {
+  "abstract" : [
+    {
+      "text" : "Discount amount of the usage line item.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "discountAmount"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sd",
+      "text" : "Double"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components\/Schemas\/billing_hyphen_usage_hyphen_report_hyphen_user\/usageItemsPayloadPayload\/discountAmount",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "discountAmount",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapibilling\/components\/schemas\/billing_hyphen_usage_hyphen_report_hyphen_user\/usageitemspayloadpayload\/discountamount"
+},
+"doc://GitHubRestAPIBilling/documentation/GitHubRestAPIBilling/Components/Schemas/billing_hyphen_usage_hyphen_report_hyphen_user/usageItemsPayloadPayload/grossAmount": {
+  "abstract" : [
+    {
+      "text" : "Gross amount of the usage line item.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "grossAmount"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sd",
+      "text" : "Double"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components\/Schemas\/billing_hyphen_usage_hyphen_report_hyphen_user\/usageItemsPayloadPayload\/grossAmount",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "grossAmount",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapibilling\/components\/schemas\/billing_hyphen_usage_hyphen_report_hyphen_user\/usageitemspayloadpayload\/grossamount"
+},
+"doc://GitHubRestAPIBilling/documentation/GitHubRestAPIBilling/Components/Schemas/billing_hyphen_usage_hyphen_report_hyphen_user/usageItemsPayloadPayload/init(date:product:sku:quantity:unitType:pricePerUnit:grossAmount:discountAmount:netAmount:repositoryName:)": {
+  "abstract" : [
+    {
+      "text" : "Creates a new ",
+      "type" : "text"
+    },
+    {
+      "code" : "usageItemsPayloadPayload",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "date"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "product"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "sku"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "quantity"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "unitType"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "pricePerUnit"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sd",
+      "text" : "Double"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "grossAmount"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sd",
+      "text" : "Double"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "discountAmount"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sd",
+      "text" : "Double"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "netAmount"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sd",
+      "text" : "Double"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "repositoryName"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?)"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components\/Schemas\/billing_hyphen_usage_hyphen_report_hyphen_user\/usageItemsPayloadPayload\/init(date:product:sku:quantity:unitType:pricePerUnit:grossAmount:discountAmount:netAmount:repositoryName:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(date:product:sku:quantity:unitType:pricePerUnit:grossAmount:discountAmount:netAmount:repositoryName:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapibilling\/components\/schemas\/billing_hyphen_usage_hyphen_report_hyphen_user\/usageitemspayloadpayload\/init(date:product:sku:quantity:unittype:priceperunit:grossamount:discountamount:netamount:repositoryname:)"
+},
+"doc://GitHubRestAPIBilling/documentation/GitHubRestAPIBilling/Components/Schemas/billing_hyphen_usage_hyphen_report_hyphen_user/usageItemsPayloadPayload/init(from:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "from"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:s7DecoderP",
+      "text" : "Decoder"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components\/Schemas\/billing_hyphen_usage_hyphen_report_hyphen_user\/usageItemsPayloadPayload\/init(from:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(from:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapibilling\/components\/schemas\/billing_hyphen_usage_hyphen_report_hyphen_user\/usageitemspayloadpayload\/init(from:)"
+},
+"doc://GitHubRestAPIBilling/documentation/GitHubRestAPIBilling/Components/Schemas/billing_hyphen_usage_hyphen_report_hyphen_user/usageItemsPayloadPayload/netAmount": {
+  "abstract" : [
+    {
+      "text" : "Net amount of the usage line item.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "netAmount"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sd",
+      "text" : "Double"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components\/Schemas\/billing_hyphen_usage_hyphen_report_hyphen_user\/usageItemsPayloadPayload\/netAmount",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "netAmount",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapibilling\/components\/schemas\/billing_hyphen_usage_hyphen_report_hyphen_user\/usageitemspayloadpayload\/netamount"
+},
+"doc://GitHubRestAPIBilling/documentation/GitHubRestAPIBilling/Components/Schemas/billing_hyphen_usage_hyphen_report_hyphen_user/usageItemsPayloadPayload/pricePerUnit": {
+  "abstract" : [
+    {
+      "text" : "Price per unit of the usage line item.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "pricePerUnit"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sd",
+      "text" : "Double"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components\/Schemas\/billing_hyphen_usage_hyphen_report_hyphen_user\/usageItemsPayloadPayload\/pricePerUnit",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "pricePerUnit",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapibilling\/components\/schemas\/billing_hyphen_usage_hyphen_report_hyphen_user\/usageitemspayloadpayload\/priceperunit"
+},
+"doc://GitHubRestAPIBilling/documentation/GitHubRestAPIBilling/Components/Schemas/billing_hyphen_usage_hyphen_report_hyphen_user/usageItemsPayloadPayload/product": {
+  "abstract" : [
+    {
+      "text" : "Product name.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "product"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components\/Schemas\/billing_hyphen_usage_hyphen_report_hyphen_user\/usageItemsPayloadPayload\/product",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "product",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapibilling\/components\/schemas\/billing_hyphen_usage_hyphen_report_hyphen_user\/usageitemspayloadpayload\/product"
+},
+"doc://GitHubRestAPIBilling/documentation/GitHubRestAPIBilling/Components/Schemas/billing_hyphen_usage_hyphen_report_hyphen_user/usageItemsPayloadPayload/quantity": {
+  "abstract" : [
+    {
+      "text" : "Quantity of the usage line item.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "quantity"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components\/Schemas\/billing_hyphen_usage_hyphen_report_hyphen_user\/usageItemsPayloadPayload\/quantity",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "quantity",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapibilling\/components\/schemas\/billing_hyphen_usage_hyphen_report_hyphen_user\/usageitemspayloadpayload\/quantity"
+},
+"doc://GitHubRestAPIBilling/documentation/GitHubRestAPIBilling/Components/Schemas/billing_hyphen_usage_hyphen_report_hyphen_user/usageItemsPayloadPayload/repositoryName": {
+  "abstract" : [
+    {
+      "text" : "Name of the repository.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "repositoryName"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components\/Schemas\/billing_hyphen_usage_hyphen_report_hyphen_user\/usageItemsPayloadPayload\/repositoryName",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "repositoryName",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapibilling\/components\/schemas\/billing_hyphen_usage_hyphen_report_hyphen_user\/usageitemspayloadpayload\/repositoryname"
+},
+"doc://GitHubRestAPIBilling/documentation/GitHubRestAPIBilling/Components/Schemas/billing_hyphen_usage_hyphen_report_hyphen_user/usageItemsPayloadPayload/sku": {
+  "abstract" : [
+    {
+      "text" : "SKU name.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "sku"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components\/Schemas\/billing_hyphen_usage_hyphen_report_hyphen_user\/usageItemsPayloadPayload\/sku",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "sku",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapibilling\/components\/schemas\/billing_hyphen_usage_hyphen_report_hyphen_user\/usageitemspayloadpayload\/sku"
+},
+"doc://GitHubRestAPIBilling/documentation/GitHubRestAPIBilling/Components/Schemas/billing_hyphen_usage_hyphen_report_hyphen_user/usageItemsPayloadPayload/unitType": {
+  "abstract" : [
+    {
+      "text" : "Unit type of the usage line item.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "unitType"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components\/Schemas\/billing_hyphen_usage_hyphen_report_hyphen_user\/usageItemsPayloadPayload\/unitType",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "unitType",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapibilling\/components\/schemas\/billing_hyphen_usage_hyphen_report_hyphen_user\/usageitemspayloadpayload\/unittype"
+},
+"doc://GitHubRestAPIBilling/s8SendableP": {
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/s8SendableP",
+  "title" : "Swift.Sendable",
+  "type" : "unresolvable"
+}
+}
+}

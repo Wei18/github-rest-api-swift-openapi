@@ -1,0 +1,1408 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions",
+        "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Client"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Client\/APIProtocol-Implementations"
+  },
+  "kind" : "article",
+  "metadata" : {
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIInteractions"
+      }
+    ],
+    "role" : "collectionGroup",
+    "title" : "APIProtocol Implementations"
+  },
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Client\/interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user(headers:)",
+        "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Client\/interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_org(path:headers:)",
+        "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Client\/interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_repo(path:headers:)",
+        "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Client\/interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user()",
+        "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Client\/interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_org(path:)",
+        "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Client\/interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_repo(path:)",
+        "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Client\/interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user(headers:body:)",
+        "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Client\/interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_org(path:headers:body:)",
+        "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Client\/interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_repo(path:headers:body:)"
+      ],
+      "title" : "Instance Methods"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapiinteractions\/client\/apiprotocol-implementations"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIInteractions/documentation/GitHubRestAPIInteractions": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIInteractions",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiinteractions"
+},
+"doc://GitHubRestAPIInteractions/documentation/GitHubRestAPIInteractions/Client": {
+  "abstract" : [
+    {
+      "text" : "GitHub’s v3 REST API.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Client"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Client",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Client"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Client",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiinteractions\/client"
+},
+"doc://GitHubRestAPIInteractions/documentation/GitHubRestAPIInteractions/Client/interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user(headers:)": {
+  "abstract" : [
+    {
+      "text" : "Get interaction restrictions for your public repositories",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO041interactions_sol_get_hyphen_restrictions_i5_for_i15_authenticated_I5_userO",
+      "text" : "interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO041interactions_sol_get_hyphen_restrictions_i5_for_i15_authenticated_I5_userO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO041interactions_sol_get_hyphen_restrictions_i5_for_i15_authenticated_I5_userO5InputV7HeadersV",
+      "text" : "Headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO041interactions_sol_get_hyphen_restrictions_i5_for_i15_authenticated_I5_userO",
+      "text" : "interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO041interactions_sol_get_hyphen_restrictions_i5_for_i15_authenticated_I5_userO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Client\/interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user(headers:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user(headers:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiinteractions\/client\/interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user(headers:)"
+},
+"doc://GitHubRestAPIInteractions/documentation/GitHubRestAPIInteractions/Client/interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_org(path:headers:)": {
+  "abstract" : [
+    {
+      "text" : "Get interaction restrictions for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_org"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "path"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO041interactions_sol_get_hyphen_restrictions_i5_for_I4_orgO",
+      "text" : "interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_org"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO041interactions_sol_get_hyphen_restrictions_i5_for_I4_orgO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO041interactions_sol_get_hyphen_restrictions_i5_for_I4_orgO5InputV4PathV",
+      "text" : "Path"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO041interactions_sol_get_hyphen_restrictions_i5_for_I4_orgO",
+      "text" : "interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_org"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO041interactions_sol_get_hyphen_restrictions_i5_for_I4_orgO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO041interactions_sol_get_hyphen_restrictions_i5_for_I4_orgO5InputV7HeadersV",
+      "text" : "Headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO041interactions_sol_get_hyphen_restrictions_i5_for_I4_orgO",
+      "text" : "interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_org"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO041interactions_sol_get_hyphen_restrictions_i5_for_I4_orgO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Client\/interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_org(path:headers:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_org(path:headers:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiinteractions\/client\/interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_org(path:headers:)"
+},
+"doc://GitHubRestAPIInteractions/documentation/GitHubRestAPIInteractions/Client/interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_repo(path:headers:)": {
+  "abstract" : [
+    {
+      "text" : "Get interaction restrictions for a repository",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_repo"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "path"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO041interactions_sol_get_hyphen_restrictions_i5_for_I5_repoO",
+      "text" : "interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_repo"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO041interactions_sol_get_hyphen_restrictions_i5_for_I5_repoO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO041interactions_sol_get_hyphen_restrictions_i5_for_I5_repoO5InputV4PathV",
+      "text" : "Path"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO041interactions_sol_get_hyphen_restrictions_i5_for_I5_repoO",
+      "text" : "interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_repo"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO041interactions_sol_get_hyphen_restrictions_i5_for_I5_repoO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO041interactions_sol_get_hyphen_restrictions_i5_for_I5_repoO5InputV7HeadersV",
+      "text" : "Headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO041interactions_sol_get_hyphen_restrictions_i5_for_I5_repoO",
+      "text" : "interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_repo"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO041interactions_sol_get_hyphen_restrictions_i5_for_I5_repoO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Client\/interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_repo(path:headers:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_repo(path:headers:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiinteractions\/client\/interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_repo(path:headers:)"
+},
+"doc://GitHubRestAPIInteractions/documentation/GitHubRestAPIInteractions/Client/interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user()": {
+  "abstract" : [
+    {
+      "text" : "Remove interaction restrictions from your public repositories",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "() "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO044interactions_sol_remove_hyphen_restrictions_i5_for_i15_authenticated_I5_userO",
+      "text" : "interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO044interactions_sol_remove_hyphen_restrictions_i5_for_i15_authenticated_I5_userO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Client\/interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user()",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user()",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiinteractions\/client\/interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user()"
+},
+"doc://GitHubRestAPIInteractions/documentation/GitHubRestAPIInteractions/Client/interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_org(path:)": {
+  "abstract" : [
+    {
+      "text" : "Remove interaction restrictions for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_org"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "path"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO044interactions_sol_remove_hyphen_restrictions_i5_for_I4_orgO",
+      "text" : "interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_org"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO044interactions_sol_remove_hyphen_restrictions_i5_for_I4_orgO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO044interactions_sol_remove_hyphen_restrictions_i5_for_I4_orgO5InputV4PathV",
+      "text" : "Path"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO044interactions_sol_remove_hyphen_restrictions_i5_for_I4_orgO",
+      "text" : "interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_org"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO044interactions_sol_remove_hyphen_restrictions_i5_for_I4_orgO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Client\/interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_org(path:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_org(path:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiinteractions\/client\/interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_org(path:)"
+},
+"doc://GitHubRestAPIInteractions/documentation/GitHubRestAPIInteractions/Client/interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_repo(path:)": {
+  "abstract" : [
+    {
+      "text" : "Remove interaction restrictions for a repository",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_repo"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "path"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO044interactions_sol_remove_hyphen_restrictions_i5_for_I5_repoO",
+      "text" : "interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_repo"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO044interactions_sol_remove_hyphen_restrictions_i5_for_I5_repoO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO044interactions_sol_remove_hyphen_restrictions_i5_for_I5_repoO5InputV4PathV",
+      "text" : "Path"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO044interactions_sol_remove_hyphen_restrictions_i5_for_I5_repoO",
+      "text" : "interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_repo"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO044interactions_sol_remove_hyphen_restrictions_i5_for_I5_repoO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Client\/interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_repo(path:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_repo(path:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiinteractions\/client\/interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_repo(path:)"
+},
+"doc://GitHubRestAPIInteractions/documentation/GitHubRestAPIInteractions/Client/interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user(headers:body:)": {
+  "abstract" : [
+    {
+      "text" : "Set interaction restrictions for your public repositories",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO041interactions_sol_set_hyphen_restrictions_i5_for_i15_authenticated_I5_userO",
+      "text" : "interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO041interactions_sol_set_hyphen_restrictions_i5_for_i15_authenticated_I5_userO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO041interactions_sol_set_hyphen_restrictions_i5_for_i15_authenticated_I5_userO5InputV7HeadersV",
+      "text" : "Headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "body"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO041interactions_sol_set_hyphen_restrictions_i5_for_i15_authenticated_I5_userO",
+      "text" : "interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO041interactions_sol_set_hyphen_restrictions_i5_for_i15_authenticated_I5_userO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO041interactions_sol_set_hyphen_restrictions_i5_for_i15_authenticated_I5_userO5InputV4BodyO",
+      "text" : "Body"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO041interactions_sol_set_hyphen_restrictions_i5_for_i15_authenticated_I5_userO",
+      "text" : "interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO041interactions_sol_set_hyphen_restrictions_i5_for_i15_authenticated_I5_userO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Client\/interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user(headers:body:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user(headers:body:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiinteractions\/client\/interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user(headers:body:)"
+},
+"doc://GitHubRestAPIInteractions/documentation/GitHubRestAPIInteractions/Client/interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_org(path:headers:body:)": {
+  "abstract" : [
+    {
+      "text" : "Set interaction restrictions for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_org"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "path"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO041interactions_sol_set_hyphen_restrictions_i5_for_I4_orgO",
+      "text" : "interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_org"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO041interactions_sol_set_hyphen_restrictions_i5_for_I4_orgO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO041interactions_sol_set_hyphen_restrictions_i5_for_I4_orgO5InputV4PathV",
+      "text" : "Path"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO041interactions_sol_set_hyphen_restrictions_i5_for_I4_orgO",
+      "text" : "interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_org"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO041interactions_sol_set_hyphen_restrictions_i5_for_I4_orgO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO041interactions_sol_set_hyphen_restrictions_i5_for_I4_orgO5InputV7HeadersV",
+      "text" : "Headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "body"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO041interactions_sol_set_hyphen_restrictions_i5_for_I4_orgO",
+      "text" : "interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_org"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO041interactions_sol_set_hyphen_restrictions_i5_for_I4_orgO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO041interactions_sol_set_hyphen_restrictions_i5_for_I4_orgO5InputV4BodyO",
+      "text" : "Body"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO041interactions_sol_set_hyphen_restrictions_i5_for_I4_orgO",
+      "text" : "interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_org"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO041interactions_sol_set_hyphen_restrictions_i5_for_I4_orgO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Client\/interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_org(path:headers:body:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_org(path:headers:body:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiinteractions\/client\/interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_org(path:headers:body:)"
+},
+"doc://GitHubRestAPIInteractions/documentation/GitHubRestAPIInteractions/Client/interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_repo(path:headers:body:)": {
+  "abstract" : [
+    {
+      "text" : "Set interaction restrictions for a repository",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_repo"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "path"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO041interactions_sol_set_hyphen_restrictions_i5_for_I5_repoO",
+      "text" : "interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_repo"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO041interactions_sol_set_hyphen_restrictions_i5_for_I5_repoO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO041interactions_sol_set_hyphen_restrictions_i5_for_I5_repoO5InputV4PathV",
+      "text" : "Path"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO041interactions_sol_set_hyphen_restrictions_i5_for_I5_repoO",
+      "text" : "interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_repo"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO041interactions_sol_set_hyphen_restrictions_i5_for_I5_repoO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO041interactions_sol_set_hyphen_restrictions_i5_for_I5_repoO5InputV7HeadersV",
+      "text" : "Headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "body"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO041interactions_sol_set_hyphen_restrictions_i5_for_I5_repoO",
+      "text" : "interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_repo"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO041interactions_sol_set_hyphen_restrictions_i5_for_I5_repoO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO041interactions_sol_set_hyphen_restrictions_i5_for_I5_repoO5InputV4BodyO",
+      "text" : "Body"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO041interactions_sol_set_hyphen_restrictions_i5_for_I5_repoO",
+      "text" : "interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_repo"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10OperationsO041interactions_sol_set_hyphen_restrictions_i5_for_I5_repoO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Client\/interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_repo(path:headers:body:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_repo(path:headers:body:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiinteractions\/client\/interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_repo(path:headers:body:)"
+}
+}
+}

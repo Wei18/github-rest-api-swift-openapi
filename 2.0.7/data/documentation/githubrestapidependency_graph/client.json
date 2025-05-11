@@ -1,0 +1,623 @@
+{
+  "abstract" : [
+    {
+      "text" : "GitHub’s v3 REST API.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph\/Client"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:29GitHubRestAPIDependency_Graph6ClientV",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "struct"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "Client"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIDependency_Graph"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "Client"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Client.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/dependency-graph\/Client.swift#L14"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Structure",
+    "symbolKind" : "struct",
+    "title" : "Client"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "struct"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "Client"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph\/APIProtocol",
+        "doc:\/\/GitHubRestAPIDependency_Graph\/s8SendableP"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph\/Client\/init(serverURL:configuration:transport:middlewares:)"
+      ],
+      "title" : "Initializers"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph\/Client\/dependency_hyphen_graph_sol_create_hyphen_repository_hyphen_snapshot(_:)",
+        "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph\/Client\/dependency_hyphen_graph_sol_diff_hyphen_range(_:)",
+        "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph\/Client\/dependency_hyphen_graph_sol_export_hyphen_sbom(_:)"
+      ],
+      "title" : "Instance Methods"
+    },
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph\/Client\/APIProtocol-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapidependency_graph\/client"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIDependency_Graph/documentation/GitHubRestAPIDependency_Graph": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIDependency_Graph",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependency_graph"
+},
+"doc://GitHubRestAPIDependency_Graph/documentation/GitHubRestAPIDependency_Graph/APIProtocol": {
+  "abstract" : [
+    {
+      "text" : "A type that performs HTTP operations defined by the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "protocol"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "APIProtocol"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph\/APIProtocol",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "APIProtocol"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "APIProtocol",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependency_graph\/apiprotocol"
+},
+"doc://GitHubRestAPIDependency_Graph/documentation/GitHubRestAPIDependency_Graph/Client": {
+  "abstract" : [
+    {
+      "text" : "GitHub’s v3 REST API.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Client"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph\/Client",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Client"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Client",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependency_graph\/client"
+},
+"doc://GitHubRestAPIDependency_Graph/documentation/GitHubRestAPIDependency_Graph/Client/APIProtocol-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph\/Client\/APIProtocol-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "APIProtocol Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependency_graph\/client\/apiprotocol-implementations"
+},
+"doc://GitHubRestAPIDependency_Graph/documentation/GitHubRestAPIDependency_Graph/Client/dependency_hyphen_graph_sol_create_hyphen_repository_hyphen_snapshot(_:)": {
+  "abstract" : [
+    {
+      "text" : "Create a snapshot of dependencies for a repository",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "dependency_hyphen_graph_sol_create_hyphen_repository_hyphen_snapshot"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10OperationsO035dependency_hyphen_graph_sol_create_h12_repository_H9_snapshotO",
+      "text" : "dependency_hyphen_graph_sol_create_hyphen_repository_hyphen_snapshot"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10OperationsO035dependency_hyphen_graph_sol_create_h12_repository_H9_snapshotO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10OperationsO035dependency_hyphen_graph_sol_create_h12_repository_H9_snapshotO",
+      "text" : "dependency_hyphen_graph_sol_create_hyphen_repository_hyphen_snapshot"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10OperationsO035dependency_hyphen_graph_sol_create_h12_repository_H9_snapshotO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph\/Client\/dependency_hyphen_graph_sol_create_hyphen_repository_hyphen_snapshot(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "dependency_hyphen_graph_sol_create_hyphen_repository_hyphen_snapshot(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependency_graph\/client\/dependency_hyphen_graph_sol_create_hyphen_repository_hyphen_snapshot(_:)"
+},
+"doc://GitHubRestAPIDependency_Graph/documentation/GitHubRestAPIDependency_Graph/Client/dependency_hyphen_graph_sol_diff_hyphen_range(_:)": {
+  "abstract" : [
+    {
+      "text" : "Get a diff of the dependencies between commits",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "dependency_hyphen_graph_sol_diff_hyphen_range"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10OperationsO033dependency_hyphen_graph_sol_diff_H6_rangeO",
+      "text" : "dependency_hyphen_graph_sol_diff_hyphen_range"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10OperationsO033dependency_hyphen_graph_sol_diff_H6_rangeO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10OperationsO033dependency_hyphen_graph_sol_diff_H6_rangeO",
+      "text" : "dependency_hyphen_graph_sol_diff_hyphen_range"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10OperationsO033dependency_hyphen_graph_sol_diff_H6_rangeO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph\/Client\/dependency_hyphen_graph_sol_diff_hyphen_range(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "dependency_hyphen_graph_sol_diff_hyphen_range(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependency_graph\/client\/dependency_hyphen_graph_sol_diff_hyphen_range(_:)"
+},
+"doc://GitHubRestAPIDependency_Graph/documentation/GitHubRestAPIDependency_Graph/Client/dependency_hyphen_graph_sol_export_hyphen_sbom(_:)": {
+  "abstract" : [
+    {
+      "text" : "Export a software bill of materials (SBOM) for a repository.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "dependency_hyphen_graph_sol_export_hyphen_sbom"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10OperationsO035dependency_hyphen_graph_sol_export_H5_sbomO",
+      "text" : "dependency_hyphen_graph_sol_export_hyphen_sbom"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10OperationsO035dependency_hyphen_graph_sol_export_H5_sbomO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10OperationsO035dependency_hyphen_graph_sol_export_H5_sbomO",
+      "text" : "dependency_hyphen_graph_sol_export_hyphen_sbom"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:29GitHubRestAPIDependency_Graph10OperationsO035dependency_hyphen_graph_sol_export_H5_sbomO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph\/Client\/dependency_hyphen_graph_sol_export_hyphen_sbom(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "dependency_hyphen_graph_sol_export_hyphen_sbom(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependency_graph\/client\/dependency_hyphen_graph_sol_export_hyphen_sbom(_:)"
+},
+"doc://GitHubRestAPIDependency_Graph/documentation/GitHubRestAPIDependency_Graph/Client/init(serverURL:configuration:transport:middlewares:)": {
+  "abstract" : [
+    {
+      "text" : "Creates a new client.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "serverURL"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:10Foundation3URLV",
+      "text" : "URL"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:14OpenAPIRuntime13ConfigurationV",
+      "text" : "Configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "transport"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:14OpenAPIRuntime15ClientTransportP",
+      "text" : "ClientTransport"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "middlewares"
+    },
+    {
+      "kind" : "text",
+      "text" : ": ["
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:14OpenAPIRuntime16ClientMiddlewareP",
+      "text" : "ClientMiddleware"
+    },
+    {
+      "kind" : "text",
+      "text" : "])"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependency_Graph\/documentation\/GitHubRestAPIDependency_Graph\/Client\/init(serverURL:configuration:transport:middlewares:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(serverURL:configuration:transport:middlewares:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependency_graph\/client\/init(serverurl:configuration:transport:middlewares:)"
+},
+"doc://GitHubRestAPIDependency_Graph/s8SendableP": {
+  "identifier" : "doc:\/\/GitHubRestAPIDependency_Graph\/s8SendableP",
+  "title" : "Swift.Sendable",
+  "type" : "unresolvable"
+}
+}
+}

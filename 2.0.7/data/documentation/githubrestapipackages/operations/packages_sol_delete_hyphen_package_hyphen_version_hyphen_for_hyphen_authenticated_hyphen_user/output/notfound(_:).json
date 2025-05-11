@@ -1,0 +1,506 @@
+{
+  "abstract" : [
+    {
+      "text" : "Resource not found",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages",
+        "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations",
+        "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations\/packages_sol_delete_hyphen_package_hyphen_version_hyphen_for_hyphen_authenticated_hyphen_user",
+        "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations\/packages_sol_delete_hyphen_package_hyphen_version_hyphen_for_hyphen_authenticated_hyphen_user\/Output"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations\/packages_sol_delete_hyphen_package_hyphen_version_hyphen_for_hyphen_authenticated_hyphen_user\/Output\/notFound(_:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:21GitHubRestAPIPackages10OperationsO035packages_sol_delete_hyphen_package_i9_version_i5_for_i15_authenticated_I5_userO6OutputO8notFoundyAgA10ComponentsO9ResponsesO0P6_foundVcAGmF",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "case"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "notFound"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:21GitHubRestAPIPackages10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:21GitHubRestAPIPackages10ComponentsO9ResponsesO",
+        "text" : "Responses"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:21GitHubRestAPIPackages10ComponentsO9ResponsesO9not_foundV",
+        "text" : "not_found"
+      },
+      {
+        "kind" : "text",
+        "text" : ")"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIPackages"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/packages\/Types.swift#L5806"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Case",
+    "symbolKind" : "case",
+    "title" : "Operations.packages_sol_delete_hyphen_package_hyphen_version_hyphen_for_hyphen_authenticated_hyphen_user.Output.notFound(_:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "case"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "notFound"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:21GitHubRestAPIPackages10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Components\/Responses",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:21GitHubRestAPIPackages10ComponentsO9ResponsesO",
+              "text" : "Responses"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Components\/Responses\/not_found",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:21GitHubRestAPIPackages10ComponentsO9ResponsesO9not_foundV",
+              "text" : "not_found"
+            },
+            {
+              "kind" : "text",
+              "text" : ")"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/paths\/\/user\/packages\/{package_type}\/{package_name}\/versions\/{package_version_id}\/delete(packages\/delete-package-version-for-authenticated-user)\/responses\/404",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "HTTP response code: ",
+              "type" : "text"
+            },
+            {
+              "code" : "404 notFound",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ".",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapipackages\/operations\/packages_sol_delete_hyphen_package_hyphen_version_hyphen_for_hyphen_authenticated_hyphen_user\/output\/notfound(_:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIPackages",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages\/components"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages/Components/Responses": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/responses",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Responses"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Components\/Responses",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Responses"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Responses",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages\/components\/responses"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages/Components/Responses/not_found": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "not_found"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Components\/Responses\/not_found",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "not_found"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Responses.not_found",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages\/components\/responses\/not_found"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages\/operations"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages/Operations/packages_sol_delete_hyphen_package_hyphen_version_hyphen_for_hyphen_authenticated_hyphen_user": {
+  "abstract" : [
+    {
+      "text" : "Delete a package version for the authenticated user",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "packages_sol_delete_hyphen_package_hyphen_version_hyphen_for_hyphen_authenticated_hyphen_user"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations\/packages_sol_delete_hyphen_package_hyphen_version_hyphen_for_hyphen_authenticated_hyphen_user",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "packages_sol_delete_hyphen_package_hyphen_version_hyphen_for_hyphen_authenticated_hyphen_user"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.packages_sol_delete_hyphen_package_hyphen_version_hyphen_for_hyphen_authenticated_hyphen_user",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages\/operations\/packages_sol_delete_hyphen_package_hyphen_version_hyphen_for_hyphen_authenticated_hyphen_user"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages/Operations/packages_sol_delete_hyphen_package_hyphen_version_hyphen_for_hyphen_authenticated_hyphen_user/Output": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations\/packages_sol_delete_hyphen_package_hyphen_version_hyphen_for_hyphen_authenticated_hyphen_user\/Output",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.packages_sol_delete_hyphen_package_hyphen_version_hyphen_for_hyphen_authenticated_hyphen_user.Output",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages\/operations\/packages_sol_delete_hyphen_package_hyphen_version_hyphen_for_hyphen_authenticated_hyphen_user\/output"
+},
+"doc://GitHubRestAPIPackages/documentation/GitHubRestAPIPackages/Operations/packages_sol_delete_hyphen_package_hyphen_version_hyphen_for_hyphen_authenticated_hyphen_user/Output/notFound(_:)": {
+  "abstract" : [
+    {
+      "text" : "Resource not found",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "notFound"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIPackages10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIPackages10ComponentsO9ResponsesO",
+      "text" : "Responses"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIPackages10ComponentsO9ResponsesO9not_foundV",
+      "text" : "not_found"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPackages\/documentation\/GitHubRestAPIPackages\/Operations\/packages_sol_delete_hyphen_package_hyphen_version_hyphen_for_hyphen_authenticated_hyphen_user\/Output\/notFound(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Operations.packages_sol_delete_hyphen_package_hyphen_version_hyphen_for_hyphen_authenticated_hyphen_user.Output.notFound(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapipackages\/operations\/packages_sol_delete_hyphen_package_hyphen_version_hyphen_for_hyphen_authenticated_hyphen_user\/output\/notfound(_:)"
+}
+}
+}

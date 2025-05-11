@@ -1,0 +1,502 @@
+{
+  "abstract" : [
+    {
+      "text" : "A container of undocumented properties.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers",
+        "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Operations",
+        "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Operations\/users_sol_list_hyphen_attestations",
+        "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Operations\/users_sol_list_hyphen_attestations\/Output",
+        "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Operations\/users_sol_list_hyphen_attestations\/Output\/Ok-swift.struct",
+        "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Operations\/users_sol_list_hyphen_attestations\/Output\/Ok-swift.struct\/Body-swift.enum",
+        "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Operations\/users_sol_list_hyphen_attestations\/Output\/Ok-swift.struct\/Body-swift.enum\/jsonPayload",
+        "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Operations\/users_sol_list_hyphen_attestations\/Output\/Ok-swift.struct\/Body-swift.enum\/jsonPayload\/attestationsPayloadPayload",
+        "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Operations\/users_sol_list_hyphen_attestations\/Output\/Ok-swift.struct\/Body-swift.enum\/jsonPayload\/attestationsPayloadPayload\/bundlePayload",
+        "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Operations\/users_sol_list_hyphen_attestations\/Output\/Ok-swift.struct\/Body-swift.enum\/jsonPayload\/attestationsPayloadPayload\/bundlePayload\/dsseEnvelopePayload"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Operations\/users_sol_list_hyphen_attestations\/Output\/Ok-swift.struct\/Body-swift.enum\/jsonPayload\/attestationsPayloadPayload\/bundlePayload\/dsseEnvelopePayload\/additionalProperties"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:18GitHubRestAPIUsers10OperationsO34users_sol_list_hyphen_attestationsO6OutputO2OkV4BodyO11jsonPayloadV0joO0V06bundleO0V012dsseEnvelopeO0V20additionalProperties14OpenAPIRuntime0U18APIObjectContainerVvp",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "var"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "additionalProperties"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:14OpenAPIRuntime0A18APIObjectContainerV",
+        "text" : "OpenAPIObjectContainer"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIUsers"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/users\/Types.swift#L11430"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Instance Property",
+    "symbolKind" : "property",
+    "title" : "additionalProperties"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "var"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "additionalProperties"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:14OpenAPIRuntime0A18APIObjectContainerV",
+              "text" : "OpenAPIObjectContainer"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapiusers\/operations\/users_sol_list_hyphen_attestations\/output\/ok-swift.struct\/body-swift.enum\/jsonpayload\/attestationspayloadpayload\/bundlepayload\/dsseenvelopepayload\/additionalproperties"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIUsers/documentation/GitHubRestAPIUsers": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIUsers",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiusers"
+},
+"doc://GitHubRestAPIUsers/documentation/GitHubRestAPIUsers/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiusers\/operations"
+},
+"doc://GitHubRestAPIUsers/documentation/GitHubRestAPIUsers/Operations/users_sol_list_hyphen_attestations": {
+  "abstract" : [
+    {
+      "text" : "List attestations",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "users_sol_list_hyphen_attestations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Operations\/users_sol_list_hyphen_attestations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "users_sol_list_hyphen_attestations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.users_sol_list_hyphen_attestations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiusers\/operations\/users_sol_list_hyphen_attestations"
+},
+"doc://GitHubRestAPIUsers/documentation/GitHubRestAPIUsers/Operations/users_sol_list_hyphen_attestations/Output": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Operations\/users_sol_list_hyphen_attestations\/Output",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.users_sol_list_hyphen_attestations.Output",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiusers\/operations\/users_sol_list_hyphen_attestations\/output"
+},
+"doc://GitHubRestAPIUsers/documentation/GitHubRestAPIUsers/Operations/users_sol_list_hyphen_attestations/Output/Ok-swift.struct": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Ok"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Operations\/users_sol_list_hyphen_attestations\/Output\/Ok-swift.struct",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Ok"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.users_sol_list_hyphen_attestations.Output.Ok",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiusers\/operations\/users_sol_list_hyphen_attestations\/output\/ok-swift.struct"
+},
+"doc://GitHubRestAPIUsers/documentation/GitHubRestAPIUsers/Operations/users_sol_list_hyphen_attestations/Output/Ok-swift.struct/Body-swift.enum": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Body"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Operations\/users_sol_list_hyphen_attestations\/Output\/Ok-swift.struct\/Body-swift.enum",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Body"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.users_sol_list_hyphen_attestations.Output.Ok.Body",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiusers\/operations\/users_sol_list_hyphen_attestations\/output\/ok-swift.struct\/body-swift.enum"
+},
+"doc://GitHubRestAPIUsers/documentation/GitHubRestAPIUsers/Operations/users_sol_list_hyphen_attestations/Output/Ok-swift.struct/Body-swift.enum/jsonPayload": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "jsonPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Operations\/users_sol_list_hyphen_attestations\/Output\/Ok-swift.struct\/Body-swift.enum\/jsonPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "jsonPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.users_sol_list_hyphen_attestations.Output.Ok.Body.jsonPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiusers\/operations\/users_sol_list_hyphen_attestations\/output\/ok-swift.struct\/body-swift.enum\/jsonpayload"
+},
+"doc://GitHubRestAPIUsers/documentation/GitHubRestAPIUsers/Operations/users_sol_list_hyphen_attestations/Output/Ok-swift.struct/Body-swift.enum/jsonPayload/attestationsPayloadPayload": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "attestationsPayloadPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Operations\/users_sol_list_hyphen_attestations\/Output\/Ok-swift.struct\/Body-swift.enum\/jsonPayload\/attestationsPayloadPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "attestationsPayloadPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.users_sol_list_hyphen_attestations.Output.Ok.Body.jsonPayload.attestationsPayloadPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiusers\/operations\/users_sol_list_hyphen_attestations\/output\/ok-swift.struct\/body-swift.enum\/jsonpayload\/attestationspayloadpayload"
+},
+"doc://GitHubRestAPIUsers/documentation/GitHubRestAPIUsers/Operations/users_sol_list_hyphen_attestations/Output/Ok-swift.struct/Body-swift.enum/jsonPayload/attestationsPayloadPayload/bundlePayload": {
+  "abstract" : [
+    {
+      "text" : "The attestation’s Sigstore Bundle.",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "Refer to the ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/github.com\/sigstore\/protobuf-specs\/blob\/main\/protos\/sigstore_bundle.proto",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : " for more information.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "bundlePayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Operations\/users_sol_list_hyphen_attestations\/Output\/Ok-swift.struct\/Body-swift.enum\/jsonPayload\/attestationsPayloadPayload\/bundlePayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "bundlePayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.users_sol_list_hyphen_attestations.Output.Ok.Body.jsonPayload.attestationsPayloadPayload.bundlePayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiusers\/operations\/users_sol_list_hyphen_attestations\/output\/ok-swift.struct\/body-swift.enum\/jsonpayload\/attestationspayloadpayload\/bundlepayload"
+},
+"doc://GitHubRestAPIUsers/documentation/GitHubRestAPIUsers/Operations/users_sol_list_hyphen_attestations/Output/Ok-swift.struct/Body-swift.enum/jsonPayload/attestationsPayloadPayload/bundlePayload/dsseEnvelopePayload": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "dsseEnvelopePayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Operations\/users_sol_list_hyphen_attestations\/Output\/Ok-swift.struct\/Body-swift.enum\/jsonPayload\/attestationsPayloadPayload\/bundlePayload\/dsseEnvelopePayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "dsseEnvelopePayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.users_sol_list_hyphen_attestations.Output.Ok.Body.jsonPayload.attestationsPayloadPayload.bundlePayload.dsseEnvelopePayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiusers\/operations\/users_sol_list_hyphen_attestations\/output\/ok-swift.struct\/body-swift.enum\/jsonpayload\/attestationspayloadpayload\/bundlepayload\/dsseenvelopepayload"
+},
+"doc://GitHubRestAPIUsers/documentation/GitHubRestAPIUsers/Operations/users_sol_list_hyphen_attestations/Output/Ok-swift.struct/Body-swift.enum/jsonPayload/attestationsPayloadPayload/bundlePayload/dsseEnvelopePayload/additionalProperties": {
+  "abstract" : [
+    {
+      "text" : "A container of undocumented properties.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "additionalProperties"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:14OpenAPIRuntime0A18APIObjectContainerV",
+      "text" : "OpenAPIObjectContainer"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Operations\/users_sol_list_hyphen_attestations\/Output\/Ok-swift.struct\/Body-swift.enum\/jsonPayload\/attestationsPayloadPayload\/bundlePayload\/dsseEnvelopePayload\/additionalProperties",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "additionalProperties",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiusers\/operations\/users_sol_list_hyphen_attestations\/output\/ok-swift.struct\/body-swift.enum\/jsonpayload\/attestationspayloadpayload\/bundlepayload\/dsseenvelopepayload\/additionalproperties"
+},
+"https://github.com/sigstore/protobuf-specs/blob/main/protos/sigstore_bundle.proto": {
+  "identifier" : "https:\/\/github.com\/sigstore\/protobuf-specs\/blob\/main\/protos\/sigstore_bundle.proto",
+  "title" : "Sigstore Bundle Specification",
+  "titleInlineContent" : [
+    {
+      "text" : "Sigstore Bundle Specification",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/github.com\/sigstore\/protobuf-specs\/blob\/main\/protos\/sigstore_bundle.proto"
+}
+}
+}

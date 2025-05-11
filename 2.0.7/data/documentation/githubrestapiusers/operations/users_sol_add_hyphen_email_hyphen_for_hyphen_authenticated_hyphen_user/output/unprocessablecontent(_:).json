@@ -1,0 +1,506 @@
+{
+  "abstract" : [
+    {
+      "text" : "Validation failed, or the endpoint has been spammed.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers",
+        "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Operations",
+        "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Operations\/users_sol_add_hyphen_email_hyphen_for_hyphen_authenticated_hyphen_user",
+        "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Operations\/users_sol_add_hyphen_email_hyphen_for_hyphen_authenticated_hyphen_user\/Output"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Operations\/users_sol_add_hyphen_email_hyphen_for_hyphen_authenticated_hyphen_user\/Output\/unprocessableContent(_:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:18GitHubRestAPIUsers10OperationsO027users_sol_add_hyphen_email_i5_for_i15_authenticated_I5_userO6OutputO20unprocessableContentyAgA10ComponentsO9ResponsesO17validation_failedVcAGmF",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "case"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "unprocessableContent"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:18GitHubRestAPIUsers10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:18GitHubRestAPIUsers10ComponentsO9ResponsesO",
+        "text" : "Responses"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:18GitHubRestAPIUsers10ComponentsO9ResponsesO17validation_failedV",
+        "text" : "validation_failed"
+      },
+      {
+        "kind" : "text",
+        "text" : ")"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIUsers"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/users\/Types.swift#L5051"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Case",
+    "symbolKind" : "case",
+    "title" : "Operations.users_sol_add_hyphen_email_hyphen_for_hyphen_authenticated_hyphen_user.Output.unprocessableContent(_:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "case"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "unprocessableContent"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:18GitHubRestAPIUsers10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Components\/Responses",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:18GitHubRestAPIUsers10ComponentsO9ResponsesO",
+              "text" : "Responses"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Components\/Responses\/validation_failed",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:18GitHubRestAPIUsers10ComponentsO9ResponsesO17validation_failedV",
+              "text" : "validation_failed"
+            },
+            {
+              "kind" : "text",
+              "text" : ")"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/paths\/\/user\/emails\/post(users\/add-email-for-authenticated-user)\/responses\/422",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "HTTP response code: ",
+              "type" : "text"
+            },
+            {
+              "code" : "422 unprocessableContent",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ".",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapiusers\/operations\/users_sol_add_hyphen_email_hyphen_for_hyphen_authenticated_hyphen_user\/output\/unprocessablecontent(_:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIUsers/documentation/GitHubRestAPIUsers": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIUsers",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiusers"
+},
+"doc://GitHubRestAPIUsers/documentation/GitHubRestAPIUsers/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiusers\/components"
+},
+"doc://GitHubRestAPIUsers/documentation/GitHubRestAPIUsers/Components/Responses": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/responses",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Responses"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Components\/Responses",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Responses"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Responses",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiusers\/components\/responses"
+},
+"doc://GitHubRestAPIUsers/documentation/GitHubRestAPIUsers/Components/Responses/validation_failed": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "validation_failed"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Components\/Responses\/validation_failed",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "validation_failed"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Responses.validation_failed",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiusers\/components\/responses\/validation_failed"
+},
+"doc://GitHubRestAPIUsers/documentation/GitHubRestAPIUsers/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiusers\/operations"
+},
+"doc://GitHubRestAPIUsers/documentation/GitHubRestAPIUsers/Operations/users_sol_add_hyphen_email_hyphen_for_hyphen_authenticated_hyphen_user": {
+  "abstract" : [
+    {
+      "text" : "Add an email address for the authenticated user",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "users_sol_add_hyphen_email_hyphen_for_hyphen_authenticated_hyphen_user"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Operations\/users_sol_add_hyphen_email_hyphen_for_hyphen_authenticated_hyphen_user",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "users_sol_add_hyphen_email_hyphen_for_hyphen_authenticated_hyphen_user"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.users_sol_add_hyphen_email_hyphen_for_hyphen_authenticated_hyphen_user",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiusers\/operations\/users_sol_add_hyphen_email_hyphen_for_hyphen_authenticated_hyphen_user"
+},
+"doc://GitHubRestAPIUsers/documentation/GitHubRestAPIUsers/Operations/users_sol_add_hyphen_email_hyphen_for_hyphen_authenticated_hyphen_user/Output": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Operations\/users_sol_add_hyphen_email_hyphen_for_hyphen_authenticated_hyphen_user\/Output",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.users_sol_add_hyphen_email_hyphen_for_hyphen_authenticated_hyphen_user.Output",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiusers\/operations\/users_sol_add_hyphen_email_hyphen_for_hyphen_authenticated_hyphen_user\/output"
+},
+"doc://GitHubRestAPIUsers/documentation/GitHubRestAPIUsers/Operations/users_sol_add_hyphen_email_hyphen_for_hyphen_authenticated_hyphen_user/Output/unprocessableContent(_:)": {
+  "abstract" : [
+    {
+      "text" : "Validation failed, or the endpoint has been spammed.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "unprocessableContent"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIUsers10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIUsers10ComponentsO9ResponsesO",
+      "text" : "Responses"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIUsers10ComponentsO9ResponsesO17validation_failedV",
+      "text" : "validation_failed"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Operations\/users_sol_add_hyphen_email_hyphen_for_hyphen_authenticated_hyphen_user\/Output\/unprocessableContent(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Operations.users_sol_add_hyphen_email_hyphen_for_hyphen_authenticated_hyphen_user.Output.unprocessableContent(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiusers\/operations\/users_sol_add_hyphen_email_hyphen_for_hyphen_authenticated_hyphen_user\/output\/unprocessablecontent(_:)"
+}
+}
+}

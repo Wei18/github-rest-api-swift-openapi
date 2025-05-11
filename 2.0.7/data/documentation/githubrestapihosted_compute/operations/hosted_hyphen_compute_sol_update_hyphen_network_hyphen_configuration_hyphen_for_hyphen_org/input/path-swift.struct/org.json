@@ -1,0 +1,512 @@
+{
+  "abstract" : [
+    {
+      "text" : "The organization name. The name is not case sensitive.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIHosted_Compute\/documentation\/GitHubRestAPIHosted_Compute",
+        "doc:\/\/GitHubRestAPIHosted_Compute\/documentation\/GitHubRestAPIHosted_Compute\/Operations",
+        "doc:\/\/GitHubRestAPIHosted_Compute\/documentation\/GitHubRestAPIHosted_Compute\/Operations\/hosted_hyphen_compute_sol_update_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org",
+        "doc:\/\/GitHubRestAPIHosted_Compute\/documentation\/GitHubRestAPIHosted_Compute\/Operations\/hosted_hyphen_compute_sol_update_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org\/Input",
+        "doc:\/\/GitHubRestAPIHosted_Compute\/documentation\/GitHubRestAPIHosted_Compute\/Operations\/hosted_hyphen_compute_sol_update_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org\/Input\/Path-swift.struct"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIHosted_Compute\/documentation\/GitHubRestAPIHosted_Compute\/Operations\/hosted_hyphen_compute_sol_update_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org\/Input\/Path-swift.struct\/org"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:27GitHubRestAPIHosted_Compute10OperationsO033hosted_hyphen_compute_sol_update_h9_network_h15_configuration_h5_for_H4_orgO5InputV4PathV0O0SSvp",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "var"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "org"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:27GitHubRestAPIHosted_Compute10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:27GitHubRestAPIHosted_Compute10ComponentsO10ParametersO",
+        "text" : "Parameters"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:27GitHubRestAPIHosted_Compute10ComponentsO10ParametersO3orga",
+        "text" : "org"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIHosted_Compute"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/hosted-compute\/Types.swift#L916"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Instance Property",
+    "symbolKind" : "property",
+    "title" : "org"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "var"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "org"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIHosted_Compute\/documentation\/GitHubRestAPIHosted_Compute\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:27GitHubRestAPIHosted_Compute10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIHosted_Compute\/documentation\/GitHubRestAPIHosted_Compute\/Components\/Parameters",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:27GitHubRestAPIHosted_Compute10ComponentsO10ParametersO",
+              "text" : "Parameters"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIHosted_Compute\/documentation\/GitHubRestAPIHosted_Compute\/Components\/Parameters\/org",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:27GitHubRestAPIHosted_Compute10ComponentsO10ParametersO3orga",
+              "text" : "org"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/paths\/orgs\/{org}\/settings\/network-configurations\/{network_configuration_id}\/PATCH\/path\/org",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapihosted_compute\/operations\/hosted_hyphen_compute_sol_update_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org\/input\/path-swift.struct\/org"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIHosted_Compute/documentation/GitHubRestAPIHosted_Compute": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIHosted_Compute\/documentation\/GitHubRestAPIHosted_Compute",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIHosted_Compute",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapihosted_compute"
+},
+"doc://GitHubRestAPIHosted_Compute/documentation/GitHubRestAPIHosted_Compute/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIHosted_Compute\/documentation\/GitHubRestAPIHosted_Compute\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapihosted_compute\/components"
+},
+"doc://GitHubRestAPIHosted_Compute/documentation/GitHubRestAPIHosted_Compute/Components/Parameters": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/parameters",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Parameters"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIHosted_Compute\/documentation\/GitHubRestAPIHosted_Compute\/Components\/Parameters",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Parameters"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapihosted_compute\/components\/parameters"
+},
+"doc://GitHubRestAPIHosted_Compute/documentation/GitHubRestAPIHosted_Compute/Components/Parameters/org": {
+  "abstract" : [
+    {
+      "text" : "The organization name. The name is not case sensitive.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "org"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIHosted_Compute\/documentation\/GitHubRestAPIHosted_Compute\/Components\/Parameters\/org",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "org"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.org",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapihosted_compute\/components\/parameters\/org"
+},
+"doc://GitHubRestAPIHosted_Compute/documentation/GitHubRestAPIHosted_Compute/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIHosted_Compute\/documentation\/GitHubRestAPIHosted_Compute\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapihosted_compute\/operations"
+},
+"doc://GitHubRestAPIHosted_Compute/documentation/GitHubRestAPIHosted_Compute/Operations/hosted_hyphen_compute_sol_update_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org": {
+  "abstract" : [
+    {
+      "text" : "Update a hosted compute network configuration for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "hosted_hyphen_compute_sol_update_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIHosted_Compute\/documentation\/GitHubRestAPIHosted_Compute\/Operations\/hosted_hyphen_compute_sol_update_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "hosted_hyphen_compute_sol_update_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.hosted_hyphen_compute_sol_update_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapihosted_compute\/operations\/hosted_hyphen_compute_sol_update_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org"
+},
+"doc://GitHubRestAPIHosted_Compute/documentation/GitHubRestAPIHosted_Compute/Operations/hosted_hyphen_compute_sol_update_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org/Input": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIHosted_Compute\/documentation\/GitHubRestAPIHosted_Compute\/Operations\/hosted_hyphen_compute_sol_update_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org\/Input",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.hosted_hyphen_compute_sol_update_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.Input",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapihosted_compute\/operations\/hosted_hyphen_compute_sol_update_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org\/input"
+},
+"doc://GitHubRestAPIHosted_Compute/documentation/GitHubRestAPIHosted_Compute/Operations/hosted_hyphen_compute_sol_update_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org/Input/Path-swift.struct": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Path"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIHosted_Compute\/documentation\/GitHubRestAPIHosted_Compute\/Operations\/hosted_hyphen_compute_sol_update_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org\/Input\/Path-swift.struct",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Path"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.hosted_hyphen_compute_sol_update_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org.Input.Path",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapihosted_compute\/operations\/hosted_hyphen_compute_sol_update_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org\/input\/path-swift.struct"
+},
+"doc://GitHubRestAPIHosted_Compute/documentation/GitHubRestAPIHosted_Compute/Operations/hosted_hyphen_compute_sol_update_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org/Input/Path-swift.struct/org": {
+  "abstract" : [
+    {
+      "text" : "The organization name. The name is not case sensitive.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "org"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:27GitHubRestAPIHosted_Compute10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:27GitHubRestAPIHosted_Compute10ComponentsO10ParametersO",
+      "text" : "Parameters"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:27GitHubRestAPIHosted_Compute10ComponentsO10ParametersO3orga",
+      "text" : "org"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIHosted_Compute\/documentation\/GitHubRestAPIHosted_Compute\/Operations\/hosted_hyphen_compute_sol_update_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org\/Input\/Path-swift.struct\/org",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "org",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapihosted_compute\/operations\/hosted_hyphen_compute_sol_update_hyphen_network_hyphen_configuration_hyphen_for_hyphen_org\/input\/path-swift.struct\/org"
+}
+}
+}

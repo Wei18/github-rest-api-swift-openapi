@@ -1,0 +1,328 @@
+{
+  "abstract" : [
+    {
+      "text" : "Creates a new ",
+      "type" : "text"
+    },
+    {
+      "code" : "secret_hyphen_scanning_hyphen_location_hyphen_issue_hyphen_title",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning",
+        "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Components",
+        "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Components\/Schemas",
+        "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Components\/Schemas\/secret_hyphen_scanning_hyphen_location_hyphen_issue_hyphen_title"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Components\/Schemas\/secret_hyphen_scanning_hyphen_location_hyphen_issue_hyphen_title\/init(issue_title_url:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:28GitHubRestAPISecret_Scanning10ComponentsO7SchemasO023secret_hyphen_scanning_i10_location_i7_issue_I6_titleV0l1_M4_urlAGSS_tcfc",
+    "fragments" : [
+      {
+        "kind" : "identifier",
+        "text" : "init"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "issue_title_url"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SS",
+        "text" : "String"
+      },
+      {
+        "kind" : "text",
+        "text" : ")"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPISecret_Scanning"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/secret-scanning\/Types.swift#L1633"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Initializer",
+    "symbolKind" : "init",
+    "title" : "init(issue_title_url:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "init"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "issue_title_url"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:SS",
+              "text" : "String"
+            },
+            {
+              "kind" : "text",
+              "text" : ")"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "kind" : "parameters",
+      "parameters" : [
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The API URL to get the issue where the secret was detected.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "issue_title_url"
+        }
+      ]
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapisecret_scanning\/components\/schemas\/secret_hyphen_scanning_hyphen_location_hyphen_issue_hyphen_title\/init(issue_title_url:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPISecret_Scanning/documentation/GitHubRestAPISecret_Scanning": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPISecret_Scanning",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecret_scanning"
+},
+"doc://GitHubRestAPISecret_Scanning/documentation/GitHubRestAPISecret_Scanning/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecret_scanning\/components"
+},
+"doc://GitHubRestAPISecret_Scanning/documentation/GitHubRestAPISecret_Scanning/Components/Schemas": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/schemas",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Components\/Schemas",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecret_scanning\/components\/schemas"
+},
+"doc://GitHubRestAPISecret_Scanning/documentation/GitHubRestAPISecret_Scanning/Components/Schemas/secret_hyphen_scanning_hyphen_location_hyphen_issue_hyphen_title": {
+  "abstract" : [
+    {
+      "text" : "Represents an ‘issue_title’ secret scanning location type. This location type shows that a secret was detected in the title of an issue.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "secret_hyphen_scanning_hyphen_location_hyphen_issue_hyphen_title"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Components\/Schemas\/secret_hyphen_scanning_hyphen_location_hyphen_issue_hyphen_title",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "secret_hyphen_scanning_hyphen_location_hyphen_issue_hyphen_title"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.secret_hyphen_scanning_hyphen_location_hyphen_issue_hyphen_title",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecret_scanning\/components\/schemas\/secret_hyphen_scanning_hyphen_location_hyphen_issue_hyphen_title"
+},
+"doc://GitHubRestAPISecret_Scanning/documentation/GitHubRestAPISecret_Scanning/Components/Schemas/secret_hyphen_scanning_hyphen_location_hyphen_issue_hyphen_title/init(issue_title_url:)": {
+  "abstract" : [
+    {
+      "text" : "Creates a new ",
+      "type" : "text"
+    },
+    {
+      "code" : "secret_hyphen_scanning_hyphen_location_hyphen_issue_hyphen_title",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "issue_title_url"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Components\/Schemas\/secret_hyphen_scanning_hyphen_location_hyphen_issue_hyphen_title\/init(issue_title_url:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(issue_title_url:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecret_scanning\/components\/schemas\/secret_hyphen_scanning_hyphen_location_hyphen_issue_hyphen_title\/init(issue_title_url:)"
+}
+}
+}

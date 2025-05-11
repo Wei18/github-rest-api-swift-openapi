@@ -1,0 +1,1746 @@
+{
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/parameters",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:17GitHubRestAPIOrgs10ComponentsO10ParametersO",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "enum"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "Parameters"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIOrgs"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "Parameters"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/orgs\/Types.swift#L8239"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Enumeration",
+    "symbolKind" : "enum",
+    "title" : "Components.Parameters"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "enum"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "Parameters"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/api_hyphen_insights_hyphen_actor_hyphen_id",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/api_hyphen_insights_hyphen_actor_hyphen_name_hyphen_substring",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/api_hyphen_insights_hyphen_api_hyphen_route_hyphen_substring",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/api_hyphen_insights_hyphen_max_hyphen_timestamp",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/api_hyphen_insights_hyphen_min_hyphen_timestamp",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/api_hyphen_insights_hyphen_route_hyphen_stats_hyphen_sort",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/api_hyphen_insights_hyphen_sort",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/api_hyphen_insights_hyphen_subject_hyphen_name_hyphen_substring",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/api_hyphen_insights_hyphen_timestamp_hyphen_increment",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/api_hyphen_insights_hyphen_user_hyphen_id",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/cursor",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/custom_hyphen_property_hyphen_name",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/delivery_hyphen_id",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/fine_hyphen_grained_hyphen_personal_hyphen_access_hyphen_token_hyphen_id",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/hook_hyphen_id",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/invitation_hyphen_id",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/issue_hyphen_type_hyphen_id",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/org",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/page",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/pagination_hyphen_after",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/pagination_hyphen_before",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/per_hyphen_page",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/personal_hyphen_access_hyphen_token_hyphen_after",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/personal_hyphen_access_hyphen_token_hyphen_before",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/personal_hyphen_access_hyphen_token_hyphen_owner",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/personal_hyphen_access_hyphen_token_hyphen_permission",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/personal_hyphen_access_hyphen_token_hyphen_repository",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/personal_hyphen_access_hyphen_token_hyphen_token_hyphen_id",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/role_hyphen_id",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/since_hyphen_org",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/team_hyphen_slug",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/username"
+      ],
+      "title" : "Type Aliases"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/api_hyphen_insights_hyphen_actor_hyphen_type",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/api_hyphen_insights_hyphen_route_hyphen_stats_hyphen_sortPayload",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/api_hyphen_insights_hyphen_sortPayload",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/direction",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/org_hyphen_security_hyphen_product_hyphen_enablement",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/personal_hyphen_access_hyphen_token_hyphen_sort",
+        "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/security_hyphen_product"
+      ],
+      "title" : "Enumerations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapiorgs\/components\/parameters"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIOrgs",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Parameters": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/parameters",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Parameters"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Parameters"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/parameters"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Parameters/api_hyphen_insights_hyphen_actor_hyphen_id": {
+  "abstract" : [
+    {
+      "text" : "The ID of the actor",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "api_hyphen_insights_hyphen_actor_hyphen_id"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/api_hyphen_insights_hyphen_actor_hyphen_id",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "api_hyphen_insights_hyphen_actor_hyphen_id"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.api_hyphen_insights_hyphen_actor_hyphen_id",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/parameters\/api_hyphen_insights_hyphen_actor_hyphen_id"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Parameters/api_hyphen_insights_hyphen_actor_hyphen_name_hyphen_substring": {
+  "abstract" : [
+    {
+      "text" : "Providing a substring will filter results where the actor name contains the substring. This is a case-insensitive search.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "api_hyphen_insights_hyphen_actor_hyphen_name_hyphen_substring"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/api_hyphen_insights_hyphen_actor_hyphen_name_hyphen_substring",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "api_hyphen_insights_hyphen_actor_hyphen_name_hyphen_substring"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.api_hyphen_insights_hyphen_actor_hyphen_name_hyphen_substring",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/parameters\/api_hyphen_insights_hyphen_actor_hyphen_name_hyphen_substring"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Parameters/api_hyphen_insights_hyphen_actor_hyphen_type": {
+  "abstract" : [
+    {
+      "text" : "The type of the actor",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "api_hyphen_insights_hyphen_actor_hyphen_type"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/api_hyphen_insights_hyphen_actor_hyphen_type",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "api_hyphen_insights_hyphen_actor_hyphen_type"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.api_hyphen_insights_hyphen_actor_hyphen_type",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/parameters\/api_hyphen_insights_hyphen_actor_hyphen_type"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Parameters/api_hyphen_insights_hyphen_api_hyphen_route_hyphen_substring": {
+  "abstract" : [
+    {
+      "text" : "Providing a substring will filter results where the API route contains the substring. This is a case-insensitive search.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "api_hyphen_insights_hyphen_api_hyphen_route_hyphen_substring"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/api_hyphen_insights_hyphen_api_hyphen_route_hyphen_substring",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "api_hyphen_insights_hyphen_api_hyphen_route_hyphen_substring"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.api_hyphen_insights_hyphen_api_hyphen_route_hyphen_substring",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/parameters\/api_hyphen_insights_hyphen_api_hyphen_route_hyphen_substring"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Parameters/api_hyphen_insights_hyphen_max_hyphen_timestamp": {
+  "abstract" : [
+    {
+      "text" : "The maximum timestamp to query for stats. Defaults to the time 30 days ago. This is a timestamp in ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/en.wikipedia.org\/wiki\/ISO_8601",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : " format: ",
+      "type" : "text"
+    },
+    {
+      "code" : "YYYY-MM-DDTHH:MM:SSZ",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "api_hyphen_insights_hyphen_max_hyphen_timestamp"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/api_hyphen_insights_hyphen_max_hyphen_timestamp",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "api_hyphen_insights_hyphen_max_hyphen_timestamp"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.api_hyphen_insights_hyphen_max_hyphen_timestamp",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/parameters\/api_hyphen_insights_hyphen_max_hyphen_timestamp"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Parameters/api_hyphen_insights_hyphen_min_hyphen_timestamp": {
+  "abstract" : [
+    {
+      "text" : "The minimum timestamp to query for stats. This is a timestamp in ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/en.wikipedia.org\/wiki\/ISO_8601",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : " format: ",
+      "type" : "text"
+    },
+    {
+      "code" : "YYYY-MM-DDTHH:MM:SSZ",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "api_hyphen_insights_hyphen_min_hyphen_timestamp"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/api_hyphen_insights_hyphen_min_hyphen_timestamp",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "api_hyphen_insights_hyphen_min_hyphen_timestamp"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.api_hyphen_insights_hyphen_min_hyphen_timestamp",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/parameters\/api_hyphen_insights_hyphen_min_hyphen_timestamp"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Parameters/api_hyphen_insights_hyphen_route_hyphen_stats_hyphen_sort": {
+  "abstract" : [
+    {
+      "text" : "The property to sort the results by.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "api_hyphen_insights_hyphen_route_hyphen_stats_hyphen_sort"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/api_hyphen_insights_hyphen_route_hyphen_stats_hyphen_sort",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "api_hyphen_insights_hyphen_route_hyphen_stats_hyphen_sort"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.api_hyphen_insights_hyphen_route_hyphen_stats_hyphen_sort",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/parameters\/api_hyphen_insights_hyphen_route_hyphen_stats_hyphen_sort"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Parameters/api_hyphen_insights_hyphen_route_hyphen_stats_hyphen_sortPayload": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "api_hyphen_insights_hyphen_route_hyphen_stats_hyphen_sortPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/api_hyphen_insights_hyphen_route_hyphen_stats_hyphen_sortPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "api_hyphen_insights_hyphen_route_hyphen_stats_hyphen_sortPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.api_hyphen_insights_hyphen_route_hyphen_stats_hyphen_sortPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/parameters\/api_hyphen_insights_hyphen_route_hyphen_stats_hyphen_sortpayload"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Parameters/api_hyphen_insights_hyphen_sort": {
+  "abstract" : [
+    {
+      "text" : "The property to sort the results by.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "api_hyphen_insights_hyphen_sort"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/api_hyphen_insights_hyphen_sort",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "api_hyphen_insights_hyphen_sort"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.api_hyphen_insights_hyphen_sort",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/parameters\/api_hyphen_insights_hyphen_sort"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Parameters/api_hyphen_insights_hyphen_sortPayload": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "api_hyphen_insights_hyphen_sortPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/api_hyphen_insights_hyphen_sortPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "api_hyphen_insights_hyphen_sortPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.api_hyphen_insights_hyphen_sortPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/parameters\/api_hyphen_insights_hyphen_sortpayload"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Parameters/api_hyphen_insights_hyphen_subject_hyphen_name_hyphen_substring": {
+  "abstract" : [
+    {
+      "text" : "Providing a substring will filter results where the subject name contains the substring. This is a case-insensitive search.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "api_hyphen_insights_hyphen_subject_hyphen_name_hyphen_substring"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/api_hyphen_insights_hyphen_subject_hyphen_name_hyphen_substring",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "api_hyphen_insights_hyphen_subject_hyphen_name_hyphen_substring"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.api_hyphen_insights_hyphen_subject_hyphen_name_hyphen_substring",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/parameters\/api_hyphen_insights_hyphen_subject_hyphen_name_hyphen_substring"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Parameters/api_hyphen_insights_hyphen_timestamp_hyphen_increment": {
+  "abstract" : [
+    {
+      "text" : "The increment of time used to breakdown the query results (5m, 10m, 1h, etc.)",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "api_hyphen_insights_hyphen_timestamp_hyphen_increment"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/api_hyphen_insights_hyphen_timestamp_hyphen_increment",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "api_hyphen_insights_hyphen_timestamp_hyphen_increment"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.api_hyphen_insights_hyphen_timestamp_hyphen_increment",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/parameters\/api_hyphen_insights_hyphen_timestamp_hyphen_increment"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Parameters/api_hyphen_insights_hyphen_user_hyphen_id": {
+  "abstract" : [
+    {
+      "text" : "The ID of the user to query for stats",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "api_hyphen_insights_hyphen_user_hyphen_id"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/api_hyphen_insights_hyphen_user_hyphen_id",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "api_hyphen_insights_hyphen_user_hyphen_id"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.api_hyphen_insights_hyphen_user_hyphen_id",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/parameters\/api_hyphen_insights_hyphen_user_hyphen_id"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Parameters/cursor": {
+  "abstract" : [
+    {
+      "text" : "Used for pagination: the starting delivery from which the page of deliveries is fetched. Refer to the ",
+      "type" : "text"
+    },
+    {
+      "code" : "link",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " header for the next and previous page cursors.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "cursor"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/cursor",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "cursor"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.cursor",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/parameters\/cursor"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Parameters/custom_hyphen_property_hyphen_name": {
+  "abstract" : [
+    {
+      "text" : "The custom property name",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "custom_hyphen_property_hyphen_name"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/custom_hyphen_property_hyphen_name",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "custom_hyphen_property_hyphen_name"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.custom_hyphen_property_hyphen_name",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/parameters\/custom_hyphen_property_hyphen_name"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Parameters/delivery_hyphen_id": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "delivery_hyphen_id"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/delivery_hyphen_id",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "delivery_hyphen_id"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.delivery_hyphen_id",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/parameters\/delivery_hyphen_id"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Parameters/direction": {
+  "abstract" : [
+    {
+      "text" : "The direction to sort the results by.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "direction"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/direction",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "direction"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.direction",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/parameters\/direction"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Parameters/fine_hyphen_grained_hyphen_personal_hyphen_access_hyphen_token_hyphen_id": {
+  "abstract" : [
+    {
+      "text" : "The unique identifier of the fine-grained personal access token.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "fine_hyphen_grained_hyphen_personal_hyphen_access_hyphen_token_hyphen_id"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/fine_hyphen_grained_hyphen_personal_hyphen_access_hyphen_token_hyphen_id",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "fine_hyphen_grained_hyphen_personal_hyphen_access_hyphen_token_hyphen_id"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.fine_hyphen_grained_hyphen_personal_hyphen_access_hyphen_token_hyphen_id",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/parameters\/fine_hyphen_grained_hyphen_personal_hyphen_access_hyphen_token_hyphen_id"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Parameters/hook_hyphen_id": {
+  "abstract" : [
+    {
+      "text" : "The unique identifier of the hook. You can find this value in the ",
+      "type" : "text"
+    },
+    {
+      "code" : "X-GitHub-Hook-ID",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " header of a webhook delivery.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "hook_hyphen_id"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/hook_hyphen_id",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "hook_hyphen_id"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.hook_hyphen_id",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/parameters\/hook_hyphen_id"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Parameters/invitation_hyphen_id": {
+  "abstract" : [
+    {
+      "text" : "The unique identifier of the invitation.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "invitation_hyphen_id"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/invitation_hyphen_id",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "invitation_hyphen_id"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.invitation_hyphen_id",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/parameters\/invitation_hyphen_id"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Parameters/issue_hyphen_type_hyphen_id": {
+  "abstract" : [
+    {
+      "text" : "The unique identifier of the issue type.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "issue_hyphen_type_hyphen_id"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/issue_hyphen_type_hyphen_id",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "issue_hyphen_type_hyphen_id"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.issue_hyphen_type_hyphen_id",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/parameters\/issue_hyphen_type_hyphen_id"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Parameters/org": {
+  "abstract" : [
+    {
+      "text" : "The organization name. The name is not case sensitive.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "org"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/org",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "org"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.org",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/parameters\/org"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Parameters/org_hyphen_security_hyphen_product_hyphen_enablement": {
+  "abstract" : [
+    {
+      "text" : "The action to take.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "org_hyphen_security_hyphen_product_hyphen_enablement"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/org_hyphen_security_hyphen_product_hyphen_enablement",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "org_hyphen_security_hyphen_product_hyphen_enablement"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.org_hyphen_security_hyphen_product_hyphen_enablement",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/parameters\/org_hyphen_security_hyphen_product_hyphen_enablement"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Parameters/page": {
+  "abstract" : [
+    {
+      "text" : "The page number of the results to fetch. For more information, see “",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/docs.github.com\/rest\/using-the-rest-api\/using-pagination-in-the-rest-api",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ".”",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "page"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/page",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "page"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.page",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/parameters\/page"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Parameters/pagination_hyphen_after": {
+  "abstract" : [
+    {
+      "text" : "A cursor, as given in the ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/docs.github.com\/rest\/guides\/using-pagination-in-the-rest-api#using-link-headers",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ". If specified, the query only searches for results after this cursor. For more information, see “",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/docs.github.com\/rest\/using-the-rest-api\/using-pagination-in-the-rest-api",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ".”",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "pagination_hyphen_after"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/pagination_hyphen_after",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "pagination_hyphen_after"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.pagination_hyphen_after",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/parameters\/pagination_hyphen_after"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Parameters/pagination_hyphen_before": {
+  "abstract" : [
+    {
+      "text" : "A cursor, as given in the ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/docs.github.com\/rest\/guides\/using-pagination-in-the-rest-api#using-link-headers",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ". If specified, the query only searches for results before this cursor. For more information, see “",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/docs.github.com\/rest\/using-the-rest-api\/using-pagination-in-the-rest-api",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ".”",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "pagination_hyphen_before"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/pagination_hyphen_before",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "pagination_hyphen_before"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.pagination_hyphen_before",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/parameters\/pagination_hyphen_before"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Parameters/per_hyphen_page": {
+  "abstract" : [
+    {
+      "text" : "The number of results per page (max 100). For more information, see “",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/docs.github.com\/rest\/using-the-rest-api\/using-pagination-in-the-rest-api",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ".”",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "per_hyphen_page"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/per_hyphen_page",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "per_hyphen_page"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.per_hyphen_page",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/parameters\/per_hyphen_page"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Parameters/personal_hyphen_access_hyphen_token_hyphen_after": {
+  "abstract" : [
+    {
+      "text" : "Only show fine-grained personal access tokens used after the given time. This is a timestamp in ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/en.wikipedia.org\/wiki\/ISO_8601",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : " format: ",
+      "type" : "text"
+    },
+    {
+      "code" : "YYYY-MM-DDTHH:MM:SSZ",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "personal_hyphen_access_hyphen_token_hyphen_after"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/personal_hyphen_access_hyphen_token_hyphen_after",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "personal_hyphen_access_hyphen_token_hyphen_after"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.personal_hyphen_access_hyphen_token_hyphen_after",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/parameters\/personal_hyphen_access_hyphen_token_hyphen_after"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Parameters/personal_hyphen_access_hyphen_token_hyphen_before": {
+  "abstract" : [
+    {
+      "text" : "Only show fine-grained personal access tokens used before the given time. This is a timestamp in ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/en.wikipedia.org\/wiki\/ISO_8601",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : " format: ",
+      "type" : "text"
+    },
+    {
+      "code" : "YYYY-MM-DDTHH:MM:SSZ",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "personal_hyphen_access_hyphen_token_hyphen_before"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/personal_hyphen_access_hyphen_token_hyphen_before",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "personal_hyphen_access_hyphen_token_hyphen_before"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.personal_hyphen_access_hyphen_token_hyphen_before",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/parameters\/personal_hyphen_access_hyphen_token_hyphen_before"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Parameters/personal_hyphen_access_hyphen_token_hyphen_owner": {
+  "abstract" : [
+    {
+      "text" : "A list of owner usernames to use to filter the results.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "personal_hyphen_access_hyphen_token_hyphen_owner"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/personal_hyphen_access_hyphen_token_hyphen_owner",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "personal_hyphen_access_hyphen_token_hyphen_owner"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.personal_hyphen_access_hyphen_token_hyphen_owner",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/parameters\/personal_hyphen_access_hyphen_token_hyphen_owner"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Parameters/personal_hyphen_access_hyphen_token_hyphen_permission": {
+  "abstract" : [
+    {
+      "text" : "The permission to use to filter the results.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "personal_hyphen_access_hyphen_token_hyphen_permission"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/personal_hyphen_access_hyphen_token_hyphen_permission",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "personal_hyphen_access_hyphen_token_hyphen_permission"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.personal_hyphen_access_hyphen_token_hyphen_permission",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/parameters\/personal_hyphen_access_hyphen_token_hyphen_permission"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Parameters/personal_hyphen_access_hyphen_token_hyphen_repository": {
+  "abstract" : [
+    {
+      "text" : "The name of the repository to use to filter the results.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "personal_hyphen_access_hyphen_token_hyphen_repository"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/personal_hyphen_access_hyphen_token_hyphen_repository",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "personal_hyphen_access_hyphen_token_hyphen_repository"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.personal_hyphen_access_hyphen_token_hyphen_repository",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/parameters\/personal_hyphen_access_hyphen_token_hyphen_repository"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Parameters/personal_hyphen_access_hyphen_token_hyphen_sort": {
+  "abstract" : [
+    {
+      "text" : "The property by which to sort the results.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "personal_hyphen_access_hyphen_token_hyphen_sort"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/personal_hyphen_access_hyphen_token_hyphen_sort",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "personal_hyphen_access_hyphen_token_hyphen_sort"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.personal_hyphen_access_hyphen_token_hyphen_sort",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/parameters\/personal_hyphen_access_hyphen_token_hyphen_sort"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Parameters/personal_hyphen_access_hyphen_token_hyphen_token_hyphen_id": {
+  "abstract" : [
+    {
+      "text" : "The ID of the token",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "personal_hyphen_access_hyphen_token_hyphen_token_hyphen_id"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/personal_hyphen_access_hyphen_token_hyphen_token_hyphen_id",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "personal_hyphen_access_hyphen_token_hyphen_token_hyphen_id"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.personal_hyphen_access_hyphen_token_hyphen_token_hyphen_id",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/parameters\/personal_hyphen_access_hyphen_token_hyphen_token_hyphen_id"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Parameters/role_hyphen_id": {
+  "abstract" : [
+    {
+      "text" : "The unique identifier of the role.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "role_hyphen_id"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/role_hyphen_id",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "role_hyphen_id"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.role_hyphen_id",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/parameters\/role_hyphen_id"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Parameters/security_hyphen_product": {
+  "abstract" : [
+    {
+      "text" : "The security feature to enable or disable.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "security_hyphen_product"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/security_hyphen_product",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "security_hyphen_product"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.security_hyphen_product",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/parameters\/security_hyphen_product"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Parameters/since_hyphen_org": {
+  "abstract" : [
+    {
+      "text" : "An organization ID. Only return organizations with an ID greater than this ID.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "since_hyphen_org"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/since_hyphen_org",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "since_hyphen_org"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.since_hyphen_org",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/parameters\/since_hyphen_org"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Parameters/team_hyphen_slug": {
+  "abstract" : [
+    {
+      "text" : "The slug of the team name.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "team_hyphen_slug"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/team_hyphen_slug",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "team_hyphen_slug"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.team_hyphen_slug",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/parameters\/team_hyphen_slug"
+},
+"doc://GitHubRestAPIOrgs/documentation/GitHubRestAPIOrgs/Components/Parameters/username": {
+  "abstract" : [
+    {
+      "text" : "The handle for the GitHub user account.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "username"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIOrgs\/documentation\/GitHubRestAPIOrgs\/Components\/Parameters\/username",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "username"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Parameters.username",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiorgs\/components\/parameters\/username"
+},
+"https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers": {
+  "identifier" : "https:\/\/docs.github.com\/rest\/guides\/using-pagination-in-the-rest-api#using-link-headers",
+  "title" : "Link header",
+  "titleInlineContent" : [
+    {
+      "text" : "Link header",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/docs.github.com\/rest\/guides\/using-pagination-in-the-rest-api#using-link-headers"
+},
+"https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api": {
+  "identifier" : "https:\/\/docs.github.com\/rest\/using-the-rest-api\/using-pagination-in-the-rest-api",
+  "title" : "Using pagination in the REST API",
+  "titleInlineContent" : [
+    {
+      "text" : "Using pagination in the REST API",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/docs.github.com\/rest\/using-the-rest-api\/using-pagination-in-the-rest-api"
+},
+"https://en.wikipedia.org/wiki/ISO_8601": {
+  "identifier" : "https:\/\/en.wikipedia.org\/wiki\/ISO_8601",
+  "title" : "ISO 8601",
+  "titleInlineContent" : [
+    {
+      "text" : "ISO 8601",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/en.wikipedia.org\/wiki\/ISO_8601"
+}
+}
+}

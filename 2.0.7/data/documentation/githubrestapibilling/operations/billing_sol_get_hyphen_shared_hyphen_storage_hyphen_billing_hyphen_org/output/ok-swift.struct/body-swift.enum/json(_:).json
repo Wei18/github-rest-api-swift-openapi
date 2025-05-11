@@ -1,0 +1,544 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling",
+        "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Operations",
+        "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Operations\/billing_sol_get_hyphen_shared_hyphen_storage_hyphen_billing_hyphen_org",
+        "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Operations\/billing_sol_get_hyphen_shared_hyphen_storage_hyphen_billing_hyphen_org\/Output",
+        "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Operations\/billing_sol_get_hyphen_shared_hyphen_storage_hyphen_billing_hyphen_org\/Output\/Ok-swift.struct",
+        "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Operations\/billing_sol_get_hyphen_shared_hyphen_storage_hyphen_billing_hyphen_org\/Output\/Ok-swift.struct\/Body-swift.enum"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Operations\/billing_sol_get_hyphen_shared_hyphen_storage_hyphen_billing_hyphen_org\/Output\/Ok-swift.struct\/Body-swift.enum\/json(_:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:20GitHubRestAPIBilling10OperationsO030billing_sol_get_hyphen_shared_i9_storage_i1_f1_I4_orgO6OutputO2OkV4BodyO4jsonyAkA10ComponentsO7SchemasO09combined_i1_f1_I6_usageVcAKmF",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "case"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "json"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:20GitHubRestAPIBilling10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:20GitHubRestAPIBilling10ComponentsO7SchemasO",
+        "text" : "Schemas"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:20GitHubRestAPIBilling10ComponentsO7SchemasO024combined_hyphen_billing_H6_usageV",
+        "text" : "combined_hyphen_billing_hyphen_usage"
+      },
+      {
+        "kind" : "text",
+        "text" : ")"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIBilling"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/billing\/Types.swift#L1666"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Case",
+    "symbolKind" : "case",
+    "title" : "Operations.billing_sol_get_hyphen_shared_hyphen_storage_hyphen_billing_hyphen_org.Output.Ok.Body.json(_:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "case"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "json"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:20GitHubRestAPIBilling10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components\/Schemas",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:20GitHubRestAPIBilling10ComponentsO7SchemasO",
+              "text" : "Schemas"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components\/Schemas\/combined_hyphen_billing_hyphen_usage",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:20GitHubRestAPIBilling10ComponentsO7SchemasO024combined_hyphen_billing_H6_usageV",
+              "text" : "combined_hyphen_billing_hyphen_usage"
+            },
+            {
+              "kind" : "text",
+              "text" : ")"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/paths\/orgs\/{org}\/settings\/billing\/shared-storage\/GET\/responses\/200\/content\/application\\\/json",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapibilling\/operations\/billing_sol_get_hyphen_shared_hyphen_storage_hyphen_billing_hyphen_org\/output\/ok-swift.struct\/body-swift.enum\/json(_:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIBilling/documentation/GitHubRestAPIBilling": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIBilling",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapibilling"
+},
+"doc://GitHubRestAPIBilling/documentation/GitHubRestAPIBilling/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapibilling\/components"
+},
+"doc://GitHubRestAPIBilling/documentation/GitHubRestAPIBilling/Components/Schemas": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/schemas",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components\/Schemas",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapibilling\/components\/schemas"
+},
+"doc://GitHubRestAPIBilling/documentation/GitHubRestAPIBilling/Components/Schemas/combined_hyphen_billing_hyphen_usage": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "combined_hyphen_billing_hyphen_usage"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components\/Schemas\/combined_hyphen_billing_hyphen_usage",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "combined_hyphen_billing_hyphen_usage"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.combined_hyphen_billing_hyphen_usage",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapibilling\/components\/schemas\/combined_hyphen_billing_hyphen_usage"
+},
+"doc://GitHubRestAPIBilling/documentation/GitHubRestAPIBilling/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapibilling\/operations"
+},
+"doc://GitHubRestAPIBilling/documentation/GitHubRestAPIBilling/Operations/billing_sol_get_hyphen_shared_hyphen_storage_hyphen_billing_hyphen_org": {
+  "abstract" : [
+    {
+      "text" : "Get shared storage billing for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "billing_sol_get_hyphen_shared_hyphen_storage_hyphen_billing_hyphen_org"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Operations\/billing_sol_get_hyphen_shared_hyphen_storage_hyphen_billing_hyphen_org",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "billing_sol_get_hyphen_shared_hyphen_storage_hyphen_billing_hyphen_org"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.billing_sol_get_hyphen_shared_hyphen_storage_hyphen_billing_hyphen_org",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapibilling\/operations\/billing_sol_get_hyphen_shared_hyphen_storage_hyphen_billing_hyphen_org"
+},
+"doc://GitHubRestAPIBilling/documentation/GitHubRestAPIBilling/Operations/billing_sol_get_hyphen_shared_hyphen_storage_hyphen_billing_hyphen_org/Output": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Operations\/billing_sol_get_hyphen_shared_hyphen_storage_hyphen_billing_hyphen_org\/Output",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.billing_sol_get_hyphen_shared_hyphen_storage_hyphen_billing_hyphen_org.Output",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapibilling\/operations\/billing_sol_get_hyphen_shared_hyphen_storage_hyphen_billing_hyphen_org\/output"
+},
+"doc://GitHubRestAPIBilling/documentation/GitHubRestAPIBilling/Operations/billing_sol_get_hyphen_shared_hyphen_storage_hyphen_billing_hyphen_org/Output/Ok-swift.struct": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Ok"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Operations\/billing_sol_get_hyphen_shared_hyphen_storage_hyphen_billing_hyphen_org\/Output\/Ok-swift.struct",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Ok"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.billing_sol_get_hyphen_shared_hyphen_storage_hyphen_billing_hyphen_org.Output.Ok",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapibilling\/operations\/billing_sol_get_hyphen_shared_hyphen_storage_hyphen_billing_hyphen_org\/output\/ok-swift.struct"
+},
+"doc://GitHubRestAPIBilling/documentation/GitHubRestAPIBilling/Operations/billing_sol_get_hyphen_shared_hyphen_storage_hyphen_billing_hyphen_org/Output/Ok-swift.struct/Body-swift.enum": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Body"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Operations\/billing_sol_get_hyphen_shared_hyphen_storage_hyphen_billing_hyphen_org\/Output\/Ok-swift.struct\/Body-swift.enum",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Body"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.billing_sol_get_hyphen_shared_hyphen_storage_hyphen_billing_hyphen_org.Output.Ok.Body",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapibilling\/operations\/billing_sol_get_hyphen_shared_hyphen_storage_hyphen_billing_hyphen_org\/output\/ok-swift.struct\/body-swift.enum"
+},
+"doc://GitHubRestAPIBilling/documentation/GitHubRestAPIBilling/Operations/billing_sol_get_hyphen_shared_hyphen_storage_hyphen_billing_hyphen_org/Output/Ok-swift.struct/Body-swift.enum/json(_:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "json"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIBilling10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIBilling10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPIBilling10ComponentsO7SchemasO024combined_hyphen_billing_H6_usageV",
+      "text" : "combined_hyphen_billing_hyphen_usage"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Operations\/billing_sol_get_hyphen_shared_hyphen_storage_hyphen_billing_hyphen_org\/Output\/Ok-swift.struct\/Body-swift.enum\/json(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Operations.billing_sol_get_hyphen_shared_hyphen_storage_hyphen_billing_hyphen_org.Output.Ok.Body.json(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapibilling\/operations\/billing_sol_get_hyphen_shared_hyphen_storage_hyphen_billing_hyphen_org\/output\/ok-swift.struct\/body-swift.enum\/json(_:)"
+}
+}
+}

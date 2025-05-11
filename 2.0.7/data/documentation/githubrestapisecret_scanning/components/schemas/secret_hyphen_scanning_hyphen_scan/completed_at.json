@@ -1,0 +1,328 @@
+{
+  "abstract" : [
+    {
+      "text" : "The time that the scan was completed. Empty if the scan is running",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning",
+        "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Components",
+        "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Components\/Schemas",
+        "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Components\/Schemas\/secret_hyphen_scanning_hyphen_scan"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Components\/Schemas\/secret_hyphen_scanning_hyphen_scan\/completed_at"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:28GitHubRestAPISecret_Scanning10ComponentsO7SchemasO023secret_hyphen_scanning_I5_scanV12completed_at10Foundation4DateVSgvp",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "var"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "completed_at"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:10Foundation4DateV",
+        "text" : "Date"
+      },
+      {
+        "kind" : "text",
+        "text" : "?"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPISecret_Scanning"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/secret-scanning\/Types.swift#L2074"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Instance Property",
+    "symbolKind" : "property",
+    "title" : "completed_at"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "var"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "completed_at"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:10Foundation4DateV",
+              "text" : "Date"
+            },
+            {
+              "kind" : "text",
+              "text" : "?"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/components\/schemas\/secret-scanning-scan\/completed_at",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapisecret_scanning\/components\/schemas\/secret_hyphen_scanning_hyphen_scan\/completed_at"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPISecret_Scanning/documentation/GitHubRestAPISecret_Scanning": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPISecret_Scanning",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecret_scanning"
+},
+"doc://GitHubRestAPISecret_Scanning/documentation/GitHubRestAPISecret_Scanning/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecret_scanning\/components"
+},
+"doc://GitHubRestAPISecret_Scanning/documentation/GitHubRestAPISecret_Scanning/Components/Schemas": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/schemas",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Components\/Schemas",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecret_scanning\/components\/schemas"
+},
+"doc://GitHubRestAPISecret_Scanning/documentation/GitHubRestAPISecret_Scanning/Components/Schemas/secret_hyphen_scanning_hyphen_scan": {
+  "abstract" : [
+    {
+      "text" : "Information on a single scan performed by secret scanning on the repository",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "secret_hyphen_scanning_hyphen_scan"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Components\/Schemas\/secret_hyphen_scanning_hyphen_scan",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "secret_hyphen_scanning_hyphen_scan"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.secret_hyphen_scanning_hyphen_scan",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecret_scanning\/components\/schemas\/secret_hyphen_scanning_hyphen_scan"
+},
+"doc://GitHubRestAPISecret_Scanning/documentation/GitHubRestAPISecret_Scanning/Components/Schemas/secret_hyphen_scanning_hyphen_scan/completed_at": {
+  "abstract" : [
+    {
+      "text" : "The time that the scan was completed. Empty if the scan is running",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "completed_at"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:10Foundation4DateV",
+      "text" : "Date"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Components\/Schemas\/secret_hyphen_scanning_hyphen_scan\/completed_at",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "completed_at",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecret_scanning\/components\/schemas\/secret_hyphen_scanning_hyphen_scan\/completed_at"
+}
+}
+}

@@ -1,0 +1,5998 @@
+{
+  "abstract" : [
+    {
+      "text" : "A type that performs HTTP operations defined by the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:26GitHubRestAPICode_Security11APIProtocolP",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "protocol"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "APIProtocol"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPICode_Security"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "APIProtocol"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/code-security\/Types.swift#L13"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Protocol",
+    "symbolKind" : "protocol",
+    "title" : "APIProtocol"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "protocol"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "APIProtocol"
+            },
+            {
+              "kind" : "text",
+              "text" : " : "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:s8SendableP",
+              "text" : "Sendable"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPICode_Security\/s8SendableP"
+      ],
+      "kind" : "relationships",
+      "title" : "Inherits From",
+      "type" : "inheritsFrom"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Client"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforming Types",
+      "type" : "conformingTypes"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol\/code_hyphen_security_sol_attach_hyphen_configuration(_:)",
+        "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol\/code_hyphen_security_sol_attach_hyphen_configuration(path:headers:body:)",
+        "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol\/code_hyphen_security_sol_attach_hyphen_enterprise_hyphen_configuration(_:)",
+        "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol\/code_hyphen_security_sol_attach_hyphen_enterprise_hyphen_configuration(path:headers:body:)",
+        "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol\/code_hyphen_security_sol_create_hyphen_configuration(_:)",
+        "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol\/code_hyphen_security_sol_create_hyphen_configuration(path:headers:body:)",
+        "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol\/code_hyphen_security_sol_create_hyphen_configuration_hyphen_for_hyphen_enterprise(_:)",
+        "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol\/code_hyphen_security_sol_create_hyphen_configuration_hyphen_for_hyphen_enterprise(path:headers:body:)",
+        "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol\/code_hyphen_security_sol_delete_hyphen_configuration(_:)",
+        "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol\/code_hyphen_security_sol_delete_hyphen_configuration(path:headers:)",
+        "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol\/code_hyphen_security_sol_delete_hyphen_configuration_hyphen_for_hyphen_enterprise(_:)",
+        "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol\/code_hyphen_security_sol_delete_hyphen_configuration_hyphen_for_hyphen_enterprise(path:headers:)",
+        "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol\/code_hyphen_security_sol_detach_hyphen_configuration(_:)",
+        "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol\/code_hyphen_security_sol_detach_hyphen_configuration(path:headers:body:)",
+        "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol\/code_hyphen_security_sol_get_hyphen_configuration(_:)",
+        "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol\/code_hyphen_security_sol_get_hyphen_configuration(path:headers:)",
+        "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol\/code_hyphen_security_sol_get_hyphen_configuration_hyphen_for_hyphen_repository(_:)",
+        "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol\/code_hyphen_security_sol_get_hyphen_configuration_hyphen_for_hyphen_repository(path:headers:)",
+        "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol\/code_hyphen_security_sol_get_hyphen_configurations_hyphen_for_hyphen_enterprise(_:)",
+        "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol\/code_hyphen_security_sol_get_hyphen_configurations_hyphen_for_hyphen_enterprise(path:query:headers:)",
+        "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol\/code_hyphen_security_sol_get_hyphen_configurations_hyphen_for_hyphen_org(_:)",
+        "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol\/code_hyphen_security_sol_get_hyphen_configurations_hyphen_for_hyphen_org(path:query:headers:)",
+        "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol\/code_hyphen_security_sol_get_hyphen_default_hyphen_configurations(_:)",
+        "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol\/code_hyphen_security_sol_get_hyphen_default_hyphen_configurations(path:headers:)",
+        "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol\/code_hyphen_security_sol_get_hyphen_default_hyphen_configurations_hyphen_for_hyphen_enterprise(_:)",
+        "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol\/code_hyphen_security_sol_get_hyphen_default_hyphen_configurations_hyphen_for_hyphen_enterprise(path:headers:)",
+        "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol\/code_hyphen_security_sol_get_hyphen_repositories_hyphen_for_hyphen_configuration(_:)",
+        "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol\/code_hyphen_security_sol_get_hyphen_repositories_hyphen_for_hyphen_configuration(path:query:headers:)",
+        "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol\/code_hyphen_security_sol_get_hyphen_repositories_hyphen_for_hyphen_enterprise_hyphen_configuration(_:)",
+        "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol\/code_hyphen_security_sol_get_hyphen_repositories_hyphen_for_hyphen_enterprise_hyphen_configuration(path:query:headers:)",
+        "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol\/code_hyphen_security_sol_get_hyphen_single_hyphen_configuration_hyphen_for_hyphen_enterprise(_:)",
+        "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol\/code_hyphen_security_sol_get_hyphen_single_hyphen_configuration_hyphen_for_hyphen_enterprise(path:headers:)",
+        "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol\/code_hyphen_security_sol_set_hyphen_configuration_hyphen_as_hyphen_default(_:)",
+        "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol\/code_hyphen_security_sol_set_hyphen_configuration_hyphen_as_hyphen_default(path:headers:body:)",
+        "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol\/code_hyphen_security_sol_set_hyphen_configuration_hyphen_as_hyphen_default_hyphen_for_hyphen_enterprise(_:)",
+        "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol\/code_hyphen_security_sol_set_hyphen_configuration_hyphen_as_hyphen_default_hyphen_for_hyphen_enterprise(path:headers:body:)",
+        "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol\/code_hyphen_security_sol_update_hyphen_configuration(_:)",
+        "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol\/code_hyphen_security_sol_update_hyphen_configuration(path:headers:body:)",
+        "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol\/code_hyphen_security_sol_update_hyphen_enterprise_hyphen_configuration(_:)",
+        "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol\/code_hyphen_security_sol_update_hyphen_enterprise_hyphen_configuration(path:headers:body:)"
+      ],
+      "title" : "Instance Methods"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapicode_security\/apiprotocol"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPICode_Security",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/APIProtocol": {
+  "abstract" : [
+    {
+      "text" : "A type that performs HTTP operations defined by the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "protocol"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "APIProtocol"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "APIProtocol"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "APIProtocol",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/apiprotocol"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/APIProtocol/code_hyphen_security_sol_attach_hyphen_configuration(_:)": {
+  "abstract" : [
+    {
+      "text" : "Attach a configuration to repositories",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "code_hyphen_security_sol_attach_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_attach_H14_configurationO",
+      "text" : "code_hyphen_security_sol_attach_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_attach_H14_configurationO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_attach_H14_configurationO",
+      "text" : "code_hyphen_security_sol_attach_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_attach_H14_configurationO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol\/code_hyphen_security_sol_attach_hyphen_configuration(_:)",
+  "kind" : "symbol",
+  "required" : true,
+  "role" : "symbol",
+  "title" : "code_hyphen_security_sol_attach_hyphen_configuration(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/apiprotocol\/code_hyphen_security_sol_attach_hyphen_configuration(_:)"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/APIProtocol/code_hyphen_security_sol_attach_hyphen_configuration(path:headers:body:)": {
+  "abstract" : [
+    {
+      "text" : "Attach a configuration to repositories",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "code_hyphen_security_sol_attach_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "path"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_attach_H14_configurationO",
+      "text" : "code_hyphen_security_sol_attach_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_attach_H14_configurationO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_attach_H14_configurationO5InputV4PathV",
+      "text" : "Path"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_attach_H14_configurationO",
+      "text" : "code_hyphen_security_sol_attach_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_attach_H14_configurationO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_attach_H14_configurationO5InputV7HeadersV",
+      "text" : "Headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "body"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_attach_H14_configurationO",
+      "text" : "code_hyphen_security_sol_attach_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_attach_H14_configurationO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_attach_H14_configurationO5InputV4BodyO",
+      "text" : "Body"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_attach_H14_configurationO",
+      "text" : "code_hyphen_security_sol_attach_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_attach_H14_configurationO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol\/code_hyphen_security_sol_attach_hyphen_configuration(path:headers:body:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "code_hyphen_security_sol_attach_hyphen_configuration(path:headers:body:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/apiprotocol\/code_hyphen_security_sol_attach_hyphen_configuration(path:headers:body:)"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/APIProtocol/code_hyphen_security_sol_attach_hyphen_enterprise_hyphen_configuration(_:)": {
+  "abstract" : [
+    {
+      "text" : "Attach an enterprise configuration to repositories",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "code_hyphen_security_sol_attach_hyphen_enterprise_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_attach_h12_enterprise_H14_configurationO",
+      "text" : "code_hyphen_security_sol_attach_hyphen_enterprise_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_attach_h12_enterprise_H14_configurationO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_attach_h12_enterprise_H14_configurationO",
+      "text" : "code_hyphen_security_sol_attach_hyphen_enterprise_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_attach_h12_enterprise_H14_configurationO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol\/code_hyphen_security_sol_attach_hyphen_enterprise_hyphen_configuration(_:)",
+  "kind" : "symbol",
+  "required" : true,
+  "role" : "symbol",
+  "title" : "code_hyphen_security_sol_attach_hyphen_enterprise_hyphen_configuration(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/apiprotocol\/code_hyphen_security_sol_attach_hyphen_enterprise_hyphen_configuration(_:)"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/APIProtocol/code_hyphen_security_sol_attach_hyphen_enterprise_hyphen_configuration(path:headers:body:)": {
+  "abstract" : [
+    {
+      "text" : "Attach an enterprise configuration to repositories",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "code_hyphen_security_sol_attach_hyphen_enterprise_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "path"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_attach_h12_enterprise_H14_configurationO",
+      "text" : "code_hyphen_security_sol_attach_hyphen_enterprise_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_attach_h12_enterprise_H14_configurationO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_attach_h12_enterprise_H14_configurationO5InputV4PathV",
+      "text" : "Path"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_attach_h12_enterprise_H14_configurationO",
+      "text" : "code_hyphen_security_sol_attach_hyphen_enterprise_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_attach_h12_enterprise_H14_configurationO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_attach_h12_enterprise_H14_configurationO5InputV7HeadersV",
+      "text" : "Headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "body"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_attach_h12_enterprise_H14_configurationO",
+      "text" : "code_hyphen_security_sol_attach_hyphen_enterprise_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_attach_h12_enterprise_H14_configurationO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_attach_h12_enterprise_H14_configurationO5InputV4BodyO",
+      "text" : "Body"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_attach_h12_enterprise_H14_configurationO",
+      "text" : "code_hyphen_security_sol_attach_hyphen_enterprise_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_attach_h12_enterprise_H14_configurationO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol\/code_hyphen_security_sol_attach_hyphen_enterprise_hyphen_configuration(path:headers:body:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "code_hyphen_security_sol_attach_hyphen_enterprise_hyphen_configuration(path:headers:body:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/apiprotocol\/code_hyphen_security_sol_attach_hyphen_enterprise_hyphen_configuration(path:headers:body:)"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/APIProtocol/code_hyphen_security_sol_create_hyphen_configuration(_:)": {
+  "abstract" : [
+    {
+      "text" : "Create a code security configuration",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "code_hyphen_security_sol_create_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_create_H14_configurationO",
+      "text" : "code_hyphen_security_sol_create_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_create_H14_configurationO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_create_H14_configurationO",
+      "text" : "code_hyphen_security_sol_create_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_create_H14_configurationO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol\/code_hyphen_security_sol_create_hyphen_configuration(_:)",
+  "kind" : "symbol",
+  "required" : true,
+  "role" : "symbol",
+  "title" : "code_hyphen_security_sol_create_hyphen_configuration(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/apiprotocol\/code_hyphen_security_sol_create_hyphen_configuration(_:)"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/APIProtocol/code_hyphen_security_sol_create_hyphen_configuration(path:headers:body:)": {
+  "abstract" : [
+    {
+      "text" : "Create a code security configuration",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "code_hyphen_security_sol_create_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "path"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_create_H14_configurationO",
+      "text" : "code_hyphen_security_sol_create_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_create_H14_configurationO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_create_H14_configurationO5InputV4PathV",
+      "text" : "Path"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_create_H14_configurationO",
+      "text" : "code_hyphen_security_sol_create_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_create_H14_configurationO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_create_H14_configurationO5InputV7HeadersV",
+      "text" : "Headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "body"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_create_H14_configurationO",
+      "text" : "code_hyphen_security_sol_create_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_create_H14_configurationO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_create_H14_configurationO5InputV4BodyO",
+      "text" : "Body"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_create_H14_configurationO",
+      "text" : "code_hyphen_security_sol_create_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_create_H14_configurationO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol\/code_hyphen_security_sol_create_hyphen_configuration(path:headers:body:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "code_hyphen_security_sol_create_hyphen_configuration(path:headers:body:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/apiprotocol\/code_hyphen_security_sol_create_hyphen_configuration(path:headers:body:)"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/APIProtocol/code_hyphen_security_sol_create_hyphen_configuration_hyphen_for_hyphen_enterprise(_:)": {
+  "abstract" : [
+    {
+      "text" : "Create a code security configuration for an enterprise",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "code_hyphen_security_sol_create_hyphen_configuration_hyphen_for_hyphen_enterprise"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_create_h15_configuration_h5_for_H11_enterpriseO",
+      "text" : "code_hyphen_security_sol_create_hyphen_configuration_hyphen_for_hyphen_enterprise"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_create_h15_configuration_h5_for_H11_enterpriseO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_create_h15_configuration_h5_for_H11_enterpriseO",
+      "text" : "code_hyphen_security_sol_create_hyphen_configuration_hyphen_for_hyphen_enterprise"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_create_h15_configuration_h5_for_H11_enterpriseO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol\/code_hyphen_security_sol_create_hyphen_configuration_hyphen_for_hyphen_enterprise(_:)",
+  "kind" : "symbol",
+  "required" : true,
+  "role" : "symbol",
+  "title" : "code_hyphen_security_sol_create_hyphen_configuration_hyphen_for_hyphen_enterprise(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/apiprotocol\/code_hyphen_security_sol_create_hyphen_configuration_hyphen_for_hyphen_enterprise(_:)"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/APIProtocol/code_hyphen_security_sol_create_hyphen_configuration_hyphen_for_hyphen_enterprise(path:headers:body:)": {
+  "abstract" : [
+    {
+      "text" : "Create a code security configuration for an enterprise",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "code_hyphen_security_sol_create_hyphen_configuration_hyphen_for_hyphen_enterprise"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "path"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_create_h15_configuration_h5_for_H11_enterpriseO",
+      "text" : "code_hyphen_security_sol_create_hyphen_configuration_hyphen_for_hyphen_enterprise"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_create_h15_configuration_h5_for_H11_enterpriseO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_create_h15_configuration_h5_for_H11_enterpriseO5InputV4PathV",
+      "text" : "Path"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_create_h15_configuration_h5_for_H11_enterpriseO",
+      "text" : "code_hyphen_security_sol_create_hyphen_configuration_hyphen_for_hyphen_enterprise"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_create_h15_configuration_h5_for_H11_enterpriseO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_create_h15_configuration_h5_for_H11_enterpriseO5InputV7HeadersV",
+      "text" : "Headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "body"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_create_h15_configuration_h5_for_H11_enterpriseO",
+      "text" : "code_hyphen_security_sol_create_hyphen_configuration_hyphen_for_hyphen_enterprise"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_create_h15_configuration_h5_for_H11_enterpriseO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_create_h15_configuration_h5_for_H11_enterpriseO5InputV4BodyO",
+      "text" : "Body"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_create_h15_configuration_h5_for_H11_enterpriseO",
+      "text" : "code_hyphen_security_sol_create_hyphen_configuration_hyphen_for_hyphen_enterprise"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_create_h15_configuration_h5_for_H11_enterpriseO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol\/code_hyphen_security_sol_create_hyphen_configuration_hyphen_for_hyphen_enterprise(path:headers:body:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "code_hyphen_security_sol_create_hyphen_configuration_hyphen_for_hyphen_enterprise(path:headers:body:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/apiprotocol\/code_hyphen_security_sol_create_hyphen_configuration_hyphen_for_hyphen_enterprise(path:headers:body:)"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/APIProtocol/code_hyphen_security_sol_delete_hyphen_configuration(_:)": {
+  "abstract" : [
+    {
+      "text" : "Delete a code security configuration",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "code_hyphen_security_sol_delete_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_delete_H14_configurationO",
+      "text" : "code_hyphen_security_sol_delete_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_delete_H14_configurationO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_delete_H14_configurationO",
+      "text" : "code_hyphen_security_sol_delete_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_delete_H14_configurationO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol\/code_hyphen_security_sol_delete_hyphen_configuration(_:)",
+  "kind" : "symbol",
+  "required" : true,
+  "role" : "symbol",
+  "title" : "code_hyphen_security_sol_delete_hyphen_configuration(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/apiprotocol\/code_hyphen_security_sol_delete_hyphen_configuration(_:)"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/APIProtocol/code_hyphen_security_sol_delete_hyphen_configuration(path:headers:)": {
+  "abstract" : [
+    {
+      "text" : "Delete a code security configuration",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "code_hyphen_security_sol_delete_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "path"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_delete_H14_configurationO",
+      "text" : "code_hyphen_security_sol_delete_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_delete_H14_configurationO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_delete_H14_configurationO5InputV4PathV",
+      "text" : "Path"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_delete_H14_configurationO",
+      "text" : "code_hyphen_security_sol_delete_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_delete_H14_configurationO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_delete_H14_configurationO5InputV7HeadersV",
+      "text" : "Headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_delete_H14_configurationO",
+      "text" : "code_hyphen_security_sol_delete_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_delete_H14_configurationO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol\/code_hyphen_security_sol_delete_hyphen_configuration(path:headers:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "code_hyphen_security_sol_delete_hyphen_configuration(path:headers:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/apiprotocol\/code_hyphen_security_sol_delete_hyphen_configuration(path:headers:)"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/APIProtocol/code_hyphen_security_sol_delete_hyphen_configuration_hyphen_for_hyphen_enterprise(_:)": {
+  "abstract" : [
+    {
+      "text" : "Delete a code security configuration for an enterprise",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "code_hyphen_security_sol_delete_hyphen_configuration_hyphen_for_hyphen_enterprise"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_delete_h15_configuration_h5_for_H11_enterpriseO",
+      "text" : "code_hyphen_security_sol_delete_hyphen_configuration_hyphen_for_hyphen_enterprise"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_delete_h15_configuration_h5_for_H11_enterpriseO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_delete_h15_configuration_h5_for_H11_enterpriseO",
+      "text" : "code_hyphen_security_sol_delete_hyphen_configuration_hyphen_for_hyphen_enterprise"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_delete_h15_configuration_h5_for_H11_enterpriseO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol\/code_hyphen_security_sol_delete_hyphen_configuration_hyphen_for_hyphen_enterprise(_:)",
+  "kind" : "symbol",
+  "required" : true,
+  "role" : "symbol",
+  "title" : "code_hyphen_security_sol_delete_hyphen_configuration_hyphen_for_hyphen_enterprise(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/apiprotocol\/code_hyphen_security_sol_delete_hyphen_configuration_hyphen_for_hyphen_enterprise(_:)"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/APIProtocol/code_hyphen_security_sol_delete_hyphen_configuration_hyphen_for_hyphen_enterprise(path:headers:)": {
+  "abstract" : [
+    {
+      "text" : "Delete a code security configuration for an enterprise",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "code_hyphen_security_sol_delete_hyphen_configuration_hyphen_for_hyphen_enterprise"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "path"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_delete_h15_configuration_h5_for_H11_enterpriseO",
+      "text" : "code_hyphen_security_sol_delete_hyphen_configuration_hyphen_for_hyphen_enterprise"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_delete_h15_configuration_h5_for_H11_enterpriseO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_delete_h15_configuration_h5_for_H11_enterpriseO5InputV4PathV",
+      "text" : "Path"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_delete_h15_configuration_h5_for_H11_enterpriseO",
+      "text" : "code_hyphen_security_sol_delete_hyphen_configuration_hyphen_for_hyphen_enterprise"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_delete_h15_configuration_h5_for_H11_enterpriseO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_delete_h15_configuration_h5_for_H11_enterpriseO5InputV7HeadersV",
+      "text" : "Headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_delete_h15_configuration_h5_for_H11_enterpriseO",
+      "text" : "code_hyphen_security_sol_delete_hyphen_configuration_hyphen_for_hyphen_enterprise"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_delete_h15_configuration_h5_for_H11_enterpriseO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol\/code_hyphen_security_sol_delete_hyphen_configuration_hyphen_for_hyphen_enterprise(path:headers:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "code_hyphen_security_sol_delete_hyphen_configuration_hyphen_for_hyphen_enterprise(path:headers:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/apiprotocol\/code_hyphen_security_sol_delete_hyphen_configuration_hyphen_for_hyphen_enterprise(path:headers:)"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/APIProtocol/code_hyphen_security_sol_detach_hyphen_configuration(_:)": {
+  "abstract" : [
+    {
+      "text" : "Detach configurations from repositories",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "code_hyphen_security_sol_detach_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_detach_H14_configurationO",
+      "text" : "code_hyphen_security_sol_detach_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_detach_H14_configurationO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_detach_H14_configurationO",
+      "text" : "code_hyphen_security_sol_detach_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_detach_H14_configurationO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol\/code_hyphen_security_sol_detach_hyphen_configuration(_:)",
+  "kind" : "symbol",
+  "required" : true,
+  "role" : "symbol",
+  "title" : "code_hyphen_security_sol_detach_hyphen_configuration(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/apiprotocol\/code_hyphen_security_sol_detach_hyphen_configuration(_:)"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/APIProtocol/code_hyphen_security_sol_detach_hyphen_configuration(path:headers:body:)": {
+  "abstract" : [
+    {
+      "text" : "Detach configurations from repositories",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "code_hyphen_security_sol_detach_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "path"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_detach_H14_configurationO",
+      "text" : "code_hyphen_security_sol_detach_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_detach_H14_configurationO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_detach_H14_configurationO5InputV4PathV",
+      "text" : "Path"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_detach_H14_configurationO",
+      "text" : "code_hyphen_security_sol_detach_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_detach_H14_configurationO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_detach_H14_configurationO5InputV7HeadersV",
+      "text" : "Headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "body"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_detach_H14_configurationO",
+      "text" : "code_hyphen_security_sol_detach_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_detach_H14_configurationO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_detach_H14_configurationO5InputV4BodyO",
+      "text" : "Body"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_detach_H14_configurationO",
+      "text" : "code_hyphen_security_sol_detach_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_detach_H14_configurationO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol\/code_hyphen_security_sol_detach_hyphen_configuration(path:headers:body:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "code_hyphen_security_sol_detach_hyphen_configuration(path:headers:body:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/apiprotocol\/code_hyphen_security_sol_detach_hyphen_configuration(path:headers:body:)"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/APIProtocol/code_hyphen_security_sol_get_hyphen_configuration(_:)": {
+  "abstract" : [
+    {
+      "text" : "Get a code security configuration",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "code_hyphen_security_sol_get_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_H14_configurationO",
+      "text" : "code_hyphen_security_sol_get_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_H14_configurationO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_H14_configurationO",
+      "text" : "code_hyphen_security_sol_get_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_H14_configurationO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol\/code_hyphen_security_sol_get_hyphen_configuration(_:)",
+  "kind" : "symbol",
+  "required" : true,
+  "role" : "symbol",
+  "title" : "code_hyphen_security_sol_get_hyphen_configuration(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/apiprotocol\/code_hyphen_security_sol_get_hyphen_configuration(_:)"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/APIProtocol/code_hyphen_security_sol_get_hyphen_configuration(path:headers:)": {
+  "abstract" : [
+    {
+      "text" : "Get a code security configuration",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "code_hyphen_security_sol_get_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "path"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_H14_configurationO",
+      "text" : "code_hyphen_security_sol_get_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_H14_configurationO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_H14_configurationO5InputV4PathV",
+      "text" : "Path"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_H14_configurationO",
+      "text" : "code_hyphen_security_sol_get_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_H14_configurationO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_H14_configurationO5InputV7HeadersV",
+      "text" : "Headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_H14_configurationO",
+      "text" : "code_hyphen_security_sol_get_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_H14_configurationO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol\/code_hyphen_security_sol_get_hyphen_configuration(path:headers:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "code_hyphen_security_sol_get_hyphen_configuration(path:headers:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/apiprotocol\/code_hyphen_security_sol_get_hyphen_configuration(path:headers:)"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/APIProtocol/code_hyphen_security_sol_get_hyphen_configuration_hyphen_for_hyphen_repository(_:)": {
+  "abstract" : [
+    {
+      "text" : "Get the code security configuration associated with a repository",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "code_hyphen_security_sol_get_hyphen_configuration_hyphen_for_hyphen_repository"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h15_configuration_h5_for_H11_repositoryO",
+      "text" : "code_hyphen_security_sol_get_hyphen_configuration_hyphen_for_hyphen_repository"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h15_configuration_h5_for_H11_repositoryO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h15_configuration_h5_for_H11_repositoryO",
+      "text" : "code_hyphen_security_sol_get_hyphen_configuration_hyphen_for_hyphen_repository"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h15_configuration_h5_for_H11_repositoryO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol\/code_hyphen_security_sol_get_hyphen_configuration_hyphen_for_hyphen_repository(_:)",
+  "kind" : "symbol",
+  "required" : true,
+  "role" : "symbol",
+  "title" : "code_hyphen_security_sol_get_hyphen_configuration_hyphen_for_hyphen_repository(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/apiprotocol\/code_hyphen_security_sol_get_hyphen_configuration_hyphen_for_hyphen_repository(_:)"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/APIProtocol/code_hyphen_security_sol_get_hyphen_configuration_hyphen_for_hyphen_repository(path:headers:)": {
+  "abstract" : [
+    {
+      "text" : "Get the code security configuration associated with a repository",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "code_hyphen_security_sol_get_hyphen_configuration_hyphen_for_hyphen_repository"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "path"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h15_configuration_h5_for_H11_repositoryO",
+      "text" : "code_hyphen_security_sol_get_hyphen_configuration_hyphen_for_hyphen_repository"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h15_configuration_h5_for_H11_repositoryO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h15_configuration_h5_for_H11_repositoryO5InputV4PathV",
+      "text" : "Path"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h15_configuration_h5_for_H11_repositoryO",
+      "text" : "code_hyphen_security_sol_get_hyphen_configuration_hyphen_for_hyphen_repository"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h15_configuration_h5_for_H11_repositoryO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h15_configuration_h5_for_H11_repositoryO5InputV7HeadersV",
+      "text" : "Headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h15_configuration_h5_for_H11_repositoryO",
+      "text" : "code_hyphen_security_sol_get_hyphen_configuration_hyphen_for_hyphen_repository"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h15_configuration_h5_for_H11_repositoryO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol\/code_hyphen_security_sol_get_hyphen_configuration_hyphen_for_hyphen_repository(path:headers:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "code_hyphen_security_sol_get_hyphen_configuration_hyphen_for_hyphen_repository(path:headers:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/apiprotocol\/code_hyphen_security_sol_get_hyphen_configuration_hyphen_for_hyphen_repository(path:headers:)"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/APIProtocol/code_hyphen_security_sol_get_hyphen_configurations_hyphen_for_hyphen_enterprise(_:)": {
+  "abstract" : [
+    {
+      "text" : "Get code security configurations for an enterprise",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "code_hyphen_security_sol_get_hyphen_configurations_hyphen_for_hyphen_enterprise"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h16_configurations_h5_for_H11_enterpriseO",
+      "text" : "code_hyphen_security_sol_get_hyphen_configurations_hyphen_for_hyphen_enterprise"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h16_configurations_h5_for_H11_enterpriseO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h16_configurations_h5_for_H11_enterpriseO",
+      "text" : "code_hyphen_security_sol_get_hyphen_configurations_hyphen_for_hyphen_enterprise"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h16_configurations_h5_for_H11_enterpriseO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol\/code_hyphen_security_sol_get_hyphen_configurations_hyphen_for_hyphen_enterprise(_:)",
+  "kind" : "symbol",
+  "required" : true,
+  "role" : "symbol",
+  "title" : "code_hyphen_security_sol_get_hyphen_configurations_hyphen_for_hyphen_enterprise(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/apiprotocol\/code_hyphen_security_sol_get_hyphen_configurations_hyphen_for_hyphen_enterprise(_:)"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/APIProtocol/code_hyphen_security_sol_get_hyphen_configurations_hyphen_for_hyphen_enterprise(path:query:headers:)": {
+  "abstract" : [
+    {
+      "text" : "Get code security configurations for an enterprise",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "code_hyphen_security_sol_get_hyphen_configurations_hyphen_for_hyphen_enterprise"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "path"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h16_configurations_h5_for_H11_enterpriseO",
+      "text" : "code_hyphen_security_sol_get_hyphen_configurations_hyphen_for_hyphen_enterprise"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h16_configurations_h5_for_H11_enterpriseO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h16_configurations_h5_for_H11_enterpriseO5InputV4PathV",
+      "text" : "Path"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "query"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h16_configurations_h5_for_H11_enterpriseO",
+      "text" : "code_hyphen_security_sol_get_hyphen_configurations_hyphen_for_hyphen_enterprise"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h16_configurations_h5_for_H11_enterpriseO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h16_configurations_h5_for_H11_enterpriseO5InputV5QueryV",
+      "text" : "Query"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h16_configurations_h5_for_H11_enterpriseO",
+      "text" : "code_hyphen_security_sol_get_hyphen_configurations_hyphen_for_hyphen_enterprise"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h16_configurations_h5_for_H11_enterpriseO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h16_configurations_h5_for_H11_enterpriseO5InputV7HeadersV",
+      "text" : "Headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h16_configurations_h5_for_H11_enterpriseO",
+      "text" : "code_hyphen_security_sol_get_hyphen_configurations_hyphen_for_hyphen_enterprise"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h16_configurations_h5_for_H11_enterpriseO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol\/code_hyphen_security_sol_get_hyphen_configurations_hyphen_for_hyphen_enterprise(path:query:headers:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "code_hyphen_security_sol_get_hyphen_configurations_hyphen_for_hyphen_enterprise(path:query:headers:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/apiprotocol\/code_hyphen_security_sol_get_hyphen_configurations_hyphen_for_hyphen_enterprise(path:query:headers:)"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/APIProtocol/code_hyphen_security_sol_get_hyphen_configurations_hyphen_for_hyphen_org(_:)": {
+  "abstract" : [
+    {
+      "text" : "Get code security configurations for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "code_hyphen_security_sol_get_hyphen_configurations_hyphen_for_hyphen_org"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h16_configurations_h5_for_H4_orgO",
+      "text" : "code_hyphen_security_sol_get_hyphen_configurations_hyphen_for_hyphen_org"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h16_configurations_h5_for_H4_orgO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h16_configurations_h5_for_H4_orgO",
+      "text" : "code_hyphen_security_sol_get_hyphen_configurations_hyphen_for_hyphen_org"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h16_configurations_h5_for_H4_orgO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol\/code_hyphen_security_sol_get_hyphen_configurations_hyphen_for_hyphen_org(_:)",
+  "kind" : "symbol",
+  "required" : true,
+  "role" : "symbol",
+  "title" : "code_hyphen_security_sol_get_hyphen_configurations_hyphen_for_hyphen_org(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/apiprotocol\/code_hyphen_security_sol_get_hyphen_configurations_hyphen_for_hyphen_org(_:)"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/APIProtocol/code_hyphen_security_sol_get_hyphen_configurations_hyphen_for_hyphen_org(path:query:headers:)": {
+  "abstract" : [
+    {
+      "text" : "Get code security configurations for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "code_hyphen_security_sol_get_hyphen_configurations_hyphen_for_hyphen_org"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "path"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h16_configurations_h5_for_H4_orgO",
+      "text" : "code_hyphen_security_sol_get_hyphen_configurations_hyphen_for_hyphen_org"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h16_configurations_h5_for_H4_orgO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h16_configurations_h5_for_H4_orgO5InputV4PathV",
+      "text" : "Path"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "query"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h16_configurations_h5_for_H4_orgO",
+      "text" : "code_hyphen_security_sol_get_hyphen_configurations_hyphen_for_hyphen_org"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h16_configurations_h5_for_H4_orgO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h16_configurations_h5_for_H4_orgO5InputV5QueryV",
+      "text" : "Query"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h16_configurations_h5_for_H4_orgO",
+      "text" : "code_hyphen_security_sol_get_hyphen_configurations_hyphen_for_hyphen_org"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h16_configurations_h5_for_H4_orgO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h16_configurations_h5_for_H4_orgO5InputV7HeadersV",
+      "text" : "Headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h16_configurations_h5_for_H4_orgO",
+      "text" : "code_hyphen_security_sol_get_hyphen_configurations_hyphen_for_hyphen_org"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h16_configurations_h5_for_H4_orgO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol\/code_hyphen_security_sol_get_hyphen_configurations_hyphen_for_hyphen_org(path:query:headers:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "code_hyphen_security_sol_get_hyphen_configurations_hyphen_for_hyphen_org(path:query:headers:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/apiprotocol\/code_hyphen_security_sol_get_hyphen_configurations_hyphen_for_hyphen_org(path:query:headers:)"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/APIProtocol/code_hyphen_security_sol_get_hyphen_default_hyphen_configurations(_:)": {
+  "abstract" : [
+    {
+      "text" : "Get default code security configurations",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "code_hyphen_security_sol_get_hyphen_default_hyphen_configurations"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h9_default_H15_configurationsO",
+      "text" : "code_hyphen_security_sol_get_hyphen_default_hyphen_configurations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h9_default_H15_configurationsO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h9_default_H15_configurationsO",
+      "text" : "code_hyphen_security_sol_get_hyphen_default_hyphen_configurations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h9_default_H15_configurationsO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol\/code_hyphen_security_sol_get_hyphen_default_hyphen_configurations(_:)",
+  "kind" : "symbol",
+  "required" : true,
+  "role" : "symbol",
+  "title" : "code_hyphen_security_sol_get_hyphen_default_hyphen_configurations(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/apiprotocol\/code_hyphen_security_sol_get_hyphen_default_hyphen_configurations(_:)"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/APIProtocol/code_hyphen_security_sol_get_hyphen_default_hyphen_configurations(path:headers:)": {
+  "abstract" : [
+    {
+      "text" : "Get default code security configurations",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "code_hyphen_security_sol_get_hyphen_default_hyphen_configurations"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "path"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h9_default_H15_configurationsO",
+      "text" : "code_hyphen_security_sol_get_hyphen_default_hyphen_configurations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h9_default_H15_configurationsO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h9_default_H15_configurationsO5InputV4PathV",
+      "text" : "Path"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h9_default_H15_configurationsO",
+      "text" : "code_hyphen_security_sol_get_hyphen_default_hyphen_configurations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h9_default_H15_configurationsO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h9_default_H15_configurationsO5InputV7HeadersV",
+      "text" : "Headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h9_default_H15_configurationsO",
+      "text" : "code_hyphen_security_sol_get_hyphen_default_hyphen_configurations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h9_default_H15_configurationsO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol\/code_hyphen_security_sol_get_hyphen_default_hyphen_configurations(path:headers:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "code_hyphen_security_sol_get_hyphen_default_hyphen_configurations(path:headers:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/apiprotocol\/code_hyphen_security_sol_get_hyphen_default_hyphen_configurations(path:headers:)"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/APIProtocol/code_hyphen_security_sol_get_hyphen_default_hyphen_configurations_hyphen_for_hyphen_enterprise(_:)": {
+  "abstract" : [
+    {
+      "text" : "Get default code security configurations for an enterprise",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "code_hyphen_security_sol_get_hyphen_default_hyphen_configurations_hyphen_for_hyphen_enterprise"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h9_default_h16_configurations_h5_for_H11_enterpriseO",
+      "text" : "code_hyphen_security_sol_get_hyphen_default_hyphen_configurations_hyphen_for_hyphen_enterprise"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h9_default_h16_configurations_h5_for_H11_enterpriseO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h9_default_h16_configurations_h5_for_H11_enterpriseO",
+      "text" : "code_hyphen_security_sol_get_hyphen_default_hyphen_configurations_hyphen_for_hyphen_enterprise"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h9_default_h16_configurations_h5_for_H11_enterpriseO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol\/code_hyphen_security_sol_get_hyphen_default_hyphen_configurations_hyphen_for_hyphen_enterprise(_:)",
+  "kind" : "symbol",
+  "required" : true,
+  "role" : "symbol",
+  "title" : "code_hyphen_security_sol_get_hyphen_default_hyphen_configurations_hyphen_for_hyphen_enterprise(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/apiprotocol\/code_hyphen_security_sol_get_hyphen_default_hyphen_configurations_hyphen_for_hyphen_enterprise(_:)"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/APIProtocol/code_hyphen_security_sol_get_hyphen_default_hyphen_configurations_hyphen_for_hyphen_enterprise(path:headers:)": {
+  "abstract" : [
+    {
+      "text" : "Get default code security configurations for an enterprise",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "code_hyphen_security_sol_get_hyphen_default_hyphen_configurations_hyphen_for_hyphen_enterprise"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "path"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h9_default_h16_configurations_h5_for_H11_enterpriseO",
+      "text" : "code_hyphen_security_sol_get_hyphen_default_hyphen_configurations_hyphen_for_hyphen_enterprise"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h9_default_h16_configurations_h5_for_H11_enterpriseO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h9_default_h16_configurations_h5_for_H11_enterpriseO5InputV4PathV",
+      "text" : "Path"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h9_default_h16_configurations_h5_for_H11_enterpriseO",
+      "text" : "code_hyphen_security_sol_get_hyphen_default_hyphen_configurations_hyphen_for_hyphen_enterprise"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h9_default_h16_configurations_h5_for_H11_enterpriseO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h9_default_h16_configurations_h5_for_H11_enterpriseO5InputV7HeadersV",
+      "text" : "Headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h9_default_h16_configurations_h5_for_H11_enterpriseO",
+      "text" : "code_hyphen_security_sol_get_hyphen_default_hyphen_configurations_hyphen_for_hyphen_enterprise"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h9_default_h16_configurations_h5_for_H11_enterpriseO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol\/code_hyphen_security_sol_get_hyphen_default_hyphen_configurations_hyphen_for_hyphen_enterprise(path:headers:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "code_hyphen_security_sol_get_hyphen_default_hyphen_configurations_hyphen_for_hyphen_enterprise(path:headers:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/apiprotocol\/code_hyphen_security_sol_get_hyphen_default_hyphen_configurations_hyphen_for_hyphen_enterprise(path:headers:)"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/APIProtocol/code_hyphen_security_sol_get_hyphen_repositories_hyphen_for_hyphen_configuration(_:)": {
+  "abstract" : [
+    {
+      "text" : "Get repositories associated with a code security configuration",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "code_hyphen_security_sol_get_hyphen_repositories_hyphen_for_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h14_repositories_h5_for_H14_configurationO",
+      "text" : "code_hyphen_security_sol_get_hyphen_repositories_hyphen_for_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h14_repositories_h5_for_H14_configurationO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h14_repositories_h5_for_H14_configurationO",
+      "text" : "code_hyphen_security_sol_get_hyphen_repositories_hyphen_for_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h14_repositories_h5_for_H14_configurationO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol\/code_hyphen_security_sol_get_hyphen_repositories_hyphen_for_hyphen_configuration(_:)",
+  "kind" : "symbol",
+  "required" : true,
+  "role" : "symbol",
+  "title" : "code_hyphen_security_sol_get_hyphen_repositories_hyphen_for_hyphen_configuration(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/apiprotocol\/code_hyphen_security_sol_get_hyphen_repositories_hyphen_for_hyphen_configuration(_:)"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/APIProtocol/code_hyphen_security_sol_get_hyphen_repositories_hyphen_for_hyphen_configuration(path:query:headers:)": {
+  "abstract" : [
+    {
+      "text" : "Get repositories associated with a code security configuration",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "code_hyphen_security_sol_get_hyphen_repositories_hyphen_for_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "path"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h14_repositories_h5_for_H14_configurationO",
+      "text" : "code_hyphen_security_sol_get_hyphen_repositories_hyphen_for_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h14_repositories_h5_for_H14_configurationO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h14_repositories_h5_for_H14_configurationO5InputV4PathV",
+      "text" : "Path"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "query"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h14_repositories_h5_for_H14_configurationO",
+      "text" : "code_hyphen_security_sol_get_hyphen_repositories_hyphen_for_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h14_repositories_h5_for_H14_configurationO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h14_repositories_h5_for_H14_configurationO5InputV5QueryV",
+      "text" : "Query"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h14_repositories_h5_for_H14_configurationO",
+      "text" : "code_hyphen_security_sol_get_hyphen_repositories_hyphen_for_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h14_repositories_h5_for_H14_configurationO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h14_repositories_h5_for_H14_configurationO5InputV7HeadersV",
+      "text" : "Headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h14_repositories_h5_for_H14_configurationO",
+      "text" : "code_hyphen_security_sol_get_hyphen_repositories_hyphen_for_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h14_repositories_h5_for_H14_configurationO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol\/code_hyphen_security_sol_get_hyphen_repositories_hyphen_for_hyphen_configuration(path:query:headers:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "code_hyphen_security_sol_get_hyphen_repositories_hyphen_for_hyphen_configuration(path:query:headers:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/apiprotocol\/code_hyphen_security_sol_get_hyphen_repositories_hyphen_for_hyphen_configuration(path:query:headers:)"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/APIProtocol/code_hyphen_security_sol_get_hyphen_repositories_hyphen_for_hyphen_enterprise_hyphen_configuration(_:)": {
+  "abstract" : [
+    {
+      "text" : "Get repositories associated with an enterprise code security configuration",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "code_hyphen_security_sol_get_hyphen_repositories_hyphen_for_hyphen_enterprise_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h14_repositories_h5_for_h12_enterprise_H14_configurationO",
+      "text" : "code_hyphen_security_sol_get_hyphen_repositories_hyphen_for_hyphen_enterprise_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h14_repositories_h5_for_h12_enterprise_H14_configurationO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h14_repositories_h5_for_h12_enterprise_H14_configurationO",
+      "text" : "code_hyphen_security_sol_get_hyphen_repositories_hyphen_for_hyphen_enterprise_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h14_repositories_h5_for_h12_enterprise_H14_configurationO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol\/code_hyphen_security_sol_get_hyphen_repositories_hyphen_for_hyphen_enterprise_hyphen_configuration(_:)",
+  "kind" : "symbol",
+  "required" : true,
+  "role" : "symbol",
+  "title" : "code_hyphen_security_sol_get_hyphen_repositories_hyphen_for_hyphen_enterprise_hyphen_configuration(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/apiprotocol\/code_hyphen_security_sol_get_hyphen_repositories_hyphen_for_hyphen_enterprise_hyphen_configuration(_:)"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/APIProtocol/code_hyphen_security_sol_get_hyphen_repositories_hyphen_for_hyphen_enterprise_hyphen_configuration(path:query:headers:)": {
+  "abstract" : [
+    {
+      "text" : "Get repositories associated with an enterprise code security configuration",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "code_hyphen_security_sol_get_hyphen_repositories_hyphen_for_hyphen_enterprise_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "path"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h14_repositories_h5_for_h12_enterprise_H14_configurationO",
+      "text" : "code_hyphen_security_sol_get_hyphen_repositories_hyphen_for_hyphen_enterprise_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h14_repositories_h5_for_h12_enterprise_H14_configurationO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h14_repositories_h5_for_h12_enterprise_H14_configurationO5InputV4PathV",
+      "text" : "Path"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "query"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h14_repositories_h5_for_h12_enterprise_H14_configurationO",
+      "text" : "code_hyphen_security_sol_get_hyphen_repositories_hyphen_for_hyphen_enterprise_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h14_repositories_h5_for_h12_enterprise_H14_configurationO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h14_repositories_h5_for_h12_enterprise_H14_configurationO5InputV5QueryV",
+      "text" : "Query"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h14_repositories_h5_for_h12_enterprise_H14_configurationO",
+      "text" : "code_hyphen_security_sol_get_hyphen_repositories_hyphen_for_hyphen_enterprise_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h14_repositories_h5_for_h12_enterprise_H14_configurationO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h14_repositories_h5_for_h12_enterprise_H14_configurationO5InputV7HeadersV",
+      "text" : "Headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h14_repositories_h5_for_h12_enterprise_H14_configurationO",
+      "text" : "code_hyphen_security_sol_get_hyphen_repositories_hyphen_for_hyphen_enterprise_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h14_repositories_h5_for_h12_enterprise_H14_configurationO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol\/code_hyphen_security_sol_get_hyphen_repositories_hyphen_for_hyphen_enterprise_hyphen_configuration(path:query:headers:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "code_hyphen_security_sol_get_hyphen_repositories_hyphen_for_hyphen_enterprise_hyphen_configuration(path:query:headers:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/apiprotocol\/code_hyphen_security_sol_get_hyphen_repositories_hyphen_for_hyphen_enterprise_hyphen_configuration(path:query:headers:)"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/APIProtocol/code_hyphen_security_sol_get_hyphen_single_hyphen_configuration_hyphen_for_hyphen_enterprise(_:)": {
+  "abstract" : [
+    {
+      "text" : "Retrieve a code security configuration of an enterprise",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "code_hyphen_security_sol_get_hyphen_single_hyphen_configuration_hyphen_for_hyphen_enterprise"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h8_single_h15_configuration_h5_for_H11_enterpriseO",
+      "text" : "code_hyphen_security_sol_get_hyphen_single_hyphen_configuration_hyphen_for_hyphen_enterprise"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h8_single_h15_configuration_h5_for_H11_enterpriseO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h8_single_h15_configuration_h5_for_H11_enterpriseO",
+      "text" : "code_hyphen_security_sol_get_hyphen_single_hyphen_configuration_hyphen_for_hyphen_enterprise"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h8_single_h15_configuration_h5_for_H11_enterpriseO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol\/code_hyphen_security_sol_get_hyphen_single_hyphen_configuration_hyphen_for_hyphen_enterprise(_:)",
+  "kind" : "symbol",
+  "required" : true,
+  "role" : "symbol",
+  "title" : "code_hyphen_security_sol_get_hyphen_single_hyphen_configuration_hyphen_for_hyphen_enterprise(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/apiprotocol\/code_hyphen_security_sol_get_hyphen_single_hyphen_configuration_hyphen_for_hyphen_enterprise(_:)"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/APIProtocol/code_hyphen_security_sol_get_hyphen_single_hyphen_configuration_hyphen_for_hyphen_enterprise(path:headers:)": {
+  "abstract" : [
+    {
+      "text" : "Retrieve a code security configuration of an enterprise",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "code_hyphen_security_sol_get_hyphen_single_hyphen_configuration_hyphen_for_hyphen_enterprise"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "path"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h8_single_h15_configuration_h5_for_H11_enterpriseO",
+      "text" : "code_hyphen_security_sol_get_hyphen_single_hyphen_configuration_hyphen_for_hyphen_enterprise"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h8_single_h15_configuration_h5_for_H11_enterpriseO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h8_single_h15_configuration_h5_for_H11_enterpriseO5InputV4PathV",
+      "text" : "Path"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h8_single_h15_configuration_h5_for_H11_enterpriseO",
+      "text" : "code_hyphen_security_sol_get_hyphen_single_hyphen_configuration_hyphen_for_hyphen_enterprise"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h8_single_h15_configuration_h5_for_H11_enterpriseO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h8_single_h15_configuration_h5_for_H11_enterpriseO5InputV7HeadersV",
+      "text" : "Headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h8_single_h15_configuration_h5_for_H11_enterpriseO",
+      "text" : "code_hyphen_security_sol_get_hyphen_single_hyphen_configuration_hyphen_for_hyphen_enterprise"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_get_h8_single_h15_configuration_h5_for_H11_enterpriseO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol\/code_hyphen_security_sol_get_hyphen_single_hyphen_configuration_hyphen_for_hyphen_enterprise(path:headers:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "code_hyphen_security_sol_get_hyphen_single_hyphen_configuration_hyphen_for_hyphen_enterprise(path:headers:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/apiprotocol\/code_hyphen_security_sol_get_hyphen_single_hyphen_configuration_hyphen_for_hyphen_enterprise(path:headers:)"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/APIProtocol/code_hyphen_security_sol_set_hyphen_configuration_hyphen_as_hyphen_default(_:)": {
+  "abstract" : [
+    {
+      "text" : "Set a code security configuration as a default for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "code_hyphen_security_sol_set_hyphen_configuration_hyphen_as_hyphen_default"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_set_h15_configuration_h4_as_H8_defaultO",
+      "text" : "code_hyphen_security_sol_set_hyphen_configuration_hyphen_as_hyphen_default"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_set_h15_configuration_h4_as_H8_defaultO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_set_h15_configuration_h4_as_H8_defaultO",
+      "text" : "code_hyphen_security_sol_set_hyphen_configuration_hyphen_as_hyphen_default"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_set_h15_configuration_h4_as_H8_defaultO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol\/code_hyphen_security_sol_set_hyphen_configuration_hyphen_as_hyphen_default(_:)",
+  "kind" : "symbol",
+  "required" : true,
+  "role" : "symbol",
+  "title" : "code_hyphen_security_sol_set_hyphen_configuration_hyphen_as_hyphen_default(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/apiprotocol\/code_hyphen_security_sol_set_hyphen_configuration_hyphen_as_hyphen_default(_:)"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/APIProtocol/code_hyphen_security_sol_set_hyphen_configuration_hyphen_as_hyphen_default(path:headers:body:)": {
+  "abstract" : [
+    {
+      "text" : "Set a code security configuration as a default for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "code_hyphen_security_sol_set_hyphen_configuration_hyphen_as_hyphen_default"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "path"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_set_h15_configuration_h4_as_H8_defaultO",
+      "text" : "code_hyphen_security_sol_set_hyphen_configuration_hyphen_as_hyphen_default"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_set_h15_configuration_h4_as_H8_defaultO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_set_h15_configuration_h4_as_H8_defaultO5InputV4PathV",
+      "text" : "Path"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_set_h15_configuration_h4_as_H8_defaultO",
+      "text" : "code_hyphen_security_sol_set_hyphen_configuration_hyphen_as_hyphen_default"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_set_h15_configuration_h4_as_H8_defaultO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_set_h15_configuration_h4_as_H8_defaultO5InputV7HeadersV",
+      "text" : "Headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "body"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_set_h15_configuration_h4_as_H8_defaultO",
+      "text" : "code_hyphen_security_sol_set_hyphen_configuration_hyphen_as_hyphen_default"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_set_h15_configuration_h4_as_H8_defaultO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_set_h15_configuration_h4_as_H8_defaultO5InputV4BodyO",
+      "text" : "Body"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_set_h15_configuration_h4_as_H8_defaultO",
+      "text" : "code_hyphen_security_sol_set_hyphen_configuration_hyphen_as_hyphen_default"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_set_h15_configuration_h4_as_H8_defaultO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol\/code_hyphen_security_sol_set_hyphen_configuration_hyphen_as_hyphen_default(path:headers:body:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "code_hyphen_security_sol_set_hyphen_configuration_hyphen_as_hyphen_default(path:headers:body:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/apiprotocol\/code_hyphen_security_sol_set_hyphen_configuration_hyphen_as_hyphen_default(path:headers:body:)"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/APIProtocol/code_hyphen_security_sol_set_hyphen_configuration_hyphen_as_hyphen_default_hyphen_for_hyphen_enterprise(_:)": {
+  "abstract" : [
+    {
+      "text" : "Set a code security configuration as a default for an enterprise",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "code_hyphen_security_sol_set_hyphen_configuration_hyphen_as_hyphen_default_hyphen_for_hyphen_enterprise"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_set_h15_configuration_h4_as_h9_default_h5_for_H11_enterpriseO",
+      "text" : "code_hyphen_security_sol_set_hyphen_configuration_hyphen_as_hyphen_default_hyphen_for_hyphen_enterprise"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_set_h15_configuration_h4_as_h9_default_h5_for_H11_enterpriseO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_set_h15_configuration_h4_as_h9_default_h5_for_H11_enterpriseO",
+      "text" : "code_hyphen_security_sol_set_hyphen_configuration_hyphen_as_hyphen_default_hyphen_for_hyphen_enterprise"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_set_h15_configuration_h4_as_h9_default_h5_for_H11_enterpriseO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol\/code_hyphen_security_sol_set_hyphen_configuration_hyphen_as_hyphen_default_hyphen_for_hyphen_enterprise(_:)",
+  "kind" : "symbol",
+  "required" : true,
+  "role" : "symbol",
+  "title" : "code_hyphen_security_sol_set_hyphen_configuration_hyphen_as_hyphen_default_hyphen_for_hyphen_enterprise(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/apiprotocol\/code_hyphen_security_sol_set_hyphen_configuration_hyphen_as_hyphen_default_hyphen_for_hyphen_enterprise(_:)"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/APIProtocol/code_hyphen_security_sol_set_hyphen_configuration_hyphen_as_hyphen_default_hyphen_for_hyphen_enterprise(path:headers:body:)": {
+  "abstract" : [
+    {
+      "text" : "Set a code security configuration as a default for an enterprise",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "code_hyphen_security_sol_set_hyphen_configuration_hyphen_as_hyphen_default_hyphen_for_hyphen_enterprise"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "path"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_set_h15_configuration_h4_as_h9_default_h5_for_H11_enterpriseO",
+      "text" : "code_hyphen_security_sol_set_hyphen_configuration_hyphen_as_hyphen_default_hyphen_for_hyphen_enterprise"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_set_h15_configuration_h4_as_h9_default_h5_for_H11_enterpriseO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_set_h15_configuration_h4_as_h9_default_h5_for_H11_enterpriseO5InputV4PathV",
+      "text" : "Path"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_set_h15_configuration_h4_as_h9_default_h5_for_H11_enterpriseO",
+      "text" : "code_hyphen_security_sol_set_hyphen_configuration_hyphen_as_hyphen_default_hyphen_for_hyphen_enterprise"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_set_h15_configuration_h4_as_h9_default_h5_for_H11_enterpriseO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_set_h15_configuration_h4_as_h9_default_h5_for_H11_enterpriseO5InputV7HeadersV",
+      "text" : "Headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "body"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_set_h15_configuration_h4_as_h9_default_h5_for_H11_enterpriseO",
+      "text" : "code_hyphen_security_sol_set_hyphen_configuration_hyphen_as_hyphen_default_hyphen_for_hyphen_enterprise"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_set_h15_configuration_h4_as_h9_default_h5_for_H11_enterpriseO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_set_h15_configuration_h4_as_h9_default_h5_for_H11_enterpriseO5InputV4BodyO",
+      "text" : "Body"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_set_h15_configuration_h4_as_h9_default_h5_for_H11_enterpriseO",
+      "text" : "code_hyphen_security_sol_set_hyphen_configuration_hyphen_as_hyphen_default_hyphen_for_hyphen_enterprise"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO029code_hyphen_security_sol_set_h15_configuration_h4_as_h9_default_h5_for_H11_enterpriseO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol\/code_hyphen_security_sol_set_hyphen_configuration_hyphen_as_hyphen_default_hyphen_for_hyphen_enterprise(path:headers:body:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "code_hyphen_security_sol_set_hyphen_configuration_hyphen_as_hyphen_default_hyphen_for_hyphen_enterprise(path:headers:body:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/apiprotocol\/code_hyphen_security_sol_set_hyphen_configuration_hyphen_as_hyphen_default_hyphen_for_hyphen_enterprise(path:headers:body:)"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/APIProtocol/code_hyphen_security_sol_update_hyphen_configuration(_:)": {
+  "abstract" : [
+    {
+      "text" : "Update a code security configuration",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "code_hyphen_security_sol_update_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_update_H14_configurationO",
+      "text" : "code_hyphen_security_sol_update_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_update_H14_configurationO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_update_H14_configurationO",
+      "text" : "code_hyphen_security_sol_update_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_update_H14_configurationO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol\/code_hyphen_security_sol_update_hyphen_configuration(_:)",
+  "kind" : "symbol",
+  "required" : true,
+  "role" : "symbol",
+  "title" : "code_hyphen_security_sol_update_hyphen_configuration(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/apiprotocol\/code_hyphen_security_sol_update_hyphen_configuration(_:)"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/APIProtocol/code_hyphen_security_sol_update_hyphen_configuration(path:headers:body:)": {
+  "abstract" : [
+    {
+      "text" : "Update a code security configuration",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "code_hyphen_security_sol_update_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "path"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_update_H14_configurationO",
+      "text" : "code_hyphen_security_sol_update_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_update_H14_configurationO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_update_H14_configurationO5InputV4PathV",
+      "text" : "Path"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_update_H14_configurationO",
+      "text" : "code_hyphen_security_sol_update_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_update_H14_configurationO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_update_H14_configurationO5InputV7HeadersV",
+      "text" : "Headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "body"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_update_H14_configurationO",
+      "text" : "code_hyphen_security_sol_update_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_update_H14_configurationO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_update_H14_configurationO5InputV4BodyO",
+      "text" : "Body"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_update_H14_configurationO",
+      "text" : "code_hyphen_security_sol_update_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_update_H14_configurationO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol\/code_hyphen_security_sol_update_hyphen_configuration(path:headers:body:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "code_hyphen_security_sol_update_hyphen_configuration(path:headers:body:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/apiprotocol\/code_hyphen_security_sol_update_hyphen_configuration(path:headers:body:)"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/APIProtocol/code_hyphen_security_sol_update_hyphen_enterprise_hyphen_configuration(_:)": {
+  "abstract" : [
+    {
+      "text" : "Update a custom code security configuration for an enterprise",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "code_hyphen_security_sol_update_hyphen_enterprise_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_update_h12_enterprise_H14_configurationO",
+      "text" : "code_hyphen_security_sol_update_hyphen_enterprise_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_update_h12_enterprise_H14_configurationO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_update_h12_enterprise_H14_configurationO",
+      "text" : "code_hyphen_security_sol_update_hyphen_enterprise_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_update_h12_enterprise_H14_configurationO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol\/code_hyphen_security_sol_update_hyphen_enterprise_hyphen_configuration(_:)",
+  "kind" : "symbol",
+  "required" : true,
+  "role" : "symbol",
+  "title" : "code_hyphen_security_sol_update_hyphen_enterprise_hyphen_configuration(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/apiprotocol\/code_hyphen_security_sol_update_hyphen_enterprise_hyphen_configuration(_:)"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/APIProtocol/code_hyphen_security_sol_update_hyphen_enterprise_hyphen_configuration(path:headers:body:)": {
+  "abstract" : [
+    {
+      "text" : "Update a custom code security configuration for an enterprise",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "code_hyphen_security_sol_update_hyphen_enterprise_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "path"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_update_h12_enterprise_H14_configurationO",
+      "text" : "code_hyphen_security_sol_update_hyphen_enterprise_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_update_h12_enterprise_H14_configurationO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_update_h12_enterprise_H14_configurationO5InputV4PathV",
+      "text" : "Path"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_update_h12_enterprise_H14_configurationO",
+      "text" : "code_hyphen_security_sol_update_hyphen_enterprise_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_update_h12_enterprise_H14_configurationO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_update_h12_enterprise_H14_configurationO5InputV7HeadersV",
+      "text" : "Headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "body"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_update_h12_enterprise_H14_configurationO",
+      "text" : "code_hyphen_security_sol_update_hyphen_enterprise_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_update_h12_enterprise_H14_configurationO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_update_h12_enterprise_H14_configurationO5InputV4BodyO",
+      "text" : "Body"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_update_h12_enterprise_H14_configurationO",
+      "text" : "code_hyphen_security_sol_update_hyphen_enterprise_hyphen_configuration"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_update_h12_enterprise_H14_configurationO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/APIProtocol\/code_hyphen_security_sol_update_hyphen_enterprise_hyphen_configuration(path:headers:body:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "code_hyphen_security_sol_update_hyphen_enterprise_hyphen_configuration(path:headers:body:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/apiprotocol\/code_hyphen_security_sol_update_hyphen_enterprise_hyphen_configuration(path:headers:body:)"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/Client": {
+  "abstract" : [
+    {
+      "text" : "GitHub’s v3 REST API.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Client"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Client",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Client"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Client",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/client"
+},
+"doc://GitHubRestAPICode_Security/s8SendableP": {
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/s8SendableP",
+  "title" : "Swift.Sendable",
+  "type" : "unresolvable"
+}
+}
+}

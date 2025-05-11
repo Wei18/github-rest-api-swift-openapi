@@ -1,0 +1,609 @@
+{
+  "abstract" : [
+    {
+      "text" : "Creates a new instance by decoding from the given decoder, when the",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "type’s ",
+      "type" : "text"
+    },
+    {
+      "code" : "RawValue",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " is ",
+      "type" : "text"
+    },
+    {
+      "code" : "String",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions",
+        "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Operations",
+        "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Operations\/reactions_sol_list_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment",
+        "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Operations\/reactions_sol_list_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment\/Input",
+        "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Operations\/reactions_sol_list_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment\/Input\/Query-swift.struct",
+        "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Operations\/reactions_sol_list_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment\/Input\/Query-swift.struct\/contentPayload",
+        "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Operations\/reactions_sol_list_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment\/Input\/Query-swift.struct\/contentPayload\/RawRepresentable-Implementations"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Operations\/reactions_sol_list_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment\/Input\/Query-swift.struct\/contentPayload\/init(from:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "conformance" : {
+      "availabilityPrefix" : [
+        {
+          "text" : "Available when",
+          "type" : "text"
+        }
+      ],
+      "conformancePrefix" : [
+        {
+          "text" : "Conforms when",
+          "type" : "text"
+        }
+      ],
+      "constraints" : [
+        {
+          "code" : "Self",
+          "type" : "codeVoice"
+        },
+        {
+          "text" : " conforms to ",
+          "type" : "text"
+        },
+        {
+          "code" : "Decodable",
+          "type" : "codeVoice"
+        },
+        {
+          "text" : ", ",
+          "type" : "text"
+        },
+        {
+          "code" : "Self",
+          "type" : "codeVoice"
+        },
+        {
+          "text" : " conforms to ",
+          "type" : "text"
+        },
+        {
+          "code" : "RawRepresentable",
+          "type" : "codeVoice"
+        },
+        {
+          "text" : ", and ",
+          "type" : "text"
+        },
+        {
+          "code" : "RawValue",
+          "type" : "codeVoice"
+        },
+        {
+          "text" : " is ",
+          "type" : "text"
+        },
+        {
+          "code" : "String",
+          "type" : "codeVoice"
+        },
+        {
+          "text" : ".",
+          "type" : "text"
+        }
+      ]
+    },
+    "extendedModule" : "Swift",
+    "externalID" : "s:SYsSeRzSS8RawValueSYRtzrlE4fromxs7Decoder_p_tKcfc::SYNTHESIZED::s:22GitHubRestAPIReactions10OperationsO030reactions_sol_list_hyphen_for_i6_pull_i9_request_i8_review_I8_commentO5InputV5QueryV14contentPayloadO",
+    "fragments" : [
+      {
+        "kind" : "identifier",
+        "text" : "init"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "from"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:s7DecoderP",
+        "text" : "Decoder"
+      },
+      {
+        "kind" : "text",
+        "text" : ") "
+      },
+      {
+        "kind" : "keyword",
+        "text" : "throws"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIReactions",
+        "relatedModules" : [
+          "Swift"
+        ]
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Initializer",
+    "symbolKind" : "init",
+    "title" : "init(from:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "init"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "from"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "internalParam",
+              "text" : "decoder"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:s7DecoderP",
+              "text" : "Decoder"
+            },
+            {
+              "kind" : "text",
+              "text" : ") "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "throws"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "kind" : "parameters",
+      "parameters" : [
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The decoder to read data from.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "decoder"
+        }
+      ]
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "This initializer throws an error if reading from the decoder fails, or",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "if the data read is corrupted or otherwise invalid.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapireactions\/operations\/reactions_sol_list_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment\/input\/query-swift.struct\/contentpayload\/init(from:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIReactions/documentation/GitHubRestAPIReactions": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIReactions",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapireactions"
+},
+"doc://GitHubRestAPIReactions/documentation/GitHubRestAPIReactions/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapireactions\/operations"
+},
+"doc://GitHubRestAPIReactions/documentation/GitHubRestAPIReactions/Operations/reactions_sol_list_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment": {
+  "abstract" : [
+    {
+      "text" : "List reactions for a pull request review comment",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "reactions_sol_list_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Operations\/reactions_sol_list_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "reactions_sol_list_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.reactions_sol_list_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapireactions\/operations\/reactions_sol_list_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment"
+},
+"doc://GitHubRestAPIReactions/documentation/GitHubRestAPIReactions/Operations/reactions_sol_list_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment/Input": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Operations\/reactions_sol_list_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment\/Input",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.reactions_sol_list_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment.Input",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapireactions\/operations\/reactions_sol_list_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment\/input"
+},
+"doc://GitHubRestAPIReactions/documentation/GitHubRestAPIReactions/Operations/reactions_sol_list_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment/Input/Query-swift.struct": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Query"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Operations\/reactions_sol_list_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment\/Input\/Query-swift.struct",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Query"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.reactions_sol_list_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment.Input.Query",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapireactions\/operations\/reactions_sol_list_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment\/input\/query-swift.struct"
+},
+"doc://GitHubRestAPIReactions/documentation/GitHubRestAPIReactions/Operations/reactions_sol_list_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment/Input/Query-swift.struct/contentPayload": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "contentPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Operations\/reactions_sol_list_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment\/Input\/Query-swift.struct\/contentPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "contentPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.reactions_sol_list_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment.Input.Query.contentPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapireactions\/operations\/reactions_sol_list_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment\/input\/query-swift.struct\/contentpayload"
+},
+"doc://GitHubRestAPIReactions/documentation/GitHubRestAPIReactions/Operations/reactions_sol_list_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment/Input/Query-swift.struct/contentPayload/RawRepresentable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Operations\/reactions_sol_list_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment\/Input\/Query-swift.struct\/contentPayload\/RawRepresentable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "RawRepresentable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapireactions\/operations\/reactions_sol_list_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment\/input\/query-swift.struct\/contentpayload\/rawrepresentable-implementations"
+},
+"doc://GitHubRestAPIReactions/documentation/GitHubRestAPIReactions/Operations/reactions_sol_list_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment/Input/Query-swift.struct/contentPayload/init(from:)": {
+  "abstract" : [
+    {
+      "text" : "Creates a new instance by decoding from the given decoder, when the",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "type’s ",
+      "type" : "text"
+    },
+    {
+      "code" : "RawValue",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " is ",
+      "type" : "text"
+    },
+    {
+      "code" : "String",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "conformance" : {
+    "availabilityPrefix" : [
+      {
+        "text" : "Available when",
+        "type" : "text"
+      }
+    ],
+    "conformancePrefix" : [
+      {
+        "text" : "Conforms when",
+        "type" : "text"
+      }
+    ],
+    "constraints" : [
+      {
+        "code" : "Self",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : " conforms to ",
+        "type" : "text"
+      },
+      {
+        "code" : "Decodable",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : ", ",
+        "type" : "text"
+      },
+      {
+        "code" : "Self",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : " conforms to ",
+        "type" : "text"
+      },
+      {
+        "code" : "RawRepresentable",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : ", and ",
+        "type" : "text"
+      },
+      {
+        "code" : "RawValue",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : " is ",
+        "type" : "text"
+      },
+      {
+        "code" : "String",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : ".",
+        "type" : "text"
+      }
+    ]
+  },
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "from"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:s7DecoderP",
+      "text" : "Decoder"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIReactions\/documentation\/GitHubRestAPIReactions\/Operations\/reactions_sol_list_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment\/Input\/Query-swift.struct\/contentPayload\/init(from:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(from:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapireactions\/operations\/reactions_sol_list_hyphen_for_hyphen_pull_hyphen_request_hyphen_review_hyphen_comment\/input\/query-swift.struct\/contentpayload\/init(from:)"
+}
+}
+}

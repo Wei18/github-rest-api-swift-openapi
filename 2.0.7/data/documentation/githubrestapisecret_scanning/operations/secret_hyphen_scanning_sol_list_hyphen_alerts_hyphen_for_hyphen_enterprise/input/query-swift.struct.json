@@ -1,0 +1,1719 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning",
+        "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Operations",
+        "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Operations\/secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise",
+        "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Operations\/secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise\/Input"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Operations\/secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise\/Input\/Query-swift.struct"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:28GitHubRestAPISecret_Scanning10OperationsO032secret_hyphen_scanning_sol_list_h8_alerts_h5_for_H11_enterpriseO5InputV5QueryV",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "struct"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "Query"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPISecret_Scanning"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "Query"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/secret-scanning\/Types.swift#L2418"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Structure",
+    "symbolKind" : "struct",
+    "title" : "Operations.secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise.Input.Query"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "struct"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "Query"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/paths\/enterprises\/{enterprise}\/secret-scanning\/alerts\/GET\/query",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPISecret_Scanning\/SQ",
+        "doc:\/\/GitHubRestAPISecret_Scanning\/SH",
+        "doc:\/\/GitHubRestAPISecret_Scanning\/s8SendableP"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Operations\/secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise\/Input\/Query-swift.struct\/init(state:secret_type:resolution:sort:direction:per_page:before:after:validity:is_publicly_leaked:is_multi_repo:)"
+      ],
+      "title" : "Initializers"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Operations\/secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise\/Input\/Query-swift.struct\/after",
+        "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Operations\/secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise\/Input\/Query-swift.struct\/before",
+        "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Operations\/secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise\/Input\/Query-swift.struct\/direction-swift.property",
+        "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Operations\/secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise\/Input\/Query-swift.struct\/is_multi_repo",
+        "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Operations\/secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise\/Input\/Query-swift.struct\/is_publicly_leaked",
+        "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Operations\/secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise\/Input\/Query-swift.struct\/per_page",
+        "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Operations\/secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise\/Input\/Query-swift.struct\/resolution",
+        "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Operations\/secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise\/Input\/Query-swift.struct\/secret_type",
+        "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Operations\/secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise\/Input\/Query-swift.struct\/sort",
+        "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Operations\/secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise\/Input\/Query-swift.struct\/state",
+        "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Operations\/secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise\/Input\/Query-swift.struct\/validity"
+      ],
+      "title" : "Instance Properties"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Operations\/secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise\/Input\/Query-swift.struct\/direction-swift.enum",
+        "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Operations\/secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise\/Input\/Query-swift.struct\/secret_hyphen_scanning_hyphen_alert_hyphen_sort",
+        "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Operations\/secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise\/Input\/Query-swift.struct\/secret_hyphen_scanning_hyphen_alert_hyphen_state"
+      ],
+      "title" : "Enumerations"
+    },
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Operations\/secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise\/Input\/Query-swift.struct\/Equatable-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapisecret_scanning\/operations\/secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise\/input\/query-swift.struct"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPISecret_Scanning/SH": {
+  "identifier" : "doc:\/\/GitHubRestAPISecret_Scanning\/SH",
+  "title" : "Swift.Hashable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPISecret_Scanning/SQ": {
+  "identifier" : "doc:\/\/GitHubRestAPISecret_Scanning\/SQ",
+  "title" : "Swift.Equatable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPISecret_Scanning/documentation/GitHubRestAPISecret_Scanning": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPISecret_Scanning",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecret_scanning"
+},
+"doc://GitHubRestAPISecret_Scanning/documentation/GitHubRestAPISecret_Scanning/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecret_scanning\/operations"
+},
+"doc://GitHubRestAPISecret_Scanning/documentation/GitHubRestAPISecret_Scanning/Operations/secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise": {
+  "abstract" : [
+    {
+      "text" : "List secret scanning alerts for an enterprise",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Operations\/secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecret_scanning\/operations\/secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise"
+},
+"doc://GitHubRestAPISecret_Scanning/documentation/GitHubRestAPISecret_Scanning/Operations/secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise/Input": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Operations\/secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise\/Input",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise.Input",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecret_scanning\/operations\/secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise\/input"
+},
+"doc://GitHubRestAPISecret_Scanning/documentation/GitHubRestAPISecret_Scanning/Operations/secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise/Input/Query-swift.struct": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Query"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Operations\/secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise\/Input\/Query-swift.struct",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Query"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise.Input.Query",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecret_scanning\/operations\/secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise\/input\/query-swift.struct"
+},
+"doc://GitHubRestAPISecret_Scanning/documentation/GitHubRestAPISecret_Scanning/Operations/secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise/Input/Query-swift.struct/Equatable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Operations\/secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise\/Input\/Query-swift.struct\/Equatable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Equatable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecret_scanning\/operations\/secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise\/input\/query-swift.struct\/equatable-implementations"
+},
+"doc://GitHubRestAPISecret_Scanning/documentation/GitHubRestAPISecret_Scanning/Operations/secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise/Input/Query-swift.struct/after": {
+  "abstract" : [
+    {
+      "text" : "A cursor, as given in the ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/docs.github.com\/rest\/guides\/using-pagination-in-the-rest-api#using-link-headers",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ". If specified, the query only searches for results after this cursor. For more information, see “",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/docs.github.com\/rest\/using-the-rest-api\/using-pagination-in-the-rest-api",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ".”",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "after"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:28GitHubRestAPISecret_Scanning10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:28GitHubRestAPISecret_Scanning10ComponentsO10ParametersO",
+      "text" : "Parameters"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:28GitHubRestAPISecret_Scanning10ComponentsO10ParametersO23pagination_hyphen_aftera",
+      "text" : "pagination_hyphen_after"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Operations\/secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise\/Input\/Query-swift.struct\/after",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "after",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecret_scanning\/operations\/secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise\/input\/query-swift.struct\/after"
+},
+"doc://GitHubRestAPISecret_Scanning/documentation/GitHubRestAPISecret_Scanning/Operations/secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise/Input/Query-swift.struct/before": {
+  "abstract" : [
+    {
+      "text" : "A cursor, as given in the ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/docs.github.com\/rest\/guides\/using-pagination-in-the-rest-api#using-link-headers",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ". If specified, the query only searches for results before this cursor. For more information, see “",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/docs.github.com\/rest\/using-the-rest-api\/using-pagination-in-the-rest-api",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ".”",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "before"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:28GitHubRestAPISecret_Scanning10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:28GitHubRestAPISecret_Scanning10ComponentsO10ParametersO",
+      "text" : "Parameters"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:28GitHubRestAPISecret_Scanning10ComponentsO10ParametersO24pagination_hyphen_beforea",
+      "text" : "pagination_hyphen_before"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Operations\/secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise\/Input\/Query-swift.struct\/before",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "before",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecret_scanning\/operations\/secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise\/input\/query-swift.struct\/before"
+},
+"doc://GitHubRestAPISecret_Scanning/documentation/GitHubRestAPISecret_Scanning/Operations/secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise/Input/Query-swift.struct/direction-swift.enum": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "direction"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Operations\/secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise\/Input\/Query-swift.struct\/direction-swift.enum",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "direction"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise.Input.Query.direction",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecret_scanning\/operations\/secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise\/input\/query-swift.struct\/direction-swift.enum"
+},
+"doc://GitHubRestAPISecret_Scanning/documentation/GitHubRestAPISecret_Scanning/Operations/secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise/Input/Query-swift.struct/direction-swift.property": {
+  "abstract" : [
+    {
+      "text" : "The direction to sort the results by.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "direction"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:28GitHubRestAPISecret_Scanning10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:28GitHubRestAPISecret_Scanning10ComponentsO10ParametersO",
+      "text" : "Parameters"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:28GitHubRestAPISecret_Scanning10ComponentsO10ParametersO9directionO",
+      "text" : "direction"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Operations\/secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise\/Input\/Query-swift.struct\/direction-swift.property",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "direction",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecret_scanning\/operations\/secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise\/input\/query-swift.struct\/direction-swift.property"
+},
+"doc://GitHubRestAPISecret_Scanning/documentation/GitHubRestAPISecret_Scanning/Operations/secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise/Input/Query-swift.struct/init(state:secret_type:resolution:sort:direction:per_page:before:after:validity:is_publicly_leaked:is_multi_repo:)": {
+  "abstract" : [
+    {
+      "text" : "Creates a new ",
+      "type" : "text"
+    },
+    {
+      "code" : "Query",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "state"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:28GitHubRestAPISecret_Scanning10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:28GitHubRestAPISecret_Scanning10ComponentsO10ParametersO",
+      "text" : "Parameters"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:28GitHubRestAPISecret_Scanning10ComponentsO10ParametersO023secret_hyphen_scanning_i7_alert_I6_stateO",
+      "text" : "secret_hyphen_scanning_hyphen_alert_hyphen_state"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "secret_type"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:28GitHubRestAPISecret_Scanning10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:28GitHubRestAPISecret_Scanning10ComponentsO10ParametersO",
+      "text" : "Parameters"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:28GitHubRestAPISecret_Scanning10ComponentsO10ParametersO023secret_hyphen_scanning_i7_alert_i1_h1_I5_typea",
+      "text" : "secret_hyphen_scanning_hyphen_alert_hyphen_secret_hyphen_type"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "resolution"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:28GitHubRestAPISecret_Scanning10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:28GitHubRestAPISecret_Scanning10ComponentsO10ParametersO",
+      "text" : "Parameters"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:28GitHubRestAPISecret_Scanning10ComponentsO10ParametersO023secret_hyphen_scanning_i7_alert_I11_resolutiona",
+      "text" : "secret_hyphen_scanning_hyphen_alert_hyphen_resolution"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "sort"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:28GitHubRestAPISecret_Scanning10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:28GitHubRestAPISecret_Scanning10ComponentsO10ParametersO",
+      "text" : "Parameters"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:28GitHubRestAPISecret_Scanning10ComponentsO10ParametersO023secret_hyphen_scanning_i7_alert_I5_sortO",
+      "text" : "secret_hyphen_scanning_hyphen_alert_hyphen_sort"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "direction"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:28GitHubRestAPISecret_Scanning10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:28GitHubRestAPISecret_Scanning10ComponentsO10ParametersO",
+      "text" : "Parameters"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:28GitHubRestAPISecret_Scanning10ComponentsO10ParametersO9directionO",
+      "text" : "direction"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "per_page"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:28GitHubRestAPISecret_Scanning10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:28GitHubRestAPISecret_Scanning10ComponentsO10ParametersO",
+      "text" : "Parameters"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:28GitHubRestAPISecret_Scanning10ComponentsO10ParametersO15per_hyphen_pagea",
+      "text" : "per_hyphen_page"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "before"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:28GitHubRestAPISecret_Scanning10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:28GitHubRestAPISecret_Scanning10ComponentsO10ParametersO",
+      "text" : "Parameters"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:28GitHubRestAPISecret_Scanning10ComponentsO10ParametersO24pagination_hyphen_beforea",
+      "text" : "pagination_hyphen_before"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "after"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:28GitHubRestAPISecret_Scanning10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:28GitHubRestAPISecret_Scanning10ComponentsO10ParametersO",
+      "text" : "Parameters"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:28GitHubRestAPISecret_Scanning10ComponentsO10ParametersO23pagination_hyphen_aftera",
+      "text" : "pagination_hyphen_after"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "validity"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:28GitHubRestAPISecret_Scanning10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:28GitHubRestAPISecret_Scanning10ComponentsO10ParametersO",
+      "text" : "Parameters"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:28GitHubRestAPISecret_Scanning10ComponentsO10ParametersO023secret_hyphen_scanning_i7_alert_I9_validitya",
+      "text" : "secret_hyphen_scanning_hyphen_alert_hyphen_validity"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "is_publicly_leaked"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:28GitHubRestAPISecret_Scanning10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:28GitHubRestAPISecret_Scanning10ComponentsO10ParametersO",
+      "text" : "Parameters"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:28GitHubRestAPISecret_Scanning10ComponentsO10ParametersO023secret_hyphen_scanning_i7_alert_i10_publicly_I7_leakeda",
+      "text" : "secret_hyphen_scanning_hyphen_alert_hyphen_publicly_hyphen_leaked"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "is_multi_repo"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:28GitHubRestAPISecret_Scanning10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:28GitHubRestAPISecret_Scanning10ComponentsO10ParametersO",
+      "text" : "Parameters"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:28GitHubRestAPISecret_Scanning10ComponentsO10ParametersO023secret_hyphen_scanning_i7_alert_i7_multi_I5_repoa",
+      "text" : "secret_hyphen_scanning_hyphen_alert_hyphen_multi_hyphen_repo"
+    },
+    {
+      "kind" : "text",
+      "text" : "?)"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Operations\/secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise\/Input\/Query-swift.struct\/init(state:secret_type:resolution:sort:direction:per_page:before:after:validity:is_publicly_leaked:is_multi_repo:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(state:secret_type:resolution:sort:direction:per_page:before:after:validity:is_publicly_leaked:is_multi_repo:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecret_scanning\/operations\/secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise\/input\/query-swift.struct\/init(state:secret_type:resolution:sort:direction:per_page:before:after:validity:is_publicly_leaked:is_multi_repo:)"
+},
+"doc://GitHubRestAPISecret_Scanning/documentation/GitHubRestAPISecret_Scanning/Operations/secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise/Input/Query-swift.struct/is_multi_repo": {
+  "abstract" : [
+    {
+      "text" : "A boolean value representing whether or not to filter alerts by the multi-repo tag being present.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "is_multi_repo"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:28GitHubRestAPISecret_Scanning10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:28GitHubRestAPISecret_Scanning10ComponentsO10ParametersO",
+      "text" : "Parameters"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:28GitHubRestAPISecret_Scanning10ComponentsO10ParametersO023secret_hyphen_scanning_i7_alert_i7_multi_I5_repoa",
+      "text" : "secret_hyphen_scanning_hyphen_alert_hyphen_multi_hyphen_repo"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Operations\/secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise\/Input\/Query-swift.struct\/is_multi_repo",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "is_multi_repo",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecret_scanning\/operations\/secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise\/input\/query-swift.struct\/is_multi_repo"
+},
+"doc://GitHubRestAPISecret_Scanning/documentation/GitHubRestAPISecret_Scanning/Operations/secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise/Input/Query-swift.struct/is_publicly_leaked": {
+  "abstract" : [
+    {
+      "text" : "A boolean value representing whether or not to filter alerts by the publicly-leaked tag being present.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "is_publicly_leaked"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:28GitHubRestAPISecret_Scanning10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:28GitHubRestAPISecret_Scanning10ComponentsO10ParametersO",
+      "text" : "Parameters"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:28GitHubRestAPISecret_Scanning10ComponentsO10ParametersO023secret_hyphen_scanning_i7_alert_i10_publicly_I7_leakeda",
+      "text" : "secret_hyphen_scanning_hyphen_alert_hyphen_publicly_hyphen_leaked"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Operations\/secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise\/Input\/Query-swift.struct\/is_publicly_leaked",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "is_publicly_leaked",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecret_scanning\/operations\/secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise\/input\/query-swift.struct\/is_publicly_leaked"
+},
+"doc://GitHubRestAPISecret_Scanning/documentation/GitHubRestAPISecret_Scanning/Operations/secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise/Input/Query-swift.struct/per_page": {
+  "abstract" : [
+    {
+      "text" : "The number of results per page (max 100). For more information, see “",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/docs.github.com\/rest\/using-the-rest-api\/using-pagination-in-the-rest-api",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ".”",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "per_page"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:28GitHubRestAPISecret_Scanning10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:28GitHubRestAPISecret_Scanning10ComponentsO10ParametersO",
+      "text" : "Parameters"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:28GitHubRestAPISecret_Scanning10ComponentsO10ParametersO15per_hyphen_pagea",
+      "text" : "per_hyphen_page"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Operations\/secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise\/Input\/Query-swift.struct\/per_page",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "per_page",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecret_scanning\/operations\/secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise\/input\/query-swift.struct\/per_page"
+},
+"doc://GitHubRestAPISecret_Scanning/documentation/GitHubRestAPISecret_Scanning/Operations/secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise/Input/Query-swift.struct/resolution": {
+  "abstract" : [
+    {
+      "text" : "A comma-separated list of resolutions. Only secret scanning alerts with one of these resolutions are listed. Valid resolutions are ",
+      "type" : "text"
+    },
+    {
+      "code" : "false_positive",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ", ",
+      "type" : "text"
+    },
+    {
+      "code" : "wont_fix",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ", ",
+      "type" : "text"
+    },
+    {
+      "code" : "revoked",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ", ",
+      "type" : "text"
+    },
+    {
+      "code" : "pattern_edited",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ", ",
+      "type" : "text"
+    },
+    {
+      "code" : "pattern_deleted",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " or ",
+      "type" : "text"
+    },
+    {
+      "code" : "used_in_tests",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "resolution"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:28GitHubRestAPISecret_Scanning10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:28GitHubRestAPISecret_Scanning10ComponentsO10ParametersO",
+      "text" : "Parameters"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:28GitHubRestAPISecret_Scanning10ComponentsO10ParametersO023secret_hyphen_scanning_i7_alert_I11_resolutiona",
+      "text" : "secret_hyphen_scanning_hyphen_alert_hyphen_resolution"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Operations\/secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise\/Input\/Query-swift.struct\/resolution",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "resolution",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecret_scanning\/operations\/secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise\/input\/query-swift.struct\/resolution"
+},
+"doc://GitHubRestAPISecret_Scanning/documentation/GitHubRestAPISecret_Scanning/Operations/secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise/Input/Query-swift.struct/secret_hyphen_scanning_hyphen_alert_hyphen_sort": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "secret_hyphen_scanning_hyphen_alert_hyphen_sort"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Operations\/secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise\/Input\/Query-swift.struct\/secret_hyphen_scanning_hyphen_alert_hyphen_sort",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "secret_hyphen_scanning_hyphen_alert_hyphen_sort"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise.Input.Query.secret_hyphen_scanning_hyphen_alert_hyphen_sort",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecret_scanning\/operations\/secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise\/input\/query-swift.struct\/secret_hyphen_scanning_hyphen_alert_hyphen_sort"
+},
+"doc://GitHubRestAPISecret_Scanning/documentation/GitHubRestAPISecret_Scanning/Operations/secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise/Input/Query-swift.struct/secret_hyphen_scanning_hyphen_alert_hyphen_state": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "secret_hyphen_scanning_hyphen_alert_hyphen_state"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Operations\/secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise\/Input\/Query-swift.struct\/secret_hyphen_scanning_hyphen_alert_hyphen_state",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "secret_hyphen_scanning_hyphen_alert_hyphen_state"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise.Input.Query.secret_hyphen_scanning_hyphen_alert_hyphen_state",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecret_scanning\/operations\/secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise\/input\/query-swift.struct\/secret_hyphen_scanning_hyphen_alert_hyphen_state"
+},
+"doc://GitHubRestAPISecret_Scanning/documentation/GitHubRestAPISecret_Scanning/Operations/secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise/Input/Query-swift.struct/secret_type": {
+  "abstract" : [
+    {
+      "text" : "A comma-separated list of secret types to return. All default secret patterns are returned. To return generic patterns, pass the token name(s) in the parameter. See “",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/docs.github.com\/code-security\/secret-scanning\/introduction\/supported-secret-scanning-patterns#supported-secrets",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : "” for a complete list of secret types.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "secret_type"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:28GitHubRestAPISecret_Scanning10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:28GitHubRestAPISecret_Scanning10ComponentsO10ParametersO",
+      "text" : "Parameters"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:28GitHubRestAPISecret_Scanning10ComponentsO10ParametersO023secret_hyphen_scanning_i7_alert_i1_h1_I5_typea",
+      "text" : "secret_hyphen_scanning_hyphen_alert_hyphen_secret_hyphen_type"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Operations\/secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise\/Input\/Query-swift.struct\/secret_type",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "secret_type",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecret_scanning\/operations\/secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise\/input\/query-swift.struct\/secret_type"
+},
+"doc://GitHubRestAPISecret_Scanning/documentation/GitHubRestAPISecret_Scanning/Operations/secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise/Input/Query-swift.struct/sort": {
+  "abstract" : [
+    {
+      "text" : "The property to sort the results by. ",
+      "type" : "text"
+    },
+    {
+      "code" : "created",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " means when the alert was created. ",
+      "type" : "text"
+    },
+    {
+      "code" : "updated",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " means when the alert was updated or resolved.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "sort"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:28GitHubRestAPISecret_Scanning10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:28GitHubRestAPISecret_Scanning10ComponentsO10ParametersO",
+      "text" : "Parameters"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:28GitHubRestAPISecret_Scanning10ComponentsO10ParametersO023secret_hyphen_scanning_i7_alert_I5_sortO",
+      "text" : "secret_hyphen_scanning_hyphen_alert_hyphen_sort"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Operations\/secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise\/Input\/Query-swift.struct\/sort",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "sort",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecret_scanning\/operations\/secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise\/input\/query-swift.struct\/sort"
+},
+"doc://GitHubRestAPISecret_Scanning/documentation/GitHubRestAPISecret_Scanning/Operations/secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise/Input/Query-swift.struct/state": {
+  "abstract" : [
+    {
+      "text" : "Set to ",
+      "type" : "text"
+    },
+    {
+      "code" : "open",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " or ",
+      "type" : "text"
+    },
+    {
+      "code" : "resolved",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " to only list secret scanning alerts in a specific state.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "state"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:28GitHubRestAPISecret_Scanning10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:28GitHubRestAPISecret_Scanning10ComponentsO10ParametersO",
+      "text" : "Parameters"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:28GitHubRestAPISecret_Scanning10ComponentsO10ParametersO023secret_hyphen_scanning_i7_alert_I6_stateO",
+      "text" : "secret_hyphen_scanning_hyphen_alert_hyphen_state"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Operations\/secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise\/Input\/Query-swift.struct\/state",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "state",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecret_scanning\/operations\/secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise\/input\/query-swift.struct\/state"
+},
+"doc://GitHubRestAPISecret_Scanning/documentation/GitHubRestAPISecret_Scanning/Operations/secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise/Input/Query-swift.struct/validity": {
+  "abstract" : [
+    {
+      "text" : "A comma-separated list of validities that, when present, will return alerts that match the validities in this list. Valid options are ",
+      "type" : "text"
+    },
+    {
+      "code" : "active",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ", ",
+      "type" : "text"
+    },
+    {
+      "code" : "inactive",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ", and ",
+      "type" : "text"
+    },
+    {
+      "code" : "unknown",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "validity"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:28GitHubRestAPISecret_Scanning10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:28GitHubRestAPISecret_Scanning10ComponentsO10ParametersO",
+      "text" : "Parameters"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:28GitHubRestAPISecret_Scanning10ComponentsO10ParametersO023secret_hyphen_scanning_i7_alert_I9_validitya",
+      "text" : "secret_hyphen_scanning_hyphen_alert_hyphen_validity"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Operations\/secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise\/Input\/Query-swift.struct\/validity",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "validity",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecret_scanning\/operations\/secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise\/input\/query-swift.struct\/validity"
+},
+"doc://GitHubRestAPISecret_Scanning/s8SendableP": {
+  "identifier" : "doc:\/\/GitHubRestAPISecret_Scanning\/s8SendableP",
+  "title" : "Swift.Sendable",
+  "type" : "unresolvable"
+},
+"https://docs.github.com/code-security/secret-scanning/introduction/supported-secret-scanning-patterns#supported-secrets": {
+  "identifier" : "https:\/\/docs.github.com\/code-security\/secret-scanning\/introduction\/supported-secret-scanning-patterns#supported-secrets",
+  "title" : "Supported secret scanning patterns",
+  "titleInlineContent" : [
+    {
+      "text" : "Supported secret scanning patterns",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/docs.github.com\/code-security\/secret-scanning\/introduction\/supported-secret-scanning-patterns#supported-secrets"
+},
+"https://docs.github.com/rest/guides/using-pagination-in-the-rest-api#using-link-headers": {
+  "identifier" : "https:\/\/docs.github.com\/rest\/guides\/using-pagination-in-the-rest-api#using-link-headers",
+  "title" : "Link header",
+  "titleInlineContent" : [
+    {
+      "text" : "Link header",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/docs.github.com\/rest\/guides\/using-pagination-in-the-rest-api#using-link-headers"
+},
+"https://docs.github.com/rest/using-the-rest-api/using-pagination-in-the-rest-api": {
+  "identifier" : "https:\/\/docs.github.com\/rest\/using-the-rest-api\/using-pagination-in-the-rest-api",
+  "title" : "Using pagination in the REST API",
+  "titleInlineContent" : [
+    {
+      "text" : "Using pagination in the REST API",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/docs.github.com\/rest\/using-the-rest-api\/using-pagination-in-the-rest-api"
+}
+}
+}

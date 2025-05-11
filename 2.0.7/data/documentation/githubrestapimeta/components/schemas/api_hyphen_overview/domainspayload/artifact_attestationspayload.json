@@ -1,0 +1,618 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta",
+        "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta\/Components",
+        "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta\/Components\/Schemas",
+        "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta\/Components\/Schemas\/api_hyphen_overview",
+        "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta\/Components\/Schemas\/api_hyphen_overview\/domainsPayload"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta\/Components\/Schemas\/api_hyphen_overview\/domainsPayload\/artifact_attestationsPayload"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:17GitHubRestAPIMeta10ComponentsO7SchemasO19api_hyphen_overviewV14domainsPayloadV021artifact_attestationsK0V",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "struct"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "artifact_attestationsPayload"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIMeta"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "artifact_attestationsPayload"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/meta\/Types.swift#L499"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Structure",
+    "symbolKind" : "struct",
+    "title" : "Components.Schemas.api_hyphen_overview.domainsPayload.artifact_attestationsPayload"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "struct"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "artifact_attestationsPayload"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/components\/schemas\/api-overview\/domains\/artifact_attestations",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIMeta\/Se",
+        "doc:\/\/GitHubRestAPIMeta\/SE",
+        "doc:\/\/GitHubRestAPIMeta\/SQ",
+        "doc:\/\/GitHubRestAPIMeta\/SH",
+        "doc:\/\/GitHubRestAPIMeta\/s8SendableP"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta\/Components\/Schemas\/api_hyphen_overview\/domainsPayload\/artifact_attestationsPayload\/init(from:)",
+        "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta\/Components\/Schemas\/api_hyphen_overview\/domainsPayload\/artifact_attestationsPayload\/init(trust_domain:services:)"
+      ],
+      "title" : "Initializers"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta\/Components\/Schemas\/api_hyphen_overview\/domainsPayload\/artifact_attestationsPayload\/services",
+        "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta\/Components\/Schemas\/api_hyphen_overview\/domainsPayload\/artifact_attestationsPayload\/trust_domain"
+      ],
+      "title" : "Instance Properties"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta\/Components\/Schemas\/api_hyphen_overview\/domainsPayload\/artifact_attestationsPayload\/CodingKeys"
+      ],
+      "title" : "Enumerations"
+    },
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta\/Components\/Schemas\/api_hyphen_overview\/domainsPayload\/artifact_attestationsPayload\/Equatable-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapimeta\/components\/schemas\/api_hyphen_overview\/domainspayload\/artifact_attestationspayload"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIMeta/SE": {
+  "identifier" : "doc:\/\/GitHubRestAPIMeta\/SE",
+  "title" : "Swift.Encodable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIMeta/SH": {
+  "identifier" : "doc:\/\/GitHubRestAPIMeta\/SH",
+  "title" : "Swift.Hashable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIMeta/SQ": {
+  "identifier" : "doc:\/\/GitHubRestAPIMeta\/SQ",
+  "title" : "Swift.Equatable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIMeta/Se": {
+  "identifier" : "doc:\/\/GitHubRestAPIMeta\/Se",
+  "title" : "Swift.Decodable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIMeta/documentation/GitHubRestAPIMeta": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIMeta",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimeta"
+},
+"doc://GitHubRestAPIMeta/documentation/GitHubRestAPIMeta/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimeta\/components"
+},
+"doc://GitHubRestAPIMeta/documentation/GitHubRestAPIMeta/Components/Schemas": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/schemas",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta\/Components\/Schemas",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimeta\/components\/schemas"
+},
+"doc://GitHubRestAPIMeta/documentation/GitHubRestAPIMeta/Components/Schemas/api_hyphen_overview": {
+  "abstract" : [
+    {
+      "text" : "Api Overview",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "api_hyphen_overview"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta\/Components\/Schemas\/api_hyphen_overview",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "api_hyphen_overview"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.api_hyphen_overview",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimeta\/components\/schemas\/api_hyphen_overview"
+},
+"doc://GitHubRestAPIMeta/documentation/GitHubRestAPIMeta/Components/Schemas/api_hyphen_overview/domainsPayload": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "domainsPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta\/Components\/Schemas\/api_hyphen_overview\/domainsPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "domainsPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.api_hyphen_overview.domainsPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimeta\/components\/schemas\/api_hyphen_overview\/domainspayload"
+},
+"doc://GitHubRestAPIMeta/documentation/GitHubRestAPIMeta/Components/Schemas/api_hyphen_overview/domainsPayload/artifact_attestationsPayload": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "artifact_attestationsPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta\/Components\/Schemas\/api_hyphen_overview\/domainsPayload\/artifact_attestationsPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "artifact_attestationsPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.api_hyphen_overview.domainsPayload.artifact_attestationsPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimeta\/components\/schemas\/api_hyphen_overview\/domainspayload\/artifact_attestationspayload"
+},
+"doc://GitHubRestAPIMeta/documentation/GitHubRestAPIMeta/Components/Schemas/api_hyphen_overview/domainsPayload/artifact_attestationsPayload/CodingKeys": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta\/Components\/Schemas\/api_hyphen_overview\/domainsPayload\/artifact_attestationsPayload\/CodingKeys",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.api_hyphen_overview.domainsPayload.artifact_attestationsPayload.CodingKeys",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimeta\/components\/schemas\/api_hyphen_overview\/domainspayload\/artifact_attestationspayload\/codingkeys"
+},
+"doc://GitHubRestAPIMeta/documentation/GitHubRestAPIMeta/Components/Schemas/api_hyphen_overview/domainsPayload/artifact_attestationsPayload/Equatable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta\/Components\/Schemas\/api_hyphen_overview\/domainsPayload\/artifact_attestationsPayload\/Equatable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Equatable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimeta\/components\/schemas\/api_hyphen_overview\/domainspayload\/artifact_attestationspayload\/equatable-implementations"
+},
+"doc://GitHubRestAPIMeta/documentation/GitHubRestAPIMeta/Components/Schemas/api_hyphen_overview/domainsPayload/artifact_attestationsPayload/init(from:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "from"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:s7DecoderP",
+      "text" : "Decoder"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta\/Components\/Schemas\/api_hyphen_overview\/domainsPayload\/artifact_attestationsPayload\/init(from:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(from:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimeta\/components\/schemas\/api_hyphen_overview\/domainspayload\/artifact_attestationspayload\/init(from:)"
+},
+"doc://GitHubRestAPIMeta/documentation/GitHubRestAPIMeta/Components/Schemas/api_hyphen_overview/domainsPayload/artifact_attestationsPayload/init(trust_domain:services:)": {
+  "abstract" : [
+    {
+      "text" : "Creates a new ",
+      "type" : "text"
+    },
+    {
+      "code" : "artifact_attestationsPayload",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "trust_domain"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "services"
+    },
+    {
+      "kind" : "text",
+      "text" : ": ["
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "]?)"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta\/Components\/Schemas\/api_hyphen_overview\/domainsPayload\/artifact_attestationsPayload\/init(trust_domain:services:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(trust_domain:services:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimeta\/components\/schemas\/api_hyphen_overview\/domainspayload\/artifact_attestationspayload\/init(trust_domain:services:)"
+},
+"doc://GitHubRestAPIMeta/documentation/GitHubRestAPIMeta/Components/Schemas/api_hyphen_overview/domainsPayload/artifact_attestationsPayload/services": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "services"
+    },
+    {
+      "kind" : "text",
+      "text" : ": ["
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "]?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta\/Components\/Schemas\/api_hyphen_overview\/domainsPayload\/artifact_attestationsPayload\/services",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "services",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimeta\/components\/schemas\/api_hyphen_overview\/domainspayload\/artifact_attestationspayload\/services"
+},
+"doc://GitHubRestAPIMeta/documentation/GitHubRestAPIMeta/Components/Schemas/api_hyphen_overview/domainsPayload/artifact_attestationsPayload/trust_domain": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "trust_domain"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMeta\/documentation\/GitHubRestAPIMeta\/Components\/Schemas\/api_hyphen_overview\/domainsPayload\/artifact_attestationsPayload\/trust_domain",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "trust_domain",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimeta\/components\/schemas\/api_hyphen_overview\/domainspayload\/artifact_attestationspayload\/trust_domain"
+},
+"doc://GitHubRestAPIMeta/s8SendableP": {
+  "identifier" : "doc:\/\/GitHubRestAPIMeta\/s8SendableP",
+  "title" : "Swift.Sendable",
+  "type" : "unresolvable"
+}
+}
+}

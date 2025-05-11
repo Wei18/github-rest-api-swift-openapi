@@ -1,0 +1,614 @@
+{
+  "abstract" : [
+    {
+      "text" : "List classrooms",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIClassroom\/documentation\/GitHubRestAPIClassroom",
+        "doc:\/\/GitHubRestAPIClassroom\/documentation\/GitHubRestAPIClassroom\/Client"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIClassroom\/documentation\/GitHubRestAPIClassroom\/Client\/classroom_sol_list_hyphen_classrooms(_:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:22GitHubRestAPIClassroom6ClientV36classroom_sol_list_hyphen_classroomsyAA10OperationsOADO6OutputOAG5InputVYaKF",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "func"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "classroom_sol_list_hyphen_classrooms"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:22GitHubRestAPIClassroom10OperationsO",
+        "text" : "Operations"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:22GitHubRestAPIClassroom10OperationsO36classroom_sol_list_hyphen_classroomsO",
+        "text" : "classroom_sol_list_hyphen_classrooms"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:22GitHubRestAPIClassroom10OperationsO36classroom_sol_list_hyphen_classroomsO5InputV",
+        "text" : "Input"
+      },
+      {
+        "kind" : "text",
+        "text" : ") "
+      },
+      {
+        "kind" : "keyword",
+        "text" : "async"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "keyword",
+        "text" : "throws"
+      },
+      {
+        "kind" : "text",
+        "text" : " -> "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:22GitHubRestAPIClassroom10OperationsO",
+        "text" : "Operations"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:22GitHubRestAPIClassroom10OperationsO36classroom_sol_list_hyphen_classroomsO",
+        "text" : "classroom_sol_list_hyphen_classrooms"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:22GitHubRestAPIClassroom10OperationsO36classroom_sol_list_hyphen_classroomsO6OutputO",
+        "text" : "Output"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIClassroom"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Client.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/classroom\/Client.swift#L297"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Instance Method",
+    "symbolKind" : "method",
+    "title" : "classroom_sol_list_hyphen_classrooms(_:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "func"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "classroom_sol_list_hyphen_classrooms"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "_"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "internalParam",
+              "text" : "input"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIClassroom\/documentation\/GitHubRestAPIClassroom\/Operations",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:22GitHubRestAPIClassroom10OperationsO",
+              "text" : "Operations"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIClassroom\/documentation\/GitHubRestAPIClassroom\/Operations\/classroom_sol_list_hyphen_classrooms",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:22GitHubRestAPIClassroom10OperationsO36classroom_sol_list_hyphen_classroomsO",
+              "text" : "classroom_sol_list_hyphen_classrooms"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIClassroom\/documentation\/GitHubRestAPIClassroom\/Operations\/classroom_sol_list_hyphen_classrooms\/Input",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:22GitHubRestAPIClassroom10OperationsO36classroom_sol_list_hyphen_classroomsO5InputV",
+              "text" : "Input"
+            },
+            {
+              "kind" : "text",
+              "text" : ") "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "async"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "throws"
+            },
+            {
+              "kind" : "text",
+              "text" : " -> "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIClassroom\/documentation\/GitHubRestAPIClassroom\/Operations",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:22GitHubRestAPIClassroom10OperationsO",
+              "text" : "Operations"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIClassroom\/documentation\/GitHubRestAPIClassroom\/Operations\/classroom_sol_list_hyphen_classrooms",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:22GitHubRestAPIClassroom10OperationsO36classroom_sol_list_hyphen_classroomsO",
+              "text" : "classroom_sol_list_hyphen_classrooms"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIClassroom\/documentation\/GitHubRestAPIClassroom\/Operations\/classroom_sol_list_hyphen_classrooms\/Output",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:22GitHubRestAPIClassroom10OperationsO36classroom_sol_list_hyphen_classroomsO6OutputO",
+              "text" : "Output"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Lists GitHub Classroom classrooms for the current user. Classrooms will only be returned if the current user is an administrator of one or more GitHub Classrooms.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "HTTP ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "GET \/classrooms",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/paths\/\/classrooms\/get(classroom\/list-classrooms)",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapiclassroom\/client\/classroom_sol_list_hyphen_classrooms(_:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIClassroom/documentation/GitHubRestAPIClassroom": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIClassroom\/documentation\/GitHubRestAPIClassroom",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIClassroom",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiclassroom"
+},
+"doc://GitHubRestAPIClassroom/documentation/GitHubRestAPIClassroom/Client": {
+  "abstract" : [
+    {
+      "text" : "GitHub’s v3 REST API.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Client"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIClassroom\/documentation\/GitHubRestAPIClassroom\/Client",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Client"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Client",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiclassroom\/client"
+},
+"doc://GitHubRestAPIClassroom/documentation/GitHubRestAPIClassroom/Client/classroom_sol_list_hyphen_classrooms(_:)": {
+  "abstract" : [
+    {
+      "text" : "List classrooms",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "classroom_sol_list_hyphen_classrooms"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPIClassroom10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPIClassroom10OperationsO36classroom_sol_list_hyphen_classroomsO",
+      "text" : "classroom_sol_list_hyphen_classrooms"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPIClassroom10OperationsO36classroom_sol_list_hyphen_classroomsO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPIClassroom10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPIClassroom10OperationsO36classroom_sol_list_hyphen_classroomsO",
+      "text" : "classroom_sol_list_hyphen_classrooms"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPIClassroom10OperationsO36classroom_sol_list_hyphen_classroomsO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIClassroom\/documentation\/GitHubRestAPIClassroom\/Client\/classroom_sol_list_hyphen_classrooms(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "classroom_sol_list_hyphen_classrooms(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiclassroom\/client\/classroom_sol_list_hyphen_classrooms(_:)"
+},
+"doc://GitHubRestAPIClassroom/documentation/GitHubRestAPIClassroom/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIClassroom\/documentation\/GitHubRestAPIClassroom\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiclassroom\/operations"
+},
+"doc://GitHubRestAPIClassroom/documentation/GitHubRestAPIClassroom/Operations/classroom_sol_list_hyphen_classrooms": {
+  "abstract" : [
+    {
+      "text" : "List classrooms",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "classroom_sol_list_hyphen_classrooms"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIClassroom\/documentation\/GitHubRestAPIClassroom\/Operations\/classroom_sol_list_hyphen_classrooms",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "classroom_sol_list_hyphen_classrooms"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.classroom_sol_list_hyphen_classrooms",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiclassroom\/operations\/classroom_sol_list_hyphen_classrooms"
+},
+"doc://GitHubRestAPIClassroom/documentation/GitHubRestAPIClassroom/Operations/classroom_sol_list_hyphen_classrooms/Input": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIClassroom\/documentation\/GitHubRestAPIClassroom\/Operations\/classroom_sol_list_hyphen_classrooms\/Input",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.classroom_sol_list_hyphen_classrooms.Input",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiclassroom\/operations\/classroom_sol_list_hyphen_classrooms\/input"
+},
+"doc://GitHubRestAPIClassroom/documentation/GitHubRestAPIClassroom/Operations/classroom_sol_list_hyphen_classrooms/Output": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIClassroom\/documentation\/GitHubRestAPIClassroom\/Operations\/classroom_sol_list_hyphen_classrooms\/Output",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.classroom_sol_list_hyphen_classrooms.Output",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiclassroom\/operations\/classroom_sol_list_hyphen_classrooms\/output"
+}
+}
+}

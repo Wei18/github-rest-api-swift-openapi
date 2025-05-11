@@ -1,0 +1,389 @@
+{
+  "abstract" : [
+    {
+      "text" : "Determines if all notifications should be blocked from this repository.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIActivity\/documentation\/GitHubRestAPIActivity",
+        "doc:\/\/GitHubRestAPIActivity\/documentation\/GitHubRestAPIActivity\/Operations",
+        "doc:\/\/GitHubRestAPIActivity\/documentation\/GitHubRestAPIActivity\/Operations\/activity_sol_set_hyphen_repo_hyphen_subscription",
+        "doc:\/\/GitHubRestAPIActivity\/documentation\/GitHubRestAPIActivity\/Operations\/activity_sol_set_hyphen_repo_hyphen_subscription\/Input",
+        "doc:\/\/GitHubRestAPIActivity\/documentation\/GitHubRestAPIActivity\/Operations\/activity_sol_set_hyphen_repo_hyphen_subscription\/Input\/Body-swift.enum",
+        "doc:\/\/GitHubRestAPIActivity\/documentation\/GitHubRestAPIActivity\/Operations\/activity_sol_set_hyphen_repo_hyphen_subscription\/Input\/Body-swift.enum\/jsonPayload"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIActivity\/documentation\/GitHubRestAPIActivity\/Operations\/activity_sol_set_hyphen_repo_hyphen_subscription\/Input\/Body-swift.enum\/jsonPayload\/ignored"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:21GitHubRestAPIActivity10OperationsO029activity_sol_set_hyphen_repo_I13_subscriptionO5InputV4BodyO11jsonPayloadV7ignoredSbSgvp",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "var"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "ignored"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:Sb",
+        "text" : "Bool"
+      },
+      {
+        "kind" : "text",
+        "text" : "?"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIActivity"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/activity\/Types.swift#L8803"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Instance Property",
+    "symbolKind" : "property",
+    "title" : "ignored"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "var"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "ignored"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:Sb",
+              "text" : "Bool"
+            },
+            {
+              "kind" : "text",
+              "text" : "?"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/paths\/repos\/{owner}\/{repo}\/subscription\/PUT\/requestBody\/json\/ignored",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapiactivity\/operations\/activity_sol_set_hyphen_repo_hyphen_subscription\/input\/body-swift.enum\/jsonpayload\/ignored"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIActivity/documentation/GitHubRestAPIActivity": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActivity\/documentation\/GitHubRestAPIActivity",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIActivity",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactivity"
+},
+"doc://GitHubRestAPIActivity/documentation/GitHubRestAPIActivity/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActivity\/documentation\/GitHubRestAPIActivity\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactivity\/operations"
+},
+"doc://GitHubRestAPIActivity/documentation/GitHubRestAPIActivity/Operations/activity_sol_set_hyphen_repo_hyphen_subscription": {
+  "abstract" : [
+    {
+      "text" : "Set a repository subscription",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "activity_sol_set_hyphen_repo_hyphen_subscription"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActivity\/documentation\/GitHubRestAPIActivity\/Operations\/activity_sol_set_hyphen_repo_hyphen_subscription",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "activity_sol_set_hyphen_repo_hyphen_subscription"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.activity_sol_set_hyphen_repo_hyphen_subscription",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactivity\/operations\/activity_sol_set_hyphen_repo_hyphen_subscription"
+},
+"doc://GitHubRestAPIActivity/documentation/GitHubRestAPIActivity/Operations/activity_sol_set_hyphen_repo_hyphen_subscription/Input": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActivity\/documentation\/GitHubRestAPIActivity\/Operations\/activity_sol_set_hyphen_repo_hyphen_subscription\/Input",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.activity_sol_set_hyphen_repo_hyphen_subscription.Input",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactivity\/operations\/activity_sol_set_hyphen_repo_hyphen_subscription\/input"
+},
+"doc://GitHubRestAPIActivity/documentation/GitHubRestAPIActivity/Operations/activity_sol_set_hyphen_repo_hyphen_subscription/Input/Body-swift.enum": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Body"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActivity\/documentation\/GitHubRestAPIActivity\/Operations\/activity_sol_set_hyphen_repo_hyphen_subscription\/Input\/Body-swift.enum",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Body"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.activity_sol_set_hyphen_repo_hyphen_subscription.Input.Body",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactivity\/operations\/activity_sol_set_hyphen_repo_hyphen_subscription\/input\/body-swift.enum"
+},
+"doc://GitHubRestAPIActivity/documentation/GitHubRestAPIActivity/Operations/activity_sol_set_hyphen_repo_hyphen_subscription/Input/Body-swift.enum/jsonPayload": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "jsonPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActivity\/documentation\/GitHubRestAPIActivity\/Operations\/activity_sol_set_hyphen_repo_hyphen_subscription\/Input\/Body-swift.enum\/jsonPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "jsonPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.activity_sol_set_hyphen_repo_hyphen_subscription.Input.Body.jsonPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactivity\/operations\/activity_sol_set_hyphen_repo_hyphen_subscription\/input\/body-swift.enum\/jsonpayload"
+},
+"doc://GitHubRestAPIActivity/documentation/GitHubRestAPIActivity/Operations/activity_sol_set_hyphen_repo_hyphen_subscription/Input/Body-swift.enum/jsonPayload/ignored": {
+  "abstract" : [
+    {
+      "text" : "Determines if all notifications should be blocked from this repository.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "ignored"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActivity\/documentation\/GitHubRestAPIActivity\/Operations\/activity_sol_set_hyphen_repo_hyphen_subscription\/Input\/Body-swift.enum\/jsonPayload\/ignored",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "ignored",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactivity\/operations\/activity_sol_set_hyphen_repo_hyphen_subscription\/input\/body-swift.enum\/jsonpayload\/ignored"
+}
+}
+}

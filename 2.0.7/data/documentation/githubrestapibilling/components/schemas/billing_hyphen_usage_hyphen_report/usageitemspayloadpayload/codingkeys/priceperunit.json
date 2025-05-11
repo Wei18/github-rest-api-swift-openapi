@@ -1,0 +1,306 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling",
+        "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components",
+        "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components\/Schemas",
+        "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components\/Schemas\/billing_hyphen_usage_hyphen_report",
+        "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components\/Schemas\/billing_hyphen_usage_hyphen_report\/usageItemsPayloadPayload",
+        "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components\/Schemas\/billing_hyphen_usage_hyphen_report\/usageItemsPayloadPayload\/CodingKeys"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components\/Schemas\/billing_hyphen_usage_hyphen_report\/usageItemsPayloadPayload\/CodingKeys\/pricePerUnit"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:20GitHubRestAPIBilling10ComponentsO7SchemasO021billing_hyphen_usage_H7_reportV0i12ItemsPayloadL0V10CodingKeysO12pricePerUnityA2KmF",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "case"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "pricePerUnit"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIBilling"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/billing\/Types.swift#L458"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Case",
+    "symbolKind" : "case",
+    "title" : "Components.Schemas.billing_hyphen_usage_hyphen_report.usageItemsPayloadPayload.CodingKeys.pricePerUnit"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "case"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "pricePerUnit"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapibilling\/components\/schemas\/billing_hyphen_usage_hyphen_report\/usageitemspayloadpayload\/codingkeys\/priceperunit"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIBilling/documentation/GitHubRestAPIBilling": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIBilling",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapibilling"
+},
+"doc://GitHubRestAPIBilling/documentation/GitHubRestAPIBilling/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapibilling\/components"
+},
+"doc://GitHubRestAPIBilling/documentation/GitHubRestAPIBilling/Components/Schemas": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/schemas",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components\/Schemas",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapibilling\/components\/schemas"
+},
+"doc://GitHubRestAPIBilling/documentation/GitHubRestAPIBilling/Components/Schemas/billing_hyphen_usage_hyphen_report": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "billing_hyphen_usage_hyphen_report"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components\/Schemas\/billing_hyphen_usage_hyphen_report",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "billing_hyphen_usage_hyphen_report"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.billing_hyphen_usage_hyphen_report",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapibilling\/components\/schemas\/billing_hyphen_usage_hyphen_report"
+},
+"doc://GitHubRestAPIBilling/documentation/GitHubRestAPIBilling/Components/Schemas/billing_hyphen_usage_hyphen_report/usageItemsPayloadPayload": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "usageItemsPayloadPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components\/Schemas\/billing_hyphen_usage_hyphen_report\/usageItemsPayloadPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "usageItemsPayloadPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.billing_hyphen_usage_hyphen_report.usageItemsPayloadPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapibilling\/components\/schemas\/billing_hyphen_usage_hyphen_report\/usageitemspayloadpayload"
+},
+"doc://GitHubRestAPIBilling/documentation/GitHubRestAPIBilling/Components/Schemas/billing_hyphen_usage_hyphen_report/usageItemsPayloadPayload/CodingKeys": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components\/Schemas\/billing_hyphen_usage_hyphen_report\/usageItemsPayloadPayload\/CodingKeys",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.billing_hyphen_usage_hyphen_report.usageItemsPayloadPayload.CodingKeys",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapibilling\/components\/schemas\/billing_hyphen_usage_hyphen_report\/usageitemspayloadpayload\/codingkeys"
+},
+"doc://GitHubRestAPIBilling/documentation/GitHubRestAPIBilling/Components/Schemas/billing_hyphen_usage_hyphen_report/usageItemsPayloadPayload/CodingKeys/pricePerUnit": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "pricePerUnit"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIBilling\/documentation\/GitHubRestAPIBilling\/Components\/Schemas\/billing_hyphen_usage_hyphen_report\/usageItemsPayloadPayload\/CodingKeys\/pricePerUnit",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.billing_hyphen_usage_hyphen_report.usageItemsPayloadPayload.CodingKeys.pricePerUnit",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapibilling\/components\/schemas\/billing_hyphen_usage_hyphen_report\/usageitemspayloadpayload\/codingkeys\/priceperunit"
+}
+}
+}

@@ -1,0 +1,429 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions",
+        "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Operations",
+        "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Operations\/interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_org",
+        "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Operations\/interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_org\/Output",
+        "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Operations\/interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_org\/Output\/Ok-swift.struct",
+        "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Operations\/interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_org\/Output\/Ok-swift.struct\/Body-swift.enum",
+        "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Operations\/interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_org\/Output\/Ok-swift.struct\/Body-swift.enum\/jsonPayload",
+        "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Operations\/interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_org\/Output\/Ok-swift.struct\/Body-swift.enum\/jsonPayload\/Value2Payload"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Operations\/interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_org\/Output\/Ok-swift.struct\/Body-swift.enum\/jsonPayload\/Value2Payload\/init(from:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:25GitHubRestAPIInteractions10OperationsO041interactions_sol_get_hyphen_restrictions_i5_for_I4_orgO6OutputO2OkV4BodyO11jsonPayloadV06Value2Q0V4fromAOs7Decoder_p_tKcfc",
+    "fragments" : [
+      {
+        "kind" : "identifier",
+        "text" : "init"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "from"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:s7DecoderP",
+        "text" : "Decoder"
+      },
+      {
+        "kind" : "text",
+        "text" : ") "
+      },
+      {
+        "kind" : "keyword",
+        "text" : "throws"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIInteractions"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/interactions\/Types.swift#L536"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Initializer",
+    "symbolKind" : "init",
+    "title" : "init(from:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "init"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "from"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "internalParam",
+              "text" : "decoder"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:s7DecoderP",
+              "text" : "Decoder"
+            },
+            {
+              "kind" : "text",
+              "text" : ") "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "throws"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapiinteractions\/operations\/interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_org\/output\/ok-swift.struct\/body-swift.enum\/jsonpayload\/value2payload\/init(from:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIInteractions/documentation/GitHubRestAPIInteractions": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIInteractions",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiinteractions"
+},
+"doc://GitHubRestAPIInteractions/documentation/GitHubRestAPIInteractions/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiinteractions\/operations"
+},
+"doc://GitHubRestAPIInteractions/documentation/GitHubRestAPIInteractions/Operations/interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_org": {
+  "abstract" : [
+    {
+      "text" : "Get interaction restrictions for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_org"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Operations\/interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_org",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_org"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_org",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiinteractions\/operations\/interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_org"
+},
+"doc://GitHubRestAPIInteractions/documentation/GitHubRestAPIInteractions/Operations/interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_org/Output": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Operations\/interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_org\/Output",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_org.Output",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiinteractions\/operations\/interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_org\/output"
+},
+"doc://GitHubRestAPIInteractions/documentation/GitHubRestAPIInteractions/Operations/interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_org/Output/Ok-swift.struct": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Ok"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Operations\/interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_org\/Output\/Ok-swift.struct",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Ok"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_org.Output.Ok",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiinteractions\/operations\/interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_org\/output\/ok-swift.struct"
+},
+"doc://GitHubRestAPIInteractions/documentation/GitHubRestAPIInteractions/Operations/interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_org/Output/Ok-swift.struct/Body-swift.enum": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Body"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Operations\/interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_org\/Output\/Ok-swift.struct\/Body-swift.enum",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Body"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_org.Output.Ok.Body",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiinteractions\/operations\/interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_org\/output\/ok-swift.struct\/body-swift.enum"
+},
+"doc://GitHubRestAPIInteractions/documentation/GitHubRestAPIInteractions/Operations/interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_org/Output/Ok-swift.struct/Body-swift.enum/jsonPayload": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "jsonPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Operations\/interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_org\/Output\/Ok-swift.struct\/Body-swift.enum\/jsonPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "jsonPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_org.Output.Ok.Body.jsonPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiinteractions\/operations\/interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_org\/output\/ok-swift.struct\/body-swift.enum\/jsonpayload"
+},
+"doc://GitHubRestAPIInteractions/documentation/GitHubRestAPIInteractions/Operations/interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_org/Output/Ok-swift.struct/Body-swift.enum/jsonPayload/Value2Payload": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Value2Payload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Operations\/interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_org\/Output\/Ok-swift.struct\/Body-swift.enum\/jsonPayload\/Value2Payload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Value2Payload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_org.Output.Ok.Body.jsonPayload.Value2Payload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiinteractions\/operations\/interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_org\/output\/ok-swift.struct\/body-swift.enum\/jsonpayload\/value2payload"
+},
+"doc://GitHubRestAPIInteractions/documentation/GitHubRestAPIInteractions/Operations/interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_org/Output/Ok-swift.struct/Body-swift.enum/jsonPayload/Value2Payload/init(from:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "from"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:s7DecoderP",
+      "text" : "Decoder"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Operations\/interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_org\/Output\/Ok-swift.struct\/Body-swift.enum\/jsonPayload\/Value2Payload\/init(from:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(from:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiinteractions\/operations\/interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_org\/output\/ok-swift.struct\/body-swift.enum\/jsonpayload\/value2payload\/init(from:)"
+}
+}
+}

@@ -1,0 +1,631 @@
+{
+  "abstract" : [
+    {
+      "text" : "List public events for a user",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIActivity\/documentation\/GitHubRestAPIActivity",
+        "doc:\/\/GitHubRestAPIActivity\/documentation\/GitHubRestAPIActivity\/APIProtocol"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIActivity\/documentation\/GitHubRestAPIActivity\/APIProtocol\/activity_sol_list_hyphen_public_hyphen_events_hyphen_for_hyphen_user(_:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:21GitHubRestAPIActivity11APIProtocolP032activity_sol_list_hyphen_public_i8_events_i5_for_I5_useryAA10OperationsOADO6OutputOAG5InputVYaKF",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "func"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "activity_sol_list_hyphen_public_hyphen_events_hyphen_for_hyphen_user"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:21GitHubRestAPIActivity10OperationsO",
+        "text" : "Operations"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:21GitHubRestAPIActivity10OperationsO032activity_sol_list_hyphen_public_i8_events_i5_for_I5_userO",
+        "text" : "activity_sol_list_hyphen_public_hyphen_events_hyphen_for_hyphen_user"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:21GitHubRestAPIActivity10OperationsO032activity_sol_list_hyphen_public_i8_events_i5_for_I5_userO5InputV",
+        "text" : "Input"
+      },
+      {
+        "kind" : "text",
+        "text" : ") "
+      },
+      {
+        "kind" : "keyword",
+        "text" : "async"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "keyword",
+        "text" : "throws"
+      },
+      {
+        "kind" : "text",
+        "text" : " -> "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:21GitHubRestAPIActivity10OperationsO",
+        "text" : "Operations"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:21GitHubRestAPIActivity10OperationsO032activity_sol_list_hyphen_public_i8_events_i5_for_I5_userO",
+        "text" : "activity_sol_list_hyphen_public_hyphen_events_hyphen_for_hyphen_user"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:21GitHubRestAPIActivity10OperationsO032activity_sol_list_hyphen_public_i8_events_i5_for_I5_userO6OutputO",
+        "text" : "Output"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIActivity"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/activity\/Types.swift#L247"
+    },
+    "required" : true,
+    "role" : "symbol",
+    "roleHeading" : "Instance Method",
+    "symbolKind" : "method",
+    "title" : "activity_sol_list_hyphen_public_hyphen_events_hyphen_for_hyphen_user(_:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "func"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "activity_sol_list_hyphen_public_hyphen_events_hyphen_for_hyphen_user"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "_"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "internalParam",
+              "text" : "input"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIActivity\/documentation\/GitHubRestAPIActivity\/Operations",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:21GitHubRestAPIActivity10OperationsO",
+              "text" : "Operations"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIActivity\/documentation\/GitHubRestAPIActivity\/Operations\/activity_sol_list_hyphen_public_hyphen_events_hyphen_for_hyphen_user",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:21GitHubRestAPIActivity10OperationsO032activity_sol_list_hyphen_public_i8_events_i5_for_I5_userO",
+              "text" : "activity_sol_list_hyphen_public_hyphen_events_hyphen_for_hyphen_user"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIActivity\/documentation\/GitHubRestAPIActivity\/Operations\/activity_sol_list_hyphen_public_hyphen_events_hyphen_for_hyphen_user\/Input",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:21GitHubRestAPIActivity10OperationsO032activity_sol_list_hyphen_public_i8_events_i5_for_I5_userO5InputV",
+              "text" : "Input"
+            },
+            {
+              "kind" : "text",
+              "text" : ") "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "async"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "throws"
+            },
+            {
+              "kind" : "text",
+              "text" : " -> "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIActivity\/documentation\/GitHubRestAPIActivity\/Operations",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:21GitHubRestAPIActivity10OperationsO",
+              "text" : "Operations"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIActivity\/documentation\/GitHubRestAPIActivity\/Operations\/activity_sol_list_hyphen_public_hyphen_events_hyphen_for_hyphen_user",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:21GitHubRestAPIActivity10OperationsO032activity_sol_list_hyphen_public_i8_events_i5_for_I5_userO",
+              "text" : "activity_sol_list_hyphen_public_hyphen_events_hyphen_for_hyphen_user"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIActivity\/documentation\/GitHubRestAPIActivity\/Operations\/activity_sol_list_hyphen_public_hyphen_events_hyphen_for_hyphen_user\/Output",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:21GitHubRestAPIActivity10OperationsO032activity_sol_list_hyphen_public_i8_events_i5_for_I5_userO6OutputO",
+              "text" : "Output"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "[!NOTE]",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "This API is not built to serve real-time use cases. Depending on the time of day, event latency can be anywhere from 30s to 6h.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Note",
+          "style" : "note",
+          "type" : "aside"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "HTTP ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "GET \/users\/{username}\/events\/public",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/paths\/\/users\/{username}\/events\/public\/get(activity\/list-public-events-for-user)",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapiactivity\/apiprotocol\/activity_sol_list_hyphen_public_hyphen_events_hyphen_for_hyphen_user(_:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIActivity/documentation/GitHubRestAPIActivity": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActivity\/documentation\/GitHubRestAPIActivity",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIActivity",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactivity"
+},
+"doc://GitHubRestAPIActivity/documentation/GitHubRestAPIActivity/APIProtocol": {
+  "abstract" : [
+    {
+      "text" : "A type that performs HTTP operations defined by the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "protocol"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "APIProtocol"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActivity\/documentation\/GitHubRestAPIActivity\/APIProtocol",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "APIProtocol"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "APIProtocol",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactivity\/apiprotocol"
+},
+"doc://GitHubRestAPIActivity/documentation/GitHubRestAPIActivity/APIProtocol/activity_sol_list_hyphen_public_hyphen_events_hyphen_for_hyphen_user(_:)": {
+  "abstract" : [
+    {
+      "text" : "List public events for a user",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "activity_sol_list_hyphen_public_hyphen_events_hyphen_for_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIActivity10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIActivity10OperationsO032activity_sol_list_hyphen_public_i8_events_i5_for_I5_userO",
+      "text" : "activity_sol_list_hyphen_public_hyphen_events_hyphen_for_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIActivity10OperationsO032activity_sol_list_hyphen_public_i8_events_i5_for_I5_userO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIActivity10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIActivity10OperationsO032activity_sol_list_hyphen_public_i8_events_i5_for_I5_userO",
+      "text" : "activity_sol_list_hyphen_public_hyphen_events_hyphen_for_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:21GitHubRestAPIActivity10OperationsO032activity_sol_list_hyphen_public_i8_events_i5_for_I5_userO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActivity\/documentation\/GitHubRestAPIActivity\/APIProtocol\/activity_sol_list_hyphen_public_hyphen_events_hyphen_for_hyphen_user(_:)",
+  "kind" : "symbol",
+  "required" : true,
+  "role" : "symbol",
+  "title" : "activity_sol_list_hyphen_public_hyphen_events_hyphen_for_hyphen_user(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactivity\/apiprotocol\/activity_sol_list_hyphen_public_hyphen_events_hyphen_for_hyphen_user(_:)"
+},
+"doc://GitHubRestAPIActivity/documentation/GitHubRestAPIActivity/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActivity\/documentation\/GitHubRestAPIActivity\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactivity\/operations"
+},
+"doc://GitHubRestAPIActivity/documentation/GitHubRestAPIActivity/Operations/activity_sol_list_hyphen_public_hyphen_events_hyphen_for_hyphen_user": {
+  "abstract" : [
+    {
+      "text" : "List public events for a user",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "activity_sol_list_hyphen_public_hyphen_events_hyphen_for_hyphen_user"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActivity\/documentation\/GitHubRestAPIActivity\/Operations\/activity_sol_list_hyphen_public_hyphen_events_hyphen_for_hyphen_user",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "activity_sol_list_hyphen_public_hyphen_events_hyphen_for_hyphen_user"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.activity_sol_list_hyphen_public_hyphen_events_hyphen_for_hyphen_user",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactivity\/operations\/activity_sol_list_hyphen_public_hyphen_events_hyphen_for_hyphen_user"
+},
+"doc://GitHubRestAPIActivity/documentation/GitHubRestAPIActivity/Operations/activity_sol_list_hyphen_public_hyphen_events_hyphen_for_hyphen_user/Input": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActivity\/documentation\/GitHubRestAPIActivity\/Operations\/activity_sol_list_hyphen_public_hyphen_events_hyphen_for_hyphen_user\/Input",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.activity_sol_list_hyphen_public_hyphen_events_hyphen_for_hyphen_user.Input",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactivity\/operations\/activity_sol_list_hyphen_public_hyphen_events_hyphen_for_hyphen_user\/input"
+},
+"doc://GitHubRestAPIActivity/documentation/GitHubRestAPIActivity/Operations/activity_sol_list_hyphen_public_hyphen_events_hyphen_for_hyphen_user/Output": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIActivity\/documentation\/GitHubRestAPIActivity\/Operations\/activity_sol_list_hyphen_public_hyphen_events_hyphen_for_hyphen_user\/Output",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.activity_sol_list_hyphen_public_hyphen_events_hyphen_for_hyphen_user.Output",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiactivity\/operations\/activity_sol_list_hyphen_public_hyphen_events_hyphen_for_hyphen_user\/output"
+}
+}
+}

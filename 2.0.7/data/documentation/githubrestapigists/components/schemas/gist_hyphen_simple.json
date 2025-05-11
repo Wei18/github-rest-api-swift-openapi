@@ -1,0 +1,1497 @@
+{
+  "abstract" : [
+    {
+      "text" : "Gist Simple",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/gist_hyphen_simple"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:18GitHubRestAPIGists10ComponentsO7SchemasO18gist_hyphen_simpleV",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "struct"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "gist_hyphen_simple"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIGists"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "gist_hyphen_simple"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/gists\/Types.swift#L1824"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Structure",
+    "symbolKind" : "struct",
+    "title" : "Components.Schemas.gist_hyphen_simple"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "struct"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "gist_hyphen_simple"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/components\/schemas\/gist-simple",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIGists\/Se",
+        "doc:\/\/GitHubRestAPIGists\/SE",
+        "doc:\/\/GitHubRestAPIGists\/SQ",
+        "doc:\/\/GitHubRestAPIGists\/SH",
+        "doc:\/\/GitHubRestAPIGists\/s8SendableP"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/gist_hyphen_simple\/filesPayload",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/gist_hyphen_simple\/fork_ofPayload",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/gist_hyphen_simple\/forksPayloadPayload"
+      ],
+      "title" : "Structures"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/gist_hyphen_simple\/init(from:)"
+      ],
+      "title" : "Initializers"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/gist_hyphen_simple\/comments",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/gist_hyphen_simple\/comments_enabled",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/gist_hyphen_simple\/comments_url",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/gist_hyphen_simple\/commits_url",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/gist_hyphen_simple\/created_at",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/gist_hyphen_simple\/description",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/gist_hyphen_simple\/files",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/gist_hyphen_simple\/fork_of",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/gist_hyphen_simple\/forks",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/gist_hyphen_simple\/forks_url",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/gist_hyphen_simple\/git_pull_url",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/gist_hyphen_simple\/git_push_url",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/gist_hyphen_simple\/history",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/gist_hyphen_simple\/html_url",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/gist_hyphen_simple\/id",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/gist_hyphen_simple\/node_id",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/gist_hyphen_simple\/owner",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/gist_hyphen_simple\/truncated",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/gist_hyphen_simple\/updated_at",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/gist_hyphen_simple\/url",
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/gist_hyphen_simple\/user"
+      ],
+      "title" : "Instance Properties"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/gist_hyphen_simple\/forksPayload"
+      ],
+      "title" : "Type Aliases"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/gist_hyphen_simple\/CodingKeys"
+      ],
+      "title" : "Enumerations"
+    },
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/gist_hyphen_simple\/Equatable-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapigists\/components\/schemas\/gist_hyphen_simple"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIGists/SE": {
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/SE",
+  "title" : "Swift.Encodable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIGists/SH": {
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/SH",
+  "title" : "Swift.Hashable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIGists/SQ": {
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/SQ",
+  "title" : "Swift.Equatable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIGists/Se": {
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/Se",
+  "title" : "Swift.Decodable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIGists",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/schemas",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/gist_hyphen_simple": {
+  "abstract" : [
+    {
+      "text" : "Gist Simple",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "gist_hyphen_simple"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/gist_hyphen_simple",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "gist_hyphen_simple"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.gist_hyphen_simple",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/gist_hyphen_simple"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/gist_hyphen_simple/CodingKeys": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/gist_hyphen_simple\/CodingKeys",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.gist_hyphen_simple.CodingKeys",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/gist_hyphen_simple\/codingkeys"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/gist_hyphen_simple/Equatable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/gist_hyphen_simple\/Equatable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Equatable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/gist_hyphen_simple\/equatable-implementations"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/gist_hyphen_simple/comments": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "comments"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/gist_hyphen_simple\/comments",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "comments",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/gist_hyphen_simple\/comments"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/gist_hyphen_simple/comments_enabled": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "comments_enabled"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/gist_hyphen_simple\/comments_enabled",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "comments_enabled",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/gist_hyphen_simple\/comments_enabled"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/gist_hyphen_simple/comments_url": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "comments_url"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/gist_hyphen_simple\/comments_url",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "comments_url",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/gist_hyphen_simple\/comments_url"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/gist_hyphen_simple/commits_url": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "commits_url"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/gist_hyphen_simple\/commits_url",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "commits_url",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/gist_hyphen_simple\/commits_url"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/gist_hyphen_simple/created_at": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "created_at"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/gist_hyphen_simple\/created_at",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "created_at",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/gist_hyphen_simple\/created_at"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/gist_hyphen_simple/description": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "description"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/gist_hyphen_simple\/description",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "description",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/gist_hyphen_simple\/description"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/gist_hyphen_simple/files": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "files"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIGists10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIGists10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIGists10ComponentsO7SchemasO18gist_hyphen_simpleV",
+      "text" : "gist_hyphen_simple"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIGists10ComponentsO7SchemasO18gist_hyphen_simpleV12filesPayloadV",
+      "text" : "filesPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/gist_hyphen_simple\/files",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "files",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/gist_hyphen_simple\/files"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/gist_hyphen_simple/filesPayload": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "filesPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/gist_hyphen_simple\/filesPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "filesPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.gist_hyphen_simple.filesPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/gist_hyphen_simple\/filespayload"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/gist_hyphen_simple/fork_of": {
+  "abstract" : [
+    {
+      "text" : "Gist",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "fork_of"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIGists10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIGists10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIGists10ComponentsO7SchemasO18gist_hyphen_simpleV",
+      "text" : "gist_hyphen_simple"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIGists10ComponentsO7SchemasO18gist_hyphen_simpleV14fork_ofPayloadV",
+      "text" : "fork_ofPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/gist_hyphen_simple\/fork_of",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "fork_of",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/gist_hyphen_simple\/fork_of"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/gist_hyphen_simple/fork_ofPayload": {
+  "abstract" : [
+    {
+      "text" : "Gist",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "fork_ofPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/gist_hyphen_simple\/fork_ofPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "fork_ofPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.gist_hyphen_simple.fork_ofPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/gist_hyphen_simple\/fork_ofpayload"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/gist_hyphen_simple/forks": {
+  "abstract" : [
+
+  ],
+  "deprecated" : true,
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "forks"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIGists10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIGists10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIGists10ComponentsO7SchemasO18gist_hyphen_simpleV",
+      "text" : "gist_hyphen_simple"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIGists10ComponentsO7SchemasO18gist_hyphen_simpleV12forksPayloada",
+      "text" : "forksPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/gist_hyphen_simple\/forks",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "forks",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/gist_hyphen_simple\/forks"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/gist_hyphen_simple/forksPayload": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "forksPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/gist_hyphen_simple\/forksPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "forksPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.gist_hyphen_simple.forksPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/gist_hyphen_simple\/forkspayload"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/gist_hyphen_simple/forksPayloadPayload": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "forksPayloadPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/gist_hyphen_simple\/forksPayloadPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "forksPayloadPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.gist_hyphen_simple.forksPayloadPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/gist_hyphen_simple\/forkspayloadpayload"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/gist_hyphen_simple/forks_url": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "forks_url"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/gist_hyphen_simple\/forks_url",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "forks_url",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/gist_hyphen_simple\/forks_url"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/gist_hyphen_simple/git_pull_url": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "git_pull_url"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/gist_hyphen_simple\/git_pull_url",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "git_pull_url",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/gist_hyphen_simple\/git_pull_url"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/gist_hyphen_simple/git_push_url": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "git_push_url"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/gist_hyphen_simple\/git_push_url",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "git_push_url",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/gist_hyphen_simple\/git_push_url"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/gist_hyphen_simple/history": {
+  "abstract" : [
+
+  ],
+  "deprecated" : true,
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "history"
+    },
+    {
+      "kind" : "text",
+      "text" : ": ["
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIGists10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIGists10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIGists10ComponentsO7SchemasO19gist_hyphen_historyV",
+      "text" : "gist_hyphen_history"
+    },
+    {
+      "kind" : "text",
+      "text" : "]?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/gist_hyphen_simple\/history",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "history",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/gist_hyphen_simple\/history"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/gist_hyphen_simple/html_url": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "html_url"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/gist_hyphen_simple\/html_url",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "html_url",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/gist_hyphen_simple\/html_url"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/gist_hyphen_simple/id": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "id"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/gist_hyphen_simple\/id",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "id",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/gist_hyphen_simple\/id"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/gist_hyphen_simple/init(from:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "from"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:s7DecoderP",
+      "text" : "Decoder"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/gist_hyphen_simple\/init(from:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(from:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/gist_hyphen_simple\/init(from:)"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/gist_hyphen_simple/node_id": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "node_id"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/gist_hyphen_simple\/node_id",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "node_id",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/gist_hyphen_simple\/node_id"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/gist_hyphen_simple/owner": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "owner"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIGists10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIGists10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:18GitHubRestAPIGists10ComponentsO7SchemasO18simple_hyphen_userV",
+      "text" : "simple_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/gist_hyphen_simple\/owner",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "owner",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/gist_hyphen_simple\/owner"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/gist_hyphen_simple/truncated": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "truncated"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/gist_hyphen_simple\/truncated",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "truncated",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/gist_hyphen_simple\/truncated"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/gist_hyphen_simple/updated_at": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "updated_at"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/gist_hyphen_simple\/updated_at",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "updated_at",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/gist_hyphen_simple\/updated_at"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/gist_hyphen_simple/url": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "url"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/gist_hyphen_simple\/url",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "url",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/gist_hyphen_simple\/url"
+},
+"doc://GitHubRestAPIGists/documentation/GitHubRestAPIGists/Components/Schemas/gist_hyphen_simple/user": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "user"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/documentation\/GitHubRestAPIGists\/Components\/Schemas\/gist_hyphen_simple\/user",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "user",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapigists\/components\/schemas\/gist_hyphen_simple\/user"
+},
+"doc://GitHubRestAPIGists/s8SendableP": {
+  "identifier" : "doc:\/\/GitHubRestAPIGists\/s8SendableP",
+  "title" : "Swift.Sendable",
+  "type" : "unresolvable"
+}
+}
+}

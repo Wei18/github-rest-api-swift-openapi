@@ -1,0 +1,547 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions",
+        "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Operations",
+        "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Operations\/interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_repo",
+        "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Operations\/interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_repo\/Output",
+        "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Operations\/interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_repo\/Output\/Ok-swift.struct",
+        "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Operations\/interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_repo\/Output\/Ok-swift.struct\/Body-swift.enum"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Operations\/interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_repo\/Output\/Ok-swift.struct\/Body-swift.enum\/json(_:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:25GitHubRestAPIInteractions10OperationsO041interactions_sol_set_hyphen_restrictions_i5_for_I5_repoO6OutputO2OkV4BodyO4jsonyAkA10ComponentsO7SchemasO012interaction_i7_limit_I9_responseVcAKmF",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "case"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "json"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:25GitHubRestAPIInteractions10ComponentsO",
+        "text" : "Components"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:25GitHubRestAPIInteractions10ComponentsO7SchemasO",
+        "text" : "Schemas"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:25GitHubRestAPIInteractions10ComponentsO7SchemasO025interaction_hyphen_limit_H9_responseV",
+        "text" : "interaction_hyphen_limit_hyphen_response"
+      },
+      {
+        "kind" : "text",
+        "text" : ")"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIInteractions"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/interactions\/Types.swift#L1164"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Case",
+    "symbolKind" : "case",
+    "title" : "Operations.interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_repo.Output.Ok.Body.json(_:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "case"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "json"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Components",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:25GitHubRestAPIInteractions10ComponentsO",
+              "text" : "Components"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Components\/Schemas",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:25GitHubRestAPIInteractions10ComponentsO7SchemasO",
+              "text" : "Schemas"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Components\/Schemas\/interaction_hyphen_limit_hyphen_response",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:25GitHubRestAPIInteractions10ComponentsO7SchemasO025interaction_hyphen_limit_H9_responseV",
+              "text" : "interaction_hyphen_limit_hyphen_response"
+            },
+            {
+              "kind" : "text",
+              "text" : ")"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/paths\/repos\/{owner}\/{repo}\/interaction-limits\/PUT\/responses\/200\/content\/application\\\/json",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapiinteractions\/operations\/interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_repo\/output\/ok-swift.struct\/body-swift.enum\/json(_:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIInteractions/documentation/GitHubRestAPIInteractions": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIInteractions",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiinteractions"
+},
+"doc://GitHubRestAPIInteractions/documentation/GitHubRestAPIInteractions/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiinteractions\/components"
+},
+"doc://GitHubRestAPIInteractions/documentation/GitHubRestAPIInteractions/Components/Schemas": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/schemas",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Components\/Schemas",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiinteractions\/components\/schemas"
+},
+"doc://GitHubRestAPIInteractions/documentation/GitHubRestAPIInteractions/Components/Schemas/interaction_hyphen_limit_hyphen_response": {
+  "abstract" : [
+    {
+      "text" : "Interaction limit settings.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "interaction_hyphen_limit_hyphen_response"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Components\/Schemas\/interaction_hyphen_limit_hyphen_response",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "interaction_hyphen_limit_hyphen_response"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.interaction_hyphen_limit_hyphen_response",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiinteractions\/components\/schemas\/interaction_hyphen_limit_hyphen_response"
+},
+"doc://GitHubRestAPIInteractions/documentation/GitHubRestAPIInteractions/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiinteractions\/operations"
+},
+"doc://GitHubRestAPIInteractions/documentation/GitHubRestAPIInteractions/Operations/interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_repo": {
+  "abstract" : [
+    {
+      "text" : "Set interaction restrictions for a repository",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_repo"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Operations\/interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_repo",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_repo"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_repo",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiinteractions\/operations\/interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_repo"
+},
+"doc://GitHubRestAPIInteractions/documentation/GitHubRestAPIInteractions/Operations/interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_repo/Output": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Operations\/interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_repo\/Output",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_repo.Output",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiinteractions\/operations\/interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_repo\/output"
+},
+"doc://GitHubRestAPIInteractions/documentation/GitHubRestAPIInteractions/Operations/interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_repo/Output/Ok-swift.struct": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Ok"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Operations\/interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_repo\/Output\/Ok-swift.struct",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Ok"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_repo.Output.Ok",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiinteractions\/operations\/interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_repo\/output\/ok-swift.struct"
+},
+"doc://GitHubRestAPIInteractions/documentation/GitHubRestAPIInteractions/Operations/interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_repo/Output/Ok-swift.struct/Body-swift.enum": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Body"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Operations\/interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_repo\/Output\/Ok-swift.struct\/Body-swift.enum",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Body"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_repo.Output.Ok.Body",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiinteractions\/operations\/interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_repo\/output\/ok-swift.struct\/body-swift.enum"
+},
+"doc://GitHubRestAPIInteractions/documentation/GitHubRestAPIInteractions/Operations/interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_repo/Output/Ok-swift.struct/Body-swift.enum/json(_:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "json"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10ComponentsO",
+      "text" : "Components"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10ComponentsO7SchemasO",
+      "text" : "Schemas"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:25GitHubRestAPIInteractions10ComponentsO7SchemasO025interaction_hyphen_limit_H9_responseV",
+      "text" : "interaction_hyphen_limit_hyphen_response"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIInteractions\/documentation\/GitHubRestAPIInteractions\/Operations\/interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_repo\/Output\/Ok-swift.struct\/Body-swift.enum\/json(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Operations.interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_repo.Output.Ok.Body.json(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiinteractions\/operations\/interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_repo\/output\/ok-swift.struct\/body-swift.enum\/json(_:)"
+}
+}
+}

@@ -1,0 +1,370 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers",
+        "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Operations",
+        "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Operations\/users_sol_list_hyphen_attestations",
+        "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Operations\/users_sol_list_hyphen_attestations\/Output",
+        "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Operations\/users_sol_list_hyphen_attestations\/Output\/Ok-swift.struct",
+        "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Operations\/users_sol_list_hyphen_attestations\/Output\/Ok-swift.struct\/Body-swift.enum",
+        "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Operations\/users_sol_list_hyphen_attestations\/Output\/Ok-swift.struct\/Body-swift.enum\/jsonPayload",
+        "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Operations\/users_sol_list_hyphen_attestations\/Output\/Ok-swift.struct\/Body-swift.enum\/jsonPayload\/CodingKeys"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Operations\/users_sol_list_hyphen_attestations\/Output\/Ok-swift.struct\/Body-swift.enum\/jsonPayload\/CodingKeys\/attestations"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:18GitHubRestAPIUsers10OperationsO34users_sol_list_hyphen_attestationsO6OutputO2OkV4BodyO11jsonPayloadV10CodingKeysO0J0yA2OmF",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "case"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "attestations"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIUsers"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/users\/Types.swift#L11510"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Case",
+    "symbolKind" : "case",
+    "title" : "Operations.users_sol_list_hyphen_attestations.Output.Ok.Body.jsonPayload.CodingKeys.attestations"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "case"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "attestations"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapiusers\/operations\/users_sol_list_hyphen_attestations\/output\/ok-swift.struct\/body-swift.enum\/jsonpayload\/codingkeys\/attestations"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIUsers/documentation/GitHubRestAPIUsers": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIUsers",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiusers"
+},
+"doc://GitHubRestAPIUsers/documentation/GitHubRestAPIUsers/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiusers\/operations"
+},
+"doc://GitHubRestAPIUsers/documentation/GitHubRestAPIUsers/Operations/users_sol_list_hyphen_attestations": {
+  "abstract" : [
+    {
+      "text" : "List attestations",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "users_sol_list_hyphen_attestations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Operations\/users_sol_list_hyphen_attestations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "users_sol_list_hyphen_attestations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.users_sol_list_hyphen_attestations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiusers\/operations\/users_sol_list_hyphen_attestations"
+},
+"doc://GitHubRestAPIUsers/documentation/GitHubRestAPIUsers/Operations/users_sol_list_hyphen_attestations/Output": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Operations\/users_sol_list_hyphen_attestations\/Output",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.users_sol_list_hyphen_attestations.Output",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiusers\/operations\/users_sol_list_hyphen_attestations\/output"
+},
+"doc://GitHubRestAPIUsers/documentation/GitHubRestAPIUsers/Operations/users_sol_list_hyphen_attestations/Output/Ok-swift.struct": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Ok"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Operations\/users_sol_list_hyphen_attestations\/Output\/Ok-swift.struct",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Ok"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.users_sol_list_hyphen_attestations.Output.Ok",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiusers\/operations\/users_sol_list_hyphen_attestations\/output\/ok-swift.struct"
+},
+"doc://GitHubRestAPIUsers/documentation/GitHubRestAPIUsers/Operations/users_sol_list_hyphen_attestations/Output/Ok-swift.struct/Body-swift.enum": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Body"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Operations\/users_sol_list_hyphen_attestations\/Output\/Ok-swift.struct\/Body-swift.enum",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Body"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.users_sol_list_hyphen_attestations.Output.Ok.Body",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiusers\/operations\/users_sol_list_hyphen_attestations\/output\/ok-swift.struct\/body-swift.enum"
+},
+"doc://GitHubRestAPIUsers/documentation/GitHubRestAPIUsers/Operations/users_sol_list_hyphen_attestations/Output/Ok-swift.struct/Body-swift.enum/jsonPayload": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "jsonPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Operations\/users_sol_list_hyphen_attestations\/Output\/Ok-swift.struct\/Body-swift.enum\/jsonPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "jsonPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.users_sol_list_hyphen_attestations.Output.Ok.Body.jsonPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiusers\/operations\/users_sol_list_hyphen_attestations\/output\/ok-swift.struct\/body-swift.enum\/jsonpayload"
+},
+"doc://GitHubRestAPIUsers/documentation/GitHubRestAPIUsers/Operations/users_sol_list_hyphen_attestations/Output/Ok-swift.struct/Body-swift.enum/jsonPayload/CodingKeys": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Operations\/users_sol_list_hyphen_attestations\/Output\/Ok-swift.struct\/Body-swift.enum\/jsonPayload\/CodingKeys",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.users_sol_list_hyphen_attestations.Output.Ok.Body.jsonPayload.CodingKeys",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiusers\/operations\/users_sol_list_hyphen_attestations\/output\/ok-swift.struct\/body-swift.enum\/jsonpayload\/codingkeys"
+},
+"doc://GitHubRestAPIUsers/documentation/GitHubRestAPIUsers/Operations/users_sol_list_hyphen_attestations/Output/Ok-swift.struct/Body-swift.enum/jsonPayload/CodingKeys/attestations": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "attestations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIUsers\/documentation\/GitHubRestAPIUsers\/Operations\/users_sol_list_hyphen_attestations\/Output\/Ok-swift.struct\/Body-swift.enum\/jsonPayload\/CodingKeys\/attestations",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Operations.users_sol_list_hyphen_attestations.Output.Ok.Body.jsonPayload.CodingKeys.attestations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiusers\/operations\/users_sol_list_hyphen_attestations\/output\/ok-swift.struct\/body-swift.enum\/jsonpayload\/codingkeys\/attestations"
+}
+}
+}

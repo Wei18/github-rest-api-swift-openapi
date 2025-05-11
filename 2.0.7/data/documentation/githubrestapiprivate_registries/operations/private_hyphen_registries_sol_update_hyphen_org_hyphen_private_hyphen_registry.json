@@ -1,0 +1,479 @@
+{
+  "abstract" : [
+    {
+      "text" : "Update a private registry for an organization",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries",
+        "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries\/Operations"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries\/Operations\/private_hyphen_registries_sol_update_hyphen_org_hyphen_private_hyphen_registry"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:31GitHubRestAPIPrivate_Registries10OperationsO037private_hyphen_registries_sol_update_h5_org_h1_g1_H9_registryO",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "enum"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "private_hyphen_registries_sol_update_hyphen_org_hyphen_private_hyphen_registry"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIPrivate_Registries"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "private_hyphen_registries_sol_update_hyphen_org_hyphen_private_hyphen_registry"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/private-registries\/Types.swift#L1622"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Enumeration",
+    "symbolKind" : "enum",
+    "title" : "Operations.private_hyphen_registries_sol_update_hyphen_org_hyphen_private_hyphen_registry"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "enum"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "private_hyphen_registries_sol_update_hyphen_org_hyphen_private_hyphen_registry"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Updates a private registry configuration with an encrypted value for an organization. Encrypt your secret using ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "https:\/\/libsodium.gitbook.io\/doc\/bindings_for_other_languages",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : ". For more information, see “",
+              "type" : "text"
+            },
+            {
+              "identifier" : "https:\/\/docs.github.com\/rest\/guides\/encrypting-secrets-for-the-rest-api",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : ".”",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "OAuth app tokens and personal access tokens (classic) need the ",
+              "type" : "text"
+            },
+            {
+              "code" : "admin:org",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " scope to use this endpoint.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "HTTP ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "PATCH \/orgs\/{org}\/private-registries\/{secret_name}",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/paths\/\/orgs\/{org}\/private-registries\/{secret_name}\/patch(private-registries\/update-org-private-registry)",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries\/Operations\/private_hyphen_registries_sol_update_hyphen_org_hyphen_private_hyphen_registry\/Input"
+      ],
+      "title" : "Structures"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries\/Operations\/private_hyphen_registries_sol_update_hyphen_org_hyphen_private_hyphen_registry\/id"
+      ],
+      "title" : "Type Properties"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries\/Operations\/private_hyphen_registries_sol_update_hyphen_org_hyphen_private_hyphen_registry\/AcceptableContentType",
+        "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries\/Operations\/private_hyphen_registries_sol_update_hyphen_org_hyphen_private_hyphen_registry\/Output"
+      ],
+      "title" : "Enumerations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapiprivate_registries\/operations\/private_hyphen_registries_sol_update_hyphen_org_hyphen_private_hyphen_registry"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIPrivate_Registries/documentation/GitHubRestAPIPrivate_Registries": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIPrivate_Registries",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiprivate_registries"
+},
+"doc://GitHubRestAPIPrivate_Registries/documentation/GitHubRestAPIPrivate_Registries/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiprivate_registries\/operations"
+},
+"doc://GitHubRestAPIPrivate_Registries/documentation/GitHubRestAPIPrivate_Registries/Operations/private_hyphen_registries_sol_update_hyphen_org_hyphen_private_hyphen_registry": {
+  "abstract" : [
+    {
+      "text" : "Update a private registry for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "private_hyphen_registries_sol_update_hyphen_org_hyphen_private_hyphen_registry"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries\/Operations\/private_hyphen_registries_sol_update_hyphen_org_hyphen_private_hyphen_registry",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "private_hyphen_registries_sol_update_hyphen_org_hyphen_private_hyphen_registry"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.private_hyphen_registries_sol_update_hyphen_org_hyphen_private_hyphen_registry",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiprivate_registries\/operations\/private_hyphen_registries_sol_update_hyphen_org_hyphen_private_hyphen_registry"
+},
+"doc://GitHubRestAPIPrivate_Registries/documentation/GitHubRestAPIPrivate_Registries/Operations/private_hyphen_registries_sol_update_hyphen_org_hyphen_private_hyphen_registry/AcceptableContentType": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AcceptableContentType"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries\/Operations\/private_hyphen_registries_sol_update_hyphen_org_hyphen_private_hyphen_registry\/AcceptableContentType",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AcceptableContentType"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.private_hyphen_registries_sol_update_hyphen_org_hyphen_private_hyphen_registry.AcceptableContentType",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiprivate_registries\/operations\/private_hyphen_registries_sol_update_hyphen_org_hyphen_private_hyphen_registry\/acceptablecontenttype"
+},
+"doc://GitHubRestAPIPrivate_Registries/documentation/GitHubRestAPIPrivate_Registries/Operations/private_hyphen_registries_sol_update_hyphen_org_hyphen_private_hyphen_registry/Input": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries\/Operations\/private_hyphen_registries_sol_update_hyphen_org_hyphen_private_hyphen_registry\/Input",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.private_hyphen_registries_sol_update_hyphen_org_hyphen_private_hyphen_registry.Input",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiprivate_registries\/operations\/private_hyphen_registries_sol_update_hyphen_org_hyphen_private_hyphen_registry\/input"
+},
+"doc://GitHubRestAPIPrivate_Registries/documentation/GitHubRestAPIPrivate_Registries/Operations/private_hyphen_registries_sol_update_hyphen_org_hyphen_private_hyphen_registry/Output": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries\/Operations\/private_hyphen_registries_sol_update_hyphen_org_hyphen_private_hyphen_registry\/Output",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.private_hyphen_registries_sol_update_hyphen_org_hyphen_private_hyphen_registry.Output",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiprivate_registries\/operations\/private_hyphen_registries_sol_update_hyphen_org_hyphen_private_hyphen_registry\/output"
+},
+"doc://GitHubRestAPIPrivate_Registries/documentation/GitHubRestAPIPrivate_Registries/Operations/private_hyphen_registries_sol_update_hyphen_org_hyphen_private_hyphen_registry/id": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "id"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIPrivate_Registries\/documentation\/GitHubRestAPIPrivate_Registries\/Operations\/private_hyphen_registries_sol_update_hyphen_org_hyphen_private_hyphen_registry\/id",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "id",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapiprivate_registries\/operations\/private_hyphen_registries_sol_update_hyphen_org_hyphen_private_hyphen_registry\/id"
+},
+"https://docs.github.com/rest/guides/encrypting-secrets-for-the-rest-api": {
+  "identifier" : "https:\/\/docs.github.com\/rest\/guides\/encrypting-secrets-for-the-rest-api",
+  "title" : "Encrypting secrets for the REST API",
+  "titleInlineContent" : [
+    {
+      "text" : "Encrypting secrets for the REST API",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/docs.github.com\/rest\/guides\/encrypting-secrets-for-the-rest-api"
+},
+"https://libsodium.gitbook.io/doc/bindings_for_other_languages": {
+  "identifier" : "https:\/\/libsodium.gitbook.io\/doc\/bindings_for_other_languages",
+  "title" : "LibSodium",
+  "titleInlineContent" : [
+    {
+      "text" : "LibSodium",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/libsodium.gitbook.io\/doc\/bindings_for_other_languages"
+}
+}
+}

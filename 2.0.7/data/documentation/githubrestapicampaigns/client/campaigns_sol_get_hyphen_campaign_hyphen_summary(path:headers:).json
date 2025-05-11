@@ -1,0 +1,887 @@
+{
+  "abstract" : [
+    {
+      "text" : "Get a campaign for an organization",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPICampaigns\/documentation\/GitHubRestAPICampaigns",
+        "doc:\/\/GitHubRestAPICampaigns\/documentation\/GitHubRestAPICampaigns\/Client",
+        "doc:\/\/GitHubRestAPICampaigns\/documentation\/GitHubRestAPICampaigns\/Client\/APIProtocol-Implementations"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPICampaigns\/documentation\/GitHubRestAPICampaigns\/Client\/campaigns_sol_get_hyphen_campaign_hyphen_summary(path:headers:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "extendedModule" : "GitHubRestAPICampaigns",
+    "externalID" : "s:22GitHubRestAPICampaigns11APIProtocolPAAE034campaigns_sol_get_hyphen_campaign_I8_summary4path7headersAA10OperationsOADO6OutputOAI5InputV4PathV_AM7HeadersVtYaKF::SYNTHESIZED::s:22GitHubRestAPICampaigns6ClientV",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "func"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "campaigns_sol_get_hyphen_campaign_hyphen_summary"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "path"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:22GitHubRestAPICampaigns10OperationsO",
+        "text" : "Operations"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:22GitHubRestAPICampaigns10OperationsO034campaigns_sol_get_hyphen_campaign_I8_summaryO",
+        "text" : "campaigns_sol_get_hyphen_campaign_hyphen_summary"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:22GitHubRestAPICampaigns10OperationsO034campaigns_sol_get_hyphen_campaign_I8_summaryO5InputV",
+        "text" : "Input"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:22GitHubRestAPICampaigns10OperationsO034campaigns_sol_get_hyphen_campaign_I8_summaryO5InputV4PathV",
+        "text" : "Path"
+      },
+      {
+        "kind" : "text",
+        "text" : ", "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "headers"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:22GitHubRestAPICampaigns10OperationsO",
+        "text" : "Operations"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:22GitHubRestAPICampaigns10OperationsO034campaigns_sol_get_hyphen_campaign_I8_summaryO",
+        "text" : "campaigns_sol_get_hyphen_campaign_hyphen_summary"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:22GitHubRestAPICampaigns10OperationsO034campaigns_sol_get_hyphen_campaign_I8_summaryO5InputV",
+        "text" : "Input"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:22GitHubRestAPICampaigns10OperationsO034campaigns_sol_get_hyphen_campaign_I8_summaryO5InputV7HeadersV",
+        "text" : "Headers"
+      },
+      {
+        "kind" : "text",
+        "text" : ") "
+      },
+      {
+        "kind" : "keyword",
+        "text" : "async"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "keyword",
+        "text" : "throws"
+      },
+      {
+        "kind" : "text",
+        "text" : " -> "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:22GitHubRestAPICampaigns10OperationsO",
+        "text" : "Operations"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:22GitHubRestAPICampaigns10OperationsO034campaigns_sol_get_hyphen_campaign_I8_summaryO",
+        "text" : "campaigns_sol_get_hyphen_campaign_hyphen_summary"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:22GitHubRestAPICampaigns10OperationsO034campaigns_sol_get_hyphen_campaign_I8_summaryO6OutputO",
+        "text" : "Output"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPICampaigns"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/campaigns\/Types.swift#L131"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Instance Method",
+    "symbolKind" : "method",
+    "title" : "campaigns_sol_get_hyphen_campaign_hyphen_summary(path:headers:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "func"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "campaigns_sol_get_hyphen_campaign_hyphen_summary"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "path"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICampaigns\/documentation\/GitHubRestAPICampaigns\/Operations",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:22GitHubRestAPICampaigns10OperationsO",
+              "text" : "Operations"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICampaigns\/documentation\/GitHubRestAPICampaigns\/Operations\/campaigns_sol_get_hyphen_campaign_hyphen_summary",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:22GitHubRestAPICampaigns10OperationsO034campaigns_sol_get_hyphen_campaign_I8_summaryO",
+              "text" : "campaigns_sol_get_hyphen_campaign_hyphen_summary"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICampaigns\/documentation\/GitHubRestAPICampaigns\/Operations\/campaigns_sol_get_hyphen_campaign_hyphen_summary\/Input",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:22GitHubRestAPICampaigns10OperationsO034campaigns_sol_get_hyphen_campaign_I8_summaryO5InputV",
+              "text" : "Input"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICampaigns\/documentation\/GitHubRestAPICampaigns\/Operations\/campaigns_sol_get_hyphen_campaign_hyphen_summary\/Input\/Path-swift.struct",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:22GitHubRestAPICampaigns10OperationsO034campaigns_sol_get_hyphen_campaign_I8_summaryO5InputV4PathV",
+              "text" : "Path"
+            },
+            {
+              "kind" : "text",
+              "text" : ", "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "headers"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICampaigns\/documentation\/GitHubRestAPICampaigns\/Operations",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:22GitHubRestAPICampaigns10OperationsO",
+              "text" : "Operations"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICampaigns\/documentation\/GitHubRestAPICampaigns\/Operations\/campaigns_sol_get_hyphen_campaign_hyphen_summary",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:22GitHubRestAPICampaigns10OperationsO034campaigns_sol_get_hyphen_campaign_I8_summaryO",
+              "text" : "campaigns_sol_get_hyphen_campaign_hyphen_summary"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICampaigns\/documentation\/GitHubRestAPICampaigns\/Operations\/campaigns_sol_get_hyphen_campaign_hyphen_summary\/Input",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:22GitHubRestAPICampaigns10OperationsO034campaigns_sol_get_hyphen_campaign_I8_summaryO5InputV",
+              "text" : "Input"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICampaigns\/documentation\/GitHubRestAPICampaigns\/Operations\/campaigns_sol_get_hyphen_campaign_hyphen_summary\/Input\/Headers-swift.struct",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:22GitHubRestAPICampaigns10OperationsO034campaigns_sol_get_hyphen_campaign_I8_summaryO5InputV7HeadersV",
+              "text" : "Headers"
+            },
+            {
+              "kind" : "text",
+              "text" : " = .init()) "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "async"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "throws"
+            },
+            {
+              "kind" : "text",
+              "text" : " -> "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICampaigns\/documentation\/GitHubRestAPICampaigns\/Operations",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:22GitHubRestAPICampaigns10OperationsO",
+              "text" : "Operations"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICampaigns\/documentation\/GitHubRestAPICampaigns\/Operations\/campaigns_sol_get_hyphen_campaign_hyphen_summary",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:22GitHubRestAPICampaigns10OperationsO034campaigns_sol_get_hyphen_campaign_I8_summaryO",
+              "text" : "campaigns_sol_get_hyphen_campaign_hyphen_summary"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICampaigns\/documentation\/GitHubRestAPICampaigns\/Operations\/campaigns_sol_get_hyphen_campaign_hyphen_summary\/Output",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:22GitHubRestAPICampaigns10OperationsO034campaigns_sol_get_hyphen_campaign_I8_summaryO6OutputO",
+              "text" : "Output"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Gets a campaign for an organization.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "The authenticated user must be an owner or security manager for the organization to use this endpoint.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "OAuth app tokens and personal access tokens (classic) need the ",
+              "type" : "text"
+            },
+            {
+              "code" : "security_events",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " scope to use this endpoint.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "HTTP ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "GET \/orgs\/{org}\/campaigns\/{campaign_number}",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/paths\/\/orgs\/{org}\/campaigns\/{campaign_number}\/get(campaigns\/get-campaign-summary)",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapicampaigns\/client\/campaigns_sol_get_hyphen_campaign_hyphen_summary(path:headers:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPICampaigns/documentation/GitHubRestAPICampaigns": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICampaigns\/documentation\/GitHubRestAPICampaigns",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPICampaigns",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicampaigns"
+},
+"doc://GitHubRestAPICampaigns/documentation/GitHubRestAPICampaigns/Client": {
+  "abstract" : [
+    {
+      "text" : "GitHub’s v3 REST API.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Client"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICampaigns\/documentation\/GitHubRestAPICampaigns\/Client",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Client"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Client",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicampaigns\/client"
+},
+"doc://GitHubRestAPICampaigns/documentation/GitHubRestAPICampaigns/Client/APIProtocol-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICampaigns\/documentation\/GitHubRestAPICampaigns\/Client\/APIProtocol-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "APIProtocol Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicampaigns\/client\/apiprotocol-implementations"
+},
+"doc://GitHubRestAPICampaigns/documentation/GitHubRestAPICampaigns/Client/campaigns_sol_get_hyphen_campaign_hyphen_summary(path:headers:)": {
+  "abstract" : [
+    {
+      "text" : "Get a campaign for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "campaigns_sol_get_hyphen_campaign_hyphen_summary"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "path"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPICampaigns10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPICampaigns10OperationsO034campaigns_sol_get_hyphen_campaign_I8_summaryO",
+      "text" : "campaigns_sol_get_hyphen_campaign_hyphen_summary"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPICampaigns10OperationsO034campaigns_sol_get_hyphen_campaign_I8_summaryO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPICampaigns10OperationsO034campaigns_sol_get_hyphen_campaign_I8_summaryO5InputV4PathV",
+      "text" : "Path"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPICampaigns10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPICampaigns10OperationsO034campaigns_sol_get_hyphen_campaign_I8_summaryO",
+      "text" : "campaigns_sol_get_hyphen_campaign_hyphen_summary"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPICampaigns10OperationsO034campaigns_sol_get_hyphen_campaign_I8_summaryO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPICampaigns10OperationsO034campaigns_sol_get_hyphen_campaign_I8_summaryO5InputV7HeadersV",
+      "text" : "Headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPICampaigns10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPICampaigns10OperationsO034campaigns_sol_get_hyphen_campaign_I8_summaryO",
+      "text" : "campaigns_sol_get_hyphen_campaign_hyphen_summary"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:22GitHubRestAPICampaigns10OperationsO034campaigns_sol_get_hyphen_campaign_I8_summaryO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICampaigns\/documentation\/GitHubRestAPICampaigns\/Client\/campaigns_sol_get_hyphen_campaign_hyphen_summary(path:headers:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "campaigns_sol_get_hyphen_campaign_hyphen_summary(path:headers:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicampaigns\/client\/campaigns_sol_get_hyphen_campaign_hyphen_summary(path:headers:)"
+},
+"doc://GitHubRestAPICampaigns/documentation/GitHubRestAPICampaigns/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICampaigns\/documentation\/GitHubRestAPICampaigns\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicampaigns\/operations"
+},
+"doc://GitHubRestAPICampaigns/documentation/GitHubRestAPICampaigns/Operations/campaigns_sol_get_hyphen_campaign_hyphen_summary": {
+  "abstract" : [
+    {
+      "text" : "Get a campaign for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "campaigns_sol_get_hyphen_campaign_hyphen_summary"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICampaigns\/documentation\/GitHubRestAPICampaigns\/Operations\/campaigns_sol_get_hyphen_campaign_hyphen_summary",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "campaigns_sol_get_hyphen_campaign_hyphen_summary"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.campaigns_sol_get_hyphen_campaign_hyphen_summary",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicampaigns\/operations\/campaigns_sol_get_hyphen_campaign_hyphen_summary"
+},
+"doc://GitHubRestAPICampaigns/documentation/GitHubRestAPICampaigns/Operations/campaigns_sol_get_hyphen_campaign_hyphen_summary/Input": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICampaigns\/documentation\/GitHubRestAPICampaigns\/Operations\/campaigns_sol_get_hyphen_campaign_hyphen_summary\/Input",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.campaigns_sol_get_hyphen_campaign_hyphen_summary.Input",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicampaigns\/operations\/campaigns_sol_get_hyphen_campaign_hyphen_summary\/input"
+},
+"doc://GitHubRestAPICampaigns/documentation/GitHubRestAPICampaigns/Operations/campaigns_sol_get_hyphen_campaign_hyphen_summary/Input/Headers-swift.struct": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Headers"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICampaigns\/documentation\/GitHubRestAPICampaigns\/Operations\/campaigns_sol_get_hyphen_campaign_hyphen_summary\/Input\/Headers-swift.struct",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Headers"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.campaigns_sol_get_hyphen_campaign_hyphen_summary.Input.Headers",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicampaigns\/operations\/campaigns_sol_get_hyphen_campaign_hyphen_summary\/input\/headers-swift.struct"
+},
+"doc://GitHubRestAPICampaigns/documentation/GitHubRestAPICampaigns/Operations/campaigns_sol_get_hyphen_campaign_hyphen_summary/Input/Path-swift.struct": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Path"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICampaigns\/documentation\/GitHubRestAPICampaigns\/Operations\/campaigns_sol_get_hyphen_campaign_hyphen_summary\/Input\/Path-swift.struct",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Path"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.campaigns_sol_get_hyphen_campaign_hyphen_summary.Input.Path",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicampaigns\/operations\/campaigns_sol_get_hyphen_campaign_hyphen_summary\/input\/path-swift.struct"
+},
+"doc://GitHubRestAPICampaigns/documentation/GitHubRestAPICampaigns/Operations/campaigns_sol_get_hyphen_campaign_hyphen_summary/Output": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICampaigns\/documentation\/GitHubRestAPICampaigns\/Operations\/campaigns_sol_get_hyphen_campaign_hyphen_summary\/Output",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Output"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.campaigns_sol_get_hyphen_campaign_hyphen_summary.Output",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicampaigns\/operations\/campaigns_sol_get_hyphen_campaign_hyphen_summary\/output"
+}
+}
+}

@@ -1,0 +1,660 @@
+{
+  "abstract" : [
+    {
+      "text" : "Encodes this value into the given encoder, when the type’s ",
+      "type" : "text"
+    },
+    {
+      "code" : "RawValue",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "is ",
+      "type" : "text"
+    },
+    {
+      "code" : "String",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security",
+        "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Operations",
+        "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Operations\/code_hyphen_security_sol_create_hyphen_configuration_hyphen_for_hyphen_enterprise",
+        "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Operations\/code_hyphen_security_sol_create_hyphen_configuration_hyphen_for_hyphen_enterprise\/Input",
+        "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Operations\/code_hyphen_security_sol_create_hyphen_configuration_hyphen_for_hyphen_enterprise\/Input\/Body-swift.enum",
+        "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Operations\/code_hyphen_security_sol_create_hyphen_configuration_hyphen_for_hyphen_enterprise\/Input\/Body-swift.enum\/jsonPayload",
+        "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Operations\/code_hyphen_security_sol_create_hyphen_configuration_hyphen_for_hyphen_enterprise\/Input\/Body-swift.enum\/jsonPayload\/secret_scanningPayload",
+        "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Operations\/code_hyphen_security_sol_create_hyphen_configuration_hyphen_for_hyphen_enterprise\/Input\/Body-swift.enum\/jsonPayload\/secret_scanningPayload\/RawRepresentable-Implementations"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Operations\/code_hyphen_security_sol_create_hyphen_configuration_hyphen_for_hyphen_enterprise\/Input\/Body-swift.enum\/jsonPayload\/secret_scanningPayload\/encode(to:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "conformance" : {
+      "availabilityPrefix" : [
+        {
+          "text" : "Available when",
+          "type" : "text"
+        }
+      ],
+      "conformancePrefix" : [
+        {
+          "text" : "Conforms when",
+          "type" : "text"
+        }
+      ],
+      "constraints" : [
+        {
+          "code" : "Self",
+          "type" : "codeVoice"
+        },
+        {
+          "text" : " conforms to ",
+          "type" : "text"
+        },
+        {
+          "code" : "Encodable",
+          "type" : "codeVoice"
+        },
+        {
+          "text" : ", ",
+          "type" : "text"
+        },
+        {
+          "code" : "Self",
+          "type" : "codeVoice"
+        },
+        {
+          "text" : " conforms to ",
+          "type" : "text"
+        },
+        {
+          "code" : "RawRepresentable",
+          "type" : "codeVoice"
+        },
+        {
+          "text" : ", and ",
+          "type" : "text"
+        },
+        {
+          "code" : "RawValue",
+          "type" : "codeVoice"
+        },
+        {
+          "text" : " is ",
+          "type" : "text"
+        },
+        {
+          "code" : "String",
+          "type" : "codeVoice"
+        },
+        {
+          "text" : ".",
+          "type" : "text"
+        }
+      ]
+    },
+    "extendedModule" : "Swift",
+    "externalID" : "s:SYsSERzSS8RawValueSYRtzrlE6encode2toys7Encoder_p_tKF::SYNTHESIZED::s:26GitHubRestAPICode_Security10OperationsO032code_hyphen_security_sol_create_h15_configuration_h5_for_H11_enterpriseO5InputV4BodyO11jsonPayloadV015secret_scanningR0O",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "func"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "encode"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "to"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:s7EncoderP",
+        "text" : "Encoder"
+      },
+      {
+        "kind" : "text",
+        "text" : ") "
+      },
+      {
+        "kind" : "keyword",
+        "text" : "throws"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPICode_Security",
+        "relatedModules" : [
+          "Swift"
+        ]
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Instance Method",
+    "symbolKind" : "method",
+    "title" : "encode(to:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "func"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "encode"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "to"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "internalParam",
+              "text" : "encoder"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:s7EncoderP",
+              "text" : "Encoder"
+            },
+            {
+              "kind" : "text",
+              "text" : ") "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "throws"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "kind" : "parameters",
+      "parameters" : [
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The encoder to write data to.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "encoder"
+        }
+      ]
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "This function throws an error if any values are invalid for the given",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "encoder’s format.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapicode_security\/operations\/code_hyphen_security_sol_create_hyphen_configuration_hyphen_for_hyphen_enterprise\/input\/body-swift.enum\/jsonpayload\/secret_scanningpayload\/encode(to:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPICode_Security",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/operations"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/Operations/code_hyphen_security_sol_create_hyphen_configuration_hyphen_for_hyphen_enterprise": {
+  "abstract" : [
+    {
+      "text" : "Create a code security configuration for an enterprise",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "code_hyphen_security_sol_create_hyphen_configuration_hyphen_for_hyphen_enterprise"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Operations\/code_hyphen_security_sol_create_hyphen_configuration_hyphen_for_hyphen_enterprise",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "code_hyphen_security_sol_create_hyphen_configuration_hyphen_for_hyphen_enterprise"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.code_hyphen_security_sol_create_hyphen_configuration_hyphen_for_hyphen_enterprise",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/operations\/code_hyphen_security_sol_create_hyphen_configuration_hyphen_for_hyphen_enterprise"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/Operations/code_hyphen_security_sol_create_hyphen_configuration_hyphen_for_hyphen_enterprise/Input": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Operations\/code_hyphen_security_sol_create_hyphen_configuration_hyphen_for_hyphen_enterprise\/Input",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.code_hyphen_security_sol_create_hyphen_configuration_hyphen_for_hyphen_enterprise.Input",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/operations\/code_hyphen_security_sol_create_hyphen_configuration_hyphen_for_hyphen_enterprise\/input"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/Operations/code_hyphen_security_sol_create_hyphen_configuration_hyphen_for_hyphen_enterprise/Input/Body-swift.enum": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Body"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Operations\/code_hyphen_security_sol_create_hyphen_configuration_hyphen_for_hyphen_enterprise\/Input\/Body-swift.enum",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Body"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.code_hyphen_security_sol_create_hyphen_configuration_hyphen_for_hyphen_enterprise.Input.Body",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/operations\/code_hyphen_security_sol_create_hyphen_configuration_hyphen_for_hyphen_enterprise\/input\/body-swift.enum"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/Operations/code_hyphen_security_sol_create_hyphen_configuration_hyphen_for_hyphen_enterprise/Input/Body-swift.enum/jsonPayload": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "jsonPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Operations\/code_hyphen_security_sol_create_hyphen_configuration_hyphen_for_hyphen_enterprise\/Input\/Body-swift.enum\/jsonPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "jsonPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.code_hyphen_security_sol_create_hyphen_configuration_hyphen_for_hyphen_enterprise.Input.Body.jsonPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/operations\/code_hyphen_security_sol_create_hyphen_configuration_hyphen_for_hyphen_enterprise\/input\/body-swift.enum\/jsonpayload"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/Operations/code_hyphen_security_sol_create_hyphen_configuration_hyphen_for_hyphen_enterprise/Input/Body-swift.enum/jsonPayload/secret_scanningPayload": {
+  "abstract" : [
+    {
+      "text" : "The enablement status of secret scanning",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "secret_scanningPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Operations\/code_hyphen_security_sol_create_hyphen_configuration_hyphen_for_hyphen_enterprise\/Input\/Body-swift.enum\/jsonPayload\/secret_scanningPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "secret_scanningPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.code_hyphen_security_sol_create_hyphen_configuration_hyphen_for_hyphen_enterprise.Input.Body.jsonPayload.secret_scanningPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/operations\/code_hyphen_security_sol_create_hyphen_configuration_hyphen_for_hyphen_enterprise\/input\/body-swift.enum\/jsonpayload\/secret_scanningpayload"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/Operations/code_hyphen_security_sol_create_hyphen_configuration_hyphen_for_hyphen_enterprise/Input/Body-swift.enum/jsonPayload/secret_scanningPayload/RawRepresentable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Operations\/code_hyphen_security_sol_create_hyphen_configuration_hyphen_for_hyphen_enterprise\/Input\/Body-swift.enum\/jsonPayload\/secret_scanningPayload\/RawRepresentable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "RawRepresentable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/operations\/code_hyphen_security_sol_create_hyphen_configuration_hyphen_for_hyphen_enterprise\/input\/body-swift.enum\/jsonpayload\/secret_scanningpayload\/rawrepresentable-implementations"
+},
+"doc://GitHubRestAPICode_Security/documentation/GitHubRestAPICode_Security/Operations/code_hyphen_security_sol_create_hyphen_configuration_hyphen_for_hyphen_enterprise/Input/Body-swift.enum/jsonPayload/secret_scanningPayload/encode(to:)": {
+  "abstract" : [
+    {
+      "text" : "Encodes this value into the given encoder, when the type’s ",
+      "type" : "text"
+    },
+    {
+      "code" : "RawValue",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "is ",
+      "type" : "text"
+    },
+    {
+      "code" : "String",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "conformance" : {
+    "availabilityPrefix" : [
+      {
+        "text" : "Available when",
+        "type" : "text"
+      }
+    ],
+    "conformancePrefix" : [
+      {
+        "text" : "Conforms when",
+        "type" : "text"
+      }
+    ],
+    "constraints" : [
+      {
+        "code" : "Self",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : " conforms to ",
+        "type" : "text"
+      },
+      {
+        "code" : "Encodable",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : ", ",
+        "type" : "text"
+      },
+      {
+        "code" : "Self",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : " conforms to ",
+        "type" : "text"
+      },
+      {
+        "code" : "RawRepresentable",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : ", and ",
+        "type" : "text"
+      },
+      {
+        "code" : "RawValue",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : " is ",
+        "type" : "text"
+      },
+      {
+        "code" : "String",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : ".",
+        "type" : "text"
+      }
+    ]
+  },
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "encode"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "to"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:s7EncoderP",
+      "text" : "Encoder"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICode_Security\/documentation\/GitHubRestAPICode_Security\/Operations\/code_hyphen_security_sol_create_hyphen_configuration_hyphen_for_hyphen_enterprise\/Input\/Body-swift.enum\/jsonPayload\/secret_scanningPayload\/encode(to:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "encode(to:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicode_security\/operations\/code_hyphen_security_sol_create_hyphen_configuration_hyphen_for_hyphen_enterprise\/input\/body-swift.enum\/jsonpayload\/secret_scanningpayload\/encode(to:)"
+}
+}
+}

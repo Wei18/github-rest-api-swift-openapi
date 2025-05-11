@@ -1,0 +1,947 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations",
+        "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components",
+        "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas",
+        "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas\/migration"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas\/migration\/CodingKeys"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:23GitHubRestAPIMigrations10ComponentsO7SchemasO9migrationV10CodingKeysO",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "enum"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "CodingKeys"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIMigrations"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "CodingKeys"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/migrations\/Types.swift#L2987"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Enumeration",
+    "symbolKind" : "enum",
+    "title" : "Components.Schemas.migration.CodingKeys"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "enum"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "CodingKeys"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIMigrations\/s9CodingKeyP",
+        "doc:\/\/GitHubRestAPIMigrations\/s28CustomDebugStringConvertibleP",
+        "doc:\/\/GitHubRestAPIMigrations\/s23CustomStringConvertibleP",
+        "doc:\/\/GitHubRestAPIMigrations\/SQ",
+        "doc:\/\/GitHubRestAPIMigrations\/SH",
+        "doc:\/\/GitHubRestAPIMigrations\/SY",
+        "doc:\/\/GitHubRestAPIMigrations\/s8SendableP"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas\/migration\/CodingKeys\/archive_url",
+        "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas\/migration\/CodingKeys\/created_at",
+        "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas\/migration\/CodingKeys\/exclude",
+        "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas\/migration\/CodingKeys\/exclude_attachments",
+        "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas\/migration\/CodingKeys\/exclude_git_data",
+        "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas\/migration\/CodingKeys\/exclude_metadata",
+        "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas\/migration\/CodingKeys\/exclude_owner_projects",
+        "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas\/migration\/CodingKeys\/exclude_releases",
+        "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas\/migration\/CodingKeys\/guid",
+        "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas\/migration\/CodingKeys\/id",
+        "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas\/migration\/CodingKeys\/lock_repositories",
+        "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas\/migration\/CodingKeys\/node_id",
+        "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas\/migration\/CodingKeys\/org_metadata_only",
+        "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas\/migration\/CodingKeys\/owner",
+        "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas\/migration\/CodingKeys\/repositories",
+        "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas\/migration\/CodingKeys\/state",
+        "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas\/migration\/CodingKeys\/updated_at",
+        "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas\/migration\/CodingKeys\/url"
+      ],
+      "title" : "Enumeration Cases"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas\/migration\/CodingKeys\/init(intValue:)",
+        "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas\/migration\/CodingKeys\/init(rawValue:)",
+        "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas\/migration\/CodingKeys\/init(stringValue:)"
+      ],
+      "title" : "Initializers"
+    },
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas\/migration\/CodingKeys\/CodingKey-Implementations",
+        "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas\/migration\/CodingKeys\/Equatable-Implementations",
+        "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas\/migration\/CodingKeys\/RawRepresentable-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapimigrations\/components\/schemas\/migration\/codingkeys"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIMigrations/SH": {
+  "identifier" : "doc:\/\/GitHubRestAPIMigrations\/SH",
+  "title" : "Swift.Hashable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIMigrations/SQ": {
+  "identifier" : "doc:\/\/GitHubRestAPIMigrations\/SQ",
+  "title" : "Swift.Equatable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIMigrations/SY": {
+  "identifier" : "doc:\/\/GitHubRestAPIMigrations\/SY",
+  "title" : "Swift.RawRepresentable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIMigrations/documentation/GitHubRestAPIMigrations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIMigrations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimigrations"
+},
+"doc://GitHubRestAPIMigrations/documentation/GitHubRestAPIMigrations/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimigrations\/components"
+},
+"doc://GitHubRestAPIMigrations/documentation/GitHubRestAPIMigrations/Components/Schemas": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/schemas",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimigrations\/components\/schemas"
+},
+"doc://GitHubRestAPIMigrations/documentation/GitHubRestAPIMigrations/Components/Schemas/migration": {
+  "abstract" : [
+    {
+      "text" : "A migration.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "migration"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas\/migration",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "migration"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.migration",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimigrations\/components\/schemas\/migration"
+},
+"doc://GitHubRestAPIMigrations/documentation/GitHubRestAPIMigrations/Components/Schemas/migration/CodingKeys": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas\/migration\/CodingKeys",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.migration.CodingKeys",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimigrations\/components\/schemas\/migration\/codingkeys"
+},
+"doc://GitHubRestAPIMigrations/documentation/GitHubRestAPIMigrations/Components/Schemas/migration/CodingKeys/CodingKey-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas\/migration\/CodingKeys\/CodingKey-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "CodingKey Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimigrations\/components\/schemas\/migration\/codingkeys\/codingkey-implementations"
+},
+"doc://GitHubRestAPIMigrations/documentation/GitHubRestAPIMigrations/Components/Schemas/migration/CodingKeys/Equatable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas\/migration\/CodingKeys\/Equatable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Equatable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimigrations\/components\/schemas\/migration\/codingkeys\/equatable-implementations"
+},
+"doc://GitHubRestAPIMigrations/documentation/GitHubRestAPIMigrations/Components/Schemas/migration/CodingKeys/RawRepresentable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas\/migration\/CodingKeys\/RawRepresentable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "RawRepresentable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimigrations\/components\/schemas\/migration\/codingkeys\/rawrepresentable-implementations"
+},
+"doc://GitHubRestAPIMigrations/documentation/GitHubRestAPIMigrations/Components/Schemas/migration/CodingKeys/archive_url": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "archive_url"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas\/migration\/CodingKeys\/archive_url",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.migration.CodingKeys.archive_url",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimigrations\/components\/schemas\/migration\/codingkeys\/archive_url"
+},
+"doc://GitHubRestAPIMigrations/documentation/GitHubRestAPIMigrations/Components/Schemas/migration/CodingKeys/created_at": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "created_at"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas\/migration\/CodingKeys\/created_at",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.migration.CodingKeys.created_at",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimigrations\/components\/schemas\/migration\/codingkeys\/created_at"
+},
+"doc://GitHubRestAPIMigrations/documentation/GitHubRestAPIMigrations/Components/Schemas/migration/CodingKeys/exclude": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "exclude"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas\/migration\/CodingKeys\/exclude",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.migration.CodingKeys.exclude",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimigrations\/components\/schemas\/migration\/codingkeys\/exclude"
+},
+"doc://GitHubRestAPIMigrations/documentation/GitHubRestAPIMigrations/Components/Schemas/migration/CodingKeys/exclude_attachments": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "exclude_attachments"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas\/migration\/CodingKeys\/exclude_attachments",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.migration.CodingKeys.exclude_attachments",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimigrations\/components\/schemas\/migration\/codingkeys\/exclude_attachments"
+},
+"doc://GitHubRestAPIMigrations/documentation/GitHubRestAPIMigrations/Components/Schemas/migration/CodingKeys/exclude_git_data": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "exclude_git_data"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas\/migration\/CodingKeys\/exclude_git_data",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.migration.CodingKeys.exclude_git_data",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimigrations\/components\/schemas\/migration\/codingkeys\/exclude_git_data"
+},
+"doc://GitHubRestAPIMigrations/documentation/GitHubRestAPIMigrations/Components/Schemas/migration/CodingKeys/exclude_metadata": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "exclude_metadata"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas\/migration\/CodingKeys\/exclude_metadata",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.migration.CodingKeys.exclude_metadata",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimigrations\/components\/schemas\/migration\/codingkeys\/exclude_metadata"
+},
+"doc://GitHubRestAPIMigrations/documentation/GitHubRestAPIMigrations/Components/Schemas/migration/CodingKeys/exclude_owner_projects": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "exclude_owner_projects"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas\/migration\/CodingKeys\/exclude_owner_projects",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.migration.CodingKeys.exclude_owner_projects",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimigrations\/components\/schemas\/migration\/codingkeys\/exclude_owner_projects"
+},
+"doc://GitHubRestAPIMigrations/documentation/GitHubRestAPIMigrations/Components/Schemas/migration/CodingKeys/exclude_releases": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "exclude_releases"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas\/migration\/CodingKeys\/exclude_releases",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.migration.CodingKeys.exclude_releases",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimigrations\/components\/schemas\/migration\/codingkeys\/exclude_releases"
+},
+"doc://GitHubRestAPIMigrations/documentation/GitHubRestAPIMigrations/Components/Schemas/migration/CodingKeys/guid": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "guid"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas\/migration\/CodingKeys\/guid",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.migration.CodingKeys.guid",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimigrations\/components\/schemas\/migration\/codingkeys\/guid"
+},
+"doc://GitHubRestAPIMigrations/documentation/GitHubRestAPIMigrations/Components/Schemas/migration/CodingKeys/id": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "id"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas\/migration\/CodingKeys\/id",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.migration.CodingKeys.id",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimigrations\/components\/schemas\/migration\/codingkeys\/id"
+},
+"doc://GitHubRestAPIMigrations/documentation/GitHubRestAPIMigrations/Components/Schemas/migration/CodingKeys/init(intValue:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "?("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "intValue"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas\/migration\/CodingKeys\/init(intValue:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(intValue:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimigrations\/components\/schemas\/migration\/codingkeys\/init(intvalue:)"
+},
+"doc://GitHubRestAPIMigrations/documentation/GitHubRestAPIMigrations/Components/Schemas/migration/CodingKeys/init(rawValue:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "?("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "rawValue"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas\/migration\/CodingKeys\/init(rawValue:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(rawValue:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimigrations\/components\/schemas\/migration\/codingkeys\/init(rawvalue:)"
+},
+"doc://GitHubRestAPIMigrations/documentation/GitHubRestAPIMigrations/Components/Schemas/migration/CodingKeys/init(stringValue:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "?("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "stringValue"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas\/migration\/CodingKeys\/init(stringValue:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(stringValue:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimigrations\/components\/schemas\/migration\/codingkeys\/init(stringvalue:)"
+},
+"doc://GitHubRestAPIMigrations/documentation/GitHubRestAPIMigrations/Components/Schemas/migration/CodingKeys/lock_repositories": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "lock_repositories"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas\/migration\/CodingKeys\/lock_repositories",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.migration.CodingKeys.lock_repositories",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimigrations\/components\/schemas\/migration\/codingkeys\/lock_repositories"
+},
+"doc://GitHubRestAPIMigrations/documentation/GitHubRestAPIMigrations/Components/Schemas/migration/CodingKeys/node_id": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "node_id"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas\/migration\/CodingKeys\/node_id",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.migration.CodingKeys.node_id",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimigrations\/components\/schemas\/migration\/codingkeys\/node_id"
+},
+"doc://GitHubRestAPIMigrations/documentation/GitHubRestAPIMigrations/Components/Schemas/migration/CodingKeys/org_metadata_only": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "org_metadata_only"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas\/migration\/CodingKeys\/org_metadata_only",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.migration.CodingKeys.org_metadata_only",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimigrations\/components\/schemas\/migration\/codingkeys\/org_metadata_only"
+},
+"doc://GitHubRestAPIMigrations/documentation/GitHubRestAPIMigrations/Components/Schemas/migration/CodingKeys/owner": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "owner"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas\/migration\/CodingKeys\/owner",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.migration.CodingKeys.owner",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimigrations\/components\/schemas\/migration\/codingkeys\/owner"
+},
+"doc://GitHubRestAPIMigrations/documentation/GitHubRestAPIMigrations/Components/Schemas/migration/CodingKeys/repositories": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "repositories"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas\/migration\/CodingKeys\/repositories",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.migration.CodingKeys.repositories",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimigrations\/components\/schemas\/migration\/codingkeys\/repositories"
+},
+"doc://GitHubRestAPIMigrations/documentation/GitHubRestAPIMigrations/Components/Schemas/migration/CodingKeys/state": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "state"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas\/migration\/CodingKeys\/state",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.migration.CodingKeys.state",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimigrations\/components\/schemas\/migration\/codingkeys\/state"
+},
+"doc://GitHubRestAPIMigrations/documentation/GitHubRestAPIMigrations/Components/Schemas/migration/CodingKeys/updated_at": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "updated_at"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas\/migration\/CodingKeys\/updated_at",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.migration.CodingKeys.updated_at",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimigrations\/components\/schemas\/migration\/codingkeys\/updated_at"
+},
+"doc://GitHubRestAPIMigrations/documentation/GitHubRestAPIMigrations/Components/Schemas/migration/CodingKeys/url": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "case"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "url"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIMigrations\/documentation\/GitHubRestAPIMigrations\/Components\/Schemas\/migration\/CodingKeys\/url",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "Components.Schemas.migration.CodingKeys.url",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapimigrations\/components\/schemas\/migration\/codingkeys\/url"
+},
+"doc://GitHubRestAPIMigrations/s23CustomStringConvertibleP": {
+  "identifier" : "doc:\/\/GitHubRestAPIMigrations\/s23CustomStringConvertibleP",
+  "title" : "Swift.CustomStringConvertible",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIMigrations/s28CustomDebugStringConvertibleP": {
+  "identifier" : "doc:\/\/GitHubRestAPIMigrations\/s28CustomDebugStringConvertibleP",
+  "title" : "Swift.CustomDebugStringConvertible",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIMigrations/s8SendableP": {
+  "identifier" : "doc:\/\/GitHubRestAPIMigrations\/s8SendableP",
+  "title" : "Swift.Sendable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIMigrations/s9CodingKeyP": {
+  "identifier" : "doc:\/\/GitHubRestAPIMigrations\/s9CodingKeyP",
+  "title" : "Swift.CodingKey",
+  "type" : "unresolvable"
+}
+}
+}

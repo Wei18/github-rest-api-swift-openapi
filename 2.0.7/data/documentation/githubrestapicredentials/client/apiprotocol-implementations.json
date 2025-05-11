@@ -1,0 +1,260 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPICredentials\/documentation\/GitHubRestAPICredentials",
+        "doc:\/\/GitHubRestAPICredentials\/documentation\/GitHubRestAPICredentials\/Client"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPICredentials\/documentation\/GitHubRestAPICredentials\/Client\/APIProtocol-Implementations"
+  },
+  "kind" : "article",
+  "metadata" : {
+    "modules" : [
+      {
+        "name" : "GitHubRestAPICredentials"
+      }
+    ],
+    "role" : "collectionGroup",
+    "title" : "APIProtocol Implementations"
+  },
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPICredentials\/documentation\/GitHubRestAPICredentials\/Client\/credentials_sol_revoke(headers:body:)"
+      ],
+      "title" : "Instance Methods"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapicredentials\/client\/apiprotocol-implementations"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPICredentials/documentation/GitHubRestAPICredentials": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICredentials\/documentation\/GitHubRestAPICredentials",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPICredentials",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicredentials"
+},
+"doc://GitHubRestAPICredentials/documentation/GitHubRestAPICredentials/Client": {
+  "abstract" : [
+    {
+      "text" : "GitHub’s v3 REST API.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Client"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICredentials\/documentation\/GitHubRestAPICredentials\/Client",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Client"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Client",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicredentials\/client"
+},
+"doc://GitHubRestAPICredentials/documentation/GitHubRestAPICredentials/Client/credentials_sol_revoke(headers:body:)": {
+  "abstract" : [
+    {
+      "text" : "Revoke a list of credentials",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "credentials_sol_revoke"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:24GitHubRestAPICredentials10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:24GitHubRestAPICredentials10OperationsO22credentials_sol_revokeO",
+      "text" : "credentials_sol_revoke"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:24GitHubRestAPICredentials10OperationsO22credentials_sol_revokeO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:24GitHubRestAPICredentials10OperationsO22credentials_sol_revokeO5InputV7HeadersV",
+      "text" : "Headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "body"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:24GitHubRestAPICredentials10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:24GitHubRestAPICredentials10OperationsO22credentials_sol_revokeO",
+      "text" : "credentials_sol_revoke"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:24GitHubRestAPICredentials10OperationsO22credentials_sol_revokeO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:24GitHubRestAPICredentials10OperationsO22credentials_sol_revokeO5InputV4BodyO",
+      "text" : "Body"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:24GitHubRestAPICredentials10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:24GitHubRestAPICredentials10OperationsO22credentials_sol_revokeO",
+      "text" : "credentials_sol_revoke"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:24GitHubRestAPICredentials10OperationsO22credentials_sol_revokeO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICredentials\/documentation\/GitHubRestAPICredentials\/Client\/credentials_sol_revoke(headers:body:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "credentials_sol_revoke(headers:body:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicredentials\/client\/credentials_sol_revoke(headers:body:)"
+}
+}
+}

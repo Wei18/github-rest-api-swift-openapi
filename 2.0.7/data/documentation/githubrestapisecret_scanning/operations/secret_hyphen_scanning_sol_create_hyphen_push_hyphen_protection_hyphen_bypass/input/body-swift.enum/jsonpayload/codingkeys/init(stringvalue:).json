@@ -1,0 +1,373 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning",
+        "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Operations",
+        "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Operations\/secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass",
+        "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Operations\/secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass\/Input",
+        "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Operations\/secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass\/Input\/Body-swift.enum",
+        "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Operations\/secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass\/Input\/Body-swift.enum\/jsonPayload",
+        "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Operations\/secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass\/Input\/Body-swift.enum\/jsonPayload\/CodingKeys"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Operations\/secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass\/Input\/Body-swift.enum\/jsonPayload\/CodingKeys\/init(stringValue:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:28GitHubRestAPISecret_Scanning10OperationsO034secret_hyphen_scanning_sol_create_h6_push_h12_protection_H7_bypassO5InputV4BodyO11jsonPayloadV10CodingKeysO11stringValueAMSgSS_tcfc",
+    "fragments" : [
+      {
+        "kind" : "identifier",
+        "text" : "init"
+      },
+      {
+        "kind" : "text",
+        "text" : "?("
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "stringValue"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SS",
+        "text" : "String"
+      },
+      {
+        "kind" : "text",
+        "text" : ")"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPISecret_Scanning"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Initializer",
+    "symbolKind" : "init",
+    "title" : "init(stringValue:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "init"
+            },
+            {
+              "kind" : "text",
+              "text" : "?("
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "stringValue"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:SS",
+              "text" : "String"
+            },
+            {
+              "kind" : "text",
+              "text" : ")"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapisecret_scanning\/operations\/secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass\/input\/body-swift.enum\/jsonpayload\/codingkeys\/init(stringvalue:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPISecret_Scanning/documentation/GitHubRestAPISecret_Scanning": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPISecret_Scanning",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecret_scanning"
+},
+"doc://GitHubRestAPISecret_Scanning/documentation/GitHubRestAPISecret_Scanning/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecret_scanning\/operations"
+},
+"doc://GitHubRestAPISecret_Scanning/documentation/GitHubRestAPISecret_Scanning/Operations/secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass": {
+  "abstract" : [
+    {
+      "text" : "Create a push protection bypass",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Operations\/secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecret_scanning\/operations\/secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass"
+},
+"doc://GitHubRestAPISecret_Scanning/documentation/GitHubRestAPISecret_Scanning/Operations/secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass/Input": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Operations\/secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass\/Input",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass.Input",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecret_scanning\/operations\/secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass\/input"
+},
+"doc://GitHubRestAPISecret_Scanning/documentation/GitHubRestAPISecret_Scanning/Operations/secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass/Input/Body-swift.enum": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Body"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Operations\/secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass\/Input\/Body-swift.enum",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Body"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass.Input.Body",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecret_scanning\/operations\/secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass\/input\/body-swift.enum"
+},
+"doc://GitHubRestAPISecret_Scanning/documentation/GitHubRestAPISecret_Scanning/Operations/secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass/Input/Body-swift.enum/jsonPayload": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "jsonPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Operations\/secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass\/Input\/Body-swift.enum\/jsonPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "jsonPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass.Input.Body.jsonPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecret_scanning\/operations\/secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass\/input\/body-swift.enum\/jsonpayload"
+},
+"doc://GitHubRestAPISecret_Scanning/documentation/GitHubRestAPISecret_Scanning/Operations/secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass/Input/Body-swift.enum/jsonPayload/CodingKeys": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Operations\/secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass\/Input\/Body-swift.enum\/jsonPayload\/CodingKeys",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass.Input.Body.jsonPayload.CodingKeys",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecret_scanning\/operations\/secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass\/input\/body-swift.enum\/jsonpayload\/codingkeys"
+},
+"doc://GitHubRestAPISecret_Scanning/documentation/GitHubRestAPISecret_Scanning/Operations/secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass/Input/Body-swift.enum/jsonPayload/CodingKeys/init(stringValue:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "?("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "stringValue"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPISecret_Scanning\/documentation\/GitHubRestAPISecret_Scanning\/Operations\/secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass\/Input\/Body-swift.enum\/jsonPayload\/CodingKeys\/init(stringValue:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(stringValue:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapisecret_scanning\/operations\/secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass\/input\/body-swift.enum\/jsonpayload\/codingkeys\/init(stringvalue:)"
+}
+}
+}

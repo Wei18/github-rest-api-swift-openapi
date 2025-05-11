@@ -1,0 +1,403 @@
+{
+  "abstract" : [
+    {
+      "text" : "Show usage metrics since this date. This is a timestamp in ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/en.wikipedia.org\/wiki\/ISO_8601",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : " format (",
+      "type" : "text"
+    },
+    {
+      "code" : "YYYY-MM-DDTHH:MM:SSZ",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : "). Maximum value is 28 days ago.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot",
+        "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Operations",
+        "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Operations\/copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_organization",
+        "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Operations\/copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_organization\/Input",
+        "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Operations\/copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_organization\/Input\/Query-swift.struct"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Operations\/copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_organization\/Input\/Query-swift.struct\/since"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:20GitHubRestAPICopilot10OperationsO012copilot_sol_f16_hyphen_metrics_h5_for_H13_organizationO5InputV5QueryV5sinceSSSgvp",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "var"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "since"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SS",
+        "text" : "String"
+      },
+      {
+        "kind" : "text",
+        "text" : "?"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPICopilot"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/copilot\/Types.swift#L4400"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Instance Property",
+    "symbolKind" : "property",
+    "title" : "since"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "var"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "since"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:SS",
+              "text" : "String"
+            },
+            {
+              "kind" : "text",
+              "text" : "?"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/paths\/orgs\/{org}\/copilot\/metrics\/GET\/query\/since",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapicopilot\/operations\/copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_organization\/input\/query-swift.struct\/since"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPICopilot/documentation/GitHubRestAPICopilot": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPICopilot",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicopilot"
+},
+"doc://GitHubRestAPICopilot/documentation/GitHubRestAPICopilot/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicopilot\/operations"
+},
+"doc://GitHubRestAPICopilot/documentation/GitHubRestAPICopilot/Operations/copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_organization": {
+  "abstract" : [
+    {
+      "text" : "Get Copilot metrics for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_organization"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Operations\/copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_organization",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_organization"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_organization",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicopilot\/operations\/copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_organization"
+},
+"doc://GitHubRestAPICopilot/documentation/GitHubRestAPICopilot/Operations/copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_organization/Input": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Operations\/copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_organization\/Input",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_organization.Input",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicopilot\/operations\/copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_organization\/input"
+},
+"doc://GitHubRestAPICopilot/documentation/GitHubRestAPICopilot/Operations/copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_organization/Input/Query-swift.struct": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Query"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Operations\/copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_organization\/Input\/Query-swift.struct",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Query"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_organization.Input.Query",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicopilot\/operations\/copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_organization\/input\/query-swift.struct"
+},
+"doc://GitHubRestAPICopilot/documentation/GitHubRestAPICopilot/Operations/copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_organization/Input/Query-swift.struct/since": {
+  "abstract" : [
+    {
+      "text" : "Show usage metrics since this date. This is a timestamp in ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "https:\/\/en.wikipedia.org\/wiki\/ISO_8601",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : " format (",
+      "type" : "text"
+    },
+    {
+      "code" : "YYYY-MM-DDTHH:MM:SSZ",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : "). Maximum value is 28 days ago.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "since"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Operations\/copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_organization\/Input\/Query-swift.struct\/since",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "since",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicopilot\/operations\/copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_organization\/input\/query-swift.struct\/since"
+},
+"https://en.wikipedia.org/wiki/ISO_8601": {
+  "identifier" : "https:\/\/en.wikipedia.org\/wiki\/ISO_8601",
+  "title" : "ISO 8601",
+  "titleInlineContent" : [
+    {
+      "text" : "ISO 8601",
+      "type" : "text"
+    }
+  ],
+  "type" : "link",
+  "url" : "https:\/\/en.wikipedia.org\/wiki\/ISO_8601"
+}
+}
+}

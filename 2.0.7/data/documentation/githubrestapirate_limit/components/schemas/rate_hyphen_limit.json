@@ -1,0 +1,647 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit",
+        "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components",
+        "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/rate_hyphen_limit"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:23GitHubRestAPIRate_Limit10ComponentsO7SchemasO17rate_hyphen_limitV",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "struct"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "rate_hyphen_limit"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIRate_Limit"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "rate_hyphen_limit"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/rate-limit\/Types.swift#L127"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Structure",
+    "symbolKind" : "struct",
+    "title" : "Components.Schemas.rate_hyphen_limit"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "struct"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "rate_hyphen_limit"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "overview",
+          "level" : 2,
+          "text" : "Overview",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Generated from ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "#\/components\/schemas\/rate-limit",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ".",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Remark",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIRate_Limit\/Se",
+        "doc:\/\/GitHubRestAPIRate_Limit\/SE",
+        "doc:\/\/GitHubRestAPIRate_Limit\/SQ",
+        "doc:\/\/GitHubRestAPIRate_Limit\/SH",
+        "doc:\/\/GitHubRestAPIRate_Limit\/s8SendableP"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforms To",
+      "type" : "conformsTo"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/rate_hyphen_limit\/init(from:)",
+        "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/rate_hyphen_limit\/init(limit:remaining:reset:used:)"
+      ],
+      "title" : "Initializers"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/rate_hyphen_limit\/limit",
+        "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/rate_hyphen_limit\/remaining",
+        "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/rate_hyphen_limit\/reset",
+        "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/rate_hyphen_limit\/used"
+      ],
+      "title" : "Instance Properties"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/rate_hyphen_limit\/CodingKeys"
+      ],
+      "title" : "Enumerations"
+    },
+    {
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/rate_hyphen_limit\/Equatable-Implementations"
+      ],
+      "title" : "Default Implementations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapirate_limit\/components\/schemas\/rate_hyphen_limit"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIRate_Limit/SE": {
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/SE",
+  "title" : "Swift.Encodable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIRate_Limit/SH": {
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/SH",
+  "title" : "Swift.Hashable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIRate_Limit/SQ": {
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/SQ",
+  "title" : "Swift.Equatable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIRate_Limit/Se": {
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/Se",
+  "title" : "Swift.Decodable",
+  "type" : "unresolvable"
+},
+"doc://GitHubRestAPIRate_Limit/documentation/GitHubRestAPIRate_Limit": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIRate_Limit",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirate_limit"
+},
+"doc://GitHubRestAPIRate_Limit/documentation/GitHubRestAPIRate_Limit/Components": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the components section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Components"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirate_limit\/components"
+},
+"doc://GitHubRestAPIRate_Limit/documentation/GitHubRestAPIRate_Limit/Components/Schemas": {
+  "abstract" : [
+    {
+      "text" : "Types generated from the ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/components\/schemas",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " section of the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Schemas"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirate_limit\/components\/schemas"
+},
+"doc://GitHubRestAPIRate_Limit/documentation/GitHubRestAPIRate_Limit/Components/Schemas/rate_hyphen_limit": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "rate_hyphen_limit"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/rate_hyphen_limit",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "rate_hyphen_limit"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.rate_hyphen_limit",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirate_limit\/components\/schemas\/rate_hyphen_limit"
+},
+"doc://GitHubRestAPIRate_Limit/documentation/GitHubRestAPIRate_Limit/Components/Schemas/rate_hyphen_limit/CodingKeys": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/rate_hyphen_limit\/CodingKeys",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "CodingKeys"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Components.Schemas.rate_hyphen_limit.CodingKeys",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirate_limit\/components\/schemas\/rate_hyphen_limit\/codingkeys"
+},
+"doc://GitHubRestAPIRate_Limit/documentation/GitHubRestAPIRate_Limit/Components/Schemas/rate_hyphen_limit/Equatable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/rate_hyphen_limit\/Equatable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Equatable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirate_limit\/components\/schemas\/rate_hyphen_limit\/equatable-implementations"
+},
+"doc://GitHubRestAPIRate_Limit/documentation/GitHubRestAPIRate_Limit/Components/Schemas/rate_hyphen_limit/init(from:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "from"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:s7DecoderP",
+      "text" : "Decoder"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/rate_hyphen_limit\/init(from:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(from:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirate_limit\/components\/schemas\/rate_hyphen_limit\/init(from:)"
+},
+"doc://GitHubRestAPIRate_Limit/documentation/GitHubRestAPIRate_Limit/Components/Schemas/rate_hyphen_limit/init(limit:remaining:reset:used:)": {
+  "abstract" : [
+    {
+      "text" : "Creates a new ",
+      "type" : "text"
+    },
+    {
+      "code" : "rate_hyphen_limit",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "limit"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "remaining"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "reset"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "used"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/rate_hyphen_limit\/init(limit:remaining:reset:used:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(limit:remaining:reset:used:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirate_limit\/components\/schemas\/rate_hyphen_limit\/init(limit:remaining:reset:used:)"
+},
+"doc://GitHubRestAPIRate_Limit/documentation/GitHubRestAPIRate_Limit/Components/Schemas/rate_hyphen_limit/limit": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "limit"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/rate_hyphen_limit\/limit",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "limit",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirate_limit\/components\/schemas\/rate_hyphen_limit\/limit"
+},
+"doc://GitHubRestAPIRate_Limit/documentation/GitHubRestAPIRate_Limit/Components/Schemas/rate_hyphen_limit/remaining": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "remaining"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/rate_hyphen_limit\/remaining",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "remaining",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirate_limit\/components\/schemas\/rate_hyphen_limit\/remaining"
+},
+"doc://GitHubRestAPIRate_Limit/documentation/GitHubRestAPIRate_Limit/Components/Schemas/rate_hyphen_limit/reset": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "reset"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/rate_hyphen_limit\/reset",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "reset",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirate_limit\/components\/schemas\/rate_hyphen_limit\/reset"
+},
+"doc://GitHubRestAPIRate_Limit/documentation/GitHubRestAPIRate_Limit/Components/Schemas/rate_hyphen_limit/used": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "used"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/documentation\/GitHubRestAPIRate_Limit\/Components\/Schemas\/rate_hyphen_limit\/used",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "used",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapirate_limit\/components\/schemas\/rate_hyphen_limit\/used"
+},
+"doc://GitHubRestAPIRate_Limit/s8SendableP": {
+  "identifier" : "doc:\/\/GitHubRestAPIRate_Limit\/s8SendableP",
+  "title" : "Swift.Sendable",
+  "type" : "unresolvable"
+}
+}
+}

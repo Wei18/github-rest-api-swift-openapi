@@ -1,0 +1,1230 @@
+{
+  "abstract" : [
+    {
+      "text" : "Creates a new ",
+      "type" : "text"
+    },
+    {
+      "code" : "jsonPayload",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/codespaces_sol_create_hyphen_with_hyphen_repo_hyphen_for_hyphen_authenticated_hyphen_user",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/codespaces_sol_create_hyphen_with_hyphen_repo_hyphen_for_hyphen_authenticated_hyphen_user\/Input",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/codespaces_sol_create_hyphen_with_hyphen_repo_hyphen_for_hyphen_authenticated_hyphen_user\/Input\/Body-swift.enum",
+        "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/codespaces_sol_create_hyphen_with_hyphen_repo_hyphen_for_hyphen_authenticated_hyphen_user\/Input\/Body-swift.enum\/jsonPayload"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/codespaces_sol_create_hyphen_with_hyphen_repo_hyphen_for_hyphen_authenticated_hyphen_user\/Input\/Body-swift.enum\/jsonPayload\/init(ref:location:geo:client_ip:machine:devcontainer_path:multi_repo_permissions_opt_out:working_directory:idle_timeout_minutes:display_name:retention_period_minutes:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:23GitHubRestAPICodespaces10OperationsO034codespaces_sol_create_hyphen_with_i6_repo_i5_for_i15_authenticated_I5_userO5InputV4BodyO11jsonPayloadV3ref8location3geo9client_ip7machine17devcontainer_path06multi_K20_permissions_opt_out17working_directory20idle_timeout_minutes12display_name24retention_period_minutesAKSSSg_AwK0uR0OSgA3WSbSgAWSiSgAWA0_tcfc",
+    "fragments" : [
+      {
+        "kind" : "identifier",
+        "text" : "init"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "ref"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SS",
+        "text" : "String"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "location"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SS",
+        "text" : "String"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "geo"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+        "text" : "Operations"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO034codespaces_sol_create_hyphen_with_i6_repo_i5_for_i15_authenticated_I5_userO",
+        "text" : "codespaces_sol_create_hyphen_with_hyphen_repo_hyphen_for_hyphen_authenticated_hyphen_user"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO034codespaces_sol_create_hyphen_with_i6_repo_i5_for_i15_authenticated_I5_userO5InputV",
+        "text" : "Input"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO034codespaces_sol_create_hyphen_with_i6_repo_i5_for_i15_authenticated_I5_userO5InputV4BodyO",
+        "text" : "Body"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO034codespaces_sol_create_hyphen_with_i6_repo_i5_for_i15_authenticated_I5_userO5InputV4BodyO11jsonPayloadV",
+        "text" : "jsonPayload"
+      },
+      {
+        "kind" : "text",
+        "text" : "."
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO034codespaces_sol_create_hyphen_with_i6_repo_i5_for_i15_authenticated_I5_userO5InputV4BodyO11jsonPayloadV03geoR0O",
+        "text" : "geoPayload"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "client_ip"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SS",
+        "text" : "String"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "machine"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SS",
+        "text" : "String"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "devcontainer_path"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SS",
+        "text" : "String"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "multi_repo_permissions_opt_out"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:Sb",
+        "text" : "Bool"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "working_directory"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SS",
+        "text" : "String"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "idle_timeout_minutes"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:Si",
+        "text" : "Int"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "display_name"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SS",
+        "text" : "String"
+      },
+      {
+        "kind" : "text",
+        "text" : "?, "
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "retention_period_minutes"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:Si",
+        "text" : "Int"
+      },
+      {
+        "kind" : "text",
+        "text" : "?)"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPICodespaces"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/codespaces\/Types.swift#L10861"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Initializer",
+    "symbolKind" : "init",
+    "title" : "init(ref:location:geo:client_ip:machine:devcontainer_path:multi_repo_permissions_opt_out:working_directory:idle_timeout_minutes:display_name:retention_period_minutes:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "init"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "ref"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:SS",
+              "text" : "String"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "location"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:SS",
+              "text" : "String"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "geo"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+              "text" : "Operations"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/codespaces_sol_create_hyphen_with_hyphen_repo_hyphen_for_hyphen_authenticated_hyphen_user",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO034codespaces_sol_create_hyphen_with_i6_repo_i5_for_i15_authenticated_I5_userO",
+              "text" : "codespaces_sol_create_hyphen_with_hyphen_repo_hyphen_for_hyphen_authenticated_hyphen_user"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/codespaces_sol_create_hyphen_with_hyphen_repo_hyphen_for_hyphen_authenticated_hyphen_user\/Input",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO034codespaces_sol_create_hyphen_with_i6_repo_i5_for_i15_authenticated_I5_userO5InputV",
+              "text" : "Input"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/codespaces_sol_create_hyphen_with_hyphen_repo_hyphen_for_hyphen_authenticated_hyphen_user\/Input\/Body-swift.enum",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO034codespaces_sol_create_hyphen_with_i6_repo_i5_for_i15_authenticated_I5_userO5InputV4BodyO",
+              "text" : "Body"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/codespaces_sol_create_hyphen_with_hyphen_repo_hyphen_for_hyphen_authenticated_hyphen_user\/Input\/Body-swift.enum\/jsonPayload",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO034codespaces_sol_create_hyphen_with_i6_repo_i5_for_i15_authenticated_I5_userO5InputV4BodyO11jsonPayloadV",
+              "text" : "jsonPayload"
+            },
+            {
+              "kind" : "text",
+              "text" : "."
+            },
+            {
+              "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/codespaces_sol_create_hyphen_with_hyphen_repo_hyphen_for_hyphen_authenticated_hyphen_user\/Input\/Body-swift.enum\/jsonPayload\/geoPayload",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO034codespaces_sol_create_hyphen_with_i6_repo_i5_for_i15_authenticated_I5_userO5InputV4BodyO11jsonPayloadV03geoR0O",
+              "text" : "geoPayload"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "client_ip"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:SS",
+              "text" : "String"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "machine"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:SS",
+              "text" : "String"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "devcontainer_path"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:SS",
+              "text" : "String"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "multi_repo_permissions_opt_out"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:Sb",
+              "text" : "Bool"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "working_directory"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:SS",
+              "text" : "String"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "idle_timeout_minutes"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:Si",
+              "text" : "Int"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "display_name"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:SS",
+              "text" : "String"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil, "
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "retention_period_minutes"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:Si",
+              "text" : "Int"
+            },
+            {
+              "kind" : "text",
+              "text" : "? = nil)"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "kind" : "parameters",
+      "parameters" : [
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Git ref (typically a branch name) for this codespace",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "ref"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The requested location for a new codespace. Best efforts are made to respect this upon creation. Assigned by IP if not provided.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "location"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The geographic area for this codespace. If not specified, the value is assigned by IP. This property replaces ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "location",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ", which is closing down.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "geo"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "IP for location auto-detection when proxying a request",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "client_ip"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Machine type to use for this codespace",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "machine"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Path to devcontainer.json config to use for this codespace",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "devcontainer_path"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Whether to authorize requested permissions from devcontainer.json",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "multi_repo_permissions_opt_out"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Working directory for this codespace",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "working_directory"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Time in minutes before codespace stops from inactivity",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "idle_timeout_minutes"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Display name for this codespace",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "display_name"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Duration in minutes after codespace has gone idle in which it will be deleted. Must be integer minutes between 0 and 43200 (30 days).",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "retention_period_minutes"
+        }
+      ]
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapicodespaces\/operations\/codespaces_sol_create_hyphen_with_hyphen_repo_hyphen_for_hyphen_authenticated_hyphen_user\/input\/body-swift.enum\/jsonpayload\/init(ref:location:geo:client_ip:machine:devcontainer_path:multi_repo_permissions_opt_out:working_directory:idle_timeout_minutes:display_name:retention_period_minutes:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPICodespaces",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/operations"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Operations/codespaces_sol_create_hyphen_with_hyphen_repo_hyphen_for_hyphen_authenticated_hyphen_user": {
+  "abstract" : [
+    {
+      "text" : "Create a codespace in a repository",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "codespaces_sol_create_hyphen_with_hyphen_repo_hyphen_for_hyphen_authenticated_hyphen_user"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/codespaces_sol_create_hyphen_with_hyphen_repo_hyphen_for_hyphen_authenticated_hyphen_user",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "codespaces_sol_create_hyphen_with_hyphen_repo_hyphen_for_hyphen_authenticated_hyphen_user"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.codespaces_sol_create_hyphen_with_hyphen_repo_hyphen_for_hyphen_authenticated_hyphen_user",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/operations\/codespaces_sol_create_hyphen_with_hyphen_repo_hyphen_for_hyphen_authenticated_hyphen_user"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Operations/codespaces_sol_create_hyphen_with_hyphen_repo_hyphen_for_hyphen_authenticated_hyphen_user/Input": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/codespaces_sol_create_hyphen_with_hyphen_repo_hyphen_for_hyphen_authenticated_hyphen_user\/Input",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Input"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.codespaces_sol_create_hyphen_with_hyphen_repo_hyphen_for_hyphen_authenticated_hyphen_user.Input",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/operations\/codespaces_sol_create_hyphen_with_hyphen_repo_hyphen_for_hyphen_authenticated_hyphen_user\/input"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Operations/codespaces_sol_create_hyphen_with_hyphen_repo_hyphen_for_hyphen_authenticated_hyphen_user/Input/Body-swift.enum": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Body"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/codespaces_sol_create_hyphen_with_hyphen_repo_hyphen_for_hyphen_authenticated_hyphen_user\/Input\/Body-swift.enum",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Body"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.codespaces_sol_create_hyphen_with_hyphen_repo_hyphen_for_hyphen_authenticated_hyphen_user.Input.Body",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/operations\/codespaces_sol_create_hyphen_with_hyphen_repo_hyphen_for_hyphen_authenticated_hyphen_user\/input\/body-swift.enum"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Operations/codespaces_sol_create_hyphen_with_hyphen_repo_hyphen_for_hyphen_authenticated_hyphen_user/Input/Body-swift.enum/jsonPayload": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "jsonPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/codespaces_sol_create_hyphen_with_hyphen_repo_hyphen_for_hyphen_authenticated_hyphen_user\/Input\/Body-swift.enum\/jsonPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "jsonPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.codespaces_sol_create_hyphen_with_hyphen_repo_hyphen_for_hyphen_authenticated_hyphen_user.Input.Body.jsonPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/operations\/codespaces_sol_create_hyphen_with_hyphen_repo_hyphen_for_hyphen_authenticated_hyphen_user\/input\/body-swift.enum\/jsonpayload"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Operations/codespaces_sol_create_hyphen_with_hyphen_repo_hyphen_for_hyphen_authenticated_hyphen_user/Input/Body-swift.enum/jsonPayload/geoPayload": {
+  "abstract" : [
+    {
+      "text" : "The geographic area for this codespace. If not specified, the value is assigned by IP. This property replaces ",
+      "type" : "text"
+    },
+    {
+      "code" : "location",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ", which is closing down.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "geoPayload"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/codespaces_sol_create_hyphen_with_hyphen_repo_hyphen_for_hyphen_authenticated_hyphen_user\/Input\/Body-swift.enum\/jsonPayload\/geoPayload",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "geoPayload"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.codespaces_sol_create_hyphen_with_hyphen_repo_hyphen_for_hyphen_authenticated_hyphen_user.Input.Body.jsonPayload.geoPayload",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/operations\/codespaces_sol_create_hyphen_with_hyphen_repo_hyphen_for_hyphen_authenticated_hyphen_user\/input\/body-swift.enum\/jsonpayload\/geopayload"
+},
+"doc://GitHubRestAPICodespaces/documentation/GitHubRestAPICodespaces/Operations/codespaces_sol_create_hyphen_with_hyphen_repo_hyphen_for_hyphen_authenticated_hyphen_user/Input/Body-swift.enum/jsonPayload/init(ref:location:geo:client_ip:machine:devcontainer_path:multi_repo_permissions_opt_out:working_directory:idle_timeout_minutes:display_name:retention_period_minutes:)": {
+  "abstract" : [
+    {
+      "text" : "Creates a new ",
+      "type" : "text"
+    },
+    {
+      "code" : "jsonPayload",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "ref"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "location"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "geo"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO034codespaces_sol_create_hyphen_with_i6_repo_i5_for_i15_authenticated_I5_userO",
+      "text" : "codespaces_sol_create_hyphen_with_hyphen_repo_hyphen_for_hyphen_authenticated_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO034codespaces_sol_create_hyphen_with_i6_repo_i5_for_i15_authenticated_I5_userO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO034codespaces_sol_create_hyphen_with_i6_repo_i5_for_i15_authenticated_I5_userO5InputV4BodyO",
+      "text" : "Body"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO034codespaces_sol_create_hyphen_with_i6_repo_i5_for_i15_authenticated_I5_userO5InputV4BodyO11jsonPayloadV",
+      "text" : "jsonPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:23GitHubRestAPICodespaces10OperationsO034codespaces_sol_create_hyphen_with_i6_repo_i5_for_i15_authenticated_I5_userO5InputV4BodyO11jsonPayloadV03geoR0O",
+      "text" : "geoPayload"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "client_ip"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "machine"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "devcontainer_path"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "multi_repo_permissions_opt_out"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "working_directory"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "idle_timeout_minutes"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "display_name"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : "?, "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "retention_period_minutes"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Si",
+      "text" : "Int"
+    },
+    {
+      "kind" : "text",
+      "text" : "?)"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICodespaces\/documentation\/GitHubRestAPICodespaces\/Operations\/codespaces_sol_create_hyphen_with_hyphen_repo_hyphen_for_hyphen_authenticated_hyphen_user\/Input\/Body-swift.enum\/jsonPayload\/init(ref:location:geo:client_ip:machine:devcontainer_path:multi_repo_permissions_opt_out:working_directory:idle_timeout_minutes:display_name:retention_period_minutes:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(ref:location:geo:client_ip:machine:devcontainer_path:multi_repo_permissions_opt_out:working_directory:idle_timeout_minutes:display_name:retention_period_minutes:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicodespaces\/operations\/codespaces_sol_create_hyphen_with_hyphen_repo_hyphen_for_hyphen_authenticated_hyphen_user\/input\/body-swift.enum\/jsonpayload\/init(ref:location:geo:client_ip:machine:devcontainer_path:multi_repo_permissions_opt_out:working_directory:idle_timeout_minutes:display_name:retention_period_minutes:)"
+}
+}
+}

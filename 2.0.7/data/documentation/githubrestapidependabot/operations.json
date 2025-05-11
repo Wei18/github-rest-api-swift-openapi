@@ -1,0 +1,841 @@
+{
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:23GitHubRestAPIDependabot10OperationsO",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "enum"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "Operations"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPIDependabot"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "Operations"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/dependabot\/Types.swift#L3928"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Enumeration",
+    "symbolKind" : "enum",
+    "title" : "Operations"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "enum"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "Operations"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations\/dependabot_sol_add_hyphen_selected_hyphen_repo_hyphen_to_hyphen_org_hyphen_secret",
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations\/dependabot_sol_create_hyphen_or_hyphen_update_hyphen_org_hyphen_secret",
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations\/dependabot_sol_create_hyphen_or_hyphen_update_hyphen_repo_hyphen_secret",
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations\/dependabot_sol_delete_hyphen_org_hyphen_secret",
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations\/dependabot_sol_delete_hyphen_repo_hyphen_secret",
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations\/dependabot_sol_get_hyphen_alert",
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations\/dependabot_sol_get_hyphen_org_hyphen_public_hyphen_key",
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations\/dependabot_sol_get_hyphen_org_hyphen_secret",
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations\/dependabot_sol_get_hyphen_repo_hyphen_public_hyphen_key",
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations\/dependabot_sol_get_hyphen_repo_hyphen_secret",
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations\/dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise",
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations\/dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_org",
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations\/dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_repo",
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations\/dependabot_sol_list_hyphen_org_hyphen_secrets",
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations\/dependabot_sol_list_hyphen_repo_hyphen_secrets",
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations\/dependabot_sol_list_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret",
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations\/dependabot_sol_remove_hyphen_selected_hyphen_repo_hyphen_from_hyphen_org_hyphen_secret",
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations\/dependabot_sol_set_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret",
+        "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations\/dependabot_sol_update_hyphen_alert"
+      ],
+      "title" : "Enumerations"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapidependabot\/operations"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPIDependabot",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Operations": {
+  "abstract" : [
+    {
+      "text" : "API operations, with input and output types, generated from ",
+      "type" : "text"
+    },
+    {
+      "code" : "#\/paths",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " in the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Operations"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/operations"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Operations/dependabot_sol_add_hyphen_selected_hyphen_repo_hyphen_to_hyphen_org_hyphen_secret": {
+  "abstract" : [
+    {
+      "text" : "Add selected repository to an organization secret",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "dependabot_sol_add_hyphen_selected_hyphen_repo_hyphen_to_hyphen_org_hyphen_secret"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations\/dependabot_sol_add_hyphen_selected_hyphen_repo_hyphen_to_hyphen_org_hyphen_secret",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "dependabot_sol_add_hyphen_selected_hyphen_repo_hyphen_to_hyphen_org_hyphen_secret"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.dependabot_sol_add_hyphen_selected_hyphen_repo_hyphen_to_hyphen_org_hyphen_secret",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/operations\/dependabot_sol_add_hyphen_selected_hyphen_repo_hyphen_to_hyphen_org_hyphen_secret"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Operations/dependabot_sol_create_hyphen_or_hyphen_update_hyphen_org_hyphen_secret": {
+  "abstract" : [
+    {
+      "text" : "Create or update an organization secret",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "dependabot_sol_create_hyphen_or_hyphen_update_hyphen_org_hyphen_secret"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations\/dependabot_sol_create_hyphen_or_hyphen_update_hyphen_org_hyphen_secret",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "dependabot_sol_create_hyphen_or_hyphen_update_hyphen_org_hyphen_secret"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.dependabot_sol_create_hyphen_or_hyphen_update_hyphen_org_hyphen_secret",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/operations\/dependabot_sol_create_hyphen_or_hyphen_update_hyphen_org_hyphen_secret"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Operations/dependabot_sol_create_hyphen_or_hyphen_update_hyphen_repo_hyphen_secret": {
+  "abstract" : [
+    {
+      "text" : "Create or update a repository secret",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "dependabot_sol_create_hyphen_or_hyphen_update_hyphen_repo_hyphen_secret"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations\/dependabot_sol_create_hyphen_or_hyphen_update_hyphen_repo_hyphen_secret",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "dependabot_sol_create_hyphen_or_hyphen_update_hyphen_repo_hyphen_secret"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.dependabot_sol_create_hyphen_or_hyphen_update_hyphen_repo_hyphen_secret",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/operations\/dependabot_sol_create_hyphen_or_hyphen_update_hyphen_repo_hyphen_secret"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Operations/dependabot_sol_delete_hyphen_org_hyphen_secret": {
+  "abstract" : [
+    {
+      "text" : "Delete an organization secret",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "dependabot_sol_delete_hyphen_org_hyphen_secret"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations\/dependabot_sol_delete_hyphen_org_hyphen_secret",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "dependabot_sol_delete_hyphen_org_hyphen_secret"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.dependabot_sol_delete_hyphen_org_hyphen_secret",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/operations\/dependabot_sol_delete_hyphen_org_hyphen_secret"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Operations/dependabot_sol_delete_hyphen_repo_hyphen_secret": {
+  "abstract" : [
+    {
+      "text" : "Delete a repository secret",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "dependabot_sol_delete_hyphen_repo_hyphen_secret"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations\/dependabot_sol_delete_hyphen_repo_hyphen_secret",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "dependabot_sol_delete_hyphen_repo_hyphen_secret"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.dependabot_sol_delete_hyphen_repo_hyphen_secret",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/operations\/dependabot_sol_delete_hyphen_repo_hyphen_secret"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Operations/dependabot_sol_get_hyphen_alert": {
+  "abstract" : [
+    {
+      "text" : "Get a Dependabot alert",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "dependabot_sol_get_hyphen_alert"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations\/dependabot_sol_get_hyphen_alert",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "dependabot_sol_get_hyphen_alert"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.dependabot_sol_get_hyphen_alert",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/operations\/dependabot_sol_get_hyphen_alert"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Operations/dependabot_sol_get_hyphen_org_hyphen_public_hyphen_key": {
+  "abstract" : [
+    {
+      "text" : "Get an organization public key",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "dependabot_sol_get_hyphen_org_hyphen_public_hyphen_key"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations\/dependabot_sol_get_hyphen_org_hyphen_public_hyphen_key",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "dependabot_sol_get_hyphen_org_hyphen_public_hyphen_key"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.dependabot_sol_get_hyphen_org_hyphen_public_hyphen_key",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/operations\/dependabot_sol_get_hyphen_org_hyphen_public_hyphen_key"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Operations/dependabot_sol_get_hyphen_org_hyphen_secret": {
+  "abstract" : [
+    {
+      "text" : "Get an organization secret",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "dependabot_sol_get_hyphen_org_hyphen_secret"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations\/dependabot_sol_get_hyphen_org_hyphen_secret",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "dependabot_sol_get_hyphen_org_hyphen_secret"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.dependabot_sol_get_hyphen_org_hyphen_secret",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/operations\/dependabot_sol_get_hyphen_org_hyphen_secret"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Operations/dependabot_sol_get_hyphen_repo_hyphen_public_hyphen_key": {
+  "abstract" : [
+    {
+      "text" : "Get a repository public key",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "dependabot_sol_get_hyphen_repo_hyphen_public_hyphen_key"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations\/dependabot_sol_get_hyphen_repo_hyphen_public_hyphen_key",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "dependabot_sol_get_hyphen_repo_hyphen_public_hyphen_key"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.dependabot_sol_get_hyphen_repo_hyphen_public_hyphen_key",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/operations\/dependabot_sol_get_hyphen_repo_hyphen_public_hyphen_key"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Operations/dependabot_sol_get_hyphen_repo_hyphen_secret": {
+  "abstract" : [
+    {
+      "text" : "Get a repository secret",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "dependabot_sol_get_hyphen_repo_hyphen_secret"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations\/dependabot_sol_get_hyphen_repo_hyphen_secret",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "dependabot_sol_get_hyphen_repo_hyphen_secret"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.dependabot_sol_get_hyphen_repo_hyphen_secret",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/operations\/dependabot_sol_get_hyphen_repo_hyphen_secret"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Operations/dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise": {
+  "abstract" : [
+    {
+      "text" : "List Dependabot alerts for an enterprise",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations\/dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/operations\/dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_enterprise"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Operations/dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_org": {
+  "abstract" : [
+    {
+      "text" : "List Dependabot alerts for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_org"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations\/dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_org",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_org"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_org",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/operations\/dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_org"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Operations/dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_repo": {
+  "abstract" : [
+    {
+      "text" : "List Dependabot alerts for a repository",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_repo"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations\/dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_repo",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_repo"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_repo",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/operations\/dependabot_sol_list_hyphen_alerts_hyphen_for_hyphen_repo"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Operations/dependabot_sol_list_hyphen_org_hyphen_secrets": {
+  "abstract" : [
+    {
+      "text" : "List organization secrets",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "dependabot_sol_list_hyphen_org_hyphen_secrets"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations\/dependabot_sol_list_hyphen_org_hyphen_secrets",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "dependabot_sol_list_hyphen_org_hyphen_secrets"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.dependabot_sol_list_hyphen_org_hyphen_secrets",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/operations\/dependabot_sol_list_hyphen_org_hyphen_secrets"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Operations/dependabot_sol_list_hyphen_repo_hyphen_secrets": {
+  "abstract" : [
+    {
+      "text" : "List repository secrets",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "dependabot_sol_list_hyphen_repo_hyphen_secrets"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations\/dependabot_sol_list_hyphen_repo_hyphen_secrets",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "dependabot_sol_list_hyphen_repo_hyphen_secrets"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.dependabot_sol_list_hyphen_repo_hyphen_secrets",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/operations\/dependabot_sol_list_hyphen_repo_hyphen_secrets"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Operations/dependabot_sol_list_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret": {
+  "abstract" : [
+    {
+      "text" : "List selected repositories for an organization secret",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "dependabot_sol_list_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations\/dependabot_sol_list_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "dependabot_sol_list_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.dependabot_sol_list_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/operations\/dependabot_sol_list_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Operations/dependabot_sol_remove_hyphen_selected_hyphen_repo_hyphen_from_hyphen_org_hyphen_secret": {
+  "abstract" : [
+    {
+      "text" : "Remove selected repository from an organization secret",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "dependabot_sol_remove_hyphen_selected_hyphen_repo_hyphen_from_hyphen_org_hyphen_secret"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations\/dependabot_sol_remove_hyphen_selected_hyphen_repo_hyphen_from_hyphen_org_hyphen_secret",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "dependabot_sol_remove_hyphen_selected_hyphen_repo_hyphen_from_hyphen_org_hyphen_secret"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.dependabot_sol_remove_hyphen_selected_hyphen_repo_hyphen_from_hyphen_org_hyphen_secret",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/operations\/dependabot_sol_remove_hyphen_selected_hyphen_repo_hyphen_from_hyphen_org_hyphen_secret"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Operations/dependabot_sol_set_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret": {
+  "abstract" : [
+    {
+      "text" : "Set selected repositories for an organization secret",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "dependabot_sol_set_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations\/dependabot_sol_set_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "dependabot_sol_set_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.dependabot_sol_set_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/operations\/dependabot_sol_set_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret"
+},
+"doc://GitHubRestAPIDependabot/documentation/GitHubRestAPIDependabot/Operations/dependabot_sol_update_hyphen_alert": {
+  "abstract" : [
+    {
+      "text" : "Update a Dependabot alert",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "enum"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "dependabot_sol_update_hyphen_alert"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPIDependabot\/documentation\/GitHubRestAPIDependabot\/Operations\/dependabot_sol_update_hyphen_alert",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "dependabot_sol_update_hyphen_alert"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Operations.dependabot_sol_update_hyphen_alert",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapidependabot\/operations\/dependabot_sol_update_hyphen_alert"
+}
+}
+}

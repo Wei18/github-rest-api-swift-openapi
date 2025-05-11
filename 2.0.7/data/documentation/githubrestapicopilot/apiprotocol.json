@@ -1,0 +1,2874 @@
+{
+  "abstract" : [
+    {
+      "text" : "A type that performs HTTP operations defined by the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/APIProtocol"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:20GitHubRestAPICopilot11APIProtocolP",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "protocol"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "APIProtocol"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "GitHubRestAPICopilot"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "APIProtocol"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "Types.swift",
+      "url" : "https:\/\/github.com\/wei18\/github-rest-api-swift-openapi\/Sources\/copilot\/Types.swift#L13"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Protocol",
+    "symbolKind" : "protocol",
+    "title" : "APIProtocol"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "protocol"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "APIProtocol"
+            },
+            {
+              "kind" : "text",
+              "text" : " : "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:s8SendableP",
+              "text" : "Sendable"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPICopilot\/s8SendableP"
+      ],
+      "kind" : "relationships",
+      "title" : "Inherits From",
+      "type" : "inheritsFrom"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Client"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforming Types",
+      "type" : "conformingTypes"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/APIProtocol\/copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_teams(_:)",
+        "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/APIProtocol\/copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_teams(path:headers:body:)",
+        "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/APIProtocol\/copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users(_:)",
+        "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/APIProtocol\/copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users(path:headers:body:)",
+        "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/APIProtocol\/copilot_sol_cancel_hyphen_copilot_hyphen_seat_hyphen_assignment_hyphen_for_hyphen_teams(_:)",
+        "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/APIProtocol\/copilot_sol_cancel_hyphen_copilot_hyphen_seat_hyphen_assignment_hyphen_for_hyphen_teams(path:headers:body:)",
+        "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/APIProtocol\/copilot_sol_cancel_hyphen_copilot_hyphen_seat_hyphen_assignment_hyphen_for_hyphen_users(_:)",
+        "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/APIProtocol\/copilot_sol_cancel_hyphen_copilot_hyphen_seat_hyphen_assignment_hyphen_for_hyphen_users(path:headers:body:)",
+        "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/APIProtocol\/copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_organization(_:)",
+        "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/APIProtocol\/copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_organization(path:query:headers:)",
+        "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/APIProtocol\/copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_team(_:)",
+        "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/APIProtocol\/copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_team(path:query:headers:)",
+        "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/APIProtocol\/copilot_sol_get_hyphen_copilot_hyphen_organization_hyphen_details(_:)",
+        "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/APIProtocol\/copilot_sol_get_hyphen_copilot_hyphen_organization_hyphen_details(path:headers:)",
+        "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/APIProtocol\/copilot_sol_get_hyphen_copilot_hyphen_seat_hyphen_details_hyphen_for_hyphen_user(_:)",
+        "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/APIProtocol\/copilot_sol_get_hyphen_copilot_hyphen_seat_hyphen_details_hyphen_for_hyphen_user(path:headers:)",
+        "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/APIProtocol\/copilot_sol_list_hyphen_copilot_hyphen_seats(_:)",
+        "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/APIProtocol\/copilot_sol_list_hyphen_copilot_hyphen_seats(path:query:headers:)"
+      ],
+      "title" : "Instance Methods"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/githubrestapicopilot\/apiprotocol"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://GitHubRestAPICopilot/documentation/GitHubRestAPICopilot": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "GitHubRestAPICopilot",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicopilot"
+},
+"doc://GitHubRestAPICopilot/documentation/GitHubRestAPICopilot/APIProtocol": {
+  "abstract" : [
+    {
+      "text" : "A type that performs HTTP operations defined by the OpenAPI document.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "protocol"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "APIProtocol"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/APIProtocol",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "APIProtocol"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "APIProtocol",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicopilot\/apiprotocol"
+},
+"doc://GitHubRestAPICopilot/documentation/GitHubRestAPICopilot/APIProtocol/copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_teams(_:)": {
+  "abstract" : [
+    {
+      "text" : "Add teams to the Copilot subscription for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_teams"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO023copilot_sol_add_hyphen_f1_i7_seats_i5_for_I6_teamsO",
+      "text" : "copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_teams"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO023copilot_sol_add_hyphen_f1_i7_seats_i5_for_I6_teamsO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO023copilot_sol_add_hyphen_f1_i7_seats_i5_for_I6_teamsO",
+      "text" : "copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_teams"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO023copilot_sol_add_hyphen_f1_i7_seats_i5_for_I6_teamsO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/APIProtocol\/copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_teams(_:)",
+  "kind" : "symbol",
+  "required" : true,
+  "role" : "symbol",
+  "title" : "copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_teams(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicopilot\/apiprotocol\/copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_teams(_:)"
+},
+"doc://GitHubRestAPICopilot/documentation/GitHubRestAPICopilot/APIProtocol/copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_teams(path:headers:body:)": {
+  "abstract" : [
+    {
+      "text" : "Add teams to the Copilot subscription for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_teams"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "path"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO023copilot_sol_add_hyphen_f1_i7_seats_i5_for_I6_teamsO",
+      "text" : "copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_teams"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO023copilot_sol_add_hyphen_f1_i7_seats_i5_for_I6_teamsO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO023copilot_sol_add_hyphen_f1_i7_seats_i5_for_I6_teamsO5InputV4PathV",
+      "text" : "Path"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO023copilot_sol_add_hyphen_f1_i7_seats_i5_for_I6_teamsO",
+      "text" : "copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_teams"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO023copilot_sol_add_hyphen_f1_i7_seats_i5_for_I6_teamsO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO023copilot_sol_add_hyphen_f1_i7_seats_i5_for_I6_teamsO5InputV7HeadersV",
+      "text" : "Headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "body"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO023copilot_sol_add_hyphen_f1_i7_seats_i5_for_I6_teamsO",
+      "text" : "copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_teams"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO023copilot_sol_add_hyphen_f1_i7_seats_i5_for_I6_teamsO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO023copilot_sol_add_hyphen_f1_i7_seats_i5_for_I6_teamsO5InputV4BodyO",
+      "text" : "Body"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO023copilot_sol_add_hyphen_f1_i7_seats_i5_for_I6_teamsO",
+      "text" : "copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_teams"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO023copilot_sol_add_hyphen_f1_i7_seats_i5_for_I6_teamsO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/APIProtocol\/copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_teams(path:headers:body:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_teams(path:headers:body:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicopilot\/apiprotocol\/copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_teams(path:headers:body:)"
+},
+"doc://GitHubRestAPICopilot/documentation/GitHubRestAPICopilot/APIProtocol/copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users(_:)": {
+  "abstract" : [
+    {
+      "text" : "Add users to the Copilot subscription for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO023copilot_sol_add_hyphen_f1_i7_seats_i5_for_I6_usersO",
+      "text" : "copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO023copilot_sol_add_hyphen_f1_i7_seats_i5_for_I6_usersO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO023copilot_sol_add_hyphen_f1_i7_seats_i5_for_I6_usersO",
+      "text" : "copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO023copilot_sol_add_hyphen_f1_i7_seats_i5_for_I6_usersO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/APIProtocol\/copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users(_:)",
+  "kind" : "symbol",
+  "required" : true,
+  "role" : "symbol",
+  "title" : "copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicopilot\/apiprotocol\/copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users(_:)"
+},
+"doc://GitHubRestAPICopilot/documentation/GitHubRestAPICopilot/APIProtocol/copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users(path:headers:body:)": {
+  "abstract" : [
+    {
+      "text" : "Add users to the Copilot subscription for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "path"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO023copilot_sol_add_hyphen_f1_i7_seats_i5_for_I6_usersO",
+      "text" : "copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO023copilot_sol_add_hyphen_f1_i7_seats_i5_for_I6_usersO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO023copilot_sol_add_hyphen_f1_i7_seats_i5_for_I6_usersO5InputV4PathV",
+      "text" : "Path"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO023copilot_sol_add_hyphen_f1_i7_seats_i5_for_I6_usersO",
+      "text" : "copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO023copilot_sol_add_hyphen_f1_i7_seats_i5_for_I6_usersO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO023copilot_sol_add_hyphen_f1_i7_seats_i5_for_I6_usersO5InputV7HeadersV",
+      "text" : "Headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "body"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO023copilot_sol_add_hyphen_f1_i7_seats_i5_for_I6_usersO",
+      "text" : "copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO023copilot_sol_add_hyphen_f1_i7_seats_i5_for_I6_usersO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO023copilot_sol_add_hyphen_f1_i7_seats_i5_for_I6_usersO5InputV4BodyO",
+      "text" : "Body"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO023copilot_sol_add_hyphen_f1_i7_seats_i5_for_I6_usersO",
+      "text" : "copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO023copilot_sol_add_hyphen_f1_i7_seats_i5_for_I6_usersO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/APIProtocol\/copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users(path:headers:body:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users(path:headers:body:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicopilot\/apiprotocol\/copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users(path:headers:body:)"
+},
+"doc://GitHubRestAPICopilot/documentation/GitHubRestAPICopilot/APIProtocol/copilot_sol_cancel_hyphen_copilot_hyphen_seat_hyphen_assignment_hyphen_for_hyphen_teams(_:)": {
+  "abstract" : [
+    {
+      "text" : "Remove teams from the Copilot subscription for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "copilot_sol_cancel_hyphen_copilot_hyphen_seat_hyphen_assignment_hyphen_for_hyphen_teams"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO026copilot_sol_cancel_hyphen_f1_i6_seat_i12_assignment_i5_for_I6_teamsO",
+      "text" : "copilot_sol_cancel_hyphen_copilot_hyphen_seat_hyphen_assignment_hyphen_for_hyphen_teams"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO026copilot_sol_cancel_hyphen_f1_i6_seat_i12_assignment_i5_for_I6_teamsO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO026copilot_sol_cancel_hyphen_f1_i6_seat_i12_assignment_i5_for_I6_teamsO",
+      "text" : "copilot_sol_cancel_hyphen_copilot_hyphen_seat_hyphen_assignment_hyphen_for_hyphen_teams"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO026copilot_sol_cancel_hyphen_f1_i6_seat_i12_assignment_i5_for_I6_teamsO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/APIProtocol\/copilot_sol_cancel_hyphen_copilot_hyphen_seat_hyphen_assignment_hyphen_for_hyphen_teams(_:)",
+  "kind" : "symbol",
+  "required" : true,
+  "role" : "symbol",
+  "title" : "copilot_sol_cancel_hyphen_copilot_hyphen_seat_hyphen_assignment_hyphen_for_hyphen_teams(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicopilot\/apiprotocol\/copilot_sol_cancel_hyphen_copilot_hyphen_seat_hyphen_assignment_hyphen_for_hyphen_teams(_:)"
+},
+"doc://GitHubRestAPICopilot/documentation/GitHubRestAPICopilot/APIProtocol/copilot_sol_cancel_hyphen_copilot_hyphen_seat_hyphen_assignment_hyphen_for_hyphen_teams(path:headers:body:)": {
+  "abstract" : [
+    {
+      "text" : "Remove teams from the Copilot subscription for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "copilot_sol_cancel_hyphen_copilot_hyphen_seat_hyphen_assignment_hyphen_for_hyphen_teams"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "path"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO026copilot_sol_cancel_hyphen_f1_i6_seat_i12_assignment_i5_for_I6_teamsO",
+      "text" : "copilot_sol_cancel_hyphen_copilot_hyphen_seat_hyphen_assignment_hyphen_for_hyphen_teams"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO026copilot_sol_cancel_hyphen_f1_i6_seat_i12_assignment_i5_for_I6_teamsO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO026copilot_sol_cancel_hyphen_f1_i6_seat_i12_assignment_i5_for_I6_teamsO5InputV4PathV",
+      "text" : "Path"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO026copilot_sol_cancel_hyphen_f1_i6_seat_i12_assignment_i5_for_I6_teamsO",
+      "text" : "copilot_sol_cancel_hyphen_copilot_hyphen_seat_hyphen_assignment_hyphen_for_hyphen_teams"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO026copilot_sol_cancel_hyphen_f1_i6_seat_i12_assignment_i5_for_I6_teamsO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO026copilot_sol_cancel_hyphen_f1_i6_seat_i12_assignment_i5_for_I6_teamsO5InputV7HeadersV",
+      "text" : "Headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "body"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO026copilot_sol_cancel_hyphen_f1_i6_seat_i12_assignment_i5_for_I6_teamsO",
+      "text" : "copilot_sol_cancel_hyphen_copilot_hyphen_seat_hyphen_assignment_hyphen_for_hyphen_teams"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO026copilot_sol_cancel_hyphen_f1_i6_seat_i12_assignment_i5_for_I6_teamsO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO026copilot_sol_cancel_hyphen_f1_i6_seat_i12_assignment_i5_for_I6_teamsO5InputV4BodyO",
+      "text" : "Body"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO026copilot_sol_cancel_hyphen_f1_i6_seat_i12_assignment_i5_for_I6_teamsO",
+      "text" : "copilot_sol_cancel_hyphen_copilot_hyphen_seat_hyphen_assignment_hyphen_for_hyphen_teams"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO026copilot_sol_cancel_hyphen_f1_i6_seat_i12_assignment_i5_for_I6_teamsO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/APIProtocol\/copilot_sol_cancel_hyphen_copilot_hyphen_seat_hyphen_assignment_hyphen_for_hyphen_teams(path:headers:body:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "copilot_sol_cancel_hyphen_copilot_hyphen_seat_hyphen_assignment_hyphen_for_hyphen_teams(path:headers:body:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicopilot\/apiprotocol\/copilot_sol_cancel_hyphen_copilot_hyphen_seat_hyphen_assignment_hyphen_for_hyphen_teams(path:headers:body:)"
+},
+"doc://GitHubRestAPICopilot/documentation/GitHubRestAPICopilot/APIProtocol/copilot_sol_cancel_hyphen_copilot_hyphen_seat_hyphen_assignment_hyphen_for_hyphen_users(_:)": {
+  "abstract" : [
+    {
+      "text" : "Remove users from the Copilot subscription for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "copilot_sol_cancel_hyphen_copilot_hyphen_seat_hyphen_assignment_hyphen_for_hyphen_users"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO026copilot_sol_cancel_hyphen_f1_i6_seat_i12_assignment_i5_for_I6_usersO",
+      "text" : "copilot_sol_cancel_hyphen_copilot_hyphen_seat_hyphen_assignment_hyphen_for_hyphen_users"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO026copilot_sol_cancel_hyphen_f1_i6_seat_i12_assignment_i5_for_I6_usersO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO026copilot_sol_cancel_hyphen_f1_i6_seat_i12_assignment_i5_for_I6_usersO",
+      "text" : "copilot_sol_cancel_hyphen_copilot_hyphen_seat_hyphen_assignment_hyphen_for_hyphen_users"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO026copilot_sol_cancel_hyphen_f1_i6_seat_i12_assignment_i5_for_I6_usersO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/APIProtocol\/copilot_sol_cancel_hyphen_copilot_hyphen_seat_hyphen_assignment_hyphen_for_hyphen_users(_:)",
+  "kind" : "symbol",
+  "required" : true,
+  "role" : "symbol",
+  "title" : "copilot_sol_cancel_hyphen_copilot_hyphen_seat_hyphen_assignment_hyphen_for_hyphen_users(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicopilot\/apiprotocol\/copilot_sol_cancel_hyphen_copilot_hyphen_seat_hyphen_assignment_hyphen_for_hyphen_users(_:)"
+},
+"doc://GitHubRestAPICopilot/documentation/GitHubRestAPICopilot/APIProtocol/copilot_sol_cancel_hyphen_copilot_hyphen_seat_hyphen_assignment_hyphen_for_hyphen_users(path:headers:body:)": {
+  "abstract" : [
+    {
+      "text" : "Remove users from the Copilot subscription for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "copilot_sol_cancel_hyphen_copilot_hyphen_seat_hyphen_assignment_hyphen_for_hyphen_users"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "path"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO026copilot_sol_cancel_hyphen_f1_i6_seat_i12_assignment_i5_for_I6_usersO",
+      "text" : "copilot_sol_cancel_hyphen_copilot_hyphen_seat_hyphen_assignment_hyphen_for_hyphen_users"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO026copilot_sol_cancel_hyphen_f1_i6_seat_i12_assignment_i5_for_I6_usersO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO026copilot_sol_cancel_hyphen_f1_i6_seat_i12_assignment_i5_for_I6_usersO5InputV4PathV",
+      "text" : "Path"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO026copilot_sol_cancel_hyphen_f1_i6_seat_i12_assignment_i5_for_I6_usersO",
+      "text" : "copilot_sol_cancel_hyphen_copilot_hyphen_seat_hyphen_assignment_hyphen_for_hyphen_users"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO026copilot_sol_cancel_hyphen_f1_i6_seat_i12_assignment_i5_for_I6_usersO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO026copilot_sol_cancel_hyphen_f1_i6_seat_i12_assignment_i5_for_I6_usersO5InputV7HeadersV",
+      "text" : "Headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "body"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO026copilot_sol_cancel_hyphen_f1_i6_seat_i12_assignment_i5_for_I6_usersO",
+      "text" : "copilot_sol_cancel_hyphen_copilot_hyphen_seat_hyphen_assignment_hyphen_for_hyphen_users"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO026copilot_sol_cancel_hyphen_f1_i6_seat_i12_assignment_i5_for_I6_usersO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO026copilot_sol_cancel_hyphen_f1_i6_seat_i12_assignment_i5_for_I6_usersO5InputV4BodyO",
+      "text" : "Body"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO026copilot_sol_cancel_hyphen_f1_i6_seat_i12_assignment_i5_for_I6_usersO",
+      "text" : "copilot_sol_cancel_hyphen_copilot_hyphen_seat_hyphen_assignment_hyphen_for_hyphen_users"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO026copilot_sol_cancel_hyphen_f1_i6_seat_i12_assignment_i5_for_I6_usersO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/APIProtocol\/copilot_sol_cancel_hyphen_copilot_hyphen_seat_hyphen_assignment_hyphen_for_hyphen_users(path:headers:body:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "copilot_sol_cancel_hyphen_copilot_hyphen_seat_hyphen_assignment_hyphen_for_hyphen_users(path:headers:body:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicopilot\/apiprotocol\/copilot_sol_cancel_hyphen_copilot_hyphen_seat_hyphen_assignment_hyphen_for_hyphen_users(path:headers:body:)"
+},
+"doc://GitHubRestAPICopilot/documentation/GitHubRestAPICopilot/APIProtocol/copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_organization(_:)": {
+  "abstract" : [
+    {
+      "text" : "Get Copilot metrics for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_organization"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO012copilot_sol_f16_hyphen_metrics_h5_for_H13_organizationO",
+      "text" : "copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_organization"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO012copilot_sol_f16_hyphen_metrics_h5_for_H13_organizationO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO012copilot_sol_f16_hyphen_metrics_h5_for_H13_organizationO",
+      "text" : "copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_organization"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO012copilot_sol_f16_hyphen_metrics_h5_for_H13_organizationO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/APIProtocol\/copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_organization(_:)",
+  "kind" : "symbol",
+  "required" : true,
+  "role" : "symbol",
+  "title" : "copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_organization(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicopilot\/apiprotocol\/copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_organization(_:)"
+},
+"doc://GitHubRestAPICopilot/documentation/GitHubRestAPICopilot/APIProtocol/copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_organization(path:query:headers:)": {
+  "abstract" : [
+    {
+      "text" : "Get Copilot metrics for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_organization"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "path"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO012copilot_sol_f16_hyphen_metrics_h5_for_H13_organizationO",
+      "text" : "copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_organization"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO012copilot_sol_f16_hyphen_metrics_h5_for_H13_organizationO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO012copilot_sol_f16_hyphen_metrics_h5_for_H13_organizationO5InputV4PathV",
+      "text" : "Path"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "query"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO012copilot_sol_f16_hyphen_metrics_h5_for_H13_organizationO",
+      "text" : "copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_organization"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO012copilot_sol_f16_hyphen_metrics_h5_for_H13_organizationO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO012copilot_sol_f16_hyphen_metrics_h5_for_H13_organizationO5InputV5QueryV",
+      "text" : "Query"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO012copilot_sol_f16_hyphen_metrics_h5_for_H13_organizationO",
+      "text" : "copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_organization"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO012copilot_sol_f16_hyphen_metrics_h5_for_H13_organizationO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO012copilot_sol_f16_hyphen_metrics_h5_for_H13_organizationO5InputV7HeadersV",
+      "text" : "Headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO012copilot_sol_f16_hyphen_metrics_h5_for_H13_organizationO",
+      "text" : "copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_organization"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO012copilot_sol_f16_hyphen_metrics_h5_for_H13_organizationO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/APIProtocol\/copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_organization(path:query:headers:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_organization(path:query:headers:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicopilot\/apiprotocol\/copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_organization(path:query:headers:)"
+},
+"doc://GitHubRestAPICopilot/documentation/GitHubRestAPICopilot/APIProtocol/copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_team(_:)": {
+  "abstract" : [
+    {
+      "text" : "Get Copilot metrics for a team",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_team"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO012copilot_sol_f16_hyphen_metrics_h5_for_H5_teamO",
+      "text" : "copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_team"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO012copilot_sol_f16_hyphen_metrics_h5_for_H5_teamO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO012copilot_sol_f16_hyphen_metrics_h5_for_H5_teamO",
+      "text" : "copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_team"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO012copilot_sol_f16_hyphen_metrics_h5_for_H5_teamO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/APIProtocol\/copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_team(_:)",
+  "kind" : "symbol",
+  "required" : true,
+  "role" : "symbol",
+  "title" : "copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_team(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicopilot\/apiprotocol\/copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_team(_:)"
+},
+"doc://GitHubRestAPICopilot/documentation/GitHubRestAPICopilot/APIProtocol/copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_team(path:query:headers:)": {
+  "abstract" : [
+    {
+      "text" : "Get Copilot metrics for a team",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_team"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "path"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO012copilot_sol_f16_hyphen_metrics_h5_for_H5_teamO",
+      "text" : "copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_team"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO012copilot_sol_f16_hyphen_metrics_h5_for_H5_teamO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO012copilot_sol_f16_hyphen_metrics_h5_for_H5_teamO5InputV4PathV",
+      "text" : "Path"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "query"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO012copilot_sol_f16_hyphen_metrics_h5_for_H5_teamO",
+      "text" : "copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_team"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO012copilot_sol_f16_hyphen_metrics_h5_for_H5_teamO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO012copilot_sol_f16_hyphen_metrics_h5_for_H5_teamO5InputV5QueryV",
+      "text" : "Query"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO012copilot_sol_f16_hyphen_metrics_h5_for_H5_teamO",
+      "text" : "copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_team"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO012copilot_sol_f16_hyphen_metrics_h5_for_H5_teamO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO012copilot_sol_f16_hyphen_metrics_h5_for_H5_teamO5InputV7HeadersV",
+      "text" : "Headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO012copilot_sol_f16_hyphen_metrics_h5_for_H5_teamO",
+      "text" : "copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_team"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO012copilot_sol_f16_hyphen_metrics_h5_for_H5_teamO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/APIProtocol\/copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_team(path:query:headers:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_team(path:query:headers:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicopilot\/apiprotocol\/copilot_sol_copilot_hyphen_metrics_hyphen_for_hyphen_team(path:query:headers:)"
+},
+"doc://GitHubRestAPICopilot/documentation/GitHubRestAPICopilot/APIProtocol/copilot_sol_get_hyphen_copilot_hyphen_organization_hyphen_details(_:)": {
+  "abstract" : [
+    {
+      "text" : "Get Copilot seat information and settings for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "copilot_sol_get_hyphen_copilot_hyphen_organization_hyphen_details"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO023copilot_sol_get_hyphen_f1_i14_organization_I8_detailsO",
+      "text" : "copilot_sol_get_hyphen_copilot_hyphen_organization_hyphen_details"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO023copilot_sol_get_hyphen_f1_i14_organization_I8_detailsO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO023copilot_sol_get_hyphen_f1_i14_organization_I8_detailsO",
+      "text" : "copilot_sol_get_hyphen_copilot_hyphen_organization_hyphen_details"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO023copilot_sol_get_hyphen_f1_i14_organization_I8_detailsO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/APIProtocol\/copilot_sol_get_hyphen_copilot_hyphen_organization_hyphen_details(_:)",
+  "kind" : "symbol",
+  "required" : true,
+  "role" : "symbol",
+  "title" : "copilot_sol_get_hyphen_copilot_hyphen_organization_hyphen_details(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicopilot\/apiprotocol\/copilot_sol_get_hyphen_copilot_hyphen_organization_hyphen_details(_:)"
+},
+"doc://GitHubRestAPICopilot/documentation/GitHubRestAPICopilot/APIProtocol/copilot_sol_get_hyphen_copilot_hyphen_organization_hyphen_details(path:headers:)": {
+  "abstract" : [
+    {
+      "text" : "Get Copilot seat information and settings for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "copilot_sol_get_hyphen_copilot_hyphen_organization_hyphen_details"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "path"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO023copilot_sol_get_hyphen_f1_i14_organization_I8_detailsO",
+      "text" : "copilot_sol_get_hyphen_copilot_hyphen_organization_hyphen_details"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO023copilot_sol_get_hyphen_f1_i14_organization_I8_detailsO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO023copilot_sol_get_hyphen_f1_i14_organization_I8_detailsO5InputV4PathV",
+      "text" : "Path"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO023copilot_sol_get_hyphen_f1_i14_organization_I8_detailsO",
+      "text" : "copilot_sol_get_hyphen_copilot_hyphen_organization_hyphen_details"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO023copilot_sol_get_hyphen_f1_i14_organization_I8_detailsO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO023copilot_sol_get_hyphen_f1_i14_organization_I8_detailsO5InputV7HeadersV",
+      "text" : "Headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO023copilot_sol_get_hyphen_f1_i14_organization_I8_detailsO",
+      "text" : "copilot_sol_get_hyphen_copilot_hyphen_organization_hyphen_details"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO023copilot_sol_get_hyphen_f1_i14_organization_I8_detailsO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/APIProtocol\/copilot_sol_get_hyphen_copilot_hyphen_organization_hyphen_details(path:headers:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "copilot_sol_get_hyphen_copilot_hyphen_organization_hyphen_details(path:headers:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicopilot\/apiprotocol\/copilot_sol_get_hyphen_copilot_hyphen_organization_hyphen_details(path:headers:)"
+},
+"doc://GitHubRestAPICopilot/documentation/GitHubRestAPICopilot/APIProtocol/copilot_sol_get_hyphen_copilot_hyphen_seat_hyphen_details_hyphen_for_hyphen_user(_:)": {
+  "abstract" : [
+    {
+      "text" : "Get Copilot seat assignment details for a user",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "copilot_sol_get_hyphen_copilot_hyphen_seat_hyphen_details_hyphen_for_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO023copilot_sol_get_hyphen_f1_i6_seat_i9_details_i5_for_I5_userO",
+      "text" : "copilot_sol_get_hyphen_copilot_hyphen_seat_hyphen_details_hyphen_for_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO023copilot_sol_get_hyphen_f1_i6_seat_i9_details_i5_for_I5_userO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO023copilot_sol_get_hyphen_f1_i6_seat_i9_details_i5_for_I5_userO",
+      "text" : "copilot_sol_get_hyphen_copilot_hyphen_seat_hyphen_details_hyphen_for_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO023copilot_sol_get_hyphen_f1_i6_seat_i9_details_i5_for_I5_userO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/APIProtocol\/copilot_sol_get_hyphen_copilot_hyphen_seat_hyphen_details_hyphen_for_hyphen_user(_:)",
+  "kind" : "symbol",
+  "required" : true,
+  "role" : "symbol",
+  "title" : "copilot_sol_get_hyphen_copilot_hyphen_seat_hyphen_details_hyphen_for_hyphen_user(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicopilot\/apiprotocol\/copilot_sol_get_hyphen_copilot_hyphen_seat_hyphen_details_hyphen_for_hyphen_user(_:)"
+},
+"doc://GitHubRestAPICopilot/documentation/GitHubRestAPICopilot/APIProtocol/copilot_sol_get_hyphen_copilot_hyphen_seat_hyphen_details_hyphen_for_hyphen_user(path:headers:)": {
+  "abstract" : [
+    {
+      "text" : "Get Copilot seat assignment details for a user",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "copilot_sol_get_hyphen_copilot_hyphen_seat_hyphen_details_hyphen_for_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "path"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO023copilot_sol_get_hyphen_f1_i6_seat_i9_details_i5_for_I5_userO",
+      "text" : "copilot_sol_get_hyphen_copilot_hyphen_seat_hyphen_details_hyphen_for_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO023copilot_sol_get_hyphen_f1_i6_seat_i9_details_i5_for_I5_userO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO023copilot_sol_get_hyphen_f1_i6_seat_i9_details_i5_for_I5_userO5InputV4PathV",
+      "text" : "Path"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO023copilot_sol_get_hyphen_f1_i6_seat_i9_details_i5_for_I5_userO",
+      "text" : "copilot_sol_get_hyphen_copilot_hyphen_seat_hyphen_details_hyphen_for_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO023copilot_sol_get_hyphen_f1_i6_seat_i9_details_i5_for_I5_userO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO023copilot_sol_get_hyphen_f1_i6_seat_i9_details_i5_for_I5_userO5InputV7HeadersV",
+      "text" : "Headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO023copilot_sol_get_hyphen_f1_i6_seat_i9_details_i5_for_I5_userO",
+      "text" : "copilot_sol_get_hyphen_copilot_hyphen_seat_hyphen_details_hyphen_for_hyphen_user"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO023copilot_sol_get_hyphen_f1_i6_seat_i9_details_i5_for_I5_userO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/APIProtocol\/copilot_sol_get_hyphen_copilot_hyphen_seat_hyphen_details_hyphen_for_hyphen_user(path:headers:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "copilot_sol_get_hyphen_copilot_hyphen_seat_hyphen_details_hyphen_for_hyphen_user(path:headers:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicopilot\/apiprotocol\/copilot_sol_get_hyphen_copilot_hyphen_seat_hyphen_details_hyphen_for_hyphen_user(path:headers:)"
+},
+"doc://GitHubRestAPICopilot/documentation/GitHubRestAPICopilot/APIProtocol/copilot_sol_list_hyphen_copilot_hyphen_seats(_:)": {
+  "abstract" : [
+    {
+      "text" : "List all Copilot seat assignments for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "copilot_sol_list_hyphen_copilot_hyphen_seats"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO024copilot_sol_list_hyphen_f1_I6_seatsO",
+      "text" : "copilot_sol_list_hyphen_copilot_hyphen_seats"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO024copilot_sol_list_hyphen_f1_I6_seatsO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO024copilot_sol_list_hyphen_f1_I6_seatsO",
+      "text" : "copilot_sol_list_hyphen_copilot_hyphen_seats"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO024copilot_sol_list_hyphen_f1_I6_seatsO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/APIProtocol\/copilot_sol_list_hyphen_copilot_hyphen_seats(_:)",
+  "kind" : "symbol",
+  "required" : true,
+  "role" : "symbol",
+  "title" : "copilot_sol_list_hyphen_copilot_hyphen_seats(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicopilot\/apiprotocol\/copilot_sol_list_hyphen_copilot_hyphen_seats(_:)"
+},
+"doc://GitHubRestAPICopilot/documentation/GitHubRestAPICopilot/APIProtocol/copilot_sol_list_hyphen_copilot_hyphen_seats(path:query:headers:)": {
+  "abstract" : [
+    {
+      "text" : "List all Copilot seat assignments for an organization",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "copilot_sol_list_hyphen_copilot_hyphen_seats"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "path"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO024copilot_sol_list_hyphen_f1_I6_seatsO",
+      "text" : "copilot_sol_list_hyphen_copilot_hyphen_seats"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO024copilot_sol_list_hyphen_f1_I6_seatsO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO024copilot_sol_list_hyphen_f1_I6_seatsO5InputV4PathV",
+      "text" : "Path"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "query"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO024copilot_sol_list_hyphen_f1_I6_seatsO",
+      "text" : "copilot_sol_list_hyphen_copilot_hyphen_seats"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO024copilot_sol_list_hyphen_f1_I6_seatsO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO024copilot_sol_list_hyphen_f1_I6_seatsO5InputV5QueryV",
+      "text" : "Query"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO024copilot_sol_list_hyphen_f1_I6_seatsO",
+      "text" : "copilot_sol_list_hyphen_copilot_hyphen_seats"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO024copilot_sol_list_hyphen_f1_I6_seatsO5InputV",
+      "text" : "Input"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO024copilot_sol_list_hyphen_f1_I6_seatsO5InputV7HeadersV",
+      "text" : "Headers"
+    },
+    {
+      "kind" : "text",
+      "text" : ") "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "async"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "throws"
+    },
+    {
+      "kind" : "text",
+      "text" : " -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO",
+      "text" : "Operations"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO024copilot_sol_list_hyphen_f1_I6_seatsO",
+      "text" : "copilot_sol_list_hyphen_copilot_hyphen_seats"
+    },
+    {
+      "kind" : "text",
+      "text" : "."
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20GitHubRestAPICopilot10OperationsO024copilot_sol_list_hyphen_f1_I6_seatsO6OutputO",
+      "text" : "Output"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/APIProtocol\/copilot_sol_list_hyphen_copilot_hyphen_seats(path:query:headers:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "copilot_sol_list_hyphen_copilot_hyphen_seats(path:query:headers:)",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicopilot\/apiprotocol\/copilot_sol_list_hyphen_copilot_hyphen_seats(path:query:headers:)"
+},
+"doc://GitHubRestAPICopilot/documentation/GitHubRestAPICopilot/Client": {
+  "abstract" : [
+    {
+      "text" : "GitHub’s v3 REST API.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "Client"
+    }
+  ],
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/documentation\/GitHubRestAPICopilot\/Client",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "Client"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "Client",
+  "type" : "topic",
+  "url" : "\/documentation\/githubrestapicopilot\/client"
+},
+"doc://GitHubRestAPICopilot/s8SendableP": {
+  "identifier" : "doc:\/\/GitHubRestAPICopilot\/s8SendableP",
+  "title" : "Swift.Sendable",
+  "type" : "unresolvable"
+}
+}
+}
