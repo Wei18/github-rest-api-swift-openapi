@@ -197,6 +197,15 @@ extension APIProtocol {
 
 /// Server URLs defined in the OpenAPI document.
 public enum Servers {
+    public enum Server1 {
+        public static func url() throws -> Foundation.URL {
+            try Foundation.URL(
+                validatingOpenAPIServerURL: "https://api.github.com",
+                variables: []
+            )
+        }
+    }
+    @available(*, deprecated, renamed: "Servers.Server1.url")
     public static func server1() throws -> Foundation.URL {
         try Foundation.URL(
             validatingOpenAPIServerURL: "https://api.github.com",
@@ -337,7 +346,7 @@ public enum Components {
         /// The type of GitHub user that can comment, open issues, or create pull requests while the interaction limit is in effect.
         ///
         /// - Remark: Generated from `#/components/schemas/interaction-group`.
-        @frozen public enum interaction_hyphen_group: String, Codable, Hashable, Sendable {
+        @frozen public enum interaction_hyphen_group: String, Codable, Hashable, Sendable, CaseIterable {
             case existing_users = "existing_users"
             case contributors_only = "contributors_only"
             case collaborators_only = "collaborators_only"
@@ -376,7 +385,7 @@ public enum Components {
         /// The duration of the interaction restriction. Default: `one_day`.
         ///
         /// - Remark: Generated from `#/components/schemas/interaction-expiry`.
-        @frozen public enum interaction_hyphen_expiry: String, Codable, Hashable, Sendable {
+        @frozen public enum interaction_hyphen_expiry: String, Codable, Hashable, Sendable, CaseIterable {
             case one_day = "one_day"
             case three_days = "three_days"
             case one_week = "one_week"
@@ -545,19 +554,19 @@ public enum Operations {
                         public init(from decoder: any Decoder) throws {
                             var errors: [any Error] = []
                             do {
-                                value1 = try .init(from: decoder)
+                                self.value1 = try .init(from: decoder)
                             } catch {
                                 errors.append(error)
                             }
                             do {
-                                value2 = try .init(from: decoder)
+                                self.value2 = try .init(from: decoder)
                             } catch {
                                 errors.append(error)
                             }
                             try Swift.DecodingError.verifyAtLeastOneSchemaIsNotNil(
                                 [
-                                    value1,
-                                    value2
+                                    self.value1,
+                                    self.value2
                                 ],
                                 type: Self.self,
                                 codingPath: decoder.codingPath,
@@ -565,8 +574,8 @@ public enum Operations {
                             )
                         }
                         public func encode(to encoder: any Encoder) throws {
-                            try value1?.encode(to: encoder)
-                            try value2?.encode(to: encoder)
+                            try self.value1?.encode(to: encoder)
+                            try self.value2?.encode(to: encoder)
                         }
                     }
                     /// - Remark: Generated from `#/paths/orgs/{org}/interaction-limits/GET/responses/200/content/application\/json`.
@@ -855,6 +864,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_org.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/interaction-limits/delete(interactions/remove-restrictions-for-org)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -969,19 +986,19 @@ public enum Operations {
                         public init(from decoder: any Decoder) throws {
                             var errors: [any Error] = []
                             do {
-                                value1 = try .init(from: decoder)
+                                self.value1 = try .init(from: decoder)
                             } catch {
                                 errors.append(error)
                             }
                             do {
-                                value2 = try .init(from: decoder)
+                                self.value2 = try .init(from: decoder)
                             } catch {
                                 errors.append(error)
                             }
                             try Swift.DecodingError.verifyAtLeastOneSchemaIsNotNil(
                                 [
-                                    value1,
-                                    value2
+                                    self.value1,
+                                    self.value2
                                 ],
                                 type: Self.self,
                                 codingPath: decoder.codingPath,
@@ -989,8 +1006,8 @@ public enum Operations {
                             )
                         }
                         public func encode(to encoder: any Encoder) throws {
-                            try value1?.encode(to: encoder)
-                            try value2?.encode(to: encoder)
+                            try self.value1?.encode(to: encoder)
+                            try self.value2?.encode(to: encoder)
                         }
                     }
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/interaction-limits/GET/responses/200/content/application\/json`.
@@ -1201,6 +1218,14 @@ public enum Operations {
             ///
             /// HTTP response code: `409 conflict`.
             case conflict(Operations.interactions_sol_set_hyphen_restrictions_hyphen_for_hyphen_repo.Output.Conflict)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/interaction-limits/put(interactions/set-restrictions-for-repo)/responses/409`.
+            ///
+            /// HTTP response code: `409 conflict`.
+            public static var conflict: Self {
+                .conflict(.init())
+            }
             /// The associated value of the enum case if `self` is `.conflict`.
             ///
             /// - Throws: An error if `self` is not `.conflict`.
@@ -1301,6 +1326,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_repo.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/interaction-limits/delete(interactions/remove-restrictions-for-repo)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -1328,6 +1361,14 @@ public enum Operations {
             ///
             /// HTTP response code: `409 conflict`.
             case conflict(Operations.interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_repo.Output.Conflict)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/interaction-limits/delete(interactions/remove-restrictions-for-repo)/responses/409`.
+            ///
+            /// HTTP response code: `409 conflict`.
+            public static var conflict: Self {
+                .conflict(.init())
+            }
             /// The associated value of the enum case if `self` is `.conflict`.
             ///
             /// - Throws: An error if `self` is not `.conflict`.
@@ -1413,19 +1454,19 @@ public enum Operations {
                         public init(from decoder: any Decoder) throws {
                             var errors: [any Error] = []
                             do {
-                                value1 = try .init(from: decoder)
+                                self.value1 = try .init(from: decoder)
                             } catch {
                                 errors.append(error)
                             }
                             do {
-                                value2 = try .init(from: decoder)
+                                self.value2 = try .init(from: decoder)
                             } catch {
                                 errors.append(error)
                             }
                             try Swift.DecodingError.verifyAtLeastOneSchemaIsNotNil(
                                 [
-                                    value1,
-                                    value2
+                                    self.value1,
+                                    self.value2
                                 ],
                                 type: Self.self,
                                 codingPath: decoder.codingPath,
@@ -1433,8 +1474,8 @@ public enum Operations {
                             )
                         }
                         public func encode(to encoder: any Encoder) throws {
-                            try value1?.encode(to: encoder)
-                            try value2?.encode(to: encoder)
+                            try self.value1?.encode(to: encoder)
+                            try self.value2?.encode(to: encoder)
                         }
                     }
                     /// - Remark: Generated from `#/paths/user/interaction-limits/GET/responses/200/content/application\/json`.
@@ -1495,6 +1536,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.interactions_sol_get_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user.Output.NoContent)
+            /// Response when there are no restrictions
+            ///
+            /// - Remark: Generated from `#/paths//user/interaction-limits/get(interactions/get-restrictions-for-authenticated-user)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -1712,6 +1761,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.interactions_sol_remove_hyphen_restrictions_hyphen_for_hyphen_authenticated_hyphen_user.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//user/interaction-limits/delete(interactions/remove-restrictions-for-authenticated-user)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
