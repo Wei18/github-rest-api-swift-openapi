@@ -181,6 +181,15 @@ extension APIProtocol {
 
 /// Server URLs defined in the OpenAPI document.
 public enum Servers {
+    public enum Server1 {
+        public static func url() throws -> Foundation.URL {
+            try Foundation.URL(
+                validatingOpenAPIServerURL: "https://api.github.com",
+                variables: []
+            )
+        }
+    }
+    @available(*, deprecated, renamed: "Servers.Server1.url")
     public static func server1() throws -> Foundation.URL {
         try Foundation.URL(
             validatingOpenAPIServerURL: "https://api.github.com",
@@ -378,7 +387,7 @@ public enum Components {
         /// Indicates whether a campaign is open or closed
         ///
         /// - Remark: Generated from `#/components/schemas/campaign-state`.
-        @frozen public enum campaign_hyphen_state: String, Codable, Hashable, Sendable {
+        @frozen public enum campaign_hyphen_state: String, Codable, Hashable, Sendable, CaseIterable {
             case open = "open"
             case closed = "closed"
         }
@@ -713,15 +722,15 @@ public enum Components {
                 }
                 public init(from decoder: any Decoder) throws {
                     let container = try decoder.container(keyedBy: CodingKeys.self)
-                    open_count = try container.decode(
+                    self.open_count = try container.decode(
                         Swift.Int.self,
                         forKey: .open_count
                     )
-                    closed_count = try container.decode(
+                    self.closed_count = try container.decode(
                         Swift.Int.self,
                         forKey: .closed_count
                     )
-                    in_progress_count = try container.decode(
+                    self.in_progress_count = try container.decode(
                         Swift.Int.self,
                         forKey: .in_progress_count
                     )
@@ -801,7 +810,7 @@ public enum Components {
         /// The direction to sort the results by.
         ///
         /// - Remark: Generated from `#/components/parameters/direction`.
-        @frozen public enum direction: String, Codable, Hashable, Sendable {
+        @frozen public enum direction: String, Codable, Hashable, Sendable, CaseIterable {
             case asc = "asc"
             case desc = "desc"
         }
@@ -956,7 +965,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/campaigns/GET/query/per_page`.
                 public var per_page: Components.Parameters.per_hyphen_page?
                 /// - Remark: Generated from `#/components/parameters/direction`.
-                @frozen public enum direction: String, Codable, Hashable, Sendable {
+                @frozen public enum direction: String, Codable, Hashable, Sendable, CaseIterable {
                     case asc = "asc"
                     case desc = "desc"
                 }
@@ -969,7 +978,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/campaigns/GET/query/state`.
                 public var state: Components.Schemas.campaign_hyphen_state?
                 /// - Remark: Generated from `#/paths/orgs/{org}/campaigns/GET/query/sort`.
-                @frozen public enum sortPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum sortPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case created = "created"
                     case updated = "updated"
                     case ends_at = "ends_at"
@@ -1277,11 +1286,11 @@ public enum Operations {
                         }
                         public init(from decoder: any Decoder) throws {
                             let container = try decoder.container(keyedBy: CodingKeys.self)
-                            repository_id = try container.decode(
+                            self.repository_id = try container.decode(
                                 Swift.Int.self,
                                 forKey: .repository_id
                             )
-                            alert_numbers = try container.decode(
+                            self.alert_numbers = try container.decode(
                                 [Swift.Int].self,
                                 forKey: .alert_numbers
                             )
@@ -1345,35 +1354,35 @@ public enum Operations {
                     }
                     public init(from decoder: any Decoder) throws {
                         let container = try decoder.container(keyedBy: CodingKeys.self)
-                        name = try container.decode(
+                        self.name = try container.decode(
                             Swift.String.self,
                             forKey: .name
                         )
-                        description = try container.decode(
+                        self.description = try container.decode(
                             Swift.String.self,
                             forKey: .description
                         )
-                        managers = try container.decodeIfPresent(
+                        self.managers = try container.decodeIfPresent(
                             [Swift.String].self,
                             forKey: .managers
                         )
-                        team_managers = try container.decodeIfPresent(
+                        self.team_managers = try container.decodeIfPresent(
                             [Swift.String].self,
                             forKey: .team_managers
                         )
-                        ends_at = try container.decode(
+                        self.ends_at = try container.decode(
                             Foundation.Date.self,
                             forKey: .ends_at
                         )
-                        contact_link = try container.decodeIfPresent(
+                        self.contact_link = try container.decodeIfPresent(
                             Swift.String.self,
                             forKey: .contact_link
                         )
-                        code_scanning_alerts = try container.decode(
+                        self.code_scanning_alerts = try container.decode(
                             Operations.campaigns_sol_create_hyphen_campaign.Input.Body.jsonPayload.code_scanning_alertsPayload.self,
                             forKey: .code_scanning_alerts
                         )
-                        generate_issues = try container.decodeIfPresent(
+                        self.generate_issues = try container.decodeIfPresent(
                             Swift.Bool.self,
                             forKey: .generate_issues
                         )
@@ -1596,6 +1605,14 @@ public enum Operations {
             ///
             /// HTTP response code: `429 tooManyRequests`.
             case tooManyRequests(Operations.campaigns_sol_create_hyphen_campaign.Output.TooManyRequests)
+            /// Too Many Requests
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/campaigns/post(campaigns/create-campaign)/responses/429`.
+            ///
+            /// HTTP response code: `429 tooManyRequests`.
+            public static var tooManyRequests: Self {
+                .tooManyRequests(.init())
+            }
             /// The associated value of the enum case if `self` is `.tooManyRequests`.
             ///
             /// - Throws: An error if `self` is not `.tooManyRequests`.
@@ -2026,31 +2043,31 @@ public enum Operations {
                     }
                     public init(from decoder: any Decoder) throws {
                         let container = try decoder.container(keyedBy: CodingKeys.self)
-                        name = try container.decodeIfPresent(
+                        self.name = try container.decodeIfPresent(
                             Swift.String.self,
                             forKey: .name
                         )
-                        description = try container.decodeIfPresent(
+                        self.description = try container.decodeIfPresent(
                             Swift.String.self,
                             forKey: .description
                         )
-                        managers = try container.decodeIfPresent(
+                        self.managers = try container.decodeIfPresent(
                             [Swift.String].self,
                             forKey: .managers
                         )
-                        team_managers = try container.decodeIfPresent(
+                        self.team_managers = try container.decodeIfPresent(
                             [Swift.String].self,
                             forKey: .team_managers
                         )
-                        ends_at = try container.decodeIfPresent(
+                        self.ends_at = try container.decodeIfPresent(
                             Foundation.Date.self,
                             forKey: .ends_at
                         )
-                        contact_link = try container.decodeIfPresent(
+                        self.contact_link = try container.decodeIfPresent(
                             Swift.String.self,
                             forKey: .contact_link
                         )
-                        state = try container.decodeIfPresent(
+                        self.state = try container.decodeIfPresent(
                             Components.Schemas.campaign_hyphen_state.self,
                             forKey: .state
                         )
@@ -2389,6 +2406,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.campaigns_sol_delete_hyphen_campaign.Output.NoContent)
+            /// Deletion successful
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/campaigns/{campaign_number}/delete(campaigns/delete-campaign)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
