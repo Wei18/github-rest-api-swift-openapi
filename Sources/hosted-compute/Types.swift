@@ -175,6 +175,15 @@ extension APIProtocol {
 
 /// Server URLs defined in the OpenAPI document.
 public enum Servers {
+    public enum Server1 {
+        public static func url() throws -> Foundation.URL {
+            try Foundation.URL(
+                validatingOpenAPIServerURL: "https://api.github.com",
+                variables: []
+            )
+        }
+    }
+    @available(*, deprecated, renamed: "Servers.Server1.url")
     public static func server1() throws -> Foundation.URL {
         try Foundation.URL(
             validatingOpenAPIServerURL: "https://api.github.com",
@@ -202,7 +211,7 @@ public enum Components {
             /// The hosted compute service the network configuration supports.
             ///
             /// - Remark: Generated from `#/components/schemas/network-configuration/compute_service`.
-            @frozen public enum compute_servicePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum compute_servicePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case none = "none"
                 case actions = "actions"
                 case codespaces = "codespaces"
@@ -590,7 +599,7 @@ public enum Operations {
                     /// The hosted compute service to use for the network configuration.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/settings/network-configurations/POST/requestBody/json/compute_service`.
-                    @frozen public enum compute_servicePayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum compute_servicePayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case none = "none"
                         case actions = "actions"
                     }
@@ -946,7 +955,7 @@ public enum Operations {
                     /// The hosted compute service to use for the network configuration.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/settings/network-configurations/{network_configuration_id}/PATCH/requestBody/json/compute_service`.
-                    @frozen public enum compute_servicePayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum compute_servicePayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case none = "none"
                         case actions = "actions"
                     }
@@ -1136,6 +1145,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.hosted_hyphen_compute_sol_delete_hyphen_network_hyphen_configuration_hyphen_from_hyphen_org.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/settings/network-configurations/{network_configuration_id}/delete(hosted-compute/delete-network-configuration-from-org)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
