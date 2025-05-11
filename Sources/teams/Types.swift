@@ -5717,7 +5717,7 @@ public enum Operations {
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/POST/requestBody/json/description`.
                     public var description: Swift.String?
-                    /// List GitHub IDs for organization members who will become team maintainers.
+                    /// List GitHub usernames for organization members who will become team maintainers.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/POST/requestBody/json/maintainers`.
                     public var maintainers: [Swift.String]?
@@ -5787,7 +5787,7 @@ public enum Operations {
                     /// - Parameters:
                     ///   - name: The name of the team.
                     ///   - description: The description of the team.
-                    ///   - maintainers: List GitHub IDs for organization members who will become team maintainers.
+                    ///   - maintainers: List GitHub usernames for organization members who will become team maintainers.
                     ///   - repoNames: The full name (e.g., "organization-name/repository-name") of repositories to add the team to.
                     ///   - privacy: The level of privacy this team should have. The options are:  
                     ///   - notificationSetting: The notification setting the team has chosen. The options are:  
