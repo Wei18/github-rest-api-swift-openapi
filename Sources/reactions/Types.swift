@@ -717,6 +717,15 @@ extension APIProtocol {
 
 /// Server URLs defined in the OpenAPI document.
 public enum Servers {
+    public enum Server1 {
+        public static func url() throws -> Foundation.URL {
+            try Foundation.URL(
+                validatingOpenAPIServerURL: "https://api.github.com",
+                variables: []
+            )
+        }
+    }
+    @available(*, deprecated, renamed: "Servers.Server1.url")
     public static func server1() throws -> Foundation.URL {
         try Foundation.URL(
             validatingOpenAPIServerURL: "https://api.github.com",
@@ -1049,7 +1058,7 @@ public enum Components {
             /// The reaction to use
             ///
             /// - Remark: Generated from `#/components/schemas/reaction/content`.
-            @frozen public enum contentPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum contentPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case _plus_1 = "+1"
                 case _hyphen_1 = "-1"
                 case laugh = "laugh"
@@ -1303,7 +1312,7 @@ public enum Operations {
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions/GET/query/content`.
-                @frozen public enum contentPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum contentPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case _plus_1 = "+1"
                     case _hyphen_1 = "-1"
                     case laugh = "laugh"
@@ -1545,7 +1554,7 @@ public enum Operations {
                     /// The [reaction type](https://docs.github.com/rest/reactions/reactions#about-reactions) to add to the team discussion comment.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions/POST/requestBody/json/content`.
-                    @frozen public enum contentPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum contentPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case _plus_1 = "+1"
                         case _hyphen_1 = "-1"
                         case laugh = "laugh"
@@ -1802,6 +1811,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.reactions_sol_delete_hyphen_for_hyphen_team_hyphen_discussion_hyphen_comment.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/reactions/{reaction_id}/delete(reactions/delete-for-team-discussion-comment)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -1873,7 +1890,7 @@ public enum Operations {
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions/GET/query/content`.
-                @frozen public enum contentPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum contentPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case _plus_1 = "+1"
                     case _hyphen_1 = "-1"
                     case laugh = "laugh"
@@ -2108,7 +2125,7 @@ public enum Operations {
                     /// The [reaction type](https://docs.github.com/rest/reactions/reactions#about-reactions) to add to the team discussion.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions/POST/requestBody/json/content`.
-                    @frozen public enum contentPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum contentPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case _plus_1 = "+1"
                         case _hyphen_1 = "-1"
                         case laugh = "laugh"
@@ -2358,6 +2375,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.reactions_sol_delete_hyphen_for_hyphen_team_hyphen_discussion.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/reactions/{reaction_id}/delete(reactions/delete-for-team-discussion)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -2424,7 +2449,7 @@ public enum Operations {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/comments/{comment_id}/reactions/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/comments/{comment_id}/reactions/GET/query/content`.
-                @frozen public enum contentPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum contentPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case _plus_1 = "+1"
                     case _hyphen_1 = "-1"
                     case laugh = "laugh"
@@ -2675,7 +2700,7 @@ public enum Operations {
                     /// The [reaction type](https://docs.github.com/rest/reactions/reactions#about-reactions) to add to the commit comment.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/comments/{comment_id}/reactions/POST/requestBody/json/content`.
-                    @frozen public enum contentPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum contentPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case _plus_1 = "+1"
                         case _hyphen_1 = "-1"
                         case laugh = "laugh"
@@ -2946,6 +2971,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.reactions_sol_delete_hyphen_for_hyphen_commit_hyphen_comment.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/comments/{comment_id}/reactions/{reaction_id}/delete(reactions/delete-for-commit-comment)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -3012,7 +3045,7 @@ public enum Operations {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/comments/{comment_id}/reactions/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/comments/{comment_id}/reactions/GET/query/content`.
-                @frozen public enum contentPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum contentPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case _plus_1 = "+1"
                     case _hyphen_1 = "-1"
                     case laugh = "laugh"
@@ -3263,7 +3296,7 @@ public enum Operations {
                     /// The [reaction type](https://docs.github.com/rest/reactions/reactions#about-reactions) to add to the issue comment.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/comments/{comment_id}/reactions/POST/requestBody/json/content`.
-                    @frozen public enum contentPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum contentPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case _plus_1 = "+1"
                         case _hyphen_1 = "-1"
                         case laugh = "laugh"
@@ -3534,6 +3567,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.reactions_sol_delete_hyphen_for_hyphen_issue_hyphen_comment.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/issues/comments/{comment_id}/reactions/{reaction_id}/delete(reactions/delete-for-issue-comment)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -3600,7 +3641,7 @@ public enum Operations {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/reactions/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/reactions/GET/query/content`.
-                @frozen public enum contentPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum contentPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case _plus_1 = "+1"
                     case _hyphen_1 = "-1"
                     case laugh = "laugh"
@@ -3874,7 +3915,7 @@ public enum Operations {
                     /// The [reaction type](https://docs.github.com/rest/reactions/reactions#about-reactions) to add to the issue.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/issues/{issue_number}/reactions/POST/requestBody/json/content`.
-                    @frozen public enum contentPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum contentPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case _plus_1 = "+1"
                         case _hyphen_1 = "-1"
                         case laugh = "laugh"
@@ -4145,6 +4186,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.reactions_sol_delete_hyphen_for_hyphen_issue.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/issues/{issue_number}/reactions/{reaction_id}/delete(reactions/delete-for-issue)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -4211,7 +4260,7 @@ public enum Operations {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions/GET/query/content`.
-                @frozen public enum contentPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum contentPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case _plus_1 = "+1"
                     case _hyphen_1 = "-1"
                     case laugh = "laugh"
@@ -4462,7 +4511,7 @@ public enum Operations {
                     /// The [reaction type](https://docs.github.com/rest/reactions/reactions#about-reactions) to add to the pull request review comment.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions/POST/requestBody/json/content`.
-                    @frozen public enum contentPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum contentPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case _plus_1 = "+1"
                         case _hyphen_1 = "-1"
                         case laugh = "laugh"
@@ -4733,6 +4782,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.reactions_sol_delete_hyphen_for_hyphen_pull_hyphen_request_hyphen_comment.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/pulls/comments/{comment_id}/reactions/{reaction_id}/delete(reactions/delete-for-pull-request-comment)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -4799,7 +4856,7 @@ public enum Operations {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/releases/{release_id}/reactions/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/releases/{release_id}/reactions/GET/query/content`.
-                @frozen public enum contentPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum contentPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case _plus_1 = "+1"
                     case laugh = "laugh"
                     case heart = "heart"
@@ -5048,7 +5105,7 @@ public enum Operations {
                     /// The [reaction type](https://docs.github.com/rest/reactions/reactions#about-reactions) to add to the release.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/releases/{release_id}/reactions/POST/requestBody/json/content`.
-                    @frozen public enum contentPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum contentPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case _plus_1 = "+1"
                         case laugh = "laugh"
                         case heart = "heart"
@@ -5317,6 +5374,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.reactions_sol_delete_hyphen_for_hyphen_release.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/releases/{release_id}/reactions/{reaction_id}/delete(reactions/delete-for-release)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -5388,7 +5453,7 @@ public enum Operations {
             /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/reactions/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/reactions/GET/query/content`.
-                @frozen public enum contentPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum contentPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case _plus_1 = "+1"
                     case _hyphen_1 = "-1"
                     case laugh = "laugh"
@@ -5623,7 +5688,7 @@ public enum Operations {
                     /// The [reaction type](https://docs.github.com/rest/reactions/reactions#about-reactions) to add to the team discussion comment.
                     ///
                     /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/reactions/POST/requestBody/json/content`.
-                    @frozen public enum contentPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum contentPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case _plus_1 = "+1"
                         case _hyphen_1 = "-1"
                         case laugh = "laugh"
@@ -5792,7 +5857,7 @@ public enum Operations {
             /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/reactions/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/reactions/GET/query/content`.
-                @frozen public enum contentPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum contentPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case _plus_1 = "+1"
                     case _hyphen_1 = "-1"
                     case laugh = "laugh"
@@ -6020,7 +6085,7 @@ public enum Operations {
                     /// The [reaction type](https://docs.github.com/rest/reactions/reactions#about-reactions) to add to the team discussion.
                     ///
                     /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/reactions/POST/requestBody/json/content`.
-                    @frozen public enum contentPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum contentPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case _plus_1 = "+1"
                         case _hyphen_1 = "-1"
                         case laugh = "laugh"
