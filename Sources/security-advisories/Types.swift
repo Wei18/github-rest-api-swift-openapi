@@ -321,6 +321,15 @@ extension APIProtocol {
 
 /// Server URLs defined in the OpenAPI document.
 public enum Servers {
+    public enum Server1 {
+        public static func url() throws -> Foundation.URL {
+            try Foundation.URL(
+                validatingOpenAPIServerURL: "https://api.github.com",
+                variables: []
+            )
+        }
+    }
+    @available(*, deprecated, renamed: "Servers.Server1.url")
     public static func server1() throws -> Foundation.URL {
         try Foundation.URL(
             validatingOpenAPIServerURL: "https://api.github.com",
@@ -336,7 +345,7 @@ public enum Components {
         /// The package's language or package management ecosystem.
         ///
         /// - Remark: Generated from `#/components/schemas/security-advisory-ecosystems`.
-        @frozen public enum security_hyphen_advisory_hyphen_ecosystems: String, Codable, Hashable, Sendable {
+        @frozen public enum security_hyphen_advisory_hyphen_ecosystems: String, Codable, Hashable, Sendable, CaseIterable {
             case rubygems = "rubygems"
             case npm = "npm"
             case pip = "pip"
@@ -673,7 +682,7 @@ public enum Components {
         /// The type of credit the user is receiving.
         ///
         /// - Remark: Generated from `#/components/schemas/security-advisory-credit-types`.
-        @frozen public enum security_hyphen_advisory_hyphen_credit_hyphen_types: String, Codable, Hashable, Sendable {
+        @frozen public enum security_hyphen_advisory_hyphen_credit_hyphen_types: String, Codable, Hashable, Sendable, CaseIterable {
             case analyst = "analyst"
             case finder = "finder"
             case reporter = "reporter"
@@ -720,7 +729,7 @@ public enum Components {
             /// The type of advisory.
             ///
             /// - Remark: Generated from `#/components/schemas/global-advisory/type`.
-            @frozen public enum _typePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum _typePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case reviewed = "reviewed"
                 case unreviewed = "unreviewed"
                 case malware = "malware"
@@ -732,7 +741,7 @@ public enum Components {
             /// The severity of the advisory.
             ///
             /// - Remark: Generated from `#/components/schemas/global-advisory/severity`.
-            @frozen public enum severityPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum severityPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case critical = "critical"
                 case high = "high"
                 case medium = "medium"
@@ -752,7 +761,7 @@ public enum Components {
                 /// The type of identifier.
                 ///
                 /// - Remark: Generated from `#/components/schemas/global-advisory/identifiersPayload/type`.
-                @frozen public enum _typePayload: String, Codable, Hashable, Sendable {
+                @frozen public enum _typePayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case CVE = "CVE"
                     case GHSA = "GHSA"
                 }
@@ -1009,95 +1018,95 @@ public enum Components {
             }
             public init(from decoder: any Decoder) throws {
                 let container = try decoder.container(keyedBy: CodingKeys.self)
-                ghsa_id = try container.decode(
+                self.ghsa_id = try container.decode(
                     Swift.String.self,
                     forKey: .ghsa_id
                 )
-                cve_id = try container.decodeIfPresent(
+                self.cve_id = try container.decodeIfPresent(
                     Swift.String.self,
                     forKey: .cve_id
                 )
-                url = try container.decode(
+                self.url = try container.decode(
                     Swift.String.self,
                     forKey: .url
                 )
-                html_url = try container.decode(
+                self.html_url = try container.decode(
                     Swift.String.self,
                     forKey: .html_url
                 )
-                repository_advisory_url = try container.decodeIfPresent(
+                self.repository_advisory_url = try container.decodeIfPresent(
                     Swift.String.self,
                     forKey: .repository_advisory_url
                 )
-                summary = try container.decode(
+                self.summary = try container.decode(
                     Swift.String.self,
                     forKey: .summary
                 )
-                description = try container.decodeIfPresent(
+                self.description = try container.decodeIfPresent(
                     Swift.String.self,
                     forKey: .description
                 )
-                _type = try container.decode(
+                self._type = try container.decode(
                     Components.Schemas.global_hyphen_advisory._typePayload.self,
                     forKey: ._type
                 )
-                severity = try container.decode(
+                self.severity = try container.decode(
                     Components.Schemas.global_hyphen_advisory.severityPayload.self,
                     forKey: .severity
                 )
-                source_code_location = try container.decodeIfPresent(
+                self.source_code_location = try container.decodeIfPresent(
                     Swift.String.self,
                     forKey: .source_code_location
                 )
-                identifiers = try container.decodeIfPresent(
+                self.identifiers = try container.decodeIfPresent(
                     Components.Schemas.global_hyphen_advisory.identifiersPayload.self,
                     forKey: .identifiers
                 )
-                references = try container.decodeIfPresent(
+                self.references = try container.decodeIfPresent(
                     [Swift.String].self,
                     forKey: .references
                 )
-                published_at = try container.decode(
+                self.published_at = try container.decode(
                     Foundation.Date.self,
                     forKey: .published_at
                 )
-                updated_at = try container.decode(
+                self.updated_at = try container.decode(
                     Foundation.Date.self,
                     forKey: .updated_at
                 )
-                github_reviewed_at = try container.decodeIfPresent(
+                self.github_reviewed_at = try container.decodeIfPresent(
                     Foundation.Date.self,
                     forKey: .github_reviewed_at
                 )
-                nvd_published_at = try container.decodeIfPresent(
+                self.nvd_published_at = try container.decodeIfPresent(
                     Foundation.Date.self,
                     forKey: .nvd_published_at
                 )
-                withdrawn_at = try container.decodeIfPresent(
+                self.withdrawn_at = try container.decodeIfPresent(
                     Foundation.Date.self,
                     forKey: .withdrawn_at
                 )
-                vulnerabilities = try container.decodeIfPresent(
+                self.vulnerabilities = try container.decodeIfPresent(
                     [Components.Schemas.vulnerability].self,
                     forKey: .vulnerabilities
                 )
-                cvss = try container.decodeIfPresent(
+                self.cvss = try container.decodeIfPresent(
                     Components.Schemas.global_hyphen_advisory.cvssPayload.self,
                     forKey: .cvss
                 )
-                cvss_severities = try container.decodeIfPresent(
+                self.cvss_severities = try container.decodeIfPresent(
                     Components.Schemas.cvss_hyphen_severities.self,
                     forKey: .cvss_severities
                 )
-                epss = try container.decodeIfPresent(
+                self.epss = try container.decodeIfPresent(
                     Components.Schemas.security_hyphen_advisory_hyphen_epss.self,
                     forKey: .epss
                 )
-                cwes = try container.decodeIfPresent(
+                self.cwes = try container.decodeIfPresent(
                     Components.Schemas.global_hyphen_advisory.cwesPayload.self,
                     forKey: .cwes
                 )
-                credits = try container.decodeIfPresent(
+                self.credits = try container.decodeIfPresent(
                     Components.Schemas.global_hyphen_advisory.creditsPayload.self,
                     forKey: .credits
                 )
@@ -1823,7 +1832,7 @@ public enum Components {
             /// - `COMMIT_OR_PR_TITLE` - default to the commit's title (if only one commit) or the pull request's title (when more than one commit).
             ///
             /// - Remark: Generated from `#/components/schemas/repository/squash_merge_commit_title`.
-            @frozen public enum squash_merge_commit_titlePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum squash_merge_commit_titlePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case PR_TITLE = "PR_TITLE"
                 case COMMIT_OR_PR_TITLE = "COMMIT_OR_PR_TITLE"
             }
@@ -1841,7 +1850,7 @@ public enum Components {
             /// - `BLANK` - default to a blank commit message.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/squash_merge_commit_message`.
-            @frozen public enum squash_merge_commit_messagePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum squash_merge_commit_messagePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case PR_BODY = "PR_BODY"
                 case COMMIT_MESSAGES = "COMMIT_MESSAGES"
                 case BLANK = "BLANK"
@@ -1860,7 +1869,7 @@ public enum Components {
             /// - `MERGE_MESSAGE` - default to the classic title for a merge message (e.g., Merge pull request #123 from branch-name).
             ///
             /// - Remark: Generated from `#/components/schemas/repository/merge_commit_title`.
-            @frozen public enum merge_commit_titlePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum merge_commit_titlePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case PR_TITLE = "PR_TITLE"
                 case MERGE_MESSAGE = "MERGE_MESSAGE"
             }
@@ -1878,7 +1887,7 @@ public enum Components {
             /// - `BLANK` - default to a blank commit message.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/merge_commit_message`.
-            @frozen public enum merge_commit_messagePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum merge_commit_messagePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case PR_BODY = "PR_BODY"
                 case PR_TITLE = "PR_TITLE"
                 case BLANK = "BLANK"
@@ -2688,7 +2697,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/advanced_security`.
             public struct advanced_securityPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/advanced_security/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
@@ -2710,7 +2719,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/code_security`.
             public struct code_securityPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/code_security/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
@@ -2736,7 +2745,7 @@ public enum Components {
                 /// The enablement status of Dependabot security updates for the repository.
                 ///
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/dependabot_security_updates/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
@@ -2762,7 +2771,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning`.
             public struct secret_scanningPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
@@ -2784,7 +2793,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_push_protection`.
             public struct secret_scanning_push_protectionPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_push_protection/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
@@ -2806,7 +2815,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_non_provider_patterns`.
             public struct secret_scanning_non_provider_patternsPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_non_provider_patterns/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
@@ -2828,7 +2837,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_ai_detection`.
             public struct secret_scanning_ai_detectionPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_ai_detection/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
@@ -3388,7 +3397,7 @@ public enum Components {
             /// - `COMMIT_OR_PR_TITLE` - default to the commit's title (if only one commit) or the pull request's title (when more than one commit).
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-repository/squash_merge_commit_title`.
-            @frozen public enum squash_merge_commit_titlePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum squash_merge_commit_titlePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case PR_TITLE = "PR_TITLE"
                 case COMMIT_OR_PR_TITLE = "COMMIT_OR_PR_TITLE"
             }
@@ -3406,7 +3415,7 @@ public enum Components {
             /// - `BLANK` - default to a blank commit message.
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-repository/squash_merge_commit_message`.
-            @frozen public enum squash_merge_commit_messagePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum squash_merge_commit_messagePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case PR_BODY = "PR_BODY"
                 case COMMIT_MESSAGES = "COMMIT_MESSAGES"
                 case BLANK = "BLANK"
@@ -3425,7 +3434,7 @@ public enum Components {
             /// - `MERGE_MESSAGE` - default to the classic title for a merge message (e.g., Merge pull request #123 from branch-name).
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-repository/merge_commit_title`.
-            @frozen public enum merge_commit_titlePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum merge_commit_titlePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case PR_TITLE = "PR_TITLE"
                 case MERGE_MESSAGE = "MERGE_MESSAGE"
             }
@@ -3443,7 +3452,7 @@ public enum Components {
             /// - `BLANK` - default to a blank commit message.
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-repository/merge_commit_message`.
-            @frozen public enum merge_commit_messagePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum merge_commit_messagePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case PR_BODY = "PR_BODY"
                 case PR_TITLE = "PR_TITLE"
                 case BLANK = "BLANK"
@@ -4129,7 +4138,7 @@ public enum Components {
             /// - `COMMIT_OR_PR_TITLE` - default to the commit's title (if only one commit) or the pull request's title (when more than one commit).
             ///
             /// - Remark: Generated from `#/components/schemas/full-repository/squash_merge_commit_title`.
-            @frozen public enum squash_merge_commit_titlePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum squash_merge_commit_titlePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case PR_TITLE = "PR_TITLE"
                 case COMMIT_OR_PR_TITLE = "COMMIT_OR_PR_TITLE"
             }
@@ -4147,7 +4156,7 @@ public enum Components {
             /// - `BLANK` - default to a blank commit message.
             ///
             /// - Remark: Generated from `#/components/schemas/full-repository/squash_merge_commit_message`.
-            @frozen public enum squash_merge_commit_messagePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum squash_merge_commit_messagePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case PR_BODY = "PR_BODY"
                 case COMMIT_MESSAGES = "COMMIT_MESSAGES"
                 case BLANK = "BLANK"
@@ -4166,7 +4175,7 @@ public enum Components {
             ///   - `MERGE_MESSAGE` - default to the classic title for a merge message (e.g., Merge pull request #123 from branch-name).
             ///
             /// - Remark: Generated from `#/components/schemas/full-repository/merge_commit_title`.
-            @frozen public enum merge_commit_titlePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum merge_commit_titlePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case PR_TITLE = "PR_TITLE"
                 case MERGE_MESSAGE = "MERGE_MESSAGE"
             }
@@ -4184,7 +4193,7 @@ public enum Components {
             /// - `BLANK` - default to a blank commit message.
             ///
             /// - Remark: Generated from `#/components/schemas/full-repository/merge_commit_message`.
-            @frozen public enum merge_commit_messagePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum merge_commit_messagePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case PR_BODY = "PR_BODY"
                 case PR_TITLE = "PR_TITLE"
                 case BLANK = "BLANK"
@@ -4747,19 +4756,19 @@ public enum Components {
             }
             public init(from decoder: any Decoder) throws {
                 let container = try decoder.container(keyedBy: CodingKeys.self)
-                package = try container.decodeIfPresent(
+                self.package = try container.decodeIfPresent(
                     Components.Schemas.repository_hyphen_advisory_hyphen_vulnerability.packagePayload.self,
                     forKey: .package
                 )
-                vulnerable_version_range = try container.decodeIfPresent(
+                self.vulnerable_version_range = try container.decodeIfPresent(
                     Swift.String.self,
                     forKey: .vulnerable_version_range
                 )
-                patched_versions = try container.decodeIfPresent(
+                self.patched_versions = try container.decodeIfPresent(
                     Swift.String.self,
                     forKey: .patched_versions
                 )
-                vulnerable_functions = try container.decodeIfPresent(
+                self.vulnerable_functions = try container.decodeIfPresent(
                     [Swift.String].self,
                     forKey: .vulnerable_functions
                 )
@@ -4782,7 +4791,7 @@ public enum Components {
             /// The state of the user's acceptance of the credit.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-advisory-credit/state`.
-            @frozen public enum statePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum statePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case accepted = "accepted"
                 case declined = "declined"
                 case pending = "pending"
@@ -4813,15 +4822,15 @@ public enum Components {
             }
             public init(from decoder: any Decoder) throws {
                 let container = try decoder.container(keyedBy: CodingKeys.self)
-                user = try container.decode(
+                self.user = try container.decode(
                     Components.Schemas.simple_hyphen_user.self,
                     forKey: .user
                 )
-                _type = try container.decode(
+                self._type = try container.decode(
                     Components.Schemas.security_hyphen_advisory_hyphen_credit_hyphen_types.self,
                     forKey: ._type
                 )
-                state = try container.decode(
+                self.state = try container.decode(
                     Components.Schemas.repository_hyphen_advisory_hyphen_credit.statePayload.self,
                     forKey: .state
                 )
@@ -4863,7 +4872,7 @@ public enum Components {
             /// The severity of the advisory.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-advisory/severity`.
-            @frozen public enum severityPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum severityPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case critical = "critical"
                 case high = "high"
                 case medium = "medium"
@@ -4887,10 +4896,10 @@ public enum Components {
                     self.value1 = value1
                 }
                 public init(from decoder: any Decoder) throws {
-                    value1 = try .init(from: decoder)
+                    self.value1 = try .init(from: decoder)
                 }
                 public func encode(to encoder: any Encoder) throws {
-                    try value1.encode(to: encoder)
+                    try self.value1.encode(to: encoder)
                 }
             }
             /// The author of the advisory.
@@ -4911,10 +4920,10 @@ public enum Components {
                     self.value1 = value1
                 }
                 public init(from decoder: any Decoder) throws {
-                    value1 = try .init(from: decoder)
+                    self.value1 = try .init(from: decoder)
                 }
                 public func encode(to encoder: any Encoder) throws {
-                    try value1.encode(to: encoder)
+                    try self.value1.encode(to: encoder)
                 }
             }
             /// The publisher of the advisory.
@@ -4926,7 +4935,7 @@ public enum Components {
                 /// The type of identifier.
                 ///
                 /// - Remark: Generated from `#/components/schemas/repository-advisory/identifiersPayload/type`.
-                @frozen public enum _typePayload: String, Codable, Hashable, Sendable {
+                @frozen public enum _typePayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case CVE = "CVE"
                     case GHSA = "GHSA"
                 }
@@ -4962,7 +4971,7 @@ public enum Components {
             /// The state of the advisory.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-advisory/state`.
-            @frozen public enum statePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum statePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case published = "published"
                 case closed = "closed"
                 case withdrawn = "withdrawn"
@@ -5133,10 +5142,10 @@ public enum Components {
                     self.value1 = value1
                 }
                 public init(from decoder: any Decoder) throws {
-                    value1 = try .init(from: decoder)
+                    self.value1 = try .init(from: decoder)
                 }
                 public func encode(to encoder: any Encoder) throws {
-                    try value1.encode(to: encoder)
+                    try self.value1.encode(to: encoder)
                 }
             }
             /// A temporary private fork of the advisory's repository for collaborating on a fix.
@@ -5261,111 +5270,111 @@ public enum Components {
             }
             public init(from decoder: any Decoder) throws {
                 let container = try decoder.container(keyedBy: CodingKeys.self)
-                ghsa_id = try container.decode(
+                self.ghsa_id = try container.decode(
                     Swift.String.self,
                     forKey: .ghsa_id
                 )
-                cve_id = try container.decodeIfPresent(
+                self.cve_id = try container.decodeIfPresent(
                     Swift.String.self,
                     forKey: .cve_id
                 )
-                url = try container.decode(
+                self.url = try container.decode(
                     Swift.String.self,
                     forKey: .url
                 )
-                html_url = try container.decode(
+                self.html_url = try container.decode(
                     Swift.String.self,
                     forKey: .html_url
                 )
-                summary = try container.decode(
+                self.summary = try container.decode(
                     Swift.String.self,
                     forKey: .summary
                 )
-                description = try container.decodeIfPresent(
+                self.description = try container.decodeIfPresent(
                     Swift.String.self,
                     forKey: .description
                 )
-                severity = try container.decodeIfPresent(
+                self.severity = try container.decodeIfPresent(
                     Components.Schemas.repository_hyphen_advisory.severityPayload.self,
                     forKey: .severity
                 )
-                author = try container.decodeIfPresent(
+                self.author = try container.decodeIfPresent(
                     Components.Schemas.repository_hyphen_advisory.authorPayload.self,
                     forKey: .author
                 )
-                publisher = try container.decodeIfPresent(
+                self.publisher = try container.decodeIfPresent(
                     Components.Schemas.repository_hyphen_advisory.publisherPayload.self,
                     forKey: .publisher
                 )
-                identifiers = try container.decode(
+                self.identifiers = try container.decode(
                     Components.Schemas.repository_hyphen_advisory.identifiersPayload.self,
                     forKey: .identifiers
                 )
-                state = try container.decode(
+                self.state = try container.decode(
                     Components.Schemas.repository_hyphen_advisory.statePayload.self,
                     forKey: .state
                 )
-                created_at = try container.decodeIfPresent(
+                self.created_at = try container.decodeIfPresent(
                     Foundation.Date.self,
                     forKey: .created_at
                 )
-                updated_at = try container.decodeIfPresent(
+                self.updated_at = try container.decodeIfPresent(
                     Foundation.Date.self,
                     forKey: .updated_at
                 )
-                published_at = try container.decodeIfPresent(
+                self.published_at = try container.decodeIfPresent(
                     Foundation.Date.self,
                     forKey: .published_at
                 )
-                closed_at = try container.decodeIfPresent(
+                self.closed_at = try container.decodeIfPresent(
                     Foundation.Date.self,
                     forKey: .closed_at
                 )
-                withdrawn_at = try container.decodeIfPresent(
+                self.withdrawn_at = try container.decodeIfPresent(
                     Foundation.Date.self,
                     forKey: .withdrawn_at
                 )
-                submission = try container.decodeIfPresent(
+                self.submission = try container.decodeIfPresent(
                     Components.Schemas.repository_hyphen_advisory.submissionPayload.self,
                     forKey: .submission
                 )
-                vulnerabilities = try container.decodeIfPresent(
+                self.vulnerabilities = try container.decodeIfPresent(
                     [Components.Schemas.repository_hyphen_advisory_hyphen_vulnerability].self,
                     forKey: .vulnerabilities
                 )
-                cvss = try container.decodeIfPresent(
+                self.cvss = try container.decodeIfPresent(
                     Components.Schemas.repository_hyphen_advisory.cvssPayload.self,
                     forKey: .cvss
                 )
-                cvss_severities = try container.decodeIfPresent(
+                self.cvss_severities = try container.decodeIfPresent(
                     Components.Schemas.cvss_hyphen_severities.self,
                     forKey: .cvss_severities
                 )
-                cwes = try container.decodeIfPresent(
+                self.cwes = try container.decodeIfPresent(
                     Components.Schemas.repository_hyphen_advisory.cwesPayload.self,
                     forKey: .cwes
                 )
-                cwe_ids = try container.decodeIfPresent(
+                self.cwe_ids = try container.decodeIfPresent(
                     [Swift.String].self,
                     forKey: .cwe_ids
                 )
-                credits = try container.decodeIfPresent(
+                self.credits = try container.decodeIfPresent(
                     Components.Schemas.repository_hyphen_advisory.creditsPayload.self,
                     forKey: .credits
                 )
-                credits_detailed = try container.decodeIfPresent(
+                self.credits_detailed = try container.decodeIfPresent(
                     [Components.Schemas.repository_hyphen_advisory_hyphen_credit].self,
                     forKey: .credits_detailed
                 )
-                collaborating_users = try container.decodeIfPresent(
+                self.collaborating_users = try container.decodeIfPresent(
                     [Components.Schemas.simple_hyphen_user].self,
                     forKey: .collaborating_users
                 )
-                collaborating_teams = try container.decodeIfPresent(
+                self.collaborating_teams = try container.decodeIfPresent(
                     [Components.Schemas.team].self,
                     forKey: .collaborating_teams
                 )
-                private_fork = try container.decodeIfPresent(
+                self.private_fork = try container.decodeIfPresent(
                     Components.Schemas.repository_hyphen_advisory.private_forkPayload.self,
                     forKey: .private_fork
                 )
@@ -5485,19 +5494,19 @@ public enum Components {
                 }
                 public init(from decoder: any Decoder) throws {
                     let container = try decoder.container(keyedBy: CodingKeys.self)
-                    package = try container.decode(
+                    self.package = try container.decode(
                         Components.Schemas.repository_hyphen_advisory_hyphen_create.vulnerabilitiesPayloadPayload.packagePayload.self,
                         forKey: .package
                     )
-                    vulnerable_version_range = try container.decodeIfPresent(
+                    self.vulnerable_version_range = try container.decodeIfPresent(
                         Swift.String.self,
                         forKey: .vulnerable_version_range
                     )
-                    patched_versions = try container.decodeIfPresent(
+                    self.patched_versions = try container.decodeIfPresent(
                         Swift.String.self,
                         forKey: .patched_versions
                     )
-                    vulnerable_functions = try container.decodeIfPresent(
+                    self.vulnerable_functions = try container.decodeIfPresent(
                         [Swift.String].self,
                         forKey: .vulnerable_functions
                     )
@@ -5547,11 +5556,11 @@ public enum Components {
                 }
                 public init(from decoder: any Decoder) throws {
                     let container = try decoder.container(keyedBy: CodingKeys.self)
-                    login = try container.decode(
+                    self.login = try container.decode(
                         Swift.String.self,
                         forKey: .login
                     )
-                    _type = try container.decode(
+                    self._type = try container.decode(
                         Components.Schemas.security_hyphen_advisory_hyphen_credit_hyphen_types.self,
                         forKey: ._type
                     )
@@ -5572,7 +5581,7 @@ public enum Components {
             /// The severity of the advisory. You must choose between setting this field or `cvss_vector_string`.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-advisory-create/severity`.
-            @frozen public enum severityPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum severityPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case critical = "critical"
                 case high = "high"
                 case medium = "medium"
@@ -5636,39 +5645,39 @@ public enum Components {
             }
             public init(from decoder: any Decoder) throws {
                 let container = try decoder.container(keyedBy: CodingKeys.self)
-                summary = try container.decode(
+                self.summary = try container.decode(
                     Swift.String.self,
                     forKey: .summary
                 )
-                description = try container.decode(
+                self.description = try container.decode(
                     Swift.String.self,
                     forKey: .description
                 )
-                cve_id = try container.decodeIfPresent(
+                self.cve_id = try container.decodeIfPresent(
                     Swift.String.self,
                     forKey: .cve_id
                 )
-                vulnerabilities = try container.decode(
+                self.vulnerabilities = try container.decode(
                     Components.Schemas.repository_hyphen_advisory_hyphen_create.vulnerabilitiesPayload.self,
                     forKey: .vulnerabilities
                 )
-                cwe_ids = try container.decodeIfPresent(
+                self.cwe_ids = try container.decodeIfPresent(
                     [Swift.String].self,
                     forKey: .cwe_ids
                 )
-                credits = try container.decodeIfPresent(
+                self.credits = try container.decodeIfPresent(
                     Components.Schemas.repository_hyphen_advisory_hyphen_create.creditsPayload.self,
                     forKey: .credits
                 )
-                severity = try container.decodeIfPresent(
+                self.severity = try container.decodeIfPresent(
                     Components.Schemas.repository_hyphen_advisory_hyphen_create.severityPayload.self,
                     forKey: .severity
                 )
-                cvss_vector_string = try container.decodeIfPresent(
+                self.cvss_vector_string = try container.decodeIfPresent(
                     Swift.String.self,
                     forKey: .cvss_vector_string
                 )
-                start_private_fork = try container.decodeIfPresent(
+                self.start_private_fork = try container.decodeIfPresent(
                     Swift.Bool.self,
                     forKey: .start_private_fork
                 )
@@ -5766,19 +5775,19 @@ public enum Components {
                 }
                 public init(from decoder: any Decoder) throws {
                     let container = try decoder.container(keyedBy: CodingKeys.self)
-                    package = try container.decode(
+                    self.package = try container.decode(
                         Components.Schemas.private_hyphen_vulnerability_hyphen_report_hyphen_create.vulnerabilitiesPayloadPayload.packagePayload.self,
                         forKey: .package
                     )
-                    vulnerable_version_range = try container.decodeIfPresent(
+                    self.vulnerable_version_range = try container.decodeIfPresent(
                         Swift.String.self,
                         forKey: .vulnerable_version_range
                     )
-                    patched_versions = try container.decodeIfPresent(
+                    self.patched_versions = try container.decodeIfPresent(
                         Swift.String.self,
                         forKey: .patched_versions
                     )
-                    vulnerable_functions = try container.decodeIfPresent(
+                    self.vulnerable_functions = try container.decodeIfPresent(
                         [Swift.String].self,
                         forKey: .vulnerable_functions
                     )
@@ -5805,7 +5814,7 @@ public enum Components {
             /// The severity of the advisory. You must choose between setting this field or `cvss_vector_string`.
             ///
             /// - Remark: Generated from `#/components/schemas/private-vulnerability-report-create/severity`.
-            @frozen public enum severityPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum severityPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case critical = "critical"
                 case high = "high"
                 case medium = "medium"
@@ -5861,31 +5870,31 @@ public enum Components {
             }
             public init(from decoder: any Decoder) throws {
                 let container = try decoder.container(keyedBy: CodingKeys.self)
-                summary = try container.decode(
+                self.summary = try container.decode(
                     Swift.String.self,
                     forKey: .summary
                 )
-                description = try container.decode(
+                self.description = try container.decode(
                     Swift.String.self,
                     forKey: .description
                 )
-                vulnerabilities = try container.decodeIfPresent(
+                self.vulnerabilities = try container.decodeIfPresent(
                     Components.Schemas.private_hyphen_vulnerability_hyphen_report_hyphen_create.vulnerabilitiesPayload.self,
                     forKey: .vulnerabilities
                 )
-                cwe_ids = try container.decodeIfPresent(
+                self.cwe_ids = try container.decodeIfPresent(
                     [Swift.String].self,
                     forKey: .cwe_ids
                 )
-                severity = try container.decodeIfPresent(
+                self.severity = try container.decodeIfPresent(
                     Components.Schemas.private_hyphen_vulnerability_hyphen_report_hyphen_create.severityPayload.self,
                     forKey: .severity
                 )
-                cvss_vector_string = try container.decodeIfPresent(
+                self.cvss_vector_string = try container.decodeIfPresent(
                     Swift.String.self,
                     forKey: .cvss_vector_string
                 )
-                start_private_fork = try container.decodeIfPresent(
+                self.start_private_fork = try container.decodeIfPresent(
                     Swift.Bool.self,
                     forKey: .start_private_fork
                 )
@@ -5985,19 +5994,19 @@ public enum Components {
                 }
                 public init(from decoder: any Decoder) throws {
                     let container = try decoder.container(keyedBy: CodingKeys.self)
-                    package = try container.decode(
+                    self.package = try container.decode(
                         Components.Schemas.repository_hyphen_advisory_hyphen_update.vulnerabilitiesPayloadPayload.packagePayload.self,
                         forKey: .package
                     )
-                    vulnerable_version_range = try container.decodeIfPresent(
+                    self.vulnerable_version_range = try container.decodeIfPresent(
                         Swift.String.self,
                         forKey: .vulnerable_version_range
                     )
-                    patched_versions = try container.decodeIfPresent(
+                    self.patched_versions = try container.decodeIfPresent(
                         Swift.String.self,
                         forKey: .patched_versions
                     )
-                    vulnerable_functions = try container.decodeIfPresent(
+                    self.vulnerable_functions = try container.decodeIfPresent(
                         [Swift.String].self,
                         forKey: .vulnerable_functions
                     )
@@ -6047,11 +6056,11 @@ public enum Components {
                 }
                 public init(from decoder: any Decoder) throws {
                     let container = try decoder.container(keyedBy: CodingKeys.self)
-                    login = try container.decode(
+                    self.login = try container.decode(
                         Swift.String.self,
                         forKey: .login
                     )
-                    _type = try container.decode(
+                    self._type = try container.decode(
                         Components.Schemas.security_hyphen_advisory_hyphen_credit_hyphen_types.self,
                         forKey: ._type
                     )
@@ -6072,7 +6081,7 @@ public enum Components {
             /// The severity of the advisory. You must choose between setting this field or `cvss_vector_string`.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-advisory-update/severity`.
-            @frozen public enum severityPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum severityPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case critical = "critical"
                 case high = "high"
                 case medium = "medium"
@@ -6089,7 +6098,7 @@ public enum Components {
             /// The state of the advisory.
             ///
             /// - Remark: Generated from `#/components/schemas/repository-advisory-update/state`.
-            @frozen public enum statePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum statePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case published = "published"
                 case closed = "closed"
                 case draft = "draft"
@@ -6160,47 +6169,47 @@ public enum Components {
             }
             public init(from decoder: any Decoder) throws {
                 let container = try decoder.container(keyedBy: CodingKeys.self)
-                summary = try container.decodeIfPresent(
+                self.summary = try container.decodeIfPresent(
                     Swift.String.self,
                     forKey: .summary
                 )
-                description = try container.decodeIfPresent(
+                self.description = try container.decodeIfPresent(
                     Swift.String.self,
                     forKey: .description
                 )
-                cve_id = try container.decodeIfPresent(
+                self.cve_id = try container.decodeIfPresent(
                     Swift.String.self,
                     forKey: .cve_id
                 )
-                vulnerabilities = try container.decodeIfPresent(
+                self.vulnerabilities = try container.decodeIfPresent(
                     Components.Schemas.repository_hyphen_advisory_hyphen_update.vulnerabilitiesPayload.self,
                     forKey: .vulnerabilities
                 )
-                cwe_ids = try container.decodeIfPresent(
+                self.cwe_ids = try container.decodeIfPresent(
                     [Swift.String].self,
                     forKey: .cwe_ids
                 )
-                credits = try container.decodeIfPresent(
+                self.credits = try container.decodeIfPresent(
                     Components.Schemas.repository_hyphen_advisory_hyphen_update.creditsPayload.self,
                     forKey: .credits
                 )
-                severity = try container.decodeIfPresent(
+                self.severity = try container.decodeIfPresent(
                     Components.Schemas.repository_hyphen_advisory_hyphen_update.severityPayload.self,
                     forKey: .severity
                 )
-                cvss_vector_string = try container.decodeIfPresent(
+                self.cvss_vector_string = try container.decodeIfPresent(
                     Swift.String.self,
                     forKey: .cvss_vector_string
                 )
-                state = try container.decodeIfPresent(
+                self.state = try container.decodeIfPresent(
                     Components.Schemas.repository_hyphen_advisory_hyphen_update.statePayload.self,
                     forKey: .state
                 )
-                collaborating_users = try container.decodeIfPresent(
+                self.collaborating_users = try container.decodeIfPresent(
                     [Swift.String].self,
                     forKey: .collaborating_users
                 )
-                collaborating_teams = try container.decodeIfPresent(
+                self.collaborating_teams = try container.decodeIfPresent(
                     [Swift.String].self,
                     forKey: .collaborating_teams
                 )
@@ -6233,7 +6242,7 @@ public enum Components {
         /// The direction to sort the results by.
         ///
         /// - Remark: Generated from `#/components/parameters/direction`.
-        @frozen public enum direction: String, Codable, Hashable, Sendable {
+        @frozen public enum direction: String, Codable, Hashable, Sendable, CaseIterable {
             case asc = "asc"
             case desc = "desc"
         }
@@ -6475,7 +6484,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/advisories/GET/query/ghsa_id`.
                 public var ghsa_id: Swift.String?
                 /// - Remark: Generated from `#/paths/advisories/GET/query/type`.
-                @frozen public enum _typePayload: String, Codable, Hashable, Sendable {
+                @frozen public enum _typePayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case reviewed = "reviewed"
                     case malware = "malware"
                     case unreviewed = "unreviewed"
@@ -6493,7 +6502,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/advisories/GET/query/ecosystem`.
                 public var ecosystem: Components.Schemas.security_hyphen_advisory_hyphen_ecosystems?
                 /// - Remark: Generated from `#/paths/advisories/GET/query/severity`.
-                @frozen public enum severityPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum severityPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case unknown = "unknown"
                     case low = "low"
                     case medium = "medium"
@@ -6628,7 +6637,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/advisories/GET/query/after`.
                 public var after: Components.Parameters.pagination_hyphen_after?
                 /// - Remark: Generated from `#/components/parameters/direction`.
-                @frozen public enum direction: String, Codable, Hashable, Sendable {
+                @frozen public enum direction: String, Codable, Hashable, Sendable, CaseIterable {
                     case asc = "asc"
                     case desc = "desc"
                 }
@@ -6641,7 +6650,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/advisories/GET/query/per_page`.
                 public var per_page: Swift.Int?
                 /// - Remark: Generated from `#/paths/advisories/GET/query/sort`.
-                @frozen public enum sortPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum sortPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case updated = "updated"
                     case published = "published"
                     case epss_percentage = "epss_percentage"
@@ -7081,7 +7090,7 @@ public enum Operations {
             /// - Remark: Generated from `#/paths/orgs/{org}/security-advisories/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/parameters/direction`.
-                @frozen public enum direction: String, Codable, Hashable, Sendable {
+                @frozen public enum direction: String, Codable, Hashable, Sendable, CaseIterable {
                     case asc = "asc"
                     case desc = "desc"
                 }
@@ -7090,7 +7099,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/security-advisories/GET/query/direction`.
                 public var direction: Components.Parameters.direction?
                 /// - Remark: Generated from `#/paths/orgs/{org}/security-advisories/GET/query/sort`.
-                @frozen public enum sortPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum sortPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case created = "created"
                     case updated = "updated"
                     case published = "published"
@@ -7112,7 +7121,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/security-advisories/GET/query/per_page`.
                 public var per_page: Swift.Int?
                 /// - Remark: Generated from `#/paths/orgs/{org}/security-advisories/GET/query/state`.
-                @frozen public enum statePayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statePayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case triage = "triage"
                     case draft = "draft"
                     case published = "published"
@@ -7351,7 +7360,7 @@ public enum Operations {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/security-advisories/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/parameters/direction`.
-                @frozen public enum direction: String, Codable, Hashable, Sendable {
+                @frozen public enum direction: String, Codable, Hashable, Sendable, CaseIterable {
                     case asc = "asc"
                     case desc = "desc"
                 }
@@ -7360,7 +7369,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/security-advisories/GET/query/direction`.
                 public var direction: Components.Parameters.direction?
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/security-advisories/GET/query/sort`.
-                @frozen public enum sortPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum sortPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case created = "created"
                     case updated = "updated"
                     case published = "published"
@@ -7382,7 +7391,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/security-advisories/GET/query/per_page`.
                 public var per_page: Swift.Int?
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/security-advisories/GET/query/state`.
-                @frozen public enum statePayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statePayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case triage = "triage"
                     case draft = "draft"
                     case published = "published"
