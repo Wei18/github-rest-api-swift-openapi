@@ -97,6 +97,15 @@ extension APIProtocol {
 
 /// Server URLs defined in the OpenAPI document.
 public enum Servers {
+    public enum Server1 {
+        public static func url() throws -> Foundation.URL {
+            try Foundation.URL(
+                validatingOpenAPIServerURL: "https://api.github.com",
+                variables: []
+            )
+        }
+    }
+    @available(*, deprecated, renamed: "Servers.Server1.url")
     public static func server1() throws -> Foundation.URL {
         try Foundation.URL(
             validatingOpenAPIServerURL: "https://api.github.com",
@@ -149,7 +158,7 @@ public enum Components {
         /// - Remark: Generated from `#/components/schemas/dependency_hyphen_graph_hyphen_diff`.
         public struct dependency_hyphen_graph_hyphen_diffPayload: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/schemas/dependency_hyphen_graph_hyphen_diff/change_type`.
-            @frozen public enum change_typePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum change_typePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case added = "added"
                 case removed = "removed"
             }
@@ -211,7 +220,7 @@ public enum Components {
             /// Where the dependency is utilized. `development` means that the dependency is only utilized in the development environment. `runtime` means that the dependency is utilized at runtime and in the development environment.
             ///
             /// - Remark: Generated from `#/components/schemas/dependency_hyphen_graph_hyphen_diff/scope`.
-            @frozen public enum scopePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum scopePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case unknown = "unknown"
                 case runtime = "runtime"
                 case development = "development"
@@ -593,25 +602,25 @@ public enum Components {
                 public init(from decoder: any Decoder) throws {
                     var errors: [any Error] = []
                     do {
-                        value1 = try decoder.decodeFromSingleValueContainer()
+                        self.value1 = try decoder.decodeFromSingleValueContainer()
                     } catch {
                         errors.append(error)
                     }
                     do {
-                        value2 = try decoder.decodeFromSingleValueContainer()
+                        self.value2 = try decoder.decodeFromSingleValueContainer()
                     } catch {
                         errors.append(error)
                     }
                     do {
-                        value3 = try decoder.decodeFromSingleValueContainer()
+                        self.value3 = try decoder.decodeFromSingleValueContainer()
                     } catch {
                         errors.append(error)
                     }
                     try Swift.DecodingError.verifyAtLeastOneSchemaIsNotNil(
                         [
-                            value1,
-                            value2,
-                            value3
+                            self.value1,
+                            self.value2,
+                            self.value3
                         ],
                         type: Self.self,
                         codingPath: decoder.codingPath,
@@ -620,9 +629,9 @@ public enum Components {
                 }
                 public func encode(to encoder: any Encoder) throws {
                     try encoder.encodeFirstNonNilValueToSingleValueContainer([
-                        value1,
-                        value2,
-                        value3
+                        self.value1,
+                        self.value2,
+                        self.value3
                     ])
                 }
             }
@@ -653,7 +662,7 @@ public enum Components {
             /// A notation of whether a dependency is requested directly by this manifest or is a dependency of another dependency.
             ///
             /// - Remark: Generated from `#/components/schemas/dependency/relationship`.
-            @frozen public enum relationshipPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum relationshipPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case direct = "direct"
                 case indirect = "indirect"
             }
@@ -664,7 +673,7 @@ public enum Components {
             /// A notation of whether the dependency is required for the primary build artifact (runtime) or is only used for development. Future versions of this specification may allow for more granular scopes.
             ///
             /// - Remark: Generated from `#/components/schemas/dependency/scope`.
-            @frozen public enum scopePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum scopePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case runtime = "runtime"
                 case development = "development"
             }
@@ -706,23 +715,23 @@ public enum Components {
             }
             public init(from decoder: any Decoder) throws {
                 let container = try decoder.container(keyedBy: CodingKeys.self)
-                package_url = try container.decodeIfPresent(
+                self.package_url = try container.decodeIfPresent(
                     Swift.String.self,
                     forKey: .package_url
                 )
-                metadata = try container.decodeIfPresent(
+                self.metadata = try container.decodeIfPresent(
                     Components.Schemas.metadata.self,
                     forKey: .metadata
                 )
-                relationship = try container.decodeIfPresent(
+                self.relationship = try container.decodeIfPresent(
                     Components.Schemas.dependency.relationshipPayload.self,
                     forKey: .relationship
                 )
-                scope = try container.decodeIfPresent(
+                self.scope = try container.decodeIfPresent(
                     Components.Schemas.dependency.scopePayload.self,
                     forKey: .scope
                 )
-                dependencies = try container.decodeIfPresent(
+                self.dependencies = try container.decodeIfPresent(
                     [Swift.String].self,
                     forKey: .dependencies
                 )
@@ -759,7 +768,7 @@ public enum Components {
                 }
                 public init(from decoder: any Decoder) throws {
                     let container = try decoder.container(keyedBy: CodingKeys.self)
-                    source_location = try container.decodeIfPresent(
+                    self.source_location = try container.decodeIfPresent(
                         Swift.String.self,
                         forKey: .source_location
                     )
@@ -822,19 +831,19 @@ public enum Components {
             }
             public init(from decoder: any Decoder) throws {
                 let container = try decoder.container(keyedBy: CodingKeys.self)
-                name = try container.decode(
+                self.name = try container.decode(
                     Swift.String.self,
                     forKey: .name
                 )
-                file = try container.decodeIfPresent(
+                self.file = try container.decodeIfPresent(
                     Components.Schemas.manifest.filePayload.self,
                     forKey: .file
                 )
-                metadata = try container.decodeIfPresent(
+                self.metadata = try container.decodeIfPresent(
                     Components.Schemas.metadata.self,
                     forKey: .metadata
                 )
-                resolved = try container.decodeIfPresent(
+                self.resolved = try container.decodeIfPresent(
                     Components.Schemas.manifest.resolvedPayload.self,
                     forKey: .resolved
                 )
@@ -890,15 +899,15 @@ public enum Components {
                 }
                 public init(from decoder: any Decoder) throws {
                     let container = try decoder.container(keyedBy: CodingKeys.self)
-                    id = try container.decode(
+                    self.id = try container.decode(
                         Swift.String.self,
                         forKey: .id
                     )
-                    correlator = try container.decode(
+                    self.correlator = try container.decode(
                         Swift.String.self,
                         forKey: .correlator
                     )
-                    html_url = try container.decodeIfPresent(
+                    self.html_url = try container.decodeIfPresent(
                         Swift.String.self,
                         forKey: .html_url
                     )
@@ -957,15 +966,15 @@ public enum Components {
                 }
                 public init(from decoder: any Decoder) throws {
                     let container = try decoder.container(keyedBy: CodingKeys.self)
-                    name = try container.decode(
+                    self.name = try container.decode(
                         Swift.String.self,
                         forKey: .name
                     )
-                    version = try container.decode(
+                    self.version = try container.decode(
                         Swift.String.self,
                         forKey: .version
                     )
-                    url = try container.decode(
+                    self.url = try container.decode(
                         Swift.String.self,
                         forKey: .url
                     )
@@ -1052,35 +1061,35 @@ public enum Components {
             }
             public init(from decoder: any Decoder) throws {
                 let container = try decoder.container(keyedBy: CodingKeys.self)
-                version = try container.decode(
+                self.version = try container.decode(
                     Swift.Int.self,
                     forKey: .version
                 )
-                job = try container.decode(
+                self.job = try container.decode(
                     Components.Schemas.snapshot.jobPayload.self,
                     forKey: .job
                 )
-                sha = try container.decode(
+                self.sha = try container.decode(
                     Swift.String.self,
                     forKey: .sha
                 )
-                ref = try container.decode(
+                self.ref = try container.decode(
                     Swift.String.self,
                     forKey: .ref
                 )
-                detector = try container.decode(
+                self.detector = try container.decode(
                     Components.Schemas.snapshot.detectorPayload.self,
                     forKey: .detector
                 )
-                metadata = try container.decodeIfPresent(
+                self.metadata = try container.decodeIfPresent(
                     Components.Schemas.metadata.self,
                     forKey: .metadata
                 )
-                manifests = try container.decodeIfPresent(
+                self.manifests = try container.decodeIfPresent(
                     Components.Schemas.snapshot.manifestsPayload.self,
                     forKey: .manifests
                 )
-                scanned = try container.decode(
+                self.scanned = try container.decode(
                     Foundation.Date.self,
                     forKey: .scanned
                 )
