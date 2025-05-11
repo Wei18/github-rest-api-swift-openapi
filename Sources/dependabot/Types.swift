@@ -539,6 +539,15 @@ extension APIProtocol {
 
 /// Server URLs defined in the OpenAPI document.
 public enum Servers {
+    public enum Server1 {
+        public static func url() throws -> Foundation.URL {
+            try Foundation.URL(
+                validatingOpenAPIServerURL: "https://api.github.com",
+                variables: []
+            )
+        }
+    }
+    @available(*, deprecated, renamed: "Servers.Server1.url")
     public static func server1() throws -> Foundation.URL {
         try Foundation.URL(
             validatingOpenAPIServerURL: "https://api.github.com",
@@ -1516,11 +1525,11 @@ public enum Components {
             }
             public init(from decoder: any Decoder) throws {
                 let container = try decoder.container(keyedBy: CodingKeys.self)
-                ecosystem = try container.decode(
+                self.ecosystem = try container.decode(
                     Swift.String.self,
                     forKey: .ecosystem
                 )
-                name = try container.decode(
+                self.name = try container.decode(
                     Swift.String.self,
                     forKey: .name
                 )
@@ -1539,7 +1548,7 @@ public enum Components {
             /// The severity of the vulnerability.
             ///
             /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-vulnerability/severity`.
-            @frozen public enum severityPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum severityPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case low = "low"
                 case medium = "medium"
                 case high = "high"
@@ -1573,7 +1582,7 @@ public enum Components {
                 }
                 public init(from decoder: any Decoder) throws {
                     let container = try decoder.container(keyedBy: CodingKeys.self)
-                    identifier = try container.decode(
+                    self.identifier = try container.decode(
                         Swift.String.self,
                         forKey: .identifier
                     )
@@ -1612,19 +1621,19 @@ public enum Components {
             }
             public init(from decoder: any Decoder) throws {
                 let container = try decoder.container(keyedBy: CodingKeys.self)
-                package = try container.decode(
+                self.package = try container.decode(
                     Components.Schemas.dependabot_hyphen_alert_hyphen_package.self,
                     forKey: .package
                 )
-                severity = try container.decode(
+                self.severity = try container.decode(
                     Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_vulnerability.severityPayload.self,
                     forKey: .severity
                 )
-                vulnerable_version_range = try container.decode(
+                self.vulnerable_version_range = try container.decode(
                     Swift.String.self,
                     forKey: .vulnerable_version_range
                 )
-                first_patched_version = try container.decodeIfPresent(
+                self.first_patched_version = try container.decodeIfPresent(
                     Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_vulnerability.first_patched_versionPayload.self,
                     forKey: .first_patched_version
                 )
@@ -1663,7 +1672,7 @@ public enum Components {
             /// The severity of the advisory.
             ///
             /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/severity`.
-            @frozen public enum severityPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum severityPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case low = "low"
                 case medium = "medium"
                 case high = "high"
@@ -1703,11 +1712,11 @@ public enum Components {
                 }
                 public init(from decoder: any Decoder) throws {
                     let container = try decoder.container(keyedBy: CodingKeys.self)
-                    score = try container.decode(
+                    self.score = try container.decode(
                         Swift.Double.self,
                         forKey: .score
                     )
-                    vector_string = try container.decodeIfPresent(
+                    self.vector_string = try container.decodeIfPresent(
                         Swift.String.self,
                         forKey: .vector_string
                     )
@@ -1755,11 +1764,11 @@ public enum Components {
                 }
                 public init(from decoder: any Decoder) throws {
                     let container = try decoder.container(keyedBy: CodingKeys.self)
-                    cwe_id = try container.decode(
+                    self.cwe_id = try container.decode(
                         Swift.String.self,
                         forKey: .cwe_id
                     )
-                    name = try container.decode(
+                    self.name = try container.decode(
                         Swift.String.self,
                         forKey: .name
                     )
@@ -1784,7 +1793,7 @@ public enum Components {
                 /// The type of advisory identifier.
                 ///
                 /// - Remark: Generated from `#/components/schemas/dependabot-alert-security-advisory/identifiersPayload/type`.
-                @frozen public enum _typePayload: String, Codable, Hashable, Sendable {
+                @frozen public enum _typePayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case CVE = "CVE"
                     case GHSA = "GHSA"
                 }
@@ -1814,11 +1823,11 @@ public enum Components {
                 }
                 public init(from decoder: any Decoder) throws {
                     let container = try decoder.container(keyedBy: CodingKeys.self)
-                    _type = try container.decode(
+                    self._type = try container.decode(
                         Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.identifiersPayloadPayload._typePayload.self,
                         forKey: ._type
                     )
-                    value = try container.decode(
+                    self.value = try container.decode(
                         Swift.String.self,
                         forKey: .value
                     )
@@ -1856,7 +1865,7 @@ public enum Components {
                 }
                 public init(from decoder: any Decoder) throws {
                     let container = try decoder.container(keyedBy: CodingKeys.self)
-                    url = try container.decode(
+                    self.url = try container.decode(
                         Swift.String.self,
                         forKey: .url
                     )
@@ -1955,63 +1964,63 @@ public enum Components {
             }
             public init(from decoder: any Decoder) throws {
                 let container = try decoder.container(keyedBy: CodingKeys.self)
-                ghsa_id = try container.decode(
+                self.ghsa_id = try container.decode(
                     Swift.String.self,
                     forKey: .ghsa_id
                 )
-                cve_id = try container.decodeIfPresent(
+                self.cve_id = try container.decodeIfPresent(
                     Swift.String.self,
                     forKey: .cve_id
                 )
-                summary = try container.decode(
+                self.summary = try container.decode(
                     Swift.String.self,
                     forKey: .summary
                 )
-                description = try container.decode(
+                self.description = try container.decode(
                     Swift.String.self,
                     forKey: .description
                 )
-                vulnerabilities = try container.decode(
+                self.vulnerabilities = try container.decode(
                     [Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_vulnerability].self,
                     forKey: .vulnerabilities
                 )
-                severity = try container.decode(
+                self.severity = try container.decode(
                     Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.severityPayload.self,
                     forKey: .severity
                 )
-                cvss = try container.decode(
+                self.cvss = try container.decode(
                     Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.cvssPayload.self,
                     forKey: .cvss
                 )
-                cvss_severities = try container.decodeIfPresent(
+                self.cvss_severities = try container.decodeIfPresent(
                     Components.Schemas.cvss_hyphen_severities.self,
                     forKey: .cvss_severities
                 )
-                epss = try container.decodeIfPresent(
+                self.epss = try container.decodeIfPresent(
                     Components.Schemas.security_hyphen_advisory_hyphen_epss.self,
                     forKey: .epss
                 )
-                cwes = try container.decode(
+                self.cwes = try container.decode(
                     Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.cwesPayload.self,
                     forKey: .cwes
                 )
-                identifiers = try container.decode(
+                self.identifiers = try container.decode(
                     Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.identifiersPayload.self,
                     forKey: .identifiers
                 )
-                references = try container.decode(
+                self.references = try container.decode(
                     Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.referencesPayload.self,
                     forKey: .references
                 )
-                published_at = try container.decode(
+                self.published_at = try container.decode(
                     Foundation.Date.self,
                     forKey: .published_at
                 )
-                updated_at = try container.decode(
+                self.updated_at = try container.decode(
                     Foundation.Date.self,
                     forKey: .updated_at
                 )
-                withdrawn_at = try container.decodeIfPresent(
+                self.withdrawn_at = try container.decodeIfPresent(
                     Foundation.Date.self,
                     forKey: .withdrawn_at
                 )
@@ -2071,7 +2080,7 @@ public enum Components {
             /// The state of the Dependabot alert.
             ///
             /// - Remark: Generated from `#/components/schemas/dependabot-alert-with-repository/state`.
-            @frozen public enum statePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum statePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case auto_dismissed = "auto_dismissed"
                 case dismissed = "dismissed"
                 case fixed = "fixed"
@@ -2094,7 +2103,7 @@ public enum Components {
                 /// The execution scope of the vulnerable dependency.
                 ///
                 /// - Remark: Generated from `#/components/schemas/dependabot-alert-with-repository/dependency/scope`.
-                @frozen public enum scopePayload: String, Codable, Hashable, Sendable {
+                @frozen public enum scopePayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case development = "development"
                     case runtime = "runtime"
                 }
@@ -2109,7 +2118,7 @@ public enum Components {
                 ///
                 ///
                 /// - Remark: Generated from `#/components/schemas/dependabot-alert-with-repository/dependency/relationship`.
-                @frozen public enum relationshipPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum relationshipPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case unknown = "unknown"
                     case direct = "direct"
                     case transitive = "transitive"
@@ -2170,7 +2179,7 @@ public enum Components {
             /// The reason that the alert was dismissed.
             ///
             /// - Remark: Generated from `#/components/schemas/dependabot-alert-with-repository/dismissed_reason`.
-            @frozen public enum dismissed_reasonPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum dismissed_reasonPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case fix_started = "fix_started"
                 case inaccurate = "inaccurate"
                 case no_bandwidth = "no_bandwidth"
@@ -2265,67 +2274,67 @@ public enum Components {
             }
             public init(from decoder: any Decoder) throws {
                 let container = try decoder.container(keyedBy: CodingKeys.self)
-                number = try container.decode(
+                self.number = try container.decode(
                     Components.Schemas.alert_hyphen_number.self,
                     forKey: .number
                 )
-                state = try container.decode(
+                self.state = try container.decode(
                     Components.Schemas.dependabot_hyphen_alert_hyphen_with_hyphen_repository.statePayload.self,
                     forKey: .state
                 )
-                dependency = try container.decode(
+                self.dependency = try container.decode(
                     Components.Schemas.dependabot_hyphen_alert_hyphen_with_hyphen_repository.dependencyPayload.self,
                     forKey: .dependency
                 )
-                security_advisory = try container.decode(
+                self.security_advisory = try container.decode(
                     Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.self,
                     forKey: .security_advisory
                 )
-                security_vulnerability = try container.decode(
+                self.security_vulnerability = try container.decode(
                     Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_vulnerability.self,
                     forKey: .security_vulnerability
                 )
-                url = try container.decode(
+                self.url = try container.decode(
                     Components.Schemas.alert_hyphen_url.self,
                     forKey: .url
                 )
-                html_url = try container.decode(
+                self.html_url = try container.decode(
                     Components.Schemas.alert_hyphen_html_hyphen_url.self,
                     forKey: .html_url
                 )
-                created_at = try container.decode(
+                self.created_at = try container.decode(
                     Components.Schemas.alert_hyphen_created_hyphen_at.self,
                     forKey: .created_at
                 )
-                updated_at = try container.decode(
+                self.updated_at = try container.decode(
                     Components.Schemas.alert_hyphen_updated_hyphen_at.self,
                     forKey: .updated_at
                 )
-                dismissed_at = try container.decodeIfPresent(
+                self.dismissed_at = try container.decodeIfPresent(
                     Components.Schemas.alert_hyphen_dismissed_hyphen_at.self,
                     forKey: .dismissed_at
                 )
-                dismissed_by = try container.decodeIfPresent(
+                self.dismissed_by = try container.decodeIfPresent(
                     Components.Schemas.nullable_hyphen_simple_hyphen_user.self,
                     forKey: .dismissed_by
                 )
-                dismissed_reason = try container.decodeIfPresent(
+                self.dismissed_reason = try container.decodeIfPresent(
                     Components.Schemas.dependabot_hyphen_alert_hyphen_with_hyphen_repository.dismissed_reasonPayload.self,
                     forKey: .dismissed_reason
                 )
-                dismissed_comment = try container.decodeIfPresent(
+                self.dismissed_comment = try container.decodeIfPresent(
                     Swift.String.self,
                     forKey: .dismissed_comment
                 )
-                fixed_at = try container.decodeIfPresent(
+                self.fixed_at = try container.decodeIfPresent(
                     Components.Schemas.alert_hyphen_fixed_hyphen_at.self,
                     forKey: .fixed_at
                 )
-                auto_dismissed_at = try container.decodeIfPresent(
+                self.auto_dismissed_at = try container.decodeIfPresent(
                     Components.Schemas.alert_hyphen_auto_hyphen_dismissed_hyphen_at.self,
                     forKey: .auto_dismissed_at
                 )
-                repository = try container.decode(
+                self.repository = try container.decode(
                     Components.Schemas.simple_hyphen_repository.self,
                     forKey: .repository
                 )
@@ -2354,7 +2363,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/advanced_security`.
             public struct advanced_securityPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/advanced_security/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
@@ -2376,7 +2385,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/code_security`.
             public struct code_securityPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/code_security/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
@@ -2402,7 +2411,7 @@ public enum Components {
                 /// The enablement status of Dependabot security updates for the repository.
                 ///
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/dependabot_security_updates/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
@@ -2428,7 +2437,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning`.
             public struct secret_scanningPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
@@ -2450,7 +2459,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_push_protection`.
             public struct secret_scanning_push_protectionPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_push_protection/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
@@ -2472,7 +2481,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_non_provider_patterns`.
             public struct secret_scanning_non_provider_patternsPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_non_provider_patterns/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
@@ -2494,7 +2503,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_ai_detection`.
             public struct secret_scanning_ai_detectionPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_ai_detection/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
@@ -3194,7 +3203,7 @@ public enum Components {
             /// Visibility of a secret
             ///
             /// - Remark: Generated from `#/components/schemas/organization-dependabot-secret/visibility`.
-            @frozen public enum visibilityPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum visibilityPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case all = "all"
                 case _private = "private"
                 case selected = "selected"
@@ -3272,7 +3281,7 @@ public enum Components {
             /// The state of the Dependabot alert.
             ///
             /// - Remark: Generated from `#/components/schemas/dependabot-alert/state`.
-            @frozen public enum statePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum statePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case auto_dismissed = "auto_dismissed"
                 case dismissed = "dismissed"
                 case fixed = "fixed"
@@ -3295,7 +3304,7 @@ public enum Components {
                 /// The execution scope of the vulnerable dependency.
                 ///
                 /// - Remark: Generated from `#/components/schemas/dependabot-alert/dependency/scope`.
-                @frozen public enum scopePayload: String, Codable, Hashable, Sendable {
+                @frozen public enum scopePayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case development = "development"
                     case runtime = "runtime"
                 }
@@ -3310,7 +3319,7 @@ public enum Components {
                 ///
                 ///
                 /// - Remark: Generated from `#/components/schemas/dependabot-alert/dependency/relationship`.
-                @frozen public enum relationshipPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum relationshipPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case unknown = "unknown"
                     case direct = "direct"
                     case transitive = "transitive"
@@ -3371,7 +3380,7 @@ public enum Components {
             /// The reason that the alert was dismissed.
             ///
             /// - Remark: Generated from `#/components/schemas/dependabot-alert/dismissed_reason`.
-            @frozen public enum dismissed_reasonPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum dismissed_reasonPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case fix_started = "fix_started"
                 case inaccurate = "inaccurate"
                 case no_bandwidth = "no_bandwidth"
@@ -3460,63 +3469,63 @@ public enum Components {
             }
             public init(from decoder: any Decoder) throws {
                 let container = try decoder.container(keyedBy: CodingKeys.self)
-                number = try container.decode(
+                self.number = try container.decode(
                     Components.Schemas.alert_hyphen_number.self,
                     forKey: .number
                 )
-                state = try container.decode(
+                self.state = try container.decode(
                     Components.Schemas.dependabot_hyphen_alert.statePayload.self,
                     forKey: .state
                 )
-                dependency = try container.decode(
+                self.dependency = try container.decode(
                     Components.Schemas.dependabot_hyphen_alert.dependencyPayload.self,
                     forKey: .dependency
                 )
-                security_advisory = try container.decode(
+                self.security_advisory = try container.decode(
                     Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_advisory.self,
                     forKey: .security_advisory
                 )
-                security_vulnerability = try container.decode(
+                self.security_vulnerability = try container.decode(
                     Components.Schemas.dependabot_hyphen_alert_hyphen_security_hyphen_vulnerability.self,
                     forKey: .security_vulnerability
                 )
-                url = try container.decode(
+                self.url = try container.decode(
                     Components.Schemas.alert_hyphen_url.self,
                     forKey: .url
                 )
-                html_url = try container.decode(
+                self.html_url = try container.decode(
                     Components.Schemas.alert_hyphen_html_hyphen_url.self,
                     forKey: .html_url
                 )
-                created_at = try container.decode(
+                self.created_at = try container.decode(
                     Components.Schemas.alert_hyphen_created_hyphen_at.self,
                     forKey: .created_at
                 )
-                updated_at = try container.decode(
+                self.updated_at = try container.decode(
                     Components.Schemas.alert_hyphen_updated_hyphen_at.self,
                     forKey: .updated_at
                 )
-                dismissed_at = try container.decodeIfPresent(
+                self.dismissed_at = try container.decodeIfPresent(
                     Components.Schemas.alert_hyphen_dismissed_hyphen_at.self,
                     forKey: .dismissed_at
                 )
-                dismissed_by = try container.decodeIfPresent(
+                self.dismissed_by = try container.decodeIfPresent(
                     Components.Schemas.nullable_hyphen_simple_hyphen_user.self,
                     forKey: .dismissed_by
                 )
-                dismissed_reason = try container.decodeIfPresent(
+                self.dismissed_reason = try container.decodeIfPresent(
                     Components.Schemas.dependabot_hyphen_alert.dismissed_reasonPayload.self,
                     forKey: .dismissed_reason
                 )
-                dismissed_comment = try container.decodeIfPresent(
+                self.dismissed_comment = try container.decodeIfPresent(
                     Swift.String.self,
                     forKey: .dismissed_comment
                 )
-                fixed_at = try container.decodeIfPresent(
+                self.fixed_at = try container.decodeIfPresent(
                     Components.Schemas.alert_hyphen_fixed_hyphen_at.self,
                     forKey: .fixed_at
                 )
-                auto_dismissed_at = try container.decodeIfPresent(
+                self.auto_dismissed_at = try container.decodeIfPresent(
                     Components.Schemas.alert_hyphen_auto_hyphen_dismissed_hyphen_at.self,
                     forKey: .auto_dismissed_at
                 )
@@ -3586,7 +3595,7 @@ public enum Components {
         /// The direction to sort the results by.
         ///
         /// - Remark: Generated from `#/components/parameters/direction`.
-        @frozen public enum direction: String, Codable, Hashable, Sendable {
+        @frozen public enum direction: String, Codable, Hashable, Sendable, CaseIterable {
             case asc = "asc"
             case desc = "desc"
         }
@@ -3633,15 +3642,15 @@ public enum Components {
         ///
         /// - Remark: Generated from `#/components/parameters/dependabot-alert-comma-separated-epss`.
         public typealias dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_epss = Swift.String
-        /// Filters the list of alerts based on whether the alert has a patch. If specified, only alerts with a patch will be returned.
-        /// Multiple `has` filters can be chained to check if multiple properties are present.
+        /// Filters the list of alerts based on whether the alert has the given value. If specified, only alerts meeting this criterion will be returned.
+        /// Multiple `has` filters can be passed to filter for alerts that have all of the values. Currently, only `patch` is supported.
         ///
         /// - Remark: Generated from `#/components/parameters/dependabot-alert-comma-separated-has`.
         @frozen public enum dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_has: Codable, Hashable, Sendable {
             /// - Remark: Generated from `#/components/parameters/dependabot-alert-comma-separated-has/case1`.
             case case1(Swift.String)
             /// - Remark: Generated from `#/components/parameters/dependabot-alert-comma-separated-has/Case2Payload`.
-            @frozen public enum Case2PayloadPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum Case2PayloadPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case patch = "patch"
             }
             /// - Remark: Generated from `#/components/parameters/dependabot-alert-comma-separated-has/case2`.
@@ -3680,7 +3689,7 @@ public enum Components {
         /// The scope of the vulnerable dependency. If specified, only alerts with this scope will be returned.
         ///
         /// - Remark: Generated from `#/components/parameters/dependabot-alert-scope`.
-        @frozen public enum dependabot_hyphen_alert_hyphen_scope: String, Codable, Hashable, Sendable {
+        @frozen public enum dependabot_hyphen_alert_hyphen_scope: String, Codable, Hashable, Sendable, CaseIterable {
             case development = "development"
             case runtime = "runtime"
         }
@@ -3690,7 +3699,7 @@ public enum Components {
         /// `epss_percentage` sorts alerts by the Exploit Prediction Scoring System (EPSS) percentage.
         ///
         /// - Remark: Generated from `#/components/parameters/dependabot-alert-sort`.
-        @frozen public enum dependabot_hyphen_alert_hyphen_sort: String, Codable, Hashable, Sendable {
+        @frozen public enum dependabot_hyphen_alert_hyphen_sort: String, Codable, Hashable, Sendable, CaseIterable {
             case created = "created"
             case updated = "updated"
             case epss_percentage = "epss_percentage"
@@ -3985,7 +3994,7 @@ public enum Operations {
                     /// - Remark: Generated from `#/components/parameters/dependabot-alert-comma-separated-has/case1`.
                     case case1(Swift.String)
                     /// - Remark: Generated from `#/components/parameters/dependabot-alert-comma-separated-has/Case2Payload`.
-                    @frozen public enum Case2PayloadPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum Case2PayloadPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case patch = "patch"
                     }
                     /// - Remark: Generated from `#/components/parameters/dependabot-alert-comma-separated-has/case2`.
@@ -4021,13 +4030,13 @@ public enum Operations {
                         }
                     }
                 }
-                /// Filters the list of alerts based on whether the alert has a patch. If specified, only alerts with a patch will be returned.
-                /// Multiple `has` filters can be chained to check if multiple properties are present.
+                /// Filters the list of alerts based on whether the alert has the given value. If specified, only alerts meeting this criterion will be returned.
+                /// Multiple `has` filters can be passed to filter for alerts that have all of the values. Currently, only `patch` is supported.
                 ///
                 /// - Remark: Generated from `#/paths/enterprises/{enterprise}/dependabot/alerts/GET/query/has`.
                 public var has: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_has?
                 /// - Remark: Generated from `#/components/parameters/dependabot-alert-scope`.
-                @frozen public enum dependabot_hyphen_alert_hyphen_scope: String, Codable, Hashable, Sendable {
+                @frozen public enum dependabot_hyphen_alert_hyphen_scope: String, Codable, Hashable, Sendable, CaseIterable {
                     case development = "development"
                     case runtime = "runtime"
                 }
@@ -4036,7 +4045,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/enterprises/{enterprise}/dependabot/alerts/GET/query/scope`.
                 public var scope: Components.Parameters.dependabot_hyphen_alert_hyphen_scope?
                 /// - Remark: Generated from `#/components/parameters/dependabot-alert-sort`.
-                @frozen public enum dependabot_hyphen_alert_hyphen_sort: String, Codable, Hashable, Sendable {
+                @frozen public enum dependabot_hyphen_alert_hyphen_sort: String, Codable, Hashable, Sendable, CaseIterable {
                     case created = "created"
                     case updated = "updated"
                     case epss_percentage = "epss_percentage"
@@ -4049,7 +4058,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/enterprises/{enterprise}/dependabot/alerts/GET/query/sort`.
                 public var sort: Components.Parameters.dependabot_hyphen_alert_hyphen_sort?
                 /// - Remark: Generated from `#/components/parameters/direction`.
-                @frozen public enum direction: String, Codable, Hashable, Sendable {
+                @frozen public enum direction: String, Codable, Hashable, Sendable, CaseIterable {
                     case asc = "asc"
                     case desc = "desc"
                 }
@@ -4089,7 +4098,7 @@ public enum Operations {
                 ///   - ecosystem: A comma-separated list of ecosystems. If specified, only alerts for these ecosystems will be returned.
                 ///   - package: A comma-separated list of package names. If specified, only alerts for these packages will be returned.
                 ///   - epss_percentage: CVE Exploit Prediction Scoring System (EPSS) percentage. Can be specified as:
-                ///   - has: Filters the list of alerts based on whether the alert has a patch. If specified, only alerts with a patch will be returned.
+                ///   - has: Filters the list of alerts based on whether the alert has the given value. If specified, only alerts meeting this criterion will be returned.
                 ///   - scope: The scope of the vulnerable dependency. If specified, only alerts with this scope will be returned.
                 ///   - sort: The property by which to sort the results.
                 ///   - direction: The direction to sort the results by.
@@ -4217,6 +4226,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//enterprises/{enterprise}/dependabot/alerts/get(dependabot/list-alerts-for-enterprise)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -4400,7 +4417,7 @@ public enum Operations {
                     /// - Remark: Generated from `#/components/parameters/dependabot-alert-comma-separated-has/case1`.
                     case case1(Swift.String)
                     /// - Remark: Generated from `#/components/parameters/dependabot-alert-comma-separated-has/Case2Payload`.
-                    @frozen public enum Case2PayloadPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum Case2PayloadPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case patch = "patch"
                     }
                     /// - Remark: Generated from `#/components/parameters/dependabot-alert-comma-separated-has/case2`.
@@ -4436,13 +4453,13 @@ public enum Operations {
                         }
                     }
                 }
-                /// Filters the list of alerts based on whether the alert has a patch. If specified, only alerts with a patch will be returned.
-                /// Multiple `has` filters can be chained to check if multiple properties are present.
+                /// Filters the list of alerts based on whether the alert has the given value. If specified, only alerts meeting this criterion will be returned.
+                /// Multiple `has` filters can be passed to filter for alerts that have all of the values. Currently, only `patch` is supported.
                 ///
                 /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/alerts/GET/query/has`.
                 public var has: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_has?
                 /// - Remark: Generated from `#/components/parameters/dependabot-alert-scope`.
-                @frozen public enum dependabot_hyphen_alert_hyphen_scope: String, Codable, Hashable, Sendable {
+                @frozen public enum dependabot_hyphen_alert_hyphen_scope: String, Codable, Hashable, Sendable, CaseIterable {
                     case development = "development"
                     case runtime = "runtime"
                 }
@@ -4451,7 +4468,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/alerts/GET/query/scope`.
                 public var scope: Components.Parameters.dependabot_hyphen_alert_hyphen_scope?
                 /// - Remark: Generated from `#/components/parameters/dependabot-alert-sort`.
-                @frozen public enum dependabot_hyphen_alert_hyphen_sort: String, Codable, Hashable, Sendable {
+                @frozen public enum dependabot_hyphen_alert_hyphen_sort: String, Codable, Hashable, Sendable, CaseIterable {
                     case created = "created"
                     case updated = "updated"
                     case epss_percentage = "epss_percentage"
@@ -4464,7 +4481,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/alerts/GET/query/sort`.
                 public var sort: Components.Parameters.dependabot_hyphen_alert_hyphen_sort?
                 /// - Remark: Generated from `#/components/parameters/direction`.
-                @frozen public enum direction: String, Codable, Hashable, Sendable {
+                @frozen public enum direction: String, Codable, Hashable, Sendable, CaseIterable {
                     case asc = "asc"
                     case desc = "desc"
                 }
@@ -4504,7 +4521,7 @@ public enum Operations {
                 ///   - ecosystem: A comma-separated list of ecosystems. If specified, only alerts for these ecosystems will be returned.
                 ///   - package: A comma-separated list of package names. If specified, only alerts for these packages will be returned.
                 ///   - epss_percentage: CVE Exploit Prediction Scoring System (EPSS) percentage. Can be specified as:
-                ///   - has: Filters the list of alerts based on whether the alert has a patch. If specified, only alerts with a patch will be returned.
+                ///   - has: Filters the list of alerts based on whether the alert has the given value. If specified, only alerts meeting this criterion will be returned.
                 ///   - scope: The scope of the vulnerable dependency. If specified, only alerts with this scope will be returned.
                 ///   - sort: The property by which to sort the results.
                 ///   - direction: The direction to sort the results by.
@@ -4632,6 +4649,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/alerts/get(dependabot/list-alerts-for-org)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -5323,7 +5348,7 @@ public enum Operations {
                     /// Which type of organization repositories have access to the organization secret. `selected` means only the repositories specified by `selected_repository_ids` can access the secret.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/dependabot/secrets/{secret_name}/PUT/requestBody/json/visibility`.
-                    @frozen public enum visibilityPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum visibilityPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case all = "all"
                         case _private = "private"
                         case selected = "selected"
@@ -5443,6 +5468,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.dependabot_sol_create_hyphen_or_hyphen_update_hyphen_org_hyphen_secret.Output.NoContent)
+            /// Response when updating a secret
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/secrets/{secret_name}/put(dependabot/create-or-update-org-secret)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -5545,6 +5578,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.dependabot_sol_delete_hyphen_org_hyphen_secret.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/secrets/{secret_name}/delete(dependabot/delete-org-secret)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -5846,6 +5887,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.dependabot_sol_set_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/secrets/{secret_name}/repositories/put(dependabot/set-selected-repos-for-org-secret)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -5930,6 +5979,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.dependabot_sol_add_hyphen_selected_hyphen_repo_hyphen_to_hyphen_org_hyphen_secret.Output.NoContent)
+            /// No Content when repository was added to the selected list
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/secrets/{secret_name}/repositories/{repository_id}/put(dependabot/add-selected-repo-to-org-secret)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -5957,6 +6014,14 @@ public enum Operations {
             ///
             /// HTTP response code: `409 conflict`.
             case conflict(Operations.dependabot_sol_add_hyphen_selected_hyphen_repo_hyphen_to_hyphen_org_hyphen_secret.Output.Conflict)
+            /// Conflict when visibility type is not set to selected
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/secrets/{secret_name}/repositories/{repository_id}/put(dependabot/add-selected-repo-to-org-secret)/responses/409`.
+            ///
+            /// HTTP response code: `409 conflict`.
+            public static var conflict: Self {
+                .conflict(.init())
+            }
             /// The associated value of the enum case if `self` is `.conflict`.
             ///
             /// - Throws: An error if `self` is not `.conflict`.
@@ -6041,6 +6106,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.dependabot_sol_remove_hyphen_selected_hyphen_repo_hyphen_from_hyphen_org_hyphen_secret.Output.NoContent)
+            /// Response when repository was removed from the selected list
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/secrets/{secret_name}/repositories/{repository_id}/delete(dependabot/remove-selected-repo-from-org-secret)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -6068,6 +6141,14 @@ public enum Operations {
             ///
             /// HTTP response code: `409 conflict`.
             case conflict(Operations.dependabot_sol_remove_hyphen_selected_hyphen_repo_hyphen_from_hyphen_org_hyphen_secret.Output.Conflict)
+            /// Conflict when visibility type not set to selected
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/dependabot/secrets/{secret_name}/repositories/{repository_id}/delete(dependabot/remove-selected-repo-from-org-secret)/responses/409`.
+            ///
+            /// HTTP response code: `409 conflict`.
+            public static var conflict: Self {
+                .conflict(.init())
+            }
             /// The associated value of the enum case if `self` is `.conflict`.
             ///
             /// - Throws: An error if `self` is not `.conflict`.
@@ -6166,7 +6247,7 @@ public enum Operations {
                     /// - Remark: Generated from `#/components/parameters/dependabot-alert-comma-separated-has/case1`.
                     case case1(Swift.String)
                     /// - Remark: Generated from `#/components/parameters/dependabot-alert-comma-separated-has/Case2Payload`.
-                    @frozen public enum Case2PayloadPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum Case2PayloadPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case patch = "patch"
                     }
                     /// - Remark: Generated from `#/components/parameters/dependabot-alert-comma-separated-has/case2`.
@@ -6202,13 +6283,13 @@ public enum Operations {
                         }
                     }
                 }
-                /// Filters the list of alerts based on whether the alert has a patch. If specified, only alerts with a patch will be returned.
-                /// Multiple `has` filters can be chained to check if multiple properties are present.
+                /// Filters the list of alerts based on whether the alert has the given value. If specified, only alerts meeting this criterion will be returned.
+                /// Multiple `has` filters can be passed to filter for alerts that have all of the values. Currently, only `patch` is supported.
                 ///
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/alerts/GET/query/has`.
                 public var has: Components.Parameters.dependabot_hyphen_alert_hyphen_comma_hyphen_separated_hyphen_has?
                 /// - Remark: Generated from `#/components/parameters/dependabot-alert-scope`.
-                @frozen public enum dependabot_hyphen_alert_hyphen_scope: String, Codable, Hashable, Sendable {
+                @frozen public enum dependabot_hyphen_alert_hyphen_scope: String, Codable, Hashable, Sendable, CaseIterable {
                     case development = "development"
                     case runtime = "runtime"
                 }
@@ -6217,7 +6298,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/alerts/GET/query/scope`.
                 public var scope: Components.Parameters.dependabot_hyphen_alert_hyphen_scope?
                 /// - Remark: Generated from `#/components/parameters/dependabot-alert-sort`.
-                @frozen public enum dependabot_hyphen_alert_hyphen_sort: String, Codable, Hashable, Sendable {
+                @frozen public enum dependabot_hyphen_alert_hyphen_sort: String, Codable, Hashable, Sendable, CaseIterable {
                     case created = "created"
                     case updated = "updated"
                     case epss_percentage = "epss_percentage"
@@ -6230,7 +6311,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/alerts/GET/query/sort`.
                 public var sort: Components.Parameters.dependabot_hyphen_alert_hyphen_sort?
                 /// - Remark: Generated from `#/components/parameters/direction`.
-                @frozen public enum direction: String, Codable, Hashable, Sendable {
+                @frozen public enum direction: String, Codable, Hashable, Sendable, CaseIterable {
                     case asc = "asc"
                     case desc = "desc"
                 }
@@ -6277,7 +6358,7 @@ public enum Operations {
                 ///   - package: A comma-separated list of package names. If specified, only alerts for these packages will be returned.
                 ///   - manifest: A comma-separated list of full manifest paths. If specified, only alerts for these manifests will be returned.
                 ///   - epss_percentage: CVE Exploit Prediction Scoring System (EPSS) percentage. Can be specified as:
-                ///   - has: Filters the list of alerts based on whether the alert has a patch. If specified, only alerts with a patch will be returned.
+                ///   - has: Filters the list of alerts based on whether the alert has the given value. If specified, only alerts meeting this criterion will be returned.
                 ///   - scope: The scope of the vulnerable dependency. If specified, only alerts with this scope will be returned.
                 ///   - sort: The property by which to sort the results.
                 ///   - direction: The direction to sort the results by.
@@ -6410,6 +6491,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependabot/alerts/get(dependabot/list-alerts-for-repo)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -6682,6 +6771,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependabot/alerts/{alert_number}/get(dependabot/get-alert)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -6841,7 +6938,7 @@ public enum Operations {
                     /// A `dismissed_reason` must be provided when setting the state to `dismissed`.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/alerts/{alert_number}/PATCH/requestBody/json/state`.
-                    @frozen public enum statePayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum statePayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case dismissed = "dismissed"
                         case open = "open"
                     }
@@ -6853,7 +6950,7 @@ public enum Operations {
                     /// **Required when `state` is `dismissed`.** A reason for dismissing the alert.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/dependabot/alerts/{alert_number}/PATCH/requestBody/json/dismissed_reason`.
-                    @frozen public enum dismissed_reasonPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum dismissed_reasonPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case fix_started = "fix_started"
                         case inaccurate = "inaccurate"
                         case no_bandwidth = "no_bandwidth"
@@ -6890,15 +6987,15 @@ public enum Operations {
                     }
                     public init(from decoder: any Decoder) throws {
                         let container = try decoder.container(keyedBy: CodingKeys.self)
-                        state = try container.decode(
+                        self.state = try container.decode(
                             Operations.dependabot_sol_update_hyphen_alert.Input.Body.jsonPayload.statePayload.self,
                             forKey: .state
                         )
-                        dismissed_reason = try container.decodeIfPresent(
+                        self.dismissed_reason = try container.decodeIfPresent(
                             Operations.dependabot_sol_update_hyphen_alert.Input.Body.jsonPayload.dismissed_reasonPayload.self,
                             forKey: .dismissed_reason
                         )
-                        dismissed_comment = try container.decodeIfPresent(
+                        self.dismissed_comment = try container.decodeIfPresent(
                             Swift.String.self,
                             forKey: .dismissed_comment
                         )
@@ -7807,6 +7904,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.dependabot_sol_create_hyphen_or_hyphen_update_hyphen_repo_hyphen_secret.Output.NoContent)
+            /// Response when updating a secret
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependabot/secrets/{secret_name}/put(dependabot/create-or-update-repo-secret)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -7916,6 +8021,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.dependabot_sol_delete_hyphen_repo_hyphen_secret.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/dependabot/secrets/{secret_name}/delete(dependabot/delete-repo-secret)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
