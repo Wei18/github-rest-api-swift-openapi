@@ -195,6 +195,15 @@ extension APIProtocol {
 
 /// Server URLs defined in the OpenAPI document.
 public enum Servers {
+    public enum Server1 {
+        public static func url() throws -> Foundation.URL {
+            try Foundation.URL(
+                validatingOpenAPIServerURL: "https://api.github.com",
+                variables: []
+            )
+        }
+    }
+    @available(*, deprecated, renamed: "Servers.Server1.url")
     public static func server1() throws -> Foundation.URL {
         try Foundation.URL(
             validatingOpenAPIServerURL: "https://api.github.com",
@@ -429,7 +438,7 @@ public enum Components {
             /// The registry type.
             ///
             /// - Remark: Generated from `#/components/schemas/org-private-registry-configuration/registry_type`.
-            @frozen public enum registry_typePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum registry_typePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case maven_repository = "maven_repository"
             }
             /// The registry type.
@@ -443,7 +452,7 @@ public enum Components {
             /// Which type of organization repositories have access to the private registry.
             ///
             /// - Remark: Generated from `#/components/schemas/org-private-registry-configuration/visibility`.
-            @frozen public enum visibilityPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum visibilityPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case all = "all"
                 case _private = "private"
                 case selected = "selected"
@@ -500,7 +509,7 @@ public enum Components {
             /// The registry type.
             ///
             /// - Remark: Generated from `#/components/schemas/org-private-registry-configuration-with-selected-repositories/registry_type`.
-            @frozen public enum registry_typePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum registry_typePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case maven_repository = "maven_repository"
             }
             /// The registry type.
@@ -514,7 +523,7 @@ public enum Components {
             /// Which type of organization repositories have access to the private registry. `selected` means only the repositories specified by `selected_repository_ids` can access the private registry.
             ///
             /// - Remark: Generated from `#/components/schemas/org-private-registry-configuration-with-selected-repositories/visibility`.
-            @frozen public enum visibilityPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum visibilityPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case all = "all"
                 case _private = "private"
                 case selected = "selected"
@@ -1013,7 +1022,7 @@ public enum Operations {
                     /// The registry type.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/private-registries/POST/requestBody/json/registry_type`.
-                    @frozen public enum registry_typePayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum registry_typePayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case maven_repository = "maven_repository"
                     }
                     /// The registry type.
@@ -1035,7 +1044,7 @@ public enum Operations {
                     /// Which type of organization repositories have access to the private registry. `selected` means only the repositories specified by `selected_repository_ids` can access the private registry.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/private-registries/POST/requestBody/json/visibility`.
-                    @frozen public enum visibilityPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum visibilityPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case all = "all"
                         case _private = "private"
                         case selected = "selected"
@@ -1656,7 +1665,7 @@ public enum Operations {
                     /// The registry type.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/private-registries/{secret_name}/PATCH/requestBody/json/registry_type`.
-                    @frozen public enum registry_typePayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum registry_typePayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case maven_repository = "maven_repository"
                     }
                     /// The registry type.
@@ -1678,7 +1687,7 @@ public enum Operations {
                     /// Which type of organization repositories have access to the private registry. `selected` means only the repositories specified by `selected_repository_ids` can access the private registry.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/private-registries/{secret_name}/PATCH/requestBody/json/visibility`.
-                    @frozen public enum visibilityPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum visibilityPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case all = "all"
                         case _private = "private"
                         case selected = "selected"
@@ -1755,6 +1764,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.private_hyphen_registries_sol_update_hyphen_org_hyphen_private_hyphen_registry.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/private-registries/{secret_name}/patch(private-registries/update-org-private-registry)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -1921,6 +1938,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.private_hyphen_registries_sol_delete_hyphen_org_hyphen_private_hyphen_registry.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/private-registries/{secret_name}/delete(private-registries/delete-org-private-registry)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
