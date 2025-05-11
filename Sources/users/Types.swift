@@ -1087,6 +1087,15 @@ extension APIProtocol {
 
 /// Server URLs defined in the OpenAPI document.
 public enum Servers {
+    public enum Server1 {
+        public static func url() throws -> Foundation.URL {
+            try Foundation.URL(
+                validatingOpenAPIServerURL: "https://api.github.com",
+                variables: []
+            )
+        }
+    }
+    @available(*, deprecated, renamed: "Servers.Server1.url")
     public static func server1() throws -> Foundation.URL {
         try Foundation.URL(
             validatingOpenAPIServerURL: "https://api.github.com",
@@ -1695,163 +1704,163 @@ public enum Components {
             }
             public init(from decoder: any Decoder) throws {
                 let container = try decoder.container(keyedBy: CodingKeys.self)
-                login = try container.decode(
+                self.login = try container.decode(
                     Swift.String.self,
                     forKey: .login
                 )
-                id = try container.decode(
+                self.id = try container.decode(
                     Swift.Int64.self,
                     forKey: .id
                 )
-                user_view_type = try container.decodeIfPresent(
+                self.user_view_type = try container.decodeIfPresent(
                     Swift.String.self,
                     forKey: .user_view_type
                 )
-                node_id = try container.decode(
+                self.node_id = try container.decode(
                     Swift.String.self,
                     forKey: .node_id
                 )
-                avatar_url = try container.decode(
+                self.avatar_url = try container.decode(
                     Swift.String.self,
                     forKey: .avatar_url
                 )
-                gravatar_id = try container.decodeIfPresent(
+                self.gravatar_id = try container.decodeIfPresent(
                     Swift.String.self,
                     forKey: .gravatar_id
                 )
-                url = try container.decode(
+                self.url = try container.decode(
                     Swift.String.self,
                     forKey: .url
                 )
-                html_url = try container.decode(
+                self.html_url = try container.decode(
                     Swift.String.self,
                     forKey: .html_url
                 )
-                followers_url = try container.decode(
+                self.followers_url = try container.decode(
                     Swift.String.self,
                     forKey: .followers_url
                 )
-                following_url = try container.decode(
+                self.following_url = try container.decode(
                     Swift.String.self,
                     forKey: .following_url
                 )
-                gists_url = try container.decode(
+                self.gists_url = try container.decode(
                     Swift.String.self,
                     forKey: .gists_url
                 )
-                starred_url = try container.decode(
+                self.starred_url = try container.decode(
                     Swift.String.self,
                     forKey: .starred_url
                 )
-                subscriptions_url = try container.decode(
+                self.subscriptions_url = try container.decode(
                     Swift.String.self,
                     forKey: .subscriptions_url
                 )
-                organizations_url = try container.decode(
+                self.organizations_url = try container.decode(
                     Swift.String.self,
                     forKey: .organizations_url
                 )
-                repos_url = try container.decode(
+                self.repos_url = try container.decode(
                     Swift.String.self,
                     forKey: .repos_url
                 )
-                events_url = try container.decode(
+                self.events_url = try container.decode(
                     Swift.String.self,
                     forKey: .events_url
                 )
-                received_events_url = try container.decode(
+                self.received_events_url = try container.decode(
                     Swift.String.self,
                     forKey: .received_events_url
                 )
-                _type = try container.decode(
+                self._type = try container.decode(
                     Swift.String.self,
                     forKey: ._type
                 )
-                site_admin = try container.decode(
+                self.site_admin = try container.decode(
                     Swift.Bool.self,
                     forKey: .site_admin
                 )
-                name = try container.decodeIfPresent(
+                self.name = try container.decodeIfPresent(
                     Swift.String.self,
                     forKey: .name
                 )
-                company = try container.decodeIfPresent(
+                self.company = try container.decodeIfPresent(
                     Swift.String.self,
                     forKey: .company
                 )
-                blog = try container.decodeIfPresent(
+                self.blog = try container.decodeIfPresent(
                     Swift.String.self,
                     forKey: .blog
                 )
-                location = try container.decodeIfPresent(
+                self.location = try container.decodeIfPresent(
                     Swift.String.self,
                     forKey: .location
                 )
-                email = try container.decodeIfPresent(
+                self.email = try container.decodeIfPresent(
                     Swift.String.self,
                     forKey: .email
                 )
-                notification_email = try container.decodeIfPresent(
+                self.notification_email = try container.decodeIfPresent(
                     Swift.String.self,
                     forKey: .notification_email
                 )
-                hireable = try container.decodeIfPresent(
+                self.hireable = try container.decodeIfPresent(
                     Swift.Bool.self,
                     forKey: .hireable
                 )
-                bio = try container.decodeIfPresent(
+                self.bio = try container.decodeIfPresent(
                     Swift.String.self,
                     forKey: .bio
                 )
-                twitter_username = try container.decodeIfPresent(
+                self.twitter_username = try container.decodeIfPresent(
                     Swift.String.self,
                     forKey: .twitter_username
                 )
-                public_repos = try container.decode(
+                self.public_repos = try container.decode(
                     Swift.Int.self,
                     forKey: .public_repos
                 )
-                public_gists = try container.decode(
+                self.public_gists = try container.decode(
                     Swift.Int.self,
                     forKey: .public_gists
                 )
-                followers = try container.decode(
+                self.followers = try container.decode(
                     Swift.Int.self,
                     forKey: .followers
                 )
-                following = try container.decode(
+                self.following = try container.decode(
                     Swift.Int.self,
                     forKey: .following
                 )
-                created_at = try container.decode(
+                self.created_at = try container.decode(
                     Foundation.Date.self,
                     forKey: .created_at
                 )
-                updated_at = try container.decode(
+                self.updated_at = try container.decode(
                     Foundation.Date.self,
                     forKey: .updated_at
                 )
-                plan = try container.decodeIfPresent(
+                self.plan = try container.decodeIfPresent(
                     Components.Schemas.public_hyphen_user.planPayload.self,
                     forKey: .plan
                 )
-                private_gists = try container.decodeIfPresent(
+                self.private_gists = try container.decodeIfPresent(
                     Swift.Int.self,
                     forKey: .private_gists
                 )
-                total_private_repos = try container.decodeIfPresent(
+                self.total_private_repos = try container.decodeIfPresent(
                     Swift.Int.self,
                     forKey: .total_private_repos
                 )
-                owned_private_repos = try container.decodeIfPresent(
+                self.owned_private_repos = try container.decodeIfPresent(
                     Swift.Int.self,
                     forKey: .owned_private_repos
                 )
-                disk_usage = try container.decodeIfPresent(
+                self.disk_usage = try container.decodeIfPresent(
                     Swift.Int.self,
                     forKey: .disk_usage
                 )
-                collaborators = try container.decodeIfPresent(
+                self.collaborators = try container.decodeIfPresent(
                     Swift.Int.self,
                     forKey: .collaborators
                 )
@@ -2984,6 +2993,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/get(users/get-authenticated)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -3251,6 +3268,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/patch(users/update-authenticated)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -3507,6 +3532,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/blocks/get(users/list-blocked-by-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -3684,6 +3717,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.users_sol_check_hyphen_blocked.Output.NoContent)
+            /// If the user is blocked
+            ///
+            /// - Remark: Generated from `#/paths//user/blocks/{username}/get(users/check-blocked)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -3758,6 +3799,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/blocks/{username}/get(users/check-blocked)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -3912,6 +3961,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.users_sol_block.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//user/blocks/{username}/put(users/block)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -3935,6 +3992,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/blocks/{username}/put(users/block)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -4135,6 +4200,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.users_sol_unblock.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//user/blocks/{username}/delete(users/unblock)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -4158,6 +4231,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/blocks/{username}/delete(users/unblock)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -4303,7 +4384,7 @@ public enum Operations {
                     /// Denotes whether an email is publicly visible.
                     ///
                     /// - Remark: Generated from `#/paths/user/email/visibility/PATCH/requestBody/json/visibility`.
-                    @frozen public enum visibilityPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum visibilityPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case _public = "public"
                         case _private = "private"
                     }
@@ -4397,6 +4478,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/email/visibility/patch(users/set-primary-email-visibility-for-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -4675,6 +4764,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/emails/get(users/list-emails-for-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -4975,6 +5072,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/emails/post(users/add-email-for-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -5209,6 +5314,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.users_sol_delete_hyphen_email_hyphen_for_hyphen_authenticated_hyphen_user.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//user/emails/delete(users/delete-email-for-authenticated-user)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -5232,6 +5345,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/emails/delete(users/delete-email-for-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -5507,6 +5628,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/followers/get(users/list-followers-for-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -5736,6 +5865,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/following/get(users/list-followed-by-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -5890,6 +6027,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.users_sol_check_hyphen_person_hyphen_is_hyphen_followed_hyphen_by_hyphen_authenticated.Output.NoContent)
+            /// if the person is followed by the authenticated user
+            ///
+            /// - Remark: Generated from `#/paths//user/following/{username}/get(users/check-person-is-followed-by-authenticated)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -5964,6 +6109,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/following/{username}/get(users/check-person-is-followed-by-authenticated)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -6120,6 +6273,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.users_sol_follow.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//user/following/{username}/put(users/follow)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -6143,6 +6304,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/following/{username}/put(users/follow)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -6343,6 +6512,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.users_sol_unfollow.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//user/following/{username}/delete(users/unfollow)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -6366,6 +6543,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/following/{username}/delete(users/unfollow)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -6620,6 +6805,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/gpg_keys/get(users/list-gpg-keys-for-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -6887,6 +7080,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/gpg_keys/post(users/create-gpg-key-for-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -7136,6 +7337,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/gpg_keys/{gpg_key_id}/get(users/get-gpg-key-for-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -7292,6 +7501,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.users_sol_delete_hyphen_gpg_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//user/gpg_keys/{gpg_key_id}/delete(users/delete-gpg-key-for-authenticated-user)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -7361,6 +7578,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/gpg_keys/{gpg_key_id}/delete(users/delete-gpg-key-for-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -7592,6 +7817,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/keys/get(users/list-public-ssh-keys-for-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -7859,6 +8092,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/keys/post(users/create-public-ssh-key-for-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -8108,6 +8349,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/keys/{key_id}/get(users/get-public-ssh-key-for-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -8264,6 +8513,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.users_sol_delete_hyphen_public_hyphen_ssh_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//user/keys/{key_id}/delete(users/delete-public-ssh-key-for-authenticated-user)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -8287,6 +8544,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/keys/{key_id}/delete(users/delete-public-ssh-key-for-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -8543,6 +8808,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/public_emails/get(users/list-public-emails-for-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -8795,6 +9068,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/social_accounts/get(users/list-social-accounts-for-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -9052,6 +9333,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/social_accounts/post(users/add-social-account-for-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -9239,6 +9528,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.users_sol_delete_hyphen_social_hyphen_account_hyphen_for_hyphen_authenticated_hyphen_user.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//user/social_accounts/delete(users/delete-social-account-for-authenticated-user)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -9285,6 +9582,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/social_accounts/delete(users/delete-social-account-for-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -9539,6 +9844,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/ssh_signing_keys/get(users/list-ssh-signing-keys-for-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -9806,6 +10119,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/ssh_signing_keys/post(users/create-ssh-signing-key-for-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -10055,6 +10376,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/ssh_signing_keys/{ssh_signing_key_id}/get(users/get-ssh-signing-key-for-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -10211,6 +10540,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.users_sol_delete_hyphen_ssh_hyphen_signing_hyphen_key_hyphen_for_hyphen_authenticated_hyphen_user.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//user/ssh_signing_keys/{ssh_signing_key_id}/delete(users/delete-ssh-signing-key-for-authenticated-user)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -10234,6 +10571,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/ssh_signing_keys/{ssh_signing_key_id}/delete(users/delete-ssh-signing-key-for-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -10686,6 +11031,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//users/get(users/list)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -11266,6 +11619,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.users_sol_list_hyphen_attestations.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//users/{username}/attestations/{subject_digest}/get(users/list-attestations)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -11743,6 +12104,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.users_sol_check_hyphen_following_hyphen_for_hyphen_user.Output.NoContent)
+            /// if the user follows the target user
+            ///
+            /// - Remark: Generated from `#/paths//users/{username}/following/{target_user}/get(users/check-following-for-user)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -11770,6 +12139,14 @@ public enum Operations {
             ///
             /// HTTP response code: `404 notFound`.
             case notFound(Operations.users_sol_check_hyphen_following_hyphen_for_hyphen_user.Output.NotFound)
+            /// if the user does not follow the target user
+            ///
+            /// - Remark: Generated from `#/paths//users/{username}/following/{target_user}/get(users/check-following-for-user)/responses/404`.
+            ///
+            /// HTTP response code: `404 notFound`.
+            public static var notFound: Self {
+                .notFound(.init())
+            }
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
@@ -12002,7 +12379,7 @@ public enum Operations {
             /// - Remark: Generated from `#/paths/users/{username}/hovercard/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/users/{username}/hovercard/GET/query/subject_type`.
-                @frozen public enum subject_typePayload: String, Codable, Hashable, Sendable {
+                @frozen public enum subject_typePayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case organization = "organization"
                     case repository = "repository"
                     case issue = "issue"
