@@ -4317,6 +4317,15 @@ extension APIProtocol {
 
 /// Server URLs defined in the OpenAPI document.
 public enum Servers {
+    public enum Server1 {
+        public static func url() throws -> Foundation.URL {
+            try Foundation.URL(
+                validatingOpenAPIServerURL: "https://api.github.com",
+                variables: []
+            )
+        }
+    }
+    @available(*, deprecated, renamed: "Servers.Server1.url")
     public static func server1() throws -> Foundation.URL {
         try Foundation.URL(
             validatingOpenAPIServerURL: "https://api.github.com",
@@ -5127,7 +5136,7 @@ public enum Components {
             /// - `COMMIT_OR_PR_TITLE` - default to the commit's title (if only one commit) or the pull request's title (when more than one commit).
             ///
             /// - Remark: Generated from `#/components/schemas/repository/squash_merge_commit_title`.
-            @frozen public enum squash_merge_commit_titlePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum squash_merge_commit_titlePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case PR_TITLE = "PR_TITLE"
                 case COMMIT_OR_PR_TITLE = "COMMIT_OR_PR_TITLE"
             }
@@ -5145,7 +5154,7 @@ public enum Components {
             /// - `BLANK` - default to a blank commit message.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/squash_merge_commit_message`.
-            @frozen public enum squash_merge_commit_messagePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum squash_merge_commit_messagePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case PR_BODY = "PR_BODY"
                 case COMMIT_MESSAGES = "COMMIT_MESSAGES"
                 case BLANK = "BLANK"
@@ -5164,7 +5173,7 @@ public enum Components {
             /// - `MERGE_MESSAGE` - default to the classic title for a merge message (e.g., Merge pull request #123 from branch-name).
             ///
             /// - Remark: Generated from `#/components/schemas/repository/merge_commit_title`.
-            @frozen public enum merge_commit_titlePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum merge_commit_titlePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case PR_TITLE = "PR_TITLE"
                 case MERGE_MESSAGE = "MERGE_MESSAGE"
             }
@@ -5182,7 +5191,7 @@ public enum Components {
             /// - `BLANK` - default to a blank commit message.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/merge_commit_message`.
-            @frozen public enum merge_commit_messagePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum merge_commit_messagePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case PR_BODY = "PR_BODY"
                 case PR_TITLE = "PR_TITLE"
                 case BLANK = "BLANK"
@@ -5767,23 +5776,23 @@ public enum Components {
                 }
                 public init(from decoder: any Decoder) throws {
                     let container = try decoder.container(keyedBy: CodingKeys.self)
-                    issues = try container.decodeIfPresent(
+                    self.issues = try container.decodeIfPresent(
                         Swift.String.self,
                         forKey: .issues
                     )
-                    checks = try container.decodeIfPresent(
+                    self.checks = try container.decodeIfPresent(
                         Swift.String.self,
                         forKey: .checks
                     )
-                    metadata = try container.decodeIfPresent(
+                    self.metadata = try container.decodeIfPresent(
                         Swift.String.self,
                         forKey: .metadata
                     )
-                    contents = try container.decodeIfPresent(
+                    self.contents = try container.decodeIfPresent(
                         Swift.String.self,
                         forKey: .contents
                     )
-                    deployments = try container.decodeIfPresent(
+                    self.deployments = try container.decodeIfPresent(
                         Swift.String.self,
                         forKey: .deployments
                     )
@@ -5798,23 +5807,23 @@ public enum Components {
                 public func encode(to encoder: any Encoder) throws {
                     var container = encoder.container(keyedBy: CodingKeys.self)
                     try container.encodeIfPresent(
-                        issues,
+                        self.issues,
                         forKey: .issues
                     )
                     try container.encodeIfPresent(
-                        checks,
+                        self.checks,
                         forKey: .checks
                     )
                     try container.encodeIfPresent(
-                        metadata,
+                        self.metadata,
                         forKey: .metadata
                     )
                     try container.encodeIfPresent(
-                        contents,
+                        self.contents,
                         forKey: .contents
                     )
                     try container.encodeIfPresent(
-                        deployments,
+                        self.deployments,
                         forKey: .deployments
                     )
                     try encoder.encodeAdditionalProperties(additionalProperties)
@@ -5920,7 +5929,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/advanced_security`.
             public struct advanced_securityPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/advanced_security/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
@@ -5942,7 +5951,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/code_security`.
             public struct code_securityPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/code_security/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
@@ -5968,7 +5977,7 @@ public enum Components {
                 /// The enablement status of Dependabot security updates for the repository.
                 ///
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/dependabot_security_updates/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
@@ -5994,7 +6003,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning`.
             public struct secret_scanningPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
@@ -6016,7 +6025,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_push_protection`.
             public struct secret_scanning_push_protectionPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_push_protection/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
@@ -6038,7 +6047,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_non_provider_patterns`.
             public struct secret_scanning_non_provider_patternsPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_non_provider_patterns/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
@@ -6060,7 +6069,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_ai_detection`.
             public struct secret_scanning_ai_detectionPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_ai_detection/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
@@ -6818,7 +6827,7 @@ public enum Components {
             /// The image provider.
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-actions-hosted-runner-pool-image/source`.
-            @frozen public enum sourcePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum sourcePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case github = "github"
                 case partner = "partner"
                 case custom = "custom"
@@ -6957,7 +6966,7 @@ public enum Components {
             /// The status of the runner.
             ///
             /// - Remark: Generated from `#/components/schemas/actions-hosted-runner/status`.
-            @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case Ready = "Ready"
                 case Provisioning = "Provisioning"
                 case Shutdown = "Shutdown"
@@ -7064,7 +7073,7 @@ public enum Components {
             /// The image provider.
             ///
             /// - Remark: Generated from `#/components/schemas/actions-hosted-runner-image/source`.
-            @frozen public enum sourcePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum sourcePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case github = "github"
                 case partner = "partner"
                 case custom = "custom"
@@ -7161,7 +7170,7 @@ public enum Components {
         /// The policy that controls the repositories in the organization that are allowed to run GitHub Actions.
         ///
         /// - Remark: Generated from `#/components/schemas/enabled-repositories`.
-        @frozen public enum enabled_hyphen_repositories: String, Codable, Hashable, Sendable {
+        @frozen public enum enabled_hyphen_repositories: String, Codable, Hashable, Sendable, CaseIterable {
             case all = "all"
             case none = "none"
             case selected = "selected"
@@ -7169,7 +7178,7 @@ public enum Components {
         /// The permissions policy that controls the actions and reusable workflows that are allowed to run.
         ///
         /// - Remark: Generated from `#/components/schemas/allowed-actions`.
-        @frozen public enum allowed_hyphen_actions: String, Codable, Hashable, Sendable {
+        @frozen public enum allowed_hyphen_actions: String, Codable, Hashable, Sendable, CaseIterable {
             case all = "all"
             case local_only = "local_only"
             case selected = "selected"
@@ -7256,7 +7265,7 @@ public enum Components {
         /// The default workflow permissions granted to the GITHUB_TOKEN when running workflows.
         ///
         /// - Remark: Generated from `#/components/schemas/actions-default-workflow-permissions`.
-        @frozen public enum actions_hyphen_default_hyphen_workflow_hyphen_permissions: String, Codable, Hashable, Sendable {
+        @frozen public enum actions_hyphen_default_hyphen_workflow_hyphen_permissions: String, Codable, Hashable, Sendable, CaseIterable {
             case read = "read"
             case write = "write"
         }
@@ -7430,7 +7439,7 @@ public enum Components {
             /// The type of label. Read-only labels are applied automatically when the runner is configured.
             ///
             /// - Remark: Generated from `#/components/schemas/runner-label/type`.
-            @frozen public enum _typePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum _typePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read_hyphen_only = "read-only"
                 case custom = "custom"
             }
@@ -7604,7 +7613,7 @@ public enum Components {
             /// Describe whether all repositories have been selected or there's a selection involved
             ///
             /// - Remark: Generated from `#/components/schemas/authentication-token/repository_selection`.
-            @frozen public enum repository_selectionPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum repository_selectionPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case all = "all"
                 case selected = "selected"
             }
@@ -7660,7 +7669,7 @@ public enum Components {
             /// Visibility of a secret
             ///
             /// - Remark: Generated from `#/components/schemas/organization-actions-secret/visibility`.
-            @frozen public enum visibilityPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum visibilityPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case all = "all"
                 case _private = "private"
                 case selected = "selected"
@@ -7776,7 +7785,7 @@ public enum Components {
             /// Visibility of a variable
             ///
             /// - Remark: Generated from `#/components/schemas/organization-actions-variable/visibility`.
-            @frozen public enum visibilityPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum visibilityPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case all = "all"
                 case _private = "private"
                 case selected = "selected"
@@ -8316,7 +8325,7 @@ public enum Components {
             /// The phase of the lifecycle that the job is currently in.
             ///
             /// - Remark: Generated from `#/components/schemas/job/status`.
-            @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case queued = "queued"
                 case in_progress = "in_progress"
                 case completed = "completed"
@@ -8331,7 +8340,7 @@ public enum Components {
             /// The outcome of the job.
             ///
             /// - Remark: Generated from `#/components/schemas/job/conclusion`.
-            @frozen public enum conclusionPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum conclusionPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case success = "success"
                 case failure = "failure"
                 case neutral = "neutral"
@@ -8365,7 +8374,7 @@ public enum Components {
                 /// The phase of the lifecycle that the job is currently in.
                 ///
                 /// - Remark: Generated from `#/components/schemas/job/stepsPayload/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case queued = "queued"
                     case in_progress = "in_progress"
                     case completed = "completed"
@@ -8710,7 +8719,7 @@ public enum Components {
             /// `none` means the access is only possible from workflows in this repository. `user` level access allows sharing across user owned private repositories only. `organization` level access allows sharing across the organization.
             ///
             /// - Remark: Generated from `#/components/schemas/actions-workflow-access-to-repository/access_level`.
-            @frozen public enum access_levelPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum access_levelPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case none = "none"
                 case user = "user"
                 case organization = "organization"
@@ -9387,7 +9396,7 @@ public enum Components {
             /// Whether deployment to the environment(s) was approved or rejected or pending (with comments)
             ///
             /// - Remark: Generated from `#/components/schemas/environment-approvals/state`.
-            @frozen public enum statePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum statePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case approved = "approved"
                 case rejected = "rejected"
                 case pending = "pending"
@@ -9463,7 +9472,7 @@ public enum Components {
             /// Whether to approve or reject deployment to the specified environments.
             ///
             /// - Remark: Generated from `#/components/schemas/review-custom-gates-state-required/state`.
-            @frozen public enum statePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum statePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case approved = "approved"
                 case rejected = "rejected"
             }
@@ -9499,7 +9508,7 @@ public enum Components {
         /// The type of reviewer.
         ///
         /// - Remark: Generated from `#/components/schemas/deployment-reviewer-type`.
-        @frozen public enum deployment_hyphen_reviewer_hyphen_type: String, Codable, Hashable, Sendable {
+        @frozen public enum deployment_hyphen_reviewer_hyphen_type: String, Codable, Hashable, Sendable, CaseIterable {
             case User = "User"
             case Team = "Team"
         }
@@ -9591,19 +9600,19 @@ public enum Components {
                     public init(from decoder: any Decoder) throws {
                         var errors: [any Error] = []
                         do {
-                            value1 = try .init(from: decoder)
+                            self.value1 = try .init(from: decoder)
                         } catch {
                             errors.append(error)
                         }
                         do {
-                            value2 = try .init(from: decoder)
+                            self.value2 = try .init(from: decoder)
                         } catch {
                             errors.append(error)
                         }
                         try Swift.DecodingError.verifyAtLeastOneSchemaIsNotNil(
                             [
-                                value1,
-                                value2
+                                self.value1,
+                                self.value2
                             ],
                             type: Self.self,
                             codingPath: decoder.codingPath,
@@ -9611,8 +9620,8 @@ public enum Components {
                         )
                     }
                     public func encode(to encoder: any Encoder) throws {
-                        try value1?.encode(to: encoder)
-                        try value2?.encode(to: encoder)
+                        try self.value1?.encode(to: encoder)
+                        try self.value2?.encode(to: encoder)
                     }
                 }
                 /// - Remark: Generated from `#/components/schemas/pending-deployment/reviewersPayload/reviewer`.
@@ -10086,7 +10095,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/workflow/path`.
             public var path: Swift.String
             /// - Remark: Generated from `#/components/schemas/workflow/state`.
-            @frozen public enum statePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum statePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case active = "active"
                 case deleted = "deleted"
                 case disabled_fork = "disabled_fork"
@@ -10257,7 +10266,7 @@ public enum Components {
         /// The direction to sort the results by.
         ///
         /// - Remark: Generated from `#/components/parameters/direction`.
-        @frozen public enum direction: String, Codable, Hashable, Sendable {
+        @frozen public enum direction: String, Codable, Hashable, Sendable, CaseIterable {
             case asc = "asc"
             case desc = "desc"
         }
@@ -10336,7 +10345,7 @@ public enum Components {
         /// The property to sort the results by. `created_at` means when the cache was created. `last_accessed_at` means when the cache was last accessed. `size_in_bytes` is the size of the cache in bytes.
         ///
         /// - Remark: Generated from `#/components/parameters/actions-cache-list-sort`.
-        @frozen public enum actions_hyphen_cache_hyphen_list_hyphen_sort: String, Codable, Hashable, Sendable {
+        @frozen public enum actions_hyphen_cache_hyphen_list_hyphen_sort: String, Codable, Hashable, Sendable, CaseIterable {
             case created_at = "created_at"
             case last_accessed_at = "last_accessed_at"
             case size_in_bytes = "size_in_bytes"
@@ -10368,7 +10377,7 @@ public enum Components {
         /// Returns workflow runs with the check run `status` or `conclusion` that you specify. For example, a conclusion can be `success` or a status can be `in_progress`. Only GitHub Actions can set a status of `waiting`, `pending`, or `requested`.
         ///
         /// - Remark: Generated from `#/components/parameters/workflow-run-status`.
-        @frozen public enum workflow_hyphen_run_hyphen_status: String, Codable, Hashable, Sendable {
+        @frozen public enum workflow_hyphen_run_hyphen_status: String, Codable, Hashable, Sendable, CaseIterable {
             case completed = "completed"
             case action_required = "action_required"
             case cancelled = "cancelled"
@@ -10590,34 +10599,6 @@ public enum Components {
                 self.body = body
             }
         }
-        public struct conflict: Sendable, Hashable {
-            /// - Remark: Generated from `#/components/responses/conflict/content`.
-            @frozen public enum Body: Sendable, Hashable {
-                /// - Remark: Generated from `#/components/responses/conflict/content/application\/json`.
-                case json(Components.Schemas.basic_hyphen_error)
-                /// The associated value of the enum case if `self` is `.json`.
-                ///
-                /// - Throws: An error if `self` is not `.json`.
-                /// - SeeAlso: `.json`.
-                public var json: Components.Schemas.basic_hyphen_error {
-                    get throws {
-                        switch self {
-                        case let .json(body):
-                            return body
-                        }
-                    }
-                }
-            }
-            /// Received HTTP response body
-            public var body: Components.Responses.conflict.Body
-            /// Creates a new `conflict`.
-            ///
-            /// - Parameters:
-            ///   - body: Received HTTP response body
-            public init(body: Components.Responses.conflict.Body) {
-                self.body = body
-            }
-        }
         public struct internal_error: Sendable, Hashable {
             /// - Remark: Generated from `#/components/responses/internal_error/content`.
             @frozen public enum Body: Sendable, Hashable {
@@ -10643,6 +10624,34 @@ public enum Components {
             /// - Parameters:
             ///   - body: Received HTTP response body
             public init(body: Components.Responses.internal_error.Body) {
+                self.body = body
+            }
+        }
+        public struct conflict: Sendable, Hashable {
+            /// - Remark: Generated from `#/components/responses/conflict/content`.
+            @frozen public enum Body: Sendable, Hashable {
+                /// - Remark: Generated from `#/components/responses/conflict/content/application\/json`.
+                case json(Components.Schemas.basic_hyphen_error)
+                /// The associated value of the enum case if `self` is `.json`.
+                ///
+                /// - Throws: An error if `self` is not `.json`.
+                /// - SeeAlso: `.json`.
+                public var json: Components.Schemas.basic_hyphen_error {
+                    get throws {
+                        switch self {
+                        case let .json(body):
+                            return body
+                        }
+                    }
+                }
+            }
+            /// Received HTTP response body
+            public var body: Components.Responses.conflict.Body
+            /// Creates a new `conflict`.
+            ///
+            /// - Parameters:
+            ///   - body: Received HTTP response body
+            public init(body: Components.Responses.conflict.Body) {
                 self.body = body
             }
         }
@@ -11458,7 +11467,7 @@ public enum Operations {
                         /// The source of the runner image.
                         ///
                         /// - Remark: Generated from `#/paths/orgs/{org}/actions/hosted-runners/POST/requestBody/json/image/source`.
-                        @frozen public enum sourcePayload: String, Codable, Hashable, Sendable {
+                        @frozen public enum sourcePayload: String, Codable, Hashable, Sendable, CaseIterable {
                             case github = "github"
                             case partner = "partner"
                             case custom = "custom"
@@ -13102,6 +13111,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.actions_sol_set_hyphen_github_hyphen_actions_hyphen_permissions_hyphen_organization.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/actions/permissions/put(actions/set-github-actions-permissions-organization)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -13383,6 +13400,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.actions_sol_set_hyphen_selected_hyphen_repositories_hyphen_enabled_hyphen_github_hyphen_actions_hyphen_organization.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/actions/permissions/repositories/put(actions/set-selected-repositories-enabled-github-actions-organization)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -13460,6 +13485,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.actions_sol_enable_hyphen_selected_hyphen_repository_hyphen_github_hyphen_actions_hyphen_organization.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/actions/permissions/repositories/{repository_id}/put(actions/enable-selected-repository-github-actions-organization)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -13537,6 +13570,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.actions_sol_disable_hyphen_selected_hyphen_repository_hyphen_github_hyphen_actions_hyphen_organization.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/actions/permissions/repositories/{repository_id}/delete(actions/disable-selected-repository-github-actions-organization)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -13750,6 +13791,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.actions_sol_set_hyphen_allowed_hyphen_actions_hyphen_organization.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/actions/permissions/selected-actions/put(actions/set-allowed-actions-organization)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -13967,6 +14016,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.actions_sol_set_hyphen_github_hyphen_actions_hyphen_default_hyphen_workflow_hyphen_permissions_hyphen_organization.Output.NoContent)
+            /// Success response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/actions/permissions/workflow/put(actions/set-github-actions-default-workflow-permissions-organization)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -14230,7 +14287,7 @@ public enum Operations {
                     /// Visibility of a runner group. You can select all repositories, select individual repositories, or limit access to private repositories.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/POST/requestBody/json/visibility`.
-                    @frozen public enum visibilityPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum visibilityPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case selected = "selected"
                         case all = "all"
                         case _private = "private"
@@ -14608,7 +14665,7 @@ public enum Operations {
                     /// Visibility of a runner group. You can select all repositories, select individual repositories, or all private repositories.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/actions/runner-groups/{runner_group_id}/PATCH/requestBody/json/visibility`.
-                    @frozen public enum visibilityPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum visibilityPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case selected = "selected"
                         case all = "all"
                         case _private = "private"
@@ -14823,6 +14880,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.actions_sol_delete_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_from_hyphen_org.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/actions/runner-groups/{runner_group_id}/delete(actions/delete-self-hosted-runner-group-from-org)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -15333,6 +15398,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.actions_sol_set_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/actions/runner-groups/{runner_group_id}/repositories/put(actions/set-repo-access-to-self-hosted-runner-group-in-org)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -15417,6 +15490,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.actions_sol_add_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/actions/runner-groups/{runner_group_id}/repositories/{repository_id}/put(actions/add-repo-access-to-self-hosted-runner-group-in-org)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -15501,6 +15582,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.actions_sol_remove_hyphen_repo_hyphen_access_hyphen_to_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_group_hyphen_in_hyphen_org.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/actions/runner-groups/{runner_group_id}/repositories/{repository_id}/delete(actions/remove-repo-access-to-self-hosted-runner-group-in-org)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -15818,6 +15907,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.actions_sol_set_hyphen_self_hyphen_hosted_hyphen_runners_hyphen_in_hyphen_group_hyphen_for_hyphen_org.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/actions/runner-groups/{runner_group_id}/runners/put(actions/set-self-hosted-runners-in-group-for-org)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -15902,6 +15999,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.actions_sol_add_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_to_hyphen_group_hyphen_for_hyphen_org.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/actions/runner-groups/{runner_group_id}/runners/{runner_id}/put(actions/add-self-hosted-runner-to-group-for-org)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -15986,6 +16091,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.actions_sol_remove_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_from_hyphen_group_hyphen_for_hyphen_org.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/actions/runner-groups/{runner_group_id}/runners/{runner_id}/delete(actions/remove-self-hosted-runner-from-group-for-org)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -17071,6 +17184,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.actions_sol_delete_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_from_hyphen_org.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/actions/runners/{runner_id}/delete(actions/delete-self-hosted-runner-from-org)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -18481,7 +18602,7 @@ public enum Operations {
                     /// Which type of organization repositories have access to the organization secret. `selected` means only the repositories specified by `selected_repository_ids` can access the secret.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/actions/secrets/{secret_name}/PUT/requestBody/json/visibility`.
-                    @frozen public enum visibilityPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum visibilityPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case all = "all"
                         case _private = "private"
                         case selected = "selected"
@@ -18601,6 +18722,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.actions_sol_create_hyphen_or_hyphen_update_hyphen_org_hyphen_secret.Output.NoContent)
+            /// Response when updating a secret
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/actions/secrets/{secret_name}/put(actions/create-or-update-org-secret)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -18705,6 +18834,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.actions_sol_delete_hyphen_org_hyphen_secret.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/actions/secrets/{secret_name}/delete(actions/delete-org-secret)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -19010,6 +19147,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.actions_sol_set_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_secret.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/actions/secrets/{secret_name}/repositories/put(actions/set-selected-repos-for-org-secret)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -19096,6 +19241,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.actions_sol_add_hyphen_selected_hyphen_repo_hyphen_to_hyphen_org_hyphen_secret.Output.NoContent)
+            /// No Content when repository was added to the selected list
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/actions/secrets/{secret_name}/repositories/{repository_id}/put(actions/add-selected-repo-to-org-secret)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -19123,6 +19276,14 @@ public enum Operations {
             ///
             /// HTTP response code: `409 conflict`.
             case conflict(Operations.actions_sol_add_hyphen_selected_hyphen_repo_hyphen_to_hyphen_org_hyphen_secret.Output.Conflict)
+            /// Conflict when visibility type is not set to selected
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/actions/secrets/{secret_name}/repositories/{repository_id}/put(actions/add-selected-repo-to-org-secret)/responses/409`.
+            ///
+            /// HTTP response code: `409 conflict`.
+            public static var conflict: Self {
+                .conflict(.init())
+            }
             /// The associated value of the enum case if `self` is `.conflict`.
             ///
             /// - Throws: An error if `self` is not `.conflict`.
@@ -19209,6 +19370,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.actions_sol_remove_hyphen_selected_hyphen_repo_hyphen_from_hyphen_org_hyphen_secret.Output.NoContent)
+            /// Response when repository was removed from the selected list
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/actions/secrets/{secret_name}/repositories/{repository_id}/delete(actions/remove-selected-repo-from-org-secret)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -19236,6 +19405,14 @@ public enum Operations {
             ///
             /// HTTP response code: `409 conflict`.
             case conflict(Operations.actions_sol_remove_hyphen_selected_hyphen_repo_hyphen_from_hyphen_org_hyphen_secret.Output.Conflict)
+            /// Conflict when visibility type not set to selected
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/actions/secrets/{secret_name}/repositories/{repository_id}/delete(actions/remove-selected-repo-from-org-secret)/responses/409`.
+            ///
+            /// HTTP response code: `409 conflict`.
+            public static var conflict: Self {
+                .conflict(.init())
+            }
             /// The associated value of the enum case if `self` is `.conflict`.
             ///
             /// - Throws: An error if `self` is not `.conflict`.
@@ -19519,7 +19696,7 @@ public enum Operations {
                     /// The type of repositories in the organization that can access the variable. `selected` means only the repositories specified by `selected_repository_ids` can access the variable.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/actions/variables/POST/requestBody/json/visibility`.
-                    @frozen public enum visibilityPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum visibilityPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case all = "all"
                         case _private = "private"
                         case selected = "selected"
@@ -19857,7 +20034,7 @@ public enum Operations {
                     /// The type of repositories in the organization that can access the variable. `selected` means only the repositories specified by `selected_repository_ids` can access the variable.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/actions/variables/{name}/PATCH/requestBody/json/visibility`.
-                    @frozen public enum visibilityPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum visibilityPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case all = "all"
                         case _private = "private"
                         case selected = "selected"
@@ -19923,6 +20100,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.actions_sol_update_hyphen_org_hyphen_variable.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/actions/variables/{name}/patch(actions/update-org-variable)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -20002,6 +20187,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.actions_sol_delete_hyphen_org_hyphen_variable.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/actions/variables/{name}/delete(actions/delete-org-variable)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -20200,6 +20393,14 @@ public enum Operations {
             ///
             /// HTTP response code: `409 conflict`.
             case conflict(Operations.actions_sol_list_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_variable.Output.Conflict)
+            /// Response when the visibility of the variable is not set to `selected`
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/actions/variables/{name}/repositories/get(actions/list-selected-repos-for-org-variable)/responses/409`.
+            ///
+            /// HTTP response code: `409 conflict`.
+            public static var conflict: Self {
+                .conflict(.init())
+            }
             /// The associated value of the enum case if `self` is `.conflict`.
             ///
             /// - Throws: An error if `self` is not `.conflict`.
@@ -20334,6 +20535,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.actions_sol_set_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_variable.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/actions/variables/{name}/repositories/put(actions/set-selected-repos-for-org-variable)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -20361,6 +20570,14 @@ public enum Operations {
             ///
             /// HTTP response code: `409 conflict`.
             case conflict(Operations.actions_sol_set_hyphen_selected_hyphen_repos_hyphen_for_hyphen_org_hyphen_variable.Output.Conflict)
+            /// Response when the visibility of the variable is not set to `selected`
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/actions/variables/{name}/repositories/put(actions/set-selected-repos-for-org-variable)/responses/409`.
+            ///
+            /// HTTP response code: `409 conflict`.
+            public static var conflict: Self {
+                .conflict(.init())
+            }
             /// The associated value of the enum case if `self` is `.conflict`.
             ///
             /// - Throws: An error if `self` is not `.conflict`.
@@ -20446,6 +20663,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.actions_sol_add_hyphen_selected_hyphen_repo_hyphen_to_hyphen_org_hyphen_variable.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/actions/variables/{name}/repositories/{repository_id}/put(actions/add-selected-repo-to-org-variable)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -20473,6 +20698,14 @@ public enum Operations {
             ///
             /// HTTP response code: `409 conflict`.
             case conflict(Operations.actions_sol_add_hyphen_selected_hyphen_repo_hyphen_to_hyphen_org_hyphen_variable.Output.Conflict)
+            /// Response when the visibility of the variable is not set to `selected`
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/actions/variables/{name}/repositories/{repository_id}/put(actions/add-selected-repo-to-org-variable)/responses/409`.
+            ///
+            /// HTTP response code: `409 conflict`.
+            public static var conflict: Self {
+                .conflict(.init())
+            }
             /// The associated value of the enum case if `self` is `.conflict`.
             ///
             /// - Throws: An error if `self` is not `.conflict`.
@@ -20559,6 +20792,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.actions_sol_remove_hyphen_selected_hyphen_repo_hyphen_from_hyphen_org_hyphen_variable.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/actions/variables/{name}/repositories/{repository_id}/delete(actions/remove-selected-repo-from-org-variable)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -20586,6 +20827,14 @@ public enum Operations {
             ///
             /// HTTP response code: `409 conflict`.
             case conflict(Operations.actions_sol_remove_hyphen_selected_hyphen_repo_hyphen_from_hyphen_org_hyphen_variable.Output.Conflict)
+            /// Response when the visibility of the variable is not set to `selected`
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/actions/variables/{name}/repositories/{repository_id}/delete(actions/remove-selected-repo-from-org-variable)/responses/409`.
+            ///
+            /// HTTP response code: `409 conflict`.
+            public static var conflict: Self {
+                .conflict(.init())
+            }
             /// The associated value of the enum case if `self` is `.conflict`.
             ///
             /// - Throws: An error if `self` is not `.conflict`.
@@ -21042,6 +21291,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.actions_sol_delete_hyphen_artifact.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/artifacts/{artifact_id}/delete(actions/delete-artifact)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -21439,7 +21696,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/actions/caches/GET/query/key`.
                 public var key: Components.Parameters.actions_hyphen_cache_hyphen_key?
                 /// - Remark: Generated from `#/components/parameters/actions-cache-list-sort`.
-                @frozen public enum actions_hyphen_cache_hyphen_list_hyphen_sort: String, Codable, Hashable, Sendable {
+                @frozen public enum actions_hyphen_cache_hyphen_list_hyphen_sort: String, Codable, Hashable, Sendable, CaseIterable {
                     case created_at = "created_at"
                     case last_accessed_at = "last_accessed_at"
                     case size_in_bytes = "size_in_bytes"
@@ -21449,7 +21706,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/actions/caches/GET/query/sort`.
                 public var sort: Components.Parameters.actions_hyphen_cache_hyphen_list_hyphen_sort?
                 /// - Remark: Generated from `#/components/parameters/direction`.
-                @frozen public enum direction: String, Codable, Hashable, Sendable {
+                @frozen public enum direction: String, Codable, Hashable, Sendable, CaseIterable {
                     case asc = "asc"
                     case desc = "desc"
                 }
@@ -21844,6 +22101,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.actions_sol_delete_hyphen_actions_hyphen_cache_hyphen_by_hyphen_id.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/caches/{cache_id}/delete(actions/delete-actions-cache-by-id)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -23435,6 +23700,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.actions_sol_set_hyphen_github_hyphen_actions_hyphen_permissions_hyphen_repository.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/permissions/put(actions/set-github-actions-permissions-repository)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -23670,6 +23943,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.actions_sol_set_hyphen_workflow_hyphen_access_hyphen_to_hyphen_repository.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/permissions/access/put(actions/set-workflow-access-to-repository)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -23901,6 +24182,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.actions_sol_set_hyphen_allowed_hyphen_actions_hyphen_repository.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/permissions/selected-actions/put(actions/set-allowed-actions-repository)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -24136,6 +24425,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.actions_sol_set_hyphen_github_hyphen_actions_hyphen_default_hyphen_workflow_hyphen_permissions_hyphen_repository.Output.NoContent)
+            /// Success response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/permissions/workflow/put(actions/set-github-actions-default-workflow-permissions-repository)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -24163,6 +24460,14 @@ public enum Operations {
             ///
             /// HTTP response code: `409 conflict`.
             case conflict(Operations.actions_sol_set_hyphen_github_hyphen_actions_hyphen_default_hyphen_workflow_hyphen_permissions_hyphen_repository.Output.Conflict)
+            /// Conflict response when changing a setting is prevented by the owning organization
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/permissions/workflow/put(actions/set-github-actions-default-workflow-permissions-repository)/responses/409`.
+            ///
+            /// HTTP response code: `409 conflict`.
+            public static var conflict: Self {
+                .conflict(.init())
+            }
             /// The associated value of the enum case if `self` is `.conflict`.
             ///
             /// - Throws: An error if `self` is not `.conflict`.
@@ -25307,6 +25612,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.actions_sol_delete_hyphen_self_hyphen_hosted_hyphen_runner_hyphen_from_hyphen_repo.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runners/{runner_id}/delete(actions/delete-self-hosted-runner-from-repo)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -26253,7 +26566,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/actions/runs/GET/query/event`.
                 public var event: Components.Parameters.event?
                 /// - Remark: Generated from `#/components/parameters/workflow-run-status`.
-                @frozen public enum workflow_hyphen_run_hyphen_status: String, Codable, Hashable, Sendable {
+                @frozen public enum workflow_hyphen_run_hyphen_status: String, Codable, Hashable, Sendable, CaseIterable {
                     case completed = "completed"
                     case action_required = "action_required"
                     case cancelled = "cancelled"
@@ -26721,6 +27034,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.actions_sol_delete_hyphen_workflow_hyphen_run.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runs/{run_id}/delete(actions/delete-workflow-run)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -28101,19 +28422,19 @@ public enum Operations {
                     public init(from decoder: any Decoder) throws {
                         var errors: [any Error] = []
                         do {
-                            value1 = try .init(from: decoder)
+                            self.value1 = try .init(from: decoder)
                         } catch {
                             errors.append(error)
                         }
                         do {
-                            value2 = try .init(from: decoder)
+                            self.value2 = try .init(from: decoder)
                         } catch {
                             errors.append(error)
                         }
                         try Swift.DecodingError.verifyAtLeastOneSchemaIsNotNil(
                             [
-                                value1,
-                                value2
+                                self.value1,
+                                self.value2
                             ],
                             type: Self.self,
                             codingPath: decoder.codingPath,
@@ -28121,8 +28442,8 @@ public enum Operations {
                         )
                     }
                     public func encode(to encoder: any Encoder) throws {
-                        try value1?.encode(to: encoder)
-                        try value2?.encode(to: encoder)
+                        try self.value1?.encode(to: encoder)
+                        try self.value2?.encode(to: encoder)
                     }
                 }
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/actions/runs/{run_id}/deployment_protection_rule/POST/requestBody/content/application\/json`.
@@ -28153,6 +28474,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.actions_sol_review_hyphen_custom_hyphen_gates_hyphen_for_hyphen_run.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runs/{run_id}/deployment_protection_rule/post(actions/review-custom-gates-for-run)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -28398,7 +28727,7 @@ public enum Operations {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/actions/runs/{run_id}/jobs/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/actions/runs/{run_id}/jobs/GET/query/filter`.
-                @frozen public enum filterPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum filterPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case latest = "latest"
                     case all = "all"
                 }
@@ -28768,6 +29097,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.actions_sol_delete_hyphen_workflow_hyphen_run_hyphen_logs.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/runs/{run_id}/logs/delete(actions/delete-workflow-run-logs)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -29081,7 +29418,7 @@ public enum Operations {
                     /// Whether to approve or reject deployment to the specified environments.
                     ///
                     /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/actions/runs/{run_id}/pending_deployments/POST/requestBody/json/state`.
-                    @frozen public enum statePayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum statePayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case approved = "approved"
                         case rejected = "rejected"
                     }
@@ -30405,6 +30742,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.actions_sol_create_hyphen_or_hyphen_update_hyphen_repo_hyphen_secret.Output.NoContent)
+            /// Response when updating a secret
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/secrets/{secret_name}/put(actions/create-or-update-repo-secret)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -30516,6 +30861,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.actions_sol_delete_hyphen_repo_hyphen_secret.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/secrets/{secret_name}/delete(actions/delete-repo-secret)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -31187,6 +31540,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.actions_sol_update_hyphen_repo_hyphen_variable.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/variables/{name}/patch(actions/update-repo-variable)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -31273,6 +31634,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.actions_sol_delete_hyphen_repo_hyphen_variable.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/variables/{name}/delete(actions/delete-repo-variable)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -31794,6 +32163,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.actions_sol_disable_hyphen_workflow.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/workflows/{workflow_id}/disable/put(actions/disable-workflow)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -31973,6 +32350,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.actions_sol_create_hyphen_workflow_hyphen_dispatch.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/workflows/{workflow_id}/dispatches/post(actions/create-workflow-dispatch)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -32092,6 +32477,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.actions_sol_enable_hyphen_workflow.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/actions/workflows/{workflow_id}/enable/put(actions/enable-workflow)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -32211,7 +32604,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/actions/workflows/{workflow_id}/runs/GET/query/event`.
                 public var event: Components.Parameters.event?
                 /// - Remark: Generated from `#/components/parameters/workflow-run-status`.
-                @frozen public enum workflow_hyphen_run_hyphen_status: String, Codable, Hashable, Sendable {
+                @frozen public enum workflow_hyphen_run_hyphen_status: String, Codable, Hashable, Sendable, CaseIterable {
                     case completed = "completed"
                     case action_required = "action_required"
                     case cancelled = "cancelled"
@@ -33347,6 +33740,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.actions_sol_create_hyphen_or_hyphen_update_hyphen_environment_hyphen_secret.Output.NoContent)
+            /// Response when updating a secret
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/secrets/{secret_name}/put(actions/create-or-update-environment-secret)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -33465,6 +33866,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.actions_sol_delete_hyphen_environment_hyphen_secret.Output.NoContent)
+            /// Default response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/secrets/{secret_name}/delete(actions/delete-environment-secret)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -34164,6 +34573,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.actions_sol_update_hyphen_environment_hyphen_variable.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/variables/{name}/patch(actions/update-environment-variable)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -34257,6 +34674,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.actions_sol_delete_hyphen_environment_hyphen_variable.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/environments/{environment_name}/variables/{name}/delete(actions/delete-environment-variable)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
