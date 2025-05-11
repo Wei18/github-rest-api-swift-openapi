@@ -671,6 +671,15 @@ extension APIProtocol {
 
 /// Server URLs defined in the OpenAPI document.
 public enum Servers {
+    public enum Server1 {
+        public static func url() throws -> Foundation.URL {
+            try Foundation.URL(
+                validatingOpenAPIServerURL: "https://api.github.com",
+                variables: []
+            )
+        }
+    }
+    @available(*, deprecated, renamed: "Servers.Server1.url")
     public static func server1() throws -> Foundation.URL {
         try Foundation.URL(
             validatingOpenAPIServerURL: "https://api.github.com",
@@ -929,7 +938,7 @@ public enum Components {
             /// The type of the code security configuration.
             ///
             /// - Remark: Generated from `#/components/schemas/code-security-configuration/target_type`.
-            @frozen public enum target_typePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum target_typePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case global = "global"
                 case organization = "organization"
                 case enterprise = "enterprise"
@@ -945,7 +954,7 @@ public enum Components {
             /// The enablement status of GitHub Advanced Security
             ///
             /// - Remark: Generated from `#/components/schemas/code-security-configuration/advanced_security`.
-            @frozen public enum advanced_securityPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum advanced_securityPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case enabled = "enabled"
                 case disabled = "disabled"
                 case code_security = "code_security"
@@ -958,7 +967,7 @@ public enum Components {
             /// The enablement status of Dependency Graph
             ///
             /// - Remark: Generated from `#/components/schemas/code-security-configuration/dependency_graph`.
-            @frozen public enum dependency_graphPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum dependency_graphPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case enabled = "enabled"
                 case disabled = "disabled"
                 case not_set = "not_set"
@@ -970,7 +979,7 @@ public enum Components {
             /// The enablement status of Automatic dependency submission
             ///
             /// - Remark: Generated from `#/components/schemas/code-security-configuration/dependency_graph_autosubmit_action`.
-            @frozen public enum dependency_graph_autosubmit_actionPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum dependency_graph_autosubmit_actionPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case enabled = "enabled"
                 case disabled = "disabled"
                 case not_set = "not_set"
@@ -1005,7 +1014,7 @@ public enum Components {
             /// The enablement status of Dependabot alerts
             ///
             /// - Remark: Generated from `#/components/schemas/code-security-configuration/dependabot_alerts`.
-            @frozen public enum dependabot_alertsPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum dependabot_alertsPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case enabled = "enabled"
                 case disabled = "disabled"
                 case not_set = "not_set"
@@ -1017,7 +1026,7 @@ public enum Components {
             /// The enablement status of Dependabot security updates
             ///
             /// - Remark: Generated from `#/components/schemas/code-security-configuration/dependabot_security_updates`.
-            @frozen public enum dependabot_security_updatesPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum dependabot_security_updatesPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case enabled = "enabled"
                 case disabled = "disabled"
                 case not_set = "not_set"
@@ -1029,7 +1038,7 @@ public enum Components {
             /// The enablement status of code scanning default setup
             ///
             /// - Remark: Generated from `#/components/schemas/code-security-configuration/code_scanning_default_setup`.
-            @frozen public enum code_scanning_default_setupPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum code_scanning_default_setupPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case enabled = "enabled"
                 case disabled = "disabled"
                 case not_set = "not_set"
@@ -1045,7 +1054,7 @@ public enum Components {
                 /// Whether to use labeled runners or standard GitHub runners.
                 ///
                 /// - Remark: Generated from `#/components/schemas/code-security-configuration/code_scanning_default_setup_options/runner_type`.
-                @frozen public enum runner_typePayload: String, Codable, Hashable, Sendable {
+                @frozen public enum runner_typePayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case standard = "standard"
                     case labeled = "labeled"
                     case not_set = "not_set"
@@ -1082,7 +1091,7 @@ public enum Components {
             /// The enablement status of code scanning delegated alert dismissal
             ///
             /// - Remark: Generated from `#/components/schemas/code-security-configuration/code_scanning_delegated_alert_dismissal`.
-            @frozen public enum code_scanning_delegated_alert_dismissalPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum code_scanning_delegated_alert_dismissalPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case enabled = "enabled"
                 case disabled = "disabled"
                 case not_set = "not_set"
@@ -1094,7 +1103,7 @@ public enum Components {
             /// The enablement status of secret scanning
             ///
             /// - Remark: Generated from `#/components/schemas/code-security-configuration/secret_scanning`.
-            @frozen public enum secret_scanningPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum secret_scanningPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case enabled = "enabled"
                 case disabled = "disabled"
                 case not_set = "not_set"
@@ -1106,7 +1115,7 @@ public enum Components {
             /// The enablement status of secret scanning push protection
             ///
             /// - Remark: Generated from `#/components/schemas/code-security-configuration/secret_scanning_push_protection`.
-            @frozen public enum secret_scanning_push_protectionPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum secret_scanning_push_protectionPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case enabled = "enabled"
                 case disabled = "disabled"
                 case not_set = "not_set"
@@ -1118,7 +1127,7 @@ public enum Components {
             /// The enablement status of secret scanning delegated bypass
             ///
             /// - Remark: Generated from `#/components/schemas/code-security-configuration/secret_scanning_delegated_bypass`.
-            @frozen public enum secret_scanning_delegated_bypassPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum secret_scanning_delegated_bypassPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case enabled = "enabled"
                 case disabled = "disabled"
                 case not_set = "not_set"
@@ -1140,7 +1149,7 @@ public enum Components {
                     /// The type of the bypass reviewer
                     ///
                     /// - Remark: Generated from `#/components/schemas/code-security-configuration/secret_scanning_delegated_bypass_options/reviewersPayload/reviewer_type`.
-                    @frozen public enum reviewer_typePayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum reviewer_typePayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case TEAM = "TEAM"
                         case ROLE = "ROLE"
                     }
@@ -1191,7 +1200,7 @@ public enum Components {
             /// The enablement status of secret scanning validity checks
             ///
             /// - Remark: Generated from `#/components/schemas/code-security-configuration/secret_scanning_validity_checks`.
-            @frozen public enum secret_scanning_validity_checksPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum secret_scanning_validity_checksPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case enabled = "enabled"
                 case disabled = "disabled"
                 case not_set = "not_set"
@@ -1203,7 +1212,7 @@ public enum Components {
             /// The enablement status of secret scanning non-provider patterns
             ///
             /// - Remark: Generated from `#/components/schemas/code-security-configuration/secret_scanning_non_provider_patterns`.
-            @frozen public enum secret_scanning_non_provider_patternsPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum secret_scanning_non_provider_patternsPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case enabled = "enabled"
                 case disabled = "disabled"
                 case not_set = "not_set"
@@ -1215,7 +1224,7 @@ public enum Components {
             /// The enablement status of Copilot secret scanning
             ///
             /// - Remark: Generated from `#/components/schemas/code-security-configuration/secret_scanning_generic_secrets`.
-            @frozen public enum secret_scanning_generic_secretsPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum secret_scanning_generic_secretsPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case enabled = "enabled"
                 case disabled = "disabled"
                 case not_set = "not_set"
@@ -1227,7 +1236,7 @@ public enum Components {
             /// The enablement status of secret scanning delegated alert dismissal
             ///
             /// - Remark: Generated from `#/components/schemas/code-security-configuration/secret_scanning_delegated_alert_dismissal`.
-            @frozen public enum secret_scanning_delegated_alert_dismissalPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum secret_scanning_delegated_alert_dismissalPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case enabled = "enabled"
                 case disabled = "disabled"
                 case not_set = "not_set"
@@ -1239,7 +1248,7 @@ public enum Components {
             /// The enablement status of private vulnerability reporting
             ///
             /// - Remark: Generated from `#/components/schemas/code-security-configuration/private_vulnerability_reporting`.
-            @frozen public enum private_vulnerability_reportingPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum private_vulnerability_reportingPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case enabled = "enabled"
                 case disabled = "disabled"
                 case not_set = "not_set"
@@ -1251,7 +1260,7 @@ public enum Components {
             /// The enforcement status for a security configuration
             ///
             /// - Remark: Generated from `#/components/schemas/code-security-configuration/enforcement`.
-            @frozen public enum enforcementPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum enforcementPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case enforced = "enforced"
                 case unenforced = "unenforced"
             }
@@ -1395,7 +1404,7 @@ public enum Components {
             /// Whether to use labeled runners or standard GitHub runners.
             ///
             /// - Remark: Generated from `#/components/schemas/code-scanning-default-setup-options/runner_type`.
-            @frozen public enum runner_typePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum runner_typePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case standard = "standard"
                 case labeled = "labeled"
                 case not_set = "not_set"
@@ -1840,7 +1849,7 @@ public enum Components {
             /// The attachment status of the code security configuration on the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/code-security-configuration-repositories/status`.
-            @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case attached = "attached"
                 case attaching = "attaching"
                 case detached = "detached"
@@ -1880,7 +1889,7 @@ public enum Components {
             /// The attachment status of the code security configuration on the repository.
             ///
             /// - Remark: Generated from `#/components/schemas/code-security-configuration-for-repository/status`.
-            @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case attached = "attached"
                 case attaching = "attaching"
                 case detached = "detached"
@@ -2399,7 +2408,7 @@ public enum Operations {
                     /// The enablement status of GitHub Advanced Security features. `enabled` will enable both Code Security and Secret Protection features.
                     ///
                     /// - Remark: Generated from `#/paths/enterprises/{enterprise}/code-security/configurations/POST/requestBody/json/advanced_security`.
-                    @frozen public enum advanced_securityPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum advanced_securityPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case enabled = "enabled"
                         case disabled = "disabled"
                         case code_security = "code_security"
@@ -2412,7 +2421,7 @@ public enum Operations {
                     /// The enablement status of Dependency Graph
                     ///
                     /// - Remark: Generated from `#/paths/enterprises/{enterprise}/code-security/configurations/POST/requestBody/json/dependency_graph`.
-                    @frozen public enum dependency_graphPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum dependency_graphPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case enabled = "enabled"
                         case disabled = "disabled"
                         case not_set = "not_set"
@@ -2424,7 +2433,7 @@ public enum Operations {
                     /// The enablement status of Automatic dependency submission
                     ///
                     /// - Remark: Generated from `#/paths/enterprises/{enterprise}/code-security/configurations/POST/requestBody/json/dependency_graph_autosubmit_action`.
-                    @frozen public enum dependency_graph_autosubmit_actionPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum dependency_graph_autosubmit_actionPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case enabled = "enabled"
                         case disabled = "disabled"
                         case not_set = "not_set"
@@ -2459,7 +2468,7 @@ public enum Operations {
                     /// The enablement status of Dependabot alerts
                     ///
                     /// - Remark: Generated from `#/paths/enterprises/{enterprise}/code-security/configurations/POST/requestBody/json/dependabot_alerts`.
-                    @frozen public enum dependabot_alertsPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum dependabot_alertsPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case enabled = "enabled"
                         case disabled = "disabled"
                         case not_set = "not_set"
@@ -2471,7 +2480,7 @@ public enum Operations {
                     /// The enablement status of Dependabot security updates
                     ///
                     /// - Remark: Generated from `#/paths/enterprises/{enterprise}/code-security/configurations/POST/requestBody/json/dependabot_security_updates`.
-                    @frozen public enum dependabot_security_updatesPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum dependabot_security_updatesPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case enabled = "enabled"
                         case disabled = "disabled"
                         case not_set = "not_set"
@@ -2483,7 +2492,7 @@ public enum Operations {
                     /// The enablement status of code scanning default setup
                     ///
                     /// - Remark: Generated from `#/paths/enterprises/{enterprise}/code-security/configurations/POST/requestBody/json/code_scanning_default_setup`.
-                    @frozen public enum code_scanning_default_setupPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum code_scanning_default_setupPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case enabled = "enabled"
                         case disabled = "disabled"
                         case not_set = "not_set"
@@ -2497,7 +2506,7 @@ public enum Operations {
                     /// The enablement status of code scanning delegated alert dismissal
                     ///
                     /// - Remark: Generated from `#/paths/enterprises/{enterprise}/code-security/configurations/POST/requestBody/json/code_scanning_delegated_alert_dismissal`.
-                    @frozen public enum code_scanning_delegated_alert_dismissalPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum code_scanning_delegated_alert_dismissalPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case enabled = "enabled"
                         case disabled = "disabled"
                         case not_set = "not_set"
@@ -2509,7 +2518,7 @@ public enum Operations {
                     /// The enablement status of secret scanning
                     ///
                     /// - Remark: Generated from `#/paths/enterprises/{enterprise}/code-security/configurations/POST/requestBody/json/secret_scanning`.
-                    @frozen public enum secret_scanningPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum secret_scanningPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case enabled = "enabled"
                         case disabled = "disabled"
                         case not_set = "not_set"
@@ -2521,7 +2530,7 @@ public enum Operations {
                     /// The enablement status of secret scanning push protection
                     ///
                     /// - Remark: Generated from `#/paths/enterprises/{enterprise}/code-security/configurations/POST/requestBody/json/secret_scanning_push_protection`.
-                    @frozen public enum secret_scanning_push_protectionPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum secret_scanning_push_protectionPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case enabled = "enabled"
                         case disabled = "disabled"
                         case not_set = "not_set"
@@ -2533,7 +2542,7 @@ public enum Operations {
                     /// The enablement status of secret scanning validity checks
                     ///
                     /// - Remark: Generated from `#/paths/enterprises/{enterprise}/code-security/configurations/POST/requestBody/json/secret_scanning_validity_checks`.
-                    @frozen public enum secret_scanning_validity_checksPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum secret_scanning_validity_checksPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case enabled = "enabled"
                         case disabled = "disabled"
                         case not_set = "not_set"
@@ -2545,7 +2554,7 @@ public enum Operations {
                     /// The enablement status of secret scanning non provider patterns
                     ///
                     /// - Remark: Generated from `#/paths/enterprises/{enterprise}/code-security/configurations/POST/requestBody/json/secret_scanning_non_provider_patterns`.
-                    @frozen public enum secret_scanning_non_provider_patternsPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum secret_scanning_non_provider_patternsPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case enabled = "enabled"
                         case disabled = "disabled"
                         case not_set = "not_set"
@@ -2557,7 +2566,7 @@ public enum Operations {
                     /// The enablement status of Copilot secret scanning
                     ///
                     /// - Remark: Generated from `#/paths/enterprises/{enterprise}/code-security/configurations/POST/requestBody/json/secret_scanning_generic_secrets`.
-                    @frozen public enum secret_scanning_generic_secretsPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum secret_scanning_generic_secretsPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case enabled = "enabled"
                         case disabled = "disabled"
                         case not_set = "not_set"
@@ -2569,7 +2578,7 @@ public enum Operations {
                     /// The enablement status of secret scanning delegated alert dismissal
                     ///
                     /// - Remark: Generated from `#/paths/enterprises/{enterprise}/code-security/configurations/POST/requestBody/json/secret_scanning_delegated_alert_dismissal`.
-                    @frozen public enum secret_scanning_delegated_alert_dismissalPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum secret_scanning_delegated_alert_dismissalPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case enabled = "enabled"
                         case disabled = "disabled"
                         case not_set = "not_set"
@@ -2581,7 +2590,7 @@ public enum Operations {
                     /// The enablement status of private vulnerability reporting
                     ///
                     /// - Remark: Generated from `#/paths/enterprises/{enterprise}/code-security/configurations/POST/requestBody/json/private_vulnerability_reporting`.
-                    @frozen public enum private_vulnerability_reportingPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum private_vulnerability_reportingPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case enabled = "enabled"
                         case disabled = "disabled"
                         case not_set = "not_set"
@@ -2593,7 +2602,7 @@ public enum Operations {
                     /// The enforcement status for a security configuration
                     ///
                     /// - Remark: Generated from `#/paths/enterprises/{enterprise}/code-security/configurations/POST/requestBody/json/enforcement`.
-                    @frozen public enum enforcementPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum enforcementPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case enforced = "enforced"
                         case unenforced = "unenforced"
                     }
@@ -2687,79 +2696,79 @@ public enum Operations {
                     }
                     public init(from decoder: any Decoder) throws {
                         let container = try decoder.container(keyedBy: CodingKeys.self)
-                        name = try container.decode(
+                        self.name = try container.decode(
                             Swift.String.self,
                             forKey: .name
                         )
-                        description = try container.decode(
+                        self.description = try container.decode(
                             Swift.String.self,
                             forKey: .description
                         )
-                        advanced_security = try container.decodeIfPresent(
+                        self.advanced_security = try container.decodeIfPresent(
                             Operations.code_hyphen_security_sol_create_hyphen_configuration_hyphen_for_hyphen_enterprise.Input.Body.jsonPayload.advanced_securityPayload.self,
                             forKey: .advanced_security
                         )
-                        dependency_graph = try container.decodeIfPresent(
+                        self.dependency_graph = try container.decodeIfPresent(
                             Operations.code_hyphen_security_sol_create_hyphen_configuration_hyphen_for_hyphen_enterprise.Input.Body.jsonPayload.dependency_graphPayload.self,
                             forKey: .dependency_graph
                         )
-                        dependency_graph_autosubmit_action = try container.decodeIfPresent(
+                        self.dependency_graph_autosubmit_action = try container.decodeIfPresent(
                             Operations.code_hyphen_security_sol_create_hyphen_configuration_hyphen_for_hyphen_enterprise.Input.Body.jsonPayload.dependency_graph_autosubmit_actionPayload.self,
                             forKey: .dependency_graph_autosubmit_action
                         )
-                        dependency_graph_autosubmit_action_options = try container.decodeIfPresent(
+                        self.dependency_graph_autosubmit_action_options = try container.decodeIfPresent(
                             Operations.code_hyphen_security_sol_create_hyphen_configuration_hyphen_for_hyphen_enterprise.Input.Body.jsonPayload.dependency_graph_autosubmit_action_optionsPayload.self,
                             forKey: .dependency_graph_autosubmit_action_options
                         )
-                        dependabot_alerts = try container.decodeIfPresent(
+                        self.dependabot_alerts = try container.decodeIfPresent(
                             Operations.code_hyphen_security_sol_create_hyphen_configuration_hyphen_for_hyphen_enterprise.Input.Body.jsonPayload.dependabot_alertsPayload.self,
                             forKey: .dependabot_alerts
                         )
-                        dependabot_security_updates = try container.decodeIfPresent(
+                        self.dependabot_security_updates = try container.decodeIfPresent(
                             Operations.code_hyphen_security_sol_create_hyphen_configuration_hyphen_for_hyphen_enterprise.Input.Body.jsonPayload.dependabot_security_updatesPayload.self,
                             forKey: .dependabot_security_updates
                         )
-                        code_scanning_default_setup = try container.decodeIfPresent(
+                        self.code_scanning_default_setup = try container.decodeIfPresent(
                             Operations.code_hyphen_security_sol_create_hyphen_configuration_hyphen_for_hyphen_enterprise.Input.Body.jsonPayload.code_scanning_default_setupPayload.self,
                             forKey: .code_scanning_default_setup
                         )
-                        code_scanning_default_setup_options = try container.decodeIfPresent(
+                        self.code_scanning_default_setup_options = try container.decodeIfPresent(
                             Components.Schemas.code_hyphen_scanning_hyphen_default_hyphen_setup_hyphen_options.self,
                             forKey: .code_scanning_default_setup_options
                         )
-                        code_scanning_delegated_alert_dismissal = try container.decodeIfPresent(
+                        self.code_scanning_delegated_alert_dismissal = try container.decodeIfPresent(
                             Operations.code_hyphen_security_sol_create_hyphen_configuration_hyphen_for_hyphen_enterprise.Input.Body.jsonPayload.code_scanning_delegated_alert_dismissalPayload.self,
                             forKey: .code_scanning_delegated_alert_dismissal
                         )
-                        secret_scanning = try container.decodeIfPresent(
+                        self.secret_scanning = try container.decodeIfPresent(
                             Operations.code_hyphen_security_sol_create_hyphen_configuration_hyphen_for_hyphen_enterprise.Input.Body.jsonPayload.secret_scanningPayload.self,
                             forKey: .secret_scanning
                         )
-                        secret_scanning_push_protection = try container.decodeIfPresent(
+                        self.secret_scanning_push_protection = try container.decodeIfPresent(
                             Operations.code_hyphen_security_sol_create_hyphen_configuration_hyphen_for_hyphen_enterprise.Input.Body.jsonPayload.secret_scanning_push_protectionPayload.self,
                             forKey: .secret_scanning_push_protection
                         )
-                        secret_scanning_validity_checks = try container.decodeIfPresent(
+                        self.secret_scanning_validity_checks = try container.decodeIfPresent(
                             Operations.code_hyphen_security_sol_create_hyphen_configuration_hyphen_for_hyphen_enterprise.Input.Body.jsonPayload.secret_scanning_validity_checksPayload.self,
                             forKey: .secret_scanning_validity_checks
                         )
-                        secret_scanning_non_provider_patterns = try container.decodeIfPresent(
+                        self.secret_scanning_non_provider_patterns = try container.decodeIfPresent(
                             Operations.code_hyphen_security_sol_create_hyphen_configuration_hyphen_for_hyphen_enterprise.Input.Body.jsonPayload.secret_scanning_non_provider_patternsPayload.self,
                             forKey: .secret_scanning_non_provider_patterns
                         )
-                        secret_scanning_generic_secrets = try container.decodeIfPresent(
+                        self.secret_scanning_generic_secrets = try container.decodeIfPresent(
                             Operations.code_hyphen_security_sol_create_hyphen_configuration_hyphen_for_hyphen_enterprise.Input.Body.jsonPayload.secret_scanning_generic_secretsPayload.self,
                             forKey: .secret_scanning_generic_secrets
                         )
-                        secret_scanning_delegated_alert_dismissal = try container.decodeIfPresent(
+                        self.secret_scanning_delegated_alert_dismissal = try container.decodeIfPresent(
                             Operations.code_hyphen_security_sol_create_hyphen_configuration_hyphen_for_hyphen_enterprise.Input.Body.jsonPayload.secret_scanning_delegated_alert_dismissalPayload.self,
                             forKey: .secret_scanning_delegated_alert_dismissal
                         )
-                        private_vulnerability_reporting = try container.decodeIfPresent(
+                        self.private_vulnerability_reporting = try container.decodeIfPresent(
                             Operations.code_hyphen_security_sol_create_hyphen_configuration_hyphen_for_hyphen_enterprise.Input.Body.jsonPayload.private_vulnerability_reportingPayload.self,
                             forKey: .private_vulnerability_reporting
                         )
-                        enforcement = try container.decodeIfPresent(
+                        self.enforcement = try container.decodeIfPresent(
                             Operations.code_hyphen_security_sol_create_hyphen_configuration_hyphen_for_hyphen_enterprise.Input.Body.jsonPayload.enforcementPayload.self,
                             forKey: .enforcement
                         )
@@ -3220,6 +3229,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//enterprises/{enterprise}/code-security/configurations/{configuration_id}/get(code-security/get-single-configuration-for-enterprise)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -3378,7 +3395,7 @@ public enum Operations {
                     /// The enablement status of GitHub Advanced Security features. `enabled` will enable both Code Security and Secret Protection features.
                     ///
                     /// - Remark: Generated from `#/paths/enterprises/{enterprise}/code-security/configurations/{configuration_id}/PATCH/requestBody/json/advanced_security`.
-                    @frozen public enum advanced_securityPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum advanced_securityPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case enabled = "enabled"
                         case disabled = "disabled"
                         case code_security = "code_security"
@@ -3391,7 +3408,7 @@ public enum Operations {
                     /// The enablement status of Dependency Graph
                     ///
                     /// - Remark: Generated from `#/paths/enterprises/{enterprise}/code-security/configurations/{configuration_id}/PATCH/requestBody/json/dependency_graph`.
-                    @frozen public enum dependency_graphPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum dependency_graphPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case enabled = "enabled"
                         case disabled = "disabled"
                         case not_set = "not_set"
@@ -3403,7 +3420,7 @@ public enum Operations {
                     /// The enablement status of Automatic dependency submission
                     ///
                     /// - Remark: Generated from `#/paths/enterprises/{enterprise}/code-security/configurations/{configuration_id}/PATCH/requestBody/json/dependency_graph_autosubmit_action`.
-                    @frozen public enum dependency_graph_autosubmit_actionPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum dependency_graph_autosubmit_actionPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case enabled = "enabled"
                         case disabled = "disabled"
                         case not_set = "not_set"
@@ -3438,7 +3455,7 @@ public enum Operations {
                     /// The enablement status of Dependabot alerts
                     ///
                     /// - Remark: Generated from `#/paths/enterprises/{enterprise}/code-security/configurations/{configuration_id}/PATCH/requestBody/json/dependabot_alerts`.
-                    @frozen public enum dependabot_alertsPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum dependabot_alertsPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case enabled = "enabled"
                         case disabled = "disabled"
                         case not_set = "not_set"
@@ -3450,7 +3467,7 @@ public enum Operations {
                     /// The enablement status of Dependabot security updates
                     ///
                     /// - Remark: Generated from `#/paths/enterprises/{enterprise}/code-security/configurations/{configuration_id}/PATCH/requestBody/json/dependabot_security_updates`.
-                    @frozen public enum dependabot_security_updatesPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum dependabot_security_updatesPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case enabled = "enabled"
                         case disabled = "disabled"
                         case not_set = "not_set"
@@ -3462,7 +3479,7 @@ public enum Operations {
                     /// The enablement status of code scanning default setup
                     ///
                     /// - Remark: Generated from `#/paths/enterprises/{enterprise}/code-security/configurations/{configuration_id}/PATCH/requestBody/json/code_scanning_default_setup`.
-                    @frozen public enum code_scanning_default_setupPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum code_scanning_default_setupPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case enabled = "enabled"
                         case disabled = "disabled"
                         case not_set = "not_set"
@@ -3476,7 +3493,7 @@ public enum Operations {
                     /// The enablement status of code scanning delegated alert dismissal
                     ///
                     /// - Remark: Generated from `#/paths/enterprises/{enterprise}/code-security/configurations/{configuration_id}/PATCH/requestBody/json/code_scanning_delegated_alert_dismissal`.
-                    @frozen public enum code_scanning_delegated_alert_dismissalPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum code_scanning_delegated_alert_dismissalPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case enabled = "enabled"
                         case disabled = "disabled"
                         case not_set = "not_set"
@@ -3488,7 +3505,7 @@ public enum Operations {
                     /// The enablement status of secret scanning
                     ///
                     /// - Remark: Generated from `#/paths/enterprises/{enterprise}/code-security/configurations/{configuration_id}/PATCH/requestBody/json/secret_scanning`.
-                    @frozen public enum secret_scanningPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum secret_scanningPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case enabled = "enabled"
                         case disabled = "disabled"
                         case not_set = "not_set"
@@ -3500,7 +3517,7 @@ public enum Operations {
                     /// The enablement status of secret scanning push protection
                     ///
                     /// - Remark: Generated from `#/paths/enterprises/{enterprise}/code-security/configurations/{configuration_id}/PATCH/requestBody/json/secret_scanning_push_protection`.
-                    @frozen public enum secret_scanning_push_protectionPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum secret_scanning_push_protectionPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case enabled = "enabled"
                         case disabled = "disabled"
                         case not_set = "not_set"
@@ -3512,7 +3529,7 @@ public enum Operations {
                     /// The enablement status of secret scanning validity checks
                     ///
                     /// - Remark: Generated from `#/paths/enterprises/{enterprise}/code-security/configurations/{configuration_id}/PATCH/requestBody/json/secret_scanning_validity_checks`.
-                    @frozen public enum secret_scanning_validity_checksPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum secret_scanning_validity_checksPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case enabled = "enabled"
                         case disabled = "disabled"
                         case not_set = "not_set"
@@ -3524,7 +3541,7 @@ public enum Operations {
                     /// The enablement status of secret scanning non-provider patterns
                     ///
                     /// - Remark: Generated from `#/paths/enterprises/{enterprise}/code-security/configurations/{configuration_id}/PATCH/requestBody/json/secret_scanning_non_provider_patterns`.
-                    @frozen public enum secret_scanning_non_provider_patternsPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum secret_scanning_non_provider_patternsPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case enabled = "enabled"
                         case disabled = "disabled"
                         case not_set = "not_set"
@@ -3536,7 +3553,7 @@ public enum Operations {
                     /// The enablement status of Copilot secret scanning
                     ///
                     /// - Remark: Generated from `#/paths/enterprises/{enterprise}/code-security/configurations/{configuration_id}/PATCH/requestBody/json/secret_scanning_generic_secrets`.
-                    @frozen public enum secret_scanning_generic_secretsPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum secret_scanning_generic_secretsPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case enabled = "enabled"
                         case disabled = "disabled"
                         case not_set = "not_set"
@@ -3548,7 +3565,7 @@ public enum Operations {
                     /// The enablement status of secret scanning delegated alert dismissal
                     ///
                     /// - Remark: Generated from `#/paths/enterprises/{enterprise}/code-security/configurations/{configuration_id}/PATCH/requestBody/json/secret_scanning_delegated_alert_dismissal`.
-                    @frozen public enum secret_scanning_delegated_alert_dismissalPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum secret_scanning_delegated_alert_dismissalPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case enabled = "enabled"
                         case disabled = "disabled"
                         case not_set = "not_set"
@@ -3560,7 +3577,7 @@ public enum Operations {
                     /// The enablement status of private vulnerability reporting
                     ///
                     /// - Remark: Generated from `#/paths/enterprises/{enterprise}/code-security/configurations/{configuration_id}/PATCH/requestBody/json/private_vulnerability_reporting`.
-                    @frozen public enum private_vulnerability_reportingPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum private_vulnerability_reportingPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case enabled = "enabled"
                         case disabled = "disabled"
                         case not_set = "not_set"
@@ -3572,7 +3589,7 @@ public enum Operations {
                     /// The enforcement status for a security configuration
                     ///
                     /// - Remark: Generated from `#/paths/enterprises/{enterprise}/code-security/configurations/{configuration_id}/PATCH/requestBody/json/enforcement`.
-                    @frozen public enum enforcementPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum enforcementPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case enforced = "enforced"
                         case unenforced = "unenforced"
                     }
@@ -3666,79 +3683,79 @@ public enum Operations {
                     }
                     public init(from decoder: any Decoder) throws {
                         let container = try decoder.container(keyedBy: CodingKeys.self)
-                        name = try container.decodeIfPresent(
+                        self.name = try container.decodeIfPresent(
                             Swift.String.self,
                             forKey: .name
                         )
-                        description = try container.decodeIfPresent(
+                        self.description = try container.decodeIfPresent(
                             Swift.String.self,
                             forKey: .description
                         )
-                        advanced_security = try container.decodeIfPresent(
+                        self.advanced_security = try container.decodeIfPresent(
                             Operations.code_hyphen_security_sol_update_hyphen_enterprise_hyphen_configuration.Input.Body.jsonPayload.advanced_securityPayload.self,
                             forKey: .advanced_security
                         )
-                        dependency_graph = try container.decodeIfPresent(
+                        self.dependency_graph = try container.decodeIfPresent(
                             Operations.code_hyphen_security_sol_update_hyphen_enterprise_hyphen_configuration.Input.Body.jsonPayload.dependency_graphPayload.self,
                             forKey: .dependency_graph
                         )
-                        dependency_graph_autosubmit_action = try container.decodeIfPresent(
+                        self.dependency_graph_autosubmit_action = try container.decodeIfPresent(
                             Operations.code_hyphen_security_sol_update_hyphen_enterprise_hyphen_configuration.Input.Body.jsonPayload.dependency_graph_autosubmit_actionPayload.self,
                             forKey: .dependency_graph_autosubmit_action
                         )
-                        dependency_graph_autosubmit_action_options = try container.decodeIfPresent(
+                        self.dependency_graph_autosubmit_action_options = try container.decodeIfPresent(
                             Operations.code_hyphen_security_sol_update_hyphen_enterprise_hyphen_configuration.Input.Body.jsonPayload.dependency_graph_autosubmit_action_optionsPayload.self,
                             forKey: .dependency_graph_autosubmit_action_options
                         )
-                        dependabot_alerts = try container.decodeIfPresent(
+                        self.dependabot_alerts = try container.decodeIfPresent(
                             Operations.code_hyphen_security_sol_update_hyphen_enterprise_hyphen_configuration.Input.Body.jsonPayload.dependabot_alertsPayload.self,
                             forKey: .dependabot_alerts
                         )
-                        dependabot_security_updates = try container.decodeIfPresent(
+                        self.dependabot_security_updates = try container.decodeIfPresent(
                             Operations.code_hyphen_security_sol_update_hyphen_enterprise_hyphen_configuration.Input.Body.jsonPayload.dependabot_security_updatesPayload.self,
                             forKey: .dependabot_security_updates
                         )
-                        code_scanning_default_setup = try container.decodeIfPresent(
+                        self.code_scanning_default_setup = try container.decodeIfPresent(
                             Operations.code_hyphen_security_sol_update_hyphen_enterprise_hyphen_configuration.Input.Body.jsonPayload.code_scanning_default_setupPayload.self,
                             forKey: .code_scanning_default_setup
                         )
-                        code_scanning_default_setup_options = try container.decodeIfPresent(
+                        self.code_scanning_default_setup_options = try container.decodeIfPresent(
                             Components.Schemas.code_hyphen_scanning_hyphen_default_hyphen_setup_hyphen_options.self,
                             forKey: .code_scanning_default_setup_options
                         )
-                        code_scanning_delegated_alert_dismissal = try container.decodeIfPresent(
+                        self.code_scanning_delegated_alert_dismissal = try container.decodeIfPresent(
                             Operations.code_hyphen_security_sol_update_hyphen_enterprise_hyphen_configuration.Input.Body.jsonPayload.code_scanning_delegated_alert_dismissalPayload.self,
                             forKey: .code_scanning_delegated_alert_dismissal
                         )
-                        secret_scanning = try container.decodeIfPresent(
+                        self.secret_scanning = try container.decodeIfPresent(
                             Operations.code_hyphen_security_sol_update_hyphen_enterprise_hyphen_configuration.Input.Body.jsonPayload.secret_scanningPayload.self,
                             forKey: .secret_scanning
                         )
-                        secret_scanning_push_protection = try container.decodeIfPresent(
+                        self.secret_scanning_push_protection = try container.decodeIfPresent(
                             Operations.code_hyphen_security_sol_update_hyphen_enterprise_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_push_protectionPayload.self,
                             forKey: .secret_scanning_push_protection
                         )
-                        secret_scanning_validity_checks = try container.decodeIfPresent(
+                        self.secret_scanning_validity_checks = try container.decodeIfPresent(
                             Operations.code_hyphen_security_sol_update_hyphen_enterprise_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_validity_checksPayload.self,
                             forKey: .secret_scanning_validity_checks
                         )
-                        secret_scanning_non_provider_patterns = try container.decodeIfPresent(
+                        self.secret_scanning_non_provider_patterns = try container.decodeIfPresent(
                             Operations.code_hyphen_security_sol_update_hyphen_enterprise_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_non_provider_patternsPayload.self,
                             forKey: .secret_scanning_non_provider_patterns
                         )
-                        secret_scanning_generic_secrets = try container.decodeIfPresent(
+                        self.secret_scanning_generic_secrets = try container.decodeIfPresent(
                             Operations.code_hyphen_security_sol_update_hyphen_enterprise_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_generic_secretsPayload.self,
                             forKey: .secret_scanning_generic_secrets
                         )
-                        secret_scanning_delegated_alert_dismissal = try container.decodeIfPresent(
+                        self.secret_scanning_delegated_alert_dismissal = try container.decodeIfPresent(
                             Operations.code_hyphen_security_sol_update_hyphen_enterprise_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_delegated_alert_dismissalPayload.self,
                             forKey: .secret_scanning_delegated_alert_dismissal
                         )
-                        private_vulnerability_reporting = try container.decodeIfPresent(
+                        self.private_vulnerability_reporting = try container.decodeIfPresent(
                             Operations.code_hyphen_security_sol_update_hyphen_enterprise_hyphen_configuration.Input.Body.jsonPayload.private_vulnerability_reportingPayload.self,
                             forKey: .private_vulnerability_reporting
                         )
-                        enforcement = try container.decodeIfPresent(
+                        self.enforcement = try container.decodeIfPresent(
                             Operations.code_hyphen_security_sol_update_hyphen_enterprise_hyphen_configuration.Input.Body.jsonPayload.enforcementPayload.self,
                             forKey: .enforcement
                         )
@@ -3843,6 +3860,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//enterprises/{enterprise}/code-security/configurations/{configuration_id}/patch(code-security/update-enterprise-configuration)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -4031,6 +4056,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Components.Responses.no_content)
+            /// A header with no content is returned.
+            ///
+            /// - Remark: Generated from `#/paths//enterprises/{enterprise}/code-security/configurations/{configuration_id}/delete(code-security/delete-configuration-for-enterprise)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -4235,7 +4268,7 @@ public enum Operations {
                     /// The type of repositories to attach the configuration to.
                     ///
                     /// - Remark: Generated from `#/paths/enterprises/{enterprise}/code-security/configurations/{configuration_id}/attach/POST/requestBody/json/scope`.
-                    @frozen public enum scopePayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum scopePayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case all = "all"
                         case all_without_configurations = "all_without_configurations"
                     }
@@ -4255,7 +4288,7 @@ public enum Operations {
                     }
                     public init(from decoder: any Decoder) throws {
                         let container = try decoder.container(keyedBy: CodingKeys.self)
-                        scope = try container.decode(
+                        self.scope = try container.decode(
                             Operations.code_hyphen_security_sol_attach_hyphen_enterprise_hyphen_configuration.Input.Body.jsonPayload.scopePayload.self,
                             forKey: .scope
                         )
@@ -4466,7 +4499,7 @@ public enum Operations {
                     /// Specify which types of repository this security configuration should be applied to by default.
                     ///
                     /// - Remark: Generated from `#/paths/enterprises/{enterprise}/code-security/configurations/{configuration_id}/defaults/PUT/requestBody/json/default_for_new_repos`.
-                    @frozen public enum default_for_new_reposPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum default_for_new_reposPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case all = "all"
                         case none = "none"
                         case private_and_internal = "private_and_internal"
@@ -4516,7 +4549,7 @@ public enum Operations {
                         /// Specifies which types of repository this security configuration is applied to by default.
                         ///
                         /// - Remark: Generated from `#/paths/enterprises/{enterprise}/code-security/configurations/{configuration_id}/defaults/PUT/responses/200/content/json/default_for_new_repos`.
-                        @frozen public enum default_for_new_reposPayload: String, Codable, Hashable, Sendable {
+                        @frozen public enum default_for_new_reposPayload: String, Codable, Hashable, Sendable, CaseIterable {
                             case all = "all"
                             case none = "none"
                             case private_and_internal = "private_and_internal"
@@ -4935,7 +4968,7 @@ public enum Operations {
             /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/GET/query/target_type`.
-                @frozen public enum target_typePayload: String, Codable, Hashable, Sendable {
+                @frozen public enum target_typePayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case global = "global"
                     case all = "all"
                 }
@@ -5187,7 +5220,7 @@ public enum Operations {
                     /// The enablement status of GitHub Advanced Security features. `enabled` will enable both Code Security and Secret Protection features.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/POST/requestBody/json/advanced_security`.
-                    @frozen public enum advanced_securityPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum advanced_securityPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case enabled = "enabled"
                         case disabled = "disabled"
                         case code_security = "code_security"
@@ -5200,7 +5233,7 @@ public enum Operations {
                     /// The enablement status of Dependency Graph
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/POST/requestBody/json/dependency_graph`.
-                    @frozen public enum dependency_graphPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum dependency_graphPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case enabled = "enabled"
                         case disabled = "disabled"
                         case not_set = "not_set"
@@ -5212,7 +5245,7 @@ public enum Operations {
                     /// The enablement status of Automatic dependency submission
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/POST/requestBody/json/dependency_graph_autosubmit_action`.
-                    @frozen public enum dependency_graph_autosubmit_actionPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum dependency_graph_autosubmit_actionPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case enabled = "enabled"
                         case disabled = "disabled"
                         case not_set = "not_set"
@@ -5247,7 +5280,7 @@ public enum Operations {
                     /// The enablement status of Dependabot alerts
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/POST/requestBody/json/dependabot_alerts`.
-                    @frozen public enum dependabot_alertsPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum dependabot_alertsPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case enabled = "enabled"
                         case disabled = "disabled"
                         case not_set = "not_set"
@@ -5259,7 +5292,7 @@ public enum Operations {
                     /// The enablement status of Dependabot security updates
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/POST/requestBody/json/dependabot_security_updates`.
-                    @frozen public enum dependabot_security_updatesPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum dependabot_security_updatesPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case enabled = "enabled"
                         case disabled = "disabled"
                         case not_set = "not_set"
@@ -5271,7 +5304,7 @@ public enum Operations {
                     /// The enablement status of code scanning default setup
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/POST/requestBody/json/code_scanning_default_setup`.
-                    @frozen public enum code_scanning_default_setupPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum code_scanning_default_setupPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case enabled = "enabled"
                         case disabled = "disabled"
                         case not_set = "not_set"
@@ -5285,7 +5318,7 @@ public enum Operations {
                     /// The enablement status of code scanning delegated alert dismissal
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/POST/requestBody/json/code_scanning_delegated_alert_dismissal`.
-                    @frozen public enum code_scanning_delegated_alert_dismissalPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum code_scanning_delegated_alert_dismissalPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case enabled = "enabled"
                         case disabled = "disabled"
                         case not_set = "not_set"
@@ -5297,7 +5330,7 @@ public enum Operations {
                     /// The enablement status of secret scanning
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/POST/requestBody/json/secret_scanning`.
-                    @frozen public enum secret_scanningPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum secret_scanningPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case enabled = "enabled"
                         case disabled = "disabled"
                         case not_set = "not_set"
@@ -5309,7 +5342,7 @@ public enum Operations {
                     /// The enablement status of secret scanning push protection
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/POST/requestBody/json/secret_scanning_push_protection`.
-                    @frozen public enum secret_scanning_push_protectionPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum secret_scanning_push_protectionPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case enabled = "enabled"
                         case disabled = "disabled"
                         case not_set = "not_set"
@@ -5321,7 +5354,7 @@ public enum Operations {
                     /// The enablement status of secret scanning delegated bypass
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/POST/requestBody/json/secret_scanning_delegated_bypass`.
-                    @frozen public enum secret_scanning_delegated_bypassPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum secret_scanning_delegated_bypassPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case enabled = "enabled"
                         case disabled = "disabled"
                         case not_set = "not_set"
@@ -5343,7 +5376,7 @@ public enum Operations {
                             /// The type of the bypass reviewer
                             ///
                             /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/POST/requestBody/json/secret_scanning_delegated_bypass_options/reviewersPayload/reviewer_type`.
-                            @frozen public enum reviewer_typePayload: String, Codable, Hashable, Sendable {
+                            @frozen public enum reviewer_typePayload: String, Codable, Hashable, Sendable, CaseIterable {
                                 case TEAM = "TEAM"
                                 case ROLE = "ROLE"
                             }
@@ -5394,7 +5427,7 @@ public enum Operations {
                     /// The enablement status of secret scanning validity checks
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/POST/requestBody/json/secret_scanning_validity_checks`.
-                    @frozen public enum secret_scanning_validity_checksPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum secret_scanning_validity_checksPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case enabled = "enabled"
                         case disabled = "disabled"
                         case not_set = "not_set"
@@ -5406,7 +5439,7 @@ public enum Operations {
                     /// The enablement status of secret scanning non provider patterns
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/POST/requestBody/json/secret_scanning_non_provider_patterns`.
-                    @frozen public enum secret_scanning_non_provider_patternsPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum secret_scanning_non_provider_patternsPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case enabled = "enabled"
                         case disabled = "disabled"
                         case not_set = "not_set"
@@ -5418,7 +5451,7 @@ public enum Operations {
                     /// The enablement status of Copilot secret scanning
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/POST/requestBody/json/secret_scanning_generic_secrets`.
-                    @frozen public enum secret_scanning_generic_secretsPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum secret_scanning_generic_secretsPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case enabled = "enabled"
                         case disabled = "disabled"
                         case not_set = "not_set"
@@ -5430,7 +5463,7 @@ public enum Operations {
                     /// The enablement status of secret scanning delegated alert dismissal
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/POST/requestBody/json/secret_scanning_delegated_alert_dismissal`.
-                    @frozen public enum secret_scanning_delegated_alert_dismissalPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum secret_scanning_delegated_alert_dismissalPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case enabled = "enabled"
                         case disabled = "disabled"
                         case not_set = "not_set"
@@ -5442,7 +5475,7 @@ public enum Operations {
                     /// The enablement status of private vulnerability reporting
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/POST/requestBody/json/private_vulnerability_reporting`.
-                    @frozen public enum private_vulnerability_reportingPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum private_vulnerability_reportingPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case enabled = "enabled"
                         case disabled = "disabled"
                         case not_set = "not_set"
@@ -5454,7 +5487,7 @@ public enum Operations {
                     /// The enforcement status for a security configuration
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/POST/requestBody/json/enforcement`.
-                    @frozen public enum enforcementPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum enforcementPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case enforced = "enforced"
                         case unenforced = "unenforced"
                     }
@@ -5556,87 +5589,87 @@ public enum Operations {
                     }
                     public init(from decoder: any Decoder) throws {
                         let container = try decoder.container(keyedBy: CodingKeys.self)
-                        name = try container.decode(
+                        self.name = try container.decode(
                             Swift.String.self,
                             forKey: .name
                         )
-                        description = try container.decode(
+                        self.description = try container.decode(
                             Swift.String.self,
                             forKey: .description
                         )
-                        advanced_security = try container.decodeIfPresent(
+                        self.advanced_security = try container.decodeIfPresent(
                             Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.advanced_securityPayload.self,
                             forKey: .advanced_security
                         )
-                        dependency_graph = try container.decodeIfPresent(
+                        self.dependency_graph = try container.decodeIfPresent(
                             Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.dependency_graphPayload.self,
                             forKey: .dependency_graph
                         )
-                        dependency_graph_autosubmit_action = try container.decodeIfPresent(
+                        self.dependency_graph_autosubmit_action = try container.decodeIfPresent(
                             Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.dependency_graph_autosubmit_actionPayload.self,
                             forKey: .dependency_graph_autosubmit_action
                         )
-                        dependency_graph_autosubmit_action_options = try container.decodeIfPresent(
+                        self.dependency_graph_autosubmit_action_options = try container.decodeIfPresent(
                             Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.dependency_graph_autosubmit_action_optionsPayload.self,
                             forKey: .dependency_graph_autosubmit_action_options
                         )
-                        dependabot_alerts = try container.decodeIfPresent(
+                        self.dependabot_alerts = try container.decodeIfPresent(
                             Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.dependabot_alertsPayload.self,
                             forKey: .dependabot_alerts
                         )
-                        dependabot_security_updates = try container.decodeIfPresent(
+                        self.dependabot_security_updates = try container.decodeIfPresent(
                             Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.dependabot_security_updatesPayload.self,
                             forKey: .dependabot_security_updates
                         )
-                        code_scanning_default_setup = try container.decodeIfPresent(
+                        self.code_scanning_default_setup = try container.decodeIfPresent(
                             Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.code_scanning_default_setupPayload.self,
                             forKey: .code_scanning_default_setup
                         )
-                        code_scanning_default_setup_options = try container.decodeIfPresent(
+                        self.code_scanning_default_setup_options = try container.decodeIfPresent(
                             Components.Schemas.code_hyphen_scanning_hyphen_default_hyphen_setup_hyphen_options.self,
                             forKey: .code_scanning_default_setup_options
                         )
-                        code_scanning_delegated_alert_dismissal = try container.decodeIfPresent(
+                        self.code_scanning_delegated_alert_dismissal = try container.decodeIfPresent(
                             Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.code_scanning_delegated_alert_dismissalPayload.self,
                             forKey: .code_scanning_delegated_alert_dismissal
                         )
-                        secret_scanning = try container.decodeIfPresent(
+                        self.secret_scanning = try container.decodeIfPresent(
                             Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.secret_scanningPayload.self,
                             forKey: .secret_scanning
                         )
-                        secret_scanning_push_protection = try container.decodeIfPresent(
+                        self.secret_scanning_push_protection = try container.decodeIfPresent(
                             Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_push_protectionPayload.self,
                             forKey: .secret_scanning_push_protection
                         )
-                        secret_scanning_delegated_bypass = try container.decodeIfPresent(
+                        self.secret_scanning_delegated_bypass = try container.decodeIfPresent(
                             Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_delegated_bypassPayload.self,
                             forKey: .secret_scanning_delegated_bypass
                         )
-                        secret_scanning_delegated_bypass_options = try container.decodeIfPresent(
+                        self.secret_scanning_delegated_bypass_options = try container.decodeIfPresent(
                             Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_delegated_bypass_optionsPayload.self,
                             forKey: .secret_scanning_delegated_bypass_options
                         )
-                        secret_scanning_validity_checks = try container.decodeIfPresent(
+                        self.secret_scanning_validity_checks = try container.decodeIfPresent(
                             Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_validity_checksPayload.self,
                             forKey: .secret_scanning_validity_checks
                         )
-                        secret_scanning_non_provider_patterns = try container.decodeIfPresent(
+                        self.secret_scanning_non_provider_patterns = try container.decodeIfPresent(
                             Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_non_provider_patternsPayload.self,
                             forKey: .secret_scanning_non_provider_patterns
                         )
-                        secret_scanning_generic_secrets = try container.decodeIfPresent(
+                        self.secret_scanning_generic_secrets = try container.decodeIfPresent(
                             Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_generic_secretsPayload.self,
                             forKey: .secret_scanning_generic_secrets
                         )
-                        secret_scanning_delegated_alert_dismissal = try container.decodeIfPresent(
+                        self.secret_scanning_delegated_alert_dismissal = try container.decodeIfPresent(
                             Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_delegated_alert_dismissalPayload.self,
                             forKey: .secret_scanning_delegated_alert_dismissal
                         )
-                        private_vulnerability_reporting = try container.decodeIfPresent(
+                        self.private_vulnerability_reporting = try container.decodeIfPresent(
                             Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.private_vulnerability_reportingPayload.self,
                             forKey: .private_vulnerability_reporting
                         )
-                        enforcement = try container.decodeIfPresent(
+                        self.enforcement = try container.decodeIfPresent(
                             Operations.code_hyphen_security_sol_create_hyphen_configuration.Input.Body.jsonPayload.enforcementPayload.self,
                             forKey: .enforcement
                         )
@@ -5879,6 +5912,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/code-security/configurations/defaults/get(code-security/get-default-configurations)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -6034,7 +6075,7 @@ public enum Operations {
                     }
                     public init(from decoder: any Decoder) throws {
                         let container = try decoder.container(keyedBy: CodingKeys.self)
-                        selected_repository_ids = try container.decodeIfPresent(
+                        self.selected_repository_ids = try container.decodeIfPresent(
                             [Swift.Int].self,
                             forKey: .selected_repository_ids
                         )
@@ -6070,6 +6111,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Components.Responses.no_content)
+            /// A header with no content is returned.
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/code-security/configurations/detach/delete(code-security/detach-configuration)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -6336,6 +6385,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/code-security/configurations/{configuration_id}/get(code-security/get-configuration)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -6494,7 +6551,7 @@ public enum Operations {
                     /// The enablement status of GitHub Advanced Security features. `enabled` will enable both Code Security and Secret Protection features.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/{configuration_id}/PATCH/requestBody/json/advanced_security`.
-                    @frozen public enum advanced_securityPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum advanced_securityPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case enabled = "enabled"
                         case disabled = "disabled"
                         case code_security = "code_security"
@@ -6507,7 +6564,7 @@ public enum Operations {
                     /// The enablement status of Dependency Graph
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/{configuration_id}/PATCH/requestBody/json/dependency_graph`.
-                    @frozen public enum dependency_graphPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum dependency_graphPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case enabled = "enabled"
                         case disabled = "disabled"
                         case not_set = "not_set"
@@ -6519,7 +6576,7 @@ public enum Operations {
                     /// The enablement status of Automatic dependency submission
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/{configuration_id}/PATCH/requestBody/json/dependency_graph_autosubmit_action`.
-                    @frozen public enum dependency_graph_autosubmit_actionPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum dependency_graph_autosubmit_actionPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case enabled = "enabled"
                         case disabled = "disabled"
                         case not_set = "not_set"
@@ -6554,7 +6611,7 @@ public enum Operations {
                     /// The enablement status of Dependabot alerts
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/{configuration_id}/PATCH/requestBody/json/dependabot_alerts`.
-                    @frozen public enum dependabot_alertsPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum dependabot_alertsPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case enabled = "enabled"
                         case disabled = "disabled"
                         case not_set = "not_set"
@@ -6566,7 +6623,7 @@ public enum Operations {
                     /// The enablement status of Dependabot security updates
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/{configuration_id}/PATCH/requestBody/json/dependabot_security_updates`.
-                    @frozen public enum dependabot_security_updatesPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum dependabot_security_updatesPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case enabled = "enabled"
                         case disabled = "disabled"
                         case not_set = "not_set"
@@ -6578,7 +6635,7 @@ public enum Operations {
                     /// The enablement status of code scanning default setup
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/{configuration_id}/PATCH/requestBody/json/code_scanning_default_setup`.
-                    @frozen public enum code_scanning_default_setupPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum code_scanning_default_setupPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case enabled = "enabled"
                         case disabled = "disabled"
                         case not_set = "not_set"
@@ -6592,7 +6649,7 @@ public enum Operations {
                     /// The enablement status of code scanning delegated alert dismissal
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/{configuration_id}/PATCH/requestBody/json/code_scanning_delegated_alert_dismissal`.
-                    @frozen public enum code_scanning_delegated_alert_dismissalPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum code_scanning_delegated_alert_dismissalPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case enabled = "enabled"
                         case disabled = "disabled"
                         case not_set = "not_set"
@@ -6604,7 +6661,7 @@ public enum Operations {
                     /// The enablement status of secret scanning
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/{configuration_id}/PATCH/requestBody/json/secret_scanning`.
-                    @frozen public enum secret_scanningPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum secret_scanningPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case enabled = "enabled"
                         case disabled = "disabled"
                         case not_set = "not_set"
@@ -6616,7 +6673,7 @@ public enum Operations {
                     /// The enablement status of secret scanning push protection
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/{configuration_id}/PATCH/requestBody/json/secret_scanning_push_protection`.
-                    @frozen public enum secret_scanning_push_protectionPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum secret_scanning_push_protectionPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case enabled = "enabled"
                         case disabled = "disabled"
                         case not_set = "not_set"
@@ -6628,7 +6685,7 @@ public enum Operations {
                     /// The enablement status of secret scanning delegated bypass
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/{configuration_id}/PATCH/requestBody/json/secret_scanning_delegated_bypass`.
-                    @frozen public enum secret_scanning_delegated_bypassPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum secret_scanning_delegated_bypassPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case enabled = "enabled"
                         case disabled = "disabled"
                         case not_set = "not_set"
@@ -6650,7 +6707,7 @@ public enum Operations {
                             /// The type of the bypass reviewer
                             ///
                             /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/{configuration_id}/PATCH/requestBody/json/secret_scanning_delegated_bypass_options/reviewersPayload/reviewer_type`.
-                            @frozen public enum reviewer_typePayload: String, Codable, Hashable, Sendable {
+                            @frozen public enum reviewer_typePayload: String, Codable, Hashable, Sendable, CaseIterable {
                                 case TEAM = "TEAM"
                                 case ROLE = "ROLE"
                             }
@@ -6701,7 +6758,7 @@ public enum Operations {
                     /// The enablement status of secret scanning validity checks
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/{configuration_id}/PATCH/requestBody/json/secret_scanning_validity_checks`.
-                    @frozen public enum secret_scanning_validity_checksPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum secret_scanning_validity_checksPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case enabled = "enabled"
                         case disabled = "disabled"
                         case not_set = "not_set"
@@ -6713,7 +6770,7 @@ public enum Operations {
                     /// The enablement status of secret scanning non-provider patterns
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/{configuration_id}/PATCH/requestBody/json/secret_scanning_non_provider_patterns`.
-                    @frozen public enum secret_scanning_non_provider_patternsPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum secret_scanning_non_provider_patternsPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case enabled = "enabled"
                         case disabled = "disabled"
                         case not_set = "not_set"
@@ -6725,7 +6782,7 @@ public enum Operations {
                     /// The enablement status of Copilot secret scanning
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/{configuration_id}/PATCH/requestBody/json/secret_scanning_generic_secrets`.
-                    @frozen public enum secret_scanning_generic_secretsPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum secret_scanning_generic_secretsPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case enabled = "enabled"
                         case disabled = "disabled"
                         case not_set = "not_set"
@@ -6737,7 +6794,7 @@ public enum Operations {
                     /// The enablement status of secret scanning delegated alert dismissal
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/{configuration_id}/PATCH/requestBody/json/secret_scanning_delegated_alert_dismissal`.
-                    @frozen public enum secret_scanning_delegated_alert_dismissalPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum secret_scanning_delegated_alert_dismissalPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case enabled = "enabled"
                         case disabled = "disabled"
                         case not_set = "not_set"
@@ -6749,7 +6806,7 @@ public enum Operations {
                     /// The enablement status of private vulnerability reporting
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/{configuration_id}/PATCH/requestBody/json/private_vulnerability_reporting`.
-                    @frozen public enum private_vulnerability_reportingPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum private_vulnerability_reportingPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case enabled = "enabled"
                         case disabled = "disabled"
                         case not_set = "not_set"
@@ -6761,7 +6818,7 @@ public enum Operations {
                     /// The enforcement status for a security configuration
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/{configuration_id}/PATCH/requestBody/json/enforcement`.
-                    @frozen public enum enforcementPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum enforcementPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case enforced = "enforced"
                         case unenforced = "unenforced"
                     }
@@ -6863,87 +6920,87 @@ public enum Operations {
                     }
                     public init(from decoder: any Decoder) throws {
                         let container = try decoder.container(keyedBy: CodingKeys.self)
-                        name = try container.decodeIfPresent(
+                        self.name = try container.decodeIfPresent(
                             Swift.String.self,
                             forKey: .name
                         )
-                        description = try container.decodeIfPresent(
+                        self.description = try container.decodeIfPresent(
                             Swift.String.self,
                             forKey: .description
                         )
-                        advanced_security = try container.decodeIfPresent(
+                        self.advanced_security = try container.decodeIfPresent(
                             Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.advanced_securityPayload.self,
                             forKey: .advanced_security
                         )
-                        dependency_graph = try container.decodeIfPresent(
+                        self.dependency_graph = try container.decodeIfPresent(
                             Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.dependency_graphPayload.self,
                             forKey: .dependency_graph
                         )
-                        dependency_graph_autosubmit_action = try container.decodeIfPresent(
+                        self.dependency_graph_autosubmit_action = try container.decodeIfPresent(
                             Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.dependency_graph_autosubmit_actionPayload.self,
                             forKey: .dependency_graph_autosubmit_action
                         )
-                        dependency_graph_autosubmit_action_options = try container.decodeIfPresent(
+                        self.dependency_graph_autosubmit_action_options = try container.decodeIfPresent(
                             Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.dependency_graph_autosubmit_action_optionsPayload.self,
                             forKey: .dependency_graph_autosubmit_action_options
                         )
-                        dependabot_alerts = try container.decodeIfPresent(
+                        self.dependabot_alerts = try container.decodeIfPresent(
                             Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.dependabot_alertsPayload.self,
                             forKey: .dependabot_alerts
                         )
-                        dependabot_security_updates = try container.decodeIfPresent(
+                        self.dependabot_security_updates = try container.decodeIfPresent(
                             Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.dependabot_security_updatesPayload.self,
                             forKey: .dependabot_security_updates
                         )
-                        code_scanning_default_setup = try container.decodeIfPresent(
+                        self.code_scanning_default_setup = try container.decodeIfPresent(
                             Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.code_scanning_default_setupPayload.self,
                             forKey: .code_scanning_default_setup
                         )
-                        code_scanning_default_setup_options = try container.decodeIfPresent(
+                        self.code_scanning_default_setup_options = try container.decodeIfPresent(
                             Components.Schemas.code_hyphen_scanning_hyphen_default_hyphen_setup_hyphen_options.self,
                             forKey: .code_scanning_default_setup_options
                         )
-                        code_scanning_delegated_alert_dismissal = try container.decodeIfPresent(
+                        self.code_scanning_delegated_alert_dismissal = try container.decodeIfPresent(
                             Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.code_scanning_delegated_alert_dismissalPayload.self,
                             forKey: .code_scanning_delegated_alert_dismissal
                         )
-                        secret_scanning = try container.decodeIfPresent(
+                        self.secret_scanning = try container.decodeIfPresent(
                             Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.secret_scanningPayload.self,
                             forKey: .secret_scanning
                         )
-                        secret_scanning_push_protection = try container.decodeIfPresent(
+                        self.secret_scanning_push_protection = try container.decodeIfPresent(
                             Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_push_protectionPayload.self,
                             forKey: .secret_scanning_push_protection
                         )
-                        secret_scanning_delegated_bypass = try container.decodeIfPresent(
+                        self.secret_scanning_delegated_bypass = try container.decodeIfPresent(
                             Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_delegated_bypassPayload.self,
                             forKey: .secret_scanning_delegated_bypass
                         )
-                        secret_scanning_delegated_bypass_options = try container.decodeIfPresent(
+                        self.secret_scanning_delegated_bypass_options = try container.decodeIfPresent(
                             Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_delegated_bypass_optionsPayload.self,
                             forKey: .secret_scanning_delegated_bypass_options
                         )
-                        secret_scanning_validity_checks = try container.decodeIfPresent(
+                        self.secret_scanning_validity_checks = try container.decodeIfPresent(
                             Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_validity_checksPayload.self,
                             forKey: .secret_scanning_validity_checks
                         )
-                        secret_scanning_non_provider_patterns = try container.decodeIfPresent(
+                        self.secret_scanning_non_provider_patterns = try container.decodeIfPresent(
                             Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_non_provider_patternsPayload.self,
                             forKey: .secret_scanning_non_provider_patterns
                         )
-                        secret_scanning_generic_secrets = try container.decodeIfPresent(
+                        self.secret_scanning_generic_secrets = try container.decodeIfPresent(
                             Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_generic_secretsPayload.self,
                             forKey: .secret_scanning_generic_secrets
                         )
-                        secret_scanning_delegated_alert_dismissal = try container.decodeIfPresent(
+                        self.secret_scanning_delegated_alert_dismissal = try container.decodeIfPresent(
                             Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.secret_scanning_delegated_alert_dismissalPayload.self,
                             forKey: .secret_scanning_delegated_alert_dismissal
                         )
-                        private_vulnerability_reporting = try container.decodeIfPresent(
+                        self.private_vulnerability_reporting = try container.decodeIfPresent(
                             Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.private_vulnerability_reportingPayload.self,
                             forKey: .private_vulnerability_reporting
                         )
-                        enforcement = try container.decodeIfPresent(
+                        self.enforcement = try container.decodeIfPresent(
                             Operations.code_hyphen_security_sol_update_hyphen_configuration.Input.Body.jsonPayload.enforcementPayload.self,
                             forKey: .enforcement
                         )
@@ -7054,6 +7111,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.code_hyphen_security_sol_update_hyphen_configuration.Output.NoContent)
+            /// Response when no new updates are made
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/code-security/configurations/{configuration_id}/patch(code-security/update-configuration)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -7173,6 +7238,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Components.Responses.no_content)
+            /// A header with no content is returned.
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/code-security/configurations/{configuration_id}/delete(code-security/delete-configuration)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -7377,7 +7450,7 @@ public enum Operations {
                     /// The type of repositories to attach the configuration to. `selected` means the configuration will be attached to only the repositories specified by `selected_repository_ids`
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/{configuration_id}/attach/POST/requestBody/json/scope`.
-                    @frozen public enum scopePayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum scopePayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case all = "all"
                         case all_without_configurations = "all_without_configurations"
                         case _public = "public"
@@ -7410,11 +7483,11 @@ public enum Operations {
                     }
                     public init(from decoder: any Decoder) throws {
                         let container = try decoder.container(keyedBy: CodingKeys.self)
-                        scope = try container.decode(
+                        self.scope = try container.decode(
                             Operations.code_hyphen_security_sol_attach_hyphen_configuration.Input.Body.jsonPayload.scopePayload.self,
                             forKey: .scope
                         )
-                        selected_repository_ids = try container.decodeIfPresent(
+                        self.selected_repository_ids = try container.decodeIfPresent(
                             [Swift.Int].self,
                             forKey: .selected_repository_ids
                         )
@@ -7557,7 +7630,7 @@ public enum Operations {
                     /// Specify which types of repository this security configuration should be applied to by default.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/{configuration_id}/defaults/PUT/requestBody/json/default_for_new_repos`.
-                    @frozen public enum default_for_new_reposPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum default_for_new_reposPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case all = "all"
                         case none = "none"
                         case private_and_internal = "private_and_internal"
@@ -7607,7 +7680,7 @@ public enum Operations {
                         /// Specifies which types of repository this security configuration is applied to by default.
                         ///
                         /// - Remark: Generated from `#/paths/orgs/{org}/code-security/configurations/{configuration_id}/defaults/PUT/responses/200/content/json/default_for_new_repos`.
-                        @frozen public enum default_for_new_reposPayload: String, Codable, Hashable, Sendable {
+                        @frozen public enum default_for_new_reposPayload: String, Codable, Hashable, Sendable, CaseIterable {
                             case all = "all"
                             case none = "none"
                             case private_and_internal = "private_and_internal"
@@ -8115,6 +8188,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Components.Responses.no_content)
+            /// A header with no content is returned.
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-security-configuration/get(code-security/get-configuration-for-repository)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -8138,6 +8219,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/code-security-configuration/get(code-security/get-configuration-for-repository)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
