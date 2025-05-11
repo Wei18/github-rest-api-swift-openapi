@@ -271,6 +271,15 @@ extension APIProtocol {
 
 /// Server URLs defined in the OpenAPI document.
 public enum Servers {
+    public enum Server1 {
+        public static func url() throws -> Foundation.URL {
+            try Foundation.URL(
+                validatingOpenAPIServerURL: "https://api.github.com",
+                variables: []
+            )
+        }
+    }
+    @available(*, deprecated, renamed: "Servers.Server1.url")
     public static func server1() throws -> Foundation.URL {
         try Foundation.URL(
             validatingOpenAPIServerURL: "https://api.github.com",
@@ -1012,14 +1021,14 @@ public enum Components {
         /// Sets the state of the secret scanning alert. You must provide `resolution` when you set the state to `resolved`.
         ///
         /// - Remark: Generated from `#/components/schemas/secret-scanning-alert-state`.
-        @frozen public enum secret_hyphen_scanning_hyphen_alert_hyphen_state: String, Codable, Hashable, Sendable {
+        @frozen public enum secret_hyphen_scanning_hyphen_alert_hyphen_state: String, Codable, Hashable, Sendable, CaseIterable {
             case open = "open"
             case resolved = "resolved"
         }
         /// **Required when the `state` is `resolved`.** The reason for resolving the alert.
         ///
         /// - Remark: Generated from `#/components/schemas/secret-scanning-alert-resolution`.
-        @frozen public enum secret_hyphen_scanning_hyphen_alert_hyphen_resolution: String, Codable, Hashable, Sendable {
+        @frozen public enum secret_hyphen_scanning_hyphen_alert_hyphen_resolution: String, Codable, Hashable, Sendable, CaseIterable {
             case false_positive = "false_positive"
             case wont_fix = "wont_fix"
             case revoked = "revoked"
@@ -1097,7 +1106,7 @@ public enum Components {
             /// The token status as of the latest validity check.
             ///
             /// - Remark: Generated from `#/components/schemas/organization-secret-scanning-alert/validity`.
-            @frozen public enum validityPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum validityPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case active = "active"
                 case inactive = "inactive"
                 case unknown = "unknown"
@@ -1305,7 +1314,7 @@ public enum Components {
             /// The token status as of the latest validity check.
             ///
             /// - Remark: Generated from `#/components/schemas/secret-scanning-alert/validity`.
-            @frozen public enum validityPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum validityPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case active = "active"
                 case inactive = "inactive"
                 case unknown = "unknown"
@@ -1435,7 +1444,7 @@ public enum Components {
                 case is_base64_encoded
             }
         }
-        /// An optional comment when closing an alert. Cannot be updated or deleted. Must be `null` when changing `state` to `open`.
+        /// An optional comment when closing or reopening an alert. Cannot be updated or deleted.
         ///
         /// - Remark: Generated from `#/components/schemas/secret-scanning-alert-resolution-comment`.
         public typealias secret_hyphen_scanning_hyphen_alert_hyphen_resolution_hyphen_comment = Swift.String
@@ -1823,7 +1832,7 @@ public enum Components {
             /// The location type. Because secrets may be found in different types of resources (ie. code, comments, issues, pull requests, discussions), this field identifies the type of resource where the secret was found.
             ///
             /// - Remark: Generated from `#/components/schemas/secret-scanning-location/type`.
-            @frozen public enum _typePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum _typePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case commit = "commit"
                 case wiki_commit = "wiki_commit"
                 case issue_title = "issue_title"
@@ -2009,7 +2018,7 @@ public enum Components {
         /// The reason for bypassing push protection.
         ///
         /// - Remark: Generated from `#/components/schemas/secret-scanning-push-protection-bypass-reason`.
-        @frozen public enum secret_hyphen_scanning_hyphen_push_hyphen_protection_hyphen_bypass_hyphen_reason: String, Codable, Hashable, Sendable {
+        @frozen public enum secret_hyphen_scanning_hyphen_push_hyphen_protection_hyphen_bypass_hyphen_reason: String, Codable, Hashable, Sendable, CaseIterable {
             case false_positive = "false_positive"
             case used_in_tests = "used_in_tests"
             case will_fix_later = "will_fix_later"
@@ -2146,12 +2155,12 @@ public enum Components {
                     self.value2 = value2
                 }
                 public init(from decoder: any Decoder) throws {
-                    value1 = try .init(from: decoder)
-                    value2 = try .init(from: decoder)
+                    self.value1 = try .init(from: decoder)
+                    self.value2 = try .init(from: decoder)
                 }
                 public func encode(to encoder: any Encoder) throws {
-                    try value1.encode(to: encoder)
-                    try value2.encode(to: encoder)
+                    try self.value1.encode(to: encoder)
+                    try self.value2.encode(to: encoder)
                 }
             }
             /// - Remark: Generated from `#/components/schemas/secret-scanning-scan-history/custom_pattern_backfill_scans`.
@@ -2197,7 +2206,7 @@ public enum Components {
         /// The direction to sort the results by.
         ///
         /// - Remark: Generated from `#/components/parameters/direction`.
-        @frozen public enum direction: String, Codable, Hashable, Sendable {
+        @frozen public enum direction: String, Codable, Hashable, Sendable, CaseIterable {
             case asc = "asc"
             case desc = "desc"
         }
@@ -2216,7 +2225,7 @@ public enum Components {
         /// Set to `open` or `resolved` to only list secret scanning alerts in a specific state.
         ///
         /// - Remark: Generated from `#/components/parameters/secret-scanning-alert-state`.
-        @frozen public enum secret_hyphen_scanning_hyphen_alert_hyphen_state: String, Codable, Hashable, Sendable {
+        @frozen public enum secret_hyphen_scanning_hyphen_alert_hyphen_state: String, Codable, Hashable, Sendable, CaseIterable {
             case open = "open"
             case resolved = "resolved"
         }
@@ -2231,7 +2240,7 @@ public enum Components {
         /// The property to sort the results by. `created` means when the alert was created. `updated` means when the alert was updated or resolved.
         ///
         /// - Remark: Generated from `#/components/parameters/secret-scanning-alert-sort`.
-        @frozen public enum secret_hyphen_scanning_hyphen_alert_hyphen_sort: String, Codable, Hashable, Sendable {
+        @frozen public enum secret_hyphen_scanning_hyphen_alert_hyphen_sort: String, Codable, Hashable, Sendable, CaseIterable {
             case created = "created"
             case updated = "updated"
         }
@@ -2408,7 +2417,7 @@ public enum Operations {
             /// - Remark: Generated from `#/paths/enterprises/{enterprise}/secret-scanning/alerts/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/parameters/secret-scanning-alert-state`.
-                @frozen public enum secret_hyphen_scanning_hyphen_alert_hyphen_state: String, Codable, Hashable, Sendable {
+                @frozen public enum secret_hyphen_scanning_hyphen_alert_hyphen_state: String, Codable, Hashable, Sendable, CaseIterable {
                     case open = "open"
                     case resolved = "resolved"
                 }
@@ -2425,7 +2434,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/enterprises/{enterprise}/secret-scanning/alerts/GET/query/resolution`.
                 public var resolution: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_resolution?
                 /// - Remark: Generated from `#/components/parameters/secret-scanning-alert-sort`.
-                @frozen public enum secret_hyphen_scanning_hyphen_alert_hyphen_sort: String, Codable, Hashable, Sendable {
+                @frozen public enum secret_hyphen_scanning_hyphen_alert_hyphen_sort: String, Codable, Hashable, Sendable, CaseIterable {
                     case created = "created"
                     case updated = "updated"
                 }
@@ -2434,7 +2443,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/enterprises/{enterprise}/secret-scanning/alerts/GET/query/sort`.
                 public var sort: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_sort?
                 /// - Remark: Generated from `#/components/parameters/direction`.
-                @frozen public enum direction: String, Codable, Hashable, Sendable {
+                @frozen public enum direction: String, Codable, Hashable, Sendable, CaseIterable {
                     case asc = "asc"
                     case desc = "desc"
                 }
@@ -2714,7 +2723,7 @@ public enum Operations {
             /// - Remark: Generated from `#/paths/orgs/{org}/secret-scanning/alerts/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/parameters/secret-scanning-alert-state`.
-                @frozen public enum secret_hyphen_scanning_hyphen_alert_hyphen_state: String, Codable, Hashable, Sendable {
+                @frozen public enum secret_hyphen_scanning_hyphen_alert_hyphen_state: String, Codable, Hashable, Sendable, CaseIterable {
                     case open = "open"
                     case resolved = "resolved"
                 }
@@ -2731,7 +2740,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/secret-scanning/alerts/GET/query/resolution`.
                 public var resolution: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_resolution?
                 /// - Remark: Generated from `#/components/parameters/secret-scanning-alert-sort`.
-                @frozen public enum secret_hyphen_scanning_hyphen_alert_hyphen_sort: String, Codable, Hashable, Sendable {
+                @frozen public enum secret_hyphen_scanning_hyphen_alert_hyphen_sort: String, Codable, Hashable, Sendable, CaseIterable {
                     case created = "created"
                     case updated = "updated"
                 }
@@ -2740,7 +2749,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/secret-scanning/alerts/GET/query/sort`.
                 public var sort: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_sort?
                 /// - Remark: Generated from `#/components/parameters/direction`.
-                @frozen public enum direction: String, Codable, Hashable, Sendable {
+                @frozen public enum direction: String, Codable, Hashable, Sendable, CaseIterable {
                     case asc = "asc"
                     case desc = "desc"
                 }
@@ -3036,7 +3045,7 @@ public enum Operations {
             /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/alerts/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/parameters/secret-scanning-alert-state`.
-                @frozen public enum secret_hyphen_scanning_hyphen_alert_hyphen_state: String, Codable, Hashable, Sendable {
+                @frozen public enum secret_hyphen_scanning_hyphen_alert_hyphen_state: String, Codable, Hashable, Sendable, CaseIterable {
                     case open = "open"
                     case resolved = "resolved"
                 }
@@ -3053,7 +3062,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/alerts/GET/query/resolution`.
                 public var resolution: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_resolution?
                 /// - Remark: Generated from `#/components/parameters/secret-scanning-alert-sort`.
-                @frozen public enum secret_hyphen_scanning_hyphen_alert_hyphen_sort: String, Codable, Hashable, Sendable {
+                @frozen public enum secret_hyphen_scanning_hyphen_alert_hyphen_sort: String, Codable, Hashable, Sendable, CaseIterable {
                     case created = "created"
                     case updated = "updated"
                 }
@@ -3062,7 +3071,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/repos/{owner}/{repo}/secret-scanning/alerts/GET/query/sort`.
                 public var sort: Components.Parameters.secret_hyphen_scanning_hyphen_alert_hyphen_sort?
                 /// - Remark: Generated from `#/components/parameters/direction`.
-                @frozen public enum direction: String, Codable, Hashable, Sendable {
+                @frozen public enum direction: String, Codable, Hashable, Sendable, CaseIterable {
                     case asc = "asc"
                     case desc = "desc"
                 }
@@ -3232,6 +3241,14 @@ public enum Operations {
             ///
             /// HTTP response code: `404 notFound`.
             case notFound(Operations.secret_hyphen_scanning_sol_list_hyphen_alerts_hyphen_for_hyphen_repo.Output.NotFound)
+            /// Repository is public or secret scanning is disabled for the repository
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/alerts/get(secret-scanning/list-alerts-for-repo)/responses/404`.
+            ///
+            /// HTTP response code: `404 notFound`.
+            public static var notFound: Self {
+                .notFound(.init())
+            }
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
@@ -3430,6 +3447,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}/get(secret-scanning/get-alert)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -3457,6 +3482,14 @@ public enum Operations {
             ///
             /// HTTP response code: `404 notFound`.
             case notFound(Operations.secret_hyphen_scanning_sol_get_hyphen_alert.Output.NotFound)
+            /// Repository is public, or secret scanning is disabled for the repository, or the resource is not found
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}/get(secret-scanning/get-alert)/responses/404`.
+            ///
+            /// HTTP response code: `404 notFound`.
+            public static var notFound: Self {
+                .notFound(.init())
+            }
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
@@ -3697,6 +3730,14 @@ public enum Operations {
             ///
             /// HTTP response code: `400 badRequest`.
             case badRequest(Operations.secret_hyphen_scanning_sol_update_hyphen_alert.Output.BadRequest)
+            /// Bad request, resolution comment is invalid or the resolution was not changed.
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}/patch(secret-scanning/update-alert)/responses/400`.
+            ///
+            /// HTTP response code: `400 badRequest`.
+            public static var badRequest: Self {
+                .badRequest(.init())
+            }
             /// The associated value of the enum case if `self` is `.badRequest`.
             ///
             /// - Throws: An error if `self` is not `.badRequest`.
@@ -3724,6 +3765,14 @@ public enum Operations {
             ///
             /// HTTP response code: `404 notFound`.
             case notFound(Operations.secret_hyphen_scanning_sol_update_hyphen_alert.Output.NotFound)
+            /// Repository is public, or secret scanning is disabled for the repository, or the resource is not found
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}/patch(secret-scanning/update-alert)/responses/404`.
+            ///
+            /// HTTP response code: `404 notFound`.
+            public static var notFound: Self {
+                .notFound(.init())
+            }
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
@@ -3751,6 +3800,14 @@ public enum Operations {
             ///
             /// HTTP response code: `422 unprocessableContent`.
             case unprocessableContent(Operations.secret_hyphen_scanning_sol_update_hyphen_alert.Output.UnprocessableContent)
+            /// State does not match the resolution or resolution comment
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}/patch(secret-scanning/update-alert)/responses/422`.
+            ///
+            /// HTTP response code: `422 unprocessableContent`.
+            public static var unprocessableContent: Self {
+                .unprocessableContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
@@ -3999,6 +4056,14 @@ public enum Operations {
             ///
             /// HTTP response code: `404 notFound`.
             case notFound(Operations.secret_hyphen_scanning_sol_list_hyphen_locations_hyphen_for_hyphen_alert.Output.NotFound)
+            /// Repository is public, or secret scanning is disabled for the repository, or the resource is not found
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/alerts/{alert_number}/locations/get(secret-scanning/list-locations-for-alert)/responses/404`.
+            ///
+            /// HTTP response code: `404 notFound`.
+            public static var notFound: Self {
+                .notFound(.init())
+            }
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
@@ -4226,6 +4291,14 @@ public enum Operations {
             ///
             /// HTTP response code: `403 forbidden`.
             case forbidden(Operations.secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass.Output.Forbidden)
+            /// User does not have enough permissions to perform this action.
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/push-protection-bypasses/post(secret-scanning/create-push-protection-bypass)/responses/403`.
+            ///
+            /// HTTP response code: `403 forbidden`.
+            public static var forbidden: Self {
+                .forbidden(.init())
+            }
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
@@ -4253,6 +4326,14 @@ public enum Operations {
             ///
             /// HTTP response code: `404 notFound`.
             case notFound(Operations.secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass.Output.NotFound)
+            /// Placeholder ID not found, or push protection is disabled on this repository.
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/push-protection-bypasses/post(secret-scanning/create-push-protection-bypass)/responses/404`.
+            ///
+            /// HTTP response code: `404 notFound`.
+            public static var notFound: Self {
+                .notFound(.init())
+            }
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
@@ -4280,6 +4361,14 @@ public enum Operations {
             ///
             /// HTTP response code: `422 unprocessableContent`.
             case unprocessableContent(Operations.secret_hyphen_scanning_sol_create_hyphen_push_hyphen_protection_hyphen_bypass.Output.UnprocessableContent)
+            /// Bad request, input data missing or incorrect.
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/push-protection-bypasses/post(secret-scanning/create-push-protection-bypass)/responses/422`.
+            ///
+            /// HTTP response code: `422 unprocessableContent`.
+            public static var unprocessableContent: Self {
+                .unprocessableContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
@@ -4422,6 +4511,14 @@ public enum Operations {
             ///
             /// HTTP response code: `404 notFound`.
             case notFound(Operations.secret_hyphen_scanning_sol_get_hyphen_scan_hyphen_history.Output.NotFound)
+            /// Repository does not have GitHub Advanced Security or secret scanning enabled
+            ///
+            /// - Remark: Generated from `#/paths//repos/{owner}/{repo}/secret-scanning/scan-history/get(secret-scanning/get-scan-history)/responses/404`.
+            ///
+            /// HTTP response code: `404 notFound`.
+            public static var notFound: Self {
+                .notFound(.init())
+            }
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
