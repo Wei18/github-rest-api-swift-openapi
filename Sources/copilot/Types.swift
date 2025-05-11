@@ -427,6 +427,15 @@ extension APIProtocol {
 
 /// Server URLs defined in the OpenAPI document.
 public enum Servers {
+    public enum Server1 {
+        public static func url() throws -> Foundation.URL {
+            try Foundation.URL(
+                validatingOpenAPIServerURL: "https://api.github.com",
+                variables: []
+            )
+        }
+    }
+    @available(*, deprecated, renamed: "Servers.Server1.url")
     public static func server1() throws -> Foundation.URL {
         try Foundation.URL(
             validatingOpenAPIServerURL: "https://api.github.com",
@@ -936,7 +945,7 @@ public enum Components {
             /// The organization policy for allowing or blocking suggestions matching public code (duplication detection filter).
             ///
             /// - Remark: Generated from `#/components/schemas/copilot-organization-details/public_code_suggestions`.
-            @frozen public enum public_code_suggestionsPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum public_code_suggestionsPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case allow = "allow"
                 case block = "block"
                 case unconfigured = "unconfigured"
@@ -948,7 +957,7 @@ public enum Components {
             /// The organization policy for allowing or disallowing Copilot Chat in the IDE.
             ///
             /// - Remark: Generated from `#/components/schemas/copilot-organization-details/ide_chat`.
-            @frozen public enum ide_chatPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum ide_chatPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case enabled = "enabled"
                 case disabled = "disabled"
                 case unconfigured = "unconfigured"
@@ -960,7 +969,7 @@ public enum Components {
             /// The organization policy for allowing or disallowing Copilot features on GitHub.com.
             ///
             /// - Remark: Generated from `#/components/schemas/copilot-organization-details/platform_chat`.
-            @frozen public enum platform_chatPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum platform_chatPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case enabled = "enabled"
                 case disabled = "disabled"
                 case unconfigured = "unconfigured"
@@ -972,7 +981,7 @@ public enum Components {
             /// The organization policy for allowing or disallowing Copilot in the CLI.
             ///
             /// - Remark: Generated from `#/components/schemas/copilot-organization-details/cli`.
-            @frozen public enum cliPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum cliPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case enabled = "enabled"
                 case disabled = "disabled"
                 case unconfigured = "unconfigured"
@@ -984,7 +993,7 @@ public enum Components {
             /// The mode of assigning new seats.
             ///
             /// - Remark: Generated from `#/components/schemas/copilot-organization-details/seat_management_setting`.
-            @frozen public enum seat_management_settingPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum seat_management_settingPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case assign_all = "assign_all"
                 case assign_selected = "assign_selected"
                 case disabled = "disabled"
@@ -997,7 +1006,7 @@ public enum Components {
             /// The Copilot plan of the organization, or the parent enterprise, when applicable.
             ///
             /// - Remark: Generated from `#/components/schemas/copilot-organization-details/plan_type`.
-            @frozen public enum plan_typePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum plan_typePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case business = "business"
                 case enterprise = "enterprise"
             }
@@ -1048,31 +1057,31 @@ public enum Components {
             }
             public init(from decoder: any Decoder) throws {
                 let container = try decoder.container(keyedBy: CodingKeys.self)
-                seat_breakdown = try container.decode(
+                self.seat_breakdown = try container.decode(
                     Components.Schemas.copilot_hyphen_organization_hyphen_seat_hyphen_breakdown.self,
                     forKey: .seat_breakdown
                 )
-                public_code_suggestions = try container.decode(
+                self.public_code_suggestions = try container.decode(
                     Components.Schemas.copilot_hyphen_organization_hyphen_details.public_code_suggestionsPayload.self,
                     forKey: .public_code_suggestions
                 )
-                ide_chat = try container.decodeIfPresent(
+                self.ide_chat = try container.decodeIfPresent(
                     Components.Schemas.copilot_hyphen_organization_hyphen_details.ide_chatPayload.self,
                     forKey: .ide_chat
                 )
-                platform_chat = try container.decodeIfPresent(
+                self.platform_chat = try container.decodeIfPresent(
                     Components.Schemas.copilot_hyphen_organization_hyphen_details.platform_chatPayload.self,
                     forKey: .platform_chat
                 )
-                cli = try container.decodeIfPresent(
+                self.cli = try container.decodeIfPresent(
                     Components.Schemas.copilot_hyphen_organization_hyphen_details.cliPayload.self,
                     forKey: .cli
                 )
-                seat_management_setting = try container.decode(
+                self.seat_management_setting = try container.decode(
                     Components.Schemas.copilot_hyphen_organization_hyphen_details.seat_management_settingPayload.self,
                     forKey: .seat_management_setting
                 )
-                plan_type = try container.decodeIfPresent(
+                self.plan_type = try container.decodeIfPresent(
                     Components.Schemas.copilot_hyphen_organization_hyphen_details.plan_typePayload.self,
                     forKey: .plan_type
                 )
@@ -1089,31 +1098,31 @@ public enum Components {
             public func encode(to encoder: any Encoder) throws {
                 var container = encoder.container(keyedBy: CodingKeys.self)
                 try container.encode(
-                    seat_breakdown,
+                    self.seat_breakdown,
                     forKey: .seat_breakdown
                 )
                 try container.encode(
-                    public_code_suggestions,
+                    self.public_code_suggestions,
                     forKey: .public_code_suggestions
                 )
                 try container.encodeIfPresent(
-                    ide_chat,
+                    self.ide_chat,
                     forKey: .ide_chat
                 )
                 try container.encodeIfPresent(
-                    platform_chat,
+                    self.platform_chat,
                     forKey: .platform_chat
                 )
                 try container.encodeIfPresent(
-                    cli,
+                    self.cli,
                     forKey: .cli
                 )
                 try container.encode(
-                    seat_management_setting,
+                    self.seat_management_setting,
                     forKey: .seat_management_setting
                 )
                 try container.encodeIfPresent(
-                    plan_type,
+                    self.plan_type,
                     forKey: .plan_type
                 )
                 try encoder.encodeAdditionalProperties(additionalProperties)
@@ -1356,7 +1365,7 @@ public enum Components {
             /// The Copilot plan of the organization, or the parent enterprise, when applicable.
             ///
             /// - Remark: Generated from `#/components/schemas/copilot-seat-details/plan_type`.
-            @frozen public enum plan_typePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum plan_typePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case business = "business"
                 case enterprise = "enterprise"
                 case unknown = "unknown"
@@ -1411,39 +1420,39 @@ public enum Components {
             }
             public init(from decoder: any Decoder) throws {
                 let container = try decoder.container(keyedBy: CodingKeys.self)
-                assignee = try container.decodeIfPresent(
+                self.assignee = try container.decodeIfPresent(
                     Components.Schemas.nullable_hyphen_simple_hyphen_user.self,
                     forKey: .assignee
                 )
-                organization = try container.decodeIfPresent(
+                self.organization = try container.decodeIfPresent(
                     Components.Schemas.nullable_hyphen_organization_hyphen_simple.self,
                     forKey: .organization
                 )
-                assigning_team = try container.decodeIfPresent(
+                self.assigning_team = try container.decodeIfPresent(
                     Components.Schemas.copilot_hyphen_seat_hyphen_details.assigning_teamPayload.self,
                     forKey: .assigning_team
                 )
-                pending_cancellation_date = try container.decodeIfPresent(
+                self.pending_cancellation_date = try container.decodeIfPresent(
                     Swift.String.self,
                     forKey: .pending_cancellation_date
                 )
-                last_activity_at = try container.decodeIfPresent(
+                self.last_activity_at = try container.decodeIfPresent(
                     Foundation.Date.self,
                     forKey: .last_activity_at
                 )
-                last_activity_editor = try container.decodeIfPresent(
+                self.last_activity_editor = try container.decodeIfPresent(
                     Swift.String.self,
                     forKey: .last_activity_editor
                 )
-                created_at = try container.decode(
+                self.created_at = try container.decode(
                     Foundation.Date.self,
                     forKey: .created_at
                 )
-                updated_at = try container.decodeIfPresent(
+                self.updated_at = try container.decodeIfPresent(
                     Foundation.Date.self,
                     forKey: .updated_at
                 )
-                plan_type = try container.decodeIfPresent(
+                self.plan_type = try container.decodeIfPresent(
                     Components.Schemas.copilot_hyphen_seat_hyphen_details.plan_typePayload.self,
                     forKey: .plan_type
                 )
@@ -1668,15 +1677,15 @@ public enum Components {
                 }
                 public init(from decoder: any Decoder) throws {
                     let container = try decoder.container(keyedBy: CodingKeys.self)
-                    name = try container.decodeIfPresent(
+                    self.name = try container.decodeIfPresent(
                         Swift.String.self,
                         forKey: .name
                     )
-                    total_engaged_users = try container.decodeIfPresent(
+                    self.total_engaged_users = try container.decodeIfPresent(
                         Swift.Int.self,
                         forKey: .total_engaged_users
                     )
-                    models = try container.decodeIfPresent(
+                    self.models = try container.decodeIfPresent(
                         Components.Schemas.copilot_hyphen_ide_hyphen_code_hyphen_completions.editorsPayloadPayload.modelsPayload.self,
                         forKey: .models
                     )
@@ -1689,15 +1698,15 @@ public enum Components {
                 public func encode(to encoder: any Encoder) throws {
                     var container = encoder.container(keyedBy: CodingKeys.self)
                     try container.encodeIfPresent(
-                        name,
+                        self.name,
                         forKey: .name
                     )
                     try container.encodeIfPresent(
-                        total_engaged_users,
+                        self.total_engaged_users,
                         forKey: .total_engaged_users
                     )
                     try container.encodeIfPresent(
-                        models,
+                        self.models,
                         forKey: .models
                     )
                     try encoder.encodeAdditionalProperties(additionalProperties)
@@ -1734,15 +1743,15 @@ public enum Components {
             }
             public init(from decoder: any Decoder) throws {
                 let container = try decoder.container(keyedBy: CodingKeys.self)
-                total_engaged_users = try container.decodeIfPresent(
+                self.total_engaged_users = try container.decodeIfPresent(
                     Swift.Int.self,
                     forKey: .total_engaged_users
                 )
-                languages = try container.decodeIfPresent(
+                self.languages = try container.decodeIfPresent(
                     Components.Schemas.copilot_hyphen_ide_hyphen_code_hyphen_completions.languagesPayload.self,
                     forKey: .languages
                 )
-                editors = try container.decodeIfPresent(
+                self.editors = try container.decodeIfPresent(
                     Components.Schemas.copilot_hyphen_ide_hyphen_code_hyphen_completions.editorsPayload.self,
                     forKey: .editors
                 )
@@ -1755,15 +1764,15 @@ public enum Components {
             public func encode(to encoder: any Encoder) throws {
                 var container = encoder.container(keyedBy: CodingKeys.self)
                 try container.encodeIfPresent(
-                    total_engaged_users,
+                    self.total_engaged_users,
                     forKey: .total_engaged_users
                 )
                 try container.encodeIfPresent(
-                    languages,
+                    self.languages,
                     forKey: .languages
                 )
                 try container.encodeIfPresent(
-                    editors,
+                    self.editors,
                     forKey: .editors
                 )
                 try encoder.encodeAdditionalProperties(additionalProperties)
@@ -1912,11 +1921,11 @@ public enum Components {
             }
             public init(from decoder: any Decoder) throws {
                 let container = try decoder.container(keyedBy: CodingKeys.self)
-                total_engaged_users = try container.decodeIfPresent(
+                self.total_engaged_users = try container.decodeIfPresent(
                     Swift.Int.self,
                     forKey: .total_engaged_users
                 )
-                editors = try container.decodeIfPresent(
+                self.editors = try container.decodeIfPresent(
                     Components.Schemas.copilot_hyphen_ide_hyphen_chat.editorsPayload.self,
                     forKey: .editors
                 )
@@ -1928,11 +1937,11 @@ public enum Components {
             public func encode(to encoder: any Encoder) throws {
                 var container = encoder.container(keyedBy: CodingKeys.self)
                 try container.encodeIfPresent(
-                    total_engaged_users,
+                    self.total_engaged_users,
                     forKey: .total_engaged_users
                 )
                 try container.encodeIfPresent(
-                    editors,
+                    self.editors,
                     forKey: .editors
                 )
                 try encoder.encodeAdditionalProperties(additionalProperties)
@@ -2028,11 +2037,11 @@ public enum Components {
             }
             public init(from decoder: any Decoder) throws {
                 let container = try decoder.container(keyedBy: CodingKeys.self)
-                total_engaged_users = try container.decodeIfPresent(
+                self.total_engaged_users = try container.decodeIfPresent(
                     Swift.Int.self,
                     forKey: .total_engaged_users
                 )
-                models = try container.decodeIfPresent(
+                self.models = try container.decodeIfPresent(
                     Components.Schemas.copilot_hyphen_dotcom_hyphen_chat.modelsPayload.self,
                     forKey: .models
                 )
@@ -2044,11 +2053,11 @@ public enum Components {
             public func encode(to encoder: any Encoder) throws {
                 var container = encoder.container(keyedBy: CodingKeys.self)
                 try container.encodeIfPresent(
-                    total_engaged_users,
+                    self.total_engaged_users,
                     forKey: .total_engaged_users
                 )
                 try container.encodeIfPresent(
-                    models,
+                    self.models,
                     forKey: .models
                 )
                 try encoder.encodeAdditionalProperties(additionalProperties)
@@ -2183,11 +2192,11 @@ public enum Components {
             }
             public init(from decoder: any Decoder) throws {
                 let container = try decoder.container(keyedBy: CodingKeys.self)
-                total_engaged_users = try container.decodeIfPresent(
+                self.total_engaged_users = try container.decodeIfPresent(
                     Swift.Int.self,
                     forKey: .total_engaged_users
                 )
-                repositories = try container.decodeIfPresent(
+                self.repositories = try container.decodeIfPresent(
                     Components.Schemas.copilot_hyphen_dotcom_hyphen_pull_hyphen_requests.repositoriesPayload.self,
                     forKey: .repositories
                 )
@@ -2199,11 +2208,11 @@ public enum Components {
             public func encode(to encoder: any Encoder) throws {
                 var container = encoder.container(keyedBy: CodingKeys.self)
                 try container.encodeIfPresent(
-                    total_engaged_users,
+                    self.total_engaged_users,
                     forKey: .total_engaged_users
                 )
                 try container.encodeIfPresent(
-                    repositories,
+                    self.repositories,
                     forKey: .repositories
                 )
                 try encoder.encodeAdditionalProperties(additionalProperties)
@@ -2276,31 +2285,31 @@ public enum Components {
             }
             public init(from decoder: any Decoder) throws {
                 let container = try decoder.container(keyedBy: CodingKeys.self)
-                date = try container.decode(
+                self.date = try container.decode(
                     Swift.String.self,
                     forKey: .date
                 )
-                total_active_users = try container.decodeIfPresent(
+                self.total_active_users = try container.decodeIfPresent(
                     Swift.Int.self,
                     forKey: .total_active_users
                 )
-                total_engaged_users = try container.decodeIfPresent(
+                self.total_engaged_users = try container.decodeIfPresent(
                     Swift.Int.self,
                     forKey: .total_engaged_users
                 )
-                copilot_ide_code_completions = try container.decodeIfPresent(
+                self.copilot_ide_code_completions = try container.decodeIfPresent(
                     Components.Schemas.copilot_hyphen_ide_hyphen_code_hyphen_completions.self,
                     forKey: .copilot_ide_code_completions
                 )
-                copilot_ide_chat = try container.decodeIfPresent(
+                self.copilot_ide_chat = try container.decodeIfPresent(
                     Components.Schemas.copilot_hyphen_ide_hyphen_chat.self,
                     forKey: .copilot_ide_chat
                 )
-                copilot_dotcom_chat = try container.decodeIfPresent(
+                self.copilot_dotcom_chat = try container.decodeIfPresent(
                     Components.Schemas.copilot_hyphen_dotcom_hyphen_chat.self,
                     forKey: .copilot_dotcom_chat
                 )
-                copilot_dotcom_pull_requests = try container.decodeIfPresent(
+                self.copilot_dotcom_pull_requests = try container.decodeIfPresent(
                     Components.Schemas.copilot_hyphen_dotcom_hyphen_pull_hyphen_requests.self,
                     forKey: .copilot_dotcom_pull_requests
                 )
@@ -2317,31 +2326,31 @@ public enum Components {
             public func encode(to encoder: any Encoder) throws {
                 var container = encoder.container(keyedBy: CodingKeys.self)
                 try container.encode(
-                    date,
+                    self.date,
                     forKey: .date
                 )
                 try container.encodeIfPresent(
-                    total_active_users,
+                    self.total_active_users,
                     forKey: .total_active_users
                 )
                 try container.encodeIfPresent(
-                    total_engaged_users,
+                    self.total_engaged_users,
                     forKey: .total_engaged_users
                 )
                 try container.encodeIfPresent(
-                    copilot_ide_code_completions,
+                    self.copilot_ide_code_completions,
                     forKey: .copilot_ide_code_completions
                 )
                 try container.encodeIfPresent(
-                    copilot_ide_chat,
+                    self.copilot_ide_chat,
                     forKey: .copilot_ide_chat
                 )
                 try container.encodeIfPresent(
-                    copilot_dotcom_chat,
+                    self.copilot_dotcom_chat,
                     forKey: .copilot_dotcom_chat
                 )
                 try container.encodeIfPresent(
-                    copilot_dotcom_pull_requests,
+                    self.copilot_dotcom_pull_requests,
                     forKey: .copilot_dotcom_pull_requests
                 )
                 try encoder.encodeAdditionalProperties(additionalProperties)
@@ -2733,6 +2742,14 @@ public enum Operations {
             ///
             /// HTTP response code: `422 unprocessableContent`.
             case unprocessableContent(Operations.copilot_sol_get_hyphen_copilot_hyphen_organization_hyphen_details.Output.UnprocessableContent)
+            /// There is a problem with your account's associated payment method.
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/copilot/billing/get(copilot/get-copilot-organization-details)/responses/422`.
+            ///
+            /// HTTP response code: `422 unprocessableContent`.
+            public static var unprocessableContent: Self {
+                .unprocessableContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
@@ -3343,6 +3360,14 @@ public enum Operations {
             ///
             /// HTTP response code: `422 unprocessableContent`.
             case unprocessableContent(Operations.copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_teams.Output.UnprocessableContent)
+            /// Copilot Business or Enterprise is not enabled for this organization, billing has not been set up for this organization, a public code suggestions policy has not been set for this organization, or the organization's Copilot access setting is set to enable Copilot for all users or is unconfigured.
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/copilot/billing/selected_teams/post(copilot/add-copilot-seats-for-teams)/responses/422`.
+            ///
+            /// HTTP response code: `422 unprocessableContent`.
+            public static var unprocessableContent: Self {
+                .unprocessableContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
@@ -3648,6 +3673,14 @@ public enum Operations {
             ///
             /// HTTP response code: `422 unprocessableContent`.
             case unprocessableContent(Operations.copilot_sol_cancel_hyphen_copilot_hyphen_seat_hyphen_assignment_hyphen_for_hyphen_teams.Output.UnprocessableContent)
+            /// Copilot Business or Enterprise is not enabled for this organization, billing has not been set up for this organization, a public code suggestions policy has not been set for this organization, or the organization's Copilot access setting is set to enable Copilot for all users or is unconfigured.
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/copilot/billing/selected_teams/delete(copilot/cancel-copilot-seat-assignment-for-teams)/responses/422`.
+            ///
+            /// HTTP response code: `422 unprocessableContent`.
+            public static var unprocessableContent: Self {
+                .unprocessableContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
@@ -3954,6 +3987,14 @@ public enum Operations {
             ///
             /// HTTP response code: `422 unprocessableContent`.
             case unprocessableContent(Operations.copilot_sol_add_hyphen_copilot_hyphen_seats_hyphen_for_hyphen_users.Output.UnprocessableContent)
+            /// Copilot Business or Enterprise is not enabled for this organization, billing has not been set up for this organization, a public code suggestions policy has not been set for this organization, or the organization's Copilot access setting is set to enable Copilot for all users or is unconfigured.
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/copilot/billing/selected_users/post(copilot/add-copilot-seats-for-users)/responses/422`.
+            ///
+            /// HTTP response code: `422 unprocessableContent`.
+            public static var unprocessableContent: Self {
+                .unprocessableContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
@@ -4259,6 +4300,14 @@ public enum Operations {
             ///
             /// HTTP response code: `422 unprocessableContent`.
             case unprocessableContent(Operations.copilot_sol_cancel_hyphen_copilot_hyphen_seat_hyphen_assignment_hyphen_for_hyphen_users.Output.UnprocessableContent)
+            /// Copilot Business or Enterprise is not enabled for this organization, billing has not been set up for this organization, a public code suggestions policy has not been set for this organization, the seat management setting is set to enable Copilot for all users or is unconfigured, or a user's seat cannot be cancelled because it was assigned to them via a team.
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/copilot/billing/selected_users/delete(copilot/cancel-copilot-seat-assignment-for-users)/responses/422`.
+            ///
+            /// HTTP response code: `422 unprocessableContent`.
+            public static var unprocessableContent: Self {
+                .unprocessableContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
@@ -4806,6 +4855,14 @@ public enum Operations {
             ///
             /// HTTP response code: `422 unprocessableContent`.
             case unprocessableContent(Operations.copilot_sol_get_hyphen_copilot_hyphen_seat_hyphen_details_hyphen_for_hyphen_user.Output.UnprocessableContent)
+            /// Copilot Business or Enterprise is not enabled for this organization or the user has a pending organization invitation.
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/members/{username}/copilot/get(copilot/get-copilot-seat-details-for-user)/responses/422`.
+            ///
+            /// HTTP response code: `422 unprocessableContent`.
+            public static var unprocessableContent: Self {
+                .unprocessableContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
