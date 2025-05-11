@@ -813,6 +813,15 @@ extension APIProtocol {
 
 /// Server URLs defined in the OpenAPI document.
 public enum Servers {
+    public enum Server1 {
+        public static func url() throws -> Foundation.URL {
+            try Foundation.URL(
+                validatingOpenAPIServerURL: "https://api.github.com",
+                variables: []
+            )
+        }
+    }
+    @available(*, deprecated, renamed: "Servers.Server1.url")
     public static func server1() throws -> Foundation.URL {
         try Foundation.URL(
             validatingOpenAPIServerURL: "https://api.github.com",
@@ -1200,7 +1209,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/advanced_security`.
             public struct advanced_securityPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/advanced_security/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
@@ -1222,7 +1231,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/code_security`.
             public struct code_securityPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/code_security/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
@@ -1248,7 +1257,7 @@ public enum Components {
                 /// The enablement status of Dependabot security updates for the repository.
                 ///
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/dependabot_security_updates/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
@@ -1274,7 +1283,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning`.
             public struct secret_scanningPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
@@ -1296,7 +1305,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_push_protection`.
             public struct secret_scanning_push_protectionPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_push_protection/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
@@ -1318,7 +1327,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_non_provider_patterns`.
             public struct secret_scanning_non_provider_patternsPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_non_provider_patterns/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
@@ -1340,7 +1349,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_ai_detection`.
             public struct secret_scanning_ai_detectionPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_ai_detection/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
@@ -2028,7 +2037,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/package/name`.
             public var name: Swift.String
             /// - Remark: Generated from `#/components/schemas/package/package_type`.
-            @frozen public enum package_typePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum package_typePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case npm = "npm"
                 case maven = "maven"
                 case rubygems = "rubygems"
@@ -2047,7 +2056,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/package/version_count`.
             public var version_count: Swift.Int
             /// - Remark: Generated from `#/components/schemas/package/visibility`.
-            @frozen public enum visibilityPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum visibilityPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case _private = "private"
                 case _public = "public"
             }
@@ -2145,7 +2154,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/package-version/metadata`.
             public struct metadataPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/package-version/metadata/package_type`.
-                @frozen public enum package_typePayload: String, Codable, Hashable, Sendable {
+                @frozen public enum package_typePayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case npm = "npm"
                     case maven = "maven"
                     case rubygems = "rubygems"
@@ -2290,7 +2299,7 @@ public enum Components {
         /// For the list of GitHub Packages registries that support granular permissions, see "[About permissions for GitHub Packages](https://docs.github.com/packages/learn-github-packages/about-permissions-for-github-packages#granular-permissions-for-userorganization-scoped-packages)."
         ///
         /// - Remark: Generated from `#/components/parameters/package-visibility`.
-        @frozen public enum package_hyphen_visibility: String, Codable, Hashable, Sendable {
+        @frozen public enum package_hyphen_visibility: String, Codable, Hashable, Sendable, CaseIterable {
             case _public = "public"
             case _private = "private"
             case _internal = "internal"
@@ -2298,7 +2307,7 @@ public enum Components {
         /// The type of supported package. Packages in GitHub's Gradle registry have the type `maven`. Docker images pushed to GitHub's Container registry (`ghcr.io`) have the type `container`. You can use the type `docker` to find images that were pushed to GitHub's Docker registry (`docker.pkg.github.com`), even if these have now been migrated to the Container registry.
         ///
         /// - Remark: Generated from `#/components/parameters/package-type`.
-        @frozen public enum package_hyphen_type: String, Codable, Hashable, Sendable {
+        @frozen public enum package_hyphen_type: String, Codable, Hashable, Sendable, CaseIterable {
             case npm = "npm"
             case maven = "maven"
             case rubygems = "rubygems"
@@ -2623,7 +2632,7 @@ public enum Operations {
             /// - Remark: Generated from `#/paths/orgs/{org}/packages/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/orgs/{org}/packages/GET/query/package_type`.
-                @frozen public enum package_typePayload: String, Codable, Hashable, Sendable {
+                @frozen public enum package_typePayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case npm = "npm"
                     case maven = "maven"
                     case rubygems = "rubygems"
@@ -2636,7 +2645,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/packages/GET/query/package_type`.
                 public var package_type: Operations.packages_sol_list_hyphen_packages_hyphen_for_hyphen_organization.Input.Query.package_typePayload
                 /// - Remark: Generated from `#/components/parameters/package-visibility`.
-                @frozen public enum package_hyphen_visibility: String, Codable, Hashable, Sendable {
+                @frozen public enum package_hyphen_visibility: String, Codable, Hashable, Sendable, CaseIterable {
                     case _public = "public"
                     case _private = "private"
                     case _internal = "internal"
@@ -2808,6 +2817,14 @@ public enum Operations {
             ///
             /// HTTP response code: `400 badRequest`.
             case badRequest(Components.Responses.package_es_list_error)
+            /// The value of `per_page` multiplied by `page` cannot be greater than 10000.
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/packages/get(packages/list-packages-for-organization)/responses/400`.
+            ///
+            /// HTTP response code: `400 badRequest`.
+            public static var badRequest: Self {
+                .badRequest(.init())
+            }
             /// The associated value of the enum case if `self` is `.badRequest`.
             ///
             /// - Throws: An error if `self` is not `.badRequest`.
@@ -2870,7 +2887,7 @@ public enum Operations {
             /// - Remark: Generated from `#/paths/orgs/{org}/packages/{package_type}/{package_name}/GET/path`.
             public struct Path: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/parameters/package-type`.
-                @frozen public enum package_hyphen_type: String, Codable, Hashable, Sendable {
+                @frozen public enum package_hyphen_type: String, Codable, Hashable, Sendable, CaseIterable {
                     case npm = "npm"
                     case maven = "maven"
                     case rubygems = "rubygems"
@@ -3031,7 +3048,7 @@ public enum Operations {
             /// - Remark: Generated from `#/paths/orgs/{org}/packages/{package_type}/{package_name}/DELETE/path`.
             public struct Path: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/parameters/package-type`.
-                @frozen public enum package_hyphen_type: String, Codable, Hashable, Sendable {
+                @frozen public enum package_hyphen_type: String, Codable, Hashable, Sendable, CaseIterable {
                     case npm = "npm"
                     case maven = "maven"
                     case rubygems = "rubygems"
@@ -3104,6 +3121,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.packages_sol_delete_hyphen_package_hyphen_for_hyphen_org.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/packages/{package_type}/{package_name}/delete(packages/delete-package-for-org)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -3241,7 +3266,7 @@ public enum Operations {
             /// - Remark: Generated from `#/paths/orgs/{org}/packages/{package_type}/{package_name}/restore/POST/path`.
             public struct Path: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/parameters/package-type`.
-                @frozen public enum package_hyphen_type: String, Codable, Hashable, Sendable {
+                @frozen public enum package_hyphen_type: String, Codable, Hashable, Sendable, CaseIterable {
                     case npm = "npm"
                     case maven = "maven"
                     case rubygems = "rubygems"
@@ -3332,6 +3357,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.packages_sol_restore_hyphen_package_hyphen_for_hyphen_org.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/packages/{package_type}/{package_name}/restore/post(packages/restore-package-for-org)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -3463,7 +3496,7 @@ public enum Operations {
             /// - Remark: Generated from `#/paths/orgs/{org}/packages/{package_type}/{package_name}/versions/GET/path`.
             public struct Path: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/parameters/package-type`.
-                @frozen public enum package_hyphen_type: String, Codable, Hashable, Sendable {
+                @frozen public enum package_hyphen_type: String, Codable, Hashable, Sendable, CaseIterable {
                     case npm = "npm"
                     case maven = "maven"
                     case rubygems = "rubygems"
@@ -3511,7 +3544,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/orgs/{org}/packages/{package_type}/{package_name}/versions/GET/query/per_page`.
                 public var per_page: Components.Parameters.per_hyphen_page?
                 /// - Remark: Generated from `#/paths/orgs/{org}/packages/{package_type}/{package_name}/versions/GET/query/state`.
-                @frozen public enum statePayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statePayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case active = "active"
                     case deleted = "deleted"
                 }
@@ -3730,7 +3763,7 @@ public enum Operations {
             /// - Remark: Generated from `#/paths/orgs/{org}/packages/{package_type}/{package_name}/versions/{package_version_id}/GET/path`.
             public struct Path: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/parameters/package-type`.
-                @frozen public enum package_hyphen_type: String, Codable, Hashable, Sendable {
+                @frozen public enum package_hyphen_type: String, Codable, Hashable, Sendable, CaseIterable {
                     case npm = "npm"
                     case maven = "maven"
                     case rubygems = "rubygems"
@@ -3898,7 +3931,7 @@ public enum Operations {
             /// - Remark: Generated from `#/paths/orgs/{org}/packages/{package_type}/{package_name}/versions/{package_version_id}/DELETE/path`.
             public struct Path: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/parameters/package-type`.
-                @frozen public enum package_hyphen_type: String, Codable, Hashable, Sendable {
+                @frozen public enum package_hyphen_type: String, Codable, Hashable, Sendable, CaseIterable {
                     case npm = "npm"
                     case maven = "maven"
                     case rubygems = "rubygems"
@@ -3978,6 +4011,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.packages_sol_delete_hyphen_package_hyphen_version_hyphen_for_hyphen_org.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/packages/{package_type}/{package_name}/versions/{package_version_id}/delete(packages/delete-package-version-for-org)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -4115,7 +4156,7 @@ public enum Operations {
             /// - Remark: Generated from `#/paths/orgs/{org}/packages/{package_type}/{package_name}/versions/{package_version_id}/restore/POST/path`.
             public struct Path: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/parameters/package-type`.
-                @frozen public enum package_hyphen_type: String, Codable, Hashable, Sendable {
+                @frozen public enum package_hyphen_type: String, Codable, Hashable, Sendable, CaseIterable {
                     case npm = "npm"
                     case maven = "maven"
                     case rubygems = "rubygems"
@@ -4195,6 +4236,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.packages_sol_restore_hyphen_package_hyphen_version_hyphen_for_hyphen_org.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/packages/{package_type}/{package_name}/versions/{package_version_id}/restore/post(packages/restore-package-version-for-org)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -4440,7 +4489,7 @@ public enum Operations {
             /// - Remark: Generated from `#/paths/user/packages/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/user/packages/GET/query/package_type`.
-                @frozen public enum package_typePayload: String, Codable, Hashable, Sendable {
+                @frozen public enum package_typePayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case npm = "npm"
                     case maven = "maven"
                     case rubygems = "rubygems"
@@ -4453,7 +4502,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/user/packages/GET/query/package_type`.
                 public var package_type: Operations.packages_sol_list_hyphen_packages_hyphen_for_hyphen_authenticated_hyphen_user.Input.Query.package_typePayload
                 /// - Remark: Generated from `#/components/parameters/package-visibility`.
-                @frozen public enum package_hyphen_visibility: String, Codable, Hashable, Sendable {
+                @frozen public enum package_hyphen_visibility: String, Codable, Hashable, Sendable, CaseIterable {
                     case _public = "public"
                     case _private = "private"
                     case _internal = "internal"
@@ -4576,6 +4625,14 @@ public enum Operations {
             ///
             /// HTTP response code: `400 badRequest`.
             case badRequest(Components.Responses.package_es_list_error)
+            /// The value of `per_page` multiplied by `page` cannot be greater than 10000.
+            ///
+            /// - Remark: Generated from `#/paths//user/packages/get(packages/list-packages-for-authenticated-user)/responses/400`.
+            ///
+            /// HTTP response code: `400 badRequest`.
+            public static var badRequest: Self {
+                .badRequest(.init())
+            }
             /// The associated value of the enum case if `self` is `.badRequest`.
             ///
             /// - Throws: An error if `self` is not `.badRequest`.
@@ -4638,7 +4695,7 @@ public enum Operations {
             /// - Remark: Generated from `#/paths/user/packages/{package_type}/{package_name}/GET/path`.
             public struct Path: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/parameters/package-type`.
-                @frozen public enum package_hyphen_type: String, Codable, Hashable, Sendable {
+                @frozen public enum package_hyphen_type: String, Codable, Hashable, Sendable, CaseIterable {
                     case npm = "npm"
                     case maven = "maven"
                     case rubygems = "rubygems"
@@ -4790,7 +4847,7 @@ public enum Operations {
             /// - Remark: Generated from `#/paths/user/packages/{package_type}/{package_name}/DELETE/path`.
             public struct Path: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/parameters/package-type`.
-                @frozen public enum package_hyphen_type: String, Codable, Hashable, Sendable {
+                @frozen public enum package_hyphen_type: String, Codable, Hashable, Sendable, CaseIterable {
                     case npm = "npm"
                     case maven = "maven"
                     case rubygems = "rubygems"
@@ -4856,6 +4913,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.packages_sol_delete_hyphen_package_hyphen_for_hyphen_authenticated_hyphen_user.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//user/packages/{package_type}/{package_name}/delete(packages/delete-package-for-authenticated-user)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -4991,7 +5056,7 @@ public enum Operations {
             /// - Remark: Generated from `#/paths/user/packages/{package_type}/{package_name}/restore/POST/path`.
             public struct Path: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/parameters/package-type`.
-                @frozen public enum package_hyphen_type: String, Codable, Hashable, Sendable {
+                @frozen public enum package_hyphen_type: String, Codable, Hashable, Sendable, CaseIterable {
                     case npm = "npm"
                     case maven = "maven"
                     case rubygems = "rubygems"
@@ -5075,6 +5140,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.packages_sol_restore_hyphen_package_hyphen_for_hyphen_authenticated_hyphen_user.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//user/packages/{package_type}/{package_name}/restore/post(packages/restore-package-for-authenticated-user)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -5206,7 +5279,7 @@ public enum Operations {
             /// - Remark: Generated from `#/paths/user/packages/{package_type}/{package_name}/versions/GET/path`.
             public struct Path: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/parameters/package-type`.
-                @frozen public enum package_hyphen_type: String, Codable, Hashable, Sendable {
+                @frozen public enum package_hyphen_type: String, Codable, Hashable, Sendable, CaseIterable {
                     case npm = "npm"
                     case maven = "maven"
                     case rubygems = "rubygems"
@@ -5247,7 +5320,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/user/packages/{package_type}/{package_name}/versions/GET/query/per_page`.
                 public var per_page: Components.Parameters.per_hyphen_page?
                 /// - Remark: Generated from `#/paths/user/packages/{package_type}/{package_name}/versions/GET/query/state`.
-                @frozen public enum statePayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statePayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case active = "active"
                     case deleted = "deleted"
                 }
@@ -5466,7 +5539,7 @@ public enum Operations {
             /// - Remark: Generated from `#/paths/user/packages/{package_type}/{package_name}/versions/{package_version_id}/GET/path`.
             public struct Path: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/parameters/package-type`.
-                @frozen public enum package_hyphen_type: String, Codable, Hashable, Sendable {
+                @frozen public enum package_hyphen_type: String, Codable, Hashable, Sendable, CaseIterable {
                     case npm = "npm"
                     case maven = "maven"
                     case rubygems = "rubygems"
@@ -5627,7 +5700,7 @@ public enum Operations {
             /// - Remark: Generated from `#/paths/user/packages/{package_type}/{package_name}/versions/{package_version_id}/DELETE/path`.
             public struct Path: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/parameters/package-type`.
-                @frozen public enum package_hyphen_type: String, Codable, Hashable, Sendable {
+                @frozen public enum package_hyphen_type: String, Codable, Hashable, Sendable, CaseIterable {
                     case npm = "npm"
                     case maven = "maven"
                     case rubygems = "rubygems"
@@ -5700,6 +5773,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.packages_sol_delete_hyphen_package_hyphen_version_hyphen_for_hyphen_authenticated_hyphen_user.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//user/packages/{package_type}/{package_name}/versions/{package_version_id}/delete(packages/delete-package-version-for-authenticated-user)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -5835,7 +5916,7 @@ public enum Operations {
             /// - Remark: Generated from `#/paths/user/packages/{package_type}/{package_name}/versions/{package_version_id}/restore/POST/path`.
             public struct Path: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/parameters/package-type`.
-                @frozen public enum package_hyphen_type: String, Codable, Hashable, Sendable {
+                @frozen public enum package_hyphen_type: String, Codable, Hashable, Sendable, CaseIterable {
                     case npm = "npm"
                     case maven = "maven"
                     case rubygems = "rubygems"
@@ -5908,6 +5989,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.packages_sol_restore_hyphen_package_hyphen_version_hyphen_for_hyphen_authenticated_hyphen_user.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//user/packages/{package_type}/{package_name}/versions/{package_version_id}/restore/post(packages/restore-package-version-for-authenticated-user)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -6234,7 +6323,7 @@ public enum Operations {
             /// - Remark: Generated from `#/paths/users/{username}/packages/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/users/{username}/packages/GET/query/package_type`.
-                @frozen public enum package_typePayload: String, Codable, Hashable, Sendable {
+                @frozen public enum package_typePayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case npm = "npm"
                     case maven = "maven"
                     case rubygems = "rubygems"
@@ -6247,7 +6336,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/users/{username}/packages/GET/query/package_type`.
                 public var package_type: Operations.packages_sol_list_hyphen_packages_hyphen_for_hyphen_user.Input.Query.package_typePayload
                 /// - Remark: Generated from `#/components/parameters/package-visibility`.
-                @frozen public enum package_hyphen_visibility: String, Codable, Hashable, Sendable {
+                @frozen public enum package_hyphen_visibility: String, Codable, Hashable, Sendable, CaseIterable {
                     case _public = "public"
                     case _private = "private"
                     case _internal = "internal"
@@ -6419,6 +6508,14 @@ public enum Operations {
             ///
             /// HTTP response code: `400 badRequest`.
             case badRequest(Components.Responses.package_es_list_error)
+            /// The value of `per_page` multiplied by `page` cannot be greater than 10000.
+            ///
+            /// - Remark: Generated from `#/paths//users/{username}/packages/get(packages/list-packages-for-user)/responses/400`.
+            ///
+            /// HTTP response code: `400 badRequest`.
+            public static var badRequest: Self {
+                .badRequest(.init())
+            }
             /// The associated value of the enum case if `self` is `.badRequest`.
             ///
             /// - Throws: An error if `self` is not `.badRequest`.
@@ -6481,7 +6578,7 @@ public enum Operations {
             /// - Remark: Generated from `#/paths/users/{username}/packages/{package_type}/{package_name}/GET/path`.
             public struct Path: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/parameters/package-type`.
-                @frozen public enum package_hyphen_type: String, Codable, Hashable, Sendable {
+                @frozen public enum package_hyphen_type: String, Codable, Hashable, Sendable, CaseIterable {
                     case npm = "npm"
                     case maven = "maven"
                     case rubygems = "rubygems"
@@ -6642,7 +6739,7 @@ public enum Operations {
             /// - Remark: Generated from `#/paths/users/{username}/packages/{package_type}/{package_name}/DELETE/path`.
             public struct Path: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/parameters/package-type`.
-                @frozen public enum package_hyphen_type: String, Codable, Hashable, Sendable {
+                @frozen public enum package_hyphen_type: String, Codable, Hashable, Sendable, CaseIterable {
                     case npm = "npm"
                     case maven = "maven"
                     case rubygems = "rubygems"
@@ -6715,6 +6812,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.packages_sol_delete_hyphen_package_hyphen_for_hyphen_user.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//users/{username}/packages/{package_type}/{package_name}/delete(packages/delete-package-for-user)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -6852,7 +6957,7 @@ public enum Operations {
             /// - Remark: Generated from `#/paths/users/{username}/packages/{package_type}/{package_name}/restore/POST/path`.
             public struct Path: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/parameters/package-type`.
-                @frozen public enum package_hyphen_type: String, Codable, Hashable, Sendable {
+                @frozen public enum package_hyphen_type: String, Codable, Hashable, Sendable, CaseIterable {
                     case npm = "npm"
                     case maven = "maven"
                     case rubygems = "rubygems"
@@ -6943,6 +7048,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.packages_sol_restore_hyphen_package_hyphen_for_hyphen_user.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//users/{username}/packages/{package_type}/{package_name}/restore/post(packages/restore-package-for-user)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -7074,7 +7187,7 @@ public enum Operations {
             /// - Remark: Generated from `#/paths/users/{username}/packages/{package_type}/{package_name}/versions/GET/path`.
             public struct Path: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/parameters/package-type`.
-                @frozen public enum package_hyphen_type: String, Codable, Hashable, Sendable {
+                @frozen public enum package_hyphen_type: String, Codable, Hashable, Sendable, CaseIterable {
                     case npm = "npm"
                     case maven = "maven"
                     case rubygems = "rubygems"
@@ -7302,7 +7415,7 @@ public enum Operations {
             /// - Remark: Generated from `#/paths/users/{username}/packages/{package_type}/{package_name}/versions/{package_version_id}/GET/path`.
             public struct Path: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/parameters/package-type`.
-                @frozen public enum package_hyphen_type: String, Codable, Hashable, Sendable {
+                @frozen public enum package_hyphen_type: String, Codable, Hashable, Sendable, CaseIterable {
                     case npm = "npm"
                     case maven = "maven"
                     case rubygems = "rubygems"
@@ -7470,7 +7583,7 @@ public enum Operations {
             /// - Remark: Generated from `#/paths/users/{username}/packages/{package_type}/{package_name}/versions/{package_version_id}/DELETE/path`.
             public struct Path: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/parameters/package-type`.
-                @frozen public enum package_hyphen_type: String, Codable, Hashable, Sendable {
+                @frozen public enum package_hyphen_type: String, Codable, Hashable, Sendable, CaseIterable {
                     case npm = "npm"
                     case maven = "maven"
                     case rubygems = "rubygems"
@@ -7550,6 +7663,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.packages_sol_delete_hyphen_package_hyphen_version_hyphen_for_hyphen_user.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//users/{username}/packages/{package_type}/{package_name}/versions/{package_version_id}/delete(packages/delete-package-version-for-user)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -7687,7 +7808,7 @@ public enum Operations {
             /// - Remark: Generated from `#/paths/users/{username}/packages/{package_type}/{package_name}/versions/{package_version_id}/restore/POST/path`.
             public struct Path: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/parameters/package-type`.
-                @frozen public enum package_hyphen_type: String, Codable, Hashable, Sendable {
+                @frozen public enum package_hyphen_type: String, Codable, Hashable, Sendable, CaseIterable {
                     case npm = "npm"
                     case maven = "maven"
                     case rubygems = "rubygems"
@@ -7767,6 +7888,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.packages_sol_restore_hyphen_package_hyphen_version_hyphen_for_hyphen_user.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//users/{username}/packages/{package_type}/{package_name}/versions/{package_version_id}/restore/post(packages/restore-package-version-for-user)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
