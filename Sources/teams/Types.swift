@@ -1973,6 +1973,15 @@ extension APIProtocol {
 
 /// Server URLs defined in the OpenAPI document.
 public enum Servers {
+    public enum Server1 {
+        public static func url() throws -> Foundation.URL {
+            try Foundation.URL(
+                validatingOpenAPIServerURL: "https://api.github.com",
+                variables: []
+            )
+        }
+    }
+    @available(*, deprecated, renamed: "Servers.Server1.url")
     public static func server1() throws -> Foundation.URL {
         try Foundation.URL(
             validatingOpenAPIServerURL: "https://api.github.com",
@@ -2605,7 +2614,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/advanced_security`.
             public struct advanced_securityPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/advanced_security/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
@@ -2627,7 +2636,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/code_security`.
             public struct code_securityPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/code_security/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
@@ -2653,7 +2662,7 @@ public enum Components {
                 /// The enablement status of Dependabot security updates for the repository.
                 ///
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/dependabot_security_updates/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
@@ -2679,7 +2688,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning`.
             public struct secret_scanningPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
@@ -2701,7 +2710,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_push_protection`.
             public struct secret_scanning_push_protectionPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_push_protection/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
@@ -2723,7 +2732,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_non_provider_patterns`.
             public struct secret_scanning_non_provider_patternsPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_non_provider_patterns/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
@@ -2745,7 +2754,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_ai_detection`.
             public struct secret_scanning_ai_detectionPayload: Codable, Hashable, Sendable {
                 /// - Remark: Generated from `#/components/schemas/security-and-analysis/secret_scanning_ai_detection/status`.
-                @frozen public enum statusPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum statusPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case enabled = "enabled"
                     case disabled = "disabled"
                 }
@@ -4125,7 +4134,7 @@ public enum Components {
             /// The level of privacy this team should have
             ///
             /// - Remark: Generated from `#/components/schemas/team-full/privacy`.
-            @frozen public enum privacyPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum privacyPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case closed = "closed"
                 case secret = "secret"
             }
@@ -4136,7 +4145,7 @@ public enum Components {
             /// The notification setting the team has set
             ///
             /// - Remark: Generated from `#/components/schemas/team-full/notification_setting`.
-            @frozen public enum notification_settingPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum notification_settingPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case notifications_enabled = "notifications_enabled"
                 case notifications_disabled = "notifications_disabled"
             }
@@ -4492,7 +4501,7 @@ public enum Components {
             /// The role of the user in the team.
             ///
             /// - Remark: Generated from `#/components/schemas/team-membership/role`.
-            @frozen public enum rolePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum rolePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case member = "member"
                 case maintainer = "maintainer"
             }
@@ -4503,7 +4512,7 @@ public enum Components {
             /// The state of the user's membership in the team.
             ///
             /// - Remark: Generated from `#/components/schemas/team-membership/state`.
-            @frozen public enum statePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum statePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case active = "active"
                 case pending = "pending"
             }
@@ -5306,7 +5315,7 @@ public enum Components {
         /// The direction to sort the results by.
         ///
         /// - Remark: Generated from `#/components/parameters/direction`.
-        @frozen public enum direction: String, Codable, Hashable, Sendable {
+        @frozen public enum direction: String, Codable, Hashable, Sendable, CaseIterable {
             case asc = "asc"
             case desc = "desc"
         }
@@ -5708,7 +5717,7 @@ public enum Operations {
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/POST/requestBody/json/description`.
                     public var description: Swift.String?
-                    /// List GitHub IDs for organization members who will become team maintainers.
+                    /// List GitHub usernames for organization members who will become team maintainers.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/POST/requestBody/json/maintainers`.
                     public var maintainers: [Swift.String]?
@@ -5726,7 +5735,7 @@ public enum Operations {
                     /// Default for child team: `closed`
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/POST/requestBody/json/privacy`.
-                    @frozen public enum privacyPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum privacyPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case secret = "secret"
                         case closed = "closed"
                     }
@@ -5747,7 +5756,7 @@ public enum Operations {
                     /// Default: `notifications_enabled`
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/POST/requestBody/json/notification_setting`.
-                    @frozen public enum notification_settingPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum notification_settingPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case notifications_enabled = "notifications_enabled"
                         case notifications_disabled = "notifications_disabled"
                     }
@@ -5761,7 +5770,7 @@ public enum Operations {
                     /// **Closing down notice**. The permission that new repositories will be added to the team with when none is specified.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/POST/requestBody/json/permission`.
-                    @frozen public enum permissionPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum permissionPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case pull = "pull"
                         case push = "push"
                     }
@@ -5778,7 +5787,7 @@ public enum Operations {
                     /// - Parameters:
                     ///   - name: The name of the team.
                     ///   - description: The description of the team.
-                    ///   - maintainers: List GitHub IDs for organization members who will become team maintainers.
+                    ///   - maintainers: List GitHub usernames for organization members who will become team maintainers.
                     ///   - repo_names: The full name (e.g., "organization-name/repository-name") of repositories to add the team to.
                     ///   - privacy: The level of privacy this team should have. The options are:  
                     ///   - notification_setting: The notification setting the team has chosen. The options are:  
@@ -6198,7 +6207,7 @@ public enum Operations {
                     ///  * `closed` - visible to all members of this organization.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/PATCH/requestBody/json/privacy`.
-                    @frozen public enum privacyPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum privacyPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case secret = "secret"
                         case closed = "closed"
                     }
@@ -6216,7 +6225,7 @@ public enum Operations {
                     ///  * `notifications_disabled` - no one receives notifications.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/PATCH/requestBody/json/notification_setting`.
-                    @frozen public enum notification_settingPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum notification_settingPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case notifications_enabled = "notifications_enabled"
                         case notifications_disabled = "notifications_disabled"
                     }
@@ -6229,7 +6238,7 @@ public enum Operations {
                     /// **Closing down notice**. The permission that new repositories will be added to the team with when none is specified.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/PATCH/requestBody/json/permission`.
-                    @frozen public enum permissionPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum permissionPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case pull = "pull"
                         case push = "push"
                         case admin = "admin"
@@ -6555,6 +6564,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.teams_sol_delete_hyphen_in_hyphen_org.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/delete(teams/delete-in-org)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -6619,7 +6636,7 @@ public enum Operations {
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/parameters/direction`.
-                @frozen public enum direction: String, Codable, Hashable, Sendable {
+                @frozen public enum direction: String, Codable, Hashable, Sendable, CaseIterable {
                     case asc = "asc"
                     case desc = "desc"
                 }
@@ -7387,6 +7404,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.teams_sol_delete_hyphen_discussion_hyphen_in_hyphen_org.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/delete(teams/delete-discussion-in-org)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -7458,7 +7483,7 @@ public enum Operations {
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/parameters/direction`.
-                @frozen public enum direction: String, Codable, Hashable, Sendable {
+                @frozen public enum direction: String, Codable, Hashable, Sendable, CaseIterable {
                     case asc = "asc"
                     case desc = "desc"
                 }
@@ -8219,6 +8244,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.teams_sol_delete_hyphen_discussion_hyphen_comment_hyphen_in_hyphen_org.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/discussions/{discussion_number}/comments/{comment_number}/delete(teams/delete-discussion-comment-in-org)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -8470,7 +8503,7 @@ public enum Operations {
             /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/members/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/members/GET/query/role`.
-                @frozen public enum rolePayload: String, Codable, Hashable, Sendable {
+                @frozen public enum rolePayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case member = "member"
                     case maintainer = "maintainer"
                     case all = "all"
@@ -8771,6 +8804,14 @@ public enum Operations {
             ///
             /// HTTP response code: `404 notFound`.
             case notFound(Operations.teams_sol_get_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org.Output.NotFound)
+            /// if user has no team membership
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/memberships/{username}/get(teams/get-membership-for-user-in-org)/responses/404`.
+            ///
+            /// HTTP response code: `404 notFound`.
+            public static var notFound: Self {
+                .notFound(.init())
+            }
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
@@ -8890,7 +8931,7 @@ public enum Operations {
                     /// The role that this user should have in the team.
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/memberships/{username}/PUT/requestBody/json/role`.
-                    @frozen public enum rolePayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum rolePayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case member = "member"
                         case maintainer = "maintainer"
                     }
@@ -8991,6 +9032,14 @@ public enum Operations {
             ///
             /// HTTP response code: `403 forbidden`.
             case forbidden(Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org.Output.Forbidden)
+            /// Forbidden if team synchronization is set up
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/memberships/{username}/put(teams/add-or-update-membership-for-user-in-org)/responses/403`.
+            ///
+            /// HTTP response code: `403 forbidden`.
+            public static var forbidden: Self {
+                .forbidden(.init())
+            }
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
@@ -9018,6 +9067,14 @@ public enum Operations {
             ///
             /// HTTP response code: `422 unprocessableContent`.
             case unprocessableContent(Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org.Output.UnprocessableContent)
+            /// Unprocessable Entity if you attempt to add an organization to a team
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/memberships/{username}/put(teams/add-or-update-membership-for-user-in-org)/responses/422`.
+            ///
+            /// HTTP response code: `422 unprocessableContent`.
+            public static var unprocessableContent: Self {
+                .unprocessableContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
@@ -9133,6 +9190,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.teams_sol_remove_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/memberships/{username}/delete(teams/remove-membership-for-user-in-org)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -9160,6 +9225,14 @@ public enum Operations {
             ///
             /// HTTP response code: `403 forbidden`.
             case forbidden(Operations.teams_sol_remove_hyphen_membership_hyphen_for_hyphen_user_hyphen_in_hyphen_org.Output.Forbidden)
+            /// Forbidden if team synchronization is set up
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/memberships/{username}/delete(teams/remove-membership-for-user-in-org)/responses/403`.
+            ///
+            /// HTTP response code: `403 forbidden`.
+            public static var forbidden: Self {
+                .forbidden(.init())
+            }
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
@@ -9501,6 +9574,14 @@ public enum Operations {
             ///
             /// HTTP response code: `404 notFound`.
             case notFound(Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_project_hyphen_in_hyphen_org.Output.NotFound)
+            /// Not Found if project is not managed by this team
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/projects/{project_id}/get(teams/check-permissions-for-project-in-org)/responses/404`.
+            ///
+            /// HTTP response code: `404 notFound`.
+            public static var notFound: Self {
+                .notFound(.init())
+            }
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
@@ -9610,7 +9691,7 @@ public enum Operations {
                     /// The permission to grant to the team for this project. Default: the team's `permission` attribute will be used to determine what permission to grant the team on this project. Note that, if you choose not to pass any parameters, you'll need to set `Content-Length` to zero when calling this endpoint. For more information, see "[HTTP method](https://docs.github.com/rest/guides/getting-started-with-the-rest-api#http-method)."
                     ///
                     /// - Remark: Generated from `#/paths/orgs/{org}/teams/{team_slug}/projects/{project_id}/PUT/requestBody/json/permission`.
-                    @frozen public enum permissionPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum permissionPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case read = "read"
                         case write = "write"
                         case admin = "admin"
@@ -9661,6 +9742,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_in_hyphen_org.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/projects/{project_id}/put(teams/add-or-update-project-permissions-in-org)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -9844,6 +9933,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.teams_sol_remove_hyphen_project_hyphen_in_hyphen_org.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/projects/{project_id}/delete(teams/remove-project-in-org)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -10200,6 +10297,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_repo_hyphen_in_hyphen_org.Output.NoContent)
+            /// Response if team has permission for the repository. This is the response when the repository media type hasn't been provded in the Accept header.
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}/get(teams/check-permissions-for-repo-in-org)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -10227,6 +10332,14 @@ public enum Operations {
             ///
             /// HTTP response code: `404 notFound`.
             case notFound(Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_repo_hyphen_in_hyphen_org.Output.NotFound)
+            /// Not Found if team does not have permission for the repository
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}/get(teams/check-permissions-for-repo-in-org)/responses/404`.
+            ///
+            /// HTTP response code: `404 notFound`.
+            public static var notFound: Self {
+                .notFound(.init())
+            }
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
@@ -10374,6 +10487,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_repo_hyphen_permissions_hyphen_in_hyphen_org.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}/put(teams/add-or-update-repo-permissions-in-org)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -10466,6 +10587,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.teams_sol_remove_hyphen_repo_hyphen_in_hyphen_org.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//orgs/{org}/teams/{team_slug}/repos/{owner}/{repo}/delete(teams/remove-repo-in-org)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -10897,7 +11026,7 @@ public enum Operations {
                     ///  * `closed` - visible to all members of this organization.
                     ///
                     /// - Remark: Generated from `#/paths/teams/{team_id}/PATCH/requestBody/json/privacy`.
-                    @frozen public enum privacyPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum privacyPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case secret = "secret"
                         case closed = "closed"
                     }
@@ -10915,7 +11044,7 @@ public enum Operations {
                     ///  * `notifications_disabled` - no one receives notifications.
                     ///
                     /// - Remark: Generated from `#/paths/teams/{team_id}/PATCH/requestBody/json/notification_setting`.
-                    @frozen public enum notification_settingPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum notification_settingPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case notifications_enabled = "notifications_enabled"
                         case notifications_disabled = "notifications_disabled"
                     }
@@ -10928,7 +11057,7 @@ public enum Operations {
                     /// **Closing down notice**. The permission that new repositories will be added to the team with when none is specified.
                     ///
                     /// - Remark: Generated from `#/paths/teams/{team_id}/PATCH/requestBody/json/permission`.
-                    @frozen public enum permissionPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum permissionPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case pull = "pull"
                         case push = "push"
                         case admin = "admin"
@@ -11262,6 +11391,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.teams_sol_delete_hyphen_legacy.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//teams/{team_id}/delete(teams/delete-legacy)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -11388,7 +11525,7 @@ public enum Operations {
             /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/parameters/direction`.
-                @frozen public enum direction: String, Codable, Hashable, Sendable {
+                @frozen public enum direction: String, Codable, Hashable, Sendable, CaseIterable {
                     case asc = "asc"
                     case desc = "desc"
                 }
@@ -12119,6 +12256,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.teams_sol_delete_hyphen_discussion_hyphen_legacy.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/{discussion_number}/delete(teams/delete-discussion-legacy)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -12183,7 +12328,7 @@ public enum Operations {
             /// - Remark: Generated from `#/paths/teams/{team_id}/discussions/{discussion_number}/comments/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/parameters/direction`.
-                @frozen public enum direction: String, Codable, Hashable, Sendable {
+                @frozen public enum direction: String, Codable, Hashable, Sendable, CaseIterable {
                     case asc = "asc"
                     case desc = "desc"
                 }
@@ -12916,6 +13061,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.teams_sol_delete_hyphen_discussion_hyphen_comment_hyphen_legacy.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//teams/{team_id}/discussions/{discussion_number}/comments/{comment_number}/delete(teams/delete-discussion-comment-legacy)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -13150,7 +13303,7 @@ public enum Operations {
             /// - Remark: Generated from `#/paths/teams/{team_id}/members/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/paths/teams/{team_id}/members/GET/query/role`.
-                @frozen public enum rolePayload: String, Codable, Hashable, Sendable {
+                @frozen public enum rolePayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case member = "member"
                     case maintainer = "maintainer"
                     case all = "all"
@@ -13393,6 +13546,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.teams_sol_get_hyphen_member_hyphen_legacy.Output.NoContent)
+            /// if user is a member
+            ///
+            /// - Remark: Generated from `#/paths//teams/{team_id}/members/{username}/get(teams/get-member-legacy)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -13420,6 +13581,14 @@ public enum Operations {
             ///
             /// HTTP response code: `404 notFound`.
             case notFound(Operations.teams_sol_get_hyphen_member_hyphen_legacy.Output.NotFound)
+            /// if user is not a member
+            ///
+            /// - Remark: Generated from `#/paths//teams/{team_id}/members/{username}/get(teams/get-member-legacy)/responses/404`.
+            ///
+            /// HTTP response code: `404 notFound`.
+            public static var notFound: Self {
+                .notFound(.init())
+            }
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
@@ -13523,6 +13692,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.teams_sol_add_hyphen_member_hyphen_legacy.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//teams/{team_id}/members/{username}/put(teams/add-member-legacy)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -13550,6 +13727,14 @@ public enum Operations {
             ///
             /// HTTP response code: `404 notFound`.
             case notFound(Operations.teams_sol_add_hyphen_member_hyphen_legacy.Output.NotFound)
+            /// Not Found if team synchronization is set up
+            ///
+            /// - Remark: Generated from `#/paths//teams/{team_id}/members/{username}/put(teams/add-member-legacy)/responses/404`.
+            ///
+            /// HTTP response code: `404 notFound`.
+            public static var notFound: Self {
+                .notFound(.init())
+            }
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
@@ -13577,6 +13762,14 @@ public enum Operations {
             ///
             /// HTTP response code: `422 unprocessableContent`.
             case unprocessableContent(Operations.teams_sol_add_hyphen_member_hyphen_legacy.Output.UnprocessableContent)
+            /// Unprocessable Entity if you attempt to add an organization to a team or you attempt to add a user to a team when they are not a member of at least one other team in the same organization
+            ///
+            /// - Remark: Generated from `#/paths//teams/{team_id}/members/{username}/put(teams/add-member-legacy)/responses/422`.
+            ///
+            /// HTTP response code: `422 unprocessableContent`.
+            public static var unprocessableContent: Self {
+                .unprocessableContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
@@ -13709,6 +13902,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.teams_sol_remove_hyphen_member_hyphen_legacy.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//teams/{team_id}/members/{username}/delete(teams/remove-member-legacy)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -13736,6 +13937,14 @@ public enum Operations {
             ///
             /// HTTP response code: `404 notFound`.
             case notFound(Operations.teams_sol_remove_hyphen_member_hyphen_legacy.Output.NotFound)
+            /// Not Found if team synchronization is setup
+            ///
+            /// - Remark: Generated from `#/paths//teams/{team_id}/members/{username}/delete(teams/remove-member-legacy)/responses/404`.
+            ///
+            /// HTTP response code: `404 notFound`.
+            public static var notFound: Self {
+                .notFound(.init())
+            }
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
@@ -13997,7 +14206,7 @@ public enum Operations {
                     /// The role that this user should have in the team.
                     ///
                     /// - Remark: Generated from `#/paths/teams/{team_id}/memberships/{username}/PUT/requestBody/json/role`.
-                    @frozen public enum rolePayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum rolePayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case member = "member"
                         case maintainer = "maintainer"
                     }
@@ -14098,6 +14307,14 @@ public enum Operations {
             ///
             /// HTTP response code: `403 forbidden`.
             case forbidden(Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy.Output.Forbidden)
+            /// Forbidden if team synchronization is set up
+            ///
+            /// - Remark: Generated from `#/paths//teams/{team_id}/memberships/{username}/put(teams/add-or-update-membership-for-user-legacy)/responses/403`.
+            ///
+            /// HTTP response code: `403 forbidden`.
+            public static var forbidden: Self {
+                .forbidden(.init())
+            }
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
@@ -14125,6 +14342,14 @@ public enum Operations {
             ///
             /// HTTP response code: `422 unprocessableContent`.
             case unprocessableContent(Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy.Output.UnprocessableContent)
+            /// Unprocessable Entity if you attempt to add an organization to a team
+            ///
+            /// - Remark: Generated from `#/paths//teams/{team_id}/memberships/{username}/put(teams/add-or-update-membership-for-user-legacy)/responses/422`.
+            ///
+            /// HTTP response code: `422 unprocessableContent`.
+            public static var unprocessableContent: Self {
+                .unprocessableContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
@@ -14256,6 +14481,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.teams_sol_remove_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//teams/{team_id}/memberships/{username}/delete(teams/remove-membership-for-user-legacy)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -14283,6 +14516,14 @@ public enum Operations {
             ///
             /// HTTP response code: `403 forbidden`.
             case forbidden(Operations.teams_sol_remove_hyphen_membership_hyphen_for_hyphen_user_hyphen_legacy.Output.Forbidden)
+            /// if team synchronization is set up
+            ///
+            /// - Remark: Generated from `#/paths//teams/{team_id}/memberships/{username}/delete(teams/remove-membership-for-user-legacy)/responses/403`.
+            ///
+            /// HTTP response code: `403 forbidden`.
+            public static var forbidden: Self {
+                .forbidden(.init())
+            }
             /// The associated value of the enum case if `self` is `.forbidden`.
             ///
             /// - Throws: An error if `self` is not `.forbidden`.
@@ -14631,6 +14872,14 @@ public enum Operations {
             ///
             /// HTTP response code: `404 notFound`.
             case notFound(Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_project_hyphen_legacy.Output.NotFound)
+            /// Not Found if project is not managed by this team
+            ///
+            /// - Remark: Generated from `#/paths//teams/{team_id}/projects/{project_id}/get(teams/check-permissions-for-project-legacy)/responses/404`.
+            ///
+            /// HTTP response code: `404 notFound`.
+            public static var notFound: Self {
+                .notFound(.init())
+            }
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
@@ -14733,7 +14982,7 @@ public enum Operations {
                     /// The permission to grant to the team for this project. Default: the team's `permission` attribute will be used to determine what permission to grant the team on this project. Note that, if you choose not to pass any parameters, you'll need to set `Content-Length` to zero when calling this endpoint. For more information, see "[HTTP method](https://docs.github.com/rest/guides/getting-started-with-the-rest-api#http-method)."
                     ///
                     /// - Remark: Generated from `#/paths/teams/{team_id}/projects/{project_id}/PUT/requestBody/json/permission`.
-                    @frozen public enum permissionPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum permissionPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case read = "read"
                         case write = "write"
                         case admin = "admin"
@@ -14784,6 +15033,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_project_hyphen_permissions_hyphen_legacy.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//teams/{team_id}/projects/{project_id}/put(teams/add-or-update-project-permissions-legacy)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -15023,6 +15280,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.teams_sol_remove_hyphen_project_hyphen_legacy.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//teams/{team_id}/projects/{project_id}/delete(teams/remove-project-legacy)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -15452,6 +15717,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_repo_hyphen_legacy.Output.NoContent)
+            /// Response if repository is managed by this team
+            ///
+            /// - Remark: Generated from `#/paths//teams/{team_id}/repos/{owner}/{repo}/get(teams/check-permissions-for-repo-legacy)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -15479,6 +15752,14 @@ public enum Operations {
             ///
             /// HTTP response code: `404 notFound`.
             case notFound(Operations.teams_sol_check_hyphen_permissions_hyphen_for_hyphen_repo_hyphen_legacy.Output.NotFound)
+            /// Not Found if repository is not managed by this team
+            ///
+            /// - Remark: Generated from `#/paths//teams/{team_id}/repos/{owner}/{repo}/get(teams/check-permissions-for-repo-legacy)/responses/404`.
+            ///
+            /// HTTP response code: `404 notFound`.
+            public static var notFound: Self {
+                .notFound(.init())
+            }
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
@@ -15591,7 +15872,7 @@ public enum Operations {
                     /// The permission to grant the team on this repository. If no permission is specified, the team's `permission` attribute will be used to determine what permission to grant the team on this repository.
                     ///
                     /// - Remark: Generated from `#/paths/teams/{team_id}/repos/{owner}/{repo}/PUT/requestBody/json/permission`.
-                    @frozen public enum permissionPayload: String, Codable, Hashable, Sendable {
+                    @frozen public enum permissionPayload: String, Codable, Hashable, Sendable, CaseIterable {
                         case pull = "pull"
                         case push = "push"
                         case admin = "admin"
@@ -15642,6 +15923,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.teams_sol_add_hyphen_or_hyphen_update_hyphen_repo_hyphen_permissions_hyphen_legacy.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//teams/{team_id}/repos/{owner}/{repo}/put(teams/add-or-update-repo-permissions-legacy)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -15798,6 +16087,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.teams_sol_remove_hyphen_repo_hyphen_legacy.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//teams/{team_id}/repos/{owner}/{repo}/delete(teams/remove-repo-legacy)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -16209,6 +16506,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/teams/get(teams/list-for-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
