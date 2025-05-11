@@ -4,8 +4,8 @@
 
 # Variables
 .DEFAULT_GOAL  := install
-OPENAPI_PATH   := Submodule/github/rest-api-description/descriptions/api.github.com/api.github.com.yaml
-FILTERED_NAMES := $(shell yq -r '.tags[].name' $(OPENAPI_PATH))
+OPENAPI_PATH   := Submodule/github/rest-api-description/descriptions/api.github.com/api.github.com.json
+FILTERED_NAMES := $(shell swift Scripts/PackageTargetsParser.swift $(OPENAPI_PATH))
 SOURCE_DIRS    := $(addprefix Sources/, $(FILTERED_NAMES))
 PACKAGE_PATHS  := Package.swift
 # Fix: https://github.com/irgaly/setup-mint/pull/25
