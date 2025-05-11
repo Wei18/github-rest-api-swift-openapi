@@ -965,6 +965,15 @@ extension APIProtocol {
 
 /// Server URLs defined in the OpenAPI document.
 public enum Servers {
+    public enum Server1 {
+        public static func url() throws -> Foundation.URL {
+            try Foundation.URL(
+                validatingOpenAPIServerURL: "https://api.github.com",
+                variables: []
+            )
+        }
+    }
+    @available(*, deprecated, renamed: "Servers.Server1.url")
     public static func server1() throws -> Foundation.URL {
         try Foundation.URL(
             validatingOpenAPIServerURL: "https://api.github.com",
@@ -1389,23 +1398,23 @@ public enum Components {
                 }
                 public init(from decoder: any Decoder) throws {
                     let container = try decoder.container(keyedBy: CodingKeys.self)
-                    issues = try container.decodeIfPresent(
+                    self.issues = try container.decodeIfPresent(
                         Swift.String.self,
                         forKey: .issues
                     )
-                    checks = try container.decodeIfPresent(
+                    self.checks = try container.decodeIfPresent(
                         Swift.String.self,
                         forKey: .checks
                     )
-                    metadata = try container.decodeIfPresent(
+                    self.metadata = try container.decodeIfPresent(
                         Swift.String.self,
                         forKey: .metadata
                     )
-                    contents = try container.decodeIfPresent(
+                    self.contents = try container.decodeIfPresent(
                         Swift.String.self,
                         forKey: .contents
                     )
-                    deployments = try container.decodeIfPresent(
+                    self.deployments = try container.decodeIfPresent(
                         Swift.String.self,
                         forKey: .deployments
                     )
@@ -1420,23 +1429,23 @@ public enum Components {
                 public func encode(to encoder: any Encoder) throws {
                     var container = encoder.container(keyedBy: CodingKeys.self)
                     try container.encodeIfPresent(
-                        issues,
+                        self.issues,
                         forKey: .issues
                     )
                     try container.encodeIfPresent(
-                        checks,
+                        self.checks,
                         forKey: .checks
                     )
                     try container.encodeIfPresent(
-                        metadata,
+                        self.metadata,
                         forKey: .metadata
                     )
                     try container.encodeIfPresent(
-                        contents,
+                        self.contents,
                         forKey: .contents
                     )
                     try container.encodeIfPresent(
-                        deployments,
+                        self.deployments,
                         forKey: .deployments
                     )
                     try encoder.encodeAdditionalProperties(additionalProperties)
@@ -2180,19 +2189,19 @@ public enum Components {
                 public init(from decoder: any Decoder) throws {
                     var errors: [any Error] = []
                     do {
-                        value1 = try .init(from: decoder)
+                        self.value1 = try .init(from: decoder)
                     } catch {
                         errors.append(error)
                     }
                     do {
-                        value2 = try .init(from: decoder)
+                        self.value2 = try .init(from: decoder)
                     } catch {
                         errors.append(error)
                     }
                     try Swift.DecodingError.verifyAtLeastOneSchemaIsNotNil(
                         [
-                            value1,
-                            value2
+                            self.value1,
+                            self.value2
                         ],
                         type: Self.self,
                         codingPath: decoder.codingPath,
@@ -2200,8 +2209,8 @@ public enum Components {
                     )
                 }
                 public func encode(to encoder: any Encoder) throws {
-                    try value1?.encode(to: encoder)
-                    try value2?.encode(to: encoder)
+                    try self.value1?.encode(to: encoder)
+                    try self.value2?.encode(to: encoder)
                 }
             }
             /// - Remark: Generated from `#/components/schemas/integration-installation-request/account`.
@@ -2246,7 +2255,7 @@ public enum Components {
             /// The level of permission to grant the access token for GitHub Actions workflows, workflow runs, and artifacts.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/actions`.
-            @frozen public enum actionsPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum actionsPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
@@ -2257,7 +2266,7 @@ public enum Components {
             /// The level of permission to grant the access token for repository creation, deletion, settings, teams, and collaborators creation.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/administration`.
-            @frozen public enum administrationPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum administrationPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
@@ -2268,7 +2277,7 @@ public enum Components {
             /// The level of permission to grant the access token for checks on code.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/checks`.
-            @frozen public enum checksPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum checksPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
@@ -2279,7 +2288,7 @@ public enum Components {
             /// The level of permission to grant the access token to create, edit, delete, and list Codespaces.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/codespaces`.
-            @frozen public enum codespacesPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum codespacesPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
@@ -2290,7 +2299,7 @@ public enum Components {
             /// The level of permission to grant the access token for repository contents, commits, branches, downloads, releases, and merges.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/contents`.
-            @frozen public enum contentsPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum contentsPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
@@ -2301,7 +2310,7 @@ public enum Components {
             /// The level of permission to grant the access token to manage Dependabot secrets.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/dependabot_secrets`.
-            @frozen public enum dependabot_secretsPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum dependabot_secretsPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
@@ -2312,7 +2321,7 @@ public enum Components {
             /// The level of permission to grant the access token for deployments and deployment statuses.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/deployments`.
-            @frozen public enum deploymentsPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum deploymentsPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
@@ -2323,7 +2332,7 @@ public enum Components {
             /// The level of permission to grant the access token for managing repository environments.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/environments`.
-            @frozen public enum environmentsPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum environmentsPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
@@ -2334,7 +2343,7 @@ public enum Components {
             /// The level of permission to grant the access token for issues and related comments, assignees, labels, and milestones.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/issues`.
-            @frozen public enum issuesPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum issuesPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
@@ -2345,7 +2354,7 @@ public enum Components {
             /// The level of permission to grant the access token to search repositories, list collaborators, and access repository metadata.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/metadata`.
-            @frozen public enum metadataPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum metadataPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
@@ -2356,7 +2365,7 @@ public enum Components {
             /// The level of permission to grant the access token for packages published to GitHub Packages.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/packages`.
-            @frozen public enum packagesPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum packagesPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
@@ -2367,7 +2376,7 @@ public enum Components {
             /// The level of permission to grant the access token to retrieve Pages statuses, configuration, and builds, as well as create new builds.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/pages`.
-            @frozen public enum pagesPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum pagesPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
@@ -2378,7 +2387,7 @@ public enum Components {
             /// The level of permission to grant the access token for pull requests and related comments, assignees, labels, milestones, and merges.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/pull_requests`.
-            @frozen public enum pull_requestsPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum pull_requestsPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
@@ -2389,7 +2398,7 @@ public enum Components {
             /// The level of permission to grant the access token to view and edit custom properties for a repository, when allowed by the property.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/repository_custom_properties`.
-            @frozen public enum repository_custom_propertiesPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum repository_custom_propertiesPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
@@ -2400,7 +2409,7 @@ public enum Components {
             /// The level of permission to grant the access token to manage the post-receive hooks for a repository.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/repository_hooks`.
-            @frozen public enum repository_hooksPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum repository_hooksPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
@@ -2411,7 +2420,7 @@ public enum Components {
             /// The level of permission to grant the access token to manage repository projects, columns, and cards.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/repository_projects`.
-            @frozen public enum repository_projectsPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum repository_projectsPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
                 case admin = "admin"
@@ -2423,7 +2432,7 @@ public enum Components {
             /// The level of permission to grant the access token to view and manage secret scanning alerts.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/secret_scanning_alerts`.
-            @frozen public enum secret_scanning_alertsPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum secret_scanning_alertsPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
@@ -2434,7 +2443,7 @@ public enum Components {
             /// The level of permission to grant the access token to manage repository secrets.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/secrets`.
-            @frozen public enum secretsPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum secretsPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
@@ -2445,7 +2454,7 @@ public enum Components {
             /// The level of permission to grant the access token to view and manage security events like code scanning alerts.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/security_events`.
-            @frozen public enum security_eventsPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum security_eventsPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
@@ -2456,7 +2465,7 @@ public enum Components {
             /// The level of permission to grant the access token to manage just a single file.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/single_file`.
-            @frozen public enum single_filePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum single_filePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
@@ -2467,7 +2476,7 @@ public enum Components {
             /// The level of permission to grant the access token for commit statuses.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/statuses`.
-            @frozen public enum statusesPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum statusesPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
@@ -2478,7 +2487,7 @@ public enum Components {
             /// The level of permission to grant the access token to manage Dependabot alerts.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/vulnerability_alerts`.
-            @frozen public enum vulnerability_alertsPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum vulnerability_alertsPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
@@ -2489,7 +2498,7 @@ public enum Components {
             /// The level of permission to grant the access token to update GitHub Actions workflow files.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/workflows`.
-            @frozen public enum workflowsPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum workflowsPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case write = "write"
             }
             /// The level of permission to grant the access token to update GitHub Actions workflow files.
@@ -2499,7 +2508,7 @@ public enum Components {
             /// The level of permission to grant the access token for organization teams and members.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/members`.
-            @frozen public enum membersPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum membersPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
@@ -2510,7 +2519,7 @@ public enum Components {
             /// The level of permission to grant the access token to manage access to an organization.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/organization_administration`.
-            @frozen public enum organization_administrationPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum organization_administrationPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
@@ -2521,7 +2530,7 @@ public enum Components {
             /// The level of permission to grant the access token for custom repository roles management.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/organization_custom_roles`.
-            @frozen public enum organization_custom_rolesPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum organization_custom_rolesPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
@@ -2532,7 +2541,7 @@ public enum Components {
             /// The level of permission to grant the access token for custom organization roles management.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/organization_custom_org_roles`.
-            @frozen public enum organization_custom_org_rolesPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum organization_custom_org_rolesPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
@@ -2543,7 +2552,7 @@ public enum Components {
             /// The level of permission to grant the access token for custom property management.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/organization_custom_properties`.
-            @frozen public enum organization_custom_propertiesPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum organization_custom_propertiesPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
                 case admin = "admin"
@@ -2555,7 +2564,7 @@ public enum Components {
             /// The level of permission to grant the access token for managing access to GitHub Copilot for members of an organization with a Copilot Business subscription. This property is in public preview and is subject to change.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/organization_copilot_seat_management`.
-            @frozen public enum organization_copilot_seat_managementPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum organization_copilot_seat_managementPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case write = "write"
             }
             /// The level of permission to grant the access token for managing access to GitHub Copilot for members of an organization with a Copilot Business subscription. This property is in public preview and is subject to change.
@@ -2565,7 +2574,7 @@ public enum Components {
             /// The level of permission to grant the access token to view and manage announcement banners for an organization.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/organization_announcement_banners`.
-            @frozen public enum organization_announcement_bannersPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum organization_announcement_bannersPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
@@ -2576,7 +2585,7 @@ public enum Components {
             /// The level of permission to grant the access token to view events triggered by an activity in an organization.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/organization_events`.
-            @frozen public enum organization_eventsPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum organization_eventsPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
             }
             /// The level of permission to grant the access token to view events triggered by an activity in an organization.
@@ -2586,7 +2595,7 @@ public enum Components {
             /// The level of permission to grant the access token to manage the post-receive hooks for an organization.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/organization_hooks`.
-            @frozen public enum organization_hooksPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum organization_hooksPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
@@ -2597,7 +2606,7 @@ public enum Components {
             /// The level of permission to grant the access token for viewing and managing fine-grained personal access token requests to an organization.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/organization_personal_access_tokens`.
-            @frozen public enum organization_personal_access_tokensPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum organization_personal_access_tokensPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
@@ -2608,7 +2617,7 @@ public enum Components {
             /// The level of permission to grant the access token for viewing and managing fine-grained personal access tokens that have been approved by an organization.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/organization_personal_access_token_requests`.
-            @frozen public enum organization_personal_access_token_requestsPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum organization_personal_access_token_requestsPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
@@ -2619,7 +2628,7 @@ public enum Components {
             /// The level of permission to grant the access token for viewing an organization's plan.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/organization_plan`.
-            @frozen public enum organization_planPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum organization_planPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
             }
             /// The level of permission to grant the access token for viewing an organization's plan.
@@ -2629,7 +2638,7 @@ public enum Components {
             /// The level of permission to grant the access token to manage organization projects and projects public preview (where available).
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/organization_projects`.
-            @frozen public enum organization_projectsPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum organization_projectsPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
                 case admin = "admin"
@@ -2641,7 +2650,7 @@ public enum Components {
             /// The level of permission to grant the access token for organization packages published to GitHub Packages.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/organization_packages`.
-            @frozen public enum organization_packagesPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum organization_packagesPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
@@ -2652,7 +2661,7 @@ public enum Components {
             /// The level of permission to grant the access token to manage organization secrets.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/organization_secrets`.
-            @frozen public enum organization_secretsPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum organization_secretsPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
@@ -2663,7 +2672,7 @@ public enum Components {
             /// The level of permission to grant the access token to view and manage GitHub Actions self-hosted runners available to an organization.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/organization_self_hosted_runners`.
-            @frozen public enum organization_self_hosted_runnersPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum organization_self_hosted_runnersPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
@@ -2674,7 +2683,7 @@ public enum Components {
             /// The level of permission to grant the access token to view and manage users blocked by the organization.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/organization_user_blocking`.
-            @frozen public enum organization_user_blockingPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum organization_user_blockingPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
@@ -2685,7 +2694,7 @@ public enum Components {
             /// The level of permission to grant the access token to manage team discussions and related comments.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/team_discussions`.
-            @frozen public enum team_discussionsPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum team_discussionsPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
@@ -2696,7 +2705,7 @@ public enum Components {
             /// The level of permission to grant the access token to manage the email addresses belonging to a user.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/email_addresses`.
-            @frozen public enum email_addressesPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum email_addressesPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
@@ -2707,7 +2716,7 @@ public enum Components {
             /// The level of permission to grant the access token to manage the followers belonging to a user.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/followers`.
-            @frozen public enum followersPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum followersPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
@@ -2718,7 +2727,7 @@ public enum Components {
             /// The level of permission to grant the access token to manage git SSH keys.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/git_ssh_keys`.
-            @frozen public enum git_ssh_keysPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum git_ssh_keysPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
@@ -2729,7 +2738,7 @@ public enum Components {
             /// The level of permission to grant the access token to view and manage GPG keys belonging to a user.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/gpg_keys`.
-            @frozen public enum gpg_keysPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum gpg_keysPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
@@ -2740,7 +2749,7 @@ public enum Components {
             /// The level of permission to grant the access token to view and manage interaction limits on a repository.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/interaction_limits`.
-            @frozen public enum interaction_limitsPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum interaction_limitsPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
@@ -2751,7 +2760,7 @@ public enum Components {
             /// The level of permission to grant the access token to manage the profile settings belonging to a user.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/profile`.
-            @frozen public enum profilePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum profilePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case write = "write"
             }
             /// The level of permission to grant the access token to manage the profile settings belonging to a user.
@@ -2761,7 +2770,7 @@ public enum Components {
             /// The level of permission to grant the access token to list and manage repositories a user is starring.
             ///
             /// - Remark: Generated from `#/components/schemas/app-permissions/starring`.
-            @frozen public enum starringPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum starringPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case read = "read"
                 case write = "write"
             }
@@ -3144,19 +3153,19 @@ public enum Components {
                 public init(from decoder: any Decoder) throws {
                     var errors: [any Error] = []
                     do {
-                        value1 = try .init(from: decoder)
+                        self.value1 = try .init(from: decoder)
                     } catch {
                         errors.append(error)
                     }
                     do {
-                        value2 = try .init(from: decoder)
+                        self.value2 = try .init(from: decoder)
                     } catch {
                         errors.append(error)
                     }
                     try Swift.DecodingError.verifyAtLeastOneSchemaIsNotNil(
                         [
-                            value1,
-                            value2
+                            self.value1,
+                            self.value2
                         ],
                         type: Self.self,
                         codingPath: decoder.codingPath,
@@ -3164,8 +3173,8 @@ public enum Components {
                     )
                 }
                 public func encode(to encoder: any Encoder) throws {
-                    try value1?.encode(to: encoder)
-                    try value2?.encode(to: encoder)
+                    try self.value1?.encode(to: encoder)
+                    try self.value2?.encode(to: encoder)
                 }
             }
             /// - Remark: Generated from `#/components/schemas/installation/account`.
@@ -3173,7 +3182,7 @@ public enum Components {
             /// Describe whether all repositories have been selected or there's a selection involved
             ///
             /// - Remark: Generated from `#/components/schemas/installation/repository_selection`.
-            @frozen public enum repository_selectionPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum repository_selectionPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case all = "all"
                 case selected = "selected"
             }
@@ -3614,7 +3623,7 @@ public enum Components {
             /// - `COMMIT_OR_PR_TITLE` - default to the commit's title (if only one commit) or the pull request's title (when more than one commit).
             ///
             /// - Remark: Generated from `#/components/schemas/repository/squash_merge_commit_title`.
-            @frozen public enum squash_merge_commit_titlePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum squash_merge_commit_titlePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case PR_TITLE = "PR_TITLE"
                 case COMMIT_OR_PR_TITLE = "COMMIT_OR_PR_TITLE"
             }
@@ -3632,7 +3641,7 @@ public enum Components {
             /// - `BLANK` - default to a blank commit message.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/squash_merge_commit_message`.
-            @frozen public enum squash_merge_commit_messagePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum squash_merge_commit_messagePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case PR_BODY = "PR_BODY"
                 case COMMIT_MESSAGES = "COMMIT_MESSAGES"
                 case BLANK = "BLANK"
@@ -3651,7 +3660,7 @@ public enum Components {
             /// - `MERGE_MESSAGE` - default to the classic title for a merge message (e.g., Merge pull request #123 from branch-name).
             ///
             /// - Remark: Generated from `#/components/schemas/repository/merge_commit_title`.
-            @frozen public enum merge_commit_titlePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum merge_commit_titlePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case PR_TITLE = "PR_TITLE"
                 case MERGE_MESSAGE = "MERGE_MESSAGE"
             }
@@ -3669,7 +3678,7 @@ public enum Components {
             /// - `BLANK` - default to a blank commit message.
             ///
             /// - Remark: Generated from `#/components/schemas/repository/merge_commit_message`.
-            @frozen public enum merge_commit_messagePayload: String, Codable, Hashable, Sendable {
+            @frozen public enum merge_commit_messagePayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case PR_BODY = "PR_BODY"
                 case PR_TITLE = "PR_TITLE"
                 case BLANK = "BLANK"
@@ -4106,7 +4115,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/installation-token/permissions`.
             public var permissions: Components.Schemas.app_hyphen_permissions?
             /// - Remark: Generated from `#/components/schemas/installation-token/repository_selection`.
-            @frozen public enum repository_selectionPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum repository_selectionPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case all = "all"
                 case selected = "selected"
             }
@@ -4168,7 +4177,7 @@ public enum Components {
             /// Describe whether all repositories have been selected or there's a selection involved
             ///
             /// - Remark: Generated from `#/components/schemas/nullable-scoped-installation/repository_selection`.
-            @frozen public enum repository_selectionPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum repository_selectionPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case all = "all"
                 case selected = "selected"
             }
@@ -4378,7 +4387,7 @@ public enum Components {
             /// - Remark: Generated from `#/components/schemas/marketplace-listing-plan/yearly_price_in_cents`.
             public var yearly_price_in_cents: Swift.Int
             /// - Remark: Generated from `#/components/schemas/marketplace-listing-plan/price_model`.
-            @frozen public enum price_modelPayload: String, Codable, Hashable, Sendable {
+            @frozen public enum price_modelPayload: String, Codable, Hashable, Sendable, CaseIterable {
                 case FREE = "FREE"
                 case FLAT_RATE = "FLAT_RATE"
                 case PER_UNIT = "PER_UNIT"
@@ -4771,7 +4780,7 @@ public enum Components {
         /// The property to sort the results by.
         ///
         /// - Remark: Generated from `#/components/parameters/sort`.
-        @frozen public enum sort: String, Codable, Hashable, Sendable {
+        @frozen public enum sort: String, Codable, Hashable, Sendable, CaseIterable {
             case created = "created"
             case updated = "updated"
         }
@@ -5272,19 +5281,19 @@ public enum Operations {
                             }
                             public init(from decoder: any Decoder) throws {
                                 let container = try decoder.container(keyedBy: CodingKeys.self)
-                                client_id = try container.decode(
+                                self.client_id = try container.decode(
                                     Swift.String.self,
                                     forKey: .client_id
                                 )
-                                client_secret = try container.decode(
+                                self.client_secret = try container.decode(
                                     Swift.String.self,
                                     forKey: .client_secret
                                 )
-                                webhook_secret = try container.decodeIfPresent(
+                                self.webhook_secret = try container.decodeIfPresent(
                                     Swift.String.self,
                                     forKey: .webhook_secret
                                 )
-                                pem = try container.decode(
+                                self.pem = try container.decode(
                                     Swift.String.self,
                                     forKey: .pem
                                 )
@@ -5298,19 +5307,19 @@ public enum Operations {
                             public func encode(to encoder: any Encoder) throws {
                                 var container = encoder.container(keyedBy: CodingKeys.self)
                                 try container.encode(
-                                    client_id,
+                                    self.client_id,
                                     forKey: .client_id
                                 )
                                 try container.encode(
-                                    client_secret,
+                                    self.client_secret,
                                     forKey: .client_secret
                                 )
                                 try container.encodeIfPresent(
-                                    webhook_secret,
+                                    self.webhook_secret,
                                     forKey: .webhook_secret
                                 )
                                 try container.encode(
-                                    pem,
+                                    self.pem,
                                     forKey: .pem
                                 )
                                 try encoder.encodeAdditionalProperties(additionalProperties)
@@ -5331,12 +5340,12 @@ public enum Operations {
                             self.value2 = value2
                         }
                         public init(from decoder: any Decoder) throws {
-                            value1 = try .init(from: decoder)
-                            value2 = try .init(from: decoder)
+                            self.value1 = try .init(from: decoder)
+                            self.value2 = try .init(from: decoder)
                         }
                         public func encode(to encoder: any Encoder) throws {
-                            try value1.encode(to: encoder)
-                            try value2.encode(to: encoder)
+                            try self.value1.encode(to: encoder)
+                            try self.value2.encode(to: encoder)
                         }
                     }
                     /// - Remark: Generated from `#/paths/app-manifests/{code}/conversions/POST/responses/201/content/application\/json`.
@@ -6389,6 +6398,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//app/installation-requests/get(apps/list-installation-requests-for-authenticated-app)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -6853,6 +6870,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.apps_sol_delete_hyphen_installation.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//app/installations/{installation_id}/delete(apps/delete-installation)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -7258,6 +7283,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.apps_sol_suspend_hyphen_installation.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//app/installations/{installation_id}/suspended/put(apps/suspend-installation)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -7391,6 +7424,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.apps_sol_unsuspend_hyphen_installation.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//app/installations/{installation_id}/suspended/delete(apps/unsuspend-installation)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -7549,6 +7590,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.apps_sol_delete_hyphen_authorization.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//applications/{client_id}/grant/delete(apps/delete-authorization)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -8091,6 +8140,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.apps_sol_delete_hyphen_token.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//applications/{client_id}/token/delete(apps/delete-token)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -8820,6 +8877,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//installation/repositories/get(apps/list-repos-accessible-to-installation)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -8916,6 +8981,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.apps_sol_revoke_hyphen_installation_hyphen_access_hyphen_token.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//installation/token/delete(apps/revoke-installation-access-token)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -9384,7 +9457,7 @@ public enum Operations {
             /// - Remark: Generated from `#/paths/marketplace_listing/plans/{plan_id}/accounts/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/parameters/sort`.
-                @frozen public enum sort: String, Codable, Hashable, Sendable {
+                @frozen public enum sort: String, Codable, Hashable, Sendable, CaseIterable {
                     case created = "created"
                     case updated = "updated"
                 }
@@ -9393,7 +9466,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/marketplace_listing/plans/{plan_id}/accounts/GET/query/sort`.
                 public var sort: Components.Parameters.sort?
                 /// - Remark: Generated from `#/paths/marketplace_listing/plans/{plan_id}/accounts/GET/query/direction`.
-                @frozen public enum directionPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum directionPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case asc = "asc"
                     case desc = "desc"
                 }
@@ -9741,6 +9814,14 @@ public enum Operations {
             ///
             /// HTTP response code: `404 notFound`.
             case notFound(Operations.apps_sol_get_hyphen_subscription_hyphen_plan_hyphen_for_hyphen_account_hyphen_stubbed.Output.NotFound)
+            /// Not Found when the account has not purchased the listing
+            ///
+            /// - Remark: Generated from `#/paths//marketplace_listing/stubbed/accounts/{account_id}/get(apps/get-subscription-plan-for-account-stubbed)/responses/404`.
+            ///
+            /// HTTP response code: `404 notFound`.
+            public static var notFound: Self {
+                .notFound(.init())
+            }
             /// The associated value of the enum case if `self` is `.notFound`.
             ///
             /// - Throws: An error if `self` is not `.notFound`.
@@ -10026,7 +10107,7 @@ public enum Operations {
             /// - Remark: Generated from `#/paths/marketplace_listing/stubbed/plans/{plan_id}/accounts/GET/query`.
             public struct Query: Sendable, Hashable {
                 /// - Remark: Generated from `#/components/parameters/sort`.
-                @frozen public enum sort: String, Codable, Hashable, Sendable {
+                @frozen public enum sort: String, Codable, Hashable, Sendable, CaseIterable {
                     case created = "created"
                     case updated = "updated"
                 }
@@ -10035,7 +10116,7 @@ public enum Operations {
                 /// - Remark: Generated from `#/paths/marketplace_listing/stubbed/plans/{plan_id}/accounts/GET/query/sort`.
                 public var sort: Components.Parameters.sort?
                 /// - Remark: Generated from `#/paths/marketplace_listing/stubbed/plans/{plan_id}/accounts/GET/query/direction`.
-                @frozen public enum directionPayload: String, Codable, Hashable, Sendable {
+                @frozen public enum directionPayload: String, Codable, Hashable, Sendable, CaseIterable {
                     case asc = "asc"
                     case desc = "desc"
                 }
@@ -10709,6 +10790,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/installations/get(apps/list-installations-for-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -11035,6 +11124,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/installations/{installation_id}/repositories/get(apps/list-installation-repos-for-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -11154,6 +11251,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.apps_sol_add_hyphen_repo_hyphen_to_hyphen_installation_hyphen_for_hyphen_authenticated_hyphen_user.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//user/installations/{installation_id}/repositories/{repository_id}/put(apps/add-repo-to-installation-for-authenticated-user)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -11200,6 +11305,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/installations/{installation_id}/repositories/{repository_id}/put(apps/add-repo-to-installation-for-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -11342,6 +11455,14 @@ public enum Operations {
             ///
             /// HTTP response code: `204 noContent`.
             case noContent(Operations.apps_sol_remove_hyphen_repo_hyphen_from_hyphen_installation_hyphen_for_hyphen_authenticated_hyphen_user.Output.NoContent)
+            /// Response
+            ///
+            /// - Remark: Generated from `#/paths//user/installations/{installation_id}/repositories/{repository_id}/delete(apps/remove-repo-from-installation-for-authenticated-user)/responses/204`.
+            ///
+            /// HTTP response code: `204 noContent`.
+            public static var noContent: Self {
+                .noContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.noContent`.
             ///
             /// - Throws: An error if `self` is not `.noContent`.
@@ -11388,6 +11509,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/installations/{installation_id}/repositories/{repository_id}/delete(apps/remove-repo-from-installation-for-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -11438,6 +11567,14 @@ public enum Operations {
             ///
             /// HTTP response code: `422 unprocessableContent`.
             case unprocessableContent(Operations.apps_sol_remove_hyphen_repo_hyphen_from_hyphen_installation_hyphen_for_hyphen_authenticated_hyphen_user.Output.UnprocessableContent)
+            /// Returned when the application is installed on `all` repositories in the organization, or if this request would remove the last repository that the application has access to in the organization.
+            ///
+            /// - Remark: Generated from `#/paths//user/installations/{installation_id}/repositories/{repository_id}/delete(apps/remove-repo-from-installation-for-authenticated-user)/responses/422`.
+            ///
+            /// HTTP response code: `422 unprocessableContent`.
+            public static var unprocessableContent: Self {
+                .unprocessableContent(.init())
+            }
             /// The associated value of the enum case if `self` is `.unprocessableContent`.
             ///
             /// - Throws: An error if `self` is not `.unprocessableContent`.
@@ -11621,6 +11758,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/marketplace_purchases/get(apps/list-subscriptions-for-authenticated-user)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
@@ -11850,6 +11995,14 @@ public enum Operations {
             ///
             /// HTTP response code: `304 notModified`.
             case notModified(Components.Responses.not_modified)
+            /// Not modified
+            ///
+            /// - Remark: Generated from `#/paths//user/marketplace_purchases/stubbed/get(apps/list-subscriptions-for-authenticated-user-stubbed)/responses/304`.
+            ///
+            /// HTTP response code: `304 notModified`.
+            public static var notModified: Self {
+                .notModified(.init())
+            }
             /// The associated value of the enum case if `self` is `.notModified`.
             ///
             /// - Throws: An error if `self` is not `.notModified`.
